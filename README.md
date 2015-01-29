@@ -1,4 +1,4 @@
-cs595-f13
+cs851-s15
 =========
 
-Shared repository for ODU CS 495 / 595 Fall 2013
+Shared repository for ODU CS 751 / 851 Spring 2015
