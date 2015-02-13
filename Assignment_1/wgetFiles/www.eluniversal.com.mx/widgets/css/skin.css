@@ -1,0 +1,363 @@
+
+
+
+
+.jcarousel-item-der{
+float:left;
+      margin-left:10px;
+}
+.jcarousel-item-izq{
+float:left;
+}
+
+
+.jcarousel-item-der a{
+float:left;
+}
+.jcarousel-item-izq a{
+float:left;
+}
+
+
+
+
+
+.jcarousel-skin-tango .jcarousel-container {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    //   background: #414141;
+    // border: 1px solid #346F97;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+width: /*590px*/auto;
+/*padding: 10px;*/
+margin: 0px 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+width: 205px;
+height: 358px;
+padding: 24px 2px;
+}
+
+
+.jcarousel-item-izq:hover{
+opacity: .70;
+}
+.jcarousel-item-der:hover{
+opacity: .70;
+}
+.img_sup_cuadricula{
+    margin-top:-36px;
+    margin-left:10px;
+    height:20px;
+}
+
+.descripcionVideoMiniatura .jcarousel-txt-tago:hover{
+    opacity: .70;
+}
+
+.jcarousel-img-tago{
+width: 86px;
+height: 51px;
+border: 0 none;
+}
+.jcarousel-txt-tago{
+    font-size:10px;
+margin:0px !important;
+color:#fff;
+      max-width:85px;
+/*overflow:hidden;*/
+     text-decoration:none;
+     /*height:47px;*/
+     height:51px;
+     font-family:"Arial";
+
+}
+#jcarousel-fondo-principal{
+width:610px;
+height:468px;
+background:#606060;
+/*overflow:hidden;*/
+}
+
+
+.jcarousel-skin-tango .jcarousel-clip {
+overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+width:  auto;
+height: auto;
+margin:auto;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+width:  205px;
+height: 370px;
+    margin-top:-5px;
+background:#414141;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+/*width: 75px;*/
+/*height: 75px;*/
+    margin-left:4px; 
+    margin-right: 13px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+    margin-left: 0;
+    margin-right: 1px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+    margin-left: 1px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-bottom: 31px;
+    margin-top: 10px;
+width:193px;
+      //height:92px !important;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+background: #fff;
+color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+/*position: absolute;*/
+top: 0px;
+right: 0px;
+width: 20px;
+height: 19px;
+margin: 5px;
+cursor: pointer;
+background:#000 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat center center;margin:5px;float:left;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+left: 5px;
+right: auto;
+       background-image: url(http://www.eluniversal.com.mx/widgets/img/back-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover,
+    .jcarousel-skin-tango .jcarousel-next-horizontal:focus {
+        /*background-position: -32px 0;*/
+    }
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    /*background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+    .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+    .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
+    .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+cursor: default;
+    background:#666 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat center center;margin:5px;float:left;
+   
+    }
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+/*position: absolute;*/
+top: 0px;
+left: 0px;
+width: 22px;
+height: 19px;
+cursor: pointer;
+background:#000 url(http://www.eluniversal.com.mx/widgets/img/retroceder.png) no-repeat center center;margin:5px;float:left;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+left: auto;
+right: 5px;
+       background-image: url(http://www.eluniversal.com.mx/widgets/img/next-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+    .jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
+        /*background-position: -32px 0;*/
+    }
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    /*background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:focus,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+cursor: default;
+background:#666 url(http://www.eluniversal.com.mx/widgets/img/retroceder.png) no-repeat center center;margin:5px;float:left;
+
+    /*background: url(../img/back-disabled-horizontal.png) no-repeat center center;*/
+    }
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+position: absolute;
+bottom: -3px;
+width: 209px;
+height: 15px;
+cursor: pointer;
+background-color: #414141;
+background:#000 url(http://www.eluniversal.com.mx/widgets/img/retroceder.png) no-repeat center center;margin-right:5px;float:left;
+/*background: url(../img/next.png) no-repeat center center;*/
+/*background: transparent url(../img/next-vertical.png) no-repeat 0 0;*/
+       /* background-position: 0 -96px;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-vertical:hover,
+    .jcarousel-skin-tango .jcarousel-next-vertical:focus {
+       /* background-color: #414141;*/
+        
+    }
+
+.jcarousel-skin-tango .jcarousel-next-vertical:active {
+   /* background-position: 0 -64px;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+    .jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+    .jcarousel-skin-tango .jcarousel-next-disabled-vertical:focus,
+    .jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {
+cursor: default;
+background: url(http://www.eluniversal.com.mx/widgets/img/next-disabled.png) no-repeat center center;
+   /* background-position: 0 -96px;*/
+    }
+
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    background-color: #414141;
+    cursor: pointer;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    width: 209px;
+    background: url(http://www.eluniversal.com.mx/widgets/img/back.png) no-repeat center center;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover,
+    .jcarousel-skin-tango .jcarousel-prev-vertical:focus {
+        /*background-position: 0 -96px;
+        background-color: #414141;*/
+    }
+
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {
+   /* background-position: 0 -64px;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-vertical:focus,
+    .jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
+cursor: default;
+background: url(http://www.eluniversal.com.mx/widgets/img/back-disabled.png) no-repeat center center;
+/*display: none;
+ height: 0px;*/
+ 
+   /* background-position: 0 -32px;*/
+    }
+
+
+
+
+
+
+
+/*comentario*/
+#encabezadoTituloAW {
+    background-color: #414141;
+display: block;
+position: relative;
+      margin-top:0px;
+      margin-bottom:10px;
+       height: 35px;
+}
+#tituloPrincipalAW {
+/*background: -moz-linear-gradient(center top , #37A2DB 0%, #37A2DB 44%, #004D73 100%) repeat scroll 0 0 transparent;*/
+        /*box-shadow: 0 0 0.1em #000000 inset;*/
+color: #FFFFFF;
+font: 18px "PrensaBlackRegular",sans-serif;  
+    height: 21px;    
+    padding: 7px;
+         text-align: center;
+     text-transform: uppercase;
+float:left;
+width:170px;
+      /*background-color: #37A2DB;*/
+      background-color: #008CFF;
+}
+#contenedorBotonesSeccionesAW {
+    /*background: none repeat scroll 0 0 #414141;
+      box-shadow: 0 0 0.5em #000000 inset;*/
+    list-style: none outside none;
+margin: 0 auto;
+padding: 0;
+width: 610px;
+}
+#contenedorBotonesSeccionesAW .vinculoSeccion{
+  height: 8px;    
+    padding-bottom: 13.3px;
+    padding-top: 13.3px;
+font: 11px "Arial",sans-serif !important;
+
+}
+
+#contenedorBotonesSeccionesAW .vinculoSeccion:hover,
+#contenedorBotonesSeccionesAW .vinculoSeccion:active {
+    background-color: #606060;
+    /*border-radius: 6px;*/
+    /*background: rgba(0,140,255,0.7);*/                
+/*background: -moz-linear-gradient(center top , #37A2DB 0%, #37A2DB 44%, #004D73 100%) repeat scroll 0 0 transparent;
+        background-color: #37A2DB;*/
+}
+
+#contenedorBotonesSeccionesAW #botonCuadricula, #botonLista {
+display: inline-block;
+margin: 0 0 0 7px;
+padding: 0;
+position: absolute;
+top: 5px;
+}
+
+#contenedorBotonesSeccionesAW .img_sup_cuadricula {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+}
+
+#ratingsVideoPrincipal{
+    position: relative;   
+}
+#ratingsVideoPrincipal table{
+    border: none !important;
+}
+#ratingsVideoPrincipal table td{
+    background: none !important;
+}            
+#playlist-box{ left: 7px !important; }
+
+.desaparece{
+    display:none;
+}
+.aparece{
+    display:block;
+}
+#idVideoPrincipal{
+    display:none;
+}

@@ -1,0 +1,1127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+    New MongoDB 3.0 database to integrate WiredTiger storage engine - Computer Business Review
+    </title>
+        <meta name="description" content="MongoDB 3.0 and Ops Manager will allow businesses to enhance time to value."/>
+    <meta name="keywords" content="MongoDB 3.0 database,  WiredTiger tech, Ops Manager"/>	 
+ <link rel="canonical" href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248" />
+<script type="text/javascript" src="../../../../Content/jquery/jquery.tools.min.js"></script>
+
+   <link href="../../../../Content/css/reset.2.0.1.1.css" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
+    <link href="../../../../Content/css/layout.2.0.1.1.css" rel="stylesheet" type="text/css"/>    
+   <link href="../../../../Content/css/cbr-stylesheet-print.2.0.1.1.css" rel="stylesheet" type="text/css" media="print"/>
+      
+      
+   <script src="../../../../Content/jquery/jquery.min.js" type="text/javascript"></script>
+   <script src="../../../../Content/jquery/jquery.tools.min.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/common.js" type="text/javascript"></script>
+    <script src="../../../../Content/jquery/jquery.slicker.js" type="text/javascript"></script>
+    <script src="../../../../Content/jquery/jquery.tool.dropdown.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/xVal.jquery.validate.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/pmg.CustomValidators.js" type="text/javascript"></script>
+    <script src="../../../../Scripts/pmg.PartialViews.js" type="text/javascript"></script>
+   <script src="../../../../Scripts/jquery.validate.js" type="text/javascript"></script>
+ 
+    <link rel="SHORTCUT ICON" href="../../../../Content/images/favicon.ico">
+     <script src="../../../../Scripts/gmap3.js" type="text/javascript"></script>     
+     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=true"></script>
+      
+     
+
+    <!-- <link rel="alternate" type="application/rss+xml" title="<%=Url.GetHomeUrl()%>" href="~/rss" />-->
+    <meta name="google-site-verification" content="Ektry6dPOSxDEy6rz0_bYZlTumQ5O0ZMigiavMhwFjY"/><meta name="DCSext.WebsiteName" content="www.cbronline.com"/>
+    <webtrendswebsitemetatag/>
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-18384985-2']);
+    _gaq.push(['_setDomainName', '.cbronline.com']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+    <!--DART tags -->
+
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+ <style type="text/css">
+<!--
+#apDiv1 {
+	position:absolute;
+	width:160px;
+	height:600px;
+	z-index:1;
+	visibility: visible;
+	left: 228px;
+	top: -37px;
+}
+-->
+</style><script type="text/javascript">
+    (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+    })();
+</script>
+
+<script type="text/javascript">
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_OutOfPage', [1, 1], 'div-gpt-ad-1364304769881-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/3553/CBR_New_Tags/CBR_OutOfPage', 'div-gpt-ad-1364304769881-0-oop').addService(googletag.pubads());
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_Top_Leader', [[728, 90], [970, 250]], 'div-gpt-ad-1364304769881-1').addService(googletag.pubads());
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_Top_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1364304769881-2').addService(googletag.pubads());
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_Skyscraper', [[120, 600], [160, 600]], 'div-gpt-ad-1364304769881-14').addService(googletag.pubads());
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_Bottom_MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1364304769881-15').addService(googletag.pubads());
+googletag.defineSlot('/3553/CBR_New_Tags/CBR_Bottom_Leader', [728, 90], 'div-gpt-ad-1364304769881-16').addService(googletag.pubads());  
+  googletag.pubads().setTargeting("Type", "News");
+  googletag.pubads().setTargeting("Page", "4504248");
+  googletag.pubads().setTargeting("Sector", "Tech");  
+   googletag.pubads().setTargeting("Category", "Software");       
+  googletag.pubads().setTargeting("Network", "Enterprise Applications");
+googletag.pubads().collapseEmptyDivs();
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script>
+<script>
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+    }
+    function setCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString() + ";path=/");
+        document.cookie = c_name + "=" + c_value;
+    }
+    function CreateCookie() {
+        var cookieName = "CBR" + "_Cookie";
+        var cookieVal = "Computer Business Review";
+        setCookie(cookieName, cookieVal, 365);
+        document.getElementById("privacy").style.display = "none";
+    }
+
+    function checkCookieOnLoad() {
+        ////placeDiv();
+        var cookieName = "CBR" + "_Cookie";
+
+        var cookieVal = getCookie(cookieName);
+
+        if (cookieVal != null && cookieVal != "") {
+            document.getElementById("privacy").style.display = "none";
+        }
+        else {
+            document.getElementById("privacy").style.display = "inline";
+        }
+    }
+
+    function placeDiv() {
+        var d = document.getElementById('privacy');
+        d.style.position = "absolute";
+        d.style.left = 0;
+        d.style.top = 0;
+    }
+    </script> 
+    <!--DART tags ends -->
+</head>
+<body onload="checkCookieOnLoad()">
+    <div id="container">
+        <div id="mainHeader">
+            <div id="header" class="gradientBlue">
+                <div class="left">
+                    <div class="logo">
+                        <a href="http://www.cbronline.com"><img title="CBR - Computer Business Review" alt="CBR - Computer Business Review" src="../../../../Content/images/cbr_logo_small.jpg">
+                        </a>
+                    </div>
+                </div><!-- left ends -->
+                <div style="height: 84px;">
+                <div class="right">                                          
+                 <br/><br/>
+                 <div class="search">
+                        <form action="http://www.cbronline.com/archive/" method="get" name="search"><input class="searchInput" id="SearchTerms" name="SearchTerms" onclick="this.value=''" type="text" value="Search" /> <input type="image" name="submit" value="" class="searchSubmit" src="../../../../Content/images/icon_search.png" /><br/> </form>
+                        <div id="apDiv1" style="margin-left: 765px; margin-top: 200px;"><div id="div-gpt-ad-1364304769881-14">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-14');
+</script>
+</div>
+                       
+                        </div>
+                      </div><!-- search ends -->                                         
+	                <div class="clearAll"></div> 
+                </div><!-- right ends -->                
+                <div class="clearAll"></div>
+            </div>          
+            <div id="menu" class="bgBlue"><div class="left" style="float:right">
+    <ul id="nav" class="">
+                        <li>
+                        <span class="menu_main">Tech</span>                            
+                        <div class="submenu1">  
+                        <div class="left">
+                        <ul>
+                        <li> <a href="http://www.cbronline.com/tech/start-ups">Start-ups</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/tech/hardware">Hardware<span class='menu_arrows' > >> </span> </a>                         
+                         <div class="submenu2">
+                            <ul>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/bladeservers">Blade Servers</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/datacentre">Data Centre</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/desktops">Desktops</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/microelectronics">Micro Electronics</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/servers">Servers</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/hardware/storage">Storage</a></li>                              
+                             </ul>
+                          </div>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/tech/software">Software<span class='menu_arrows' > >> </span> </a>                         
+                         <div class="submenu2">
+                            <ul>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/analytics">Analytics</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/appdev">App Dev and SOA</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/businessintelligence">Business Intelligence</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/contentmanagement">Content Management</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/e-commerce">E-commerce</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/enterprise-apps">Enterprise Applications</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/malware">Malware</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/middleware">Middleware</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/opensource">Open Source</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/operatingsystems">Operating Systems</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/servicemanagement">Service Management</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/software/virtualisation">Virtualisation</a></li>                              
+                             </ul>
+                          </div>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/tech/networks">Networks<span class='menu_arrows' > >> </span> </a>                         
+                         <div class="submenu2">
+                            <ul>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/networks/networking">Networking</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/networks/telecoms">Telecoms</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/networks/unified-communications">Unified Communications</a></li>                              
+                             </ul>
+                          </div>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/tech/services">Services<span class='menu_arrows' > >> </span> </a>                         
+                         <div class="submenu2">
+                            <ul>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/services/business-continuity">Business Continuity</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/services/it-services">IT Services</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/services/outsourcing">Outsourcing and BPO</a></li>                              
+                             </ul>
+                          </div>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/tech/cio-agenda">The CIO Agenda<span class='menu_arrows' > >> </span> </a>                         
+                         <div class="submenu2">
+                            <ul>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/cio-agenda/green-it">Green IT</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/cio-agenda/midmarket">Midmarket</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/cio-agenda/the-boardroom">The Boardroom</a></li>                 
+                                    <li> <a style='padding-right: 25px; padding-left: 25px;' href="http://www.cbronline.com/tech/cio-agenda/small-business">Small business</a></li>                              
+                             </ul>
+                          </div>                        
+                        </li>
+                        </ul>                        
+                        </div>  
+                        <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                          <li>
+           <a href="http://www.cbronline.com/news/tech/cio-agenda/the-boardroom/why-should-you-care-about-net-neutrality-4506589"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4506589_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/tech/cio-agenda/the-boardroom/why-should-you-care-about-net-neutrality-4506589">Why should you care about net neutrality?</a></h2>
+
+                          </li>
+                          <li>
+           <a href="http://www.cbronline.com/news/tech/software/analytics/data-in-sports-whos-doing-it-right-4505484"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4505484_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/tech/software/analytics/data-in-sports-whos-doing-it-right-4505484">Data in sports, who's doing it right?</a></h2>
+
+                          </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+
+                        <li>
+                        <a href="http://www.cbronline.com/mobile-and-tablets">Mobile & tablets</a>                            
+                        <div class="submenu1">  
+                        <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                               <li>
+           <a href="http://www.cbronline.com/news/tech/software/e-commerce/samsung-blasted-for-orwellian-smart-tv-4507500"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507500_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/tech/software/e-commerce/samsung-blasted-for-orwellian-smart-tv-4507500">Samsung blasted for “Orwellian” Smart TV</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/mobile-and-tablets/met-police-risk-security-breach-with-device-thefts-4507419"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507419_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/mobile-and-tablets/met-police-risk-security-breach-with-device-thefts-4507419">Met Police risk security breach through device thefts</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/mobile-and-tablets/poor-mobile-coverage-costing-uk-businesses-32m-a-week-4507249"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507249_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/mobile-and-tablets/poor-mobile-coverage-costing-uk-businesses-32m-a-week-4507249">Poor mobile coverage costing UK businesses £32m a week</a></h2>
+
+                               </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+
+                        <li>
+                        <a href="http://www.cbronline.com/cloud">Cloud</a>                            
+                        <div class="submenu1">  
+                        <div class="left">
+                        <ul>
+                        <li> <a href="http://www.cbronline.com/cloud/cloud-platform">Cloud Platform</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/cloud/cloud-saas">Cloud SaaS</a>                        
+                        </li>
+                        </ul>                        
+                        </div>  
+                        <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                               <li>
+           <a href="http://www.cbronline.com/news/cloud/cloud-saas/shop-direct-buys-into-ibms-hybrid-cloud-4507677"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507677_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/cloud/cloud-saas/shop-direct-buys-into-ibms-hybrid-cloud-4507677">Shop Direct buys into IBM's hybrid cloud</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/cloud/cloud-saas/marriott-checks-in-to-ibms-cloud-4506479"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4506479_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/cloud/cloud-saas/marriott-checks-in-to-ibms-cloud-4506479">Marriott checks in to IBM's cloud</a></h2>
+
+                               </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+
+                        <li>
+                        <a href="http://www.cbronline.com/security">Security</a>                            
+                        <div class="submenu1">  
+                        <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                               <li>
+<h2><a href="http://www.cbronline.com/news/security/netflix-airs-its-dirty-laundry-4507600">Netflix airs its Dirty Laundry</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/security/bristol-cyber-school-plays-host-to-terrorist-game-4507513"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507513_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/security/bristol-cyber-school-plays-host-to-terrorist-game-4507513">Bristol cyber school plays host to terrorist game</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/security/mps-seek-to-quash-hate-crime-on-twitter-and-facebook-4507427"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507427_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/security/mps-seek-to-quash-hate-crime-on-twitter-and-facebook-4507427">MPs seek to quash hate crime on Twitter and Facebook</a></h2>
+
+                               </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+            <li>
+              <a href="http://newstyleofit.uk/" target="_blank">New Style of IT</a>
+            <div class="submenu1 submenu1-new">
+              <div class="right">
+                <ul class="dropdownRightArticles">
+                      <li>
+                        <a href="http://newstyleofit.uk/virtualisation/" title="Virtualisation">Virtualisation</a>
+                        <a href="http://newstyleofit.uk/data-centre/" title="Data Centre">Data Centre</a>
+                        <a href="http://newstyleofit.uk/mobility/" title="Mobility">Mobility</a>
+                        <a href="http://newstyleofit.uk/networking/" title="Networking">Networking</a>
+                        <a href="http://newstyleofit.uk/smb/" title="SMB">SMB</a>
+                      </li>
+                  <div class="clearAll"></div>
+                </ul>
+              </div>
+            </div>
+            </li>
+
+                        <li>
+                        <a href="http://www.cbronline.com/social">Social</a>                            
+                        <div class="submenu1">  
+                        <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                               <li>
+           <a href="http://www.cbronline.com/news/social/contactless-payment-limit-to-increase-amidst-flourishing-usage-4507652"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507652_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/social/contactless-payment-limit-to-increase-amidst-flourishing-usage-4507652">Contactless payment limit to increase amidst flourishing usage</a></h2>
+
+                               </li>
+                               <li>
+<h2><a href="http://www.cbronline.com/news/social/consumer-watchdog-googles-right-to-be-forgotten-a-publicity-stunt-4507606">Consumer Watchdog: Google’s ‘right to be forgotten’ a ‘publicity stunt’</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/social/self-destruct-social-media-with-dstrux-4507645"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507645_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/social/self-destruct-social-media-with-dstrux-4507645">Self-destruct social media with DSTRUX</a></h2>
+
+                               </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+
+                        <li>
+                        <span class="menu_main">Extras</span>                            
+                        <div class="submenu1">  
+                        <div class="left">
+                        <ul>
+                        <li> <a href="http://www.cbronline.com/audio-video">CBR tv</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/account/loginandregister">Join our network</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/industry">Special reports</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/whitepapers">Whitepapers</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/blogs">Blogs</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/events">CBR Dining Club</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/companies">Companies</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/suppliers">Suppliers</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/subscription">Digital and print magazine</a>                        
+                        </li>
+                        <li> <a href="http://www.cbronline.com/account/loginandregister">Newsletters</a>                        
+                        </li>
+                        </ul>                        
+                        </div>  
+                          <div class="right">                         
+                         <ul class="dropdownRightArticles">
+                               <li>
+           <a href="http://www.cbronline.com/news/tech/cio-agenda/the-boardroom/why-should-you-care-about-net-neutrality-4506589"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4506589_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/tech/cio-agenda/the-boardroom/why-should-you-care-about-net-neutrality-4506589">Why should you care about net neutrality?</a></h2>
+
+                               </li>
+                               <li>
+           <a href="http://www.cbronline.com/news/tech/software/analytics/data-in-sports-whos-doing-it-right-4505484"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4505484_main.jpg/180/90"></a>
+<h2><a href="http://www.cbronline.com/news/tech/software/analytics/data-in-sports-whos-doing-it-right-4505484">Data in sports, who's doing it right?</a></h2>
+
+                               </li>
+                          <div class="clearAll"></div>
+                          </ul>                        
+                        </div>
+                        <div class="clearAll"></div>
+                        </div>                            
+                        </li>
+
+      <li><a href="https://computer.businessreviewonline.com/account/Login">Login</a></li>
+      
+    </ul>
+  <div class="clearAll"></div>
+</div>
+
+            </div>  <!-- menu ends -->            
+           <div class="clearAll"></div>
+            </div><!-- Header ends -->	 
+	 <div id="divider" class="gradientGray">  
+    	<div class="webPath"><h2 style="display:block;">Tech/<a href= "http://www.cbronline.com/tech/software">Software</a>/<a href= "http://www.cbronline.com/tech/software/enterprise-apps">Enterprise Applications</a></h2>      	
+    	</div>
+    	</div>
+    	<div class="clearAll"></div>                        
+        </div><!-- mainHeader ends -->
+        
+        <div id="mainBody">
+        <!-- CBR_New_Tags/CBR_OutOfPage --><div id="div-gpt-ad-1364304769881-0">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-0');
+</script>
+</div>
+
+        <!-- CBR_New_Tags/CBR_OutOfPage out-of-page --><div id="div-gpt-ad-1364304769881-0-oop">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-0-oop');
+</script>
+</div>
+
+          <div>
+         <div align="center"><div id="div-gpt-ad-1364304769881-1">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-1');
+</script>
+</div>
+
+         </div>
+         </div>         
+          <div class="clearAll"></div>
+        
+            <!-- bodyLeft Start -->
+
+<!--start main content area-->
+<div id="bodyLeft">
+<div id="bodyLeftWide">
+<div class="bodyNews">
+<h1>New MongoDB 3.0 database to integrate WiredTiger storage engine</h1>           <h3><a href="http://www.cbronline.com/tech/software/enterprise-apps">Enterprise Applications</a>  </h3>
+              <h4>by <a href="http://www.cbronline.com/archive/4294937902">CBR Staff Writer</a>|
+              04 February 2015</h4>
+               <div class="clearAll"></div>
+                <div class="tenPix"></div>
+<b>MongoDB 3.0 and Ops Manager will allow businesses to enhance time to value.</b>
+  <p><p>MongoDB has rolled out the latest version of its NoSQL database, integrating the storage engine from WiredTiger, which it acquired last year.</p><p>Set for launch in March, the new MongoDB 3.0 boasts major performance and scalability improvements with enhancements in the storage layer.</p><p>MongoDB co-founder and CTO Eliot Horowitz said: &quot;Users love MongoDB because it offers the fastest time to value compared to any other DBMS technology.&quot;</p><p>&quot;With 3.0, MongoDB's performance, scalability, and manageability now set the standard for today's most demanding applications.&quot;</p><p>&quot;Moreover, with this release users can build applications that deliver between 7x and 10x greater write throughput, while using up to 80 percent less storage, and managing their operations with up to 95 percent less effort.&quot;</p><p>The company claims that MongoDB 3.0 and Ops Manager will allow businesses to enhance time to value for organisations, while give access to new classes of applications including Internet of Things (IoT), time series data analysis, messaging, and fraud detection.</p><p>The company has also launched a new application called Ops Manager to handle MongoDB deployments,</p><p>Being delivered as part of MongoDB Enterprise Advanced, Ops Manager is aimed at trimming down the operating costs of managing complex MongoDB deployments by about 95% for several operations.</p><p>MongoDB president and CEO Dev Ittycheria said: &quot;This release marks a seminal event not only for our company, but also for the industry.</p><p>&quot;With the features, performance, management, and cost benefits provided by version 3.0, users and IT organizations can now confidently standardize on MongoDB as the DBMS platform for today's modern applications.</p><p>&quot;MongoDB is the database of the post-relational era.&quot;</p></p>
+
+           
+
+    <div id="pagination2Col">
+            
+    </div>
+  <div class="clearAll"></div>
+  <div id="socialMedia">  <a href="javascript:window.print()">
+    <img src="../../../../content/images/printstory.jpg"/>
+  </a>
+    <a class="textbutton b_email" href="mailto:?subject=New MongoDB 3.0 database to integrate WiredTiger storage engine&Body=http://www.cbronline.com/news/tech/software/enterprise-apps/new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248">
+      <img src="../../../../content/images/emailstory.jpg"/> </a>
+
+
+  </div>              <!--start sharing links-->
+           <ul class="sharing_links">
+            <li class="share_bot">Share:</li>
+             <li>
+               <a href="http://del.icio.us/post?v=2&url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&title=New MongoDB 3.0 database to integrate WiredTiger storage engine" title="Delicious" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/delicious.gif" alt="Delicious"/>
+               </a>
+             </li>
+             <li>
+               <a href="http://digg.com/submit?phase=2&url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248" title="Digg" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/digg.gif" alt="Digg"/>
+               </a>
+             </li>
+             <li>
+               <a href="http://reddit.com/submit?url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&title=New MongoDB 3.0 database to integrate WiredTiger storage engine" title="Reddit" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/reddit.gif" alt="submit to reddit" border="0"/>
+               </a>
+             </li>
+             <li>
+               <a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248" title="Slashdot" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/slashdot.gif" alt="Slashdot"/>
+               </a>
+             </li>
+             <li>
+               <a href="http://buzz.yahoo.com/submit/?submitUrl=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&amp;submitHeadline=New MongoDB 3.0 database to integrate WiredTiger storage engine" data-message="New MongoDB 3.0 database to integrate WiredTiger storage engine" title="Buzz" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/buzz.gif" alt="Buzz"/>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&t=New MongoDB 3.0 database to integrate WiredTiger storage engine" title="Facebook" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/facebook_share.gif" alt="Facebook"/>
+               </a>
+             </li>
+             <li>           
+               <a href="http://twitter.com/share?url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&text=New MongoDB 3.0 database to integrate WiredTiger storage engine" data-count="none" target="_blank" title="Twitter">
+                 <img src="http://static.cbronline.com/cbr/images/twitter_share.gif" alt="Twitter"/>
+               </a>
+                 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+             </li>
+             <li>
+               <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&title=New MongoDB 3.0 database to integrate WiredTiger storage engine&source=Computer Business Review" title="Linked In" target="_blank">
+                 <img src="http://static.cbronline.com/cbr/images/linked_in.gif" alt="Linked in"/>
+               </a>
+             </li>
+			<li>
+               <a title="ViadeoShare" href="http://www.viadeo.com/shareit/share/?url=http%3a%2f%2fwww.cbronline.com%2fnews%2ftech%2fsoftware%2fenterprise-apps%2fnew-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248&title=New MongoDB 3.0 database to integrate WiredTiger storage engine&overview=&urllanguage=en&urlaffiliate=21077&encoding=UTF-8" target="_blank">
+               <img src="http://static.cbronline.com/cbr/images/viadeoshare.gif" alt="ViadeoShare"/></a>
+             </li>
+           </ul>
+           <!--end sharing links--> 
+  <div class="box6">
+  <h1>Latest News</h1>
+  <ul>
+      <!--item start-->
+      <li>
+          <a href="http://www.cbronline.com/news/social/self-destruct-social-media-with-dstrux-4507645"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507645_main.jpg/310/150">
+          </a>
+         <img src="../../../../Content/Images/news_icon.png"/>
+         <h2> <a href="http://www.cbronline.com/news/social/self-destruct-social-media-with-dstrux-4507645">Self-destruct social media with DSTRUX</a>  </h2>
+           <div class="clearAll"></div>
+        </li>    
+      <!--item end-->
+      <!--item start-->
+      <li>
+         <img src="../../../../Content/Images/news_icon.png"/>
+         <h2> <a href="http://www.cbronline.com/news/motorola-solutions-seeking-buyers-090215-4507648">Motorola Solutions seeking buyers</a>  </h2>
+           <div class="clearAll"></div>
+        </li>    
+      <!--item end-->
+      <!--item start-->
+      <li>
+         <img src="../../../../Content/Images/news_icon.png"/>
+         <h2> <a href="http://www.cbronline.com/news/tech/software/enterprise-apps/siemens-to-slash-7800-job-worldwide-to-boost-profits-4507651">Siemens to slash 7,800 job worldwide to boost profits</a>  </h2>
+           <div class="clearAll"></div>
+        </li>    
+      <!--item end-->
+      <!--item start-->
+      <li>
+          <a href="http://www.cbronline.com/news/tech/software/appdev/ten-best-open-source-ecommerce-suites-for-business-4507619"><img src="../../../../BRHome/ResizeImage/_Uploads_NewsArticle_4507619_main.jpg/310/150">
+          </a>
+         <img src="../../../../Content/Images/news_icon.png"/>
+         <h2> <a href="http://www.cbronline.com/news/tech/software/appdev/ten-best-open-source-ecommerce-suites-for-business-4507619">Ten best open source ecommerce suites for business</a>  </h2>
+           <div class="clearAll"></div>
+        </li>    
+      <!--item end-->
+  </ul>    
+  </div>
+<div class="clearAll"></div>
+  <div id="commentsBox"><div class="comments">
+  <div class="title_tabs">Comments</div>
+  <a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#" class="trigger more" id="A1">Post a comment</a>
+  <div class="toggle_container clr">
+    <div class="highlight">
+      <br/>
+      Comments may be moderated for spam, obscenities or defamation.<br/>
+      <div id="disqus_thread"></div>
+     
+      <script type="text/javascript">
+        var ts = Math.round((new Date()).getTime() / 1000);
+alert(ts);
+        var disqus_config = function () {
+        this.page.remote_auth_s3 = 'eyJpZCI6IjM4MTM4NyIsInVzZXJuYW1lIjoicHJvZ3Jlc3NpdmVtZWRpYSIsImVtYWlsIjoia29uZGEueWFra2FudGlAZGlnaXRhbGluc2lnaHRyZXNlYXJjaC5pbiJ9 41A1A6E69FA1E6FE9CB4C91728CF5913D4A1CAD6 +ts;
+        this.page.api_key = 'NM6U2y2wXA1tdXsXDBBMSJTadDjAdWEvowoeegL0XTNZVWGB0hTozqpGClPb3xKW';
+        }
+        var disqus_shortname = 'cbrstagingsite';
+
+        var disqus_developer = 'False';
+
+
+        (function() {
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+        })();
+
+      </script>
+      <script type="text/javascript" src="http://cbronline.disqus.com/embed.js"></script>
+      <noscript>Please enable JavaScript to view the comment.</noscript>  
+            
+    </div>
+  </div>
+</div>
+  </div>
+ </div>
+</div>
+</div>
+            <!-- bodyLeft ends -->
+            <div id="bodyMiddle">
+            <!--TopMpu-->
+            
+        <div class="AD_mpu1"><div id="div-gpt-ad-1364304769881-2">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-2');
+</script>
+</div>
+
+        </div>
+        <!--TopMpu-->
+            
+            <div class="box3">
+                 <h1>Join our network</h1>
+                    <div class="button1 gradientGreen">
+							  <a href="https://computer.businessreviewonline.com/account/Login">Register Now</a>  
+                     </div>
+              <!--  <img src="/Content/images/register_box.png" alt="" title=""> --><div style="overflow:hidden;margin-bottom:10px;">
+  <div style="width:50px; float:left">
+    <a class="addthis_button_facebook" href="http://www.facebook.com/cbronline">
+      <img title="" alt="" src="../../../../Content/images/like.gif"/>
+    </a>
+  </div>
+  <img style="margin:3px 3px 0 5px" title="" alt="" src="../../../../Content/images/face_book_icon.gif"/>
+  <span style="font-family:arial;font-size:11px;"> 782 people like this.</span>
+</div>
+<div>
+  <div style="width:300px; float:left">
+    <a class="addthis_button_twitter" href="http://www.twitter.com/cbronline">
+      <img title="" alt="" src="../../../../Content/images/cbr_online.jpg"/>
+    </a>
+    <span style="font-family:arial;font-size:11px;line-height:10px;position:relative;top:-25px;left:70px;display:block;">2144 people follow this.</span>
+  </div>
+</div>
+<div style="margin-top:5px;">
+  <a class="addthis_button_linkedin" href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#">
+    <!--<img title="" alt="" src="~/Content/images/pinterest.gif">-->
+  </a>
+</div>
+<div>
+<div style="float:left">
+<a href="http://www.linkedin.com/groups/CBR-Your-tech-social-network-5061861/about"><img src="../../../../Content/images/linkedin_box.gif"/></a>
+</div>
+</div>
+
+
+                    <div class="tenPix"></div>
+          </div>
+        <!-- box3 ends -->
+       <!--  <a href="http://www.cbronline.com/events">
+		<img class="diningClub_ad" title="" alt="" src="/Content/images/diningclub_ad.jpg">
+		</a>-->
+        <!--<a href="http://business-review-vodcasts.com/made-with-ibm/">
+          <img src="/Content/images/cbr-h.jpg" alt="" title="" class="diningClub_ad">
+        </a>-->  
+
+<div class="box54">
+                    <ul class="box54Header">
+                    <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#mostread" class="selected">Most read</a></li>
+                    <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#mostcommented">Most commented</a></li>                        
+                    </ul>
+                     <div id="mostcommented">
+                       <ul class="articlesImage">
+                           <li>
+                             <a href="http://www.cbronline.com/news/social/david-cameron-plans-crackdown-on-encrypted-communications-4487755">
+                               <h2>David Cameron plans crackdown on encrypted communications</h2>
+                             </a>
+                             <div class="clearAll"></div>
+                           </li>
+                           <li>
+                             <a href="http://www.cbronline.com/news/tech/networks/unified-communications/alan-eustace-to-retire-from-google-040215-4504268">
+                               <h2>Alan Eustace to retire from Google </h2>
+                             </a>
+                             <div class="clearAll"></div>
+                           </li>
+                           <li>
+                             <a href="http://www.cbronline.com/news/security/lizard-squad-regroups-amid-anonymous-civil-war-4503180">
+                               <h2>Lizard Squad regroups amid Anonymous civil war</h2>
+                             </a>
+                             <div class="clearAll"></div>
+                           </li>
+                        <!-- <li>
+                         <a href = "asd">Test1</a>
+                          <div class="clearAll"></div>
+                         </li>
+                           <li>
+                         <a href = "asd">Test1</a>
+                          <div class="clearAll"></div>
+                         </li>
+                           <li>
+                         <a href = "asd">Test1</a>
+                          <div class="clearAll"></div>
+                         </li>-->
+                       </ul>
+                    </div>
+                    <div id="mostread">
+                        <ul class="articlesImage">
+                            <li>
+                              <a href="http://www.cbronline.com/news/security/anonymous-claims-mass-hack-of-isis-twitter-accounts-4507253">
+                                <h2>Anonymous claims mass hack of Isis Twitter accounts </h2>
+                              </a>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                              <a href="http://www.cbronline.com/news/mobile-and-tablets/google-to-begin-glass-project-from-scratch-090215-4507094">
+                                <h2>Google to begin Glass project from scratch </h2>
+                              </a>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                              <a href="http://www.cbronline.com/news/taking-on-emc-and-netapp-with-hyperconverged-storage-4504305">
+                                <h2>Taking on EMC and Netapp with hyperconverged storage </h2>
+                              </a>
+                              <div class="clearAll"></div>
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>
+                <!-- box4 ends -->
+        <!--<use file="CBR/Shared/_MostCommentedTab" RecordBoxIn="MostRead" />--><div class="box4">
+                    <ul class="box4Header">
+                        <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#latestvideos" class="selected">Latest videos</a></li>
+                        <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#mostwatched">Most watched</a></li>
+                    </ul>
+  <script type="text/javascript">
+
+    function playTitle(id) {
+    window.open("js-sidebar-player.html?bctid=" + id,"Top_Videos_Sidebar","location=0,status=0,scrollbars=0,width=500,height=445");
+    }
+  </script>
+                    <!--<div class="clearAll"></div> -->
+                    <div id="latestvideos">
+                      <ul class="articlesImage">
+                                <li>
+                                    <a href="http://www.cbronline.com/video/2968120971001">
+                                      <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2968180118001_th-52b95d74e4b05e49470da69e-672293882001.jpg?pubId=49921910001"/>
+                                    </a>
+                                  <h2>
+                                    <a href="http://www.cbronline.com/video/2968120971001">Is data a strategic asset?</a>
+                                  </h2>
+                                  <div class="clearAll"></div>
+                                </li>
+                                <li>
+                                    <a href="http://www.cbronline.com/video/2592062834001">
+                                      <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2617678242001_thumbnail-for-video-2592062834001.jpg?pubId=49921910001"/>
+                                    </a>
+                                  <h2>
+                                    <a href="http://www.cbronline.com/video/2592062834001">CBR meets Recommind's co-founder</a>
+                                  </h2>
+                                  <div class="clearAll"></div>
+                                </li>
+                                <li>
+                                    <a href="http://www.cbronline.com/video/2572602999001">
+                                      <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2726070945001_th-5252ae00e4b046f6b50c97db-672293882001.jpg?pubId=49921910001"/>
+                                    </a>
+                                  <h2>
+                                    <a href="http://www.cbronline.com/video/2572602999001">From mainframe to mobile with BMC</a>
+                                  </h2>
+                                  <div class="clearAll"></div>
+                                </li>
+                                <li>
+                                    <a href="http://www.cbronline.com/video/2539004183001">
+                                      <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_3359771480001_thumbnail-for-video-2539004183001.jpg?pubId=49921910001"/>
+                                    </a>
+                                  <h2>
+                                    <a href="http://www.cbronline.com/video/2539004183001">Understanding the BYOD trend</a>
+                                  </h2>
+                                  <div class="clearAll"></div>
+                                </li>
+                                <li>
+                                    <a href="http://www.cbronline.com/video/2527715941001">
+                                      <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2968280678001_th-52b9771ae4b0e16895d3bf41-672293877001.jpg?pubId=49921910001"/>
+                                    </a>
+                                  <h2>
+                                    <a href="http://www.cbronline.com/video/2527715941001">Cloud meets the real world</a>
+                                  </h2>
+                                  <div class="clearAll"></div>
+                                </li>
+                        </ul>
+                    </div>
+  
+                    <div id="mostwatched">
+                      <ul class="articlesImage">
+                            <li>
+                                <a href="http://www.cbronline.com/video/2592062834001">
+                                  <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2617678242001_thumbnail-for-video-2592062834001.jpg?pubId=49921910001"/>
+                                </a>
+                              <h2>
+                                <a href="http://www.cbronline.com/video/2592062834001">CBR meets Recommind's co-founder</a>
+                              </h2>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                                <a href="http://www.cbronline.com/video/2572602999001">
+                                  <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2726070945001_th-5252ae00e4b046f6b50c97db-672293882001.jpg?pubId=49921910001"/>
+                                </a>
+                              <h2>
+                                <a href="http://www.cbronline.com/video/2572602999001">From mainframe to mobile with BMC</a>
+                              </h2>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                                <a href="http://www.cbronline.com/video/2968120971001">
+                                  <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2968180118001_th-52b95d74e4b05e49470da69e-672293882001.jpg?pubId=49921910001"/>
+                                </a>
+                              <h2>
+                                <a href="http://www.cbronline.com/video/2968120971001">Is data a strategic asset?</a>
+                              </h2>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                                <a href="http://www.cbronline.com/video/2163649492001">
+                                  <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2163603191001_dimensionData.jpg?pubId=49921910001"/>
+                                </a>
+                              <h2>
+                                <a href="http://www.cbronline.com/video/2163649492001">Bring your own device: challenge or opportunity?</a>
+                              </h2>
+                              <div class="clearAll"></div>
+                            </li>
+                            <li>
+                                <a href="http://www.cbronline.com/video/2379705111001">
+                                  <img class="imgVenue" title="" alt="" src="http://brightcove.vo.llnwd.net/e1/pd/49921910001/49921910001_2395428081001_Cbr-tv-logo.jpg?pubId=49921910001"/>
+                                </a>
+                              <h2>
+                                <a href="http://www.cbronline.com/video/2379705111001">Alfresco's CTO John Newton and AIIM's David Jones - Part 2</a>
+                              </h2>
+                              <div class="clearAll"></div>
+                            </li>
+                      </ul>
+                    </div>
+                </div>
+                <!-- box4 ends -->
+        <!--BottomMpu-->
+            <div class="AD_mpu2"><div id="div-gpt-ad-1364304769881-15">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-15');
+</script>
+</div>
+
+            </div>  
+    <!--<div class = "box5">
+                <use file="CBR/Shared/Widgets/_newsRelatedSectors"/>
+                </div>  -->
+  <a href="http://www.cbronline.com/whitepapers" style="text-decoration:none;">
+    <h1>Enterprise Applications Intelligence</h1></a>
+<div class="clearAll">
+</div>
+<div class="box41">
+    <ul class="box41Header">
+    <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#whitepapers">Latest White Papers</a> </li>
+      <li><a href="new-mongodb-30-database-to-integrate-wiredtiger-storage-engine-4504248#research">Latest Research</a></li>
+  </ul>
+  <div class="tenPix">
+  </div> 
+  <div id="whitepapers">
+        <div class="tenPix"></div>
+        <ul class="articles">
+            <!--item start-->
+            <li>
+              <img src="../../../../Content/Images/whitepaper_icon.png"/>            
+                <a href="http://www.cbronline.com/suppliers/dynatrace/whitepapers/dynatrace_continuous_apm">OVUM Butler Group Technology Audit: dynaTrace Continuous APM
+                </a>               
+              <div class="clearAll"></div>
+            </li>           
+            <!--item end-->
+            <!--item start-->
+            <li>
+              <img src="../../../../Content/Images/whitepaper_icon.png"/>            
+                <a href="http://www.cbronline.com/suppliers/avocent/whitepapers/avocent_success_story_dutch_police_force">Avocent Success Story: Dutch Police Force
+                </a>               
+              <div class="clearAll"></div>
+            </li>           
+            <!--item end-->
+            <!--item start-->
+            <li>
+              <img src="../../../../Content/Images/whitepaper_icon.png"/>            
+                <a href="http://www.cbronline.com/suppliers/vmware-virtualisation-cloud-infrastructure/whitepapers/making-windows-7-migration-pay-rapid-and-real-business-dividends">Making Windows 7 Migration Pay Rapid and Real Business Dividends
+                </a>               
+              <div class="clearAll"></div>
+            </li>           
+            <!--item end-->
+            <!--item start-->
+            <li>
+              <img src="../../../../Content/Images/whitepaper_icon.png"/>            
+                <a href="http://www.cbronline.com/suppliers/dynatrace/whitepapers/leveraging_performance_optimisation_for_business_advantage">Leveraging Performance Optimisation for Business Advantage: Bridging the Life-Cycle Gap Between Development, Transactions and Production
+                </a>               
+              <div class="clearAll"></div>
+            </li>           
+            <!--item end-->
+        </ul>
+    <a href="http://www.cbronline.com/whitepapers" class="more_new">See more</a>
+  </div>
+  <!-- ./whitepapers -->
+ 
+  <div id="research">   
+      <span class="promo_text">Buy the latest industry research online today!</span>
+      <!--item start-->
+          <div class="clearAll">
+          </div>
+          <ul class="articles">
+
+            <li>
+            <img src="../../../../Content/Images/report_icon.png"/>
+              <div class="rel_holder">
+                <a href="http://www.industryreportstore.com/ict-priorities-in-financial-markets-enterprise-ict-investment-plans.html" class="title2" target="_blank">ICT Priorities in Financial Markets - Enterprise ICT investment plans</a>
+                <br/>
+                  Why was the report written?
+In order to provide deeper insights into financial market institutions’ ICT investment priorities and strategic...
+                <span class="trail"><a href="http://www.cbronline.com/news/tech/software/enterprise-apps/industry">Reports</a></span>
+                <a href="http://www.industryreportstore.com/ict-priorities-in-financial-markets-enterprise-ict-investment-plans.html" class="buy" target="_blank">Buy online from &#36;2500
+                </a>
+              </div>
+            </li>
+        </ul>
+          <div class="clr"></div>
+      <!--item end-->
+
+      <!-- ./promo_research -->
+      <a href="http://www.cbronline.com/industry" class="more_new">See more</a>
+    
+  </div>
+
+
+</div>
+              
+
+                
+            </div><!-- bodyMiddle ends -->
+            <div class="clearAll"></div>
+        </div><!-- mainBody ends -->
+        <div class="clearAll"></div>
+        <div class="leaderBottom"><!-- leader bottom --><div id="div-gpt-ad-1364304769881-16">
+<script type="text/javascript">
+    googletag.display('div-gpt-ad-1364304769881-16');
+</script>
+</div>
+
+        </div>
+        <!-- leaderBottom ends -->
+<div id="mainFooter">
+    <div class="footerLeft">
+        <img src="../../../../Content/images/CBR_logoFooter.png" style="float: left;" alt="" title="">
+        <h4>
+            &copy; CBR 2013 | Part of Progressive Digital Media Group Plc.</h4>
+        <div class="clearAll">
+        </div>
+        <ul>
+            <li class="ulHead">About CBR</li>
+            <li><a href="http://www.cbronline.com/about-us">About us</a></li>
+            <li><a href="http://www.cbronline.com/accessibility">Accessibility</a></li>
+            <li><a href="http://www.cbronline.com/advertise-with-us">Advertise with us</a></li>
+            <li> <a href="http://www.cbronline.com/contact">Contact us</a></li>
+        </ul>
+        <ul>
+            <li class="ulHead">&nbsp;</li>
+            <li><a href="http://www.cbronline.com/help">Help</a></li>
+            <li><a href="http://www.cbronline.com/privacy-policy">Privacy</a></li>
+            <li><a href="http://www.cbronline.com/rss-feeds">RSS feeds</a></li>
+            <li><a href="http://www.cbronline.com/sitemap">Site map</a></li>            
+        </ul>
+        <ul>
+            <li class="ulHead">Resources</li>
+            <li><a href="http://www.cbronline.com/events">CBR Dining Club</a></li>
+            <li><a href="http://www.cbronline.com/audio-video">CBR tv</a></li>
+            <li><a href="http://www.cbronline.com/companies">Companies</a></li>
+            <li><a href="http://www.cbronline.com/industry">Special reports</a></li>
+            <li><a href="http://www.cbronline.com/whitepapers">White papers</a></li>
+        </ul>
+        <ul>
+            <li class="ulHead">Extra Content</li>
+            <li><a href="http://www.cbronline.com/blogs">Blogs</a></li>
+            <li>
+                  <li><a href="https://computer.businessreviewonline.com/account/Login">Join our network</a></li>  
+           </li>
+            <!--<li><a href="http://viewer.zmags.com/publication/5bff8ae8#/5bff8ae8/1" target="_blank">This month's magazine </a></li>  -->
+             <!--<li><a href="http://viewer.zmags.com/publication/a8fce62e#/a8fce62e/1" target="_blank">This month's magazine </a></li>-->
+			<!--<li><a href="http://viewer.zmags.com/publication/e87990bd#/e87990bd/1" target="_blank">This month's magazine </a></li>-->
+			<!--<li><a href="<%=Url.GetHomeUrl()%>/digital/cbr-magazine.html" target="_blank">This month's magazine </a></li>	
+      <li><a href="<%=Url.GetHomeUrl()%>/digital/cbr-magazine-archive.html" target="_blank">All CBR Digital Editions </a></li>-->	
+            <li><a href="http://www.cbronline.com/suppliers">Suppliers</a></li>   
+            <li><a href="http://www.cbronline.com/subscription">Digital and print magazine</a></li>
+                              
+        </ul>
+        <div class="clearAll">
+        </div>
+    </div>
+    <!-- footerLeft ends -->
+    <div class="footerRight">
+        <div class="footerRightRight">
+            <h3>Business Review sites</h3>
+            <ul>
+            <li><a href="http://www.automotive-business-review.com" target="_blank">Automotive</a></li>                
+                <li><a href="http://www.banking-business-review.com" target="_blank">Banking</a></li>
+                <li><a href="http://www.cleantechnology-business-review.com" target="_blank">Clean Technology</a></li>
+                <li><a href="http://www.drinks-business-review.com" target="_blank">Drinks</a></li>
+                <li><a href="http://www.energy-business-review.com" target="_blank">Energy</a></li>
+                <li><a href="http://www.food-business-review.com" target="_blank">Food</a></li>
+                <li><a href="http://www.insurance-business-review.com" target="_blank">Insurance</a></li>
+                <li><a href="http://www.governmentcomputing.com/">Government Computing</a></li>
+            </ul>
+            <ul>
+                <li><a href="http://www.logistics-business-review.com" target="_blank">Logistics</a> </li>
+                <li><a href="http://www.medicaldevices-business-review.com" target="_blank">Medical Devices</a></li>
+                <li><a target="_blank" href="http://www.packaging-business-review.com/">Packaging</a></li>
+                <li><a href="http://www.pharmaceutical-business-review.com" target="_blank">Pharmaceutical</a></li>
+                <li><a target="_blank" href="http://www.Retail-business-review.com/">Retail</a></li>
+                <li><a target="_blank" href="http://www.business-review-webinars.com/">Webinars</a>   </li>
+                <li><a href="http://www.industryreportstore.com/">Industry Reports</a></li>                              
+            </ul>
+            <div class="clearAll">
+            </div>
+        </div>
+        <!-- footerRightRight ends -->
+        <div class="clearAll">
+        </div>
+    </div>
+    <!-- footerRight ends -->
+    <div class="clearAll">
+    </div>
+</div>
+
+       <!-- mainFooter ends --><div class="socialBox">
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_floating_style addthis_32x32_style">   
+    <a class="addthis_button_linkedin" href="http://www.linkedin.com/groups/CBR-Your-tech-social-network-5061861/about"></a>
+    <a class="addthis_button_twitter" href="http://www.twitter.com/cbronline"></a>
+    <a class="addthis_button_facebook" href="http://www.facebook.com/cbronline"></a>
+    <!--<a class="addthis_button_google"></a>-->
+    <a class="addthis_button_email"></a>
+    <a class="addthis_button_compact"></a>
+    </div>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5086b60c75b6dd3f"></script>
+    <!-- AddThis Button END -->
+</div><!-- socialBox ends -->   
+    </div> <!-- container ends -->	
+   
+        <div id="privacy" class="cbr_privacy">
+        <div class="cbr_policy_text">
+            Privcy Policy</div>
+         <div class="clearAll">
+        </div>
+        <div id="privacy_content" class="cbr_policy_content">
+           <p>We have updated our privacy policy. In the latest update it explains what cookies are and how we use them on our site. To learn more about cookies and their benefits, please view our privacy policy. Please be aware that parts of this site will not function correctly if you disable cookies. By continuing to use this site, you consent to our use of cookies in accordance with our privacy policy unless you have disabled them.</p> 
+            <div class="cbr_policy_img1">
+                <div class="cbr_policy_img2">
+                    <img src="../../../../content/images/check_mark.png"></div>
+                <div>
+                    <img src="../../../../content/images/btn.png" onclick="CreateCookie()"/>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+     <div id="overlay" class="web_dialog_overlay"></div>
+            <div id="dialog" class="web_dialog">	            	
+			<div id="divmap" style="display:none;height:250px;width:400px;">				
+				Event Location
+				<input type="button" id="btnClose" onclick="HideDialog();" value="CLOSE" style="float:right;"/>
+				  <div id="my_map"></div>
+				</div>
+				</div><!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2010 WebTrends Inc.  All rights reserved. -->
+<!-- Version: 9.3.0 -->
+<!-- Tag Builder Version: 3.1  -->
+<!-- Created: 12/1/2010 4:37:10 AM -->
+<script src="../../../../scripts/computer-br.sdc.js" type="text/javascript"></script>
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+<!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+<!-- ----------------------------------------------------------------------------------- -->
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+<noscript>
+	<div>
+		<img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://wtvertnet.com/dcs7z5yee7u1u6swnv888z1b2_7x6r/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.3.0&amp;WT.dcssip=www.cbronline.com"/>
+	</div>
+</noscript>
+
+<!-- END OF SmartSource Data Collector TAG -->
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ========================================================== 
+
+アニメエンジン PC版　タイトル部分　変更・追加箇所のみ
+
+=========================================================== 2013.09*/
+
+/*-------Page title setting--------*/
+#wrapprAll hgroup .pankuzu_menu{width:960px; margin:0 auto;padding:0;padding:5px\9 0 6px 0;vertical-align:middle;}/*変更*/
+#wrapprAll hgroup .pankuzu_menu .disc_WorkPageContent{color: #aaa;display: inline-block;font-size:12px;letter-spacing:1px;font-weight:normal;margin-top: 5px;}/*新規*/
+#wrapprAll hgroup .pankuzu_menu .title_check{float:right;margin-top:3px\9;line-height:55px;}/*変更*/
+#wrapprAll hgroup #workTitle{max-width: 830px;margin:15px 0 3px 0;margin:0\9;}/*変更*/
+
+
+/* ========================================================== 
+
+アニメエンジン PC版　今週の放送情報　変更・追加箇所のみ
+
+=========================================================== 2013.09*/
+
+/* schedule */
+.articleLev2 .broadButts{float:right !important; margin:0 10px 0 0!important;position:absolute;top:10px;right:0;}
+.articleLev2 .broadButts a{font-size: 12px;display:block;text-decoration:none;margin-left:10px; text-align:center;padding: 4px 6px;font-family: Arial, Helvetica, sans-serif;float:left;}
+.articleLev2 .programTitleSet{clear:both; margin:0 !important; max-width:470px;}
+.articleLev2 .programTitleSet span{clear:both; text-indent:-3em;display:block;padding-left:3em;}
+.articleLev2 .schedule {position:relative;}/*追加*/
+
+/* button settings */
+.button01 {
+	color: #ffee82;
+	background: -moz-linear-gradient(
+		top,
+		#ff7700 0%,
+		#ff7700);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff7700),
+		to(#ff7700));
+	border: 1px solid #d94e03;
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	-webkit-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	text-shadow:
+		0px -1px 0px rgba(217,78,3,1),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.button01:hover {
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#ffaa00 0%,
+		#ffaa00);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffaa00),
+		to(#ffaa00));
+}
+
+
+.button02 {
+	color: #fac3c3;
+	background: -moz-linear-gradient(
+		top,
+		#ff0000 0%,
+		#ff0000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff0000),
+		to(#ff0000));
+	border: 1px solid #d90303;
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,183,181,1);
+	-webkit-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,183,181,1);
+	box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,183,181,1);
+	text-shadow:
+		0px -1px 0px rgba(217,3,3,1),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.button02:hover{
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#fa4444 0%,
+		#fa4444);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#fa4444),
+		to(#fa4444));
+}
+.button03 {
+	cursor:default;
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#c4c4c4 0%,
+		#c4c4c4);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#c4c4c4),
+		to(#c4c4c4));
+	border: 1px solid #a6a5a4;
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,255,255,1);
+	box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(138,138,138,1),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.button03:hover{color: #ffffff;}

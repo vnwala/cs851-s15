@@ -1,0 +1,87 @@
+/*
+	Name: $Id: search_autocomplete.css,v 1.4 2012/08/21 20:21:32 bschlicht Exp $
+
+	This is the stylesheet for the AJAX search autocomplete stuff, mostly affecting
+	the div in which suggestions are placed
+*/
+
+#search {
+	width: 400px;
+}
+
+div.autocomplete {
+	position:absolute;
+	width:400px;
+	background-color:white;
+	border:0px solid #888;
+	margin-top:0px;
+	padding:0;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	visibility: hidden;
+}
+
+li.topAuto {
+	list-style-type:none;
+	text-align: right;
+	font-size: 11px;
+	margin-right: 5px;
+	color: #888;
+}
+
+li.bottomAuto {
+	list-style-type:none;
+	text-align: center;
+	color: #888;
+	height: 20px;
+	display: block;
+	cursor:pointer;
+}
+
+li.bottomAuto.selected {
+	background-color: #00794a;
+	color: #ffffff;
+}
+
+ul.suggestions {
+	font-weight: normal;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+li.suggestions.selected { 
+	background-color: #00794a;
+	color: #ffffff;
+}
+
+li.suggestions {
+	list-style-type:none;
+	display:block;
+	margin:0;
+	padding:2px;
+	height:20px;
+	cursor:pointer;
+	color: #000000;
+}
+
+li.suggestionsSelected {
+	list-style-type:none;
+	display:block;
+	margin:0;
+	padding:2px;
+	height:20px;
+	cursor:pointer;
+	color: #ffffff;
+	background-color: #00794a;
+}
+
+li.bottomAutoSelected {
+	list-style-type:none;
+	text-align: center;
+	color: #ffffff;
+	height: 20px;
+	display: block;
+	cursor:pointer;
+	background-color: #00794a;
+}

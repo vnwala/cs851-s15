@@ -1,0 +1,3 @@
+document.write('<script type="text/javascript">imobile_tag_ver = "0.2";imobile_pid = "5488";imobile_asid = "40545";imobile_type = "inline";</script><script type="text/javascript" src="http://spad.i-mobile.co.jp/script/adssp.js?20110215"></script><!-- 2012/10/21 LINEで送る><!-- a href=http://line.msng.info/http://alfalfalfa.com/><img src=http://alfalfalfa.com/image/line_capsule_2x.png></a -->');
+document.write('<link href="http://alfalfalfa.com/SP_CSS.css?'  + Math.floor((new Date)/1000) + '" rel="stylesheet" type="text/css">');
+document.write('<script type="text/javascript" src="http://alfalfalfa.com/Sp-Only-News.js" charset="utf-8"></script>');

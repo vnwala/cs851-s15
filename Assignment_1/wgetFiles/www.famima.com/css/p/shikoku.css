@@ -1,0 +1,167 @@
+@charset "Shift_JIS";
+
+/*
+Title: chomiryo-banduke
+URI: http://famima.com/shop/pages/shikoku.aspx
+*/
+
+#shikoku-wrap{
+	margin:0; padding:0; width:700px; background-color:#efe8df;}
+
+#shikoku-wrap h1, #shikoku-wrap h2, #shikoku-wrap h3, #shikoku-wrap h4,
+#shikoku-wrap img, #shikoku-wrap p, #shikoku-wrap div, #shikoku-wrap ul, #shikoku-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#shikoku-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#shikoku-wrap .bt a{
+	outline:0;}
+
+#shikoku-wrap h1#title{
+	width:700px; height:159px; background:url(http://www.famima.com/images/p/shikoku/ttl_img1.jpg) no-repeat; text-indent:-9999px;}
+#shikoku-wrap h1#title2{
+	width:700px; height:144px; background:url(http://www.famima.com/images/p/shikoku/ttl2_img1.jpg) no-repeat; text-indent:-9999px;}
+	
+#shikoku-wrap #titleBG{
+	width:700px; height:230px; background:url(http://www.famima.com/images/p/shikoku/ttl_img2.jpg) no-repeat;}
+#shikoku-wrap #titleBG2{
+	width:700px; height:186px; background:url(http://www.famima.com/images/p/shikoku/ttl2_img2.jpg) no-repeat;}
+	
+#shikoku-wrap li.genreNAVI{
+	float:left; list-style-type: none; padding:0 0 15px 17px;
+	width:327px; display:inline;}
+	
+#shikoku-wrap h2#thema{
+	margin-top:15px;}
+	
+
+/* ItemBase218 */
+#shikoku-wrap .itemBase218TOP{
+	width:700px; height:18px; background:url(http://www.famima.com/images/p/shikoku/itembase218_top.gif) no-repeat;}
+#shikoku-wrap .itemBase218MDL{
+ 	width:700px; background:url(http://www.famima.com/images/p/shikoku/itembase218_mdl.gif) repeat-y;}
+#shikoku-wrap .itemBase218BTM{
+	width:700px; height:36px; background:url(http://www.famima.com/images/p/shikoku/itembase218_btm.gif) no-repeat;
+	clear:both;}
+#shikoku-wrap .itemBase218BTM10{
+	width:700px; height:10px; background:url(http://www.famima.com/images/p/shikoku/itembase218_btm10.gif) no-repeat;
+	clear:both;}
+#shikoku-wrap .itemBase218{
+	width:218px; float:left; padding-left:13px;}
+	
+#shikoku-wrap .itemBase218 .txtBase{
+	width:204px; padding:0 7px; margin-bottom:4px;}
+	
+#shikoku-wrap .txtBase h4.name{
+	line-height:120%; color:#333333; font-weight:bold; padding:4px 0;}
+#shikoku-wrap .txtBase h4.name a:link, 
+#shikoku-wrap .txtBase h4.name a:visited{
+	text-decoration:underline; color:#333333;}
+#shikoku-wrap .txtBase h4.name a:hover,
+#shikoku-wrap .txtBase h4.name a:active{
+	text-decoration:none; color:#333333;}
+	
+#shikoku-wrap .txtBase p.price{
+	font-size:90%; line-height:120%; color:#CC0000; padding-bottom:4px;}
+
+#shikoku-wrap .txtBase p.cmnt{
+	line-height:120%; color:#333333; padding-bottom:7px;}
+
+
+/* add: 20100406UP -SUISAN KAKOUHIN- */
+#shikoku-wrap .baseWH{
+	width:700px; background-color:#FFFFFF;}
+
+#shikoku-wrap .date{
+	color:#cc0000; font-weight:bold; text-align:right; padding:10px 0 5px 0;}
+
+#shikoku-wrap .pickupBG{
+	width:700px; background: url(http://www.famima.com/images/p/shikoku/topics_bg.gif) repeat; padding:10px 0;}
+
+#shikoku-wrap .pickupBase680{
+	width:680px; background-color:#000000; margin:5px 0 15px 10px;}
+	
+#shikoku-wrap .pickupBase680 .item01IMG{
+	width:419px; float:left;}
+#shikoku-wrap .pickupBase680 .item01TXT{
+	width:255px; float:left;}
+	
+#shikoku-wrap .pickupBase680 .item02IMG{
+	width:458px; float:right;}
+#shikoku-wrap .pickupBase680 .item02TXT{
+	width:216px; float:right;}
+	
+#shikoku-wrap .pickupBase680 h4.nameWH{
+	color:#FFFFFF; line-height:120%; font-weight:bold; padding-left:10px;}
+	
+#shikoku-wrap .pickupBase680 h4.nameWH a:link, 
+#shikoku-wrap .pickupBase680 h4.nameWH a:visited{
+	text-decoration:underline; color:#FFFFFF;}
+#shikoku-wrap .pickupBase680 h4.nameWH a:hover,
+#shikoku-wrap .pickupBase680 h4.nameWH a:active{
+	text-decoration:none; color:#FFFFFF;}
+
+#shikoku-wrap .pickupBase680 p.priceWH{
+	font-size:90%; line-height:120%; color:#FFFFFF; padding:5px 10px;}
+#shikoku-wrap .pickupBase680 .bt{
+	width:120px; padding-left:10px;}
+	
+#shikoku-wrap .itemBase335MDL{
+ 	width:700px; background:url(http://www.famima.com/images/p/shikoku/itembase335_mdl.gif) repeat-y; margin-top:10px;}
+#shikoku-wrap .itemBase335BTM{
+	width:700px; height:10px; background:url(http://www.famima.com/images/p/shikoku/itembase335_btm.gif) no-repeat;
+	clear:both;}
+	
+#shikoku-wrap .itemBase335{
+	width:335px; float:left; padding-left:10px;}
+#shikoku-wrap .itemBase335 .itemIMG{
+	width:157px; float:left;}
+#shikoku-wrap .itemBase335 .txtBase{
+	width:170px; float:left;}
+/* add: 20100406UP -SUISAN KAKOUHIN- //END */
+
+/* add: 20100413UP -new4items- */
+#shikoku-wrap .additemBase{
+	width:330px; float:left; padding-left:10px;}
+	
+#shikoku-wrap .additemBase .IMG{
+	width:100px; float:left;}
+#shikoku-wrap .additemBase .txtBase{
+	width:220px; float:left; padding-left:7px;}
+
+#shikoku-wrap .dotline{
+	width:700px; height:10px; background:url(http://www.famima.com/images/p/shikoku/dotline.gif) no-repeat;
+	clear:both;}
+
+
+/* add: 20100413UP -new4items- //END */
+
+/* clearfix */
+#shikoku-wrap #navibase .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#shikoku-wrap #navibase .clearfix {
+  min-height: 1px;}
+
+* html #shikoku-wrap #navibase .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #shikoku-wrap #navibase{ 
+	height: 1%;}

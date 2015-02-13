@@ -1,0 +1,1 @@
+document.write("楽天カード<br><a href='http://px.a8.net/svt/ejp?a8mat=2BEXC1+CEKHV6+FOQ+C0IZL' target='_blank'><img border='0' width='125' height='125' alt='' src='http://www27.a8.net/svt/bgt?aid=140104513750&wid=065&eno=01&mid=s00000002033002018000&mc=1'></a><img border='0' width='1' height='1' src='http://www11.a8.net/0.gif?a8mat=2BEXC1+CEKHV6+FOQ+C0IZL' alt=''><br><br>");

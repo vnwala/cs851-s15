@@ -1,0 +1,114 @@
+/* detail CSS */
+
+#logrecom_placeholder.detail{
+	text-align:left;
+	margin-top:5px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	width:700px;
+}
+#logrecom_placeholder.cart{
+	margin-left:120px;
+	margin-right:auto;
+	width:715px;
+}
+
+*html #logrecom_placeholder.cart{
+	margin-left:auto;
+	margin-right:auto;
+	width:715px;
+}
+
+
+#logrecom_placeholder #logrecom_results:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+#logrecom_placeholder #logrecom_relate_result, 
+#logrecom_placeholder #logrecom_rank_result {
+	padding:0;
+/*	width:100%; */
+	margin-top:3px;
+	margin-right:3px;
+	overflow:hidden;
+}
+
+*html #logrecom_placeholder.cart #logrecom_relate_result, 
+*html #logrecom_placeholder.cart #logrecom_rank_result {
+	padding:0;
+	margin-left:auto;
+	margin-right:auto;
+	width:75%;
+	overflow:hidden;
+}
+
+#logrecom_placeholder .logrecom_title {
+	clear:both;
+	font-size:14px;
+	color:#FFFFFF;
+	font-weight:bold;
+	margin:0px;
+	width:100%;
+}
+
+.detail .productcheck {
+	display:inline;
+	float:left;
+	margin-top:10px;
+	margin-right:15px;
+	padding:0px;
+	width:163px;
+	_width: 163px;
+	border-style:solid 4px #333333; 
+}
+
+.cart .productcheck {
+	display:inline;
+	float:left;
+	margin-top:10px;
+	margin-right:21px;
+	padding:0;
+	width:162px;
+	_width: 162px;
+	border-style:solid 4px #333333; 
+}
+
+#logrecom_placeholder .lastitem {
+	margin-right:0px;
+}
+
+#logrecom_placeholder .productconnect, .productrank {
+	list-style-type:none;
+	margin:0px;
+	padding:0;
+}
+
+#logrecom_placeholder li.product_image {
+	margin-bottom:10px;
+	padding:0;
+	border: 4px solid #eeeeee;
+	text-align:center;
+}
+
+#logrecom_placeholder img.product_image {
+	border:medium none;
+	width:100px;
+}
+
+#logrecom_placeholder li.name {
+	text-align: left;
+	padding:0;
+}
+
+#logrecom_placeholder li.name a {
+	color:#000000;
+	text-decoration:underline;
+	text-align: left;
+	line-height:150%;
+}
+

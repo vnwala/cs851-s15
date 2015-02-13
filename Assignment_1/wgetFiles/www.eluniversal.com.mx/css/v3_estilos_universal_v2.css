@@ -1,0 +1,2152 @@
+/* ************************************************** */
+/* ***** clases del footer entregadas por klein ***** */ 
+p{margin:0;}
+
+	#footer{
+		margin:0 auto;
+		width:982px;
+		background-image:url(http://www.eluniversal.com.mx/img/v3/bg_footer.png);
+		background-repeat:repeat-x;
+		padding:3px 0;
+		font-family:arial;
+		font-size:12px;
+		height:120px;
+	}
+	
+	#footer a{
+		color:#000000;
+		text-transform:uppercase;
+	}
+	
+	/*cesar ->12:03 p.m. 09/09/2010 */
+	 #footer p a {
+		color:black !important;
+		text-decoration:none; /* se quito hoja de estilo detalle universal y salian subrayados los links de footer */
+	}
+	
+	.fLeft{float:left;padding:5px;}
+	
+	.footerLeft{width:115px;}
+	
+	.footerMiddle{
+		width:540px;
+		border-left:1px solid #D2D2D2;
+		border-right:1px solid #D2D2D2;
+		height:105px;
+	}
+	
+	.footerMiddle p{
+		margin:0 0 5px 0;
+	}
+	
+	.fCopyright{
+		display:block;
+		font-size:14px;
+	}
+	
+	#fLogo{background-image:url(http://www.eluniversal.com.mx/img/v3/footer_logo.png); background-repeat:no-repeat; display:block; width:229px; height:25px; text-indent:-9999px;}
+	
+	
+	.fGda, .fCertifica {background-image:url(http://www.eluniversal.com.mx/img/v3/footer_iconos.png); background-repeat:no-repeat; display:block; width:100px; height:48px; text-indent:-9999px; margin-left:10px;}
+	
+	.fCertifica{background-position:0 -48px;}
+	
+	.footerRight{width:295px; font-size:11px;}
+	
+	.clear{clear:both;}
+	
+	.verResultadosVotaciones{ float:right; margin-top:13px; font-weight:bold; color:#8B272D;}
+	.cnewcenterd10{
+		padding:0 0 10px 0;
+		margin:15px 4px 0 4px;
+		border-bottom:1px dashed #D2D2D2;
+	}
+	
+		.cnewcenterd10 h3{
+			float:right;
+			width:200px;
+			text-align:left;
+		}
+		
+		
+		
+	/*aRSL para votaciones*/
+	.leyendaVotacion{
+		font-family:Georgia,"Times New Roman",Times,serif;
+		font-size:16px;
+	}
+
+	.tabquoutesSimples {
+		border-bottom:1px dashed #D2D2D2;
+		margin-top:10px;
+		padding-bottom:10px;
+		text-align:left;
+	}
+
+    /* Para carrusel de blogs y chats actual, alterno*/
+    /* para cuadrar alto de div */
+    
+    .geo12azul_s {
+        color:#336699;
+        font-family:Georgia,"Times New Roman",Times,serif;
+        font-size:12px;
+        letter-spacing:-0.5px;
+        line-height:13px;
+        text-transform:uppercase;
+}
+    .ar12negro {
+color:#000000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-weight:normal;
+text-transform:none;
+}
+.geo15gris {
+color:#333333;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:15px;
+font-weight:normal;
+text-transform:none;
+}
+.ar10bcobold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+#horizontal_carousel .container {
+margin-left:3px;
+width:954px;
+/*top: 105px;*/
+}
+#repciudadano {
+height:auto;
+}
+#middhorizontal_carousel .container, #gallhorizontal_carousel .container {
+margin-left:0px;
+width: auto;
+}
+
+
+/* para poner negritas en el cuadro las mas -> cesar 30042010*/
+
+.arrow b{
+font-weight:bold;
+color:#8B272D;
+
+}
+/* para cuadrar las mas en nueva posicion */
+/*#lasmas {  ->cesar 01:29 p.m. 14/05/2010 para cuadrar mejor los estilos
+float:none;
+margin-left:5px;
+width:300px;
+}
+*/
+#lasmas {
+float:none;
+margin:15px 4px 0;
+width:306px;
+}
+
+
+	#left-grafico{
+		/* border-right:1px solid #D2D2D2; // se comenta para cuadrar cambio de posicion de bloque */
+        border-right:0px;
+	}
+
+#newsgrafico  .clisttabs {
+border-bottom:1px solid #D2D2D2;
+}
+
+#newsgrafico.sidegrey  {
+	background-color:#F2F2F2;
+	border:1px solid #DFDFDF;
+	margin:10px 0;
+	/* width:318px;*/ /* no necesario */
+}
+/*#lasmas div ul {  ->cesar 01:27 p.m. 14/05/2010 se cambia por el de abajo 
+position:relative;
+width:300px;
+}
+*/
+#lasmas div ul {
+position:relative;
+width:306px;
+}
+
+#lasmas .clisttabs {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+padding:5px 0;
+line-height:normal;
+height:auto;
+overflow:visible;
+
+}
+ 
+
+.clisttabs {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+padding:5px 0;
+height:auto; /* agregado por cesar para cuando la li del promo gris se va a dos lineas*/
+}
+
+.ulgrafico {
+width:155px;
+}
+
+/* este se cambia de 244 en estilos.css de Klein para cuadrar 9 notas de mxm */
+#copcentertab  {
+margin-top:230px;
+}
+#newsgrafico {
+padding-bottom:0;
+}
+
+
+
+/*----------------------------*/
+/*  se comenta por que se cambia posicion en parte inferior de este archivo ->cesar 02:52 p.m. 11/05/2010
+span.arrow  {
+	display:inline;
+	background-position:-407px -500px;
+	background-repeat:no-repeat;
+	width:17px;
+	height:12px;
+	width:0px;
+        
+}*/
+#reporteSpace, #rcmasSpace {
+height: auto;
+margin:0 auto;
+width:630px;
+}
+
+.tabquoutes blockquote {
+float:right;
+font-family:Georgia,"Times New Roman",Times,serif;
+font-size:18px;
+font-weight:normal;
+line-height:100%;
+width:325px;
+}
+
+
+.tabquoutes img {
+float:left;
+width:100px;
+}
+
+
+	#btopsocial h4{
+   cursor:pointer;
+	}
+    
+/*----------------------------*/
+#copcentertab {
+margin-top:0px;
+}
+
+#ccentertab div ul {
+position:relative;
+width:306px;
+}
+
+/* negritas en las etiquetas de las mas ->cesar 12:24 p.m. 05/05/2010*/
+#lasmas .clisttabs b {
+font-weight:bold;
+color:#8B272D;
+}
+
+ /* para brasil2014 -> cesar 23-01-2014*/
+.brasil2014 {
+  background-image: url(../n_img/brasil_mxm.gif); display: inline-block !important; width: 18px !important; height: 16px !important;
+ }
+
+.audiomark {
+  background-image: url(http://www.eluniversal.com.mx/img/audio.gif); display: inline-block !important; width: 35px !important; height: 13px !important;
+ }
+
+#ccentertab .clisttabs span {
+display:block;
+float:left;
+width:35px;
+}
+
+#cbanner {
+margin: auto 0 0;
+/* width: 318px;*/
+width: 326px; /* no se ve alineada al centro -> cesar 01:24 p.m. 09/08/2011*/
+margin-top: 0;
+}
+
+#cbanner-derecha {
+margin: auto 0 0;
+width: 315px;
+margin-top: 0;
+}
+
+#mmtitulares .clisttabs {
+	height:auto;
+	line-height:120%;
+}
+
+.relnew_carrusel  {
+color:#8B272D;
+margin:2px 0 3px 5px;
+padding-top:3px;
+}
+
+#ccentertab h4 a, #opinion h4 a {
+color:#8B272D;
+font-size:18px;
+font-weight:bold;
+height:19px;
+padding-top:15px;
+text-transform:uppercase;
+}
+#middnews p a {
+color:#336699;
+text-decoration:none;
+}
+
+#content p a{
+color:#0000FF; 
+text-decoration:none;
+}
+
+.titularFotoNota{
+font-weight:bold;
+color: red;
+}
+
+.tabnews a {
+float:none;
+}
+
+
+/* cambio para dos renglos en cuadro opinion editorial -> cesar 12:08 p.m. 11/05/2010*/
+
+.clisttabs_opinion {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+font-size:11px;
+height:auto;
+line-height:120%;
+overflow:hidden;
+padding:5px 0; 
+}
+/* para mostrar arrow en cuadro opinion -> cesar 02:50 p.m. 11/05/2010 cambios enviados por Klein*/
+.arrow {
+background-position:5px -1008px;
+background-repeat:no-repeat;
+padding-left:17px;
+display:block; /* se agrega para mostrar como bloque la pleca y los nombres como bloque independiente para una indentacion mmas uniforme ->cesar 12:00 p.m. 12/05/2010 */
+}
+/* para mostrar arrow en cuadro las mas -> cesar 02:50 p.m. 11/05/2010 cambios enviados por Klein*/
+
+span.arrow {
+background-position:5px -1008px;
+background-repeat:no-repeat;
+display:inline;
+height:12px;
+width:0;
+}
+
+.titulomenu {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:9px;
+	font-weight:lighter;
+	color: #FFF;
+}
+
+.titulotitulos {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color: #FFF;
+}
+
+
+.tituloSubmenu {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:lighter;
+	color: #333;
+}
+
+
+/* se agrega para arreglar mxm indentacion ->cesar 06:55 p.m. 12/05/2010 */
+.timeIndent {
+margin:0 0 0 35px;   
+}
+
+#hgrafico {
+color:#00549E; /* para color azul en el link ->cesar 06:55 p.m. 12/05/2010 */
+}
+.copstabs { /* para eliminar parte superior de pleca que aparece en cuadro de LasMas ->cesar 07:08 p.m. 12/05/2010 */ 
+height:36px;
+}
+.principal {
+	font-size: 18px;
+	font-family: Arial,Verdana, Geneva, sans-serif;
+	color: #FFF;
+	padding-left: 0px;
+}
+.titulotitulosD {
+        font-family: Arial,Verdana, Geneva, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color: #000;
+}
+
+
+/* cesar -> para secciones 05:26 p.m. 20/05/2010 */
+#noticiasFeats .headarts  {
+color:#336699;
+margin:0;
+}
+
+.lmmampliado, .lmmaudio {
+border-bottom:1px solid #D2D2D2;
+height:auto;
+margin-top:3px;
+overflow:hidden;
+padding:3px 3px 5px;
+}
+
+/* agregar foto para mxm ampliado */
+/* se agregan estilos para imagen en mxm ampliado -> cesar 23-04-2012 */
+.lmmampliado img {
+ width: 90px;
+/*  height: 63px; */ /* para mostrar imagen con dimensiones proporcionales ->cesar 24-04-2012*/
+height: auto; 
+ clear: left;
+ float: left;
+ margin-right: 15px;
+}
+
+.lmmampliado h2 a, .lmmaudio h2 a {
+color:#336699;
+text-decoration:none;
+}
+#rephorizontal_carousel .container, #rcmashorizontal_carousel .container {
+float:left;
+height:auto;
+overflow:hidden;
+width:100%;
+}
+.oprepciudadano {
+background-position:0 -904px;
+background-repeat:repeat-x;
+height:60px;
+margin-top: 11px;
+position:relative;
+}
+#rephorizontal_carousel .buttons, #rcmashorizontal_carousel .buttons {
+margin:0;
+position:relative;
+z-index:2;
+}
+#repciudadano{
+	width:630px;
+	float:right;
+    margin:0 14px 0 5px;
+	/* margin:25px 14px 0 5px;*/ /* para edicion impresa -> cesar 04:51 p.m. 30/06/2010*/ 
+	position:relative;
+	overflow:hidden;
+    
+	}
+#blogs_carousel .container {
+height:auto;
+}
+
+#chat_carousel .container {
+height:auto;
+}
+
+#blogsSpace{
+height:auto;
+}
+
+#chatSpace{
+height:auto;
+}
+
+#rephorizontal_carousel ul li, #rcmashorizontal_carousel ul li, #macmashorizontal_carousel ul li, #micmashorizontal_carousel ul li, #miclmashorizontal_carousel ul li{
+width: 630px;
+}
+.tabquoutes blockquote
+{
+width: 520px;
+}
+.gallcarousel{
+height: auto;
+}
+#gallhorizontal_carousel ul li {
+padding:0 8px;
+width:176px;
+}
+.bgimggall{
+height:140px;
+padding-top:1px;
+float: none;
+}
+.gallcarousel img {
+margin:9px auto 0;
+}
+.gallcarousel h3 {
+font-family:Georgia,"Times New Roman",Times,serif;
+margin:-15px auto 15px;
+width:154px;
+clear: none;
+float: none;
+height: auto;
+margin-right: 0;
+}
+
+.fotoportadaBig {
+margin-top:400px;
+}
+
+.chnews i{
+font-style: italic;
+}
+
+
+/*cesar -> 02:48 p.m. 08/06/2010 */
+span.fecha {
+color: #8B272D !important;
+font-weight:bold;
+}
+.fechadias { color: #8B272D !important; font-weight: bold; line-height:19px; }
+
+.texto-fotoportada {
+border:0 none;
+font-family:Arial,Helvetica,sans-serif;
+font-size:110%;
+font-style:normal;
+font-weight:normal;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:0;
+padding:0;
+vertical-align:baseline;
+}
+
+/* estilo para liga de foto portada horizontal -> cesar 08:25 p.m. 10/06/2010*/
+
+.vernota-fotoportada, .liga1-fotoportada, .liga2-fotoportada {
+color:#8B272D !important;
+font-weight:bold;
+}
+
+#content2{
+background-color:#FFFFFF;
+border-left:1px solid #D6DBE0;
+border-right:1px solid #D6DBE0;
+margin:-5px auto 0; /* -> se pone negativo el top para cuadrar cuando no hay fotoportada -> cesar 05:52 p.m. 11/06/2010 */
+width:980px;
+position:relative; /*para fotoportadas*/
+}
+
+/*
+#x01{
+align: center;
+}*/
+
+#player_old{margin-top:0 !important;}
+#middhorizontal_carousel p a {
+color:#336699;
+text-decoration:none;
+}
+
+/* *************************************************************** */
+/* para antes de edicion impresa */
+
+#sondeo h4 {
+padding-top:0px;
+
+}
+
+#encuestas {
+width: 322px;
+ margin:0px 0 0 5px;
+}
+
+#newsmore {
+padding-bottom:0px;
+}
+
+.sidegrey {
+background-color:#F2F2F2;
+border:1px solid #DFDFDF;
+border-bottom:0px;
+margin:10px 0;
+width:318px;
+}
+
+/* ***** para edicion impresa -> cesar 11:48 a.m. 30/06/2010 ***** */
+
+.pdf-news{ 
+width:310px; 
+/* padding:10px 0; */
+padding:10px 0 10px 6px;
+border-bottom:0px solid #D4D4D4;
+ }
+ 
+.pdf-news-derecha{ 
+width:300px; 
+padding:5px 0 5px 6px;
+border-bottom:0px solid #D4D4D4;
+ }
+ 
+.pdf-portada{ 
+width:130px; 
+background-color:#000; 
+float:right; 
+margin:0 0 0 0; 
+}
+
+.pdf-txt{ 
+width:155px; 
+/* height:220px;*/ /* cesar -> 12:02 p.m. 30/06/2010 para alto automatico*/
+height:auto; 
+float:left; 
+}
+
+.hheitab{ 
+font-size:18px; 
+text-transform:uppercase; 
+float:left; 
+padding-top: 5px; 
+padding-left: 6px; 
+}
+
+.hheitab a{ 
+font-weight:bold; 
+color:#FFFFFF; 
+text-decoration:none; 
+}
+
+.eilisttabs{ 
+line-height: 100%; 
+clear:both; 
+padding:5px 0; 
+border-bottom:1px solid #d2d2d2; 
+height:25px; overflow:hidden; 
+text-decoration: none; 
+}
+
+.eilisttabs a{ 
+color:#000000; 
+text-decoration:none;}
+
+.block-links{ 
+font-family: georgia, times; 
+font-style: normal; 
+padding:10px 0 0; 
+}
+
+.block-links a{ 
+display:block; 
+width:190px; 
+float:left; 
+padding:0 9px; 
+text-decoration:none; 
+color:#336699; 
+font-weight:normal; 
+font-size:16px; 
+line-height: 17px;
+ }
+
+#hedicion { 
+background-color: #369; 
+width: 304px; 
+height: 20px; 
+margin-bottom: 8px; 
+}
+
+.dsR2 /*agl rulekind: base;*/ { 
+width: 170px;
+ }
+ 
+.dsR3 /*agl rulekind: base;*/ {
+ /* height: 24px;  comentado cesar -> 01:27 p.m. 31/07/2010*/
+ height: auto;
+ width: 185px;
+ }
+ 
+  
+#botones { 
+width: 160px; 
+height: 20px; 
+margin-top: 7px;
+ }
+
+/* ***** fin edicion impresa ***** */ 
+
+/* para nuevos botones de detalle de opinion y detalle de nota -> cesar 02:38 p.m. 08/07/2010*/
+
+.botones_nuevos  {
+float:left;
+padding-right:3px;
+text-align:center;
+width:50px;
+margin-top:10px;
+text-align:center;
+}
+
+.optionSizeMinus {
+background-position:-202px -1305px;
+background-repeat:no-repeat;
+display:block;
+padding-top:35px;
+color:#666666;
+font-size:11px;
+}
+.extraOptions {
+height:75px;
+}
+
+.cal_fecha a {
+color:#556576;
+font-family:Arial,Helvetica;
+font-size:12px;
+font-weight:bold;
+
+}
+
+
+/* para parrafos en el grafico.xm detalle de nota -> cesar 04:29 p.m. 14/07/2010*/
+.contenido  p {
+margin:13px 0;
+}
+
+/* nuevos cambios -> cesar 06:00 p.m. 16/07/2010*/
+
+.mapadelicitivodf {
+background-color:#FFFFFF;
+border:1px solid #D9D9D9;
+padding:5px;
+width:303px;
+}
+
+.mapadelicitivodf h3 {
+background-image:url("http://www.eluniversal.com.mx/img/v3/mapadelictivo1.gif");
+background-repeat: no-repeat;
+display:block;
+height:45px;
+text-indent:-9999px;
+width:305px;
+}
+
+.mapadelicitivodf h2 {
+border-bottom:1px dashed #D9D9D9;
+font-size:16px;
+font-weight:normal;
+line-height:150%;
+padding-bottom:10px;
+}
+/* se agren estilos para nota10 -> cesar 10:46 a.m. 31/07/2010 */
+/* div de cesar*/
+.nota10{
+width:641px;
+padding:10px 0;
+border-bottom:1px solid #D4D4D4;
+clear:left;
+}
+
+.principal-news{   
+width:641px;
+padding:10px 0;
+padding-left:10px;
+border-bottom:1px solid #D4D4D4;
+border-right:1px solid #D4D4D4;
+margin-bottom:10px;
+clear:left;   
+}
+
+
+.principal-news h2{
+font-size:40px;
+text-transform:uppercase;
+}
+.principal-video{
+width:310px;
+/* height:220px;*/
+height:auto;
+background-color:#ffffff;
+float:left;
+margin:0 10px 0 0;
+}
+.principal-news p {
+color:#565656;
+margin:0 0 15px;
+}
+
+.principal-txt{
+ width:310px; 
+/* height:220px; */
+height:auto;
+float:left; 
+}
+
+.block-links{ font-family: georgia, times; font-style: normal; padding:10px 0 0; }
+
+.block-links a{
+ display:block; 
+ width:190px; 
+ float:left; 
+ padding:0 9px; 
+ text-decoration:none; 
+ color:#336699; 
+ font-weight:normal; 
+ font-size:16px; 
+ line-height: 17px; }
+
+ .block-links b {
+ font-weight:bold;
+ }
+ 
+.principal-middle{
+border-right:1px solid #D4D4D4;
+border-left:1px solid #D4D4D4;
+}
+
+
+/* para flotar li de submenu a la derecha en cabezal -> cesar  12:09 p.m. 06/08/2010 */
+
+.li_right {float:right;}
+/*para reducir leyenda de publicidad en carrusel del home -> cesar 02:40 p.m. 16/08/2010*/
+ 
+.titulos_small{
+color:#336699 !important;
+font-size:16px !important;
+font-weight:bold !important;
+margin:15px 0 5px;
+text-transform:uppercase !important;
+}
+
+
+/*cambios pedidos por Javier 251010 Andr�s*/
+.titulos {
+line-height:125%;
+    /*height: 50px;*/
+    height: 45px;
+    overflow: hidden;
+}
+#header {
+width:980px;
+}
+#topbanner {
+height:auto;
+width:980px;
+}
+#tclima {
+margin-right:1px;
+}
+#tfecha {
+margin:15px 0 0 9px;
+}
+#tlogosearch {
+margin-left:9px;
+}
+#tlogosearch label{
+display:block;
+margin-top:5px;
+}
+.cleft {
+float:left;
+margin:0;
+width:326px;
+}
+.cnewcenter {
+border-bottom:1px dashed #D2D2D2;
+margin:15px 0 0 0;
+padding:0 4px 10px 4px;
+}
+.cmore {
+width:auto;
+}
+.ccatseccion {
+margin:10px 0 0 0;
+}
+#ccentertab {
+margin:0 4px;
+}
+#lasmas {
+width:auto;
+padding-bottom:0;
+padding-top:0;
+}
+#ccentertab div ul {
+width:auto;
+}
+#opinion{
+margin:0 4px;
+}
+.pdf-news{
+margin:0 2px;	
+width:315px;
+}
+.pdf-news-derecha{
+margin:0 2px;	
+width:300px;
+}
+#sads1{
+text-align:center;
+}
+.middcarousel h3 {
+font-size:15px;
+height:auto;
+}
+.middlecat {
+margin:0 30px 20px 0
+}
+#middnews h3 {
+font-size:15px;
+height:auto;
+}	
+#topsocial{	
+margin-right:-10px;	
+}
+#topleft{
+border-left:1px solid #D2D2D2;	
+}
+#middsidebar{
+border-right:0;	
+}
+.sidegrey{
+width:310px;
+}
+
+/* ********************************************************************************************************************** */
+/* ********************** estilos de eu_home.css -> cesar 27082010 para eliminar liga del cabezal ************************ */ 
+/* ********************************************************************************************************************** */
+
+.arnegro10{font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#000}
+.arnegro11{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#000}
+.arnegro12{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#000}
+.arnegro13{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#000}
+.arnegro14{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#000}
+.arnegro16{font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#000}
+.arnegro14goo{font-family:Arial;font-size:13px;color:#000;font-weight:normal}
+
+.arazul11{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#5c6c7c;font-weight:bold}
+.arrazul11{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#369}
+.arazul12{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5c6c7c;font-size:12px}
+.arazul11op{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#036;font-weight:bold}
+.arazul12rel{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#036}
+
+.arrojo11{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#900}
+.arrojo11 br{margin-bottom: 3px}
+.arrojo11b,.hora{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#900;font-weight:bold}
+.arrojo12{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#900}
+.arrojo12b{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#900;font-weight:bold}
+.arrojo15b{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#900;font-weight:bold}
+.arRojo18{font-family:Arial,Helvetica,sans-serif;font-size:18px;color:#900;font-weight:lighter}
+
+.arblanco11{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#fff}
+.arblanco11b{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#fff;font-weight:bold}
+.arblanco12m { color: #fff; font-size: 12px; font-family: Arial, Helvetica, sans-serif; }
+
+
+.arnaranja12b{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#fc6}
+
+.argris12{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666}
+.argris12ddd{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#dddddd}
+.argris12b{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#666}
+
+.arbazulgris12 {font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#8C99A8;font-weight:bold}
+
+.caja-suscrip1{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#000;font-weight:normal}
+.caja-suscrip2{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#37495D;font-weight:bold}
+
+.estilocampo{font-family:Arial,Helvetica,sans-serif;font-size:9pt;font-weight:normal;color:#666;background-color:#FFF;border:1px solid #D6DBE0; width:130px;height:15px}
+.estilocampo2{font-family:Arial,Helvetica,sans-serif;font-size:9pt;font-weight:normal;color:#666;background-color:#FFF;border:1px solid #D6DBE0;width:130px;height:20px}
+
+.txtcomentarios{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#828F9F;font-weight:normal}
+/*.estilotextarea{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#666;font-weight:normal;background-color: #FFF;border:1px solid #D6DBE0;scrollbar-arrow-color:#8A9FB3;scrollbar-base-color:#D6DBE0;scrollbar-dark-shadow-color:#8A9FB3;scrollbar-track-color:#EEF1F4;scrollbar-face-color:#D6DBE0;scrollbar-shadow-color:#8A9FB3;scrollbar-highlight-color:#D6DBE0;width:470px;height:60px}
+*/
+.fecha{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#D6DBE0;font-weight:normal}
+
+.numAzul9{font-family:Arial,Helvetica,sans-serif;font-size:9pt;font-weight:bold;color:#556576}
+.numAzul11{font-family:Arial,Helvetica,sans-serif;font-size:11pt;color:#556576;font-weight:bold}
+
+.numAzul{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#454545;font-weight:bold}
+.numGris{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#8C99A8;font-weight:bold}
+
+.tit-google{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#333;font-weight:bold}
+.tit-google1{font-family:Arial,Helvetica,sans-serif;font-size:9pt;color:#666;font-weight:normal}
+.txt-fotogaleria{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#000;font-weight:normal;line-height:13px}
+.txt-titular{font-family:Arial; font-size:8.5pt; color:#FF0000; font-weight:bold; line-height:13px; text-transform: uppercase }
+.txt-piefoto{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color: #666;font-weight:normal}
+.txt-masleidas{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#000;font-weight:normal}
+
+.piefotonegro{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#4F4F4F}
+
+.texto-opinion3{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#4477A5;font-weight:bold}
+
+.piefotorojo{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#A70E13} 
+.txt-galeria{font-family:Arial,Helvetica,sans-serif;font-size:19px;color:#45586D;font-weight:bold;line-height:19px}
+
+.a10g{font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#555555}
+.a14g{font-family:Arial;font-size:13px;color:#555555;font-weight:normal}
+.a11a{font-family:Arial,Helvetica,sans-serif;font-size:11.5px;color:#0068A6;font-weight:bold}
+.a11g{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#4F4F4F;font-weight:normal}
+.a11gb{font-family:Arial;font-size:11px;color:#000000;font-weight:normal}
+.a12g{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#4F4F4F;font-weight:bold}
+.a13g{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4F4F4F;font-weight:normal}
+.a14a{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#5074A0;font-weight:bold;font-style:normal}
+.plecaimp{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#086BA6;font-weight:bold}
+
+.txt-promo-gris{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;color:#37495D}
+.txt-promo-gris1{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;color:#8C99A8}
+.piefotonegro{font-family:Arial,Helvetica,sans-serif;font-size:8.5pt;color:#4F4F4F}
+.kbza20304050{font-family:Arial,Helvetica,sans-serif;font-size:12.5pt;color:#454545;font-weight:bold}
+.sumariogris{font-family:Arial,Helvetica,sans-serif;font-size:10pt;color:#4F4F4F}
+
+.pleca{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#A70E13;font-weight:bold}
+.rel-rojo-bold{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#A70E13;font-weight:bold}
+
+.geoGris11{font-family:Georgia,"Times New Roman",Times,serif;font-size:11px;color:#556576;font-weight:lighter}
+.geogris12{font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#d8d8d8;font-weight:300}
+.geoGris14{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;color:#036;font-weight:lighter}
+.geoGris15{font-family:Georgia,"Times New Roman",Times,serif;font-size:15px;color:#556576;font-weight:lighter}
+.geoGris16{font-family:Georgia,"Times New Roman",Times,serif;font-size:16px;color:#556576;font-weight:bold}
+.geoGris18{font-family:Georgia,"Times New Roman",Times,serif;font-size:18px;color:#036;font-weight:lighter}
+.geoGris20{font-family:Georgia,"Times New Roman",Times,serif;font-size:20px;color:#556576;font-weight:lighter}
+.geoGris20dias{ font-family: Georgia,"Times New Roman",Times,serif; font-size: 20px; color: #336699; font-weight: bold; }
+.geoGris22{font-family:Georgia,"Times New Roman",Times,serif;font-size:22px;color:#556576;font-weight:bold}
+.geoGris24{font-family:Georgia,"Times New Roman",Times,serif;font-size:24px;color:#036;font-weight:lighter}
+.geoGris24b{font-family:Georgia,"Times New Roman",Times,serif;font-size:24px;color:#a8a9a8;font-weight:lighter}
+.geoGris30{font-family:Georgia,"Times New Roman",Times,serif;font-size:30px;color:#036;font-weight:normal;letter-spacing:-1px}
+.geoacero11b{font-family:Georgia,"Times New Roman",Times,serif;font-size:11px;color:#5c6c7c;font-weight:bold}
+.geoacero12{font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#036;text-transform: uppercase;letter-spacing:-0.3px}
+.geoacero12b{font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#036;font-weight:bold}
+.geoacero14b{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;color:#5c6c7c;font-weight:bold}
+.geoacero14bU{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;color:#036;font-weight:bold;text-transform:uppercase}
+.geoacero16{font-family:Georgia,"Times New Roman",Times,serif;font-size:16px;color:#fff;font-weight:bold;letter-spacing:-0.5px}
+.geoneg11{font-family:Georgia,"Times New Roman",Times,serif;font-size:11px;color:#333;font-style:italic}
+.geoneg12{font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#333;font-style:italic}
+.geoNegro24{font-family:Georgia,"Times New Roman",Times,serif;font-size:24px;color:#000;font-weight:lighter}
+.geoRojo24{font-family:Georgia,"Times New Roman",Times,serif;font-size:24px;color:#c03;font-weight:lighter}
+.geoRojo18{font-family:Georgia,"Times New Roman",Times,serif;font-size:18px;color:#c03;font-weight:lighter}
+/*
+.style55{font-family:Georgia,"Times New Roman",Times,serif;font-size:8.5pt;color:#333;font-style:italic}
+.style56{font-family:Georgia,"Times New Roman",Times,serif;font-size:8.5pt;color:#333;font-weight:bold}
+.style57{font-family:Georgia,"Times New Roman",Times,serif;font-size:8.5pt;color:#4477A5;font-weight:bold}
+.style57 br{margin-bottom: 3px}
+*/
+.txt-opinion1{font-family:Georgia,"Times New Roman",Times,serif;font-size:8.5pt;color: #4477A5;font-weight:bold;font-style:italic}
+.txt-opinion1 br{margin-bottom: 3px}
+.txt-opinion2{font-family:Georgia,"Times New Roman",Times,serif;font-size:8.5pt;color:#333;font-style:italic}
+.argrisvideo12{font-family:Georgia,"Times New Roman",Times,serif;font-size:12px;color:#999;font-weight:300}
+.geoamarillo14b{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;color:#fc3;font-weight:300}
+.geoamarillo14b{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;color:#fc3;font-weight:300}
+.geoazul14b { color: #69c; font-size: 14px; font-family: Georgia, "Times New Roman", Times, serif; font-weight: 300; }
+.geoazul12 { font-size: 12px; color: #003366; font-family: Georgia, "Times New Roman", Times, serif; text-transform: uppercase; letter-spacing: -0.3px;	font-weight: normal; line-height: 12px; }
+.geoazullc12 { font-size: 12px; color: #003366; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: -0.3px; font-weight: normal; line-height: 12px; }
+.geoamarillo11{font-family:Georgia,"Times New Roman",Times,serif;font-size:11px;color:#fc3;font-weight:300}
+.geoazul11 { color: #69c; font-size: 11px; font-family: Georgia, "Times New Roman", Times, serif; }
+.geoazul7 { font-size: 18px; color: #003366; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: -0.3px; line-height: 16px; }
+.geoazul4 { font-size: 14px; color: #003366; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: -0.3px; font-weight: bold; line-height: 14px; }
+.geoazul11 { font-size: 11px; color: #4477A5; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: -0.3px; font-weight: bold;	line-height: 16px; font-style: italic; }
+.geoazul12 { font-size: 12px; color: #003366; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: -0.3px; font-weight: normal; line-height: 12px; }
+.tbgris9{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:9px;color:#999;line-height:9px}
+.tbgris9s{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:9px;color:#999;text-transform:uppercase}
+.tbgris10{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:10px;color:#999;text-transform:uppercase;word-spacing:-0.5px}
+.tbgris11{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:11px;color:#999;text-transform:uppercase;word-spacing:-0.5px}
+.tbgris11 br{margin-bottom: 3px}
+.tbrojo13 { font-size: 13px; color: #960000; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; font-weight: bold; line-height: 13px; }
+
+.tbazul10{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:10px;color:#369;text-transform:uppercase;word-spacing:-1px}
+.tbazul11{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:11px;color:#369;text-transform:uppercase;word-spacing:-1px}
+.tbazul11m{ color: #69c; font-size: 11px; font-family: "trebuchet ms"; line-height: 12px; }
+.tbazul12 { font-size: 12px; color: #4477A5; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; line-height: 13px; }
+.tbazullc12 { font-size: 12px; color: #4477A5; font-family: "trebuchet ms"; word-spacing: -0.5px; line-height: 13px; }
+
+.tbazull2{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:12px;color:#369;text-transform:uppercase;word-spacing:-0.5px}
+.tbazul13{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:13px;color:#369;text-transform:uppercase;word-spacing:-1px;font-weight:bold}
+.tbazul14{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:14px;color:#5c6c7c;word-spacing:-0.5px}
+/*#.tbazul14{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:14px;color:#369;text-transform:uppercase;word-spacing:-1px}
+*/
+.tbazul14s { color: #69c; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; }
+.tbazul24 { color: #69c; font-size: 24px; font-family: "trebuchet ms"; }
+
+.tbgrisf11{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:11px;color:#666;text-transform:uppercase;word-spacing:-0.5px}
+.tbgris12{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:12px;color:#999;text-transform:uppercase;word-spacing:-0.5px}
+.tbgris13{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:13px;color:#900;text-transform:uppercase;word-spacing:-0.5px; font-weight:bold}
+.tbgris16{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:16px;color:#999;text-transform:uppercase;word-spacing:-0.5px}
+.tbgriscompartir{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:11px;color:#999;word-spacing:-0.5px}
+.tbgrismas{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:15px;color:#999;word-spacing:-0.5px}
+.tbgrismedio{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:13px;color:#999;word-spacing:-0.5px}
+.tbgrismenos{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:10px;color:#999;word-spacing:-0.5px}
+
+.tbggris11{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:11px;color:#CCC;word-spacing:-0.5px}
+.tbbco14,.tbbco18,.tbbco24{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;color:#999;letter-spacing:-0.8px;word-spacing:-2px;line-height:98%}
+.tbbco14{font-size:14px}
+.tbbco18{font-size:18px}
+.tbbco24{font-size:24px}
+.tbbco17 {color: #FFFFFF;font-size: 14px;font-family: "trebuchet ms"; word-spacing: -0.5px; letter-spacing: -1px;}
+
+.tmnegro13{font-family:times,"times new roman",serif;font-size:13px;color:#333}
+.tmnegro15{font-family:times,"times new roman",serif;font-size:15px;color:#333;line-height:17px}
+.tmrojo11{font-family:times,"times new roman",serif;font-size:11px;color:#c03;text-transform:uppercase;font-weight:bold}
+.tmrojo15{font-family:times,"times new roman",serif;font-size:15px;color:#c03;line-height:18px;text-transform:uppercase}
+.tmgris15{font-family:times,"times new roman",serif;font-size:11px;color:#b3b3b3;font-weight:bold}
+
+.timesbco14,.timesbco18,.timesbco24{font-family:"Times New Roman",Georgia,serif;color:#FFF;letter-spacing:-0.3px;line-height:99%}
+.timesbco14{font-size:14px}
+.timesbco18{font-size:18px}
+.timesbco24{font-size:24px}
+
+.vernegro11b{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#000;font-weight:bold}
+.verrojo13{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:13px;color:#c03;font-weight:lighter}
+.verazul12{font-family:Verdana,Arial,Times,serif;font-size:11px;color:#000;font-weight:bold}
+.verrojo11 {font-family:Verdana,Arial,Times,serif;font-size:11px;color:#c00}
+
+.caja-suscrip3{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8.5pt;color:#000;font-weight:normal}
+.txt-ao{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8.5pt;color:#FFF;font-weight:bold}
+
+.v11a{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#086BA6;font-weight:bold}
+.v11g{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#4F4F4F;font-weight:normal}
+.v23g{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:23px;color:#454545;font-weight:bold}
+.v10r{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:10px;color:#BA2114;font-weight:bold}
+.kbza10td{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:15pt;color:#454545;font-weight:bold}
+.v13g{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:13px;color:#666666;font-weight:bold}
+.v11r{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#A70E13;font-weight:bold}
+.v17g{font-family:Verdana,Helvetica,sans-serif;font-size:13pt;color:#747474;font-weight:bold}
+
+.tbamarillo13s { color: #fc0; font-size: 13px; font-family: "trebuchet ms"; text-transform: uppercase; }
+.tbadiamm{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:13px;color:#003366; word-spacing:-1px;font-weight:bold}
+.tbagradosnar{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:17px;color:#E46D13;word-spacing:-1px}
+.tbagradosazu{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:17px;color:#4E98FE;word-spacing:-1px}
+.tbagradosnargde{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:18px;color:#E46D13;word-spacing:-1px;font-weight:bold}
+.tbagradosazugde{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:18px;color:#4E98FE;word-spacing:-1px;font-weight:bold}
+.tbabuscador{font-family:"trebuchet ms",Arial,Helvetica,sans-serif;font-size:13px;color:#FFFFFF;word-spacing:-1px;font-weight:bold}
+
+.arngr11 { font-family: Arial, Helvetica, sans-serif; font-size: 11px;	color: #990000; font-weight: bold;  }
+.arngr12 {	font-family: Arial, Helvetica, sans-serif;	font-size: 11px;	color: #333333;	line-height: 13px; }
+.treb12neg {	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	font-size: 12px;	color: #333333; font-weight: bold;  }
+.trgris11 {font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -5px; font-size: 11px; color: #FFFFFF; letter-spacing: -.5px; line-height: 14px; }
+.trgris12 { font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; font-size: 12px; color: #FFCC00; font-weight: bold; } 
+.trbris11 { font-family: "Trebuchet MS",Verdana, Arial, Times, serif; font-size: 11px; color: #7F7F7F; }
+.trgris11g {font-family: "trebuchet ms"; text-transform: uppercase; font-size: 11px; color: #FFFFFF; line-height: 14px; }
+
+ .arnegro12tva { color: #404040; font-size: 11px; font-family: Arial, Helvetica, sans-serif; } 
+.arbl11 { color: #ffffff; font-size: 11px; font-family: Arial, Helvetica, sans-serif; }
+.arnl11 { color: #333333; font-size: 11px; font-family: Arial, Helvetica, sans-serif; }
+.tbam17 { color: #ffae00; font-size: 16px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; letter-spacing: -1px; }
+.tbam14 { color: #ff9933; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; }
+.tbaz17 {color: #339999;font-size: 16px;font-family: "trebuchet ms"; word-spacing: -0.5px; letter-spacing: -1px;}
+.tbaz14 { color: #0292c6; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; }
+.tbve17 { color: #85c026; font-size: 16px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; letter-spacing: -1px; }
+.tbve14 { color: #85c026; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; }
+.tbro17 { color: #d31e2d; font-size: 16px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; letter-spacing: -1px; }
+.tbro14 { color: #d31e2d; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; }
+.tneg14 { color: #000000; font-size: 14px; font-family: "trebuchet ms"; text-transform: uppercase; word-spacing: -0.5px; }
+
+.linea  {text-transform: none;border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-top-color: #565a5a;border-right-color: #565a5a;border-bottom-color: #565a5a;border-left-color: #565a5a;}
+
+.tbvio14 {color:#400598;font-family:"trebuchet ms";font-size:14px;text-transform:uppercase;word-spacing:-0.5px;}
+.artgris11 {color:#696866; font-size:11px; font-family:arial}
+.geotnegro11b {color:#696866; font-size:11px; font-family:georgia; font-weight:bold}
+.arttgris11 {color:#696866; font-size:11px; font-family:arial}
+/* .arttgris11 {color:#696866; font-size:11px; font-family:arial; text-transform:uppercase}*/ /* cesar -> 15062010 se quitan mayusculas */
+.artrojo11 {color:#900; font-size:11px; font-family:arial}
+.a12a {color:#356cbf; font-size:12px; font-family:arial; font-weight:bold}
+.a14a {color:#356cbf; font-size:13px; font-family:arial; font-weight:bold}
+.imgLeft { float:left; margin-right:5px; }
+
+
+/* agregado por Luca el 28/sep/10 */
+/*#cbanner img {width: 300px;}*/
+/* eliminado por JIF el 28/mayo/13 */
+
+/* agregado por Andrés 25/07/11 */
+.cbannerleft{
+	position: absolute; 
+	top: 10px; 
+	right: 0pt;
+	width: 318px;
+}
+
+.cbannerleftdoble{
+	position: absolute; 
+	top: 10px; 
+	right: 0pt;
+	width: 318px;
+	margin-top: -10px !important;
+}
+
+
+/* agregado por Pakio 28/09/11 */
+.cbannerleftdep{
+	position: relative; 
+	top: 10px; 
+	right: 0pt;
+	width: 318px;
+	margin-top: -10px !important;
+}
+
+/* para grafico */
+
+#logografico {
+background-position:-9px -32px;
+background-repeat:repeat-x;
+display:block;
+float:left;
+height:86px;
+margin-right:50px;
+text-indent:-9999px;
+width:417px;
+}
+
+.grafico {
+background-image:url("http://www.eluniversal.com.mx/graficos/n_img/h_grafico.gif");
+}
+
+/* *************************************************************************************************** */
+/* nuevo grafico */
+.promoElGraf { height:150px; width:735px; font-family: arial, sans-serif; float:left; margin-left:10px; }
+.promoElGraf img{ border:0px;}
+.promoElGraf .cabeza { float:left }
+.promoElGraf > .cabezaEGR img{height:100%; width:100%;  }
+.promoElGraf .notaprincipal {width:217px; height:150; float:left; padding-left:3px; background-color:#eaeaea;}
+.promoElGraf .notaprincipal .fotoGR{ float: left; }
+.promoElGraf .notaprincipal .fotoGR, .promoElGraf .notaprincipalGR .fotoGR img{
+	float:left;
+	width:217px; height:150px;
+	}
+
+.promoElGraf .clear {clear:both;}
+
+.promoElGraf .ulgrafico{
+width:182px;
+float:left;
+}
+
+.promoElGraf .ulgrafico li{
+display:block;
+border-top:1px solid #FFFFFF;
+border-bottom:1px solid #C2C2C2;
+background-position:-150px -610px;
+background-repeat:no-repeat;
+}
+
+.promoElGraf .ulgrafico li a{
+margin:4px 0;
+display:block;
+padding:1px 1px 1px 15px;
+text-decoration:none;
+color:#000000;
+}
+
+.master_sprite{
+
+background-image:url("../img/v3/master_sprite.png");
+/*/
+background-image:url("http://www.eluniversal.com.mx/img/v3/master_sprite_revolucion.png");
+/* para la revolucion */
+}
+	.promoElGraf .notasecundarias {
+		background-color:#f0f0f0;
+		float:left;
+	width:182px;
+	height:142px;
+	  padding:4px 4px;
+	  }
+	.promoElGraf .notasterciarias {
+	background-color:#dadada;
+/*	background-image:url(img/v3/bloquesDFEdoMex/bgCabezanota3.jpg); */
+	background-repeat:no-repeat;
+	float:left;
+	width:167px;
+	height:142px;
+	padding:4px 4px;
+	  }
+	  .promoEdoMex .notasterciarias table{
+	height:100%; width:100%;
+	  }
+	  .promoElGraf .notasterciarias .nota3sec {
+	border-bottom:1px solid #999 ;
+	width:159px;
+	height:41px;
+	padding:3px
+	  }
+.promoElGraf .notasterciarias .nota3sec .seccion { 
+color:#666; text-decoration:none
+}
+  .promoElGraf .notasterciarias .nota3sec a.seccion{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0a63b0;
+	text-decoration: none;
+}	
+  .promoElGraf .notasterciarias .nota3sec  a.cabeza3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+}	
+.promoElGraf .notasecundaria .nota3sec  a.cabeza:hover{
+	text-decoration: underline;
+}	  
+.promoElGraf .notasecundaria .nota3sec a.seccion:hover{
+	text-decoration: underline;   
+}	  
+
+/* ----NuevoPromo El Grafico; 3-jun-11----- */
+.promoElGrafnew {
+	float: left;
+	font-family: arial,sans-serif;
+	height: 225px;
+	margin-left: 10px;
+	width: 466px;
+}
+.promoElGrafnew .cabezanew {
+	float: right;
+}
+.promoElGrafnew .notaprincipalnew {
+	background-color: #EAEAEA;
+	float: left;
+	width: 195px;
+}
+.promoElGrafnew .ulgraficonew {
+	float: left;
+	width: 100%;
+}
+.promoElGrafnew .ulgraficonew li {
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #C2C2C2;
+	border-top: 1px solid #FFFFFF;
+	display: block;
+}
+.promoElGrafnew .ulgraficonew li a {
+    color: #000000;
+    display: block;
+    margin: 4px 0;
+    padding: 1px 1px 1px 15px;
+    text-decoration: none;
+}
+.promoElGrafnew .notasecundariasnew {
+	float: right;
+	height: 165px;
+	padding: 10px 14px 5px 19px;
+	width: 238px;
+	background-image: url(http://www.eluniversal.com.mx/imag/bk_notasecundarias.jpg);
+}
+.promoElGraf  a.cabezanew:hover {
+    text-decoration: underline;
+}
+.ulgraficonew li {
+    background-position: -146px -610px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #C2C2C2;
+    border-top: 1px solid #FFFFFF;
+}
+
+/* ---- nuevo Promo San Antonio; 3-jun-11 ---- */
+.promosanantonio {
+	color:#444;
+	float: right;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+	height: 225px;
+	margin-right: 12px;
+	width: 466px;
+}
+.promosanantonio img{
+	border:0;
+}
+.promosanantonio a{
+	text-decoration:none
+	}
+.promo_sanantonioheader{
+	height: 72px;
+	width: 245px;
+	float: left;
+	}
+.promo_sanantonio_notaprincipal{
+	width: 221px;
+	height: 157px;
+	float: right;
+	}
+.promo_sanantoniosubnotas{
+	width: 235px;
+	height:82px;
+	float: left;
+	padding: 2px 5px 2px 5px;
+	background: url(http://www.eluniversal.com.mx/img/bg_notassec_SA.jpg) #fff;
+	}
+.promo_sanantoniosubnotas .ulSanAntonio {
+    width: 195px;
+}
+.promo_sanantoniosubnotas .ulSanAntonio {
+	float: left;
+	width: 100%;
+}
+.promo_sanantoniosubnotas .ulSanAntonio  li {
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #C2C2C2;
+	border-top: 1px solid #FFFFFF;
+	display: block;
+}
+.promo_sanantoniosubnotas .ulSanAntonio  li a {
+    color: #000000;
+    display: block;
+    margin: 4px 0;
+    padding: 1px 1px 1px 15px;
+    text-decoration: none;
+}
+.promo_sanantoniosubnotas .ulSanAntonio li {
+display: block;
+border-top: 1px solid white;
+border-bottom: 1px solid #fbfbfb;
+background-position: 5px -1479px;
+background-repeat: no-repeat;
+}
+.promo_sanantonio_notaprincipal .cabeza_notaPral_SA	{
+	text-align:center;
+	z-index:10;
+	background: url(http://www.eluniversal.com.mx/imag/bg_notaPral_SA.png) repeat-x;
+	height:30px;
+	width:211px;
+	margin:117px 0 0 0;
+	padding:5px;
+	position:absolute;}
+.promo_sanantonio_notaprincipal .cabeza_notaPral_SA	a{
+	color:#444;
+	text-decoration:none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:13px;
+	font-weight:bold;
+}
+.promo_sanantonio_notaprincipal .foto_notaPral_SA	{
+	z-index:0;
+}
+
+
+
+/*  para promo el universal - ipad -> Cesar 04:03 p.m. 17/11/2010 */
+.promoiPad { height:150px; width:220px; font-family: arial, sans-serif; margin-right:12px; float:right}
+.promoiPad img{ border:0px;}
+.promoiPad .linkiPad { float:left }
+.promoiPad > .toppiPad img{width:220px; height:40;}
+.promoiPad .toppiPad {width:220px; height:40; float:left; background-color:#fff;}
+.promoiPad .linkiPadcentro {width:66px; height:110; float:left; background-color:#fff;}
+.promoiPad .linkiPad {width:77px; height:110; float:left; background-color:#fff;}
+
+.promoiPad a:hover{
+	text-decoration: none ;
+}	 
+.cnewcenterfotoportada {
+border-bottom:1px dashed #D2D2D2;
+margin:15px 0 0;
+padding:0 10px 10px;
+}
+
+/* para nuevo clima agregado por cesar 08:00 p.m. 30/12/2010 */
+
+#nuevo_clima a {
+    color: #000000;
+	text-decoration:none;
+    
+}
+
+#tfecha{
+	width:auto;
+	}	
+/* cesar -> para frame2 de minuto x minuto -> 06:42 p.m. 09/03/2011 */ 
+#contentmxm{
+width:980px;
+margin:0 auto;
+background-color:#FFFFFF;
+border-right:1px solid #D6DBE0;
+border-left:1px solid #D6DBE0;
+}
+
+/* para nuevos comentarios -> cesar 11:36 a.m. 17/03/2011 */
+.cscomments2{
+display:block;
+margin:5px 0;
+padding-left:0px;
+font-size:11px;
+color:#000000;
+text-decoration:none;
+}
+	
+.container .cscomments2{
+margin:0;
+float:right;
+width:75px;
+font-size:10px;
+text-transform: lowercase;
+}
+
+
+
+
+
+/* NUEVO BLOQUE DE DE10*/ /* cesar ->10:06 a.m. 19/07/2011 */
+
+				#encabezadoDe10 {
+
+				float: center;
+				margin: 0;
+				padding: 0;
+				width: 100%;  
+				border-top: 1px solid #CCC;   
+					}
+					
+				#encabezadoDe10 #seccionDe10Izquierda,
+				#encabezadoDe10 #seccionDe10Centro, 
+				#encabezadoDe10 #seccionDe10Derecha {
+						background: #fff no-repeat;
+
+						height: 65px;
+						display: block;
+						float: right;
+						width: auto;
+				}
+			
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul {
+
+					display: block;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					width: 100%;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li {
+
+					display: block;
+					font: 14px/1em "Arial", sans-serif;
+					font-weight: bold;
+					text-decoration: none;
+					text-align: right;
+					padding: 2px 10px 2px 0;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaViajes {
+					color: #d72374;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaViajes:hover {
+					color: #d72374;
+					cursor: pointer;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaSalud {
+					color: #d72513;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaSalud:hover {
+					color: #d72513;
+					cursor: pointer;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaMujeres {
+					color: #5e860b;
+				}
+				
+				#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaMujeres:hover {
+					color: #5e860b;
+					cursor: pointer;
+				}   
+				
+				
+				#encabezadoDe10 #seccionDe10Centro:hover {
+					cursor: pointer;
+				}
+				
+				#encabezadoDe10 #seccionDe10Derecha {
+					background: #f6f6f6 no-repeat;
+					border-bottom: 1px solid #ccc;
+					border-left: 1px solid #ccc;
+				}
+				
+				#encabezadoDe10 #seccionDe10Derecha ul {
+					background: #f6f6f6 no-repeat;
+
+					display: block;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				
+				#encabezadoDe10 #seccionDe10Derecha ul li {
+
+					color: #7b7775;
+					display: block;
+					font: 11px/1em "Arial", sans-serif;
+					text-decoration: none;
+					text-align: left;
+					padding: 2px 0 2px 10px;
+				}
+				
+				#encabezadoDe10 #seccionDe10Derecha ul li:hover {
+					cursor: pointer;
+				}
+				
+				#encabezadoDe10 #seccionDe10Derecha ul li.seccionDe10DerechaWeb {
+					background: #f4753c no-repeat;
+					color: #fff;
+				}
+				
+				#pieDe10_v2 {
+
+					border-bottom: 1px solid #ccc;
+					display: block;
+					width: 100%;
+					height:90px;
+				}
+				
+				#pieDe10_v2 ul {
+					margin: 0;
+					padding: 2px 0;
+					
+				}
+				
+				#pieDe10_v2 ul li {
+					
+					color: #666;
+					display: block;
+					font: 12px/1em "Arial", sans-serif;
+					font-weight: bold;
+					list-style-type:circle;
+					margin: 0 auto;
+					padding: 3px 0 3px 0;
+					padding-left: 10px;
+					width: 90%;
+				}
+				
+				#pieDe10_v2 ul li:hover {
+					cursor: pointer;
+				}
+				
+				
+				#pieDe10_v2 ul li a {
+						color: #666;
+						display: block;
+						font: 12px/1em "Arial", sans-serif;
+						font-weight: bold;
+						margin: 0;
+						padding: 0;
+						text-decoration: none !important;
+				}
+												
+				#pieDe10_v2 ul li a:hover {
+	color: #666;
+	display: block;
+	font: 12px/1em "Arial", sans-serif;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline !important;
+				}
+
+				.chnews_d10_v2 {
+				font-size: 18px;
+				font-family:"Arial", sans-serif;
+				line-height: 100%;
+				}
+				
+				
+#encabezadoDe10 #seccionDe10Izquierda ul li a {
+        font: 14px/1em "Arial", sans-serif;
+        font-weight: bold;
+        text-decoration: none !important;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaViajes a {
+        color: #d72374;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaViajes:hover a {
+        color: #d72374;
+        cursor: pointer;
+        text-decoration: underline !important;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaSalud a {
+        color: #d72513;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaSalud:hover a {
+        color: #d72513;
+        cursor: pointer;
+        text-decoration: underline !important;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaMujeres a {
+        color: #5e860b;
+}
+                                
+#encabezadoDe10 #seccionDe10Izquierda ul li.seccionDe10IzquierdaMujeres:hover a {
+        color: #5e860b;
+        cursor: pointer;
+        text-decoration: underline !important;
+}
+
+#encabezadoDe10 #seccionDe10Derecha ul li a {
+        color: #7b7775;
+        display: block;
+        font: 11px/1em "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-decoration: none !important;                                       
+}
+                                
+#encabezadoDe10 #seccionDe10Derecha ul li a:hover {
+        color: #7b7775;
+        text-decoration: underline !important;                                  
+}
+                                
+#encabezadoDe10 #seccionDe10Derecha ul li.seccionDe10DerechaWeb a {
+        background: #f4753c no-repeat;
+        color: #fff;
+}
+                                
+#encabezadoDe10 #seccionDe10Derecha ul li.seccionDe10DerechaWeb a:hover {
+        background: #f4753c no-repeat;
+        color: #fff;
+        text-decoration: none !important;
+}
+
+	.chnews_d10_v2 a{	
+	text-decoration:none;
+	color:#333;
+	}
+	
+	.naranja {
+	color:#f63;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+.universalMasHome {
+background-image: url("../img/universalmas/uni_mas_small.png");
+width: 12px;
+height: 12px;
+float: left;
+background-repeat: no-repeat;
+background-position: center;
+padding-top: 0px;
+padding-right: 2px;
+padding-left: 2px;
+margin-left: 10px;
+margin-right: 2px;
+margin-bottom: 3px;
+}
+
+.universalMasHomeNota {
+background-image: url("../img/universalmas/uni_mas_small.png");
+width: 12px;
+height: 12px;
+float: left;
+background-repeat: no-repeat;
+background-position: center;
+padding-top: 0px;
+padding-right: 2px;
+padding-left: 2px;
+margin-left: 10px;
+margin-right: 2px;
+margin-bottom: 0px;
+margin-top: 2px;
+}
+
+
+
+
+
+/*eluniversalsantonio middle*/
+/*
+#middSanAntonio {
+	background-color:#FFF;
+    height: 250px;
+	width: 950px;
+    overflow: hidden;
+	float:none;
+	text-align:center;
+    margin: 15px auto;
+}
+*/
+#middSanAntonio .middnoticiasSA{
+	float:left;
+	height:250px;
+	width:330px;
+	margin:0 10px;
+}
+
+#middSanAntonio .patrocinioSA{
+	float:left;
+	height:250px;
+	width:300px;
+}
+
+#middSanAntonio .middnoticiasSA{
+	float:left;
+	height:250px;
+	width:330px;
+}
+
+#middSanAntonio .middnoticiasSA .cabezamidnotSA{
+	-webkit-border-top-left-radius: 6px;
+-webkit-border-top-right-radius: 6px;
+-moz-border-radius-topleft: 6px;
+-moz-border-radius-topright: 6px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+	padding-top:2px;
+	-moz-box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	-webkit-box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	background: url(http://www.eluniversal.com.mx/img/bg_cabezaSA.png) repeat-x;
+	height:47px;
+	width:329px;
+	text-align:center;
+}
+
+#middSanAntonio .middnoticiasSA .cabezamidnotSA img{
+	width:225px;
+	border:0;
+	//float:left;
+	padding:0 55px;
+}
+
+#middSanAntonio .middnoticiasSA .cabezamidnotSA .etiqmidnotSA{
+	color:#333;
+font: lighter 10px Helvetica, Arial, sans-serif;
+	text-align:left;
+	line-height:14px;
+}
+
+#middSanAntonio .middnoticiasSA .cabezamidnotSA .etiqmidnotSA a {
+color:#333;
+font: lighter 10px Helvetica, Arial, sans-serif;
+text-decoration: none;
+line-height:14px;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .nota1midnotSA{
+	float:left;
+	text-align:center;
+	background-color:#c9c9c9;
+	height:199px;
+	width:206px;
+	border: solid 1px #c9c9c9;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .nota1midnotSA .cabezanota1midnotSA{
+	text-align:center;
+	padding:0 5px;
+	width:199px;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .nota1midnotSA .cabezanota1midnotSA a{
+	text-shadow: 1px 1px 0  #e9e9e9;
+	font:bold 17px/1em Helvetica, Arial, sans-serif;
+	color:#333;
+	text-decoration:none;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .nota1midnotSA img{
+	border:0;
+	padding:0px 0 7px 0;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .notas2midnotSA{
+	float:left;
+	padding:12px 3px 0 3px;
+	-moz-box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	-webkit-box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	background-color:#f0f0f0;
+	height:188px;
+	width:150px;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio {
+text-align:left;
+float: left;
+width: 100%;
+list-style: outside;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .ulSAseccion a {
+color:black;
+font:bold 9px Helvetica, Arial, sans-serif;
+display: block;
+margin: 1px 0;
+padding: 12px 1px 2px 6px;
+text-decoration: none;
+}
+
+#middSanAntonio .middnoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .ulSAliga a {
+text-shadow: 1px 1px 0  #e9e9e9;
+color:#333;
+font: bold 14px Helvetica, Arial, sans-serif;
+display: block;
+margin: 1px 0;
+padding: 1px 1px 10px 6px;
+text-decoration: none;
+}
+
+
+/* eluniversalsantonio middle con fotos */
+/*
+#middleSanAntonio {
+	background-color:#FFF;
+    height: 250px;
+	width: 950px;
+    overflow: hidden;
+	float:none;
+	text-align:center;
+    margin: 15px auto;
+}
+*/
+/* se agrega background para evitar espacios en blanco cuando no hay publicidad a solicitud de Rogelio Noriega 05:49 p.m. 23/05/2012 (cesar) */
+#middleSanAntonio {
+	background-color: #ffffff;
+	background-image:url(http://www.eluniversal.com.mx/graficos/nmedia/promoNotasSA/img/BG_promosSA.jpg);
+	height: 250px;
+	width: 950px;
+	overflow: hidden;
+	float: none;
+	text-align: center;
+	margin: 15px auto;
+}
+
+#middleSanAntonio .middlenoticiasSA{
+	float:left;
+	height:250px;
+	width:330px;
+}
+#middleSanAntonio .patrocinioSA{
+	float:left;
+	height:250px;
+	width:300px;
+}
+
+#middleSanAntonio .middlenoticiasSA{
+	float:left;
+	height:250px;
+	width:330px;
+	margin: 0 10px;
+}
+#middleSanAntonio .middlenoticiasSA .cabezamidnotSA{
+	padding-top:3px;
+	-moz-box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	-webkit-box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	box-shadow: -2px 0 1px rgba(0,0,0,0.3) inset;
+	background: url(http://www.eluniversal.com.mx/img/bg_cabezaSA.png) repeat-x;
+	height:45px;
+	width:328px;
+        text-align: center;
+        border: solid 1px #CCC;
+}
+#middleSanAntonio .middlenoticiasSA .cabezamidnotSA img{
+	border:0;
+	float:center;
+	margin:0 auto;
+}
+
+#middleSanAntonio .middlenoticiasSA .cabezamidnotSA .etiqmidnotSA{
+	color:#333;
+	font: lighter 10px Helvetica, Arial, sans-serif;
+	text-align:left;
+	line-height:14px;
+}
+
+#middleSanAntonio .middlenoticiasSA .cabezamidnotSA .etiqmidnotSA a {
+color:#333;
+font: lighter 10px Helvetica, Arial, sans-serif;
+text-decoration: none;
+line-height:14px;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .nota1midnotSA{
+	float:left;
+	text-align:center;
+	background-color:#d1d1d1;
+	height:198px;
+	width:166px;
+	border: solid 1px #c9c9c9;
+	overflow:hidden;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .nota1midnotSA .cabezanota1midnotSA{
+	display:block;
+	text-align:center;
+	padding:0 5px;
+	width:159px;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .nota1midnotSA .cabezanota1midnotSA a{
+	font:bold 15px Helvetica, Arial, sans-serif;
+	color:#333;
+	text-decoration:none;
+	text-shadow:1px 1px 0 #E9E9E9;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .nota1midnotSA img{
+	padding:0px 0 6px 0;
+	margin-left:-20px;
+	height:131px;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA{
+	float:left;
+	padding:5px;
+	-moz-box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	-webkit-box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	box-shadow: -2px 0 3px rgba(0,0,0,0.3) inset, 2px 0 3px rgba(0,0,0,0.3) inset;
+	background-color:#f0f0f0;
+	height:190px;
+	width:152px;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio{
+	float: left;
+	width: 100%;
+	list-style-type:none;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio li{
+	height: 55px;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .separador{
+	clear:both;
+	height:1px;
+	background:# 999;
+	margin: 6px 0;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .imgSec{
+	width:61px;
+	height:54px;
+/*	float:left; */
+	float:right;
+	overflow:hidden;
+/*	margin-right: 6px;*/
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio li img{
+	width:;
+	height:54px;
+	margin-left:-10px;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .ulSAseccion a {
+color:black;
+font:bold 9px Helvetica, Arial, sans-serif;
+display: block;
+margin: 1px 0;
+padding: 12px 1px 2px 6px;
+text-decoration: none;
+}
+
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .ulSAliga a {
+color:black;
+font: normal 12px Helvetica, Arial, sans-serif;
+display: block;
+margin: 1px 0;
+padding: 1px 1px 10px 6px;
+text-decoration: none;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .notaNotaSecundaria span a{
+	font:bold 10px Georgia, "Times New Roman", Times, serif;
+	color:#333;
+	text-decoration:none;
+}
+#middleSanAntonio .middlenoticiasSA .notasmidnotSA .notas2midnotSA .ulSanAntonio .notaNotaSecundaria span a:hover{
+	text-decoration:underline;
+}
+/* corregir espacios de mxm en lado derecho -> cesar sabado 16 febrero 2013 19:52:10 */
+#ccentertabderecha ul div ul .clisttabs span {
+ width: 30px !important;
+}
+#mmvideo img {
+width: 90px;
+margin-right: 10px;
+}
+
+#lasmasder img {
+width: 17px;
+margin-right: 10px;
+}
+
+#lasmasder {
+float:none;
+margin:15px 4px 0;
+width:306px;
+}
+#lasmasder div ul {
+position:relative;
+width:306px;
+}
+
+#lasmasder .clisttabs {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+padding:5px 0;
+line-height:normal;
+height:auto;
+overflow:visible;
+
+}
+
+#lasmasder .clisttabs b {
+font-weight:bold;
+color:#8B272D;
+}
+#lasmasder {
+width:auto;
+padding-bottom:0;
+padding-top:0;
+}
+
+
+#lasmasder h4{
+    height:19px;
+    padding-top:15px;
+    font-size:18px;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#8B272D;
+    background-position:right -297px;
+    background-repeat:no-repeat;
+}
+
+#lasmasder ul{
+    background-position:100px -467px;
+    background-repeat:no-repeat;
+}
+.bannerLoret {
+    margin: 0 1px;
+}
+/* pruebas de BG image cesar 19112014 */
+.pruebaBGCesar {
+  background:#00ff00 url('http://www.eluniversal.com.mx/test/bg/2.jpg') no-repeat center center;
+}
+/* correcion para publicidad solicitada por JL -> 23122014 */
+#frame2 {
+  align-content: center;
+  text-align:center;
+}

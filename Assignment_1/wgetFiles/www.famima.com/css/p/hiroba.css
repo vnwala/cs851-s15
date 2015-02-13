@@ -1,0 +1,424 @@
+@charset "shift_jis";
+
+/*
+Title: gurume hiroba
+URI: http://famima.com/shop/pages/hiroba.aspx
+*/
+
+
+/* --------------------------------------------------------------------
+	common
+-------------------------------------------------------------------- */
+#hiroba-container img, #hiroba-container p, #hiroba-container div{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#hiroba-container h1, #hiroba-container h2, #hiroba-container h3, #hiroba-container h4,
+#hiroba-container img, #hiroba-container p, #hiroba-container div, #hiroba-container ul, #hiroba-container li{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#hiroba-container .clear{
+	margin:0; padding:0; clear:both;}
+	
+#hiroba-container .base{
+	margin:0; padding:0;}
+#hiroba-container .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+
+/* clearfix */
+#hiroba-container .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#hiroba-container .clearfix {
+  min-height: 1px;}
+
+* html #hiroba-container .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #hiroba-container { 
+	height: 1%;}
+
+
+/* --------------------------------------------------------------------
+	MainBase
+-------------------------------------------------------------------- */
+#hiroba-container{
+	width:960px; margin:0 0 30px 0; padding:0;}
+	
+#hiroba-rightmenu{
+	width:240px; margin:0; padding:0 0 0 20px; float:right; text-align:center;}
+	
+#hiroba-rightmenu .bgcolor{
+	background-color:#f2eee2; width:240px; margin:0; padding:5px 0 30px 0;}
+
+#hiroba-wrap{
+	margin:0; padding:0; width:700px; float:left;}
+	
+#hiroba-wrap .hiroba-wrapBG{
+	background:url(http://www.famima.com/images/p/hiroba/recipebase_bg.gif) repeat-y;
+	margin:0; padding:0; width:700px;}
+	
+#hiroba-wrap h1#header{
+	margin:0; padding:0; width:700px; height:137px;
+	background:url(http://www.famima.com/images/p/hiroba/header.jpg) no-repeat;}
+	
+#hiroba-wrap #navibase{
+	padding:38px 0 0 345px; margin:0; width:355px;}
+	
+#hiroba-wrap #navibase li{
+	float:left; list-style-type: none; padding-right:5px;}
+	
+#hiroba-wrap #navibase li a#navi1{
+     display: block; text-indent:-9999px;
+     width: 170px;
+     height: 56px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/hiroba/navi_contest.jpg) no-repeat;}
+
+#hiroba-wrap #navibase ul li a#navi1:hover,
+#hiroba-wrap #navibase ul li a#navi1:active {
+     background-position:0px -56px;}
+	 
+#hiroba-wrap #navibase li a#navi2{
+     display: block; text-indent:-9999px;
+     width: 170px;
+     height: 56px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/hiroba/navi_arrange.jpg) no-repeat;}
+
+#hiroba-wrap #navibase ul li a#navi2:hover,
+#hiroba-wrap #navibase ul li a#navi2:active {
+     background-position:0px -56px;}
+
+/* --------------------------------------------------------------------
+	rightmenu
+-------------------------------------------------------------------- */
+#hiroba-rightmenu .menu_ttl1{
+	width:234px; height:24px; margin:5px 3px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/menu_ttl1.gif) no-repeat;}
+	
+#hiroba-rightmenu .menu_ttl2{
+	width:234px; height:24px; margin:20px 3px 5px 3px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/menu_ttl2.gif) no-repeat;}
+	
+#hiroba-rightmenu .menu_ttl3{
+	width:234px; height:24px; margin:20px 3px 5px 3px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/menu_ttl3.gif) no-repeat;}
+
+#hiroba-rightmenu .menu_ttl4{
+	width:240px; height:30px; text-indent:-9999px; margin:15px 0 0 0;
+	background:url(http://www.famima.com/images/p/hiroba/menu_cmnt1.gif) no-repeat;}
+	
+#hiroba-rightmenu .menu_ttl5{
+	width:240px; height:30px; text-indent:-9999px; margin:15px 0 0 0;
+	background:url(http://www.famima.com/images/p/hiroba/menu_cmnt2.gif) no-repeat;}
+
+/* Banner */
+#hiroba-rightmenu .banner{
+	margin:0; padding:0px 8px 13px 8px; text-align:left;}
+#hiroba-rightmenu .banner a{
+	outline:0;}
+#hiroba-rightmenu .banner img{
+	border:0; margin:0; padding:0 0 2px 0;}
+#hiroba-rightmenu .banner .txt{
+	font-size:85%; line-height:120%;}
+#hiroba-rightmenu .banner .txt a{
+	color:#333333;}
+	
+/* Item */
+#hiroba-rightmenu .itemBase{
+	width:221px; border:1px #cc9966 solid; background-color:#FFFFFF; margin:0 0 7px 8px;}
+
+#hiroba-rightmenu .itemBase .catch{
+	color:#FF0000; font-weight:bold; font-size:90%; padding:5px 0;}
+
+#hiroba-rightmenu .itemBase .name{
+	color:#333333; line-height:120%; font-size:90%; padding:5px 15px; text-align:left;}
+	
+#hiroba-rightmenu .itemBase .price{
+	color:#FF0000; font-size:90%; padding:0 15px 10px 15px; text-align:left;}
+
+#hiroba-rightmenu .itemBase .rank_1{
+	width:130px; height:26px; margin:5px 0 0 46px; text-align:right;
+	background:url(http://www.famima.com/images/p/hiroba/rank_ttl1.gif) no-repeat;}
+
+#hiroba-rightmenu .itemBase .rank_2{
+	width:130px; height:26px; margin:5px 0 0 46px; text-align:right;
+	background:url(http://www.famima.com/images/p/hiroba/rank_ttl2.gif) no-repeat;}
+	
+#hiroba-rightmenu .itemBase .rank_3{
+	width:130px; height:26px; margin:5px 0 0 46px; text-align:right;
+	background:url(http://www.famima.com/images/p/hiroba/rank_ttl3.gif) no-repeat;}
+	
+#hiroba-rightmenu .itemBase .rank_4{
+	width:130px; height:26px; margin:5px 0 0 46px; text-align:right;
+	background:url(http://www.famima.com/images/p/hiroba/rank_ttl4.gif) no-repeat;}
+	
+#hiroba-rightmenu .itemBase .rank_5{
+	width:130px; height:26px; margin:5px 0 0 46px; text-align:right;
+	background:url(http://www.famima.com/images/p/hiroba/rank_ttl5.gif) no-repeat;}
+
+/* --------------------------------------------------------------------
+	MainBase:CONTEST
+-------------------------------------------------------------------- */
+#hiroba-wrap h1#cntst-header{
+	width:700px; height:156px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/cntst_header.jpg) no-repeat;}
+
+#hiroba-wrap .cntstBase664{
+	width:664px; padding-left:16px;}
+
+#hiroba-wrap #cntst-thema{
+	width:664px; height:100px;}
+
+#hiroba-wrap #cntst-period{
+	width:664px; height:50px;
+	background:url(http://www.famima.com/images/p/hiroba/cntst_period.jpg) repeat;}
+
+#hiroba-wrap #cntst-period p{
+	/* font-size:16px; color:#FFFFFF; padding:17px 0 0 95px; font-weight:bold;} */
+	font-size:16px; color:#FFFFFF; padding:17px 0 0 130px; font-weight:bold;}
+
+#hiroba-wrap h2#cntst-presentttl{
+	width:664px; height:185px;}
+
+#hiroba-wrap .itemCmntBase{
+	/* width:664px; height:130px; background:url(/images/p/hiroba/cntst_presenttxtbg.jpg) no-repeat;} */
+	width:664px; height:385px; background:url(http://www.famima.com/images/p/hiroba/cntst2nd_presentimage.jpg) no-repeat;}
+
+#hiroba-wrap p.contst-txt1{
+	color:#660000; line-height:130%; padding:5px 60px; text-align:left;}
+	
+#hiroba-wrap p.contst-txt2{
+	/* color:#660000; line-height:130%; padding:5px 75px 4px 75px; text-align:left;} */
+	color:#660000; line-height:130%; padding:175px 0 20px 320px; text-align:left; width:280px;}
+
+#hiroba-wrap .contst-txt3{
+	margin:15px 50px; padding:0;
+	width:600px; border-top:1px #666666 solid; border-bottom:1px #666666 solid;}
+
+#hiroba-wrap .contst-txt3 p{
+	color:#666666; line-height:130%; padding:10px 0 10px 60px;; text-align:left;}
+
+#hiroba-wrap .contst-Buyer{
+	width:664px; height:300px; background:url(http://www.famima.com/images/p/hiroba/cntst_buyercmnt.jpg) no-repeat;}
+
+#hiroba-wrap p.contst-buyercmnt{
+	color:#660000; line-height:150%; padding:80px 80px 0 190px; text-align:left;}
+	
+/* -- 2nd CONTEST --*/
+#hiroba-wrap .itemBaseCTMT{
+	width:664px; height:385px; background:url(http://www.famima.com/images/p/hiroba/cntst2nd_presentimage.jpg) no-repeat;}	
+#hiroba-wrap .itemBaseCTMT p{
+	color:#660000; line-height:130%; padding:183px 75px 4px 320px; text-align:left;}
+
+#hiroba-wrap .contst2nd-Buyer{
+	width:664px; height:370px; background:url(http://www.famima.com/images/p/hiroba/cntst2nd_buyercmnt.jpg) no-repeat;}
+#hiroba-wrap .contst2nd-Buyer p{
+	color:#660000; line-height:150%; padding:50px 80px 0 220px; text-align:left;}
+#hiroba-wrap p.contst2nd-buyercmnt{
+	color:#660000; line-height:150%; padding:50px 80px 0 200px; text-align:left;}
+
+
+/* --------------------------------------------------------------------
+	MainBase:RECIPE
+-------------------------------------------------------------------- */
+#hiroba-wrap h1#recipe-header{
+	margin:0; padding:0; width:700px; height:95px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/recipe_header.jpg) no-repeat;}
+
+#hiroba-wrap h2#txt{
+	text-align:center; font-size:18px; color:#555555; padding:3px 0; font-weight:bold;}
+
+/* --- base ---*/
+#hiroba-wrap .dotbasetop{
+	width:700px; height:17px;
+	background:url(http://www.famima.com/images/p/hiroba/dotbase_top.gif) no-repeat;}
+#hiroba-wrap .dotbasebg{
+	width:700px;
+	background:url(http://www.famima.com/images/p/hiroba/dotbase_bg.gif) repeat-y;}
+#hiroba-wrap .dotbasebtm{
+	width:700px; height:20px;
+	background:url(http://www.famima.com/images/p/hiroba/dotbase_btm.gif) no-repeat;}
+
+#hiroba-wrap .recipebasebtm{
+	width:700px; height:40px;
+	background:url(http://www.famima.com/images/p/hiroba/recipebase_btm.gif) no-repeat;}
+
+#hiroba-wrap .dotbasebg p.date{
+	text-align:right; padding-right:30px; font-size:90%; color:#444444;}
+
+#hiroba-wrap .recipetitleBase{
+	width:700px; height:53px;
+	background:url(http://www.famima.com/images/p/hiroba/recipetitle_base.gif) no-repeat;}
+	
+#hiroba-wrap h3.recipetitle{
+	color:#555555; font-size:18px; line-height:120%; padding:10px 0 0 36px; font-weight:bold;}
+	
+#hiroba-wrap .recipeIMG{
+	width:236px; height:230px; float:left; padding:0 10px 0 36px;}
+	
+#hiroba-wrap .recipeTXTBase{
+	width:395px; float:left;}
+
+#hiroba-wrap .recipeCmntttl{
+	width:390px; height:39px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/hiroba/recipecmnt_ttl.gif) no-repeat;}
+
+#hiroba-wrap .recipeTXTBase p.copy{
+	color:#e07b04; font-weight:bold; line-height:130%; padding:0 0 0 4px;}
+
+#hiroba-wrap .recipeTXTBase p.cmnt{
+	color:#555555; line-height:130%; padding:4px 10px 0 4px;}
+
+/*--------  zairyo and tukurikata  -----------*/
+#hiroba-wrap .recipeHowtoBase{
+	width:620px; padding-left:36px; margin-top:15px;}
+	
+#hiroba-wrap .recipeHowto{
+	width:610px; background-color:#faf2e9; padding:10px;}
+	
+#hiroba-wrap .recipeHowto .zairyo{
+	width:228px; float:left;
+	text-align:center;}
+	
+#hiroba-wrap .recipeHowto .tukurikata{
+	width:370px; float:left;}
+
+#hiroba-wrap p.zairyottl{
+	width:228px; text-align:left;
+	background:url(http://www.famima.com/images/p/hiroba/zairyo_bg.jpg) repeat-y;
+	color:#FFFFFF; font-size:12px; padding:3px 0 3px 5px;}
+	
+#hiroba-wrap p.tukurikatattl{
+	width:370px; text-align:left;
+	background:url(http://www.famima.com/images/p/hiroba/tukurikata_bg.jpg) repeat-y;
+	color:#FFFFFF; font-size:12px; padding:3px 0 3px 5px;}
+	
+#hiroba-wrap .recipeHowto p.txt{
+	color:#555555; line-height:130%; text-align:left;}
+
+
+/*--------  zairyo and tukurikata DETAIL  -----------*/
+#hiroba-wrap .recipeHowto dl,
+#hiroba-wrap .recipeHowto dt,
+#hiroba-wrap .recipeHowto dd {
+	margin: 0; padding: 0; color:#555555; line-height:130%; text-align:left;}
+
+#hiroba-wrap .recipeHowto .zairyo dl {
+	border:none; width:224px;}
+
+#hiroba-wrap .recipeHowto .zairyo dt,
+#hiroba-wrap .recipeHowto .zairyo dd {
+	padding:1px 3px;}
+	
+#hiroba-wrap .recipeHowto .zairyo dt {
+	/* clear: left; float: left; width: 160px;} */
+	clear: left; float: left; width: 165px;}
+	
+#hiroba-wrap .recipeHowto .tukurikata dl {
+	border:none; width:370px;}
+	
+#hiroba-wrap .recipeHowto .tukurikata dt,
+#hiroba-wrap .recipeHowto .tukurikata dd {
+	padding:4px 4px;}
+
+#hiroba-wrap .recipeHowto .tukurikata dt {
+	clear: left; float: left; width:10px;}
+	
+/*--------  zairyo and tukurikata //END  -----------*/
+
+/*--------  ItemInformation  -----------*/
+#hiroba-wrap .recipeItemINFO{
+	width:630px; padding:15px 0 10px 36px;}
+
+#hiroba-wrap .recipeItemBase170{
+	width:170px; float:left; border:1px #cccccc solid; text-align:center;
+	padding:8px 0;}
+	
+#hiroba-wrap .recipeItemINFO .cmnt{
+	width:176px; height:24px; text-indent:-9999px; display:block;
+	background:url(http://www.famima.com/images/p/hiroba/recipeitem_cmnt.jpg) no-repeat;}
+
+#hiroba-wrap .recipeItemBase170 h4.name{
+	color:#555555; font-size:90%; line-height:120%; font-weight:bold;}
+
+#hiroba-wrap .recipeItemBase170 h4.name a:link, 
+#hiroba-wrap .recipeItemBase170 h4.name a:visited{
+	text-decoration:underline; color:#555555;}
+#hiroba-wrap .recipeItemBase170 h4.name a:hover,
+#hiroba-wrap .recipeItemBase170 h4.namea:active{
+	text-decoration:none; color:#555555;}
+
+
+/*--------  Banner Link  -----------*/
+#hiroba-wrap .bannerBase{
+	width:630px; padding:10px 0 20px 36px;}
+
+#hiroba-wrap .bannerBase .banner1{
+	width:223px; height:60px; float:left;}
+	
+#hiroba-wrap .bannerBase .exlink{
+	width:164px; height:60px; float:right;}
+	
+#hiroba-wrap .bannerBase .banner1 a,
+#hiroba-wrap .bannerBase .exlink a{
+	outline:0;}
+	
+	
+
+/* --------------------------------------------------------------------
+	recipe-backnumber
+-------------------------------------------------------------------- */
+#hiroba-wrap #bknBase{
+	width:680px; padding:10px 10px 30px 10px; background-color:#f2eee2;}
+
+#hiroba-wrap .bknBaseLine{
+	width:680px; border-top:1px dotted #999999; border-bottom:1px dotted #999999;
+	padding:10px 0 0 0;}
+	
+#hiroba-wrap #bknBase .bknTXT{
+	color:#606060; margin:5px 0 5px 13px;}
+
+#hiroba-wrap #bknBase ul{
+	list-style:none; margin-left:5px;}
+	
+#hiroba-wrap #bknBase li{
+	color:#606060; padding:0 0 10px 15px; color:#606060;
+	background:url(http://www.famima.com/images/p/hiroba/bkn_listmark.jpg) no-repeat;}
+
+#hiroba-wrap #bknBase li a{
+	outline:none; border:0;}
+
+#hiroba-wrap #bknBase li a:link, 
+#hiroba-wrap #bknBase li a:visited{
+	text-decoration:underline; color:#606060;}
+#hiroba-wrap #bknBase li a:hover,
+#hiroba-wrap #bknBase li a:active{
+	text-decoration:none; color:#606060;}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3480 @@
+@charset "utf-8";
+
+/* -----------------------------------------------------------
+CSS Information
+
+ File name:      contents.css
+ Author:         Your Name (admin)
+ Style Info:     コンテンツエリア関係 他
+----------------------------------------------------------- */
+
+h2 {
+	width:700px;
+	height:50px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/common/h2_bg.jpg) no-repeat;
+	text-indent:24px;
+	font-size:13pt;
+	line-height:50px;
+	color:#323232;
+	margin-bottom:20px;	
+}
+
+.red {
+	color:#F00;
+	font-weight:bold;
+}
+.c_red{
+	color:red;
+}
+
+/*--------------------------------------------------------------------------------------------------------
+	TOPページ
+--------------------------------------------------------------------------------------------------------*/
+
+
+#top-img-box{
+	width:auto;
+	height:389px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/top/top-img-bg.jpg) repeat-x bottom;	
+}
+
+#top-img {
+	width:950px;
+	height:374px;
+	margin:0 auto;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/top/top.jpg) no-repeat;
+	position:relative;
+}
+
+
+#top-navi {
+	width:456px;
+	height:55px;
+	position:absolute;
+	top:290px;
+	left:33px;
+}
+
+ul#top-navi li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+#strong_box {
+	width:696px;
+	height:340px;
+	margin-top:10px;
+	margin-bottom:38px;
+	position:relative;
+
+}
+#strong_box_feature {
+	width:696px;
+	height:600px;
+	margin-top:10px;
+	margin-bottom:38px;
+	position:relative;
+
+}
+
+#strong_box_shop {
+	width:696px;
+	height:400px;
+	margin-top:10px;
+	margin-bottom:137px;
+	position:relative;
+
+}
+.strong_text_box{
+	width:323px;
+	height:170px;
+	font-size:12pt;
+	line-height:155%;
+}
+
+.index_strong_box{
+    font-size:220%;
+	font-weight:bold;
+	color:#black;
+	font-style:italic;
+	width:323px;
+	padding-bottom: 10px;
+	border-bottom:#999999 1px solid;
+	padding-top:10px;
+	
+	}
+
+.s_t_1{
+	position:absolute;
+	top:0;
+	left:0;
+	padding:15px;
+}
+
+.s_t_2{
+	position:absolute;
+	top:0;
+	left:357px;
+	padding:15px;
+}
+
+.s_t_3{
+	position:absolute;
+	top:335px;
+	left:0;
+	padding:15px;
+}
+
+.s_t_4{
+	position:absolute;
+	top:335px;
+	left:357px;
+	padding:15px;
+}
+
+#difference p{
+    font-size:120%;
+	letter-spacing:0.05em;
+	line-height:150%;
+	padding:20px;
+}
+
+
+#top-navi1 {
+	width:511px;
+	height:53px;
+	position:absolute;
+	top:310px;
+	left:12px;
+}
+ul#top-navi1 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+.top_navi_t{
+	margin:auto;
+	width:69px;
+	height:35px;
+}
+#top-navi-box p{
+	position:absolute;
+	top:314px;
+	left:12px;
+
+}
+.top-navi-box1{
+	height:90px;
+	position:relative;
+
+}
+
+.price_list_navi1 {
+	width:700px;
+	height:55px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+ul.price_list_navi1 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+ul#top-navi1 li img:hover{filter:alpha(opacity=80);opacity:0.8;}
+
+.top-navi-box1 li img:hover{filter:alpha(opacity=80);opacity:0.8;}
+
+.top-navi-box2{
+	height:90px;
+		position:relative;
+
+}
+
+ul#top-navi2 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+.price_list_navi2 {
+	width:600px;
+	height:55px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+ul.price_list_navi2 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+ul#top-navi2 li img:hover{filter:alpha(opacity=80);opacity:0.8;}
+
+.top-navi-box2 li img:hover{filter:alpha(opacity=80);opacity:0.8;}
+
+#twitter_top {
+position: relative;
+top: 120px;
+width: 306px;
+height: 254px;
+left: 602px;    
+
+}
+
+
+#shop_top ul li{
+	float:left;
+}
+
+#shop_top ul{
+	position:absolute;
+	top:65px;
+	margin-left:20px;
+}
+
+/* トピックス
+----------------------------------------------- */
+
+#topics_h2{
+	width:700px;
+	height:34px;
+	margin-bottom:0;
+	text-indent:0;
+	background-image:none;
+}
+#topics1_h2{
+	width:700px;
+	height:34px;
+	margin-bottom:0;
+	text-indent:0;
+	background-image:none;
+}
+#topics {
+	width:697px;
+	height:300px;
+	margin-bottom:20px;
+	overflow:auto;
+	margin-top:30px;
+}
+
+#topics div{
+	width:660px;
+	height:auto;
+	padding:10px 0px 15px 20px;
+	font-size:12pt;
+	border-bottom:1px dotted #e0e0e0;
+	overflow:auto;
+
+}
+
+.index{
+	font-size:12pt;
+	font-weight:bold;
+	color:#FA4F6F;
+	line-height:190%;
+}
+
+
+#topics a:link,#topics a:visited{
+	color:#006699;
+	text-decoration:none;
+}
+#topics a:hover,#topics a:active{
+	color:#CC3300;
+}
+
+
+#top-img-box_rep{
+	margin:auto;
+	width:958px;
+	height:359px;
+	margin-bottom:-15px;
+	margin-top:5px;
+	display:block;
+	position: relative;
+    background: url(http://www.iphone-d.jp/user_data/pc/images/data_recovery/header_rep.jpg) no-repeat;	
+}
+
+#form_rep_2{
+	margin:auto;
+	width:697px;
+	height:150px;
+	margin-bottom:-15px;
+	margin-top:5px;
+	display:block;
+	position: relative;
+    background: url(http://www.iphone-d.jp/user_data/pc/images/data_recovery/header_rep_2.jpg) no-repeat;	
+}
+
+#top-img-box_rep img{
+    position: absolute;
+	top:265px;
+	left:564px;
+}
+
+#form_botton img{
+    position: absolute;
+	top:71px;
+	left:396px;
+}
+
+#call img{
+    position: absolute;
+	top:59px;
+	left:20px;
+}
+
+
+/*  メニュー
+----------------------------------------------- */
+#menu_list ul {
+	list-style: none; 
+	padding:0;
+	margin:0;
+}
+
+
+#menu_list ul li {
+    font-size: 9pt;
+    letter-spacing: 1pt;
+    margin-bottom: 6px;
+    text-align: left;
+	letter-spacing:0.1em;
+	padding: 0; 
+	margin: 0;
+	float: left;
+}
+
+#menu_list ul li a {
+display: block;
+width: 125px;
+border-bottom: 1px dotted #555;
+text-decoration: none;
+color: #555;
+padding: 0px 0px 0px 15px;
+margin: 0px 0px 0px 20px;
+text-align: left;
+font-size: 18px;
+}
+
+#menu_list ul li a:hover{
+background:url(http://www.iphone-d.jp/user_data/pc/images/arrow.gif) no-repeat left center;
+}
+
+
+.menu {
+    width: 660px;
+    border: 1px solid #CDCDCD;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative;
+	margin-left:20px;
+}
+.menu h3 {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 9pt;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-left: 15px;
+	letter-spacing:0.1em;
+}
+.menu_text {
+    font-size: 125%;
+    line-height: 1.4em;
+    padding: 15px 40px 0px;
+	letter-spacing: 0.1em;
+}
+.menu_text p {
+    margin-bottom: 1em;
+	letter-spacing:0.1em;
+}
+
+.menu_text ul li {
+    list-style:inside; 
+	font-size:120%;"    
+}
+
+.menu_text ul {
+    line-height:160%;
+	}
+
+
+/*--------------------------------------------------------------------------------------------------------
+	価格表
+--------------------------------------------------------------------------------------------------------*/
+
+
+#price_list_navi {
+	width:456px;
+	height:55px;
+	margin:0 auto 25px;
+}
+
+ul#price_list_navi li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+
+.price_box_p{
+	clear:both;
+	width:auto;
+	height:389px;
+	margin-bottom:15px;	
+}
+
+
+
+.price_box{
+	width:224px;
+	height:390px;
+	margin-right:12px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/price/pricelist_bg.jpg) no-repeat;
+	float:left;
+	position:relative;
+}
+.price_box01{
+	width:224px;
+	height:390px;
+	margin-right:12px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/price/pricelist_bg.jpg) no-repeat;
+	float:left;
+	position:relative;
+}
+.price_box_on{
+	width:219px;
+	height:346px;
+	text-align:center;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/price/pricelist_bg_on1.png) no-repeat;
+	position:absolute;
+	top:40px;
+	left:2px;
+}
+
+.price_box_on p{
+	position:absolute;
+	margin:0px auto;
+	width:219px;
+	left:2px;
+	top:43px;
+}
+
+.p_b_e{
+	margin-right:0;	
+}
+
+.price_box_title{
+	width:220px;
+	height:auto;
+	padding-top:10px;
+	font-size:14pt;
+	color:#323232;
+	text-align:center;
+}
+
+.price_box_img {
+	width:224px;
+	height:390px;
+	position:absolute;
+	top:40px;
+	left:3px;
+}
+
+.price_box_name {
+	width:220px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	position:absolute;
+	top:238px;
+	left:3px;	
+}
+
+.price_box_m_price{
+	width:210px;
+	font-size:8pt;
+	line-height:138%;
+	text-align:center;
+	position:absolute;
+	top:243px;
+	left:5px;
+}
+.price_box_time {
+	width:220px;
+	height:27px;
+	color:#2e90c2;
+	font-weight:bold;
+	line-height:27px;
+	text-align:center;
+	position:absolute;
+	top:331px;
+	left:3px;	
+}
+
+.price_box_price {
+	width:220px;
+	height:34px;
+	color:#cf1126;
+	font-size:15pt;
+	font-weight:bold;
+	line-height:34px;
+	text-align:center;
+	position:absolute;
+	top:354px;
+	left:3px;	
+}
+
+/*--------------------------------------------------------------------------------------------------------
+	ご利用の流れ
+--------------------------------------------------------------------------------------------------------*/
+
+#flow_box_1{
+	width:672px;
+	height:300px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/flow/flow_box_1.jpg) no-repeat;
+	position:relative;
+}
+
+#flow_box_1_text {
+	width:395px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:52px;
+	left:0;	
+}
+
+
+#flow_box_2{
+	width:672px;
+	height:304px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/flow/flow_box_2.jpg) no-repeat;
+	position:relative;
+}
+
+
+#flow_box_2_text {
+	width:480px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:47px;
+	left:0;	
+}
+
+#flow_box_2_2_text {
+	width:272px;
+	height:98px;
+	font-size:9pt;	
+	line-height:150%;
+	position:absolute;
+	top:104px;
+	left:23px;	
+}
+
+
+#flow_box_2_3_text {
+	width:644px;
+	font-size:9pt;	
+	line-height:150%;
+	position:absolute;
+	top:203px;
+	left:0;	
+}
+
+
+#flow_box_3{
+	width:672px;
+	height:347px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/flow/flow_box_3.jpg) no-repeat;
+	position:relative;
+}
+
+
+#flow_box_3_text {
+	width:389px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:52px;
+	left:0;	
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------company.html----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+.company-t1 {
+	width:100%;
+	height:auto;
+	margin: 1em 0 40px 0;
+	border:1px solid #E7E7E7;
+	border-collapse: collapse;
+}
+
+.company-t1 th {
+	width:146px;
+	padding:0.5em 1em 0.5em 1em;
+	font-weight: normal;
+	font-size:9pt;
+	color: #000;
+	border-right:1px solid #E7E7E7;
+	border-bottom:1px solid #E7E7E7;
+}
+
+.company-t1 td {
+	padding:0.5em 1em 0.5em 1em;
+	font-size:9pt;
+	color: #333;
+	border-bottom:1px solid #E7E7E7;	
+}
+
+.h3_line{
+	width:auto;
+	height:25px;
+	padding-left:10px;
+	line-height:25px;
+	font-size:12pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #999999;
+	border-bottom:1px solid #999999;
+	clear:both;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------faq.html----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+#faq_list {
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    width: 697px;
+}
+#faq_list ul li {
+    font-size: 9pt;
+    letter-spacing: 1pt;
+    margin-bottom: 6px;
+    text-align: left;
+}
+.faq {
+    border: 1px solid #CDCDCD;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative;
+    width: 718px;
+}
+.faq h3 {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 9pt;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+.faq_text {
+    font-size: 10.5pt;
+    line-height: 1.4em;
+    padding: 15px 70px;
+}
+.faq_text p {
+    margin-bottom: 1em;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------agreement.html----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+#agreement_list ul {
+	list-style: none; 
+	padding:0;
+	margin:0;
+}
+
+
+#agreement_list ul li {
+    font-size: 9pt;
+    letter-spacing: 1pt;
+    margin-bottom: 6px;
+    text-align: left;
+	letter-spacing:0.1em;
+	padding: 0; 
+	margin: 0;
+	float: left;
+}
+
+#agreement_list ul li a {
+display: block;
+width: 125px;
+border-bottom: 1px dotted #555;
+text-decoration: none;
+color: #555;
+padding: 0px 0px 0px 15px;
+margin: 0px 0px 0px 20px;
+text-align: left;
+font-size: 18px;
+}
+
+#agreement_list ul li a:hover{
+background:url(http://www.iphone-d.jp/user_data/pc/images/arrow.gif) no-repeat left center;
+}
+
+
+.agreement {
+    width: 660px;
+    border: 1px solid #CDCDCD;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative;
+	margin-left:20px;
+}
+.agreement h3 {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 9pt;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-left: 15px;
+	letter-spacing:0.1em;
+}
+.agreement_text {
+    font-size: 10.5pt;
+    line-height: 1.4em;
+    padding: 15px 40px 0px;
+	letter-spacing: 0.1em;
+}
+.agreement_text p {
+    margin-bottom: 1em;
+	letter-spacing:0.1em;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------repairflow.html----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+.repair-t1 {
+	width:100%;
+	height:auto;
+	margin: 1em 0 40px 0;
+	border:1px solid #CCC;
+	border-collapse: collapse;
+}
+
+.repair-t1 th {
+	width:30px;
+	padding:0.5em 1em 0.5em 1em;
+	font-weight: normal;
+	font-size:20pt;
+	text-align: center;
+	color: #000;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+}
+
+.repair-t1 td {
+	padding:0.5em 1em 0.5em 1em;
+	font-size:12pt;
+	color: #333;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+}
+
+
+/* フォーム・テーブル
+----------------------------------------------- */
+
+.form_table{
+	width:697px;
+	height:auto;
+	border-collapse:collapse;
+	border:1px solid #CCCCCC;
+	margin-bottom:2em;		
+}
+
+.form_table th {
+	padding:0.5em 1em 0.5em 1em;
+	background:#f2f1ec;
+	font-weight: normal;
+	font-size:120%;
+	color: #000;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;	
+	width: 145px;
+
+}
+
+.form_table td {
+	padding:0.5em 1em 0.5em 1em;
+	font-size:110%;
+	color: #333;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;
+	background:#FFFFFF;
+}
+
+
+
+.edit_delet{
+	width:100px;
+	text-align:center;
+}
+
+.date{
+	width:150px;
+}
+
+.submit_td{
+	height:70px;
+	text-align:center;
+}
+
+.form_span{
+	margin-left:7px;
+	color:#FF0000;
+}
+
+
+
+#form_ssl {
+	width:246px;
+	height:auto;
+	border:1px #CCCCCC solid;
+	padding-top:10px;
+	position:absolute;
+	left: 448px;
+	top: 80px;
+	text-align:center;
+}
+
+
+#form_ssl p {
+	width:230px;
+	height:auto;
+	font-size:6pt;
+	line-height:170%;
+	margin:0 auto 10px;
+}
+
+#atte_f {
+	border:2px dotted #CCC;
+	padding:8px 8px;
+	margin-bottom:25px;	
+}
+
+#kiyaku_f{
+	border:1px solid #CCC;
+	padding:8px 8px;
+	margin-bottom:25px;	
+	background:#F5F5F5;
+}
+
+
+/* フォーム・テーブル【確認画面用】
+----------------------------------------------- */
+
+.form_table_register{
+	width:697px;
+	height:auto;
+	border-collapse:collapse;
+	border:1px solid #CCCCCC;
+	margin-bottom:2em;		
+}
+
+.form_table_register th {
+	width:150px;
+	padding:0.5em 1em 0.5em 1em;
+	background:#f2f1ec;
+	font-weight: normal;
+	font-size:9pt;
+	color: #000;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;	
+
+}
+
+.form_table_register td {
+	padding:0.5em 1em 0.5em 1em;
+	font-size:9pt;
+	color: #333;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;
+	background:#FFFFFF;
+}
+
+
+/* フォーム・テーブル【data_recovery】
+----------------------------------------------- */
+
+.form_table_data_recovery {
+	width:697px;
+	height:auto;
+	border-collapse:collapse;
+	border:1px solid #CCCCCC;
+	margin-bottom:2em;		
+}
+
+.form_table_data_recovery th {
+	width:22px;
+	padding:1em;
+	background:#EE4B4B;
+	font-weight: normal;
+	font-size:16pt;
+	color: #FFF;
+	font-weight:bold;
+	text-align:center;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;	
+}
+
+.form_table_data_recovery td {
+	padding:0.5em 1em 0.5em 1em;
+	font-size:9pt;
+	color: #333;
+	border-bottom: #CCCCCC 1px solid;
+	border-left: #CCCCCC 1px solid;
+	background:#FFFFFF;
+}
+
+
+/* 規約
+----------------------------------------------- */
+
+#kiyaku_title{
+	width:auto;
+	height:25px;
+	margin-top:20px;
+	line-height:25px;
+	text-align:center;
+	background:#f0f0f0;
+	font-weight:bold;
+	border-top:2px solid #CCCCCC;
+}
+
+#kiyaku_bg{
+	width:auto;
+	height:220px;
+	background:#f0f0f0;
+	margin-bottom:30px;
+	border-bottom:2px solid #CCCCCC;
+}
+
+#kiyaku{
+	width:650px;
+	height:200px;
+	margin:0 auto;
+	overflow:auto;
+	border:1px solid #CCCCCC;
+	background:#FFFFFF;
+}
+
+#kiyaku li{
+	padding:5px 8px;	
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------privacy.html----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+#name_1 {
+	font-size:9pt;
+	text-align:right;
+	margin-bottom:20px;
+}
+
+
+
+
+
+/*----------twitter----------------------------------------------------------------------------------*/
+
+
+
+.timeline-footer{
+	display:none;
+}
+
+/* store
+----------------------------------------------- */
+.store_p{
+	font-size:120%;
+	padding:10px;
+}
+.store_p_oka{
+	font-size:120%;
+	padding-bottom:10px;
+	margin:0;
+}
+
+.access_a{
+	width:708; 
+}
+.access_a1{
+	float:left;
+	width:215px; 
+ 	font-weight:bold;
+	padding:5px;
+	}
+.access_a2{
+ 	float:left; 
+	width:468px; 
+ 	font-weight:bold;
+	  }
+.access_a2 img{
+	margin:10px 0;
+}
+
+.access_a1 span{
+	font-size:20px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color:#666;
+	display:block
+}
+
+.clearFix_access:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearFix_access {
+  min-height: 1px;
+width:700px;
+margin: 0 auto;
+padding: 0 0 1em;
+
+}
+
+* html .clearFix_access {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+
+
+#store_form_bg_shinjuku {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/shinjuku_bg.jpg) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+#form_shinjuku img{
+    top: 55px;
+	left:389px;
+	position:absolute;
+}
+
+#tel_shinjuku img{
+    top: 55px;
+	left:44px;
+	position:absolute;
+
+}
+
+#store_form_bg_ookubo {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/ookubo_bg.jpg) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;	
+}
+
+#tel_ookubo img{
+    top: 41px;
+	left:58px;
+	position:absolute;
+	
+
+}
+
+#form_ookubo img{
+    top: 55px;
+	left:389px;
+	position:absolute;
+	
+
+}
+
+#store_form_bg_umeda {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/umeda_bg.jpg) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_umeda img{
+    top: 48px;
+	left:23px;
+	position:absolute;
+	
+}
+
+
+#form_umeda img{
+    top: 55px;
+	right:28px;
+	position:absolute;
+	
+
+}
+#campain_toiawase_umeda{
+    top: 140px;
+	right:5px;
+	position:absolute;
+	
+
+}
+
+
+#store_form_bg_ginza {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/ginza_bg.jpg) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_ginza img{
+    top: 56px;
+	left:41px;
+	position:absolute;
+	
+}
+
+
+#form_ginza img{
+    top: 55px;
+	left:389px;
+	position:absolute;
+	
+
+}
+
+#store_form_bg_fukuyama{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/fukuyama_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_fukuyama img{
+    top: 48px;
+	left:23px;
+	position:absolute;
+	
+}
+
+
+#form_fukuyama img{
+    top: 55px;
+	right:28px;
+	position:absolute;
+	
+
+}
+
+#store_form_bg_okayamaekimae{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/okayamaekimae_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_okayamaekimae img{
+    top: 48px;
+	left:23px;
+	position:absolute;
+	
+}
+
+
+#form_okayamaekimae img{
+    top: 55px;
+	right:28px;
+	position:absolute;
+	
+
+}
+#store_form_bg_saidaiji{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/saidaiji_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+
+
+#form_saidaiji img{
+    top: 55px;
+	right:215px;
+	position:absolute;
+	
+
+}
+
+
+#store_form_bg_yonezawa{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/yonezawa_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_yonezawa img{
+    top: 48px;
+	left:23px;
+	position:absolute;
+	
+}
+
+
+#form_yonezawa img{
+    top: 55px;
+	right:28px;
+	position:absolute;
+	
+
+}
+#store_form_bg_matsue{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/matsue_store_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+#tel_matsue img{
+    top: 48px;
+	left:23px;
+	position:absolute;
+	
+}
+
+
+#form_matsue img{
+    top: 55px;
+	right:28px;
+	position:absolute;
+	
+
+}
+.matsue_p{
+	font-size:14px;
+}
+.matsue_ul{
+	font-size:14px;
+	color:red;
+}
+
+#store_campain_umeda{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/umeda_campanegarasu.jpg) no-repeat;
+	width:700px;
+	height:300px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	margin-top:30px;
+}
+#toiawaese_umeda{
+    top: 0px;
+	right:215px;
+	position:absolute;
+	
+
+}
+
+#store_form_bg_roppongi {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/roppongi_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+#form_azabujuban img{
+    top: 55px;
+	left:218px;
+	position:absolute;
+}
+
+#tel_azabujuban img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+
+#store_form_bg_azabujuban {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/azabujuban_bg1.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+#form_roppongi img{
+    top: 55px;
+	left:410px;
+	position:absolute;
+}
+
+#tel_roppongi img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+
+#store_form_bg_kashihara {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/kashihara_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+#form_kashihara img{
+    top: 55px;
+	left:410px;
+	position:absolute;
+}
+
+#tel_kashihara img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+#form_machidatamasakai img{
+    top: 55px;
+	left:410px;
+	position:absolute;
+}
+
+#tel_machidatamasakai img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+
+#store_form_bg_machidatamasakai {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/machidatamasakai_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+#form_koyama img{
+    top: 55px;
+	left:410px;
+	position:absolute;
+}
+
+#tel_koyama img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+
+#store_form_bg_koyama {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/koyama_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+#form_okachimachi img{
+    top: 55px;
+	left:234px;
+	position:absolute;
+}
+
+#tel_okachimachi img{
+    top: 45px;
+	left:20px;
+	position:absolute;
+
+}
+
+#store_form_bg_okachimachi {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/store/okachimachi_bg.png) no-repeat;
+	width:700px;
+	height:120px;
+	display:block;
+	position:relative;
+	margin-top: -15px;
+	margin-bottom: 30px;
+	
+
+}
+
+
+/*うめだ店キャンペーン*/
+.switch {
+ -webkit-animation: switchtext 0.5s infinite alternate;
+ -moz-animation: switchtext 0.5s infinite alternate;
+ animation: switchtext 0.5s infinite alternate;
+ font-size:25px;
+ color:red;
+}
+@-webkit-keyframes switchtext {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+@-moz-keyframes switchtext {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+@keyframes switchtext {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+
+.switch1 {
+ -webkit-animation: switchtext 0.5s infinite alternate;
+ -moz-animation: switchtext 0.5s infinite alternate;
+ animation: switchtext 0.5s infinite alternate;
+ font-size:18px;
+ color:red;
+}
+@-webkit-keyframes switch1text {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+@-moz-keyframes switch1text {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+@keyframes switch1text {
+ from { opacity: 1.0; }
+ to { opacity: 0; }
+}
+
+.repair_b{
+	margin-bottom:20px;
+}
+
+.repair_b p{
+	padding:3px 15px;
+padding-left:23px;
+text-indent:-1em;
+font-size:116%;
+line-height:24px;
+}
+
+/*銀座店アクセス*/
+
+
+
+ul#tab {
+	zoom: 1;
+	background: #c9c3c4;
+	border-bottom: 3px solid #c81528;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+ul#tab:after { content:"."; display: block; height:0px; clear:both; line-height:0; visibility:hidden; }
+ul#tab li {
+	float: left;
+	text-align: center;
+}
+ul#tab li:last-child {
+	background: none;
+}
+ul#tab li a {
+	display: block;
+	width: 138px;
+	padding: 8px 0;
+	text-decoration: none;
+	color: #222;
+	font-size:18px;
+}
+ul#tab li a:hover {
+	background: #c95560;
+	color: #fff;
+}
+ul#tab li.active,
+ul#tab li.active a,
+ul#tab li.active a:hover {
+	background: #c81528;
+	color: #fff;
+}
+#detail {
+	clear: both;
+	overflow: hidden;
+	background: #f7f7f7;
+	width: 700px;
+}
+.tabbox {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------data_recovery----------------------------------------------------------------------------------*/
+
+
+
+.data_wrapper{
+	width:645px;
+}
+
+.omitumori p{
+	width:690px;
+}
+.omitumori p img{
+	margin-left:96px;
+}
+
+
+.data_setumei01{
+	background:#FCDFE3;
+	border:1px solid #DC7A89;
+	width:690px;
+	height:160px;
+}
+
+.data_setumei01 span{
+font-size:18px;
+padding:10px;
+display:block;
+line-height:25px;
+}
+.data_yajirusi img{
+	margin: 0 auto;
+	display:block;
+
+}
+
+.first_step{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/data_recovery/first_step.jpg) no-repeat;
+	width:690px;
+	height:302px;
+	position:relative;
+		margin-bottom:30px;
+
+}
+
+
+
+.first_step_01{
+	position:absolute;
+	top:100px;
+	right:30px;
+}
+	
+.first_step_02{
+	position:absolute;
+	top:100px;
+	left:30px;
+	width:400px;
+}
+
+
+
+.recovery{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/data_recovery/recovery_tittle.jpg) no-repeat;
+	width:691px;
+	height:584px;
+	position:relative;
+		margin-bottom:30px;
+
+}
+
+
+
+.recovery_01{
+	position:absolute;
+	top:100px;
+	right:30px;
+}
+	
+.recovery_02{
+	position:absolute;
+	top:100px;
+	left:30px;
+	width:280px;
+}
+	
+.recovery_03{
+	position:absolute;
+	top:350px;
+	left:30px;
+	padding-right:20px;
+}
+
+
+.suibotu_taiou{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/data_recovery/suibotu_taiou01.jpg) no-repeat;
+	width:691px;
+	height:1247px;
+	position:relative;
+	margin-bottom:30px;
+}
+
+
+
+.suibotu_taiou_01{
+	color:red;
+	font-size:18px;
+		position:absolute;
+	top:100px;
+	left:30px;
+
+}
+	
+.suibotu_taiou_02{
+	font-size:14px;
+		position:absolute;
+	top:120px;
+	left:30px;
+		padding-right:20px;
+	line-height:25px;
+
+}
+
+
+.suibotu_taiou_03{
+	color:red;
+	font-size:18px;
+		position:absolute;
+	top:220px;
+	left:30px;
+
+}
+	
+.suibotu_taiou_04 {
+	font-size:14px;
+			position:absolute;
+	top:250px;
+	left:30px;
+
+		padding-right:20px;
+		list-style: decimal;
+	line-height:25px;
+		padding-left:20px;
+}
+
+.suibotu_taiou_04 li {
+		list-style: decimal;
+
+
+}
+.suibotu_taiou_05{
+	color:red;
+	font-size:18px;
+		position:absolute;
+	top:500px;
+	left:30px;
+
+}
+
+.suibotu_taiou_06{
+	font-size:14px;
+		position:absolute;
+	top:530px;
+	left:30px;
+	width:300px;
+	line-height:25px;
+
+}
+
+
+.suibotu_taiou_07{
+	font-size:14px;
+		position:absolute;
+	top:530px;
+	right:20px;
+
+}
+
+.suibotu_taiou_08{
+	font-size:14px;
+		position:absolute;
+	top:770px;
+	left:30px;
+
+}
+
+
+.suibotu_taiou_09{
+	font-size:14px;
+		position:absolute;
+	top:800px;
+	left:30px;
+		padding:0 20px;
+
+}
+
+
+.suibotu_taiou_09 li{
+	list-style:disc;
+}
+
+
+
+
+
+
+
+/*----------kaitori----------------------------------------------------------------------------------*/
+
+
+.kaitori , .kaitori td,  .kaitori th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+	text-align:center;
+}
+
+.kaitori .a {
+	background: #88B1FF;
+        font-size:110%;
+}
+
+.kaitori .b {
+	background: #FF9393;
+        font-size:110%;
+        
+}
+
+.kaitori .c {
+	background: #E1ECFF;
+	font-weight:bold;
+		padding:5px;
+}
+
+.kaitori .d {
+	background: #FFC8C8;
+	font-weight:bold;
+		padding:5px;
+        
+}
+
+.kaitori .n {
+	background: #EEEEEE;
+	font-size: 110%;   
+
+        height:50px;
+		width:120px;
+}
+
+.kaitori .p {
+	background: #FFFFFF;
+	font-size: 115%;
+	color:#FF0000;
+	font-weight:bold;
+        
+}
+
+
+.kaitori td, .kaitori th {
+	padding: 13px;
+	width: 100px;
+	height: 25px;
+}
+
+.kaitori th {
+	background: #f0e6cc;
+}
+
+
+
+/*
+#right {
+float: right;
+width: 697px;
+line-height: 1.6em;
+text-align: center;
+}
+
+#right dl{
+margin-bottom:15px;
+}
+
+
+#right h2.kaitori_lineup {
+width: 697px;
+height: 84px;
+background: transparent url(../images/kaitori/kaitori_lineup01.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:0;
+
+
+
+}
+.kaitori_lineup01 {
+width: 697px;
+height: 56px;
+background: transparent url(../images/kaitori/kaitori_lineup02.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+
+}
+
+
+.kaitori_lineup01_01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align: center;
+height:518px;
+
+}
+
+.kaitori_lineup01_01 li,.kaitori_lineup02_02 li {
+display: block;
+float: right;
+width:338px;
+
+}
+
+.kaitori_lineup01_01 li img,.kaitori_lineup02_02 li img {
+	margin:0 5px;;
+}
+
+.kaitori_lineup02 {
+width: 697px;
+height: 56px;
+background: transparent url(../images/kaitori/kaitori_lineup03.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+
+}
+
+.kaitori_lineup02_02 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align: center;
+height:518px;
+
+}
+
+#right h2.kaitori_shop {
+width: 697px;
+height: 75px;
+background: transparent url(../images/kaitori/kaitori_shop.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+
+
+}
+
+
+.kaitori_shop01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+height:200px;
+
+}
+
+
+
+.kaitori_shop01_01 {
+text-align: center;
+
+}
+
+.kaitori_shop01_02 {
+	padding:5px 18px;
+
+}
+
+#right h2.kaitori_campain {
+width: 697px;
+height: 75px;
+background: transparent url(../images/kaitori/kaitori_campain.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+
+.kaitori_campain01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+height:430px;
+
+}
+
+
+
+.kaitori_campain01_01 {
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align: center;
+
+}
+
+
+.kaitori_campain01_02 {
+	background:#D6EEF8;
+	width:628px;
+	height:100px;
+	margin:0 auto;
+	font-size:16px;
+	padding:12px;
+
+}
+
+
+#right h2.kaitori_ipcampain {
+width: 697px;
+height: 74px;
+background: transparent url(../images/kaitori/kaitori_ipcampain.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+.kaitori_ipcampain01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+
+}
+
+.kaitori_ipcampain01 table thead th {
+    background: none repeat scroll 0% 0% #DADADA;
+	text-align:center;
+}
+
+
+
+.kaitori_ipcampain01 table tbody tr:nth-child(odd) {
+    background: none repeat scroll 0% 0% #F4F4F4;
+	text-align:center;
+	height:100px;
+}
+
+.kaitori_ipcampain01 table tbody tr:nth-child(even) {
+	text-align:center;
+	height:100px;
+}
+
+.kaitori_ipcampain01 table {
+	margin:0 auto;
+	border-spacing: 0px 0.5em;
+	border-collapse: separate;
+}
+	
+.note{
+	border-top:1px solid #CCC;
+	padding: 1em 0px 0px 100px;
+	margin: 0 20px;
+}
+
+.kaitori_system {
+width: 697px;
+height: 74px;
+background: transparent url(../images/kaitori/kaitori_system.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+.kaitori_system02 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+height:230px;
+}
+
+
+
+.kaitori_system02 li {
+display: block;
+float: left;
+width:338px;
+
+}
+
+
+.kaitori_system02 li img {
+	margin:0 5px;;
+}
+
+.kaitori_system01{
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+}
+
+.kaitori_system03 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align:center;
+font-size:16px;
+color:#C60
+}
+
+
+.otoiawase img{
+	margin:30px auto;
+	display:block
+}
+
+*/
+
+
+/*----------kaitori_post----------------------------------------------------------------------------------*/
+
+.post_top img{
+	margin:0px auto;
+	display:block
+}
+
+.post_top p{
+	margin:10px 0;
+}
+
+.post_warrant{
+	width: 697px;
+height: 51px;
+background: transparent url(http://www.iphone-d.jp/user_data/pc/images/kaitori/post_warrant.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+.post_warrant01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+height:170px;
+}
+
+
+.post_warrant01_01 {
+display: block;
+float: left;
+width:250px;
+height:170px;
+}
+
+
+.post_warrant01_01 img {
+	margin:0px auto;
+	display:block;
+}
+
+.post_warrant01_02 {
+display: block;
+float: right;
+width:400px;
+height:170px;
+padding:10px;
+}
+
+
+.post_warrant01_02_1{
+	font-size:20px;
+	display:block;
+}
+
+.post_warrant01_02_2{
+	font-size:14px;
+	color:red;
+}
+
+
+
+.post_warrant_k{
+	font-size:18px;
+	font-weight:bold;
+padding: 10px;
+
+}
+
+
+
+.post_warrant_k01 table th {
+    background: none repeat scroll 0% 0% #FF9900;
+	text-align:center;
+	padding:10px 0;
+	font-size:15px;
+	color:#FFF;
+}
+
+
+.item{
+    background: none repeat scroll 0% 0% #FFFFCC;
+	text-align:center;
+	padding:10px 0;
+	font-size:15px;
+}
+
+
+.post_send{
+	width: 697px;
+height: 51px;
+background: transparent url(http://www.iphone-d.jp/user_data/pc/images/kaitori/post_send.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+.clearFix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearFix {
+  min-height: 1px;
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+width:676px;
+margin: 0 auto;
+padding: 0 0 1em;
+
+}
+
+* html .clearFix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+
+.photo {
+    width: 220px;
+    float: left;
+	height:300px;
+}
+
+.photo img {
+	margin:30px 0px 0 10px;
+	border:1px solid #000
+}
+
+.text {
+    margin-top: 0.5em;
+    line-height: 150％;
+}
+
+
+.text1 {
+    margin-top: 0.5em;
+    line-height: 20px;
+}
+
+.text2 {
+    margin-top:15px;
+    line-height: 20px;
+}
+
+
+.text3 {
+    margin-top: 30px;
+    line-height: 20px;
+}
+
+.text3 span {
+	font-size:22px;
+}
+
+.title {
+    margin-bottom: 5px;
+    font-size: 125%;
+    line-height: 120%;
+	padding-top:30px;
+	font-size:18px;
+}
+
+
+
+.photo1 {
+    width: 220px;
+    float: left;
+	height:200px;
+}
+
+.photo1 img {
+	margin:30px 0px 0 10px;
+	border:1px solid #000
+}
+
+
+
+
+.post_satei{
+	width: 697px;
+height: 51px;
+background: transparent url(http://www.iphone-d.jp/user_data/pc/images/kaitori/post_satei.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+
+.post_pay{
+	width: 697px;
+height: 51px;
+background: transparent url(http://www.iphone-d.jp/user_data/pc/images/kaitori/post_pay.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:10px 0 0 0;
+
+}
+
+.photo2 {
+    width: 220px;
+    float: left;
+}
+.photo2 img {
+	margin:30px 0px 0 10px;
+	border:1px solid #000
+}
+
+.inquiry_box {
+    position:relative;
+	width:697px;
+	height:80px;
+	margin-bottom:100px;
+
+}
+
+.inquiry {
+    position: absolute;
+	width: 160px;
+	left:20px;
+	top:5px;
+
+}
+
+.inquiry1 {
+    position: absolute;
+	width: 160px;
+	left: 185px;
+	top:5px;
+
+}
+
+.inquiry2 {
+    position: absolute;
+	width: 160px;
+	left: 350px;
+	top:5px;
+}
+
+.inquiry3 {
+    position: absolute;
+	width: 160px;
+	left: 515px;
+	top:5px;
+	
+	}
+	
+.title1 {
+    margin-bottom: 5px;
+    font-size: 125%;
+    line-height: 120%;
+	padding-top:30px;
+	font-size:18px;
+}
+
+.title2 {
+    margin-bottom: 5px;
+    font-size: 125%;
+    line-height: 120%;
+	font-size:18px;
+	padding-top:15px;
+}
+
+
+.tel_daione img{
+	margin:20px auto;
+	display:block;
+}store
+
+
+
+
+
+
+
+
+.h3_line1{
+	width:auto;
+	height:25px;
+	padding-left:10px;
+	line-height:25px;
+	font-size:12pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #999999;
+}
+
+
+
+
+.h3_line2{
+	width:auto;
+	height:25px;
+	padding:0 0 5px 10px;
+	line-height:25px;
+	font-size:18pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #57AAD6;
+	border-bottom:1px solid #57AAD6;
+}
+
+
+.h3_line3{
+	width:auto;
+	height:25px;
+	padding:0 0 5px 10px;
+	line-height:25px;
+	font-size:18pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #D35B5D;
+	border-bottom:1px solid #D35B5D;
+}
+
+.h3_line4{
+	width:auto;
+	height:25px;
+	padding:0 0 5px 10px;
+	line-height:25px;
+	font-size:18pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #00A040;
+	border-bottom:1px solid #00A040;
+}
+
+
+
+
+.tentou_kaitori img{
+	margin:0px auto;
+	display:block;
+}
+
+
+
+
+
+
+
+#right ul.original dl {
+    width: 225px;
+    margin: 0px auto;
+    font-size: 100%;
+}
+
+
+
+.clearFix01:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearFix01 {
+  min-height: 1px;
+width:676px;
+margin: 0 auto;
+padding: 0 0 1em;
+
+}
+
+* html .clearFix01 {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+#right ul.original01 {
+    width: 720px;
+    margin: 0px auto;
+    padding: 0 54px;
+    list-style-type: none;
+    border-bottom: 1px none #F00;
+}
+
+#right ul.original01 li {
+    width: 30%;
+    float: left;
+	margin:10px 0;
+}
+
+
+.custom1{
+	border-top: dotted 1px #333333;
+		border-bottom:dotted 1px #333333;
+
+}
+
+.custom1 p{
+	margin:10px 0;
+	font-size:14px;
+}
+
+
+#right ul.original02{
+    width: 697px;
+    margin: 0px auto;
+    padding: 10px 0px 20px 9px;
+    list-style-type: none;
+    border-bottom: 1px none #F00;
+}
+
+#right ul.original02 li {
+    width: 25%;
+    float: left;
+}
+
+
+#right ul.original02 dd {
+    margin: 0px 0px 3px;
+    height: 6em;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+
+
+#right ul.original02 {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+#right h2.custom_system {
+    width: 696px;
+    height: 75px;
+    background: url(http://www.iphone-d.jp/user_data/pc/images/custom/custom_select.jpg) scroll left top no-repeat;
+    overflow: hidden;
+    text-indent: -1000px;
+		margin-bottom: -20px;
+
+}
+
+
+
+#right div.custom_system04{
+    margin: 0px auto 1em;
+    padding: 0px 0px 1em;
+    width: 676px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    text-align: center;
+    overflow: hidden;
+}
+
+.custom_system01{
+		margin-top:20px;
+		font-size:20px;
+}
+
+.custom_system02 li {
+    float: left;
+    width: 327px;
+    text-align: center;
+	margin:0 5px;
+}
+
+
+.voiceheading p{
+	width:auto;
+	height:25px;
+	padding:0 0 5px 10px;
+	line-height:25px;
+	font-size:16pt;
+	margin-bottom:1em;
+	background:none;
+	border-left:3px solid #D35B5D;
+	border-bottom:1px solid #D35B5D;
+	margin-top: 2em;
+}
+
+
+
+.clearFix02:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearFix02 {
+  min-height: 1px;
+width:676px;
+margin: 0 auto;
+padding: 0 0 1em;
+
+}
+
+* html .clearFix02 {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+#right ul.voice01 dl{
+	margin-top:20px;
+}
+#right ul.voice01 dd {
+    margin: 0px 368px 0px 0px;
+    line-height: 140%;
+}
+
+
+#right ul.voice01 dt {
+    width: 348px;
+    float: right;
+    text-align: right;
+}
+
+.customdata {
+    text-align: center;
+
+}
+
+.customdata tr{
+    height: 55px;
+	border:#666666 1px solid;
+}
+
+.gray {
+    background-color:#CCCCCC;
+	width:200px;
+}
+
+
+
+/*----------agent----------------------------------------------------------------------------------*/
+
+.model_ttl{
+	padding: 5px 5px 5px 10px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+	background: #F5F1E7;
+	text-align: center;	
+}
+
+.agent_t td,.agent_t2 td,.insert_t td{
+	padding: 10px 5px 10px 5px;
+	line-height: 1.5;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+
+}
+
+.agent_t th,.agent_t2 th{
+	background:#FAFAFA;
+width: 250px;	
+	padding: 5px 5px 5px 10px;
+	line-height: 1.8;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+	}
+.agent_t {
+width: 697px;
+	margin: 0 0 20px 10px;
+	border: 1px solid #CCC;
+	border-collapse: collapse;}
+
+
+
+.agent_t tr,.agent_t2 tr,.insert_t tr{
+	border:1px solid #E7E7E7;
+	border-collapse: collapse;
+}
+
+.total_th{
+	color:red;
+}
+
+
+.agent_t2{
+	width: 697px;
+	margin: 0 0 20px 10px;
+	border: 1px solid #CCC;
+	border-collapse: collapse;}
+
+.agent_t2 td{
+	text-align:right;
+	padding-right:10px;
+}
+
+
+,.insert_t{
+	width: 697px;
+	margin: 0 0 20px 10px;
+	border: 1px solid #CCC;
+	border-collapse: collapse;}
+/*----------insert----------------------------------------------------------------------------------*/
+.insert_t th{
+	background:#FAFAFA;
+width: 150px;	
+	padding: 5px 5px 5px 10px;
+	line-height: 1.8;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+	}
+	
+.insert01 {
+    background: url(http://www.iphone-d.jp/user_data/pc/images/insert/insert_01.jpg) scroll left top no-repeat;
+	border-bottom:dotted 1px #999999;
+}
+.insert02 {
+    background: url(http://www.iphone-d.jp/user_data/pc/images/insert/insert_02.jpg) scroll left top no-repeat;
+	border-bottom:dotted 1px #999999;
+	margin-top:20px;
+	
+}
+.insert03 {
+    background: url(http://www.iphone-d.jp/user_data/pc/images/insert/insert_03.jpg) scroll left top no-repeat;
+	border-bottom:dotted 1px #999999;
+		margin-top:20px;
+
+}
+	
+.insert01 dt,.insert02 dt,.insert03 dt{
+	width:450px;
+	padding:0 0 10px 90px;
+}
+	
+.insert01 dd,.insert02 dd,.insert03 dd{
+	width:600px;
+	padding:0 0 10px 90px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+.campain_glass {
+width: 697px;
+height: 75px;
+background: transparent url(http://www.iphone-d.jp/user_data/pc/images/campain/campain_glass.jpg) scroll left top no-repeat;
+overflow: hidden;
+text-indent: -1000px;
+margin:0;
+
+
+
+
+}
+
+.campain_glass01 {
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+border-bottom: 1px solid #999;
+
+margin: 0 auto;
+padding: 0 0 1em;
+width:676px;
+text-align: center;
+height:518px;
+
+}
+	
+	
+.campain_glass01 li {
+display: block;
+float: right;
+width:338px;
+margin-top:20px;
+
+}
+
+.top-navi-box2{
+	height:90px;
+	position:relative;
+}
+
+ul#top-navi2 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+.price_list_navi2 {
+	width:511px;
+	height:55px;
+	position:absolute;
+	top:20px;
+	left:0px;
+}
+ul.price_list_navi2 li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+
+.top-navi-box2 li img:hover{filter:alpha(opacity=80);opacity:0.8;}
+	
+/*----------insert　お客様の声----------------------------------------------------------------------------------*/
+	
+.voice_img {
+    float: left;
+	border:1px solid #CCC;
+	margin-right:10px;
+}	
+
+.clearfix_voice:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.voice_back{
+	text-align:center;
+}
+
+
+
+.clearfix_voice {
+min-height: 1px;
+width:700px;
+float:left;
+margin:20px 0 40px 0;;
+
+
+}
+
+* html .clearfix_voice {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+.voice_table{
+	margin-bottom:50px;
+}
+.voice_table ul li{
+	float:left;
+	width:320px;
+	margin:10px;
+}
+.voice_table ul li span{
+	text-align:right;
+	display:block;
+}
+.contact_box{
+    background: url(http://www.iphone-d.jp/user_data/pc/images/voice/voice_contact_box.jpg) scroll left top no-repeat;
+	width:697px;
+	height:242px;
+	clear:both;
+	position:relative;
+	margin-top:50px;
+}
+
+.shop_1{
+	position:absolute;
+	top:60px;
+	left:16px;
+}
+
+.shop_2{
+	position:absolute;
+	top:60px;
+	left:243px;
+}
+
+
+.shop_3{
+	position:absolute;
+	top:60px;
+	left:470px;
+}
+
+.voice_contact{
+	position:absolute;
+	top:160px;
+	left:22px;
+	width:652px;
+}
+
+
+
+.voice-page-nav {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    margin-bottom: 50px;
+    text-align: center;
+	clear:both;
+	padding-top:100px;
+}
+
+
+
+.voice-page-nav a, .voice-page-nav span {
+    border: 1px solid #e7e7e7;
+    margin: 0 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+
+
+.voice-page-nav span.voice_page {
+    border: medium none;
+    font-weight: bold;
+}
+
+
+.voice_no{
+	font-size:22px;
+}
+.voice_p{
+    border-bottom: 2px dotted #ccc;
+    display:inline;
+    line-height: 28px;
+    overflow: hidden;
+	font-size:22px;
+	letter-spacing: 3px;
+	font-family:"ふい字", "ふい字Ｐ";
+	
+}	
+
+.voice_p span{
+	text-align:right;
+	display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shop_price_t{
+	background: none repeat scroll 0 0 #fbfbfb;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+	color:#333333;
+    clear: both;
+	font-size:18px;
+
+}
+
+.shop_price_1_1{
+	 width:335px;
+	 height:45px;
+	 font-weight:600;
+	 font-size:19px;
+	 	 text-align:center;
+
+}
+
+.shop_price_2_1{
+	 width:335px;
+	 height:45px;
+	 font-weight:600;
+	 text-align:center;
+	 	 font-size:19px;
+
+}
+.shop_price_1{
+	 width:360px;
+	 height:45px;
+	 font-size:18px;
+	 	 text-align:center;
+
+
+}
+
+.shop_price_2{
+	 width:360px;
+	 height:45px;
+	 text-align:center;
+	 	 font-size:18px;
+
+}
+
+.shop_price tr td{
+	 padding-left: 8px;}
+
+.shop_price_t {
+    border-bottom: solid 1px #d0d0d0;
+    margin-bottom: 1px;
+    padding: 10px;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+	border-radius: 5px;
+
+}
+ 
+.shop_price_t:before {
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 50%;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  margin-top: -8px;
+  background: #000000;
+}
+ 
+.shop_price_t:after {
+  display: block;
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 50%;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  margin-top: -13px;
+  background: #fbfbfb;
+}
+ 
+dt.active:before {
+  margin-top: -2px;
+}
+ 
+dt.active:after {
+  margin-top: 3px;
+}
+ 
+dd {
+    background-color: #fff;
+    border-bottom: solid 1px #D6D6D6;
+    padding: 8px 0 8px 0px;
+}
+ 
+
+.shop_price {
+    padding: 5px 10px;
+}
+
+	
+
+
+/*--------------------------------------------------------------------------------------------------------
+	代替機ご利用の流れ
+--------------------------------------------------------------------------------------------------------*/
+
+
+.alternate_footer{
+	padding-left:10px;
+}
+#alternate_flow_1{
+	width:699px;
+	height:116px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/alternate_flow/alternate_flow01.jpg) no-repeat;
+	position:relative;
+}
+.alternate_flow_1_text{
+	width:480px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:47px;
+	left:10px;	
+}
+
+#alternate_flow_2{
+	width:699px;
+	height:122px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/alternate_flow/alternate_flow02.jpg) no-repeat;
+	position:relative;
+}
+
+
+#alternate_flow_2_text {
+	width:480px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:47px;
+	left:10px;	
+}
+
+.alternate_flow_3_text {
+    font-size: 9pt;
+    height: 75px;
+    left: 10px;
+    line-height: 150%;
+    padding: 5px;
+    position: absolute;
+    top: 40px;
+    width: 600px;}
+
+
+.alternate_flow_3_1_text {
+   border: 2px solid #55a7d2;
+    font-size: 9pt;
+    height: 75px;
+    line-height: 150%;
+    padding: 5px;
+    position: absolute;
+    top: 90px;
+    width: 280px;
+	}
+
+
+#alternate_flow_3{
+	width:699px;
+	height:341px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/alternate_flow/alternate_flow03.jpg) no-repeat;
+	position:relative;
+}
+
+
+.alternate_flow_3_2_text {
+	width:550px;
+	line-height:150%;
+	font-size:9pt;
+	position:absolute;
+	top:192px;
+	left:0;	
+}
+#alternate_flow_4{
+	width:699px;
+	height:290px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/alternate_flow/alternate_flow04.jpg) no-repeat;
+	position:relative;
+}
+
+#alternate_flow_4_text {
+	width:600px;
+	line-height:190%;
+	font-size:9pt;
+	position:absolute;
+	top:50px;
+	left:10px;	
+}
+.alternate_footer{
+	padding-left:10px;
+}
+
+#partner_mail{
+	position:relative;
+}
+
+
+
+
+
+
+
+
+#idx {
+    background: url(http://www.iphone-d.jp/user_data/pc/images/partner/black-line.gif) repeat-x scroll 0 50% rgba(0, 0, 0, 0);
+    text-align: center;
+}
+#partner_lineup{
+	height:160px;
+}
+
+#partner_lineup h3 {
+    margin: 20px 0 20px;
+	font-size: 182%;
+    line-height: 1.2;
+    text-shadow: 0 1px #fff;}
+
+
+#idx span{
+    background: url(http://www.iphone-d.jp/user_data/pc/images/partner/body-bg.gif) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 0 20px;
+}
+
+ol .one:before {
+    content: "1";
+    left: 9px;
+	font-size:20px;
+	margin:20px 10px;
+
+}
+ol .two:before{
+	    content: "2";
+    left: 9px;
+	font-size:20px;
+	margin:10px 10px;
+}
+
+ol .three:before{
+	    content: "3";
+    left: 9px;
+	font-size:20px;
+	margin:10px 10px;
+}
+
+ol .four:before{
+	    content: "4";
+    left: 9px;
+	font-size:20px;
+	margin:10px 10px;
+}
+
+ol .five:before{
+	    content: "5";
+    left: 9px;
+	font-size:20px;
+	margin:10px 10px;
+}
+
+
+
+
+ol .one,ol .two,ol .three,ol .four,ol .five{
+	font-size:20px;
+	margin:20px 0;
+}
+
+.lineup_left {
+    float: left !important;
+	width: 340px;
+	}
+
+.lineup_right {
+    float: right !important;
+	width: 340px;
+	}
+
+
+/*--------------------------------------------------------------------------------------------------------
+	info
+--------------------------------------------------------------------------------------------------------*/
+
+.info_1 {
+    border: 1px solid #c00;
+    color: #000;
+	border-radius:8px;
+	padding:25px;
+	font-size:16px;
+	margin-bottom:50px;
+}
+.info_2 {
+    border-top: 1px solid #ccc;
+}
+
+.table1 {
+    border-top: 4px solid #222;
+}
+
+
+.table1 td {
+    background: none repeat scroll 0 0 #f9f9f9;
+}
+.table1 th,.table1 td {
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+    text-align:center;
+}
+
+
+.info_linkButton1 a{
+    background: none repeat scroll 0 0 #eee;
+    border-radius: 5px;
+    border-width: 0;
+    box-shadow: 0 1px 1px #999;
+    color: #333;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.1;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.info_linkButton1:hover{
+filter:alpha(opacity=60);
+opacity:0.6;
+}
+
+.info_h{
+	font-size:20px;
+}
+
+..area75{
+	width:221px;
+}
+
+/*--------------------------------------------------------------------------------------------------------
+	repair_parts
+--------------------------------------------------------------------------------------------------------*/
+.icon_recovery{
+    background: url(http://www.iphone-d.jp/user_data/pc/images/recovery/icon_recovery.jpg) no-repeat;
+	margin-left:50px;
+	font-size:150%;
+	line-height:135%;
+	text-indent: -1em;
+	margin-bottom:10px;
+
+}
+
+
+/*--------------------------------------------------------------------------------------------------------
+	iphone datarecovery
+--------------------------------------------------------------------------------------------------------*/
+.icon_recovery{
+	padding:0 56px;
+}
+
+#iphonedatarecovery h3 {
+    font-size:220%;
+	font-weight:bold;
+	padding-bottom: 10px;
+	border-bottom:#999999 1px solid;
+	padding-top:10px;
+	text-align:center;
+	width:400px;
+	margin: 60px auto 30px;
+
+}
+
+#recovery_flow em {
+
+padding: 6px 0 5px 0;
+width: 28px;
+text-align: center;
+font-size: 12px;
+font-weight: normal;
+color: #fff;
+float: left;
+background: #8c8c8c;
+border-radius: 2px;
+
+}
+
+#recovery_flow {
+display:block;
+font-size:15px;
+width:auto;
+padding: 0px 60px 0px;
+margin-top:30px;
+}
+
+.number_count {
+padding-top:15px;
+}
+
+.flow_text {
+margin-left:38px;
+padding-top:5px;
+text-align:left;
+}
+
+.flow_box {
+padding:15px 15px 15px ;
+border:#CCCCCC 1px solid;
+margin-left:45px;
+font-size:90%;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.flow_box img {
+vertical-align:bottom;
+margin-right:5px;
+}
+
+
+.chance_p{
+	margin-bottom:5px;
+}
+
+.chance_p1{
+	margin-bottom:0px;
+}
+
+#chance1_text,#chance2_text,#chance3_text,#data2_text,#send2_text{
+	margin-left:10px;
+}
+
+#recovery_mail{
+	position:relative;
+}
+
+
+.chance_p input {
+ margin-right: 4px;}
+ 
+.iphone_send td{
+	padding-left:8px;
+}

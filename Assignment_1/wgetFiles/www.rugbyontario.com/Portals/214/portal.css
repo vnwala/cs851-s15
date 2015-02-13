@@ -1,0 +1,27 @@
+
+/* dark blue */div.container_c{background-color: #303c64; /* Main Background Color */
+}div#footer,
+div#menu_area{background-color: #2a3457; /* Footer Background Color, Main Menu Background color */
+}.Normal a:link,
+.Normal a:visited,
+.Normal a:hover,
+.Normal a:active,
+a.SkinObject:link, 
+a.SkinObject:visited, 
+a.SkinObject:hover, 
+a.SkinObject:active,
+a:link,
+a:visited,
+a:hover,
+a:active
+{text-decoration: none; color: #a63341;} /* Links */.Normal a:hover {text-decoration: underline; } /* Link Hover Color */
+}#nav a {color:#FFF; /* Main Menu Font color*/
+}#nav li a:hover,
+#nav li a.SelectedTab,
+#nav li.SelectedTab a,
+#nav li.SelectedTab li a:hover,
+#nav li li a:hover {color:#FFF; /* Main Menu Selected Font color*/background-color: #8d2b38; /* Main Menu Selected color background*/
+}#nav li li a,
+#nav li.SelectedTab li a{color: #FFFFFF; /* Sub Menu Font color*/background-color: #303c64; /* Sub Menu color background*/
+}
+

@@ -1,0 +1,928 @@
+<!doctype html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# crainscleveland: http://ogp.me/ns/fb/crainscleveland#">
+<title>Cleveland Business News - Northeast Ohio and Cleveland - Crain's Cleveland Business</title>
+<meta charset="iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<link rel="alternate" type="application/rss+xml" title="Crains Cleveland Business Breaking News" href="http://www.crainscleveland.com/apps/pbcs.dll/section?category=rss01&amp;mime=xml">
+	<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAA4TLftajuQ54OZakhsvC9ExQk-2YriwFcmh0PWzxktoqcV6Ty5hQ9GaNUzp62fiFD4EWe5psD4hdHOw"></script>
+	<script>
+	google.load("maps", "1");
+	</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://www.crainscleveland.com/global/js/cci.js"></script>
+<script src="http://www.crainscleveland.com/global/js/cci-lib.js"></script>
+<script src="http://www.crainscleveland.com/global/js/cci-lib-jq.js"></script>
+<script src="http://www.crainscleveland.com/js/cci-setup.js"></script>
+<script src="http://www.crainscleveland.com/includes/googlestuff.js"></script>
+<script>function floater() { window.open("","float","width=540,height=545,scrollbars=yes,toolbar=yes,resizable=yes,alwaysRaised") }</script>
+<script src="http://www.crainscleveland.com/js/pollMiniAjax.js"></script>
+<script src="http://www.crainscleveland.com/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="http://www.crainscleveland.com/js/jquery.prettyPhoto.js"></script>
+<script src="http://www.crainscleveland.com/js/jquery.dataTables.min.js"></script>
+<script src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<script src="http://www.crainscleveland.com/js/lib.bcove.js?v=201412191357"></script>
+<script src="http://www.crainscleveland.com/js/jquery.ipadMessage.js?201406201714"></script>
+<script src="http://www.crainscleveland.com/js/tabs_min.js"></script>
+
+<link href="https://plus.google.com/110155369934252608481" rel="publisher" />
+<meta property="fb:app_id" content="730748806957003" /> 
+<meta property="og:type"   content="crainscleveland:section" /> 
+<meta property="og:url"    content="http://www.crainscleveland.com/apps/pbcs.dll/frontpage" /> 
+<meta property="og:title"  content="Cleveland Business News - Northeast Ohio and Cleveland - Crain's Cleveland Business" /> 
+<meta property="og:image"  content="http://www.crainscleveland.com/graphics/global/flag_cclblogo.gif" /> 
+
+<meta name="verify-v1" content="Q00KiEdlx7oJ8JL4E1sfoHDh6tgQLZQyOh8A1oVCsIs=" />
+<meta name="y_key" content="a995286f49b7c11e" />
+<script>
+var CCI = CCI || {};
+</script>
+	    <script type="text/javascript" src="http://www.crainscleveland.com/Global/js/clickshare/json/products.js"></script>
+	    <script type="text/javascript">
+	        if(typeof CCI != "undefined" && typeof CCI.CurrentUser != "undefined" && CCI.CurrentUser !== null)
+	        {
+	            CCI.CurrentUser.OAS_SubscriptionMap             = CCI.SubscriptionsMap.Products.CC || 0;
+	            CCI.CurrentUser.OAS_ValidDaysLeft               = "1,3,7,15,30,45,60,90,120,150" || 0;
+	            CCI.CurrentUser.OAS_AllowNegativeExpireDate     = "1" || 0;
+	        }
+	    </script>
+	    <script type="text/javascript" src="http://www.crainscleveland.com/global/js/OAS-CurrentUser.js"></script>
+		<!-- Begin OAS -->
+			<!-- Start OAS DX Tag Snippet -->
+			<script type="text/javascript">
+			// custom oas vars
+			var OAS_customPrimaryTag = 0;
+			var OAS_sitepage = 'www.crainscleveland.com';
+			var OAS_sitepath = 'frontpage';
+			// standard oas vars
+			var oas_tag = {};
+			oas_tag.url = 'oascentral.crainscleveland.com'; // define OAS URL
+			oas_tag.query = 'q=ad';
+			oas_tag.analytics = true;
+			oas_tag.lazyload = false;
+			// oas_tag.taxonomy = 'user=1234';
+			// define ad sizes and override site page in oas-custom:
+			oas_tag.sizes = function() {
+	oas_tag.definePos('Top2',			[728, 	90]);
+	oas_tag.definePos('Bottom2', 		[728, 	90]); 
+	oas_tag.definePos('Middle1',		[300, 	250]); 
+	oas_tag.definePos('Middle2',		[300, 	250]);
+	oas_tag.definePos('Middle3',		[300, 	250]);
+	oas_tag.definePos('BottomRight',	[300,	600]);
+	oas_tag.definePos('Middle',			[180,	150]);
+};
+(function() {
+	var hash = location.hash.replace(/#/g,"").toLowerCase() || 0;
+    var	hashArr = hash ? hash.split("&") : [];
+	if (hash) {
+    	    for (i=0;i<hashArr.length;i++) {
+        		var hashMatch = hashArr[i].match(/^email_[^&]+$/) || 0;
+        		if (hashMatch) {
+        			OAS_sitepath = hashMatch[0];
+        			break;
+        		}
+            }
+    }
+})();
+			if(typeof CCI != 'undefined' && typeof CCI.CurrentUser != 'undefined' && CCI.CurrentUser !== null && typeof CCI.CurrentUser.OASQuery != 'undefined')
+			{
+				// Remove the first & if oas_tag.query was blank
+				if( oas_tag.query === '')
+				{
+					oas_tag.query += CCI.CurrentUser.OASQuery.slice(1);
+				}
+				else
+				{
+					oas_tag.query += CCI.CurrentUser.OASQuery;
+				}
+			}		
+			var OAS_url = "http://" + oas_tag.url + "/";
+			try {
+				var OAS_listpos = oas_tag.sizes.toString().replace(/\s/g,"").match(/['"][^'"]+['"]/g).join().replace(/['"]/g,"");
+			} catch(e) {
+				var OAS_listpos = "";
+			}
+			try {
+				var OAS_query = oas_tag.query || "";
+			} catch(e) {};
+			oas_tag.site_page = OAS_sitepage + '/' + OAS_sitepath; // create the final sitepage
+			var OAS_sitepage = oas_tag.site_page;
+			(function() {
+				oas_tag.version = '1';
+				var oas = document.createElement('script');
+				var protocol = (document.location.protocol == 'https:') ? 'https://' : 'http://';
+				var node = document.getElementsByTagName('script')[0];
+				oas.type = 'text/javascript';
+				oas.async = true;
+				oas.src = protocol + oas_tag.url + '/om/' + oas_tag.version + '.js';
+				node.parentNode.insertBefore(oas, node);
+			})();
+			</script>
+			<!--- End OAS DX Tag Snippet -->
+		<!-- End OAS -->
+	<script type="text/javascript">
+	CCI.Disqus = {
+		/*
+		// notprodreasons: 
+		// 
+		*/
+		// general
+		"disqus_shortname": "crainscleveland",
+		// stories
+		"disqus_identifier": "/apps/pbcs.dll/frontpage", // use article GUID, fallback to currentrequest for other pages
+		"disqus_title": "",
+		"disqus_url": "/apps/pbcs.dll/frontpage",
+		// sso
+		"disqus_message": (function() {
+			var msg = null;
+			try {
+				msg = CCI.util.readCookie({"name":"CSDisqus"});
+				if (msg) {
+					msg = msg.replace(/"/g,"");
+				}
+			} catch(e) {};
+			return msg;
+		})(),
+		"disqus_siteDisplayName": "Crain's Cleveland Business",
+		"disqus_siteButtonImage": "http://www.crainscleveland.com/assets/login-button.png",
+		"disqus_popupWidth": "800",
+		"disqus_popupHeight": "400",
+		"disqus_loginURL": "https://home.crainscleveland.com/clickshare/cspLogin.do?CSPopup=true&CSTargetURL=http://www.crainscleveland.com/global/html/disqus-login.html",
+		"disqus_logoutURL": "https://home.crainscleveland.com/clickshare/logout.do?CSTargetURL=" + location.href
+	};
+	// no disqus-custom.pbo for site CC
+	</script>
+<!-- pbs:macro name="cci/services-inner" cci_currcatname="FRONTPAGE" cci_currmaincatname="FRONTPAGE" cci_hierarchy="template,djoPid,djoPage,module,class,category,id,taxid,profile,section" OASUseDXTags="1" noparse -->
+<!-- services tags generated at 4:11 pm 2/9/2015 -->
+
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+<link rel="stylesheet" href="http://www.crainscleveland.com/css/prettyPhoto.css?v=201404161541" />
+<link rel="stylesheet" href="http://www.crainscleveland.com/css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" href="http://www.crainscleveland.com/css/style.css?v=201411061451" />
+<link rel="stylesheet" href="http://www.crainscleveland.com/css/ipadMessage.css?v=201406201702">
+<link rel="stylesheet" href="http://www.crainscleveland.com/css/dropdown.css?v=201407291124">
+<!--[if IE 6]><link href="/css/style-ie6.css?v=201405122222" rel="stylesheet" /><![endif]-->
+<!--[if IE 7]><link href="/css/style-ie7.css?v=201405122222" rel="stylesheet" /><![endif]-->
+
+</head>
+<body>
+<!-- macro cachequalifiers: currcategory,@storyid,@cci_extLogin,template,profile,type,navigatorlist,q,crit,industrysearch,types,module,start,class,companyId,query,cci_FrameVideoTracking -->
+<!-- SiteCatalyst code version: H.25.4.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script type="text/javascript">
+var s_account="craincleveland";
+var s_firstPartyTracking = false;
+var s_isSaxotechClickshare = true;
+var s_isShortArticle = false;
+var s_isMeteredArticle = false;
+var s_loggedInCookie = "CSDemos";
+</script>
+<script language="JavaScript" type="text/javascript" src="http://www.crainscleveland.com/global/js/omniture/s_crainsc.js?ver=V26.1"></script>
+<script language="JavaScript" type="text/javascript">
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+// BEGIN settings from global script
+var _cci_sc_eventsArr = _cci_sc_eventsArr || [];
+s_crainsc.pageName = "frontpage:index";
+s_crainsc.channel = "frontpage";
+s_crainsc.prop1 = s_crainsc.eVar1 = "frontpage"; // site section level 1
+s_crainsc.prop5 = s_crainsc.prop6 = "frontpage"; // site sections concatenated
+s_crainsc.prop25 = s_crainsc.eVar27 = "frontpage"; // content topic 1
+s_crainsc.prop29 = s_crainsc.eVar31 = "frontpage"; // content type
+// END settings from global script
+// BEGIN global overrides for third-party wrappers
+// END global overrides for third-party wrappers
+// BEGIN site-level overrides
+// /templates/macros/omniture-custom.pbo
+// determine omniture event for metering/paywall
+// cci_storyCSProduct = 
+// cci_storyIsMetered = 
+// cci_extLogin = 0
+// END site-level overrides
+s_crainsc.events = _cci_sc_eventsArr.join(",");
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s_crainsc.t();
+if(s_code)document.write(s_code);
+</script>
+<div style="display:none;position:absolute;left:-9999px;">
+<noscript>
+    <img src="http://crain.d1.sc.omtrdc.net/b/ss/craincleveland/1/H.25.4--NS/0" height="1" width="1" border="0" />
+</noscript>
+</div>
+<!-- End SiteCatalyst code version: H.25.4. -->
+<!-- omniture-inner.pbo cached at 4:11 pm 2/9/2015 -->
+<!-- Omniture tag generated at 4:11 pm 2/9/2015 -->
+
+		<div id="cci-interstitial">
+		<link href="http://www.crainscleveland.com/global/css/interstitial.css?ver=20130503" rel="stylesheet" type="text/css" />
+		<script src="http://www.crainscleveland.com/global/js/cci-ads-inter.js?ver=20141006-002" type="text/javascript"></script>
+		<script src="http://www.crainscleveland.com/global/js/jquery/jquery.blockUI-2.64.0-2013.07.18.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://www.crainscleveland.com/section/cci-static?template=interstitialJS&amp;mime=text%2Fjavascript"></script>
+		</div>
+<!-- cci_onErrorPage: /apps/pbcs.dll/frontpage -->
+<!-- CCIAdsInterstitialShowOn404:  -->
+<!-- currentrequest: /apps/pbcs.dll/frontpage -->
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '730748806957003',
+      status     : true,
+      xfbml      : true
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="topRow1">
+	<a href="authenticateUserSubscription.do?CSProduct=crainscleveland-metered"><img id="topRow1Logo" src="http://www.crainscleveland.com/graphics/global/flag_cclblogo.gif" alt="Crain's Clevleand Business" /></a>
+	<div id="topAd728x90"><div id="oas_Top2"></div></div>
+	<div class="clearL"></div>
+</div>
+<div id="topRow2">
+	<div id="searchContainer">
+		<div id="searchBox">
+			<input type="text" class="queryly" autocomplete="off" placeholder="search Cleveland Business&hellip;">
+		</div>
+	</div>
+	<div id="topRow2SessionInfo">
+
+
+
+<script type="text/javascript">
+	var CCI = CCI || {};
+	CCI.AccessControl = CCI.AccessControl || {};
+	CCI.AccessControl.meterSubscribeURL = "https://home.crainscleveland.com/clickshare/advantageRedirect.do?URL=https://sec.crain.com/CL/launchpad.aspx?p=W4CLMET&d=order" // W4CLMET
+</script>
+
+<a href="https://home.crainscleveland.com/clickshare/logout.do?CSResumeURL=/clickshare/forceLogin.do?CSAuthReq=1&CSTargetURL=http%253A%252F%252Fwww.crainscleveland.com%252F" class="cci-clickshare-auth-url red">SIGN IN</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://home.crainscleveland.com/clickshare/addAccountFree.do?CSTargetURL=http://www.crainscleveland.com/" class="red">REGISTER</a>
+
+
+
+
+<!-- 
+/*
+<td valign="top" align="center" style="padding-top:13px;" border="0">
+
+
+
+
+
+
+
+	
+														<script>
+     													// this function gets the cookie, if it exists
+    													function Get_Cookie( name ) {
+ 
+     													var start = document.cookie.indexOf( name + "=" );
+     													var len = start + name.length + 1;
+     													if ( ( !start ) &amp;&amp;
+     													( name != document.cookie.substring( 0, name.length ) ) )
+     													{
+     													return null;
+     													}
+     													if ( start == -1 ) return null;
+     													var end = document.cookie.indexOf( ";", len );
+    													if ( end == -1 ) end = document.cookie.length;
+     													return unescape( document.cookie.substring( len, end ) );
+     													}
+     													</script>
+     													<script>
+     													mycname = Get_Cookie( 'CSDemos' );
+     													if (mycname == null) {
+     													document.write ('&lt;a href="https://home.crainscleveland.com/clickshare/forceLogin.do?CSAuthReq=1&amp;CSTargetURL=http%3A%2F%2Fwww.crainscleveland.com%2Fapps%2Fpbcs.dll%2Flogin%3FxRedirect=http%253A%252F%252Fwww.crainscleveland.com%252F" class="red"&gt;SIGN&amp;nbsp;IN&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;a href="https://home.crainscleveland.com/clickshare/addAccountFree.do?CSTargetURL=http://www.crainscleveland.com&amp;CSReferrer=HomePageTop" class="red"&gt;REGISTER&lt;/a&gt;');
+     													}else{
+     													document.write ('&lt;span class="red"&gt;&lt;a href="https://home.crainscleveland.com/clickshare/myhome.do" class="red"&gt;UPDATE&amp;nbsp;PROFILE&amp;nbsp;&gt;&lt;/a&gt;&lt;/span&gt;');
+     													}
+     														</script><a class="red" href="https://home.crainscleveland.com/clickshare/forceLogin.do?CSAuthReq=1&amp;CSTargetURL=http%3A%2F%2Fwww.crainscleveland.com%2Fapps%2Fpbcs.dll%2Flogin%3FxRedirect=http%253A%252F%252Fwww.crainscleveland.com%252F">SIGN&nbsp;IN</a>&nbsp;|&nbsp;<a class="red" href="https://home.crainscleveland.com/clickshare/addAccountFree.do?CSTargetURL=http://www.crainscleveland.com&amp;CSReferrer=HomePageTop">REGISTER</a>
+
+
+	</td>
+	*/
+	--></div>
+	<div id="topRow2CrainsLinks">
+		<div id="topRow2CrainsLinksSubscribe">
+			<a href="https://home.crainscleveland.com/clickshare/advantageRedirect.do?URL=https://sec.crain.com/CL/QuickOrder.aspx?PromotionCode=W5CLWBN&d=order"><img src="http://www.crainscleveland.com/Assets/ch/btn_social_crains.png" alt="Subscribe to Crain's" /></a>
+			<a href="https://home.crainscleveland.com/clickshare/advantageRedirect.do?URL=https://sec.crain.com/CL/QuickOrder.aspx?PromotionCode=W5CLWBN&d=order">Subscribe to Crain's</a>
+		</div>
+		<div id="topRow2CrainsLinksEmail">
+			<a href="http://www.crainscleveland.com/section/email_products"><img src="http://www.crainscleveland.com/Assets/ch/btn_social_email.png" alt="E-mail Alerts" /></a>
+			<a href="http://www.crainscleveland.com/section/email_products">E-mail alerts</a>
+		</div>
+	</div>
+	<div id="topRow2SocialMedia">
+		<a href="https://plus.google.com/110155369934252608481?prsrc=3"><img src="http://www.crainscleveland.com/Assets/ch/gplus-32.png" alt="Google+" /></a>
+		<a href="http://www.facebook.com/crainscleveland"><img src="http://www.crainscleveland.com/Assets/ch/btn_social_fb.png" alt="Facebook" /></a>
+		<a href="http://twitter.com/CrainsCleveland"><img src="http://www.crainscleveland.com/Assets/ch/btn_social_twitter.png" alt="Twitter" /></a>
+		<a href="http://www.crainscleveland.com/section/rss"><img src="http://www.crainscleveland.com/Assets/ch/btn_social_rss.png" alt="RSS" /></a>
+		<a href="http://www.instagram.com/crainscleveland"><img src="http://www.crainscleveland.com/Assets/ch/Instagram_logo.png" alt="instagram" /></a>
+	</div>		
+	<div class="clearL"></div>
+</div>
+<div id="centeredmenuContainer">
+	<div id="centeredmenu">
+		<ul><li><a href="http://www.crainscleveland.com/section/toc"  class="trigger">This Week's Issue</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/section/toc">This Week's Issue</a></li><li><a href="http://www.crainscleveland.com/section/WEEKLY_FEATURE">Weekly Editorial Feature</a></li><li><a href="http://www.crainscleveland.com/section/toca">Weekly Issue PDFs</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/breaking"  class="trigger">News</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/topic/1404/2016-Republican-National-Convention">2016 Republican National Convention</a></li><li><a href="http://www.crainscleveland.com/topic/1022/breaking-news">Breaking News</a></li><li><a href="http://www.crainscleveland.com/topic/1003/manufacturing">Manufacturing</a></li><li><a href="http://www.crainscleveland.com/topic/1007/health-care">Health Care</a></li><li><a href="http://www.crainscleveland.com/topic/1006/financial-legal">Financial/Legal</a></li><li><a href="http://www.crainscleveland.com/topic/1008/government-nonprofit">Government/Nonprofit</a></li><li><a href="http://www.crainscleveland.com/topic/1233/hr-staffing-news">HR/Staffing News</a></li><li><a href="http://www.crainscleveland.com/topic/1357/ohio-energy">Ohio Energy</a></li><li><a href="http://www.crainscleveland.com/topic/1004/real-estate">Real Estate</a></li><li><a href="http://www.crainscleveland.com/topic/1016/small-business">Small Business</a></li><li><a href="http://www.crainscleveland.com/topic/1005/technology">Technology</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/blogs"  class="trigger">Blogs</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/section/blogs08">John Campanelli Blog</a></li><li><a href="http://www.crainscleveland.com/section/blogs03">Scott Suttell Blogs</a></li><li><a href="http://www.crainscleveland.com/section/blogs06">Kevin Kleps Blogs</a></li><li><a href="http://www.crainscleveland.com/section/blogs02">Kathy Carr Blogs</a></li><li><a href="http://www.crainscleveland.com/section/blogs07">Tim Magaw Blogs</a></li><li><a href="http://www.crainscleveland.com/section/blogs14">Stan Bullard Blog</a></li><li><a href="http://www.crainscleveland.com/section/blogs09">Rachel McCafferty Blog</a></li><li><a href="http://www.crainscleveland.com/section/blogs05">Guest Blogs</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/shalemagazine"  class="trigger">Shale</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/section/SHALEmagazineStories">Latest Issue</a></li><li><a href="http://www.crainscleveland.com/section/SHALEnews">Shale News</a></li><li><a href="http://www.crainscleveland.com/section/SHALEblogs">Shale Blogs</a></li><li><a href="http://www.crainscleveland.com/section/SHALE_SUMMIT_eventtickets">Summit Coverage</a></li><li><a href="http://www.crainscleveland.com/section/SHALEMagazinesub">Subscribe</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/MARKETINGevents"  class="trigger">Crain Events</a>
+	<ul style="width: 12em;">
+		<li><a href="http://www.crainscleveland.com/section/MARKETINGnominations">Nominate</a></li><li><a href="http://www.crainscleveland.com/section/ARCHER">Archer Awards</a></li><li><a href="http://www.crainscleveland.com/section/CIOevent">CIO of the Year</a></li><li><a href="http://www.crainscleveland.com/section/CFOevent">CFO of the Year</a></li><li><a href="http://www.crainscleveland.com/section/CRAIN52">Crain's 52</a></li><li><a href="http://www.crainscleveland.com/section/40UNDER40">Forty Under 40</a></li><li><a href="http://www.crainscleveland.com/section/HEALTHCARE_HEROES">Health Care Heroes</a></li><li><a href="http://www.crainscleveland.com/section/HEALTHCAREforum">Health Care Forum</a></li><li><a href="http://www.crainscleveland.com/section/GENERAL_COUNSEL">In-House and General Counsel</a></li><li><a href="http://www.crainscleveland.com/section/MANUFACTURING_SUMMIT">Manufacturing Assembly</a></li><li><a href="http://www.crainscleveland.com/section/WHOtoWATCH">Who to Watch</a></li><li><a href="http://www.crainscleveland.com/section/whobusiness12">Who's Who in Business</a></li><li><a href="http://www.crainscleveland.com/section/wholaw14">Who's Who in Law</a></li><li><a href="http://www.crainscleveland.com/section/WON">Women of Note</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/crains-lists"  class="trigger">Lists &amp; Directories</a>
+	<ul>
+		<li><a href="http://www.crainscleveland.com/section/crains-lists?djoPage=products&amp;Category=crains-lists">Purchase <em>Crain's</em> Lists</a></li><li><a href="http://www.crainscleveland.com/section/crains-lists?djoPage=product_details&amp;djoPid=33130&amp;djoTry=1421790845">Purchase Book of Lists</a></li><li><a href="http://www.crainscleveland.com/section/bioscience">Bioscience Directory</a></li><li><a href="http://www.crainscleveland.com/section/econdev">Economic Development Organizations Directory</a></li><li><a href="http://www.crainscleveland.com/section/EXECUTIVE_DIRECTORY">Executive Search Firms &amp; Staffing Firms Directory</a></li><li><a href="http://www.crainscleveland.com/section/food">Food Economy Directory</a></li><li><a href="http://www.crainscleveland.com/section/hcd">Health Care Directory</a></li><li><a href="http://www.crainscleveland.com/section/LOGISTICS_DIRECTORY">Logistics Directory</a></li><li><a href="http://www.crainscleveland.com/section/MARKETING_SERVICES">Marketing Services Directory</a></li><li><a href="http://www.crainscleveland.com/section/minority">Minority-Owned Business Directory</a></li><li><a href="http://www.crainscleveland.com/section/MBA14">Ohio MBA Directory</a></li><li><a href="http://www.crainscleveland.com/section/wob">Women-Owned Business Directory</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/crainstv"  class="trigger">Multimedia</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/section/House_calls">House Calls</a></li><li><a href="http://www.crainscleveland.com/section/crainstv">Video Gallery</a></li><li><a href="http://www.crainscleveland.com/section/PHOTOGALLERIES">Photo Gallery</a></li><li><a href="http://www.crainscleveland.com/section/AUDIO">Podcasts</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/section/events_calendar"  class="trigger">Events</a>
+	<ul style="width: 10em;">
+		<li><a href="http://www.crainscleveland.com/section/events_calendar">Local Business Events</a></li><li><a href="http://www.crainscleveland.com/section/MARKETINGevents">Coming Crain Events</a></li><li><a href="http://www.crainscleveland.com/section/webinars">Webinars</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/article/20050422/STATIC/50422001"  class="trigger">Services</a>
+	<ul style="width: 12em; left: -1px;">
+		<li><a href="http://www.crainscleveland.com/article/20050422/STATIC/50422001">Contact Us</a></li><li><a href="http://www.crainscleveland.com/article/20050422/STATIC/50422006">Customer Service</a></li><li><a href="http://www.crainscleveland.com/section/CLASSIFIEDS">Classifieds</a></li><li><a href="http://www.crainscleveland.com/section/email_products">E-mail signup</a></li><li><a href="http://www.crainscleveland.com/section/mobile">Mobile Alerts</a></li><li><a href="http://www.crainscleveland.com/section/custompublishing">Custom publishing</a></li><li><a href="http://www.crainscleveland.com/article/20061204/STATIC/61204014">Newsstand Locations</a></li><li><a href="http://www.crainscleveland.com/subrenew">Renew Now</a></li><li><a href="http://www.crainscleveland.com/article/99999999/STATIC/140529833">Reprints</a></li><li><a href="http://www.crainscleveland.com/section/rss">RSS/XML Feeds</a></li><li><a href="http://www.crainscleveland.com/article/20070228/STATIC/302289999">Send letter to the editor</a></li><li><a href="http://www.crainscleveland.com/section/contact">Crain's Cleveland Business Staff</a></li><li><a href="https://home.crainscleveland.com/clickshare/advantageRedirect.do?URL=https://sec.crain.com/CL/launchpad.aspx?PromotionCode=W4CLWBN&d=order">Subscribe Now</a></li>
+	</ul>
+</li><li><a href="http://www.crainscleveland.com/article/20111120/STATIC/311209998"  class="trigger last">Advertise</a>
+	<ul style="width: 10em; left: -44px;">
+		<li><a href="http://www.crainscleveland.com/article/20111120/STATIC/311209998">Advertising Information</a></li><li><a href="http://www.crainscleveland.com/section/media_kit">Crain's Media Kit</a></li><li><a href="http://www.crainscleveland.com/article/20120621/STATIC/306259999">Crain's SHALE magazine</a></li><li><a href="http://www.crainscleveland.com/assets/pdf/CC9817222.PDF" target="_blank">2015 Editorial Calendar</a></li>
+	</ul>
+</li></ul>
+		<div class="clearL"></div>
+	</div>
+	<div class="clearL"></div>
+</div>
+<div id="structureContentMain">
+	<div id="structureRightRail"><div class="ad300w"><div id="oas_Middle1"></div></div>
+<div class="ad300w"><div id="oas_Middle2"></div></div>
+
+<div class="mod_box" id="most_popular">
+	<div class="container">
+		<ul class="menu">
+			<li id="first" class="active">Blogs</li>
+			<li id="second">Most Read</li>
+			<li id="third">Recent Comments</li>
+		</ul>
+		<div class="content first clear">
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150209/BLOGS03/150209862/cleveland-has-a-couple-connections-on-list-of-nations-50-most">Cleveland has a couple connections on list of nation's 50 most generous&nbsp;donors</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150209/BLOGS06/150209863/weird-dynamic-between-lebron-james-kevin-love-hasnt-prevented-the">Weird dynamic between LeBron James, Kevin Love hasn't prevented the Cavs from hitting their&nbsp;stride</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/BLOGS08/302089991/publisher-john-campanellis-column-the-colorful-legacy-of-the-gay">Publisher John Campanelli's column: The colorful legacy of the Gay&nbsp;Games</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150206/BLOGS06/150209894/how-dysfunctional-are-the-cleveland-browns-depends-on-who-you-ask">How dysfunctional are the Cleveland Browns? Depends on who you&nbsp;ask</a></div>
+<div class="mostRead last"><a href="http://www.crainscleveland.com/article/20150206/BLOGS03/150209890/john-kasichs-edge-over-republican-presidential-hopefuls-ohioians">John Kasich's edge over Republican presidential hopefuls: Ohioians feel good about&nbsp;him</a></div></div>
+		<div class="content second clear">
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089982/shale-is-suffering-declining-oil-and-natural-gas-prices-have-led-to">Shale is suffering: Declining oil and natural gas prices have led to plenty of regional&nbsp;cutbacks</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089979/the-vue-brings-plenty-of-perks-with-photo-gallery">The Vue brings plenty of perks (with photo&nbsp;gallery)</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089984/cost-of-attendance-measure-is-expensive-one-for-mac">Cost of attendance measure is expensive one for&nbsp;MAC</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089981/downtown-heinens-will-include-learning-curve-with-photo-gallery">Downtown Heinen's will include 'learning curve' (with photo&nbsp;gallery)</a></div>
+<div class="mostRead"><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089990/dan-walshs-new-venture-mixes-his-passion-and-commitment">Dan Walsh's new venture mixes his passion and&nbsp;commitment</a></div></div>
+		<div class="content third clear"><script src="http://crainscleveland.disqus.com/popular_threads_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=200"></script></div>
+	</div>
+</div>
+
+<!-- Lists -->
+<div class="homeSection">
+	<h3 class="homeSectionHeader">Latest List</h3>
+	<div class="homeLatestList">
+	<div class="ll_band">
+		<div class="ll_b_title">Software Developers</div>
+	</div>
+	<div class="datajoe-list-widget">
+		<div id="djo_content">
+<p>A list of software developers ranked by full-time local employees, published on Feb. 9, 2015.</p>
+<table cellspacing="0">
+<tr class="headRow"><th>Rank</th><th>Name</th><th class="last">1-1-2015</th></tr>
+<tr><td>1</td><td>Hyland, creator of OnBase</td><td class="last">1,339</td></tr>
+<tr class="alt"><td>2</td><td>MRI Software LLC</td><td class="last">334</td></tr>
+<tr><td>3</td><td>TMW Systems Inc.</td><td class="last">300</td></tr>
+<tr class="alt"><td>4</td><td>Snap-on Business Solutions Inc.</td><td class="last">241</td></tr>
+<tr><td>5</td><td>OEConnection</td><td class="last">210</td></tr>
+</table>
+</div>
+
+		<!-- pbs:!macro name="cci/datajoe-ecom" cachetime="1440" cachequalifiers="params" params="DataJoeRequestType=(widget) DataJoeWidgetID=(top_five) DataJoeProjectID=(10564)" -->
+	</div>
+</div>
+<div class="homeRedNavText"><a href="http://www.crainscleveland.com/section/crains-lists?djoPage=bridge&amp;Category=crains-lists&amp;djoPid=10564">Purchase the complete list &raquo;</a></div>
+</div>
+<div class="ad300w"><div id="oas_BottomRight"></div></div>
+<div class="en_box_container">
+	<div class="en_header">Events &amp; Nominations</div>
+	<div class="en_box ">
+	<div class="en_date">
+		<div class="en_month">Feb</div>
+		<div class="en_day">10</div>
+	</div>
+	<div class="en_details">
+		<a href="http://bit.ly/1tlio8J" class="en_d_title">Free Business Chinese Class Level I at Cleveland Public Library</a>
+		<div class="en_d_time">12:00 PM - 1:00 PM</div>
+		<div class="en_d_note">Foreign Literature Department, 4th fl. Main Building</div>
+		<div class="en_d_prompt"><a href="http://bit.ly/1tlio8J">Register Now!</a></div>
+	</div>
+	<div class="cb">&nbsp;</div>
+</div>
+<div class="en_box ">
+	<div class="en_date">
+		<div class="en_month">Feb</div>
+		<div class="en_day">9</div>
+	</div>
+	<div class="en_details">
+		<a href="http://bit.ly/1BcdY2t" class="en_d_title">Free Business Chinese Class Level II at Cleveland Public Library</a>
+		<div class="en_d_time">12:00 PM - 1:00 PM</div>
+		<div class="en_d_note">Main Building, 4th Floor, Foreign Literature Department</div>
+		<div class="en_d_prompt"><a href="http://bit.ly/1BcdY2t">Register Now!</a></div>
+	</div>
+	<div class="cb">&nbsp;</div>
+</div>
+<div class="en_box ">
+	<div class="en_date">
+		<div class="en_month">Feb</div>
+		<div class="en_day">10</div>
+	</div>
+	<div class="en_details">
+		<a href="http://www.smecleveland.com/eventWorkshops.asp" class="en_d_title">SME Cleveland - SME-U Educational Workshop</a>
+		<div class="en_d_time">7:45 AM - 9:15 AM</div>
+		<div class="en_d_note">Holiday Inn Cleveland South</div>
+		<div class="en_d_prompt"><a href="http://www.smecleveland.com/eventWorkshops.asp">Register Now!</a></div>
+	</div>
+	<div class="cb">&nbsp;</div>
+</div>
+
+		<div class="homeRedNavText" style="padding: 0 10px 10px 0;"><a href="http://www.crainscleveland.com/section/events_calendar">See More >></a>
+		</div>
+	
+	<div class="en_nominate">
+		<div style="text-align:center;">
+			<a href="http://www.crainscleveland.com/section/CIOevent_Nominations" border=0 target="_blank"><img src="http://www.crainscleveland.com/Assets/cc/legacy/graphics/buttons/CrainsCIO-logo.jpg" border="0" alt="CIO Nominations"></a>
+		</div>
+		<div class="en_n_links" div style="font-size: 9px; line-height: 14px; text-align:center;">
+			<font color="#000000">Tuesday, April 14, 2015<br>2015 Nominations Now Open <br /></font>
+			<font color="#a91d37"><a href="http://www.crainscleveland.com/section/CIOevent_Nominations">Click here to more information</a></font>
+		</div>
+		<div class="en_n_links">
+			<a href="http://www.crainscleveland.com/section/EVENTS_calendar">More Events</a>&nbsp;|
+			<a href="http://www.crainscleveland.com/section/submit_event">Submit Event</a>&nbsp;|
+			<a href="http://www.crainscleveland.com/section/event_home">Nomination Periods</a>
+		</div>
+	</div>	
+</div></div>
+	<div id="structureContentBody">		<div class="featureTopStory">
+			<table class="tableZero">
+				<tr>
+					<td class="tdTop">
+						<a href="http://www.crainscleveland.com/article/20150209/FREE/150209861/full-week-of-events-will-precede-april-18-rock-hall-inductions"><img class="featureTopStoryImage" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/FREE/150209861/AR/0/AR-150209861.jpg&amp;MaxW=270&amp;MaxH=250&amp;v=201411070853" alt="" /></a>
+					</td>
+					<td class="tdTop">
+						<div class="newsitemKickerBreeze">CRAIN'S CLEVELAND BUSINESS </div>
+						<h2><a href="http://www.crainscleveland.com/article/20150209/FREE/150209861/full-week-of-events-will-precede-april-18-rock-hall-inductions">Full week of events will precede April 18 Rock Hall&nbsp;inductions</a></h2>
+						Activities include concerts, exhibits, a fireworks show and a live and uncut simulcast of the inductions ceremony.
+					</td>
+				</tr>
+			</table>
+		</div>
+<div id="homeColumnLeft">
+	<!-- Multimedia Box -->
+	<div class="homeSection">
+		<h3 class="homeSectionHeader">Multimedia</h3>
+<div class="homeMultimediaItem">
+	<a href="http://www.crainscleveland.com/article/20150209/MULTI/150209865/heinens-nears-opening-in-cleveland-trust-rotunda"><img src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/MULTI/150209865/TS/1/TS-150209865.jpg?cci_ts=20150209131925&amp;MaxW=270" alt="Heinen's nears opening in Cleveland Trust rotunda " /></a>
+	<div class="homeKicker">PHOTO GALLERY</div>
+	<div class="newsitemDate">February 9, 2015</div>
+	<h3><a href="http://www.crainscleveland.com/article/20150209/MULTI/150209865/heinens-nears-opening-in-cleveland-trust-rotunda">Heinen's nears opening in Cleveland Trust rotunda&nbsp;</a></h3>
+	<div style="clear: left;"></div>
+</div>
+<div class="homeMultimediaItem">
+	<a href="http://www.crainscleveland.com/article/20150206/MULTI/302069999/this-week-on-crains-weekly-report-webcast"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150206/MULTI/302069999/TS/1/TS-302069999.jpg?cci_ts=20150206154738&amp;MaxW=114&amp;MaxH=90" alt="This week on Crain's Weekly Report webcast" /></a>
+	<div class="homeKicker"></div>
+	<div class="newsitemDate">February 6, 2015</div>
+	<h3><a href="http://www.crainscleveland.com/article/20150206/MULTI/302069999/this-week-on-crains-weekly-report-webcast">This week on <I>Crain's</I> Weekly Report&nbsp;webcast</a></h3>
+	<div style="clear: left;"></div>
+</div>
+<div class="homeMultimediaItem">
+	<a href="http://www.crainscleveland.com/article/20150130/MULTI/301309999/this-week-on-crains-weekly-report-webcast"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150130/MULTI/301309999/TS/1/TS-301309999.jpg?cci_ts=20150130160213&amp;MaxW=114&amp;MaxH=90" alt="This week on Crain's Weekly Report webcast" /></a>
+	<div class="homeKicker"></div>
+	<div class="newsitemDate">January 30, 2015</div>
+	<h3><a href="http://www.crainscleveland.com/article/20150130/MULTI/301309999/this-week-on-crains-weekly-report-webcast">This week on <I>Crain's</I> Weekly Report&nbsp;webcast</a></h3>
+	<div style="clear: left;"></div>
+</div>					
+		<div class="homeRedNavText"><a href="http://www.crainscleveland.com/section/crainstv">Crain's Video Library &raquo;</a></div>
+	</div>
+	<!-- Special Features Carousel -->
+	<div class="homeSection">
+<h3 class="homeSectionHeader">Special Features</h3>
+<div id="slides">
+	<div class="slides_container"><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20141004&amp;ID=3202650&amp;Element=1&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="Crain's Cleveland Business Newsmakers " style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/newsmakers14">Crain's Cleveland Business Newsmakers </a></span></h4>
+		<p>The people and events that mattered to the area in 2014.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/newsmakers14"><strong>READ MORE </strong></a></span>
+	</div>
+</div><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20141101&amp;ID=2780280&amp;Element=1&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="2015 CIO of the Year Awards" style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/CIOevent_Nominations">2015 CIO of the Year Awards</a></span></h4>
+		<p>Nominations are now open for Crain’s CIO of the Year Awards.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/CIOevent_Nominations"><strong>SUBMIT NOMINATIONS</strong></a></span>
+	</div>
+</div><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20140908&amp;ID=2920919&amp;Element=1&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="Health Care Innovators" style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/HEALTHCARE_INNOVATIONS">Health Care Innovators</a></span></h4>
+		<p>Collaboration becoming key to solving the puzzle of medicine's complexities.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/HEALTHCARE_INNOVATIONS"><strong>READ HERE</strong></a></span>
+	</div>
+</div><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20140823&amp;ID=2958792&amp;Element=1&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="Ohio MBA Guide" style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/MBA14">Ohio MBA Guide</a></span></h4>
+		<p>Our annual snapshot of graduate business education options available in the state of Ohio.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/MBA14"><strong>CLICK HERE</strong></a></span>
+	</div>
+</div><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20141028&amp;ID=3213074&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="2014 Giving Guide" style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/giving_guide2014">2014 Giving Guide</a></span></h4>
+		<p>A book of knowledge for those interested in Northeast Ohio philanthropy.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/giving_guide2014"><strong>READ MORE</strong></a></span>
+	</div>
+</div><div class="slide">
+	<div class="item">
+		<img src="http://www.crainscleveland.com/apps/pbcsi.dll/cceimg?Site=CC&amp;Module=5&amp;Class=51&amp;Type=501&amp;Date=20140227&amp;ID=2956812&amp;v=20150210000752&amp;MaxW=240&amp;MaxH=150" alt="Fastest-growing companies in NEO" style="display: block; margin: 0 auto;" />
+		<h4><span class="featureslink"><a href="http://www.crainscleveland.com/section/fast5014">Fastest-growing companies in NEO</a></span></h4>
+		<p>Crain’s FAST 50 recognizes revenue growth of the 50 fastest-growing privately-held companies in NEO.</p><span class="featureslink"><a href="http://www.crainscleveland.com/section/fast5014"><strong>VIEW THE COMPLETE LIST </strong></a></span>
+	</div>
+</div></div>
+</div>
+	</div>
+	<!-- Shale news -->
+	<div class="homeSection">
+		<div class="homeSectionHeader"></div>
+		<a href="http://www.crainscleveland.com/section/SHALEmagazine"><img src="http://www.crainscleveland.com/graphics/SHALE/SHALEmag_logoSMALLER.jpg" style="display: block;"></a>
+		<a href="http://www.crainscleveland.com/section/SHALEmagazine" class="SHALEblue14pt" align="left">Home</a>&nbsp;|&nbsp;
+		<a href="http://www.crainscleveland.com/section/SHALEblogs" class="SHALEblue14pt">Blogs</a>&nbsp;|&nbsp;
+		<a href="http://www.crainscleveland.com/section/SHALEvideos" class="SHALEblue14pt">Video</a>&nbsp;|&nbsp;
+		<a href="http://www.crainscleveland.com/section/SHALEmagazineSub" class="SHALEblue14pt">Subscribe</a>
+	</div>
+	<!-- Survey -->
+	<!-- start /Web/CC/templates/objects/PollMiniQuery2.pbo -->
+<div class="pollMini" id="pollMini337"></div>
+<script>
+var doLoad = true;
+if (doLoad) {
+	updatePollMini("/apps/pbcs.dll/miniquery?NoStat=1&TARGET=_top&W=130&H=60&Labels=leading&Category=free&ObjectClass=2&BGColor=&LabelTrim=");
+}
+</script>
+<!-- end /Web/CC/templates/objects/PollMiniQuery2.pbo -->
+	<!-- BEGIN INTERSTITUAL AD Content here -->
+	<div id="oas_Middle"></div>
+ <!-- END INTERSTITUAL AD Content here -->
+	<!-- Facebook -->
+	<div class="homeSection">
+		<div class="homeSectionHeader"></div>
+		<fb:like-box href="https://www.facebook.com/crainscleveland" width="300" colorscheme="light" show_faces="false" header="false" stream="false" show_border="false"></fb:like-box>
+		<fb:activity app_id="730748806957003" site="www.crainscleveland.com" action="likes, recommends" width="270" height="400" max_age="7" colorscheme="light" header="false" recommendations="true"></fb:activity>
+	</div>
+</div>
+<div id="homeColumnMiddle">
+	<!-- Breaking News -->
+	<div class="homeSection">
+		<h3 class="homeSectionHeader">Breaking News</h3>
+<div class="homeBreakingLead">
+	<a href="http://www.crainscleveland.com/article/20150209/FREE/150209873/john-cleese-will-be-the-closing-keynote-speaker-at-content-marketing"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/FREE/150209873/AR/0/AR-150209873.jpg?cci_ts=20150209161412&amp;MaxW=130&amp;MaxH=120" alt="John Cleese will be the closing keynote speaker at Content Marketing World 2015"></a>
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209873/john-cleese-will-be-the-closing-keynote-speaker-at-content-marketing">John Cleese will be the closing keynote speaker at Content Marketing World&nbsp;2015</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+	The English actor, comedian, writer, film producer and co-founder of Monty Python also has significant ties to the business and content marketing worlds. The Content Marketing World event, which takes place Sept. 8-11 at the Cleveland Convention Center, is expected to draw 3,500 people.
+	<div style="clear: left;"></div>
+</div>
+<div class="homeBreakingLead">
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209864/bruce-willis-thriller-wake-to-begin-shooting-in-cleveland-feb-16">Bruce Willis thriller 'Wake' to begin shooting in Cleveland Feb.&nbsp;16</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+	In addition to Willis, the movie's cast includes Academy Award-winner Ben Kingsley. The Greater Cleveland Film Commission did not provide details on where 'Wake' will shoot or for how long.
+</div>
+<div class="homeBreakingLead">
+	<a href="http://www.crainscleveland.com/article/20150209/FREE/150209867/cleveland-clinic-research-team-lands-2-5-million-contract"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/FREE/150209867/AR/0/AR-150209867.jpg?cci_ts=20150209192856&amp;MaxW=130&amp;MaxH=120" alt="Cleveland Clinic research team lands $2.5 million contract"></a>
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209867/cleveland-clinic-research-team-lands-2-5-million-contract">Cleveland Clinic research team lands $2.5 million&nbsp;contract</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+	The award from the Defense Advanced Research Projects Agency -- an agency within the U.S. Department of Defense -- will be used to develop a suite of outcome metrics for advanced prosthetic limbs.
+	<div style="clear: left;"></div>
+</div>
+<div class="homeBreakingLead">
+	<a href="http://www.crainscleveland.com/article/20150209/FREE/150209860/beverageboy-founder-kevin-waltermire-stays-afloat-on-shark-tank-nabs"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/FREE/150209860/AR/0/AR-150209860.jpg?cci_ts=20150209161701&amp;MaxW=130&amp;MaxH=120" alt="BeverageBoy founder Kevin Waltermire stays afloat on 'Shark Tank,' nabs $50,000 investment"></a>
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209860/beverageboy-founder-kevin-waltermire-stays-afloat-on-shark-tank-nabs">BeverageBoy founder Kevin Waltermire stays afloat on 'Shark Tank,' nabs $50,000&nbsp;investment</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+	The Akron native appeared on the ABC television show on Friday, Feb. 6, to raise money for the company, which has developed a can coolie designed to hold a beer while floating in water.
+	<div style="clear: left;"></div>
+</div>
+<div class="homeBreakingLead">
+	<a href="http://www.crainscleveland.com/article/20150209/FREE/150209859/radioshack-looks-to-close-27-northeast-ohio-stores"><img class="imgLeft" src="http://www.crainscleveland.com/apps/pbcsi.dll/storyimage/CC/20150209/FREE/150209859/AR/0/AR-150209859.jpg?cci_ts=20150209164006&amp;MaxW=130&amp;MaxH=120" alt="RadioShack looks to close 27 Northeast Ohio stores"></a>
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209859/radioshack-looks-to-close-27-northeast-ohio-stores">RadioShack looks to close 27 Northeast Ohio&nbsp;stores</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+	Going-out-of-business sales began Friday, Feb. 6, at more than 1,700 stores nationwide. Fort Worth, Texas-based RadioShack has filed for bankruptcy protection and is trimming its collection of more than 4,000 stores.
+	<div style="clear: left;"></div>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209866/summa-health-system-names-tammy-scarborough-vp-of-ambulatory-services">Summa Health System names Tammy Scarborough VP of ambulatory&nbsp;services</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150209/FREE/150209872/applied-business-strategy-buys-cohen-co-s-litigation-services-and">Applied Business Strategy buys Cohen & Co.'s litigation services and business valuation&nbsp;practice</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150209/BLOGS06/150209863/weird-dynamic-between-lebron-james-kevin-love-hasnt-prevented-the">Weird dynamic between LeBron James, Kevin Love hasn't prevented the Cavs from hitting their&nbsp;stride</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150209/BLOGS03/150209862/cleveland-has-a-couple-connections-on-list-of-nations-50-most">Cleveland has a couple connections on list of nation's 50 most generous&nbsp;donors</a></h3>
+	<span class="newsitemDate">February 9, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089982/shale-is-suffering-declining-oil-and-natural-gas-prices-have-led-to">Shale is suffering: Declining oil and natural gas prices have led to plenty of regional&nbsp;cutbacks</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089984/cost-of-attendance-measure-is-expensive-one-for-mac">Cost of attendance measure is expensive one for&nbsp;MAC</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089979/the-vue-brings-plenty-of-perks-with-photo-gallery">The Vue brings plenty of perks (with photo&nbsp;gallery)</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089980/nasa-glenns-rising-budget-includes-cuts">NASA Glenn's rising budget includes&nbsp;cuts</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089990/dan-walshs-new-venture-mixes-his-passion-and-commitment">Dan Walsh's new venture mixes his passion and&nbsp;commitment</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089981/downtown-heinens-will-include-learning-curve-with-photo-gallery">Downtown Heinen's will include 'learning curve' (with photo&nbsp;gallery)</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089994/ownership-change-shouldnt-be-rocky-for-rubber-company">Ownership change shouldn't be rocky for rubber&nbsp;company</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089987/investment-sales-played-small-ball-in-2014">Investment sales played 'small ball' in&nbsp;2014</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089989/crains-editorial-wrong-way"><I>Crain's</i> editorial: Wrong&nbsp;way</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/BLOGS08/302089991/publisher-john-campanellis-column-the-colorful-legacy-of-the-gay">Publisher John Campanelli's column: The colorful legacy of the Gay&nbsp;Games</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+<div class="homeBreakingHeadlines">
+	<h3><a href="http://www.crainscleveland.com/article/20150208/SUB1/302089995/crains-editorial-cartoon-feb-9-2015"><I>Crain's</I> editorial cartoon: Feb. 9,&nbsp;2015</a></h3>
+	<span class="newsitemDate">February 8, 2015</span>
+</div>
+		<div class="homeRedNavText"><a href="http://www.crainscleveland.com/section/breaking" class="rednavtext">More Headlines &raquo;</a></div>
+	</div>
+</div>
+<div class="clearL"></div>
+</div>
+</div>
+<div class="adBottom2"><div id="oas_Bottom2"></div></div>
+<div id="footerContainer">
+	<div id="footerColumn1" class="footerNavTd">
+		<div class="footerNavTdHeader">Home</div>
+		<ul>
+			<li><a href="https://home.crainscleveland.com/clickshare/advantageRedirect.do?URL=https://sec.crain.com/CL/launchpad.aspx?PromotionCode=W4CLWBN&amp;d=order">Subscription Center</a></li>
+			<li><a href="http://www.crainscleveland.com/section/email_products">E-Newsletters</a></li>
+			<li><a href="http://www.crainscleveland.com/section/RSS">RSS</a></li>
+			<li><a href="http://www.facebook.com/groups/47780492158/">Facebook</a></li>
+			<li><a href="http://www.linkedin.com/groups?home=&amp;gid=1842140&amp;trk=anet_ug_hm">LinkedIn</a></li>
+			<li><a href="http://twitter.com/#!/CrainsCleveland">Twitter</a></li>
+			<li><a href="http://www.crainscleveland.com/article/20111120/STATIC/311209998">Advertise</a></li>
+			<li><a href="http://www.crainscleveland.com/section/media_kit">Crain's Media Kit</a></li>
+<!-- 
+			<li><a href="http://www.crainscleveland.com/apps/pbcs.dll/article?AID=/20061204/STATIC/61204014" target="_blank">Newsstand Locations</a></li>
+-->
+			<li><a href="http://www.crainscleveland.com/assets/pdf/CC9817222.PDF" target="_blank">2015 Editorial Calendar</a></li>
+		</ul>
+		<div class="footerNavTdHeader">This Week's Issue</div>
+		<ul>
+			<li><a href="http://www.crainscleveland.com/section/toc">This Week's Issue</a></li>
+			<li><a href="http://www.crainscleveland.com/section/WEEKLY_FEATURE">Weekly Editorial Feature</a></li>
+			<li><a href="http://www.crainscleveland.com/section/toca">Weekly Issue PDFs</a></li>
+		</ul>
+	</div>
+	<div id="footerColumn2" class="footerNavTd">
+		<div class="footerNavTdHeader">News</div>
+		<div class="footerSplitColumn1">
+			<ul>
+				<li><a href="http://www.crainscleveland.com/topic/1404/2016-Republican-National-Convention">2016 Republican National Convention</a></li>
+				<li><a href="http://www.crainscleveland.com/section/breaking">Breaking news</a></li>         
+				<li><a href="http://www.crainscleveland.com/section/MAN">Manufacturing</a></li>
+				<li><a href="http://www.crainscleveland.com/section/HEALTH">Health Care</a></li>
+				<li><a href="http://www.crainscleveland.com/section/FIN">Financial/Legal</a></li>
+			</ul>
+		</div>
+		<div class="footerSplitColumn2">
+			<ul>
+				<li><a href="http://www.crainscleveland.com/section/GOV">Government/Nonprofit</a></li>
+				<li><a href="http://www.crainscleveland.com/section/staffing">HR/Staffing News</a></li>
+				<li><a href="http://www.crainscleveland.com/section/Ohio_Energy">Ohio Energy</a></li>
+				<li><a href="http://www.crainscleveland.com/section/REALESTATE">Real Estate</a></li>
+				<li><a href="http://www.crainscleveland.com/section/smallbusiness">Small Business</a></li>
+				<li><a href="http://www.crainscleveland.com/section/TECH">Technology</a></li>
+			</ul>
+		</div>
+		<div class="clearL"></div>
+		<div class="footerNavTdHeader">Features</div>
+		<div class="footerSplitColumn1">
+			<ul>
+				<li><a href="http://www.crainscleveland.com/section/HRLeaders">Archer Awards</a></li>
+				<li><a href="http://www.crainscleveland.com/marketing/30th/30th.html" target="_blank">30th Anniversary</a></li>
+				<li><a href="http://www.crainscleveland.com/section/CFOevent_event">CFO of the Year</a></li>
+				<li><a href="http://www.crainscleveland.com/section/CIOevent_event">CIO of the Year</a></li>
+				<li><a href="http://www.crainscleveland.com/section/CLE2030">CLE2030</a></li>
+				<li><a href="http://www.crainscleveland.com/section/EUCLID">Euclid Avenue</a></li>
+				<li><a href="http://www.crainscleveland.com/section/40UNDER40">Forty Under 40</a></li>
+				<li><a href="http://www.crainscleveland.com/section/GENERAL_COUNSEL">In-House and General Counsel</a></li>
+				<li><a href="http://www.crainscleveland.com/section/HEALTHCARE_HEROES">Health Care Heroes</a></li>
+			</ul>
+		</div>
+		<div class="footerSplitColumn2">
+			<ul>
+				<li><a href="http://www.crainscleveland.com/section/HEALTHCARE_INNOVATORS">Health Care Innovators</a></li>
+				<li><a href="http://www.crainscleveland.com/section/MANUFACTURING_SUMMIT">Manufacturing Summit</a></li>
+				<li><a href="http://www.crainscleveland.com/section/medmart">Medical Mart & Convention Center</a></li>
+				<li><a href="http://www.crainscleveland.com/section/NORTECH">NorTech Innovation Awards</a></li>
+				<li><a href="http://www.crainscleveland.com/section/SHALE_EVENT">Crain's Shale Event Series</a></li>
+				<li><a href="http://www.crainscleveland.com/section/WHOtoWATCH">Who to Watch</a></li>
+				<li><a href="http://www.crainscleveland.com/section/whobusiness12">Who's Who in Business</a></li>
+				<li><a href="http://www.crainscleveland.com/section/wholaw14">Who's Who in Law</a></li>
+				<li><a href="http://www.crainscleveland.com/section/WON">Women of Note</a></li>
+				<li><a href="http://www.crainscleveland.com/section/W25th">West 25th</a></li>
+			</ul>
+		</div>
+		<div class="clearL"></div>
+	</div>
+	<div id="footerColumn3" class="footerNavTd">
+		<div class="footerNavTdHeader">Resources</div>
+		<ul>
+			<li><a href="http://www.crainscleveland.com/section/ARCHIVES">Archives</a></li>
+			<li><a href="http://www.bizbuysell.com/partner/cleveland-businesses-for-sale/">Buy and Sell a business</a></li>
+			<li><a href="http://www.crainscleveland.com/section/CLASSIFIEDS">Classified Ads</a></li>
+			<li><a href="http://www.crainscleveland.com/section/custompublishing">Custom Publishing</a></li>
+			<li><a href="http://www.crainscleveland.com/section/depth">Editorials/Opinions</a></li>
+			<li><a href="http://www.crainscleveland.com/section/EVENTS">Events Calendar</a></li>
+			<li><a href="http://www.crainscleveland.com/section/House_Calls">House Calls</a></li>
+			<li><a href="http://www.crainscleveland.com/section/loop_net">LoopNet Property Search</a></li>
+			<li><a href="http://www.crainscleveland.com/section/MBA12">MBA Guide</a></li>
+			<li><a href="http://www.crainscleveland.com/section/crainstv">Multimedia</a></li>
+			<li><a href="http://www.crainscleveland.com/section/audio">Podcasts</a></li>
+			<li><a href="http://www.crainscleveland.com/section/PHOTOGALLERIES">Photo Galleries</a></li>
+			<li><a href="http://www.crainscleveland.com/apps/pbcs.dll/section?Category=POLLARCHIVE">Recent Poll Results</a></li>
+			<li><a href="http://www.crainscleveland.com/section/stocks">Stocks of local interest</a></li>
+			<li><a href="http://www.crainscleveland.com/section/webinars">Webinars</a></li>
+			<li><a href="http://www.crainscleveland.com/section/WP">White Papers</a></li>
+		</ul>
+	</div>
+	<div id="footerColumn4" class="footerNavTd last">
+		<div class="footerNavTdHeader">Lists/Directories</div>
+		<ul>
+			<li><a href="http://www.crainscleveland.com/section/crains-lists"><i>Crain's</i> Lists Online</a></li>							
+			<li><a href="http://www.crainscleveland.com/section/crains-lists?djoPage=product_details&amp;djoPid=28387&amp;djoTry=1357921383">Purchase Book of Lists</a></li>
+			<li><a href="http://www.crainscleveland.com/section/bioscience">Bioscience Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/econdev">Economic Development Organizations Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/EXECUTIVE_DIRECTORY">Executive Search Firms & Staffing Firms Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/food">Food Economy Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/hcd">Health Care Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/LOGISTICS_DIRECTORY">Logistics Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/minority">Minority-Owned Business Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/MBA14">Ohio MBA Directory</a></li>
+			<li><a href="http://www.crainscleveland.com/section/wob">Women-Owned Business Directory</a></li>
+		</ul>
+		<div class="footerNavTdHeader">Events</div>
+		<ul>
+			<li><a href="http://www.crainscleveland.com/section/events_calendar">Local Business Events</a></li>
+			<li><a href="http://www.crainscleveland.com/section/Events_Submit">Submit Your Events</a></li>
+			<li><a href="http://www.crainscleveland.com/section/MARKETINGevents" target="_blank">Coming Crain Events</a></li>
+		</ul>
+		<div class="footerNavTdHeader">Affiliates</div>
+		<ul>
+			<li><a href="http://www.crainscleveland.com/section/crain-brands" target="_blank">Crain Publications</a></li>                                    
+		</ul>
+	</div>
+	<div class="clearL"></div>
+</div>
+<div class="footerInfo">
+ 	&copy;2015 <a href="http://www.crain.com" target="_blank">Crain Communications Inc.</a><br />
+	Use of editorial content without permission is strictly prohibited. All rights Reserved<br />
+	<a href="http://www.crainscleveland.com/apps/pbcs.dll/qwikNavsearch?QwikNav=links_home">Crain's Links</a> <span class="red">|</span>
+	<a href="http://www.crainscleveland.com/apps/pbcs.dll/qwikNavsearch?QwikNav=contact_home" target=_blank> Contact Us</a> <span class="red"> |</span>
+	<a href="http://www.crainscleveland.com/apps/pbcs.dll/qwikNavsearch?QwikNav=terms_home" target=_blank>Terms of Use</a><span class="red"> | </span>
+	<a href="http://www.crainscleveland.com/apps/pbcs.dll/qwikNavsearch?QwikNav=privacy_home" target=_blank>Privacy Policy</a><br />
+</div>
+<script src="http://www.queryly.com/js/queryly.js"></script>
+<script src="http://www.crainscleveland.com/js/querylywidget.js"></script>
+<script src="http://www.crainscleveland.com/js/slides.min.jquery.js"></script>
+<script>
+$(document).ready(function() {
+	$('#slides').slides({
+		preload: true,
+		preloadImage: '/graphics/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true
+	});	
+});
+</script>
+<script>
+<!--
+/* prettyPhoto */
+$(document).ready(function(){
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		social_tools: '<div class="pp_social"><div class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href=' + encodeURIComponent(location.href) + '&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameBorder="0" style="border:none; overflow:hidden; width:90px; height:23px;" allowTransparency="true"></iframe></div></div>',
+		deeplinking: false,
+		iframe_markup: '<iframe src="http://www.crainscleveland.com/{path}" style="width: {width}px; height: {height}px;" frameBorder="0" scrolling="no"></iframe>'
+	});
+});
+$(document).ready(function(){$('.dataTable').dataTable({"paging":false,"searching":false})});
+$(document).ready(function(){$('.dataTableSearch').dataTable({"paging":false})});
+//Custom Scrollbar
+var isltIE8;
+if (navigator.userAgent.match(/MSIE\s([0-9])\./) != null) {
+	if (navigator.userAgent.match(/MSIE\s([0-9])\./)[1] < 8) {
+		isltIE8 = true;
+	} else {
+		isltIE8 = false;
+	}
+}
+if (!isltIE8) {
+	$(window).load(function(){ 
+		$('.scrollVertical').mCustomScrollbar({ //Vertical Scroll - Fixed content
+			scrollButtons:{	enable:true },
+			theme:"dark-thin"
+		});
+		$('.scrollHorizontal').mCustomScrollbar({ //Horizontal scroll - Fixed content
+			horizontalScroll:true,
+			scrollButtons:{	enable:true },
+			theme:"dark-thin"
+		});
+	});
+}
+//BIZO
+  _bizo_data_partner_id = "985";
+  var _bizo_p = (("https:" == document.location.protocol) ? "https://sjs." : "http://js.");
+  document.write(unescape("%3Cscript src='" + _bizo_p + "bizographics.com/convert_data.js?partner_id=" + _bizo_data_partner_id + "' type='text/javascript'%3E%3C/script%3E"));
+//chartbeat
+var _sf_async_config={};
+_sf_async_config.uid = 25465;
+_sf_async_config.domain = 'crainscleveland.com';
+_sf_async_config.useCanonical = true;
+(function(){
+	function loadChartbeat() {
+		window._sf_endpt=(new Date()).getTime();
+		var e = document.createElement('script');
+		e.setAttribute('language', 'javascript');
+		e.setAttribute('type', 'text/javascript');
+		e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+		document.body.appendChild(e);
+	}
+	var oldonload = window.onload;
+	window.onload = (typeof window.onload != 'function') ?
+	loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+/** BEGIN GOOGLE ANALYTICS CODE **/
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4955448-1']);
+_gaq.push(['_setDomainName', '.crainscleveland.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+/** END GOOGLE ANALYTICS CODE **/
+</script>
+
+</body>
+</html>

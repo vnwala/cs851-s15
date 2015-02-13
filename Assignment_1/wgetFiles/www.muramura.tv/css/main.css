@@ -1,0 +1,674 @@
+@charset "EUC-JP";
+ @import url("detail.css");
+ @import url("list.css");
+ @import url("etc.css");
+
+/* ==== INDEX ==== */
+
+/*	SECTION =0 RESET		-	reset padding and margin to 0 */
+
+/*	SECTION =1 LAYOUT		-	id's for page layout */
+
+/*	SECTION =2 HEADINGS		-	h1,h2,h3,h4 etc. */
+
+/*	SECTION =3 MAIN			-	middle content area */
+
+/*	SECTION =4 HEADER		-	header and top navigation */
+
+/*	SECTION =5 LEFT NAV		-	left navigation */
+
+/*	SECTION =6 RIGHT NAV	-	right navigation */
+
+/*	SECTION =7 FOOTER		-	footer */
+
+
+
+/*========================================
+
+SECTION =0 RESET
+
+========================================*/
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, table, th, td, iframe {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #fff;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Meiryo UI,'¥á¥¤¥ê¥ª',Meiryo,'¥Ò¥é¥®¥Î³Ñ¥´ Pro W3','Hiragino Kaku Gothic Pro','£Í£Ó £Ð¥´¥·¥Ã¥¯','MS PGothic',Arial,Helvetica,sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/bg.gif);
+	line-height: 1.5em;
+}
+
+ul {
+	margin: 0 0 10px;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+	vertical-align: bottom;
+}
+
+a:hover img {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+
+a:link {
+	color: #b7b7b7;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #999;
+}
+
+a:hover {
+	color: #fff;
+}
+
+a:active {
+	color: #ccc;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+
+
+/*========================================
+
+SECTION =1 LAYOUT
+
+========================================*/
+
+#container {
+	width: 970px;
+	padding: 10px;
+	background-color: #000;
+	margin: -10px auto 0;
+	overflow: hidden;
+}
+
+#header {
+	width: 990px;
+	padding: 0;
+	position: relative;
+	margin: 0 auto;
+}
+
+#wrap {
+	float: right;
+	width: 800px;
+	padding: 0 0 0 10px;
+}
+
+#main {
+	float: left;
+	width: 630px;
+}
+
+#nav {
+	float: left;
+	width: 160px;
+	display: inline;	/* NEEDED FOR DOUBLE MARGIN BUG IN IE6 */
+	overflow: hidden;
+}
+
+#sub {
+	float: right;
+	width: 160px;
+	display: inline;	/* NEEDED FOR DOUBLE MARGIN BUG IN IE6 */
+	overflow: hidden;
+}
+
+#footer {
+	text-align: center;
+	background-color: #282828;
+}
+
+.clear {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.lefty {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.righty {
+	display: block;
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+
+
+/*========================================
+
+SECTION =2 HEADINGS
+
+========================================*/
+
+h1, h2 {
+	padding: 2px 5px;
+	color: #fff;
+	margin: 0 0 10px;
+	font-size: 12px;
+	background-color: #790102;
+}
+
+h2 {
+	background-color: #790102;
+}
+
+h3, h4 {
+	padding: 2px 5px;
+	margin: -5px -5px 10px;
+	color: #fff;
+	font-size: 12px;
+	background-color: #360000;
+}
+
+h5 {
+	padding: 5px 0 2px;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 14px;
+	border-bottom: 2px solid #B00;
+	color: #fff;
+	position: relative;
+	display: block;
+	width: 100%;
+	background-color: #000;
+}
+
+
+
+/*========================================
+
+SECTION =3 MAIN
+
+========================================*/
+
+.indexarea {
+	width: 990px;
+	margin: -11px auto 10px;
+}
+
+.indexarea table td {
+	padding: 0;
+	margin: 0;
+}
+
+.indexarea a img {
+	vertical-align: top;
+	display: block;
+}
+
+
+/*	iframe like news */
+
+#main .topics {
+	overflow: auto;
+	height: 100px;
+	margin: 0 0 10px;
+	padding: 5px;
+	background-color: #282828;
+}
+
+#main .topics li {
+	padding: 0 0 5px;
+	margin: 0 0 10px;
+}
+
+#main .topics em {
+	display: block;
+	font-style: normal;
+	padding: 0 5px 0 0;
+}
+
+#main .topics em img {
+	vertical-align: middle;
+	padding: 0 5px;
+}
+
+#main h2.special {
+	background: url(../images/bg_new.gif) 0 0 repeat-x;
+	color: #000;
+}
+
+#main div.parts {
+	margin: 0 0 0 -5px;
+	width: 630px;
+}
+
+#main div.parts dl {
+	width: 298px;
+	border: 1px solid #000;
+	padding: 5px;
+	display: block;
+	float: left;
+	background-color: #151515;
+	margin: 0 0 10px 5px;
+	height: 350px;
+}
+
+#main div.parts dl.fin {
+	border: 1px solid #f00;
+}
+
+#main div.parts dl dt {
+	margin: -5px -5px 5px;
+	position: relative;
+}
+
+#main div.parts dl dt em {
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: url(../images/point.gif) 0 0 no-repeat;
+	width: 43px;
+	height: 18px;
+}
+
+#main div.parts dl dd {
+	padding: 0 0 5px;
+}
+
+#main div.parts dl dd.title {
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #fc0;
+	color: #000;
+	padding: 2px 5px;
+	margin: 0 0 5px;
+	display: inline;
+	line-height: 1.5em;
+}
+
+#main div.parts dl dd.title2 {
+	height: 65px;
+}
+
+#main div.parts dl dd span.title_sample {
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #fc0;
+	color: #000;
+	padding: 2px 5px;
+	margin: 0 0 5px;
+	display: inline;
+	line-height: 1.5em;
+}
+
+#main div.parts dl dd.title a, #main div.parts dl dd span.title_sample a {
+	color: #000;
+	text-decoration: none;
+}
+
+#main div.parts dl dd.name {
+	position: relative;
+}
+
+#main div.parts dl dd.name span {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#main div.parts dl dd.user em {
+	font-style: normal;
+	color: #fc0;
+}
+
+#main .all-link {
+	clear: left;
+	display: block;
+	background-color: #151515;
+	padding: 2px 0;
+	height: 18px;
+	text-align: center;
+}
+
+#main .all-link a {
+	color: #fff;
+	margin: 0 0 0 10px;
+}
+
+#main div.parts dl dd.more, #main div.parts dl dd.sample {
+	text-align: center;
+}
+
+#main div.parts dl dd.more a {
+	padding: 0 0;
+	color: #ffff00;
+}
+
+#main div.parts p.banner {
+	margin: 5px 5px 5px;
+}
+
+
+
+/*========================================
+
+SECTION =4 HEADER
+
+========================================*/
+
+#header ul.tnav {
+	background-color: #494949;
+	padding: 10px;
+	height: 20px;
+	display: block;
+	line-height: 1em;
+	margin: 0;
+}
+
+#header ul.tnav li {
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+
+#header ul.tnav li.end {
+	border: none;
+}
+
+#header ul.tnav li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 3px 13px;
+	background-color: #000;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	_margin: 0 5px 0 0;
+}
+
+#header ul.tnav li a:hover {
+	border: 1px solid #a8ff00;
+	color: #a8ff00;
+}
+
+#header ul.tnav li a#join {
+	background-color: #a8ff00;
+	color: #000;
+}
+
+#header ul.tnav li a#join:hover {
+	border: 1px solid #000;
+	background-color: #000;
+	color: #a8ff00;
+}
+
+#header ul.bnav {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#header ul.bnav li {
+	display: block;
+	float: left;
+}
+
+#header ul.bnav li a {
+	font-size: 10px;
+	color: #fff;
+	text-decoration: underline;
+	margin: 0 0 5px;
+	padding: 2px 5px;
+}
+
+
+/*	Search bar	*/		 
+
+.s-cont-container {
+	background-color: #333;
+	width: 980px;
+	height: 3.2em;
+	padding: 4px 0 0 10px;
+	margin: 0 auto 0;
+	overflow: hidden;
+}
+
+.s-cont-container form {
+	float: left;
+	margin-right: 15px;
+ x margin-left:350px;
+}
+
+.s-cont-container ul li {
+	font-size: 12px;
+	color: #FFF;
+	display: inline;
+}
+
+.s-cont-container ul li a {
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: underline;
+	display: inline;
+	margin: 0 5px;
+}
+
+
+
+/*========================================
+
+SECTION =5 LEFT NAV
+
+========================================*/
+
+#nav div {
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: #282828;
+}
+
+#nav div.diff {
+	border: none;
+	padding: 0;
+	background-color: #000 !important;
+	text-align: center;
+}
+
+#nav div form {
+}
+
+
+/* SEARCH FIELD */
+
+#nav div form input.searchfield {
+	width: 90px;
+	margin: 0 5px 0 0;
+}
+
+ul.column2 {	/* 2 COLUMN NAVIGATION	*/
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+
+/* added aya 050912 */
+
+div.kikaku div {
+	overflow: auto;
+	width: 220px;
+	height: 200px;
+	padding: 2px 2px 2px 0px;
+}
+
+div.kikaku ul li {
+	float: none;
+	padding: 0 0 5px 0px;
+	border-bottom: 1px dashed #666;
+}
+
+/* MEMBER STATUS */
+
+#nav div.meminfo {
+}
+
+#nav div.meminfo h3 {
+	background-color: #c00;
+}
+
+#nav div.meminfo ul li.emph1 {
+	font-weight: bold;
+	padding: 0 0 15px;
+}
+
+#nav div.meminfo ul li.emph2 {
+	color: #f00;
+	padding: 0 0 15px;
+}
+
+
+
+/*========================================
+
+SECTION =6 RIGHT NAV
+
+========================================*/
+
+#sub div {
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: #282828;
+}
+
+#sub div dl {
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+}
+
+#sub div dl dt {
+	float: left;
+	display: block;
+	margin: 0 5px 0 0;
+}
+
+#sub div dl dd.end {
+	display: block;
+	position: relative;
+	height: 15px;
+}
+
+#sub div dl dd.end a {
+	background-color: #f60;
+	padding: 1px 3px;
+	text-align: center;
+	font-size: 10px;
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#sub div dl span {
+	color: #a8ff00;
+	display: block;
+	margin: 0 0 5px;
+}
+
+#sub div dl span img {
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
+
+/* REVIEW */
+
+#sub div ul {
+	margin: 0 0 20px;
+}
+
+#sub div ul em {
+	font-style: normal;
+	color: #fc0;
+}
+
+#sub div ul li {
+	position: relative;
+}
+
+#sub div ul li a img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#sub div ul li span {
+	margin: 0 10px;
+	display: inline;
+}
+
+#sub div p {
+	padding: 5px 0;
+}
+
+#sub div p a {
+	text-align: center;
+}
+
+
+
+/*========================================
+
+SECTION =7 FOOTER
+
+========================================*/
+
+#footer {
+	width: 950px;
+	margin: 0 auto 0;
+	padding: 20px;
+	display: block;
+}
+
+#footer ul {
+	width: auto;
+	margin: 5px auto;
+	line-height: 1em;
+}
+
+#footer ul li {
+	display: inline;
+	margin: 0 10px 0 0;
+	text-align: center !important;
+}
+
+#footer ul li a {
+	color: #fff;
+}
+
+#footer ul li img {
+	vertical-align: middle !important;
+}

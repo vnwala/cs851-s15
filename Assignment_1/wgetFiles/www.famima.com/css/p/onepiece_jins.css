@@ -1,0 +1,274 @@
+@charset "shift_jis";
+
+/*------------------------------------------
+ONE PIECE LIMITED BY JINS Ver.2
+http://www.famima.com/shop/pages/onepiece_jins.aspx
+-------------------------------------------*/
+
+
+#OPjinsVer2 h1, h2, h3 {
+	margin:0;
+	padding:0;
+	font-size: 100%;
+	font-style: normal;
+}
+
+
+#OPjinsVer2 img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+#OPjinsVer2 ul {
+	margin:0;
+	padding:0;
+}
+
+
+#OPjinsVer2 li {
+	margin:0;
+	padding:0;
+	display:inline;
+	float:left;
+}
+
+
+#OPjinsVer2 .transparent {
+	display:none;
+}
+
+
+/* ---------------------------------------------------- */
+
+
+/* #OPjinsVer2 {
+	margin: 0 auto;
+	line-height:1.25;
+	width:960px;
+} */
+
+
+#OPjinsVer2 h1 {
+	background:url(http://www.famima.com/images/p/onepiece_jins/JINSver2_title.png) no-repeat;
+	width:960px;
+	height:223px;
+}
+
+
+#OPjinsVer2 h2.catch {
+	background:url(http://www.famima.com/images/p/onepiece_jins/JINSver2_catch.png) no-repeat;
+	width:960px;
+	height:87px;
+}
+
+
+#OPjinsVer2 h3.intro {
+	background:url(http://www.famima.com/images/p/onepiece_jins/JINSver2_intro.png) no-repeat;
+	width:960px;
+	height:349px;
+}
+
+
+#OPjinsVer2 h3.tokuten {
+	background:url(http://www.famima.com/images/p/onepiece_jins/JINSver2_tokuten.jpg) no-repeat;
+	width:960px;
+	height:257px;
+}
+
+
+#OPjinsVer2 h2.subtitleVer2 {
+	background:url(http://www.famima.com/images/p/onepiece_jins/JINSver2_subtitleVer2.png) no-repeat;
+	width:960px;
+	height:80px;
+}
+
+
+#OPjinsVer2 ul {
+	width:960px;
+}
+
+
+#OPjinsVer2 li.Ver2 {
+	float:left;
+}
+
+
+/* page height */
+#OPjinsVer2 {
+	margin:0 auto;
+	position:relative;
+	width:960px;
+	height:2096px;
+}
+
+#OPjinsVer2 .JINSver2-title {
+	position:absolute;
+	top:0px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-catch {
+	position:absolute;
+	top:223px;
+	width:960px;
+	height:87px;
+}
+
+#OPjinsVer2 .JINSver2-intro {
+	position:absolute;
+	top:310px;
+	width:960px;
+	height:349px;
+}
+
+#OPjinsVer2 .JINSver2-tokuten {
+	position:absolute;
+	top:659px;
+	width:960px;
+	height:257px;
+}
+
+#OPjinsVer2 .JINSver2-subtitleVer2 {
+	position:absolute;
+	top:916px;
+	width:960px;
+	height:80px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2luffy {
+	position:absolute;
+	top:996px;
+	width:960px; /* width:480px; */
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2zolo {
+	position:absolute;
+	left:480px;
+	top:996px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-vspace1 {
+	position:absolute;
+	top:1219px;
+	width:960px;
+	height:21px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2nami {
+	position:absolute;
+	top:1240px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2sanji {
+	position:absolute;
+	left:480px;
+	top:1240px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-vspace2 {
+	position:absolute;
+	top:1463px;
+	width:960px;
+	height:23px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2chopper {
+	position:absolute;
+	top:1486px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-Ver2empty {
+	position:absolute;
+	left:480px;
+	top:1486px;
+	width:960px;
+	height:223px;
+}
+
+#OPjinsVer2 .JINSver2-vspace3 {
+	position:absolute;
+	top:1709px;
+	width:960px;
+	height:57px;
+}
+
+#OPjinsVer2 .JINSver2-subtitleVer1 {
+	position:absolute;
+	top:1766px;
+	width:960px;
+	height:92px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1luffy-on {
+	position:absolute;
+	top:1858px;
+	width:192px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1zoro-on {
+	position:absolute;
+	left:192px;
+	top:1858px;
+	width:192px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1nami-on {
+	position:absolute;
+	left:384px;
+	top:1858px;
+	width:192px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1sanji-on {
+	position:absolute;
+	left:576px;
+	top:1858px;
+	width:192px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1chopper-on {
+	position:absolute;
+	left:768px;
+	top:1858px;
+	width:192px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-Ver1 {
+	position:absolute;
+	top:1858px;
+	width:960px;
+	height:239px;
+}
+
+#OPjinsVer2 .JINSver2-copyright {
+	position:absolute;
+	top:1766px;
+	/* top:2097px; */
+	width:960px;
+	height:81px;
+}
+
+
+#OPjinsVer2 .JINSver2-Ver1-yokoku {
+	position:absolute;
+	top:1847px;
+	/* top:2097px; */
+	width:960px;
+}

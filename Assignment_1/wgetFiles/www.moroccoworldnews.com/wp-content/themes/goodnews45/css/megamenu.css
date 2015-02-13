@@ -1,0 +1,725 @@
+/*
+Item Name : Responsive Mega Menu Complete Set
+Item URI : http://codecanyon.net/item/mega-menu-complete-set/152825
+Author URI : http://codecanyon.net/user/Pixelworkshop
+Version : 3.3
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+01 MEGA MENU BAR
+02 MEGA MENU CONTAINERS
+03 DROP DOWN COLUMNS GRID
+04 FLY-OUT MENU
+05 MEGA MENU WEB ELEMENTS
+   1. General Typography
+   2. Lists
+   3. Custom Paragraphs
+   4. Video + Misc.
+   5. Images
+   6. Paragraph Icons
+   7. Social Icons
+   8. Form Elements
+   9. Tables
+
+09 MOBILE DEVICES
+   1. Common Media Queries
+   2. Horizontal Mega Menu Media Queries
+   3. Vertical Mega Menu Media Queries
+
+*/
+
+
+
+
+/*
+	Layout container
+	The menu will automatically expand into your container.
+	"page_wrapper" and "page_wrapper_vertical" are just used to show how the menu fits,
+	those containers are not necessary, just put the menu into a container and it will
+	fit exactly to its dimensions.
+*/
+
+
+
+/*  _______________________________________________
+
+    01 MEGA MENU BAR
+    _______________________________________________  */
+
+
+.megamenu_container {
+	width:100%;
+	height: 46px;
+	*height: 44px;
+	margin:0 auto;
+	position: relative;
+	z-index:9999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.megamenu_fixed {
+	width: inherit;
+	position:fixed;
+	top:0;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	/* IE7 Fix */
+	*width:expression(this.parentNode.currentStyle['width']);
+}
+.megamenu {
+	list-style:none;
+	padding:0;
+	position:relative; /* For IE7 */
+	margin:0;
+	font-family:Georgia, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:1;
+}
+.megamenu > li {
+	float:left;
+	margin:0;
+	border:none;
+	-webkit-transition: background 0.5s ease;
+	-moz-transition: background 0.5s ease;
+	-o-transition: background 0.5s ease;
+	-ms-transition: background 0.5s ease;
+	transition: background 0.5s ease;
+}
+.megamenu > li > a {
+	font-size:13px;
+	outline:0;
+	text-decoration:none;
+	display:block;
+	padding: 13px 14px 16px 14px;
+	color:#777;
+	
+}
+.megamenu > li .megamenu_drop {
+	
+}
+.megamenu li.megamenu_button {
+	display: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+
+/* Right aligned menu item */
+
+.megamenu li.megamenu_right {
+	float:right;
+	margin-right:-1px;
+}
+.megamenu li.megamenu_right a {
+	margin-right:5px;
+}
+
+		
+/* Styling */	
+
+.megamenu_dark_bar {
+	border-top : 3px solid;
+	border-bottom: 3px solid;
+	border-color: #d9eff5 #d9eff5 #003366 #d9eff5;
+}
+.megamenu_dark_bar .megamenu {
+	color:#777;
+}
+.megamenu_dark_bar .megamenu > li:hover, 
+.megamenu_dark_bar .megamenu > li.active {
+	background: url('megamenu.css');
+}
+.megamenu_dark_bar .megamenu li.noactive {
+	background:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.megamenu_dark_bar .megamenu > li > a {
+	color:#777;
+	font-weight:bold;
+}
+.megamenu_dark_bar .megamenu > li:hover > a {
+	color:#003366;
+}
+
+
+
+
+/*  _______________________________________________
+
+    02 MEGA MENU CONTAINERS
+    _______________________________________________  */
+
+.megamenu li .dropdown_container,
+.megamenu li .dropdown_fullwidth,
+.megamenu li .dropdown_multilevel {
+	position: absolute;
+	margin:0;
+	padding-top:24px;
+	padding-bottom:10px;
+	left:-9999em;
+	top:-9999em;
+	display: block;
+	zoom:1;
+	z-index:9998;
+	float: left;
+	
+	height:307px;
+
+	
+	background-position:bottom;
+
+}
+.megamenu li .dropdown_first {
+	margin-left:-1px;
+}
+.megamenu li .droplast_right {
+	margin-right:-1px;
+}
+
+/* Showing Drop Down on Mouse Hover */
+
+.megamenu li:hover .dropdown_container {
+	top:45px;
+	left:auto;
+}
+.megamenu li:hover .dropdown_fullwidth {
+	top:45px;
+	left:-1px;
+}
+.megamenu li .dropdown_right {
+	right:0;
+}
+.megamenu li:hover .dropdown_right {
+	top:45px;
+	left:auto;
+	right:0;
+}
+
+#navigation .nav_wrap{
+	height:auto !important;
+}
+
+/*  _______________________________________________
+
+    06 DEFAULT THEMES, DARK & LIGHT (COMPULSORY)
+    _______________________________________________  */
+
+
+
+/* 4. Light Drop Down */
+.drop_down_content{
+	width:99.8%;
+	background:#f6f6f6;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	border:1px solid #ddd;
+	border-top:none;
+	position:relative;
+	padding-bottom:50px;
+}
+.megamenu_light .megamenu li .dropdown_container,
+.megamenu_light .megamenu li .dropdown_fullwidth,
+.megamenu_light .megamenu li .dropdown_flyout li ul {
+	border:none;
+		padding:0;
+	margin:0;
+	border-top-width: 0;
+	color: #212121;
+	width:100%;
+	margin-left:1px;
+	padding-bottom:14px;
+	background: url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/btm_shadow.png") repeat-x;
+	background-position:bottom;
+
+}
+
+.drop_down_footer{
+	padding-top:10px;
+	height:23px;
+	border-top:1px solid #ddd;
+	position:absolute;
+	bottom:0;
+	width:100%;
+
+}
+.drop_down_footer a{
+	color:#000;
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:10px;
+	
+	
+}
+.drop_down_footer a:hover{
+	color:#0c5196;
+	
+}
+
+.drop_column {
+	margin-top:15px;
+	padding-left:2%;
+	min-height:240px;
+}
+.column_one{
+	float:left;
+	width:34%;
+	border-right:1px solid #ddd;
+	
+}
+
+.column_two{
+	float:left;
+	width:29%;
+	border-right:1px solid #ddd;
+}
+.column_three{
+	float:left;
+	width:29%;
+}
+
+
+h3.menu_section_title{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	color:#555;
+}
+div.column_three div.drop_latest_news_article{
+	width:100%;
+}
+div.drop_latest_news_article{
+	
+	width:220px;
+}
+div.drop_latest_news_article h4,
+div.drop_latest_news_article h4 a{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:15px;
+	color:#000;
+	line-height:20px;
+	font-weight:normal;
+	margin:0;
+	text-decoration:none;
+}
+div.drop_latest_news_article h4 a:hover{
+	color:#0c5196;
+	
+}
+div.drop_latest_news_article p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:20px;
+	margin:0;
+	margin-bottom:10px;
+	color:#999;
+	font-weight:normal;
+	}
+	div.drop_latest_news_article img{
+		max-width:100%;
+	}
+	
+	.column_one ul,
+	.column_one ul li{
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.column_one ul li a{
+		font-size:15px;
+		text-decoration:none;
+		line-height:24px;
+		color:#000;
+		font-weight:normal !important;
+	}
+	.column_one ul li ul li a{
+		font-size:12px;
+		line-height:16px;
+	}
+	.column_one ul li a:hover{
+		color:#0c5196;
+	}
+	.two-col {
+       -moz-column-count: 2;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 2;
+       -webkit-column-gap: 20px;
+}
+/*  _______________________________________________
+
+    09 MOBILE DEVICES
+    _______________________________________________  */
+
+
+
+
+/* 1. Common Media Queries */
+
+
+@media only screen and (max-width: 984px) {
+
+	.megamenu img {
+		max-width: 96%;
+		height: auto;
+	}
+	.megamenu textarea {
+		width:96%;
+	}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	.megamenu_container .megamenu > li > div > .responsive_sixths,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_sixths {
+		width: 8.66%;
+	}
+	.megamenu_container .megamenu > li > div > .responsive_fourths,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_fourths {
+		width: 17%;
+	}
+	.megamenu_container .megamenu > li > div > .responsive_thirds,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_thirds {
+		width: 25.33334%;
+	}
+	.megamenu_container .megamenu > li > div > .responsive_halfs,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_halfs {
+		width: 42%;
+	}
+
+}
+
+
+/* 2. Horizontal Mega Menu Media Queries */
+
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+
+	.megamenu_container .megamenu > li {
+		margin:0 8px 0 0;
+	}
+		.megamenu_container .megamenu > li.right {
+			margin-right:-1px;
+		}
+		.megamenu_container .megamenu > li > a {
+			padding: 16px 0px 17px 10px;
+		}
+		.megamenu_container .megamenu > li .megamenu_drop {
+			
+		}
+
+}
+
+
+@media only screen and (max-width:767px) {
+
+	.megamenu_container {
+		height: auto;
+	}
+	.megamenu_container .megamenu > li,
+	.megamenu_container .megamenu > li:hover,
+	.megamenu_container .megamenu > li.right,
+	.megamenu_container .megamenu > li.right:hover {
+		float:none;
+		width:auto;
+		padding-right:0;
+		margin-right:0;
+	}
+		.megamenu_container .megamenu > li > a {
+			padding: 16px 10px 16px 10px;
+		}
+		.megamenu_container .megamenu li.right a {
+			margin-right:0;
+		}
+
+	 .megamenu_container .megamenu li:hover .dropdown_container,
+	 .megamenu_container .megamenu li:hover .dropdown_fullwidth,
+	 .megamenu_container .megamenu li:hover .dropdown_right {
+		top:auto;
+		left:-1px;
+	}
+  	.megamenu_container .megamenu .dropdown_1column,
+  	.megamenu_container .megamenu .dropdown_2columns,
+  	.megamenu_container .megamenu .dropdown_3columns,
+	.megamenu_container .megamenu .dropdown_4columns,
+	.megamenu_container .megamenu .dropdown_5columns,
+	.megamenu_container .megamenu .dropdown_6columns,
+	.megamenu_container .megamenu .dropdown_7columns,
+	.megamenu_container .megamenu .dropdown_8columns,
+	.megamenu_container .megamenu .dropdown_9columns,
+	.megamenu_container .megamenu .dropdown_10columns,
+	.megamenu_container .megamenu .dropdown_11columns,
+	.megamenu_container .megamenu .dropdown_12columns {
+		width: 100%;
+		padding-left:0;
+		padding-right:0;
+	}
+	.megamenu_container .megamenu .col_1,
+	.megamenu_container .megamenu .col_2,
+	.megamenu_container .megamenu .col_3,
+	.megamenu_container .megamenu .col_4,
+	.megamenu_container .megamenu .col_5,
+	.megamenu_container .megamenu .col_6,
+	.megamenu_container .megamenu .col_7,
+	.megamenu_container .megamenu .col_8,
+	.megamenu_container .megamenu .col_9,
+	.megamenu_container .megamenu .col_10,
+	.megamenu_container .megamenu .col_11,
+	.megamenu_container .megamenu .col_12 {
+		width:92%;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+	.megamenu_container .megamenu > li.megamenu_searchform .megamenu_searchfield {
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.megamenu .dropdown_flyout, 
+	.megamenu .dropdown_flyout .dropdown_flyout_level {
+		position: relative;
+		left:auto;
+		top:auto;
+		padding: 0;
+		margin: 0 4% 0 4%;
+	}
+	.megamenu .dropdown_flyout li,
+	.megamenu .dropdown_flyout ul li {
+		width: 100%;
+		padding: 3px 0 3px 0;
+	}
+	.megamenu .dropdown_flyout li:hover > .dropdown_flyout_level {
+		left:auto;
+		top:auto;
+	}
+	.megamenu .dropdown_flyout li:hover > .dropdown_flyout_level_left {
+		left:auto;
+		right:auto;
+	}
+	.megamenu_dark .megamenu li .dropdown_flyout li ul,	
+	.megamenu_light .megamenu li .dropdown_flyout li ul {
+		border:none;
+		background: none;
+	}
+	.megamenu_dark .megamenu li .dropdown_flyout .dropdown_parent {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown.png") no-repeat right 9px;
+	}
+	.megamenu_light .megamenu li .dropdown_flyout .dropdown_parent {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown-b.png") no-repeat right 9px;
+	}
+	.megamenu_dark .megamenu li .dropdown_flyout .dropdown_parent:hover,
+	.megamenu_dark .megamenu li .dropdown_flyout .dropdown_parent.active,
+	.megamenu_light .megamenu li .dropdown_flyout .dropdown_parent:hover,
+	.megamenu_light .megamenu li .dropdown_flyout .dropdown_parent.active {
+		background-color:transparent;
+	}
+	
+	.drop_down_content{
+		border-top:3px solid rgb(0, 51, 102);
+		}
+.drop_column {
+	min-height:0;
+}
+.column_one{
+	width:100%;
+	
+}
+
+.column_two{
+	width:100%;
+}
+.column_three{
+	width:100%;
+}
+
+}
+
+
+@media only screen and (max-width: 479px) {
+
+	.megamenu_container .megamenu > li > div > .responsive_sixths,
+	.megamenu_container .megamenu > li > div > .responsive_fourths,
+	.megamenu_container .megamenu > li > div > .responsive_thirds,
+	.megamenu_container .megamenu > li > div > .responsive_halfs {
+		width: 42%;
+	}
+
+}
+
+
+/* 3. Vertical Mega Menu Media Queries */
+
+
+@media only screen and (max-width:984px) {
+
+	.megamenu_container_vertical .megamenu li .dropvertical_container {
+		width: 400px;
+	}
+  	.megamenu_container_vertical .megamenu .dropdown_1column,
+  	.megamenu_container_vertical .megamenu .dropdown_2columns,
+  	.megamenu_container_vertical .megamenu .dropdown_3columns,
+	.megamenu_container_vertical .megamenu .dropdown_4columns,
+	.megamenu_container_vertical .megamenu .dropdown_5columns,
+	.megamenu_container_vertical .megamenu .dropdown_6columns,
+	.megamenu_container_vertical .megamenu .dropdown_7columns,
+	.megamenu_container_vertical .megamenu .dropdown_8columns,
+	.megamenu_container_vertical .megamenu .dropdown_9columns,
+	.megamenu_container_vertical .megamenu .dropdown_10columns,
+	.megamenu_container_vertical .megamenu .dropdown_11columns,
+	.megamenu_container_vertical .megamenu .dropdown_12columns {
+		width: 100%;
+		padding-left:0;
+		padding-right:0;
+	}
+	.megamenu_container_vertical .megamenu .col_1,
+	.megamenu_container_vertical .megamenu .col_2,
+	.megamenu_container_vertical .megamenu .col_3,
+	.megamenu_container_vertical .megamenu .col_4,
+	.megamenu_container_vertical .megamenu .col_5,
+	.megamenu_container_vertical .megamenu .col_6,
+	.megamenu_container_vertical .megamenu .col_7,
+	.megamenu_container_vertical .megamenu .col_8,
+	.megamenu_container_vertical .megamenu .col_9,
+	.megamenu_container_vertical .megamenu .col_10,
+	.megamenu_container_vertical .megamenu .col_11,
+	.megamenu_container_vertical .megamenu .col_12 {
+		width:92%;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_sixths,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_fourths,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_thirds,
+	.megamenu_container_vertical .megamenu > li > .dropvertical_container > div > .responsive_halfs {
+		width: 42%;
+	}
+
+	.megamenu_container_vertical .megamenu .dropdown_flyout, 
+	.megamenu_container_vertical .megamenu .dropdown_flyout .dropdown_flyout_level {
+		position: relative;
+		left:auto!important;
+		top:auto!important;
+		padding: 0;
+		margin: 0 4% 0 4%;
+	}
+	.megamenu_container_vertical .megamenu .dropdown_flyout li,
+	.megamenu_container_vertical .megamenu .dropdown_flyout ul li {
+		width: 100%!important;
+		padding: 3px 0 3px 0;
+	}
+	.megamenu_container_vertical .megamenu .dropdown_flyout li:hover > .dropdown_flyout_level {
+		left:auto!important;
+		top:auto!important;
+	}
+	.megamenu_container_vertical .megamenu .dropdown_flyout li:hover > .dropdown_flyout_level_left {
+		left:auto!important;
+		right:auto!important;
+	}
+	.megamenu_dark .megamenu_vertical li .dropdown_flyout li ul,	
+	.megamenu_light .megamenu_vertical li .dropdown_flyout li ul {
+		border:none;
+		background: none;
+	}
+	.megamenu_dark .megamenu_vertical li .dropdown_flyout .dropdown_parent {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown.png") no-repeat right 9px;
+	}
+	.megamenu_light .megamenu_vertical li .dropdown_flyout .dropdown_parent {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown-b.png") no-repeat right 9px;
+	}
+	.megamenu_dark .megamenu_vertical li .dropdown_flyout .dropdown_parent:hover,
+	.megamenu_dark .megamenu_vertical li .dropdown_flyout .dropdown_parent.active,
+	.megamenu_light .megamenu_vertical li .dropdown_flyout .dropdown_parent:hover,
+	.megamenu_light .megamenu_vertical li .dropdown_flyout .dropdown_parent.active {
+		background-color:transparent;
+	}
+
+}
+
+
+@media only screen and (max-width:767px) {
+
+	.megamenu_container_vertical,
+	.megamenu_container_vertical .megamenu {
+		width: 100%;
+	}
+	.megamenu_container_vertical .megamenu > li,
+	.megamenu_container_vertical .megamenu > li:hover,
+	.megamenu_container_vertical .megamenu > li.right,
+	.megamenu_container_vertical .megamenu > li.right:hover {
+		float:none;
+		width:auto;
+		padding-right:0;
+		margin-right:0;
+	}
+	.megamenu_container_vertical .megamenu li .megamenu_drop {
+		padding-right:30px;
+	}
+	.megamenu_light_bar .megamenu_vertical li .megamenu_drop {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown-b.png") no-repeat right center;
+	}
+	.megamenu_dark_bar .megamenu_vertical li .megamenu_drop {
+		background:url("http://www.moroccoworldnews.com/wp-content/themes/goodnews45/img/dropdown.png") no-repeat right center;
+	}
+	.megamenu_container_vertical .megamenu li .dropdown_container,
+	.megamenu_container_vertical .megamenu li .dropdown_fullwidth {
+		margin:0 auto 0 0;
+		-webkit-border-radius: 0 0 4px 4px;
+		-moz-border-radius: 0 0 4px 4px;
+		border-radius: 0 0 4px 4px;
+	}
+	.megamenu_container_vertical .megamenu li .dropdown_first {
+		margin:0 auto 0 -1px;
+	}
+	.megamenu_container_vertical .megamenu li .dropvertical_container {
+		width: 100%;
+	}
+
+	 .megamenu_container_vertical .megamenu li:hover .dropdown_container,
+	 .megamenu_container_vertical .megamenu li:hover .dropdown_fullwidth,
+	 .megamenu_container_vertical .megamenu li:hover .dropdown_right {
+		top:auto;
+		left:-1px;
+	}
+
+}
+
+
+
+
+
+div.drop_column.column_three div a.title,
+div.drop_column.column_two div a.title{
+	font-family:Georgia, Helvetica, sans-serif;
+	font-size:15px;
+	line-height:17px;
+	font-weight:500;
+	color:#000;
+	margin-bottom:0px;
+}
+div.drop_column.column_three div a.title:hover,
+div.drop_column.column_two div a.title:hover{
+	color:#1f527b;
+}
+div.drop_column.column_three div p.date,
+div.drop_column.column_two div p.date{
+	margin-top:0px;
+	margin-bottom:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:20px;
+	color:#999;
+}

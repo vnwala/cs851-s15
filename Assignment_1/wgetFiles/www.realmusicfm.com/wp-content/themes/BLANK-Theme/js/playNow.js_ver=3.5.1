@@ -1,0 +1,23 @@
+$(document).ready(function(){
+//http://184.173.230.189/~wwwrealm/wp-content/themes/BLANK-Theme/inc/whos-playing.php
+
+
+//http://www.realmusicfm.com/wp-content/themes/BLANK-Theme/inc/whosPlaying.txt
+$("#leftTopBTN a").click(function(){ 
+//alert("FIRED");
+	$.post( "http://www.realmusicfm.com/wp-content/themes/BLANK-Theme/inc/playNow.php", {getStream:1, otherVar:1} , function(data) {
+				
+			location.href=data.postBackURL;
+				//window.open(data.postBackURL, '_blank');
+				//alert(data.postBackURL);
+				
+				} , "json" );//remember to specify data type
+
+
+ })
+
+});
+	
+	
+  
+

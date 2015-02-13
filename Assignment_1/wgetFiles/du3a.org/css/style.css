@@ -1,0 +1,311 @@
+/* ==================================================================
+GLOBAL STYLES
+================================================================== */
+html,
+body { 
+	height:100%;
+	width:100%;
+	overflow: hidden-x;
+
+}
+
+body {
+	background:#FFF;
+	color:#000;
+	font-family:'JF Flat Regular', sans-serif!important;
+	font-size:12px;
+	font-weight:400;
+	line-height:1.8em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active { 
+	color:#00CCCC;
+	font-weight:400;
+	outline:none !important;
+	text-decoration:none;
+}
+
+ul,li { 
+	list-style:none;
+}
+
+#supersized img{
+	max-width: none !important;
+}
+
+/* ==================================================================
+ANIMATIONS
+================================================================== */
+ul.social a {
+	-webkit-transition: all 0.35s ease-in-out;
+   	   -moz-transition: all 0.35s ease-in-out;
+   		 -o-transition: all 0.35s ease-in-out;
+   		-ms-transition: all 0.35s ease-in-out;
+   			transition: all 0.35s ease-in-out;
+}
+
+.hi-icon-effect .hi-icon:after {
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+	   -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+		 -o-transition: -o-transform 0.2s, opacity 0.3s;
+		-ms-transition: -ms-transform 0.2s, opacity 0.3s;
+			transition: transform 0.2s, opacity 0.3s;
+}
+
+@-webkit-keyframes spinAround {
+	from { -webkit-transform: rotate(0deg) }
+	to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spinAround {
+	from { -moz-transform: rotate(0deg) }
+	to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes spinAround {
+	from { -moz-transform: rotate(0deg) }
+	to { -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes spinAround {
+	from { -moz-transform: rotate(0deg) }
+	to { -moz-transform: rotate(360deg); }
+}
+
+@keyframes spinAround {
+	from { transform: rotate(0deg) }
+	to { transform: rotate(360deg); }
+}
+
+.hi-icon-2-effect .hi-icon-2 {
+	-webkit-transition: background 0.2s, color 0.2s;
+	   -moz-transition: background 0.2s, color 0.2s;
+		 -o-transition: background 0.2s, color 0.2s;
+		-ms-transition: background 0.2s, color 0.2s;
+			transition: background 0.2s, color 0.2s;
+}
+
+/* ==================================================================
+TYPOGRAPHY
+================================================================== */
+
+p {
+	color:#818A90;
+	font-size:14px;
+	font-weight:300;
+	line-height:1.8em;
+	margin:10px 0;
+	width:100%!important;
+}
+
+em { 
+	color:#00CCCC;
+	font-style:normal;
+	font-weight:600 ;
+}
+
+
+h1,
+h3,
+.h1,
+.h3{
+  font-family: 'JF Flat Regular', cursive !important;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1 small,
+h3 small,
+.h1 small,
+.h3 small,
+h1 .small,
+h3 .small,
+.h1 .small,
+.h3 .small{
+  font-weight: normal;
+  font-family: 'JF Flat Regular', cursive !important;
+  line-height: 1;
+  color: #999999;
+}
+h1 { 
+	font-size:50px;
+	line-height:1.3em;
+	margin-bottom: 10px; 
+}
+
+h3 { 
+	font-size:20px;
+	line-height:1.8em;
+	font-weight: 300; 
+	margin-bottom: 20px; 
+}
+
+/* ==================================================================
+HOMEPAGE
+================================================================== */
+
+#homepage{
+	background: url(../images/patterns/pattern1.png) repeat;
+	position: relative;
+}
+
+.intro{
+	z-index:999999999999999999;
+	padding:20px;
+	text-align: center;
+
+	width: 100%;
+}
+
+.intro h1,
+.intro h3,
+.intro p { 
+	color:#FFF;
+}
+
+
+
+@keyframes arrows {
+	0% { bottom:40px; }
+	10% { bottom:50px; }
+	20% { bottom:40px; }
+	30% { bottom:50px; }
+	40% { bottom:30px; }
+	50% { bottom:50px; }
+	60% { bottom:40px; }
+	70% { bottom:50px; }
+	80% { bottom:30px; }
+	90% { bottom:50px; }
+	100% { bottom:40px; }
+}
+
+@-webkit-keyframes arrows {
+	0% { bottom:40px; }
+	10% { bottom:50px; }
+	20% { bottom:40px; }
+	30% { bottom:50px; }
+	40% { bottom:30px; }
+	50% { bottom:50px; }
+	60% { bottom:40px; }
+	70% { bottom:50px; }
+	80% { bottom:30px; }
+	90% { bottom:50px; }
+	100% { bottom:40px; }
+}
+
+@-moz-keyframes arrows {
+	0% { bottom:40px; }
+	10% { bottom:50px; }
+	20% { bottom:40px; }
+	30% { bottom:50px; }
+	40% { bottom:30px; }
+	50% { bottom:50px; }
+	60% { bottom:40px; }
+	70% { bottom:50px; }
+	80% { bottom:30px; }
+	90% { bottom:50px; }
+	100% { bottom:40px; }
+}
+
+@-ms-keyframes arrows {
+	0% { bottom:40px; }
+	10% { bottom:50px; }
+	20% { bottom:40px; }
+	30% { bottom:50px; }
+	40% { bottom:30px; }
+	50% { bottom:50px; }
+	60% { bottom:40px; }
+	70% { bottom:50px; }
+	80% { bottom:30px; }
+	90% { bottom:50px; }
+	100% { bottom:40px; }
+}
+
+@-o-keyframes arrows {
+	0% { bottom:40px; }
+	10% { bottom:50px; }
+	20% { bottom:40px; }
+	30% { bottom:50px; }
+	40% { bottom:30px; }
+	50% { bottom:50px; }
+	60% { bottom:40px; }
+	70% { bottom:50px; }
+	80% { bottom:30px; }
+	90% { bottom:50px; }
+	100% { bottom:40px; }
+}
+	
+/* ==================================================================
+Social
+================================================================== */
+.copyright{
+	width:100%;
+}
+
+.copyright p{
+	text-align: center;
+	font-size: 12px;
+	color:#fff;
+}
+
+ul.social { 
+	margin:30px auto;
+	display: block;
+}
+
+ul.social li{
+	display: inline-block;
+	margin:0px auto
+}
+
+ul.social a { 
+	display: inline-block;
+	padding: 12px;
+	background: none;
+	color:rgba(250, 250, 250, 0.9);
+	font-size: 16px;
+	font-family: 'Iklaa';
+	float: left;
+	border-radius: 30px;
+	margin:0px 1px
+}
+
+ul.social a:hover { 
+	color:rgba(255, 255, 255, 0.9);
+}
+
+ul.social a.icon-facebook:hover { 
+	background: #3b5998;
+}
+
+ul.social a.icon-twitter:hover { 
+	background: #00aced;
+}
+
+ul.social a.icon-skype:hover { 
+	background: #2aa4e9;
+}
+
+ul.social a.icon-linkedin:hover { 
+	background: #007bb6;
+}
+
+ul.social a.icon-pinterest:hover { 
+	background: #cb2027;
+}
+
+ul.social a.icon-googleplus:hover { 
+	background: #dd4b39;
+}
+
+ul.social a.icon-dribbble:hover { 
+	background: #ec4a89;
+}
+
+ul.social a.icon-vimeo:hover { 
+	background: #aad450;
+}

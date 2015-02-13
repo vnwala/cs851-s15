@@ -1,0 +1,61 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	フリーページ　共通
+--------------------------------------------------------------------- */
+div.freepage_ {
+}
+div.freepage_narrow_ {
+	padding: 0 60px;
+}
+div.freepage_ p {
+}
+div.freepage_ .box_ {
+	margin-bottom: 15px;
+}
+div.freepage_ .box_ p,
+div.freepage_ .box_ ul,
+div.freepage_ .box_ ol,
+div.freepage_ .box_ dl {
+	padding: 0 10px;
+}
+.to_top_ {
+	text-align: right;
+	margin-bottom: 15px!important;
+}
+
+
+/* --------------------------------------------------------------------
+	フリーページ　会社概要
+--------------------------------------------------------------------- */
+#company {
+}
+#company table {
+	width: 100%;
+}
+#company table th {
+	width: 8em;
+	vertical-align: top;
+}
+#company table td {
+	vertical-align: top;
+}
+
+
+/* --------------------------------------------------------------------
+	フリーページ　プライバシーポリシー
+--------------------------------------------------------------------- */
+#privacy {
+}
+#privacy p {
+	margin-bottom: 10px;
+	text-indent: 1em;
+}
+#privacy ol {
+	border-top: 1px dotted #CCC;
+}
+#privacy ol li {
+	padding: 10px 0;
+	border-bottom: 1px dotted #CCC;
+}
+

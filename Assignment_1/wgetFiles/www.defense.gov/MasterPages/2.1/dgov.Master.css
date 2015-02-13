@@ -1,0 +1,99 @@
+﻿/* Globals and Free range rules */    
+*{padding:0; margin:0;}
+html, body {font-family:Arial, Helvetica, Sans-Serif; font-size:.828em;}
+input, select, textarea {font-family:Arial, Helvetica, Sans-Serif; font-size:11px;}
+body {background:url(../../images/2.1/background_site.gif) #fff top center repeat-y;}
+
+/* Three Equal Columns */
+div.ThreeEqualColumns{width:330px; min-width:330px; float:left;}
+
+/* Box Style 1 - Light Blue gradient titlebar, 10px content padding */
+.Box1_Title {clear:both; position:relative; font-size:1.1em; padding:4px 10px; border:solid 1px #d7dde3; background:url(../../images/2.1/background_contentblocktitle1.gif) #e5e9ed top left repeat-x;}
+.Box1_Title span {position:absolute; right:0; top:3px; border:none;}
+.Box1_Title span img {position:relative; right:0; top:-1px; border:none; vertical-align:middle;}
+.Box1_Title span a.MoreLink {vertical-align:middle; color:#084476; text-decoration:none; font-weight:normal; margin-right:10px;}
+.Box1_Title span a.MoreLink:hover {color: #B41019;}
+.Box1_Title span a.RSSLink {margin-right:10px;}
+.Box1_SubTitle {font-size:1em; padding:4px 0; border-bottom:solid 1px #d7dde3;}
+div.Box1_Content {padding:10px;}
+div.Box1_Content a {color: #084476; text-decoration:none;}
+div.Box1_Content a:hover {color: #B41019;}
+div.Box1_Content ul.StandardList { list-style:none; margin:.6em 0 0 10px; font-size:1.1em;}
+div.Box1_Content ul.StandardList li {margin-bottom:.6em; padding-left:10px; background: url(../../images/2.1/bullet_square1.gif) no-repeat 0 .43em;}
+div.Box1_Content ol.StandardList {margin-left:18px; font-weight:bold;}
+div.Box1_Content ol.StandardList li {margin-bottom:.5em;}
+div.Box1_Content ol.StandardList a {font-weight:normal;}
+div.Box1_Content .ClosingLink {text-align:right; font-size:1.1em; clear:both;}
+div.Box1_Content .ClosingLink a {color:#002a58 !important; text-decoration:none;}
+div.Box1_Content .ClosingLink a:hover {color:#B41019 !important;}
+
+/* Box Style 2 - Transparent Title Bar, no content padding. */
+.Box2_Title {clear:both; position:relative; font-size:1.7em; font-family:Georgia, Garamond, "Times New Roman", Serif; padding:0 0 10px; border:none;  font-weight:normal; letter-spacing:-.03em; line-height:.8em;}
+.Box2_Title span {position:absolute; right:0; bottom:.5em; border:none; font-size:.7em;  font-family:Arial, Helvetica, Sans-Serif;}
+.Box2_Title span img {position:relative; right:0; top:-1px; border:none; vertical-align:middle; margin-left:10px;}
+.Box2_Title span a.MoreLink {font-size:.9em; vertical-align:middle; color:#084476; text-decoration:none; font-weight:normal;}
+.Box2_Title span a.MoreLink:hover {color: #B41019;}
+.Box2_Title span a.RSSLink {margin-right:10px;}
+div.Box2_Content {padding:0;}
+div.Box2_Content a {color: #084476; text-decoration:none;}
+div.Box2_Content a:hover {color: #B41019;}
+div.Box2_Content ul.StandardList { list-style:none; margin:.6em 0 0 10px; font-size:1.1em;}
+div.Box2_Content ul.StandardList li {margin-bottom:.6em; padding-left:10px; background: url(../../images/2.1/bullet_square1.gif) no-repeat 0 .43em;}
+div.Box2_Content ol.StandardList {margin-left:18px; font-weight:bold;}
+div.Box2_Content ol.StandardList li {margin-bottom:.5em;}
+div.Box2_Content ol.StandardList a {font-weight:normal;}
+div.Box2_Content .ClosingLink {text-align:right; font-size:1.1em; clear:both;}
+div.Box2_Content .ClosingLink a {color:#002a58 !important; text-decoration:none;}
+div.Box2_Content .ClosingLink a:hover {color:#B41019 !important;}
+
+/* Top level Wrappers */
+div#HeadingWrapper{position:relative; height:1%;} /* height:1% fixes IE6 hasLayout bug */
+div#PageWrapper{width:990px; margin:auto; position:relative; background-color:#fff;}
+div#ContentWrapper{position:relative; top:2.85em; height:1%;} /* height:1% fixes IE6 hasLayout bug */
+
+/* Site Title */
+div#HeadingWrapper h1#CompliantHeader {height:106px;}
+div#HeadingWrapper h1#CompliantHeader img {border:0;}
+div#HeadingWrapper h1#CompliantHeader span {display:none;}
+
+/* Search */
+div#HeadingWrapper div#SearchBlock {width:26em; padding:6px; position:absolute; bottom:12px; right:9px; border:solid 1px #c0cbd7; background-color:#e5ebf1;white-space:nowrap;}
+div#HeadingWrapper input.SearchBlockText {font-size: 1.2em; padding:3px .4em; width:19em; border:solid 1px #000; color:#000;}
+div#HeadingWrapper input.SearchBlockSubmit { vertical-align:middle; margin-left:4px;}
+
+/* Main Menu */	
+#MainMenuBlock {z-index:20000; white-space:nowrap; width:990px; border:solid 1px #ccc; border-right:none;  border-left:none; position:absolute; top:-2.8em;  background:url(../../images/2.1/background_mainmenu.gif) #012D5A top left repeat-x;}
+#MainMenuBlock h2 {display:none;}
+#MainMenuBlock h3 {display:none;}
+#MainMenuBlock #MainMenuList {font-size:.9em; list-style:none; padding-left:10px;}
+#MainMenuBlock .MenuItem {float:left; text-transform:uppercase; white-space:nowrap; position:relative;}
+#MainMenuBlock .MenuItem a {display:block; font-family: "Times New Roman",Times,serif; font-weight:bold; text-decoration:none; color:#fff; padding:.9em 1em; white-space:nowrap; border-left:solid 1px transparent;  border-right:solid 1px transparent;}
+#MainMenuBlock .MenuItemLast a {margin-right:0;}
+#MainMenuBlock .MenuItemSelected > a {background-color: #fff; color:#B41019; border-color:#ccc;}  /* MenuItemSelected class styled the same as :hover, but used only in jQuery implementation */
+#MainMenuBlock .MenuItem > a:hover {background-color: #fff; color:#B41019; border-color:#ccc;} /* hover class styled the same as MenuItemSelected, but used only in CSS implementation */
+#MainMenuBlock .Menu > .MenuItem > .SubMenu {border-top:none;}
+#MainMenuBlock .SubMenu {z-index:10000; box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35); -moz-box-shadow: 0px 2px 3px  rgba(0, 0, 0, 0.35); -webkit-box-shadow: 0px 2px 3px  rgba(0, 0, 0, 0.35); display:none; list-style:none; position:absolute; border:solid 1px #ccc;}
+#MainMenuBlock .SubMenu .MenuItem {list-style:none; clear:both;}
+#MainMenuBlock .SubMenu .MenuItem a {background-color:#fff; color:#084476; font-weight:normal; font-size:1.3em; text-transform:capitalize; margin-right:0; border:none; font-family:Arial, Helvetica, Sans-Serif; padding:.4em 20px .4em 15px;}
+#MainMenuBlock .SubMenu .MenuItemSelected > a {color:#fff; background-color:#295280;}
+#MainMenuBlock .SubMenu .MenuItemArrow {position:absolute; right:5px; background:url(../../images/2.1/arrows/arrow_10px_right_black.gif) transparent center no-repeat; height:10px; width:10px;}
+#MainMenuBlock .SubMenu .MenuItemArrowSelected {background-image:url(../../images/2.1/arrows/arrow_10px_right_white.gif);}
+		
+/* Footer Menu */
+div#FooterBlock {clear: both; background:url(../../images/2.1/Background_Footer.gif) #e1e5ea top left no-repeat; width:967px; padding:13px 0 13px 23px; min-height:192px;}
+div#FooterBlock h3 {display:none;}
+ul.FooterColumn {float:left; list-style:none; padding-right:5em; margin-bottom:2em;}
+ul.FooterColumn a {color:#404040; text-decoration:none; line-height:2em; font-size:.8em;}
+ul.FooterColumn a:hover {color:#000;}
+
+/* Footer "Stay Connected" Icons */
+div#StayConnectedBlock {float:right; width:34em; min-width:380px;}
+div#StayConnectedBlock h3 {display:inline; left:5px; position:relative; text-transform:uppercase; font-size:1.6em; font-family:"Times New Roman",Times,serif; color:#7a7a7a; font-weight:normal;}
+ul#StayConnectedList {list-style:none;}
+ul#StayConnectedList li {float:left; width:50px; height:5em; text-align:center; margin:6px 12px;}
+ul#StayConnectedList img {border:none;}
+ul#StayConnectedList span {display:block;}
+div#StayConnectedBlock a {text-decoration:none; font-size:.8em; font-weight:bold; color:#6a6a6a; display:block;}
+div#StayConnectedBlock a:hover {color:#404040;}
+div#StayConnectedBlock div {clear:both; text-align:right; padding: 1em 2em 0 0;}
+div#StayConnectedBlock div a {font-size:1.2em; white-space:nowrap; font-family: "Times New Roman",Times,serif; font-weight:normal;}

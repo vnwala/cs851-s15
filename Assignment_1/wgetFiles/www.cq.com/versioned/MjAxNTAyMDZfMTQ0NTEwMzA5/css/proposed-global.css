@@ -1,0 +1,3 @@
+  ul.csv li { display: inline; }
+  ul.csv li:after { content: ","; } 
+  ul.csv li:last-child:after { content: ""; }

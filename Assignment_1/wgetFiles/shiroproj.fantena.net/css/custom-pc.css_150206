@@ -1,0 +1,21 @@
+.container {width:1060px;}
+.col-lg-8, .col-lg-4 {float:left;}
+.col-lg-8 {width: 740px;}
+.col-lg-4 {width: 320px;}
+
+.cust-paneltable {margin-bottom:5px;table-layout:fixed;}
+.cust-panelsitetable {margin-bottom:0;table-layout:fixed;}
+
+.cust-paneltable tbody>tr>td, .cust-panelsitetable tbody>tr>td{padding:0;}
+.cust-paneltable a, .cust-panelsitetable a{display: block;padding:8px;
+	text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.cust-paneltable .rsstime{padding:8px;width:45px;}
+
+.navpills-category{margin-bottom:5px;}
+.navpills-category>li.active>a{color:#428bca;background-color:#eaf4ff;
+	font-weight:bold;}
+.navpills-category>li>a{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+.fam_main {text-align:left;font-size: 16px;background-color: #fff;padding: 5px 0;}
+.fam_main img {width: 70px;height: auto;}
+

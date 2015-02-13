@@ -1,0 +1,1550 @@
+@charset "UTF-8";
+
+
+/** div#title */
+/**************************************/
+div#title {
+    background:      url("../../img/products/detail/title_bg.gif") left top repeat-y;
+    margin-bottom:   15px;
+}
+
+div#title div.top {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/title_top.gif") left top no-repeat;
+    height:          3px;
+}
+
+div#title div.top span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/title_top.gif") right top no-repeat;
+    display:         block;
+    width:           3px;
+    height:          3px;
+}
+
+div#title div.bottom {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/title_bottom.gif") left top no-repeat;
+    height:          3px;
+}
+
+div#title div.bottom span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/title_bottom.gif") right top no-repeat;
+    display:         block;
+    width:           3px;
+    height:          3px;
+}
+
+div#title div#title_in {
+    border-right:    1px solid #fcd409;
+}
+
+div#title div#title_in h1 {
+    padding:         10px 20px;
+    font-size:       16px;
+}
+
+div#title div#title_in p {
+    padding:         0 20px 5px 0;
+    text-align:      right;
+}
+
+div#title div#title_in p em {
+    color:           #ff0000;
+    margin:          0 10px 0 5px;
+}
+
+div#title div.tag {
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+/** div#main */
+/**************************************/
+div#main {
+    margin-bottom:   15px;
+    padding-bottom:  10px;
+}
+
+
+/** div#photos */
+/**************************************/
+div#photos {
+    float:           left;
+}
+
+div#photos > img {
+    margin:          0 0 10px 0;
+}
+
+div#photos ul {
+
+}
+
+div#photos ul li {
+    margin:          0 5px 5px 0;
+    float:           left;
+}
+
+div#photos ul li a img {
+    border:          1px solid #d0d1d1;
+    display:         block;
+}
+
+div.photo_rightbox {
+    margin: 0 0 0 330px;
+}
+
+/* 0801 change */
+div#photos img.preview {
+    display: block;
+    margin: 3px auto;
+}
+
+/* 0802 change */
+div#photos p {
+    width: 300px;
+}
+
+
+/** div.float */
+/**************************************/
+div.pricebox {
+    /* width: 50%; */                   /* 20140902 change BS */
+    border-bottom: 1px dotted #000000;  /* 0930 change BS */
+    margin-bottom: 10px;
+}
+
+div.pricebox > div {
+    /*margin:          0 0 0 330px;*/
+}
+
+div.pricebox div.left {
+}
+div.pricebox div.right {
+}
+div.pricebox div.right div.add_cart {
+    background-color: #d6f3fc;
+    border-radius: 5px;
+    border: 1px solid #91dffe;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 151px;
+    float: left; /* 20140902 change BS */
+}
+div.pricebox div.right div.add_cart div.cart_button_area a.tenpo_uketori img{
+    margin-top: 5px;
+}
+div.pricebox > div.border {
+    border-top:      1px dotted #999999;
+    margin-top:      15px;
+    padding-top:     10px;
+}
+
+div.pricebox dl {
+    margin: 10px 0;
+    /* float: left; */
+    display: block;
+}
+
+div.pricebox dl dt,
+div.pricebox dl dd {
+    line-height:     19px;
+    display:         inline;
+}
+
+div.float dl dd {
+    font-size:       14px;
+}
+
+dl.price dd   { color: #ff0000; font-size: 20px; }
+dl.point dd   { color: #2495e3; font-size: 20px; }
+dl.stock dd   { color: #ff7200; font-size: 20px; }
+dl.special_price_pre dd  { text-decoration: line-through;}
+
+div.pricebox dl.point {
+    display: block;
+    margin: 10px 0;
+}
+
+div.float a {
+    position:        relative;
+    top:             4px;
+    margin:          0 0 0 5px;
+}
+
+div.float a img {
+    vertical-align:  bottom;
+}
+
+div.float p {
+    color:           #333333;
+    margin:          0 0 10px 0;
+}
+
+div.pricebox {
+    position: relative;
+}
+
+div.bg_gray {
+    position: absolute;
+    width: 205px;
+    margin: 0 0 0 205px;
+}
+
+div.release_date {
+    background: #f5f5f5;
+}
+div.release_date div.cart_bg {
+    width: 205px;
+}
+
+div.add_cart,
+div.cart_bg {
+/*    background-color: #f5f5f5; */ /* 0930 change BS */
+    padding:         5px 0 8px 10px;
+}
+
+div.cart_select_area {
+    vertical-align: top;
+    text-align: center;
+    margin: 0 auto 15px;
+    width: 151px;
+}
+div.cart_button_area a {
+    top: 0;
+}
+/*div.cart_button_area,
+div.cart_select_area {
+    display: inline-block;
+}*/
+
+div.float a.tenpo_uketori {
+    margin: 10px 0 0 5px;
+    display: block;
+    width: 151px;
+}
+
+div.float div.share {
+/*    background-color: #f5f5f5; */ /* 0930 change BS */
+    text-align:      left;
+    padding:         5px 0 10px 0;
+    display:          inline-block;
+    width:              100%;
+    *display:          inline;
+    *zoom:              1;
+}
+
+div.float div.share div.url {
+    float:           right;
+    margin:          0 0 0 10px;
+}
+
+div.float div.share div.sns {
+    float:           left; /* 0930 change BS */
+    margin-right:    15px;
+}
+
+div.float div.share > div {
+    padding:         0px;
+}
+
+div.float div.share div.facebook {
+    position:        relative;
+    top:             5px;
+    left:            0px;
+    text-align:      left;
+    width:           65px;
+    height:          25px;
+    margin:          0 10px 0 0;    /* 0930 change BS */
+    overflow:        hidden;
+    float:           left;
+}
+
+*:first-child+html div.float div.share div.facebook {
+    width:           77px;
+    height:          25px;
+}
+
+div.float div.share div.fav {
+    text-align:      left;
+    margin:          -1px 10px 0 -5px;    /* 0930 change BS */
+    float:           left;
+}
+
+div.float div.share div.google {
+    text-align:      left;
+    margin:          0 10px 0 0;    /* 0930 change BS */
+    padding:         5px 0 0 0;
+    float:           left;
+}
+
+div.float div.share div.twitter {
+    text-align:      left;
+    margin:          0 10px 0 0;    /* 0930 change BS */
+    padding:         5px 0 0 0;
+    float:           left;
+}
+
+div.float div.share dl {
+    margin:          0 0 10px 5px;
+    /*float:           right;*/
+    text-align:      right;
+    display:         inline-block;
+    *display:          inline;
+    *zoom:              1;
+}
+
+div.float div.share dl.last {
+    margin: 0 15px 10px 5px;
+}
+
+div.float div.share dl dt {
+    display:         inline-block;
+    line-height:     29px;
+    height:          29px;
+    /*float:           left;*/
+    margin:          0 10px 0 0;
+    *display:          inline;
+    *zoom:              1;
+}
+
+div.float div.share dl dd {
+    display:         inline-block;
+    line-height:     29px;
+    height:          29px;
+    /*float:           left;*/
+    *display:          inline;
+    *zoom:              1;
+}
+
+/*div.float div.share dl dd:nth-of-type(1) {
+    margin-right:         15px;
+}*/
+
+/* 0809 change */
+/*heightをコメントアウト*/
+div.float div.share dl dd a,
+div.float div.share dl dd a img {
+    top:             10px;
+    display:         block;
+    /*height:          29px;*/
+    margin:          0;
+}
+
+
+/** div#note */
+/**************************************/
+div#note {
+    border-bottom:   1px dotted #999999;
+    margin-bottom:   10px;
+}
+
+div#note div {
+    margin:          0 0 15px 0;
+}
+
+div#note div img {
+    float:           left;
+}
+
+div#note div dl {
+    margin:          0 5px 0 160px;
+}
+
+div#note div dl dt {
+    font-size:       14px;
+    font-weight:     bold;
+    color:           #ff0000;
+    margin:          0 0 5px 0;
+}
+
+div#note div dl dt span {
+    color:           #0bcbd0;
+}
+
+div#note div dl dd p {
+    margin:          0 0 5px 0;
+}
+
+div#note h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/category_relative/list_head.gif") left top no-repeat;
+    line-height:     25px;
+    height:          25px;
+    margin:          0 0 15px 0;
+    padding:         0 0 0 10px;
+    font-size:       14px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+}
+
+div#note h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/category_relative/list_head.gif") right top no-repeat;
+    display:         block;
+    width:           1px;
+    height:          32px;
+}
+
+
+/** div#detail */
+/**************************************/
+div#detail_photo {
+    float:           left;
+    /*width:           50%;*/
+}
+
+div#detail_info {
+    margin:          0 0 30px 0;
+    float:           left;
+    /*width:           50%;*/
+}
+
+div#detail_info p {
+    font-size:       13px;
+    margin:          10px 0 10px 0;
+}
+
+
+/** div#fair_advice */
+/**************************************/
+div#fair_advice {
+    margin-bottom:   30px;
+    float:           left;
+    width:           48%;
+    margin: 0 14px 10px 0;
+}
+
+div#fair_advice h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/fair_advice_head_bg.gif") left top no-repeat;
+    line-height:     32px;
+    height:          32px;
+    margin:          0 0 15px 0;
+    padding:         0 0 0 58px;
+    font-size:       14px;
+}
+
+div#fair_advice h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/fair_advice_head_bg.gif") right top no-repeat;
+    display:         block;
+    width:           1px;
+    height:          32px;
+}
+
+div#fair_advice ul {
+
+}
+
+div#fair_advice ul li {
+
+}
+
+div#fair_advice ul li img {
+    float:           left;
+}
+
+div#fair_advice ul li h4 {
+    color:           #ff0000;
+    font-size:       15px;
+    margin:          0 0 5px 160px;
+}
+
+div#fair_advice ul li a {
+    background:      url("../../img/products/detail/fair_advice_arrow.gif") left 6px no-repeat;
+    margin:          0 0 5px 10px;
+    padding:         0 0 0 10px;
+}
+
+/* 0801 change */
+div#fair_advice dl {
+    margin:          10px 5px 0 160px;
+}
+
+div#fair_advice dl dt {
+    font-size:       14px;
+    font-weight:     bold;
+    color:           #ff0000;
+    margin:          0 0 5px 0;
+}
+
+div#fair_advice dl dt span {
+    color:           #0bcbd0;
+}
+
+div#fair_advice dl dd p {
+    margin:          0 0 5px 0;
+}
+
+/** div#anitag */
+/**************************************/
+div#anitag {
+    margin-bottom:   20px;
+    /*float:           left;*/
+    /*width:           50%;*/
+}
+
+div.anitag_half {
+    width: 50%;
+    float:           right;
+}
+div.anitag_wide {
+    width: 100%;
+    float:           left;
+}
+
+div#anitag h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/anitag_head_bg.gif") left top no-repeat;
+    line-height:     32px;
+    height:          32px;
+    margin:          2px 0 15px 0;
+    padding:         0 0 0 35px;
+    font-size:       14px;
+}
+
+div#anitag h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/anitag_head_bg.gif") right top no-repeat;
+    display:         block;
+    width:           1px;
+    height:          32px;
+}
+
+div#anitag > p {
+    margin:          0 0 10px 0;
+}
+
+div#anitag div.login {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/login_bg.gif") left top no-repeat;
+    height:          45px;
+    padding:         0 8px;
+}
+
+div#anitag div.login p {
+    line-height:     45px;
+    float:           left;
+}
+
+div#anitag div.login p img.icon {
+    position:        relative;
+    top:             2px;
+    margin:          0 5px 0 0;
+}
+
+div#anitag div.login p a {
+    margin:          0 0 0 10px;
+}
+
+div#anitag div.login p a img {
+    position:        relative;
+    top:             8px;
+}
+
+/* 0806 change */
+div#anitag div.login input {
+    float:left;
+    margin:10px 0;
+}
+
+/* 0806 change */
+div#anitag div.login form a {
+    display:block;
+    float:left;
+    margin:10px;
+}
+
+div#anitag div.whattag > a {
+    position:        relative;
+    top:             12px;
+    float:           right;
+}
+
+div#anitag div.whattag > a img {
+    position:        relative;
+    top:             2px;
+    margin:          0 5px 0 0;
+}
+
+div#anitag div.login > span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/login_bg.gif") right top no-repeat;
+    display:         block;
+    width:           3px;
+    height:          45px;
+}
+
+div#anitag input[type="text"] {
+    font-size:       12px;
+    color:           #4c4c4c;
+    border:          1px solid #97dbf3;
+    padding:         5px;
+    background:      #fefcf1;
+    width:           170px;
+}
+
+
+/** div#similar */
+/**************************************/
+div#similar {
+    margin-bottom:   20px;
+}
+
+div#similar h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/similar_head.gif") left top no-repeat;
+    font-size:       12px;
+    font-weight:     bold;
+    line-height:     23px;
+    height:          25px;
+    margin:          0 0 10px 0;
+    padding:         0 10px;
+}
+
+div#similar h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/similar_head.gif") right top no-repeat;
+    width:           1px;
+    height:          25px;
+}
+
+div#similar ul {
+    border:          none !important;
+}
+
+div#similar div.more {
+    text-align:      right;
+}
+
+div#similar div.more a {
+    background:      url("../../img/products/detail/similar_arrow.gif") left 6px no-repeat;
+    padding:         0 0 0 10px;
+}
+
+
+/** div#check */
+/**************************************/
+div#check {
+    margin-bottom:   20px;
+}
+
+div#check h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/check_head_bg.gif") left top no-repeat;
+    font-size:       12px;
+    font-weight:     bold;
+    line-height:     25px;
+    height:          25px;
+    margin:          0 0 10px 0;
+    padding:         0 10px;
+}
+
+div#check h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/check_head_bg.gif") right top no-repeat;
+    width:           1px;
+    height:          25px;
+}
+
+div#check ul {
+    border:          none !important;
+}
+
+div#check div.more {
+    text-align:      right;
+}
+
+div#check div.more a {
+    background:      url("../../img/products/detail/check_arrow.gif") left 6px no-repeat;
+    padding:         0 0 0 10px;
+}
+
+
+/** div#related_products */
+/**************************************/
+div#related_products {
+
+}
+
+div#related_products div.related_products_inner {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/related_products_head.gif") left top no-repeat;
+    font-size:       12px;
+    font-weight:     bold;
+    line-height:     25px;
+    height:          25px;
+    margin:          0 0 10px 0;
+    padding:         0 10px;
+}
+
+div#related_products div.related_products_inner em {
+    text-decoration: none;
+    color:           #333333;
+    font-size:       11px;
+    font-weight:     normal;
+}
+
+div#related_products div.related_products_inner img {
+    margin:          5px 0 0 0;
+}
+
+div#related_products div.related_products_inner span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/related_products_head.gif") right top no-repeat;
+    width:           1px;
+    height:          25px;
+}
+
+div#related_products div.related_products_inner div {
+    position:        absolute;
+    right:           15px;
+    top:             0;
+}
+
+div#related_products div#related_book {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_book i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_book_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_book a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_goods {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_goods i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_goods_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_goods a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_movie {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_movie_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_movie i {
+    position:        absolute;
+    top:             4px;
+    left:            5px;
+    background:      url("../../img/products/detail/related_movie_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_movie a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_music {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_music i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_music_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_music a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_figure {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_figure i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_figure_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_figure a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_game {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_game i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_game_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_game a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_calendar {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_calendar i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_calendar_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_calendar a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_library {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_library i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_library_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_library a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_pamphlet {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_pamphlet i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_pamphlet_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_pamphlet a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_ticket {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_ticket i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_ticket_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_ticket a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_gazai {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_gazai i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_gazai_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_gazai a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_dojin {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_dojin i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_dojin_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_dojin a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_costume {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_costume i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_costume_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_costume a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products div#related_outlet {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    border:          1px solid #44b5de;
+    background:      url("../../img/products/detail/related_goods_bg.gif") left bottom repeat-x;
+    font-weight:     bold;
+    margin:          0 0 10px 0;
+    padding:         10px 35px;
+}
+
+div#related_products div#related_outlet i {
+    position:        absolute;
+    top:             4px;
+    left:            2px;
+    background:      url("../../img/products/detail/related_outlet_icon.png") left top no-repeat;
+    display:         block;
+    width:           31px;
+    height:          26px;
+}
+
+div#related_products div#related_outlet a.close_item {
+    position:        absolute;
+    top:             10px;
+    right:           10px;
+}
+
+div#related_products ul {
+    border:          none !important;
+}
+
+div#related_products div.more {
+    text-align:      right;
+    margin:          0 0 20px 0;
+}
+
+div#related_products div.more a {
+    background:      url("../../img/products/detail/related_products_arrow.gif") left 6px no-repeat;
+    padding:         0 0 0 10px;
+}
+
+
+/** div#user_review */
+/**************************************/
+div#user_review {
+    margin-bottom:   20px;
+}
+
+div#user_review h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/user_review_head_bg.gif") left top no-repeat;
+    font-size:       12px;
+    font-weight:     bold;
+    line-height:     30px;
+    height:          30px;
+    margin:          0 0 10px 0;
+    padding:         0 10px;
+}
+
+div#user_review h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/user_review_head_bg.gif") right top no-repeat;
+    width:           1px;
+    height:          30px;
+}
+
+div#user_review ul {
+    margin:          0 0 10px 0;
+}
+
+div#user_review p {
+    margin:          0 0 3px 0;
+}
+
+div#user_review div.login {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/login_bg.gif") left top no-repeat;
+    height:          45px;
+    padding:         0 15px;
+}
+
+div#user_review div.login p {
+    line-height:     45px;
+    float:           left;
+}
+
+div#user_review div.login p img.icon {
+    position:        relative;
+    top:             2px;
+    margin:          0 5px 0 0;
+}
+
+div#user_review div.login p a {
+    margin:          0 0 0 10px;
+}
+
+div#user_review div.login p a img {
+    position:        relative;
+    top:             10px;
+}
+
+div#user_review div.login > a {
+    position:        relative;
+    top:             12px;
+    float:           right;
+}
+
+div#user_review div.login > a img {
+    position:        relative;
+    top:             2px;
+    margin:          0 5px 0 0;
+}
+
+div#user_review div.login > span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/login_bg.gif") right top no-repeat;
+    display:         block;
+    width:           3px;
+    height:          45px;
+}
+
+
+/** div#buy */
+/**************************************/
+div#buy {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/buy_bg.gif") left top no-repeat;
+    height:          130px;
+}
+
+div#buy span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/buy_bg.gif") right top no-repeat;
+    display:         block;
+    width:           2px;
+    height:          130px;
+}
+
+div#buy > div {
+    padding:         1px 0;
+}
+
+div#buy > div div.left {
+    background:      url("../../img/products/detail/buy_line.gif") right top no-repeat;
+    width:           40%;
+    height:          128px;
+    float:           left;
+}
+
+div#buy > div div.left p {
+    font-weight:     bold;
+    line-height:     1.5;
+    padding:         10px;
+}
+
+div#buy > div div.right {
+    width:           57%;
+    float:           right;
+    padding:         5px 0 0 0;
+}
+
+div#buy > div div.right dl {
+    margin:          0 15px 3px 0;
+    float:           left;
+}
+
+div#buy > div div.right div.footer_cart {
+    margin: 10px 0 0 0;
+}
+
+/*div#buy > div div.right */dl.special_price_pre dd {
+    text-decoration: line-through;
+}
+
+div#buy > div div.right dl dt,
+div#buy > div div.right dl dd {
+    line-height:     19px;
+    display:         inline;
+}
+
+div#buy > div div.right dl dd {
+    font-size:       14px;
+}
+
+div#buy > div div.right dl.price dd   { color: #ff0000; }
+div#buy > div div.right dl.point dd   { color: #2495e3; }
+div#buy > div div.right dl.stock dd   { color: #ff7200; }
+
+div#buy > div div.right a,
+div#buy > div div.right #stpcartimage {
+    position:        relative;
+    top:             4px;
+    margin:          0 0 0 5px;
+}
+
+div#buy > div div.right a img,
+div#buy > div div.right #stpcartimage {
+    vertical-align:  bottom;
+}
+
+#anitagu_input {
+    font-size: 14px;
+    color: #4c4c4c;
+    border: 1px solid #97dbf3;
+    padding: 5px;
+    background: #fefcf1;
+}
+
+/** div#slideshow */
+/**************************************/
+div#slideshow,
+div#slideshow2 {
+    position:        relative;
+    /*top:             0px;*/
+    /*left:            0px;*/
+}
+
+
+div#slideshow h2,
+div#slideshow2 h2 {
+    position:        relative;
+    top:             0px;
+    left:            0px;
+    background:      url("../../img/products/detail/similar_head.gif") left top no-repeat;
+    font-size:       12px;
+    font-weight:     bold;
+    line-height:     23px;
+    height:          25px;
+    margin:          0 0 10px 0;
+    padding:         0 10px;
+}
+
+div#slideshow h2 span,
+div#slideshow2 h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/similar_head.gif") right top no-repeat;
+    width:           1px;
+    height:          25px;
+}
+
+
+
+/*div#slideshow h2,
+div#slideshow2 h2 {
+    background:      url("../../img/products/detail/similar_head.gif") left top no-repeat;
+    font-size:       14px;
+    font-weight:     bold;
+    line-height:     30px;
+    padding:         0 0 0 10px;
+    height:          30px;
+}*/
+
+div#slideshow div.scroll,
+div#slideshow2 div.scroll {
+    /*width:           96%;*/
+    overflow:        hidden;
+    margin:          0 20px;
+    padding:         15px 0 0 0;
+}
+
+div#slideshow div.scroll ul,
+div#slideshow2 div.scroll ul {
+    /*position:        relative;*/
+    width:           9999px;
+}
+
+/* 0806 change */
+div#slideshow div.scroll ul li,
+div#slideshow2 div.scroll ul li {
+    width:           170px;
+    margin:          0 15px 0 0;
+    float:           left;
+}
+
+div#slideshow div.scroll ul li p,
+div#slideshow2 div.scroll ul li p {
+    text-align:      left;
+}
+
+div#slideshow div.ctrl a,
+div#slideshow2 div.ctrl a {
+    position:        absolute;
+    top:             85px;
+}
+
+div#slideshow div.ctrl a.prev {  left: 0px; }
+div#slideshow div.ctrl a.next { right: 0px; }
+div#slideshow2 div.ctrl a.prev {  left: 0px; }
+div#slideshow2 div.ctrl a.next { right: 0px; }
+
+/** div#reviewBox */
+/**************************************/
+div.reviewBox p {
+    line-height: 22px;
+}
+
+div.reviewBox p.all_review a {
+    padding: 0 0 0 5px;
+}
+
+/** star */
+/**************************************/
+ul.list {
+    list-style-type: disc;
+    margin:          10px 0 25px 18px;
+}
+
+ul.list li {
+    margin:          0 0 15px 0;
+    list-style: none;
+}
+
+ul.list li.star_1 span {
+    background:      url("../../img/mypage/review/star_1.gif") no-repeat;
+    width:           92px;
+    padding:         0 97px 0 0;
+}
+
+ul.list li.star_2 span {
+    background:      url("../../img/mypage/review/star_2.gif") no-repeat;
+    width:           92px;
+    padding:         0 97px 0 0;
+}
+
+ul.list li.star_3 span {
+    background:      url("../../img/mypage/review/star_3.gif") no-repeat;
+    width:           92px;
+    padding:         0 97px 0 0;
+}
+
+ul.list li.star_4 span {
+    background:      url("../../img/mypage/review/star_4.gif") no-repeat;
+    width:           92px;
+    padding:         0 97px 0 0;
+}
+
+ul.list li.star_5 span {
+    background:      url("../../img/mypage/review/star_5.gif") no-repeat;
+    width:           92px;
+    padding:         0 97px 0px 0;
+    margin: 10px 0 0 0;
+    display: block;
+}
+
+/** div#incident_aniword */
+/**************************************/
+div#incident_aniword h2 {
+position: relative;
+top: 0px;
+left: 0px;
+background: url("../../img/products/detail/user_review_head_bg.gif") left top no-repeat;
+font-size: 12px;
+font-weight: bold;
+line-height: 30px;
+height: 30px;
+margin: 30px 0 10px 0;
+padding: 0 10px;
+}
+
+/* 0807 change */
+div#incident_aniword h2 span {
+    position:        absolute;
+    top:             0px;
+    right:           0px;
+    background:      url("../../img/products/detail/user_review_head_bg.gif") right top no-repeat;
+    width:           1px;
+    height:          30px;
+}
+
+div#incident_aniword h4 {
+    background: #F5F5F5;
+    /*margin: 20px 0 0 0;
+    padding: 5px 10px;*/
+    /*background: url("../../img/animeword/index/word_icon.gif") left 1px no-repeat;*/
+/*font-size: 13px;*/
+margin: 10px 0 5px 0;
+padding: 5px 10px;
+/*border: 1px solid #d5f3fc;*/
+color: #F06691;
+}
+
+div#incident_aniword ul {
+    margin:          0 0 0 0;
+    /*border-bottom:   1px dotted #999999;*/
+    padding:         0 0 10px 0;
+}
+
+div#incident_aniword ul.last {
+    border:          none;
+}
+
+div#incident_aniword ul li {
+    /*float:           left;
+    width:           131px;*/
+    padding:         0px 5px 0 0;
+    overflow:        hidden;
+    display: inline-block;
+}
+
+div#incident_aniword div.thumb {
+    float:           left;
+    width:           60px;
+}
+
+div#incident_aniword div.thumb img {
+    border:          1px solid #666666;
+}
+
+div#incident_aniword div.data {
+    /*float:           left;*/
+    /*width:           71px;*/
+    /*display: inline-block;*/
+    height: 20px;
+    /*line-height: 20px;*/
+    margin: 3px 0 4px 0;
+    padding: 0 5px 0 6px;
+    background: #D6F3FC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #2495E3;
+}
+div#incident_aniword div.data div.lavel_works {
+    display: inline-block;
+}
+div#incident_aniword div.data a {
+    vertical-align: bottom;
+}
+div#incident_aniword div.data:hover {
+    /*background-color: #69d3f4;*/
+    background-color: #EAF4F7;
+}
+div#incident_aniword div.data img {
+    margin: 2px 2px 0 0;
+}
+div#incident_aniword div.data p {
+    display: inline-block;
+}

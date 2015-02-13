@@ -1,0 +1,1700 @@
+@charset "SHIFT-JIS";
+/* CSS Document */
+
+#contentin_ {
+	width: 700px;
+	float: right;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#sidebar_ {
+	width: 240px;
+	float: left;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+/* トピックス */
+
+.toptopics_ {
+	display: block;
+	clear: both;
+	zoom: 1;
+	overflow: hidden;
+	/*<!-- padding: 30px 0 45px 0; -->*/
+
+}
+
+.toptopics_ h2 {
+	font-size: 117%; /* font-size: 14px; */
+	line-height: 1.75; /* line-height: 22px; */
+	zoom: 1;
+	overflow: hidden;
+	display: block;
+	color: #5ab2e3;
+	margin-top:15px;
+}
+
+.toptopicsin_ {
+	background: url(http://www.famima.com/img/usr/topics_bg.gif);
+	padding: 2px;
+	margin-bottom:15px;
+}
+
+.toptopicsin_ ul {
+	background: #ffffff;
+	padding: 10px;
+	font-size: 100%; /* font-size: 12px; */
+	line-height: 1.75; /* line-height: 22px; */
+}
+
+.toptopicsin_ ul li span {
+	display: block;
+	float: left;
+	padding: 0 10px 0 14px;
+	background:url(../../../common_images/arrow_link.png) left center no-repeat;
+}
+
+
+/* お知らせ　FDC */
+/* 2013.5.17[s] / Oshirase */
+
+.toptopics_info_ {
+	display: block;
+	clear: both;
+	zoom: 1;
+	overflow: hidden;
+	/*<!-- padding: 30px 0 45px 0; -->*/
+}
+
+.toptopics_info_ h2 {
+	font-size: 117%; /* font-size: 14px; */
+	line-height: 1.75; /* line-height: 22px; */
+	zoom: 1;
+	overflow: hidden;
+	display: block;
+	color: #666;
+}
+
+.toptopicsin_info_ {
+	background: url(http://www.famima.com/img/usr/topics_bg_gray.gif);
+	padding: 2px;
+	margin-bottom:20px;
+}
+
+.toptopicsin_info_ ul {
+	background: #ffffff;
+	padding: 10px;
+	font-size: 100%; /* font-size: 12px; */
+	line-height: 1.75; /* line-height: 22px; */
+}
+
+.toptopicsin_info_ ul li span {
+	display: block;
+	float: left;
+	padding: 0 10px 0 14px;
+	background:url(../../../common_images/arrow_link.png) left center no-repeat;
+}
+
+/* --------------------------------------------------------------------
+	#recommender_【spec_id】設定領域：2013.04.02追加
+-------------------------------------------------------------------- */
+
+.dv_rc_items {
+	float: left;
+	padding: 0 5px 35px 5px; /* padding: 0 5px 15px 5px; */
+	font-size: 100%; /* font-size: 11px; */
+	color: #656464;
+	width: 160px;
+	line-height:1.5; /* add */
+}
+
+.dv_rc_img {
+	margin: 0 0 5px 0;
+
+}
+.dv_rc_img  img{
+
+	border:1px solid #D3D4D4;
+}
+
+
+.dv_rc_price {
+	color: #ec6941; /* color: #5ab2e3; color: #5bb430;*/
+}
+
+.dv_rc_footer {
+	clear: both;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+/* GTOP　カテゴリー背景カラー */
+
+#recommender_pc101 {
+	padding: 0;
+	background: #ffffff;
+}
+
+#recommender_pc111 {
+	padding: 0;
+	background: #ffffff;
+}
+
+/* 商品 */
+#recommender_pc121 {
+	padding: 0;
+	background: #fffefa;
+}
+
+/* ↓ 20141014削除
+#recommender_pc131 {
+	padding: 0;
+	background: #fffdf9;
+} */
+
+#recommender_pc141 {
+	padding: 0;
+	background: #fcfefe;
+}
+
+#recommender_pc151 {
+	padding: 0;
+	background: #fdfcfd;
+}
+
+#recommender_pc161 {
+	padding: 0;
+	background: #fefbfd;
+}
+
+#recommender_pc171 {
+	padding: 0;
+	background: #fefdfc;
+}
+
+/* 特集 */
+#recommender_pc122 {
+	padding: 10px 0;
+	background: #fffefa;
+}
+
+/* ↓　20141014削除
+#recommender_pc132 {
+	padding: 10px 0;
+	background: #fffdf9;
+} */
+
+#recommender_pc142 {
+	padding: 10px 0;
+	background: #fcfefe;
+}
+
+c
+
+#recommender_pc162 {
+	padding: 10px 0;
+	background: #fefbfd;
+}
+
+#recommender_pc172 {
+	padding: 10px 0;
+	background: #fefdfc;
+}
+
+
+#recommender_pc101 .dv_rc_items,
+#recommender_pc111 .dv_rc_items,
+#recommender_pc121 .dv_rc_items,
+#recommender_pc141 .dv_rc_items,
+#recommender_pc151 .dv_rc_items,
+#recommender_pc161 .dv_rc_items,
+#recommender_pc171 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 0 15px 16px;
+	font-size: 12px; /*font-size: 11px;*/
+	color: #656464;
+	width: 150px;
+}
+/* ↑　20141014削除『#recommender_pc131 .dv_rc_items,』 */
+
+
+
+#recommender_pc101 .dv_rc_img img,
+#recommender_pc111 .dv_rc_img img,
+#recommender_pc121 .dv_rc_img img,
+#recommender_pc141 .dv_rc_img img,
+#recommender_pc151 .dv_rc_img img,
+#recommender_pc161 .dv_rc_img img,
+#recommender_pc171 .dv_rc_img img {
+	width: 155px;
+	height: 155px;
+	margin: 0 0 5px 0;
+	border:1px solid #D3D4D4;
+}
+/* ↑　20141014削除『#recommender_pc131 .dv_rc_img img,』 */
+
+
+
+#recommender_pc122 .dv_rc_items,
+#recommender_pc142 .dv_rc_items,
+#recommender_pc152 .dv_rc_items,
+#recommender_pc162 .dv_rc_items,
+#recommender_pc172 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 4px 15px 10px;
+	font-size: 11px;
+	color: #656464;
+	width:216px;
+}
+/* ↑　20141014削除『#recommender_pc132 .dv_rc_items,』 */
+
+
+
+#recommender_pc122 .dv_rc_img img,
+#recommender_pc142 .dv_rc_img img,
+#recommender_pc152 .dv_rc_img img,
+#recommender_pc162 .dv_rc_img img,
+#recommender_pc172 .dv_rc_img img {
+
+
+	margin: 0 0 5px 0;
+}
+/* ↑　20141014削除『#recommender_pc132 .dv_rc_img img,』 */
+
+
+
+
+/* 各タイトル部分　------------------------------------------------------ */
+
+/*　テキストカラー：緑 */
+/* 【GTOP】新着商品、あなたにおすすめ */
+/* 【カテゴリTOP】このジャンルでおすすめの商品、おすすめ商品1～6 */
+
+#recommender_header_pc101,
+#recommender_header_pc111,
+#recommender_header_pc201,
+#recommender_header_pc401,
+#recommender_header_pc501,
+#recommender_header_pc601,
+#recommender_header_pc701,
+
+#recommender_header_pc221,
+#recommender_header_pc222,
+#recommender_header_pc223,
+#recommender_header_pc224,
+#recommender_header_pc225,
+#recommender_header_pc226,
+
+#recommender_header_pc421,
+#recommender_header_pc422,
+#recommender_header_pc423,
+#recommender_header_pc424,
+#recommender_header_pc425,
+#recommender_header_pc425222,
+
+#recommender_header_pc521,
+#recommender_header_pc522,
+#recommender_header_pc523,
+#recommender_header_pc524,
+
+#recommender_header_pc621,
+#recommender_header_pc622,
+#recommender_header_pc623,
+#recommender_header_pc624,
+#recommender_header_pc625,
+#recommender_header_pc626,
+
+#recommender_header_pc721,
+#recommender_header_pc722,
+#recommender_header_pc723,
+#recommender_header_pc724,
+#recommender_header_pc725,
+#recommender_header_pc726,
+
+#recommender_header_pc231111,
+#recommender_header_pc331111,
+#recommender_header_pc431111,
+#recommender_header_pc531111,
+#recommender_header_pc631111 {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 2px 10px 0 15px; /* padding: 0 10px 0 17px; */
+	margin: 0 0 15px 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg2.gif) repeat-x left top;
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	height:30px;  /* add[ot] */
+	color: #333333; /* color: #5bb430; */
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc301,』 */
+/* ↑　20141014削除『#recommender_header_pc321,
+#recommender_header_pc322,
+#recommender_header_pc323,
+#recommender_header_pc324,
+#recommender_header_pc325,』 */
+
+
+
+/*　テキストカラー：黒 */
+/* 【GTOP】商品 */
+
+#recommender_header_pc121,
+#recommender_header_pc141,
+#recommender_header_pc151,
+#recommender_header_pc161,
+#recommender_header_pc171 {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 5px 10px 0 17px; /* padding: 0 10px 0 17px; */
+	margin: 0 0 15px 0; /* margin: 10px 0 15px 0; */
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	background: url(http://www.famima.com/img/usr/cattitle_bg.gif) repeat-x left top;  /* add[ot] */
+	height:43px;  /* add[ot] */
+	color: #333333; /* color: #656464; */
+	font-size: 14px;
+	line-height: 30px;
+	/* font-weight: normal; */
+}
+/* ↑　20141014削除『#recommender_header_pc131,』 */
+
+
+
+
+#recommender_header_pc121 span,
+#recommender_header_pc141 span,
+#recommender_header_pc151 span,
+#recommender_header_pc161 span,
+#recommender_header_pc171 span{
+	font-weight:bold;
+}
+/* ↑　20141014削除『#recommender_header_pc131 span,』 */
+
+
+
+
+/* タイトル文字 */
+/* 【GTOP】商品 */
+/* 【カテゴリTOP】おすすめ商品1～6 */
+
+#recommender_header_pc101 span,
+#recommender_header_pc111 span,
+#recommender_header_pc201 span,
+#recommender_header_pc401 span,
+#recommender_header_pc501 span,
+#recommender_header_pc601 span,
+#recommender_header_pc701 span,
+
+#recommender_header_pc221 span,
+#recommender_header_pc222 span,
+#recommender_header_pc223 span,
+#recommender_header_pc224 span,
+#recommender_header_pc225 span,
+#recommender_header_pc226 span,
+
+#recommender_header_pc421 span,
+#recommender_header_pc422 span,
+#recommender_header_pc423 span,
+#recommender_header_pc424 span,
+#recommender_header_pc425 span,
+#recommender_header_pc425222 span,
+
+#recommender_header_pc521 span,
+#recommender_header_pc522 span,
+#recommender_header_pc523 span,
+#recommender_header_pc524 span,
+
+#recommender_header_pc621 span,
+#recommender_header_pc622 span,
+#recommender_header_pc623 span,
+#recommender_header_pc624 span,
+#recommender_header_pc625 span,
+#recommender_header_pc626 span,
+
+#recommender_header_pc721 span,
+#recommender_header_pc722 span,
+#recommender_header_pc723 span,
+#recommender_header_pc724 span,
+#recommender_header_pc725 span,
+#recommender_header_pc726 span,
+
+#recommender_header_pc231111 span,
+#recommender_header_pc331111 span,
+#recommender_header_pc431111 span,
+#recommender_header_pc531111 span,
+#recommender_header_pc631111 span,
+
+#recommender_header_pc121 span,
+#recommender_header_pc141 span,
+#recommender_header_pc151 span,
+#recommender_header_pc161 span,
+#recommender_header_pc171 span {
+	vertical-align: bottom;
+	margin:  0;
+	padding: 5px 0 0 0;
+}
+/* ↑　20141014削除『#recommender_header_pc131 span,』 */
+/* ↑　20141014削除『#recommender_header_pc301 span,』 */
+/* ↑　20141014削除『#recommender_header_pc321 span,
+#recommender_header_pc322 span,
+#recommender_header_pc323 span,
+#recommender_header_pc324 span,
+#recommender_header_pc325 span,』 */
+
+
+
+#recommender_header_pc101 strong,
+#recommender_header_pc111 strong,
+#recommender_header_pc201 strong,
+#recommender_header_pc401 strong,
+#recommender_header_pc501 strong,
+#recommender_header_pc601 strong,
+#recommender_header_pc701 strong,
+
+#recommender_header_pc221 strong,
+#recommender_header_pc222 strong,
+#recommender_header_pc223 strong,
+#recommender_header_pc224 strong,
+#recommender_header_pc225 strong,
+#recommender_header_pc226 strong,
+
+#recommender_header_pc421 strong,
+#recommender_header_pc422 strong,
+#recommender_header_pc423 strong,
+#recommender_header_pc424 strong,
+#recommender_header_pc425 strong,
+#recommender_header_pc425222 strong,
+
+#recommender_header_pc521 strong,
+#recommender_header_pc522 strong,
+#recommender_header_pc523 strong,
+#recommender_header_pc524 strong,
+
+#recommender_header_pc621 strong,
+#recommender_header_pc622 strong,
+#recommender_header_pc623 strong,
+#recommender_header_pc624 strong,
+#recommender_header_pc625 strong,
+#recommender_header_pc626 strong,
+
+#recommender_header_pc721 strong,
+#recommender_header_pc722 strong,
+#recommender_header_pc723 strong,
+#recommender_header_pc724 strong,
+#recommender_header_pc725 strong,
+#recommender_header_pc726 strong,
+
+#recommender_header_pc231111 strong,
+#recommender_header_pc331111 strong,
+#recommender_header_pc431111 strong,
+#recommender_header_pc531111 strong,
+#recommender_header_pc631111 strong,
+
+#recommender_header_pc121 strong,
+#recommender_header_pc141 strong,
+#recommender_header_pc151 strong,
+#recommender_header_pc161 strong,
+#recommender_header_pc171 strong {
+	float: left;
+	padding: 0 0 3px 0;
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc131 strong,』 */
+/* ↑　20141014削除『#recommender_header_pc301 strong,』 */
+/* ↑　20141014削除『#recommender_header_pc321 strong,
+#recommender_header_pc322 strong,
+#recommender_header_pc323 strong,
+#recommender_header_pc324 strong,
+#recommender_header_pc325 strong,』 */
+
+
+
+/* タイトル左アイコン画像 */
+/* 【GTOP】商品 */
+/* 【カテゴリTOP】おすすめ商品1～6 */
+
+#recommender_header_pc101 strong img,
+#recommender_header_pc111 strong img,
+#recommender_header_pc201 strong img,
+#recommender_header_pc401 strong img,
+#recommender_header_pc501 strong img,
+#recommender_header_pc601 strong img,
+#recommender_header_pc701 strong img,
+
+#recommender_header_pc221 strong img,
+#recommender_header_pc222 strong img,
+#recommender_header_pc223 strong img,
+#recommender_header_pc224 strong img,
+#recommender_header_pc225 strong img,
+#recommender_header_pc226 strong img,
+
+#recommender_header_pc421 strong img,
+#recommender_header_pc422 strong img,
+#recommender_header_pc423 strong img,
+#recommender_header_pc424 strong img,
+#recommender_header_pc425 strong img,
+#recommender_header_pc425222 strong img,
+
+#recommender_header_pc521 strong img,
+#recommender_header_pc522 strong img,
+#recommender_header_pc523 strong img,
+#recommender_header_pc524 strong img,
+
+#recommender_header_pc621 strong img,
+#recommender_header_pc622 strong img,
+#recommender_header_pc623 strong img,
+#recommender_header_pc624 strong img,
+#recommender_header_pc625 strong img,
+#recommender_header_pc626 strong img,
+
+#recommender_header_pc721 strong img,
+#recommender_header_pc722 strong img,
+#recommender_header_pc723 strong img,
+#recommender_header_pc724 strong img,
+#recommender_header_pc725 strong img,
+#recommender_header_pc726 strong img,
+
+#recommender_header_pc231111 strong img,
+#recommender_header_pc331111 strong img,
+#recommender_header_pc431111 strong img,
+#recommender_header_pc531111 strong img,
+#recommender_header_pc631111 strong img,
+
+#recommender_header_pc121 strong img,
+#recommender_header_pc141 strong img,
+#recommender_header_pc151 strong img,
+#recommender_header_pc161 strong img,
+#recommender_header_pc171 strong img {
+	margin: 0 10px 0 0;
+}
+/* ↑　20141014削除『#recommender_header_pc131 strong img,』 */
+/* ↑　20141014削除『#recommender_header_pc301 strong img,』 */
+/* ↑　20141014削除『#recommender_header_pc321 strong img,
+#recommender_header_pc322 strong img,
+#recommender_header_pc323 strong img,
+#recommender_header_pc324 strong img,
+#recommender_header_pc325 strong img,』 */
+
+
+
+/* タイトル部分：右リンクボタン */
+/* 【GTOP】商品 */
+/* 【カテゴリTOP】おすすめ商品1～6 */
+
+#recommender_header_pc121 a,
+#recommender_header_pc141 a,
+#recommender_header_pc151 a,
+#recommender_header_pc161 a,
+#recommender_header_pc171 a,
+
+#recommender_header_pc221 a,
+#recommender_header_pc222 a,
+#recommender_header_pc223 a,
+#recommender_header_pc224 a,
+#recommender_header_pc225 a,
+#recommender_header_pc226 a,
+
+#recommender_header_pc421 a,
+#recommender_header_pc422 a,
+#recommender_header_pc423 a,
+#recommender_header_pc424 a,
+#recommender_header_pc425 a,
+#recommender_header_pc425222 a,
+
+#recommender_header_pc521 a,
+#recommender_header_pc522 a,
+#recommender_header_pc523 a,
+#recommender_header_pc524 a,
+
+#recommender_header_pc621 a,
+#recommender_header_pc622 a,
+#recommender_header_pc623 a,
+#recommender_header_pc624 a,
+#recommender_header_pc625 a,
+#recommender_header_pc626 a,
+
+#recommender_header_pc721 a,
+#recommender_header_pc722 a,
+#recommender_header_pc723 a,
+#recommender_header_pc724 a,
+#recommender_header_pc725 a,
+#recommender_header_pc726 a,
+
+#recommender_header_pc231111 a,
+#recommender_header_pc331111 a,
+#recommender_header_pc431111 a,
+#recommender_header_pc531111 a,
+#recommender_header_pc631111 a {
+	float: right;
+	margin: 7px 0 0 0;
+	padding: 0;
+}
+/* ↑　20141014削除『#recommender_header_pc131 a,』 */
+/* ↑　20141014削除『#recommender_header_pc321 a,
+#recommender_header_pc322 a,
+#recommender_header_pc323 a,
+#recommender_header_pc324 a,
+#recommender_header_pc325 a,』 */
+
+
+
+/* 【GTOP】特集 */
+#recommender_header_pc122,
+#recommender_header_pc142,
+#recommender_header_pc152,
+#recommender_header_pc162,
+#recommender_header_pc172 {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 5px 15px 5px;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc132,』 */
+
+
+
+#recommender_header_pc122 strong,
+#recommender_header_pc142 strong,
+#recommender_header_pc152 strong,
+#recommender_header_pc162 strong,
+#recommender_header_pc172 strong {
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc132 strong,』 */
+
+
+
+#recommender_header_pc122 strong img,
+#recommender_header_pc142 strong img,
+#recommender_header_pc152 strong img,
+#recommender_header_pc162 strong img,
+#recommender_header_pc172 strong img {
+	vertical-align: middle;
+	margin: 0 7px 0 0;
+	position: relative;
+	top: -2px;
+}
+/* ↑　20141014削除『#recommender_header_pc132 strong img,』 */
+
+
+
+/* subcatlink ---------------------------------------------------- */
+
+#subcatlink01_header {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 0 15px 0;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+#subcatlink01_header strong {
+	font-weight: normal;
+}
+
+#subcatlink01_header strong img {
+	vertical-align: middle;
+	margin: 0 7px 0 0;
+	position: relative;
+	top: -2px;
+}
+
+#subcatlink01 ul {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#subcatlink01 ul li {
+	border: 1px solid #dcdddd;
+	width: 215px;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	background: url(http://www.famima.com/images/p/reco/subcat_search_bg.gif) repeat-x left bottom;
+	position:relative;
+	float: left;
+	margin: 0 24px 20px 0;
+}
+
+#subcatlink01 ul li.subcatlink03,
+#subcatlink01 ul li.subcatlink06 {
+	margin: 0;
+}
+
+#subcatlink01 ul li img {
+	float: left;
+	vertical-align: middle;
+	zoom: 1;
+}
+
+#subcatlink01 ul li div {
+	display: block;
+	width: 125px;
+	font-size: 15px;
+	line-height: 88px;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+
+#subcatlink01 ul li.twoline div {
+	padding: 20px 0 0 0;
+	line-height: 22px;
+}
+
+#subcatlink01 ul li.threeline div {
+	padding: 15px 0 0 0;
+	line-height: 22px;
+}
+
+/* 売れ筋ランキング ---------------------------------------------------- */
+
+/*
+#recommender_pc211 .dv_recommend,
+#recommender_pc311 .dv_recommend,
+#recommender_pc411 .dv_recommend,
+#recommender_pc511 .dv_recommend,
+#recommender_pc611 .dv_recommend,
+#recommender_pc711 .dv_recommend {
+	background: url(../../../images/p/reco/subcat_ranking_title.gif) no-repeat left 50px;
+}*/
+
+#recommender_pc211 .dv_rc_items,
+#recommender_pc411 .dv_rc_items,
+#recommender_pc511 .dv_rc_items,
+#recommender_pc611 .dv_rc_items,
+#recommender_pc711 .dv_rc_items {
+	width: 130px;
+}
+/* ↑　20141014削除『#recommender_pc311 .dv_rc_items,』 */
+
+
+
+
+#recommender_pc211 .dv_rc_items img,
+#recommender_pc411 .dv_rc_items img,
+#recommender_pc511 .dv_rc_items img,
+#recommender_pc611 .dv_rc_items img,
+#recommender_pc711 .dv_rc_items img {
+	width: 130px;
+	height: 130px;
+}
+/* ↑　20141014削除『#recommender_pc311 .dv_rc_items img,』 */
+
+
+
+#recommender_header_pc211,
+#recommender_header_pc411,
+#recommender_header_pc511,
+#recommender_header_pc611,
+#recommender_header_pc711 {
+	display: block;
+	padding: 2px 10px 0 15px; /* padding: 0 0 0 17px; */
+	margin: 0 0 15px 0;
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	background: url(http://www.famima.com/img/usr/cattitle_bg2.gif) repeat-x left top;
+	height:30px; /* add[ot] */
+	color: #333333; /* color: #5bb430;  */
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc311,』 */
+
+
+
+
+/*
+#recommender_header_pc211,
+#recommender_header_pc311,
+#recommender_header_pc411,
+#recommender_header_pc511,
+#recommender_header_pc611 {
+	margin: 0 0 15px 0;
+}
+*/
+
+
+#recommender_header_pc211 strong,
+#recommender_header_pc411 strong,
+#recommender_header_pc511 strong,
+#recommender_header_pc611 strong {
+	font-weight: normal;
+}
+/* ↑　20141014削除『#recommender_header_pc311 strong,』 */
+
+
+
+/* 旬の味をお届け！ 産直お取り寄せ商品 ---------------------------------------------------- */
+
+#recommendpickup_header {
+	display: block;
+	padding: 2px 10px 0 15px; /* padding: 0 0 0 17px; */
+	margin: 0 0 15px 0;
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	background: url(http://www.famima.com/img/usr/cattitle_bg2.gif) repeat-x left top;
+	height:30px; /* add[ot] */		
+	color: #333; /* color: #5bb430; */
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+#recommendpickup_header a {
+	float: right;
+	margin: 6px 10px 0 0;
+}
+
+#recommendpickup .dv_rc_img {
+	float: left;
+	margin: 0 15px 0 0; /* margin: 0 15px 15px 0; */
+}
+
+#recommendpickup .dv_rc_img img {
+	width: 200px;
+	height: 200px;
+}
+
+#recommendpickup .dv_rc_name,
+#recommendpickup .dv_rc_price {
+	font-weight: bold;
+	color: #ec6941; /* color: #656464; color: #5bb430;*/
+}
+
+
+
+
+
+#recommendpickup .dv_rc_description {
+	padding: 10px 0 0 0;
+}
+
+#recommendpickup .dv_rc_description strong {
+	font-weight: normal;
+	color: #5bb430;
+}
+
+#recommendpickup .dv_rc_description .buy_btn {
+	padding: 10px 0 0 0;
+}
+
+
+#recommendpickup .dv_rc_description p {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 1em;
+	/* -webkit-margin-end: 1em; */
+	/* -moz-margin-end: 1em; */
+	margin-right:1em;
+
+}
+
+
+
+#recommendpickup .pickup_otherlink_ {
+	background: url(http://www.famima.com/images/p/reco/pickup_otherlink_bg.gif) repeat-x left bottom;
+	line-height: 26px;
+	display: block;
+	clear: both;
+	zoom: 1;
+	overflow: hidden;
+	padding: 0 10px;
+}
+
+/* おすすめ特集 ---------------------------------------------------- */
+
+.dv_rc_subtitle {
+	background: url(http://www.famima.com/img/usr/left_nav_bg.gif) repeat-x bottom;
+	margin: 0 10px 20px;
+	padding: 0 0 5px 0;
+}
+
+#recommender_pc231111 .dv_rc_items,
+#recommender_pc331111 .dv_rc_items,
+#recommender_pc431111 .dv_rc_items,
+#recommender_pc531111 .dv_rc_items,
+#recommender_pc631111 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 5px 15px 10px;
+	font-size: 11px;
+}
+
+#recommender_pc231111 .dv_rc_footer,
+#recommender_pc331111 .dv_rc_footer,
+#recommender_pc431111 .dv_rc_footer,
+#recommender_pc531111 .dv_rc_footer,
+#recommender_pc631111 .dv_rc_footer {
+	background: url(http://www.famima.com/images/p/reco/subcat_bottom_dot.gif) repeat-x left top;
+	padding: 10px 0;
+	text-align: right;
+	font-size: 11px;
+}
+
+/* カテゴリー一覧 ---------------------------------------------------- */
+
+#recommendcatlist_header {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 0 0 0 10px;
+	margin: 10px 0 0 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+#recommendcatlist_header span {
+	vertical-align: bottom;
+	margin:  0;
+	padding: 5px 0 0 10px;
+}
+
+#recommendcatlist_header strong {
+	float: left;
+	padding: 0 0 3px 0;
+	font-weight: normal;
+}
+
+#recommendcatlist .dv_rc_items {
+	width: 100%;
+	padding: 0 15px 10px; /* padding: 10px 15px; */
+	display: block;
+	clear: both;
+	zoom: 1;
+	overflow: hidden;
+	background: #fbfbfb;
+}
+
+#recommendcatlist .dv_rc_items strong {
+	display: block;
+	background: url(http://www.famima.com/images/p/reco/subcat_bottom_dot.gif) repeat-x left bottom;
+	padding: 10px 0 5px; /* padding: 10px 0; */
+	width: 95%;
+	font-size: 109%; /* font-size: 11px; */
+}
+
+#recommendcatlist ul {
+	padding: 10px 0 20px;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#recommendcatlist ul li {
+	width: 25%;
+	float: left;
+	line-height: 1.5; /* line-height: 2em; */
+	font-size: 12px; /* font-size: 10px; */
+}
+
+#recommendcatlist ul li a {
+	background:url(../../../common_images/arrow_link.png) left center no-repeat; /* add[s]2013.5.22 */
+	padding-left:14px; /* add[s]2013.5.22 */
+}
+
+
+/*
+商品詳細／買い物かご／マイページは
+タイトルを設定出来ませんので、
+タイトル画像を作成して頂き、画像の指定をお願いします
+(recommender_header_【spec_id】の設定は不要です)
+*/
+/* マイページ ---------------------------------------------------- */
+/*
+#recommender_pc1001,
+#recommender_pc1101 {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#recommender_header_pc1001,
+#recommender_header_pc1101 {
+	display: block;
+	padding: 0 0 0 17px;
+	margin: 0 0 15px 0;
+	background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom;
+	color: #5bb430;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#recommender_header_pc1001 strong,
+#recommender_header_pc1101 strong {
+	font-weight: normal;
+}
+*/
+
+.mypage_title_ .dv_rc_title {
+	display: block;
+	padding: 0 0 0 17px;
+	margin: 0 0 15px 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg.gif) repeat-x left bottom;
+	color: #5bb430;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.fav_title_ .dv_rc_title,
+.buylist_title_ .dv_rc_title {
+	display: block;
+	padding: 0 0 0 17px;
+	margin: 10px 0 15px 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+#recommender_pc1001,
+#recommender_pc1011 {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#recommender_pc1001 .dv_rc_title,
+#recommender_pc1011 .dv_rc_title {
+    display: block;
+    padding: 0 0 0 17px;
+    margin: 0 0 15px 0;
+    background: url(http://www.famima.com/img/usr/common_h1_goods.png) no-repeat scroll 0 0 transparent;
+    height: 50px;
+}
+
+#recommender_pc1001 .dv_rc_title{}
+
+
+/* 商品詳細 ---------------------------------------------------- */
+
+#recommender_pc801,
+#recommender_pc811 {
+    width: 700px;
+    margin: 0 auto;
+}
+
+/*
+#recommender_pc801 .dv_rc_title,
+#recommender_pc811 .dv_rc_title {
+    background: url(../../../img/usr/common_h1_goods.png) no-repeat scroll 0 0 transparent;
+    height: 50px;
+}
+*/
+
+/* 買い物かご ---------------------------------------------------- */
+
+#recommender_pc901,
+#recommender_pc902,
+#recommender_pc911{
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* レコメンド ---------------------------------------------------- */
+
+/*
+#recommender_header_pc801,
+#recommender_header_pc901 {
+	display: block;
+	padding: 0 0 0 17px;
+	margin: 0 0 15px 0;
+	background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom;
+	color: #5bb430;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#recommender_header_pc801 strong,
+#recommender_header_pc901 strong {
+	float: left;
+	padding: 0 0 3px 0;
+	font-weight: normal;
+}
+
+#recommender_pc801 .dv_rc_items,
+#recommender_pc901 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 4px 15px 6px;
+	font-size: 11px;
+	color: #656464;
+}
+*/
+
+/* 非表示設定 ---------------------------------------------------- */
+
+#recommender_pc101 .dv_rc_description,
+#recommender_pc111 .dv_rc_description,
+#recommender_pc201 .dv_rc_description,
+#recommender_pc401 .dv_rc_description,
+#recommender_pc501 .dv_rc_description,
+#recommender_pc601 .dv_rc_description,
+#recommender_pc701 .dv_rc_description,
+
+#recommender_pc221 .dv_rc_description,
+#recommender_pc222 .dv_rc_description,
+#recommender_pc223 .dv_rc_description,
+#recommender_pc224 .dv_rc_description,
+#recommender_pc225 .dv_rc_description,
+#recommender_pc226 .dv_rc_description,
+
+#recommender_pc421 .dv_rc_description,
+#recommender_pc422 .dv_rc_description,
+#recommender_pc423 .dv_rc_description,
+#recommender_pc424 .dv_rc_description,
+#recommender_pc425 .dv_rc_description,
+#recommender_pc425222 .dv_rc_description,
+
+#recommender_pc521 .dv_rc_description,
+#recommender_pc522 .dv_rc_description,
+#recommender_pc523 .dv_rc_description,
+#recommender_pc524 .dv_rc_description,
+
+#recommender_pc621 .dv_rc_description,
+#recommender_pc622 .dv_rc_description,
+#recommender_pc623 .dv_rc_description,
+#recommender_pc624 .dv_rc_description,
+#recommender_pc625 .dv_rc_description,
+#recommender_pc626 .dv_rc_description,
+
+#recommender_pc721 .dv_rc_description,
+#recommender_pc722 .dv_rc_description,
+#recommender_pc723 .dv_rc_description,
+#recommender_pc724 .dv_rc_description,
+#recommender_pc725 .dv_rc_description,
+#recommender_pc726 .dv_rc_description,
+
+#recommender_pc231111 .dv_rc_description,
+#recommender_pc331111 .dv_rc_description,
+#recommender_pc431111 .dv_rc_description,
+#recommender_pc531111 .dv_rc_description,
+#recommender_pc631111 .dv_rc_description,
+
+#recommender_pc121 .dv_rc_description,
+#recommender_pc141 .dv_rc_description,
+#recommender_pc151 .dv_rc_description,
+#recommender_pc161 .dv_rc_description,
+#recommender_pc171 .dv_rc_description,
+
+#recommender_pc122 .dv_rc_description,
+#recommender_pc142 .dv_rc_description,
+#recommender_pc152 .dv_rc_description,
+#recommender_pc162 .dv_rc_description,
+#recommender_pc172 .dv_rc_description,
+
+#recommender_pc211 .dv_rc_description,
+#recommender_pc411 .dv_rc_description,
+#recommender_pc511 .dv_rc_description,
+#recommender_pc611 .dv_rc_description,
+#recommender_pc711 .dv_rc_description,
+#recommender_pc811 .dv_rc_description,
+#recommender_pc911 .dv_rc_description,
+#recommender_pc1011 .dv_rc_description,
+
+#recommender_pc1001 .dv_rc_description,
+#recommender_pc1101 .dv_rc_description,
+
+#recommender_pc801 .dv_rc_description,
+#recommender_pc901 .dv_rc_description,
+
+#recommender_pc122 .dv_rc_price,
+#recommender_pc142 .dv_rc_price,
+#recommender_pc152 .dv_rc_price,
+#recommender_pc162 .dv_rc_price,
+#recommender_pc172 .dv_rc_price,
+
+#recommender_pc231 .dv_rc_price {
+	display: none;
+}
+/* ↑　20141014削除『#recommender_pc131 .dv_rc_description,』 */
+/* ↑　20141014削除『#recommender_pc132 .dv_rc_description,』 */
+/* ↑　20141014削除『#recommender_pc132 .dv_rc_price,』 */
+/* ↑　20141014削除『#recommender_pc301 .dv_rc_description,』 */
+/* ↑　20141014削除『#recommender_pc311 .dv_rc_description,』 */
+/* ↑　20141014削除『#recommender_pc321 .dv_rc_description,
+#recommender_pc322 .dv_rc_description,
+#recommender_pc323 .dv_rc_description,
+#recommender_pc324 .dv_rc_description,
+#recommender_pc325 .dv_rc_description,』 */
+
+
+
+/* 初期非表示項目 */
+#recommender_pc226,
+#recommender_pc325,
+#recommender_pc425,
+#recommender_pc524,
+#recommender_pc626,
+#recommender_pc911,
+#recommender_pc811,
+#recommender_pc1011,
+
+#recommender_header_pc226,
+#recommender_header_pc325,
+#recommender_header_pc425,
+#recommender_header_pc524,
+#recommender_header_pc626,
+#recommender_header_pc911,
+#recommender_header_pc811,
+#recommender_header_pc1011 {
+	display: none;
+}
+
+/* ↓add a postscript famima.com↓ */
+/* 2013.5.15[s] / margin */
+.mr10 {
+	margin-right:10px;
+}
+
+/* 2013.5.16[ot] / ranking title */
+#recommender_pc211 .dv_rc_title,
+#recommender_pc411 .dv_rc_title,
+#recommender_pc511 .dv_rc_title,
+#recommender_pc611 .dv_rc_title,
+#recommender_pc711 .dv_rc_title {
+	background: url(http://www.famima.com/images/p/reco/subcat_ranking_title.gif) no-repeat left top;
+	height:25px;
+	margin-bottom:5px;
+}
+/* ↑　20141014削除『#recommender_pc311 .dv_rc_title,』 */
+
+
+
+
+/* 2013.5.16[ot] / recomend title（商品詳細） */
+#recommender_pc801 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pc801.png) no-repeat;
+    height: 50px;
+}
+/* 2013.5.16[ot] / recomend title（買い物カゴ） */
+#recommender_pc901 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pc901.png) no-repeat;
+    height: 50px;
+}
+#recommender_pc902 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pc902.png) no-repeat;
+    height: 50px;
+}
+/* 2013.5.16[ot] / recomend title（マイページ） */
+#recommender_pc1001 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pc1001.png) no-repeat;
+    height: 50px;
+}
+/* 2013.5.16[ot] / 「こちらの商品もおすすめです」左揃え（商品詳細・買い物カゴ・マイページ）--*/
+#recommender_pc811 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pcn11.png) no-repeat;
+    height: 50px;
+}
+/* 2013.5.16[ot] / 「こちらの商品もおすすめです」中央揃え（買い物カゴ・マイページ）--*/
+#recommender_pc911 .dv_rc_title,
+#recommender_pc1011 .dv_rc_title{
+    background: url(http://www.famima.com/img/usr/rc_title_pcn11_ctr.png) no-repeat;
+    height: 50px;
+}
+
+#recommender_pc902 .dv_rc_description{
+	display:none;
+	}
+
+/* 2014.1.08[sg] / GTOP「新着商品」	--*/
+
+
+/* 2013.5.21[ot] / 「おすすめの特集」レコメンド以外	--*/
+/*#ct_banner_header{
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 5px 15px 5px;
+	background: url(../../../img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+	}
+	*/
+
+#ct_banner_header {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 2px 10px 0 15px; /* padding: 0 10px 0 17px; */
+	margin: 0 0 15px 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg2.gif) repeat-x left top;
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	height:30px;  /* add[ot] */
+	color: #333333; /* color: #5bb430; */
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+	}
+
+#ct_banner_header a,
+#recommender_header_pc101 a {
+	float: right;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+#ct_banner .dv_bnr_subtitle {
+	background: url(http://www.famima.com/img/usr/left_nav_bg.gif) repeat-x bottom;
+	margin: 0 10px 20px;
+	padding: 0 0 5px 4px;
+}
+
+
+#ct_banner .dv_bnr_subtitle_lcolumn {
+	background: url(http://www.famima.com/img/usr/left_nav_bg.gif) repeat-x bottom;
+	margin: 0 10px 10px;
+	padding: 0 0 5px 4px;
+}
+
+#ct_banner .dv_bnr_subtitle_lcolumnX {
+	background: url(http://www.famima.com/img/usr/left_nav_bg.gif) repeat-x bottom;
+	margin: 20px 10px 10px;
+	padding: 0 0 5px 4px;
+}
+
+
+
+#ct_banner .dv_bnr{
+	float: left;
+	display: block;
+	padding: 0 4px 15px 10px;
+	font-size: 11px;
+	color: #656464;
+	width:216px;
+}
+
+#ct_banner .dv_bnr_title{
+	padding: 0 0 5px 10px;}
+
+#ct_banner .dv_bnr img {
+	margin: 0 0 5px 0;
+}
+
+#ct_banner .dv_bnr .dv_bnr_description{
+	padding: 0 0 10px 0;
+	}
+
+#ct_banner .dv_rc_footer{
+	background: url(http://www.famima.com/images/p/reco/subcat_bottom_dot.gif) repeat-x left top;
+	padding: 10px 0;
+	text-align: right;
+	font-size: 11px;
+}
+
+.dv_recommend{
+	word-break:break-all; /* add 20130621[mota] */}
+	
+
+/* 2013.9.10[ot] / パーソナルLP（イベント：myreco アイテム）--*/
+/* 2013.9.12[sg] / パーソナルLP（検索結果）--*/
+#recommender_header_pers{
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 5px 10px 0 17px;
+	background: url(http://www.famima.com/img/usr/cattitle_bg.gif) repeat-x left top;
+	height:43px;
+	color: #333333;
+	font-size: 14px;
+	line-height: 30px;
+	text-align:center;
+	margin-bottom:10px;
+	/* font-weight: normal; */
+}
+	
+#recommender_header_pers span{
+	 font-size:115%; color:#ec7366; paddin-top:10px;}
+
+
+
+#recommender_header_pc5001,
+#recommender_header_pc5002,
+#recommender_header_pc1201,
+#recommender_header_pc1371 {
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+	padding: 2px 10px 0 15px; /* padding: 0 10px 0 17px; */
+	margin: 0 0 15px 0;
+	background: url(http://www.famima.com/img/usr/cattitle_bg2.gif) repeat-x left top;
+	/* background: url(../../../img/usr/cattitle_bg.gif) repeat-x left bottom; */
+	height:30px;  /* add[ot] */
+	color: #333333; /* color: #5bb430; */
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+#recommender_header_pc1201 {
+	margin-top:50px;
+	}
+
+
+#recommender_header_pc5001 span,
+#recommender_header_pc5002 span,
+#recommender_header_pc1201 span,
+#recommender_header_pc1371 span {
+	vertical-align: bottom;
+	margin:  0;
+	padding: 5px 0 0 0;
+}
+
+#recommender_header_pc5001 strong,
+#recommender_header_pc5002 strong,
+#recommender_header_pc1201 strong,
+#recommender_header_pc1371 strong {
+	float: left;
+	padding: 0 0 3px 0;
+	font-weight: normal;
+}
+
+#recommender_header_pc5001 strong img,
+#recommender_header_pc5002 strong img,
+#recommender_header_pc1201 strong img,
+#recommender_header_pc1371 strong img {
+	margin: 0 10px 0 0;
+}
+
+#recommender_header_pc5001 a,
+#recommender_header_pc5002 a,
+#recommender_header_pc1201 a,
+#recommender_header_pc1371 a  {
+	float: right;
+	margin: 7px 0 0 0;
+	padding: 0;
+}
+
+#recommender_pc5001 .dv_rc_description,
+#recommender_pc5002 .dv_rc_description,
+#recommender_pc1201 .dv_rc_description,
+#recommender_pc1371 .dv_rc_description {
+	display: none;
+}
+
+#recommender_pc5001 .dv_rc_items,
+#recommender_pc5002 .dv_rc_items,
+#recommender_pc1201 .dv_rc_items,
+#recommender_pc1371 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 0 15px 16px;
+	font-size: 12px; /*font-size: 11px;*/
+	color: #656464;
+	width: 150px;
+}
+
+
+#recommender_pc1371 .dv_rc_items {
+	height: 250px;
+}
+
+
+#recommender_pc5001 .dv_rc_img img,
+#recommender_pc5002 .dv_rc_img img,
+#recommender_pc1201 .dv_rc_img img,
+#recommender_pc1371 .dv_rc_img img {
+	width: 155px;
+	height: 155px;
+	margin: 0 0 5px 0;
+	border:1px solid #D3D4D4;
+}
+
+/* 2013.9.10[ot] / パーソナルLP（イベント：myreco 特集）--*/
+#recommender_pc5011,
+#recommender_pc1361 {
+	padding: 10px 0;
+	background: #fdfcfd;
+}
+
+
+/**/
+
+
+#recommender_pc1211 {
+	padding-bottom:10px; /* padding: 10px 0; */
+	background: #fdfcfd;
+}
+
+
+
+/**/
+
+
+
+#recommender_pc5011 .dv_rc_items,
+#recommender_pc1211 .dv_rc_items,
+#recommender_pc1361 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 4px 15px 10px;
+	font-size: 11px;
+	color: #656464;
+	width:216px;
+}
+
+#recommender_pc5011 .dv_rc_img img,
+#recommender_pc1211 .dv_rc_img img,
+#recommender_pc1361 .dv_rc_img img {
+	margin: 0 0 5px 0;
+}
+
+
+
+#recommender_header_pc5011,
+#recommender_header_pc1211,
+#recommender_header_pc1361 {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 5px 15px 5px;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+
+
+#recommender_header_pc5011 strong,
+#recommender_header_pc1211 strong,
+#recommender_header_pc1361 strong {
+	font-weight: normal;
+}
+
+#recommender_header_pc5011 strong img,
+#recommender_header_pc1211 strong img,
+#recommender_header_pc1361 strong img {
+	vertical-align: middle;
+	margin: 0 7px 0 0;
+	position: relative;
+	top: -2px;
+}
+
+#recommender_pc5011 .dv_rc_description,
+#recommender_pc1211 .dv_rc_description,
+#recommender_pc1361 .dv_rc_description {
+	display: none;
+}
+
+#recommender_pc5011 .dv_rc_price,
+#recommender_pc1211 .dv_rc_price,
+#recommender_pc1361 .dv_rc_price {
+	display: none;
+}
+
+#recommender_pc5011 .dv_rc_items,
+#recommender_pc1211 .dv_rc_items,
+#recommender_pc1361 .dv_rc_items {
+	float: left;
+	display: block;
+	padding: 0 4px 15px 10px;
+	font-size: 11px;
+	color: #656464;
+	width:216px;
+}
+
+/* 2014.01.08[sg] / 新着LP--*/
+#recommender_pc1361 .dv_rc_items {
+	height:140px;
+}
+
+#recommender_pc5011 .dv_rc_img img,
+#recommender_pc1211 .dv_rc_img img,
+#recommender_pc1361 .dv_rc_img img {
+	margin: 0 0 5px 0;
+}
+
+
+/**/
+#recommender_header_pc5011 {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 5px 15px 5px;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+
+#recommender_header_pc1211 {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 30px 5px 15px 5px;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+
+#recommender_header_pc1361 {
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 30px 5px 15px 5px;
+	background: url(http://www.famima.com/img/usr/catsub_bg.gif) repeat-x left bottom;
+	color: #656464;
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: normal;
+}
+
+/**/
+
+
+#recommender_header_pc5011 strong,
+#recommender_header_pc1211 strong,
+#recommender_header_pc1361 strong {
+	font-weight: normal;
+}
+
+#recommender_header_pc5011 strong img,
+#recommender_header_pc1211 strong img,
+#recommender_header_pc1361 strong img {
+	vertical-align: middle;
+	margin: 0 7px 0 0;
+	position: relative;
+	top: -2px;
+}
+
+/* ↑add a postscript famima.com↑ */
+
+/* ↓add 2013.11.7 as */
+ul.searchTOKU {
+	display:block;
+	clear:both;
+	}
+
+ul.searchTOKU li {
+	float:left;
+	margin:0 5px 60px;
+	display:inline;
+	}

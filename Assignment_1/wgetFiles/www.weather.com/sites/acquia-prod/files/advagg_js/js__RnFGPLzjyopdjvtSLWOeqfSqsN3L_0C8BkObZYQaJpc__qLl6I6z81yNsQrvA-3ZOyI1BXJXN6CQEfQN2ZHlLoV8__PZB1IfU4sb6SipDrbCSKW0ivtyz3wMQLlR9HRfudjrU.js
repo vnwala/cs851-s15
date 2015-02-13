@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at http://www.weather.com/sites/all/themes/radix/js/webfont-loader.js. */
+var WebFontConfig={google:{families:['Open+Sans:400italic,400,300,600,700,800:latin']},listeners:[],loading:function(){TWC.Events.getEvent('WebFont_ready').notify()},timeout:3e3};(function($){if(typeof TWC.Events.getEvent!=="undefined"){$('html').addClass('wf-loading');$.ajax({url:'//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js',dataType:"script",timeout:3e3,error:function(){$('html').removeClass('wf-loading')}})}})(jQuery);;
+/* Source and licensing information for the above line(s) can be found at http://www.weather.com/sites/all/themes/radix/js/webfont-loader.js. */

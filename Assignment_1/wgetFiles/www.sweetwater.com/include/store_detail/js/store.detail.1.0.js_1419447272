@@ -1,0 +1,545 @@
+jQuery.expr.filters.offscreen = function(el) {
+	var $el = $(el), offset = $el.offset();
+	return (
+		offset.left + $el.outerWidth(true) > window.innerWidth + (window.pageXOffset || document.documentElement.scrollLeft)
+			|| offset.top + $el.outerHeight(true) > window.innerHeight + (window.pageYOffset || document.documentElement.scrollTop)
+		);
+};
+(function ($) {
+	$.fn.truncate = function (method) {
+		if ($.fn.truncate.methods[method]) {
+			return $.fn.truncate.methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+		} else if (typeof method === 'object' || !method) {
+			return $.fn.truncate.methods.init.apply(this, arguments);
+		} else {
+			$.error('Method ' + method + ' does not exist on jQuery.truncate');
+		}
+	};
+
+	/* Default trunk8 settings. */
+	$.fn.truncate.defaults = {
+		lines: 5,
+		ellipsis: '... <a href="#" class="sd-readmore">read more</a>',
+		collapse: ' <a href="#" class="sd-readless">read less</a>'
+	};
+
+	$.fn.truncate.methods = {
+		init: function(options) {
+			// Define settings
+			$.fn.truncate.settings = $.extend({}, $.fn.truncate.defaults);
+
+			// Cache the ellipsis text length so we can make room for it at the end of a string
+			$.fn.truncate.settings.els = this;
+			$.fn.truncate.settings.ellipsis_plain = $.fn.truncate.settings.ellipsis.replace(/<[^>]*>/g, "");
+			$.fn.truncate.settings.ellipsis_len = $.fn.truncate.settings.ellipsis_plain.length;
+
+			// Add events
+			$(document).on('click', '.sd-review:not(".insync") a.sd-readmore, a.sd-readless', function(e) {
+				e.preventDefault();
+				$(this).closest('.sd-review-content').toggleClass('show-all');
+			});
+
+			$(window).on('resize', function()
+			{
+				$(window).data('sdtimeout', setTimeout(
+					function() {
+						$.fn.truncate.settings.els.each($.fn.truncate.methods.trunc);
+					}, 150
+				));
+			});
+
+			// Iterate over elements
+			return this.each($.fn.truncate.methods.trunc);
+		},
+		trunc: function() {
+			var $this = $(this),
+				content = $this.html().replace(/[\r\n]*/, ''),
+				lineHeight = parseInt($this.css('line-height'), 10);
+
+			// Cache the original content (for responsive design)
+			if ($this.data('original-content') !== undefined) {
+				content = $this.data('original-content');
+				$this.html(content);
+			} else {
+				$this.data('original-content', content);
+			}
+
+			// Verify the line height
+			if (lineHeight == 1 || $this.css('line-height') == 'normal') {
+				lineHeight = parseInt($this.css('font-size')) * 1.3;
+			}
+
+			var maxHeight = $.fn.truncate.settings.lines * lineHeight,
+				truncated = $.trim(content),
+				old;
+			// The text needs to be truncated
+			if ($this.height() > maxHeight)
+			{
+				var remainder = '',
+					newtext = '',
+					len, i;
+
+				// Trim down to a manageable length
+				truncated = truncated.substr(0, 350);
+
+				// Add the length of the ellipsis
+				truncated += $.fn.truncate.settings.ellipsis_plain;
+
+				// Subtract chars until the text no longer overflows
+				while (truncated.length > 100 && $this.height() > maxHeight && old != truncated) {
+					old = truncated;
+					truncated = truncated.substr(0, truncated.length - 1);
+					$this.html(truncated);
+				}
+
+				// Trim to the last space
+				truncated =  $.trim(truncated.substr(0, truncated.length - $.fn.truncate.settings.ellipsis_len));
+				truncated =  $.trim(truncated.substr(0, truncated.lastIndexOf(' ')));
+				len = truncated.length;
+
+				// Force the trunc text to end in letter or '
+				for (i = truncated.length; i > 0; i--) {
+					// Stop looking once we hit a valid char
+					if (truncated.charAt(i).match(/[a-z0-9']/i) !== null) {
+						break;
+					}
+				}
+
+				// Reset to the the previous letter and trim
+				i++;
+				if (i < truncated.length) {
+					truncated = truncated.substr(0, i + 1);
+					len = truncated.length;
+				}
+
+				// Get the remaining text
+				remainder = content.substr(len);
+
+				// Build the string
+				newtext = truncated + '<span class=\"sd-readmore-wrap\">... <a href=\"#\" class=\"sd-readmore\">read more</a></span><span class=\"sd-more\">' + remainder + ' <a href=\"#\" class=\"sd-readless\">close</a></span>';
+				$this.html(newtext);
+			}
+		}
+	};
+}(jQuery));
+
+jQuery.cachedScript = function( url, options ) {
+	// Allow user to set any option except for dataType, cache, and url
+	options = $.extend( options || {}, {
+		dataType: "script",
+		cache: true,
+		url: url
+	});
+	// Use $.ajax() since it is more flexible than $.getScript
+	// Return the jqXHR object so we can chain callbacks
+	return jQuery.ajax( options );
+};
+
+var GALLERY = GALLERY || (function()
+{
+	var _args = {};
+	return {
+		init: function(args)
+		{
+			_args = args;
+			if ($('.video-gallery').length > 0)
+			{
+				_args.onOpen = function() {
+					$('.video-gallery').each(function()
+					{
+						$(this).VideoGallery('unloadVideo');
+					});
+				};
+				_args.onClose = function() {
+					$('.video-gallery').each(function()
+					{
+						$(this).VideoGallery('reloadVideo');
+					});
+				};
+			}
+			$('a[lghref]').Gallery( _args );
+		}
+	}
+}());
+
+var SDetail = {
+	$window: false,
+	$wrap: false,
+	img_wrap: false,
+	img_max_height: false,
+	img_ratio: false,
+	main_img: false,
+	missing_img: false,
+	default_img_height: 0,
+	summary_info: false,
+	images: false,
+	reviews: false,
+	review_args: {},
+	calc_content_height: false,
+	calc_image_height: false,
+	wishlist_popup: false,
+
+	accChange: function()
+	{
+		//Get data values from selected option
+		var $this = $(this),
+			item = $this.closest('.prod'),
+			data = $('option:selected', $this).data('itemdata'),
+			func, selector, selected;
+		for (func in data)
+		{
+			for (selector in data[func])
+			{
+				if (typeof data[func][selector] == 'string')
+				{
+					data[func][selector] = [ data[func][selector] ];
+				}
+				selected = $(selector, item);
+				if (selected.length > 0)
+				{
+					selected[func].apply( selected, data[func][selector] );
+				}
+			}
+		}
+	},
+
+	evtResize: function()
+	{
+		clearInterval( SDetail.$window.data('sdtimeout') );
+		SDetail.$window.data('sdtimeout', setTimeout(
+			function() {
+				if (SDetail.calc_image_height) { SDetail.setImageHeight(); }
+				if (SDetail.calc_content_height) { SDetail.setContentHeight(); }
+			}, 150
+		));
+	},
+
+	qtyBlur: function()
+	{
+		var $this = $(this),
+			val = $this.val();
+		if (val == undefined || (val = val.replace(/[^\d]/gi, '')) == '' ) {
+			val = $this.data('orig-qty');
+			$this.val(val);
+		}
+	},
+
+	qtyCacheVal: function()
+	{
+		var $this = $(this);
+		$this.data('orig-qty', $this.val());
+	},
+
+	qtyPriceChange: function(e)
+	{
+		var price_data = $('#sd-qty-table').data('qty-pricing'),
+			$this = $(this)
+
+		// The escape key was pressed
+		if (e.keyCode == 27)
+		{
+			$this.val($this.data('orig-qty'));
+			$this.trigger('blur');
+		}
+
+		if (typeof price_data != 'object') { return }
+		var current_qty = $this.val(),
+			orig_price_line = $('#sd-total'),
+			orig_price = $('.amount span', orig_price_line).text().replace(/[^\$\d\.]/g, ''),
+			discount_price_line = $('#sd-discount-total'),
+			current_price = (discount_price_line.length ? $('.amount span', discount_price_line).text().replace(/[^\$\d\.]/g, '') : orig_price),
+			new_price = current_price,
+			key;
+
+		// Loop over qty data to get the new price.
+		for (key in price_data) {
+			if (!price_data.hasOwnProperty(key)) { continue; }
+			key = parseInt(key);
+			if (key <= current_qty) {
+				new_price = price_data[key];
+			}
+		}
+		// If we have a new price
+		if (new_price != current_price) {
+			// If there is no discount line, then we're discounting and need to add it
+			if (discount_price_line.length == 0)
+			{
+				$($('<div id="sd-discount-total" class="sd-total"><strong class="label">Discount Price</strong><span class="amount"><span>'+ new_price +'</span></span></div>')).insertAfter(orig_price_line.addClass('strike'));
+			}
+			// If there is a discount line and the price matches the original price, remove the discount
+			else if (new_price == orig_price)
+			{
+				discount_price_line.remove();
+				orig_price_line.removeClass('strike');
+			}
+			// Otherwise, update the discount
+			else
+			{
+				$('.amount span', discount_price_line).text(new_price);
+				orig_price_line.addClass('strike');
+			}
+		}
+	},
+
+	scrollTo: function(e)
+	{
+		var match = $(this).attr('href').match(/(#[a-z\d\-_]+)/gi);
+		if (!match) { return; }
+		var target = $( match[0] );
+		if (target.length == 0) { return; }
+		var offset = target.offset().top,
+			speed = Math.abs( $(window).scrollTop() - offset ) * 0.3;
+		$('html, body').animate({ scrollTop: offset - 10 }, speed);
+		e.preventDefault();
+	},
+
+	setContentHeight: function()
+	{
+		SDetail.summary_info.height('');
+		SDetail.summary_info.height(Math.max(SDetail.images.height(), SDetail.summary_info.height()));
+	},
+
+	setImageHeight: function()
+	{
+		var width = SDetail.img_wrap.width(),
+			ratio = SDetail.img_max_height / width,
+			height = SDetail.img_max_height;
+		if (SDetail.img_ratio < ratio) {
+			height = width * SDetail.img_ratio;
+		}
+		height = Math.max(Math.ceil(height), SDetail.default_img_height);
+		SDetail.img_wrap.css({ height: height, 'min-height': height, 'max-height': height });
+	},
+
+//	swapFamilyInfo: function(e)
+//	{
+//		clearInterval(SDetail.main_img.data('mouseout-timer'));
+//		var current_src = SDetail.main_img.attr('src'),
+//			default_fam_data = SDetail.$window.data('default-family-info');
+//		if (default_fam_data === undefined)
+//		{
+//			default_fam_data = {
+//				img: SDetail.main_img.attr('src')
+//			};
+//			SDetail.$window.data('default-family-info', default_fam_data);
+//
+//		}
+//		if (e.type == 'mouseenter')
+//		{
+//			$('body').addClass('fam-hvr');
+//			var $this = $(this),
+//				fam_data = $this.data('family-info');
+//			if (fam_data.img != '' && default_fam_data.img != '' && fam_data.img != default_fam_data.img)
+//			{
+//				SDetail.main_img.attr('src', fam_data.img).addClass('fam-hvr-hli');
+//			}
+//		}
+//		else
+//		{
+//			SDetail.main_img.data('mouseout-timer', setTimeout(function()
+//			{
+//				$('body').removeClass('fam-hvr');
+//				if (default_fam_data.img != '' && SDetail.main_img.attr('src') != default_fam_data.img)
+//				{
+//					SDetail.main_img.attr('src', default_fam_data.img).removeClass('fam-hvr-hli');
+//				}
+//			},50));
+//		}
+//	},
+
+	wishlistOpen: function(e) {
+		e.preventDefault();
+		SDetail.wishlist_popup.addClass('show').animate( { opacity: 1 }, 500);
+	},
+
+	wishlistClose: function(e) {
+		e.preventDefault();
+		SDetail.wishlist_popup.animate({ opacity: 0 }, 300, function()
+		{
+			SDetail.wishlist_popup.removeClass('show');
+		});
+	}
+};
+
+function openMediaViewer(movie,moview,movieh,clickedfrom){
+	var logoh = 85;
+	if ((moview+40) < 250) { wwidth = 250; }
+	else { wwidth = moview+40; }
+	if (movieh < (250-logoh)) { wheight = (250); }
+	else { wheight = movieh + logoh; }
+	var wTop = (screen.height/2)-((movieh + logoh)/2);
+	var hLeft = (screen.width/2)-(moview/2);
+	var url = '/store/mediaviewer.php?movie=' + movie + '&width='+moview+'&height='+movieh+'&clickedfrom='+clickedfrom;
+	window.open(url,'movieviewer','height='+wheight+',width='+wwidth+',top='+wTop+',left='+hLeft);
+}
+
+$(function() {
+	// Video gallery
+	if (jQuery().VideoGallery) {
+		$('.video-gallery').VideoGallery();
+	}
+
+	SDetail.$window = $(window);
+	SDetail.$wrap = $('.store-detail');
+	SDetail.img_wrap = $('#sd-main-image-wrap');
+	SDetail.img_max_height = parseInt(SDetail.img_wrap.css('max-height'), 10);
+	SDetail.img_ratio = SDetail.img_wrap.data('ratio');
+	SDetail.default_img_height = parseInt(SDetail.img_wrap.css('min-height'), 10);
+	if (SDetail.default_img_height === undefined)
+	{
+		SDetail.default_img_height = 0;
+	}
+	SDetail.summary_info = $('.sd-summary-info');
+	SDetail.images = $('.sd-images');
+	SDetail.review_args = {
+		lines: 5,
+		ellipsis: '...'
+//		showClass: 'sd-readmore',
+//		hideClass: 'sd-readless'
+//		fill: '&hellip;&nbsp;<a href="#" class="sd-readmore">read more</a>&nbsp;'
+	};
+	SDetail.reviews = $('#sd-reviews .customer .sd-review-content').truncate();
+
+	SDetail.main_img = $('img', SDetail.img_wrap);
+	SDetail.missing_img = $('.sd-main-image-missing');
+
+	var main_img = $('img', SDetail.img_wrap),
+		zoom_thumbs = $('#sd-main-thumbs li'),
+		$html = $('html'),
+		is_guitar = $('.store-detail').hasClass('guitar-gallery');
+
+	SDetail.calc_content_height = (!is_guitar && typeof Modernizr == 'object' && !Modernizr.flexbox);
+	SDetail.calc_image_height = (!is_guitar && zoom_thumbs.length > 0 && SDetail.img_ratio != 0);
+
+	// Adjust image layout
+	if (!is_guitar && !SDetail.$wrap.hasClass('sd-wide') && SDetail.img_ratio && (SDetail.images.width() * SDetail.img_ratio) + $('#sd-main-thumbs li:eq(0)').outerHeight() <= $('#sd-summary-info').height())
+	{
+		SDetail.$wrap.addClass('sd-wide');
+	}
+
+	// Image Zoom
+	if (jQuery().ImageZoom !== undefined)
+	{
+		SDetail.img_wrap.ImageZoom({ zoom_target: '#sd-summary-info' });
+		$('a', zoom_thumbs).on('click', function(e)
+		{
+			e.preventDefault();
+			e.stopImmediatePropagation();
+//			if (calc_image_height) { SDetail.setImageHeight(); }
+			var clicked_thumb = $(this),
+				lghref = clicked_thumb.attr('lghref');
+			main_img.attr('src', clicked_thumb.attr('href'));
+			SDetail.img_wrap.attr('lghref', clicked_thumb.attr('lghref'));
+			zoom_thumbs.filter('.selected').removeClass('selected');
+			clicked_thumb.parents('li').addClass('selected');
+		});
+	}
+
+	// Quantity field
+	var qty_field = $('#qty');
+	if (qty_field.length)
+	{
+		qty_field.on({
+			'change keyup': SDetail.qtyPriceChange,
+			'focus': SDetail.qtyCacheVal,
+			'blur': SDetail.qtyBlur
+		});
+	}
+
+	// Wishlist dropdown
+	var wishlist_list = $('#sd-wishlists');
+	if (wishlist_list.length)
+	{
+		wishlist_list.on('click', function(e)
+		{
+			e.preventDefault();
+			e.stopPropagation();
+			$(this).toggleClass('active');
+		});
+		$('ul', wishlist_list).on('click', function(e) {e.stopPropagation(); });
+		$html.on('click', function() { wishlist_list.removeClass('active'); });
+		SDetail.$window.on('blur', function() { wishlist_list.removeClass('active'); });
+	}
+
+	// Wishlist popup
+	SDetail.wishlist_popup = $('#wishlist-popup');
+	if (SDetail.wishlist_popup.length > 0) {
+		$('#wl_msg_btn').on('click', SDetail.wishlistOpen);
+		SDetail.wishlist_popup.on('click', function(e) {
+			var $target = $(e.target);
+			if (!$target.is('.wlp-container') && $target.closest('.wlp-container').length == 0) {
+				SDetail.wishlistClose.apply(this, [e]);
+			}
+		});
+		$('.wlp-close', SDetail.wishlist_popup).on('click', SDetail.wishlistClose);
+	}
+
+	// Video button
+	$('#sd-btn-video').on('click', SDetail.scrollTo);
+
+	// Zoom button
+	$('#sd-btn-zoom').on('click', function(e) { e.preventDefault(); SDetail.img_wrap.trigger('click'); });
+
+	// Family group dropdown
+	var sdfamily = $('.sd-family');
+	if (sdfamily.length)
+	{
+		if (sdfamily.hasClass('condensed'))
+		{
+			// Dropdown version of family group
+			$('.sd-family-menu', sdfamily).on('click', function(e)
+			{
+				sdfamily.toggleClass('active');
+				e.stopPropagation();
+			});
+			$('ul', sdfamily).on('click', function(e) { e.stopPropagation(); });
+			$html.on('click', function() { sdfamily.removeClass('active'); });
+			SDetail.$window.on('blur', function() { sdfamily.removeClass('active'); });
+		}
+//		if (!is_guitar && SDetail.missing_img.length == 0)
+//		{
+//			SDetail.main_img.data('default-src', SDetail.main_img.attr('src'));
+//			var family_items = $('li:not(".selected") a', sdfamily),
+//				hoverable_family_items = family_items.filter('[data-family-info]');
+//			if (family_items.length >= hoverable_family_items.length)
+//			{
+//				family_items.on('mouseenter mouseleave', SDetail.swapFamilyInfo);
+//			}
+//		}
+	}
+
+	// Cart Slider
+	var accessories = $('#accSlider').Scroller({ 'minProducts':5 });
+
+	//Handle accessory item id changing
+	$('select', accessories).change(SDetail.accChange);
+
+	SDetail.evtResize();
+	SDetail.$window.on('resize', SDetail.evtResize);
+
+	// Software compatablity
+	var scompat = $('.sd-compatibility-list');
+	if (scompat.length) {
+		scompat.on('click', function(e) {
+			var $target = $(e.target);
+			if (!$target.is('.sw-soft-compat-message') && $target.closest('.sw-soft-compat-message').length == 0) {
+				e.preventDefault();
+				var $this = $(this), show = (!$this.hasClass('active'));
+				$('.sd-compatibility-list.active').removeClass('active');
+				if (show) {
+					var tooltip = $('.sw-soft-compat-message', $this).removeClass('top');
+					$this.addClass('active');
+					if (tooltip.is(':offscreen')) {
+						tooltip.addClass('top');
+					}
+				}
+			}
+		});
+		$(document).on('click', function(e) {
+			var $target = $(e.target);
+			if (!$target.is('.sd-compatibility-list') && $target.closest('.sd-compatibility-list').length == 0) {
+				$('.sd-compatibility-list.active').removeClass('active');
+			}
+		});
+	}
+});

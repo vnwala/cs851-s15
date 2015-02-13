@@ -1,0 +1,696 @@
+
+
+
+
+
+/* main tag settings */
+
+
+body					{	background-color:#008000;border:none;	}
+
+body,td				{	color:#000000;font-size:14px;font-family:verdana; }
+
+hr						{	color:#008000;height:1px;	}
+
+a:link, a:visited	{	color:#0000FF;text-decoration:underline;	}
+a:hover				{	color:#0000FF;text-decoration:underline;	}
+
+iframe				{		}
+
+
+
+
+
+/* general purpose classes */
+
+/*
+div					{
+						}
+*/
+
+.footer_include a:link, .footer_include a:visited { text-decoration:none;	}
+
+.img_border			{ border-radius:4px; } 
+.avatar_border		{ border-radius:4px; } 
+.tiny_avatar_border		{ border-radius:2px; } 
+.livesnap_border	{ border:1px inset #EEE; border-radius:4px; }
+.tiny_livesnap_border	{ border:1px inset #EEE; border-radius:3px; }
+
+
+
+.highlight			{	background-color:#FFFFFF;font-weight:bold;border:1px outset;margin:1px;padding:3px;
+						}
+
+
+
+.content				{	font-size:11px;	}
+
+.outer_body			{	
+							height:100%;
+							background-color:#008000;
+						}
+
+.outer_body,.outer_body td	{	color:#FFFFFF;	}
+.outer_body a:link,.outer_body a:visited, .outer_body a:active {	color:#FFFFFF;	}
+
+.outer_body .heading	{	padding:0px 0px 2px 7px;font-weight:bold;font-size:19px;color:white;position:relative;position:relative;	}
+.outer_body .content	{	padding:7px 0px 15px 25px;	}
+
+.footer_include	{
+							padding:2px 5px 2px 7px;
+							text-align:right;
+							font-size:11px;
+						}
+
+
+.inner_body			{
+							color:#000000;
+							margin:10px 6px 0px 6px;
+							background-color:#FFFFFF;
+							border:0px;
+						}
+
+.inner_body a:link,.inner_body a:visited, .inner_body a:active {	color:#0000FF;	}
+.inner_body a:hover	{ color:#0000CC; }
+.inner_body	.heading		{	font-size:13px;font-weight:bold;  }
+.inner_body	.content		{	font-size:11px;padding:10px 10px 10px 10px;	}
+
+
+
+/* alt container */
+
+.container,.container td			{ 	color:#000000;	}
+.container_outer_content			{ 	color:#000000;	}
+
+.container_css3	{
+	padding:6px 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.container_wrapper	{	padding:3px;color:#000000;	}
+.container_wrapper td	{	color:#000000;	}
+.container {
+							background-color:#FFFFFF;
+						}
+.container .heading {
+							position:relative;
+							color:#008000;
+							font-weight:bold;
+							font-size:17px;
+							margin:2px 10px 13px 0px;
+							padding:1px 1px 1px 10px;
+						}
+.container .small_heading {
+							font-weight:bold;
+							font-size:11px;
+							padding:0px 0px 5px 2px;
+							color:#008000;
+							text-decoration:none;
+						}
+.container .alt_heading {
+							padding:6px 6px 10px 6px;
+							color:#008000;
+							font-weight:bold;
+							font-size:27px;
+						}
+.container .icon {
+							float:left;
+							margin-right:4px;
+}
+.container .text {
+							margin:6px;
+							border-bottom:1px dotted #E2ECD4;
+							vertical-align: super;
+							
+}
+
+.container .content,.container .content td {
+							color:black;
+						}
+.container .content	{
+							margin:7px 15px 15px 10px;
+						}
+
+.content2, .content2 td {
+							margin-bottom:10px;
+						}
+.container .content,.container .content td {
+							font-size:12px;
+}
+.container a:link, .container a:active, .container a:visited {
+							color:#0000FF;font-weight:normal;text-decoration:underline;
+						}
+.container a:hover	{
+}
+
+
+
+
+
+.content_container,.content_container td			{ 	color:#000000;	}
+
+.content_container_wrapper	{	padding:3px; }
+
+.content_container_css3	{
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:2px solid #00BB00;
+}
+
+.content_container_table_td	{	background-color:#FFFFFF;	}
+.content_container_outer_content	{		}
+
+.content_container_inner_content {
+							margin:3px 0px 0px 0px;
+						}
+.content_container .heading {
+							position:relative;
+							font-weight:bold;
+							font-size:1px;
+							padding:0px;
+							color:#008000;
+							border:0px dashed red;
+						}
+.content_container .content {
+							border:0px dashed blue;
+							position: relative;
+							font-size:12px;
+							padding:0px 12px 16px 70px;
+						}
+.content_container .icon {
+							position:absolute;
+							top:10px;left:11px;
+							border:0px dashed red;
+}
+.content_container .text {
+							font-size:17px;
+							margin:6px;
+							padding-left:20px;
+							vertical-align: super;
+}
+
+
+
+
+.popup_container,.popup_container td			{ 	color:black;	}
+
+.popup_container_wrapper	{	padding:3px; }
+
+.popup_container_css3	{
+	padding:12px 11px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:2px solid #00A000;
+	-webkit-box-shadow:1px 6px 15px #001100;
+	-moz-box-shadow:1px 6px 15px #001100;
+	-ms-box-shadow:1px 6px 15px #001100;
+	box-shadow:1px 6px 15px #001100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=155, Color='#112211')";
+	filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=155, Color='#112211')";
+}
+
+.popup_container_table_td	{		}
+.popup_container_outer_content	{	background-color:#FFFFFF;color:black ! important;	}
+
+.popup_container_inner_content {
+							margin:3px 0px 0px 0px;
+						}
+.popup_container .heading {
+							position:relative;
+							font-weight:bold;
+							font-size:14px;
+							padding:3px 3px 3px 3px;
+							color:#008000;
+						}
+.popup_container .content,.popup_container .content td {
+							font-size:12px;margin:12px 12px;
+						}
+.popup_container_img_tr   {  height:6px;	}
+.popup_container_img_bl   {  width:6px;	}
+.popup_container_img_tl   {  width:7px;	}
+.popup_container_img_br   {  height:6px;	}
+
+.popup_container a:link,.popup_container a:visited, .popup_container a:active {	color:#0000FF;	}
+.popup_container a:hover {	color:#0000CC;	}
+
+
+
+
+
+.input_container		{	font-size:1px;	}
+.input_container_wrapper	{	padding:0px; }
+
+.input_container_css3	{
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border:2px solid #FFFFFF;
+}
+
+.input_container_table	{	}
+.input_container_table_td	{ background-color:white ! important;	}
+.input_container_outer_content	{	}
+
+.input_container select, .input_container input, .input_container textarea	{
+							font-size:12px;border:0px;font-weight:bold;color:#475E26;
+						}
+.input_container input	{	border:0px;margin:0px;float:left;	}
+
+.hide_select_wrapper		{	overflow:hidden;height:16px;margin:1px;	}
+.hide_select_wrapper	select {	position:absolute;width:102%;top:-2px;left:-2px;	}
+
+
+
+
+
+.menu_container div	{
+						}
+.menu_container_wrapper	{ padding:2px; }
+.menu_container, .menu_container  td, .menu_container font, .menu_container div,
+	.menu_container a:link,.menu_container a:visited	{		}
+.menu_container_table a:hover {		}
+.menu_container_table_td	{	background-color:#86B147;color:white;padding:0px;margin:0px;	}
+.menu_container_outer_content	{	background-color:#86B147;font-size:14px; }
+.menu_container_outer_content, .menu_container_outer_content td {
+							font-size:13px;
+						}
+.menu_container_inner_content { padding:3px 0px 0px 0px; }
+.menu_container a:link,.menu_container a:visited, .menu_container a:active {		}
+.menu_container a:hover	{		}
+.menu_container input	{ font-size:11px; }
+
+.menu_container .heading {
+							position:relative;
+							font-weight:bold;
+							font-size:15px;
+							border-bottom:2px solid #8FBD4C;
+							padding:3px 3px 3px 3px;
+							color:white;
+						}
+.menu_container .small_heading {
+							font-weight:bold;
+							font-size:10px;
+							border-bottom:1px solid #8FBD4C;
+							padding:2px 0px 2px 2px;
+							color:white;
+							text-decoration:none;
+						}
+.menu_container .exe_heading {
+							margin:0px;
+							font-weight:bold;
+							font-size:15px;
+							border-bottom:0px solid #8FBD4C;
+							padding:0px 3px 0px 3px;
+							color:white;
+							text-decoration:none;
+						}
+.menu_container .content,.menu_container .content td {
+							font-size:11px;margin:12px 12px;
+						}
+
+.menu_container_button	{
+							color:white;
+							background-color:#80A944;
+							font-weight:bold;
+							font-size:11px;
+							border:2px outset #80A944;
+						}
+.menu_container .emphasize {
+							color:white;
+							background-color:#7BA341;
+						}
+.menu_container .img_border {
+							border:1px solid #CCCCCC;
+						}
+
+
+/*
+.friends_private_messages * {
+							font-size:10px;font-weight:bold;
+						}
+*/
+
+.online_friends *	{
+						}
+.offline_friends *	{
+						}
+
+
+.emoticon_field	{	padding:4px; }
+.emoticon_field a:link,.emoticon_field a:visited,.emoticon_field a:active,.emoticon_field a:hover	{	color:black;	}
+
+/*
+	.chat_table			{	background:white url(http://img.myfreecams.com/mfc2/styles/mfc/images/misc/chat_background.jpg) no-repeat scroll bottom right;	}
+*/
+
+.chat_input			{	font-size:19px;background-color:transparent;color:#1A2F3E;border:0px;	}
+.chat_title			{ }	
+.chat_chat_title	{		}
+.chat_people_title	{		}
+.chat_chat_box		{	
+						}
+.chat_chat_box_wrapper	{ 	}
+.chat_people_box_wrapper	{ 	}
+.chat_people_box	{	
+						}
+.people_contents		{		}
+
+.chat_private_message		{		}
+.chat_private_message_title {		}
+.chat_private_message_list	{		}
+
+.private_message_header,.private_message_header td {		}
+
+.chat_friends			{		}
+.chat_friends_title	{		}
+.chat_friends_list	{		}
+.chat_friends			{		}
+.chat_friends a:link,.chat_friends a:visited		{		}
+.chat_friends a:hover	{		}
+
+.chat_friends_box_wrapper	{		}
+.chat_friends_box	{
+						}
+
+.private_message_contents		{		}
+.private_message_input input	{		}
+.private_message_username_input 	{		}
+.friends_private_messages	{
+							padding:3px 0px 15px 0px;
+							margin:0px;
+						}
+
+.window_button_container	{
+							position:relative;
+							height:26px;
+}
+
+.window_button		{	
+							overflow:hidden;
+							position:absolute;
+							left:20px;
+							width:123px;
+							height:19px;
+							border:1px solid #718F50;
+							-moz-border-radius:2px;
+							-webkit-border-radius:2px;
+							border-radius:2px;
+							background: url(http://img.myfreecams.com/mfc2/styles/mfc/images/misc/window_button.png) repeat scroll top left;
+							overflow:hidden;
+							font-size:12px;
+						}
+
+.window_button_label	{	position:absolute;top:3px;left:5px;cursor:pointer;width:110px;cursor:pointer;white-space:nowrap;	}
+.window_button_x		{	position:absolute;left:92px;top:0px;height:19px;width:35px;padding-top:4px;padding-left:16px;cursor:pointer;	}
+
+.window_button a:link, .window_button_on a:visited, .window_button_on a:hover, .window_button_on a:active {
+							color:#0000FF;text-decoration:none;font-weight:bold;
+						}
+
+.window_button_on	{	background: url(http://img.myfreecams.com/mfc2/styles/mfc/images/misc/window_button_active.png) repeat scroll top left; }
+
+.window_button_off	{ background: url(http://img.myfreecams.com/mfc2/styles/mfc/images/misc/window_button.png) repeat scroll top left; }
+
+
+
+.homepage_online_links,.homepage_online_links a:link,.homepage_online_links a:hover,.homepage_online_links a:visited	{		}
+
+.video_status_text *		{	font-size:14px;	}
+
+.mini_popup_header		{	padding:5px;color:#008800;font-size:15px;font-weight:bold;	}
+.mini_popup_content		{	padding:10px;	}
+
+.MfcDhtmlWindow_container	{
+	background:#008000 url(http://imgs.myfreecams.com/mfc2/styles/mfc/images/misc/palms_bg5.jpg) no-repeat scroll top left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:1px outset #009900;
+	-webkit-user-select: none;
+}
+
+.MfcDhtmlWindow_container_shadow	{
+	-webkit-box-shadow:4px 12px 40px 10px #112211;
+	-moz-box-shadow:2px 12px 40px 10px #112211;
+	-ms-box-shadow:2px 12px 40px 10px #112211;
+	box-shadow:2px 12px 40px 10px #112211;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=155, Color='#112211')";
+	filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=155, Color='#112211')";
+}
+
+.MfcDhtmlWindow_inner_container	{
+	padding:0px 3px;
+	background-color:#FFFFFF;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.MfcDhtmlWindow_plain_inner_container	{
+}
+
+.MfcDhtmlWindow_controls {
+	position:relative;
+}
+
+.MfcDhtmlWindow_mobile_controls {
+	right:21px;
+	top:3px;
+	font-size:25px;
+}
+
+
+.MfcDhtmlWindow_grip_td {
+	height:22px;
+	padding-bottom:7px;
+}
+
+.MfcDhtmlWindow_icon {
+	position:absolute;
+	left:15px;
+	top:11px;
+}
+
+.MfcDhtmlWindow_mobile_icon {
+	top:28px;
+	left:25px;
+}
+
+.MfcDhtmlWindow_heading {
+	position:absolute;
+	left:37px;
+	top:10px;
+	color:white;
+	font-weight:bold;
+	font-size:13px;
+}
+
+.MfcDhtmlWindow_mobile_heading {
+	left:47px;
+	top:24px;
+	font-size:15px;
+}
+
+.MfcDhtmlWindow_close {
+	cursor:pointer;
+	position:absolute;
+}
+
+.MfcDhtmlWindow_standard_close {
+
+	background: url(http://img.myfreecams.com/mfc2/images/icons/close.png) no-repeat scroll center center;
+	top:6px;
+	right:-3px;
+	height:22px;
+	width:30px;
+}
+
+.MfcDhtmlWindow_mobile_close {
+	background: url(http://img.myfreecams.com/mfc2/images/icons/close_large.png) no-repeat scroll center bottom;
+	top:-8px;
+	right:-10px;
+	height:54px;
+	width:80px;
+}
+
+/*
+.MfcDhtmlWindow_minimize {
+	border:0px solid red;
+	background: url(http://img.myfreecams.com/mfc2/images/icons/minimize.png) no-repeat scroll center center;
+	cursor:pointer;
+	position:absolute;
+	top:6px;
+	right:25px;
+	height:22px;
+	width:30px;
+}
+
+.MfcDhtmlWindow_mobile_minimize {
+	top:23px;
+	right:50px;
+}
+*/
+
+.MfcDhtmlWindow_minimize {
+	border:0px solid red;
+	cursor:pointer;
+	position:absolute;
+	font-size:11px;
+	top:10px;
+	right:35px;
+	height:22px;
+	width:60px;
+	text-decoration:underline;
+}
+
+.MfcDhtmlWindow_mobile_minimize {
+	font-size:14px;
+	top:-10px;
+	vertical-align:bottom;
+	right:80px;
+	padding:34px 10px 0px 10px;
+	border:0px dashed white;
+}
+
+.MfcDhtmlWindow_controls {
+	position:absolute;
+	right:13px;
+	top:1px;
+	height:15px;
+	width:50px;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.MfcDhtmlWindow_grip_move {
+	opacity:0.4;
+	filter:alpha(opacity=40); 
+	background-color:#003000;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	height:22px;
+	cursor:move;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_move {
+	height:30px;
+}
+
+.MfcDhtmlWindow_grip_top {
+	height:7px;
+	cursor:n-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_top {
+	height:12px;
+}
+
+.MfcDhtmlWindow_grip_top_left {
+	height:7px;
+	width:10px;
+	cursor:nw-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_top_left {
+	height:20px;
+	width:20px;
+}
+
+.MfcDhtmlWindow_grip_top_right {
+	height:7px;
+	width:0px;
+	cursor:ne-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_top_right {
+	height:20px;
+	width:20px;
+}
+
+.MfcDhtmlWindow_grip_bottom {
+	height:10px;
+	cursor:s-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_bottom {
+	height:20px;
+}
+
+.MfcDhtmlWindow_grip_left {
+	width:7px;
+	height:100%;
+	cursor:w-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_left {
+	width:20px;
+}
+
+.MfcDhtmlWindow_grip_right {
+	width:7px;
+	height:100%;
+	cursor:e-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_right {
+	width:20px;
+}
+
+.MfcDhtmlWindow_grip_bottom_left {
+	height:10px;
+	width:10px;
+	cursor:sw-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_bottom_left {
+	height:20px;
+	width:20px;
+}
+
+.MfcDhtmlWindow_grip_bottom_right {
+	height:10px;
+	width:10px;
+	cursor:se-resize;
+	font-size:1px;
+}
+
+.MfcDhtmlWindow_mobile_grip_bottom_right {
+	height:20px;
+	width:20px;
+}
+
+
+
+
+
+
+
+
+
+
+

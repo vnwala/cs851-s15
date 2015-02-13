@@ -1,0 +1,154 @@
+@charset "utf-8";
+#rkg {width:166px; margin:0px; padding:0px; display:block; background-color:#030303; /*font-family:"MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka,vernada, arial;*/ min-height:619px} 
+#rkg .koushin{ text-align:center; width:166px; height:14px; margin:0px; padding:2px 0 2px 0; font-size:10px; /*font-family:vernada,arial, "MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka; color:#fff;*//* background-color:#252525;  border-top:1px solid #000000; border-bottom:1px solid #000000;*/}
+#rkg .each { 
+	background:url(../img/ranking/rankingBG.gif) top left no-repeat; 
+	width:164px; 
+	height:105px;
+	margin:1px 0px 0px 0px;
+	padding:0px;
+	display:block;
+	text-align: left;
+	letter-spacing:-.40em;
+}
+#rkg .each * {letter-spacing:normal;}
+#rkg .each .left { /*float:left;*/
+	padding:0px;
+	margin:0px;
+	display: inline-block;
+	width: 107px;
+	height: 82px;
+	vertical-align: top;
+}
+#rkg .each .left img {width:105px; height:80px; border:1px solid #1E1E1E; margin:0px; padding:0px;}
+
+#rkg .each .right {
+	/*float:left;*/
+	display: inline-block;
+	/*float:right;*/ 
+	padding:0px; 
+	margin:0 0 0 2px; 
+	width:54px; 
+	height:84px;
+}
+
+#rkg .each .right .rank{ width:54px; height:33px; margin:0px; padding:0px;}
+
+#rkg .each .right .arrow{ width:54px; height:35px; margin:0px; padding:0px;}
+
+#rkg .each .right .status{ width:54px; height:16px; margin:0px; padding:0px;}
+
+#rkg .each .name { width:164px; height:20px; margin:0px; text-align:center; padding:0px;}
+
+#rkg .each .name a{ color: #f09; text-decoration:none; text-align:center; margin:0px; font-family: vernada,arial, "MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka; font-size:12px; padding:0px;}
+
+#rkg .each .name a:hover{ color: #ff00d2; text-decoration:none; text-align:center; margin:0px; font-family: vernada,arial, "MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka; font-size:12px; padding:0px;}
+
+.end { margin:0px; padding:0px;/*clear:both;*/ height: 1px; width: 100%;}
+
+#rkg .seemore{ text-align:right; margin: 2px 5px; font-size:10px;font-family:verdana, MS UI GothicArial, Helvetica, sans-serif; color: #cc0;}
+
+#rkg .seemore a {color: #cc0; text-decoration:none;}
+
+#rkg .seemore a:hover {color: #cc0; text-decoration:underline;}
+
+#rkg img {border:0px; margin:0px; padding:0px;}
+
+#rkg a {border:0px;}
+
+
+
+#rkg.user_vip .each .name a{ color: #FFE083; text-decoration:none; text-align:center; margin:0; font-family: vernada,arial, "MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka; font-size:12px; padding:0;}
+
+#rkg.user_vip .each .name a:hover{ color: #FFFFCC; text-decoration:none; text-align:center; margin:0; font-family: vernada,arial, "MS UI Gothic", "ＭＳ Ｐゴシック", "ＭＳ ゴシック", "Osaka‐等幅", sans-serif,Osaka; font-size:12px; padding:0;}
+
+
+
+/*<img src="/img/home/titleBar_ranking_new.gif">*/
+
+/*<img src="/img/member/vip/titleBar_ranking_new.gif">*/
+
+
+
+/*title img part, differenciating based on usertype*/
+
+#girlsRanking { 
+	width:166px; 
+	height:31px; 
+	background:0 0 url(../img/ranking_new/titleBar_ranking_new.png) no-repeat;
+	/*text-indent:-9999px;*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#rkg.user_vip #girlsRanking {
+	background-position: 0 -31px;
+}
+
+/*ranking category title*/
+
+.rkg_category_box .rkg_title {
+	width:166px; 
+	height:24px;
+	background:0 0 url(../i/rkg_title.gif) no-repeat;
+	/*text-indent:-9999px;*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	/* background:0 0 url(/img/ranking_new/rkg_title.gif) no-repeat;text-indent:-9999px; */
+}
+#rkg.user_vip .rkg_title {background:0 0 url(../i/rkg_title_vip.gif) no-repeat;}
+
+.rkg_category_box {
+	min-height:619px;
+}
+.rkg_title {}
+
+.rkg_category_box#rkg_1 .rkg_title { background-position:0 0;}
+.rkg_category_box#rkg_2 .rkg_title {  background-position:0 -30px;}
+.rkg_category_box#rkg_3 .rkg_title {  background-position:0 -60px;}
+.rkg_category_box#rkg_4 .rkg_title {  background-position:0 -90px;}
+.rkg_category_box#rkg_5 .rkg_title {  background-position:0 -120px;}
+.rkg_category_box#rkg_6 .rkg_title {  background-position:0 -150px;}
+.rkg_category_box .koushin {}
+
+/*to ranking page*/
+
+.toRanking_newOuter { display:block; height:35px; width:100%;background-color:#000;/* padding:6px 27px 0 27px;*/ padding-top:6px; text-align:center;}
+
+a.toRanking_new {display:block; margin:0 auto 0 auto;width:110px; height:24px; line-height:24px;border: 1px solid #ccc; background-color:#333; color:#fff}
+a.toRanking_new:hover { background-color:#F9C;}
+
+
+
+div.btnBox {background:#000;width:100%;text-align:center;padding-bottom:4px;}
+
+
+
+#ranking_holder { min-height:164px; background-color:#000; background:center center url(../img/ranking_new/ajax-loader.gif) no-repeat; }
+
+
+
+/***************navigation part***************/
+
+div#rkg_nav { width:100%; height:20px; padding-top:6px; /*background:top center url(/img/ranking/rankingBG.gif) no-repeat;*/ background-color:#000;}
+ul#rkg_ul {margin:0; padding:0; display:block; text-align:center; list-style:none;}
+ul#rkg_ul li {display:inline-block; width:16px; height:16px;padding:0 2px;
+/*IE7 hack*/
+/display: inline;
+/zoom: 1;
+}
+ul#rkg_ul li a {
+	display:block; 
+	
+	width:16px; 
+	height:16px; 
+	background:0 0 url(../img/ranking_new/small_btns.png) no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+ul#rkg_ul li a.on, ul#rkg_ul li a.on:hover {background-position: 0 -16px;}
+ul#rkg_ul li a:hover{background-position: 0 -32px;}
+ul#rkg_ul li a.on { cursor:default;}
+

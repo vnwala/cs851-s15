@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html itemscope lang="en" itemtype="http://schema.org/" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta name="robots" content="noindex" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+// Stop older versions of IE from choking on calls to the console.
+if(typeof console == "undefined") {
+
+    console = {};
+    console.log = function(msg) {
+    // fail silently
+    }
+    
+    console.warn = function(msg) {
+    // fail silently
+    }
+    
+    console.error = function(msg) {
+    // fail silently
+    }
+    
+    console.info = function(msg) {
+    // fail silently
+    }
+
+}
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var nbc = {
+    brand:               "NBC 5 Dallas-Fort Worth",           
+    cityName:            "Dallas-Fort Worth",            
+    domain:              "www.nbcdfw.com",           
+    host:                "nbcdfw.com",             
+    market:              "nbcdfw",           
+    gmtOffset:           "6",      
+    path:                "",             
+    sectionType:         "AlphaDomain",   
+    section:             "",         
+    subsection:          "",      
+    subsectionPageTitle: "$subsectionPageTitle",           
+    fullDomain:          "http://www.nbcdfw.com",       
+    fullPath:            "http://www.nbcdfw.com",             
+    env:                 "",           
+    siteKey:             "dfw", 
+    mediaDomain:         "http://media.nbcdfw.com", 
+    debug:               false,                  
+    roadblockOrdNumber:  293465747,
+    defaultLat:          "32.77238",    
+    defaultLong:         "-97.001724",   
+    tremorKey:           "52289094b872c",            
+    tremorSyndKey:       "5239b2feaee2e",            
+    tremorHTMLKey:       "5239c44e7e9e1",            
+    tremorHTMLSyndKey:   "5239c48490096",            
+    htmlPreroll:          true,                      
+    
+    pdkPath:             "pdk449",
+    gmapKey:             "ABQIAAAAqVLuG7bZfizR7HmRA5SLvRSfjeceR0icC4O3wKL3G_Rm1pGVQRSDtsTxHr-zrt2TqKKfYVHj5iDE5g",       
+    isMobile:            "",       
+    contentID:           "", 
+    desktopContScroll:   "false", 
+    mobileContScroll:    "true",
+    twitterVia:          "",
+    fbApiKey:            "c41b0f002bf061b3ff7a1ee130b6cefc"   
+    
+    
+  };
+nbc.omniture = {firedRegistration: "test",ageRange: "",userGender: "",postalCode: "",playerType: "player",pageType: "",suite:"nbculimdivisionprod,nbculimnbcdfwprod"};
+
+var zoneSec = nbc.section.replace(/-/g,"_");
+nbc.zone = zoneSec + "-landing-" + nbc.omniture.pageType;
+    
+
+
+nbc.video = {config: {volume: 100 ,htmlPreRoll: true, htmlOmniture: false, tremorFlashKey: "52289094b872c",tremorFlashSyndKey: "5239b2feaee2e",tremorHTMLKey: "5239c44e7e9e1",tremorHTMLSyndKey: "5239c48490096"},pdkPath: "pdk449",playerType: "player"};
+
+var partner_xfinity = false;
+
+
+var xfinityIsPersistant = false;
+var partnerXfinityValue = "";
+function getThePartnerCookie (cookieName) {
+    var exp = new RegExp (escape(cookieName) + "=([^;]+)");
+    if(exp.test (document.cookie + ";")) {
+        exp.exec (document.cookie + ";");
+        return unescape(RegExp.$1);
+    }
+}
+if(getThePartnerCookie("partnerCookie")=="xfinity" && getThePartnerCookie("partnerSessionCookie")=="xfinity"){
+    xfinityIsPersistant = true;
+} else {
+    xfinityIsPersistant = false;
+}
+
+if(xfinityIsPersistant == true){
+    partnerXfinityValue = "xfinity";
+    console.log("partner xfinity");
+} else {
+    partnerXfinityValue = "";
+}
+    
+
+nbc.getReferrer = function(useAgentString) {
+    var capturedUA = null;
+    var subDomainPresent = false;
+    var capturedReferral = "";
+    
+        if(useAgentString == true) {
+            var capturedUA = window.navigator.userAgent;
+            
+            if( capturedUA.indexOf('FBAN') != -1 || capturedUA.indexOf('FBAV') != -1 || capturedUA.indexOf('FBDV') != -1 || capturedUA.indexOf('FBSV') != -1) {
+            var cameFromFBUA = true;
+            var finalRef = "facebook.com";
+            }
+            
+        }
+        
+        // If the user agent is not the in-app browser for Facebook (and just FB...for now, revert back to SOP)
+        if(!cameFromFBUA) {
+            var capturedReferral = document.referrer;
+            if(capturedReferral != "") {
+                friendlyRef = capturedReferral.match(/:\/\/(.[^/]+)/)[1];
+                rSplit = friendlyRef.split(".");
+                    if (rSplit.length == 2) {
+                    subDomainPresent = false;
+                    } else if (rSplit.length == 3) {
+                    subDomainPresent = true;
+                    }
+            
+            if(subDomainPresent == true) {
+                finalRef = friendlyRef.replace(/^[^.]+\./g, "");
+                } else {
+                finalRef = friendlyRef;
+            }
+            
+        } else {
+        finalRef = "";
+        }
+        }
+        
+        
+        return finalRef;
+}
+
+nbc.gptParams = {};
+nbc.referrer = nbc.getReferrer(true);
+nbc.gptParams.gptZone = "home";
+
+nbc.gptParams.suitenumber ="2620";
+nbc.gptParams.suitename = "ots_dfw_web";
+nbc.gptParams.slotData = [];
+
+nbc.gptParams.pageData = { stage:"false",  adtest:"", referrer:nbc.referrer, sensitive : "",pagetype : "",contentid : "",feature : "Uncategorized",sponsor: "",searchkw: "",adContentType: "",zipcode : "75261", category: "",  partner: partnerXfinityValue };
+
+
+
+
+nbc.loadVideoPlugins = ['akamaiHD','tremor','comscore','conviva','omniture','closeCaption'];
+
+
+var gigya_enabled = false;
+
+</script>
+ <link rel="stylesheet" href="nbc_shared_global.css?r=2015-02-05" type="text/css" />
+
+<link rel="stylesheet" href="nbc_v3_global_alt_tv.css?r=2015-02-05" type="text/css" />
+
+<link rel="stylesheet" href="nbc_v3.css?r=2015-02-05" type="text/css" />
+
+<style type="text/css">
+body#partner_footer {background:#0E3870;}
+#footer #footerDiv #footerLinks{border-bottom:1px solid #214785;padding-left:0;width:987px;}
+#footer #footerDiv #footerLinks .logo{float:left;margin:18px 0 0;width:290px;}
+#footer #footerDiv #footerLinks .footCol{width:60em;}
+#footer #footerDiv #footerLinks .footCol ul{margin:25px 0 0 8%;width:auto;}
+#footer #footerDiv #footerLinks .footCol ul{margin-top:39px;}#footer #footerDiv #footerLinks .footCol ul.first{margin-left:0;}
+#footer #footerDiv #footerLinks .footCol ul li{width:auto;}
+#footer #footerDiv #footerLogo {padding:20px 0 0;width:987px;}
+#footer #footerDiv #footerLogo .left{width:290px;}
+#footer #footerDiv #footerLogo .wd{width:400px;}
+#footer #footerDiv #footerLogo .wd .leftTerms{width:400px;}
+#footer #footerDiv #footerLogo .leftTerms{width:290px;}
+#footer #footerDiv #footerLogo #leftCopy{text-align:center;width:100%;}
+</style>
+<title></title>
+<base target="_parent" />
+</head>
+<body id="partner_footer">
+<div id="footer" class="partner">
+  <div id="footerDiv">
+    <div id="footerLinks">
+      <div class="logo"><a href="http://www.nbcdfw.com/"><img src="http://media.nbcdfw.com/designimages/xfinity_dfw_footer.png" alt="NBC 5 Dallas-Fort Worth Logo" /></a></div>
+      <div class="footCol">
+        <ul class="first"><li class="header"><a href="http://www.nbcdfw.com/news/" name="&lpos=footer&lid=news">News</a></li></ul>
+        <ul class="weather"><li class="header"><a href="http://www.nbcdfw.com/weather/" name="&lpos=footer&lid=weather">Weather</a></li></ul>
+        <ul class="entertainment"><li class="header"><a href="http://www.nbcdfw.com/entertainment/" name="&lpos=footer&lid=entertainment">Entertainment</a></li></ul>
+        <ul class="contact-us"><li class="header"><a href="http://www.nbcdfw.com/contact-us/" name="&lpos=footer&lid=contact us">Contact Us</a></li></ul>
+        <ul class="traffic"><li class="header"><a href="http://www.nbcdfw.com/traffic/" name="&lpos=footer&lid=traffic" name="&lpos=footer&lid=">Traffic</a></li></ul>
+      </div>
+    </div>
+    <div id="footerLogo">
+      <div class="left">
+        <div class="leftTerms"><a href="http://corporate.comcast.com/news-information/nbcuniversal-transaction/independent-programming" target="_blank">FCC Independent Programming Report</a></div>
+        <div class="leftTerms"><a href="http://corporate.comcast.com/news-information/nbcuniversal-transaction/news-and-information-programming">FCC News and Information Programming Report</a></div>
+      </div>
+      <div class="left">
+        <div class="leftTerms" style="width:358px;"><a href="http://www.nbcdfw.com/non-profit-reports/NBC-Non-Profit-News-Partnership-Reports-138336674.html" name="&lpos=footer&lid=non-profit news partnership reports">NBC Non-Profit News Partnership Reports</a></div>
+                        <div class="leftTerms"><a href="https://stations.fcc.gov/station-profile/kxas" target="_blank">KXAS Public Inspection File</a></div>
+        <div class="leftTerms"><a href="http://www.nbcdfw.com/21stCenturySolutions/" target="_blank">21st Century Solutions</a></div>
+      </div>
+      <div class="left wd">
+        <div class="leftTerms">
+          <a id="_bapw-link" style="cursor:pointer !important;text-decoration:none !important;color: #B6D4EE;font: 11px arial;"><img id="_bapw-icon" style="display:inline !important;vertical-align:middle !important"/> <span style="vertical-align:middle !important">AdChoices</span></a>
+          <script>(function(){var e=document,b,a=(e.location.protocol=="https:"?"https":"http"),c=(a=="https"?"https://info.evidon.com/c/betrad/pub/":"http://cdn.betrad.com/pub/");e.getElementById("_bapw-icon").src=c+"icon1.png";e.getElementById("_bapw-link").onclick=function(){var f=this;function d(i,l){var j=e.getElementsByTagName("head")[0]||e.documentElement,h=false,g=e.createElement("script");function k(){g.onload=g.onreadystatechange=null;j.removeChild(g);l()}g.src=i;g.onreadystatechange=function(){if(!h&&(this.readyState=="loaded"||this.readyState=="complete")){h=true;k()}};g.onload=k;j.insertBefore(g,j.firstChild)}this.onclick="return false";d(a+"://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js",function(){d(c+"pub1.js",function(){BAPW.i(f,{pid:187,ocid:908},false)})});return false};b=new Image();b.src=a+"://l.betrad.com/pub/p.gif?pid=187&ocid=908&ii=1&r="+Math.random()}());</script><a>|</a><a href="http://www.nbcdfw.com/send-feedback/" name="&lpos=footer&lid=send feedback">Send Feedback</a><a>|</a><a href="http://www.nbcdfw.com/terms/" name="&lpos=footer&lid=terms of service">Terms Of Service</a><a>|</a><a href="http://www.nbcdfw.com/privacy/" name="&lpos=footer&lid=privacy policy">Privacy Policy</a>
+        </div>
+      </div>
+      <div id="leftCopy">&copy; 2015 NBCUniversal Media, LLC. All rights reserved. Portions by Broadcast Interactive Media.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

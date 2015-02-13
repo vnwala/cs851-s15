@@ -1,0 +1,160 @@
+/*--- Main CSS here ---*/
+#cci-floater-skipBox{
+font-size:12px;
+margin-top:8px; 
+line-height: 16px}
+
+#cci-floater-countDown{
+color:#7E7E7E;
+font-size:12px; 
+line-height: 16px
+}
+.blockUI{
+background-color:#ffffff;}
+#cci-interstitial{
+	clear:both;
+	display:none;
+	position:absolute;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #ffffff;
+	background-image: none;
+	background-origin: padding-box;
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: auto auto;
+	height: 5000em;
+	left: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding-bottom: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 10px;
+	text-align: center;
+	top: 0;
+	width: 98%;
+	/* z-index: 125000 */
+	/* KPH 20130503 advertiser on CH used 999999999 z-index for a peelback, so temporarily increasing this to match */
+	z-index: 1000000000;
+}
+
+#cci-roadBlock-skipBox-container{
+font-size:14px;margin-bottom:10px;padding-bottom:10px;border-bottom:4px solid #DBDBDB;height:90px;}
+#cci-roadBlock-skipBox-right{
+float:right;width:400px;}
+#cci-roadBlock-countDown{
+color:#7E7E7E;font-size:12px;line-height:24px;margin-top:10px;}
+
+/*------------------------------------*\
+	IPHONE
+\*------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	#blockUIMSCr { margin: 0 auto; width: 100% !important; }
+
+	#cci-interstitial {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	#cci-floater-skipBox {
+		font-size: 12px;
+		color: white;
+		margin-top: 3px;
+		font-weight: bold; 
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	#cci-floater-close-image {
+		display: none;
+	}
+
+	#cci-floater-mobile-close {
+		height: 32px;
+		width: 32px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		display: block;
+		background: transparent url('../images/ui-close-button-mobile.png') no-repeat scroll top left;
+	}
+
+	#cci-floater-countDown {
+		color: white;
+	}
+
+	#cci-mobile-skip-message {
+		display: block;
+		width: 100% !important;
+		background: #859F9E;
+		margin-top: 10px;
+		font-size: 12px;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		padding: 10px 0;
+		text-decoration: none;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+}
+
+@media only screen and (max-width: 479px) {
+
+	iframe { margin: 0; padding: 0; }
+
+	#blockUIMSCr { margin: 0 auto; width: 100% !important; }
+
+	.blockMsg {
+		top: 5% !important;
+	}
+
+	#cci-interstitial {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	#cci-floater { text-align: center; }
+
+	#cci-floater-skipBox {
+		font-size: 12px;
+		color: white;
+		font-weight: bold; 
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	#cci-floater-close-image {
+		display: none;
+	}
+
+	#cci-floater-mobile-close {
+		height: 32px;
+		width: 32px;
+		position: absolute;
+		top: -10px;
+		right: 10px;
+		display: block;
+		background: transparent url('../images/ui-close-button-mobile.png') no-repeat scroll top left;
+	}
+
+	#cci-floater-countDown {
+		color: white;
+	}
+
+	#cci-mobile-skip-message {
+		display: block;
+		background: #859F9E;
+		margin-top: 10px;
+		font-size: 12px;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		padding: 10px 0;
+		width: 100% !important;
+		text-decoration: none;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+}
+

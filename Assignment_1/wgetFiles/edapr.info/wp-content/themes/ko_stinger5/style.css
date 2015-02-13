@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*
+ * Theme Name: ko_stinger5
+ * Template: stinger5ver20140902
+ * */
+ 
+@import url('../stinger5ver20140902/style.css');
+
+/*---------------------------------
+SNSボタン用
+--------------------------------*/
+.snsshare2 {
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.snsshare2 a {
+    width: 50%;
+    height: 25px;
+    margin-bottom: 10px;
+    padding: 14px 0;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    text-decoration: none;
+}
+.snsshare2 a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.snsshare2 a#share_fb {
+    background-color: #3B5998;
+    border-bottom: 1px solid #3C5A98;
+}
+.snsshare2 a#share_tw {
+    background-color: #00ACEE;
+    border-bottom: 1px solid #0193CB;
+}

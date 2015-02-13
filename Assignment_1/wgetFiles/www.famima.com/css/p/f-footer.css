@@ -1,0 +1,74 @@
+@charset "shift_jis";
+
+/*
+Title: 全面フリーページ用フッター
+*/
+
+#f-footer a:link {
+	color: #1886B8;
+	text-decoration: underline;
+	}
+#f-footer a:hover {
+	text-decoration: none;
+	}
+	
+#f-footer {
+	font-size: 12px;
+	margin:0;
+	padding:20px;
+	background-color: #ffffff;
+	text-align:left;
+	border-bottom:1px solid #666;
+	}
+
+#f-footer-logo {
+	float:left;
+	}
+
+#f-footer ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+	padding-top:10px;
+	margin-left:120px;
+	}
+*html #f-footer ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+	padding-top:10px;
+	margin-left:120px;
+	}
+#f-footer-inner li {
+	margin:0;
+	padding:0;
+	padding-right:10px;
+	padding-left:15px;
+	float:left;
+	background:url("http://www.famima.com/img/usr/tree1.png") no-repeat;
+	}
+*html #f-footer-inner li {
+	margin:0;
+	padding:0;
+	padding-right:10px;
+	padding-left:15px;
+	float:left;
+	background:url("http://www.famima.com/img/usr/tree1.png") no-repeat;
+	}
+
+#f-footer-copyright {
+	font-size: 10px;
+	line-height:1.8;
+	margin:0;
+	padding:4px;
+	text-align:center;
+	background: #fff;
+	}
+
+.f-footer-group:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}

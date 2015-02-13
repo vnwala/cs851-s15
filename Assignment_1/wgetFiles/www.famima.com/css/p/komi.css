@@ -1,0 +1,204 @@
+@charset "Shift_JIS";
+
+/*
+Title: komi-souce
+URI: http://famima.com/shop/pages/komi.aspx
+*/
+
+#komi_body {margin: 0; padding: 0; background:url(http://www.famima.com/images/p/komi/back01.gif); font-size:12px; line-height:1.3em; letter-spacing:0.1em; zoom:1;}
+#komi_body a{overflow:hidden;outline:none;}
+#komi_body a:link,
+#komi_body a:visited{ color: #dd2b2b; text-decoration: underline; }
+#komi_body br{letter-spacing:0px;}
+#komi_body a:hover,
+#komi_body a:active{ color: #dd612b; text-decoration: underline; }
+#komi_body img{ margin: 0 ; padding: 0; border: none; }
+#komi_mainbase{ display: block; width: 770px; text-align: left; margin: 0 auto; padding: 0;  background:url(http://www.famima.com/images/p/komi/back02.gif) left top repeat-y;}
+.komi_clear{ clear: both; margin: 0; padding: 0; }
+
+/*HEADER*/
+#komi_body h1{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	}
+
+#komi_header{ margin:0; padding:0;}
+#komi_header2{ margin:0; padding:0;}
+
+/*BODY*/
+#komi_main h2{ margin:10px 0px 0px 0px; padding:0;}
+#komi_main h2.margin20{ margin:20px 0px 10px 0px; padding:0;}
+#komi_main .komi_buy01{width:150px; height:35px; overflow:hidden; text-indent:-9999px;}
+#komi_main .komi_buy01 a{width:150px; height:35px; overflow:hidden; padding:31px 0px 0px 0px; background:url(http://www.famima.com/images/p/komi/bt01.gif) no-repeat; display:block;}
+#komi_main .komi_buy01 a:hover{ background-position:0 -35px;}
+
+/*WRAP*/
+.komi_wrap01{ margin:0; padding:0; background:url(http://www.famima.com/images/p/komi/line01.gif) left top repeat-y; overflow:hidden; width:770px;}
+.komi_wrap01 .wrap01Left{ width:470px; float:left; display:inline;}
+.komi_wrap01 p.komi_comment{ margin:10px 0px 0px 45px; padding:0;}
+.komi_wrap01 p.komi_text{ margin:20px 0px 0px 45px; padding:0;}
+.komi_wrap01 p.komi_photo{ width:290px; float:left; margin-left:10px; padding:0; display:inline;}
+
+/*WRAP*/
+.komi_wrap02{ margin:0; padding:0; width:770px;}
+.komi_wrap02 .komi_box, .komi_wrap02 .komi_box02{ margin:15px 0px 10px 33px; padding:0; background:url(http://www.famima.com/images/p/komi/back03.gif) left top no-repeat; width:342px;
+height:167px; display:block;}
+.komi_wrap02 .komi_box p.komi_photo{ width:56px; float:left; margin:4px 27px 4px 23px; padding:0; display:inline;}
+.komi_wrap02 .komi_box02 p.komi_photo{ width:77px; float:left; margin:4px 15px 3px 14px; padding:0; display:inline;}
+.komi_wrap02 .komi_box .komi_info{ margin:0; padding:0; float:left; width:236px; display:inline;}
+.komi_wrap02 .komi_box02 .komi_info{ margin:0; padding:0; float:left; display:inline;}
+.komi_wrap02 .komi_box p.komi_name{ margin:32px 28px 15px 0px; padding:0;}
+.komi_wrap02 .komi_box02 p.komi_name{ margin:28px 28px 15px 0px; padding:0;}
+.komi_wrap02 .komi_box p.komi_price{ margin:0px 0px 10px 0px; padding:0; color:#d62c0b; font-weight:bold;}
+ .komi_wrap02 .komi_box02 p.komi_price{ margin:0px 0px 10px 0px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap02 .komi_box p.komi_buy01{ margin:0px 23px 10px 63px; padding:0;}
+.komi_wrap02 .komi_box02 p.komi_buy01{ margin:0px 23px 10px 63px; padding:0;}
+.komi_wrap02 .boxLeft{ width:375px; float:left; margin:0; padding:0;}
+.komi_wrap02 .komi_box03 p.komi_photo{ width:380px; float:left; margin:27px 0px 0px 12px; padding:0; display:inline;}
+
+/*WRAP*/
+.komi_wrap03{ margin:0; padding:0; width:770px;}
+.komi_wrap03 .komi_box04{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line04.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap03 .komi_box04 .boxLeft02{ float:left; margin:0; padding:0; width:393px; display:inline;}
+.komi_wrap03 .komi_box04 .boxRight02{ float:left; margin:0; padding:0; width:377px; display:inline;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_photo{ margin:10px 15px 10px 39px; padding:0;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_photo{ margin:10px 23px 10px 15px; padding:0;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_name{ margin:0px 0px 10px 39px; padding:0;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_name{ margin:0px 0px 10px 15px; padding:0;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_price{ margin:0px 0px 0px 51px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_price{ margin:0px 0px 0px 27px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_buy01{ margin:0px 23px 20px 220px; padding:0;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_buy01{ margin:0px 28px 20px 199px; padding:0;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_title{ margin:20px 10px 0px 45px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_title{ margin:20px 10px 0px 19px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap03 .komi_box04 .boxLeft02 p.komi_text{ margin: 10px 10px 20px 45px; padding:0; width:330px;}
+.komi_wrap03 .komi_box04 .boxRight02 p.komi_text{ margin: 10px 10px 20px 19px; padding:0; width:330px;}
+
+/*WRAP*/
+.komi_wrap04{ margin:20px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap04 .komi_box05{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line07.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap04 .komi_box05 .boxLeft03{ float:left; margin:0; padding:0; width:365px; display:inline;}
+.komi_wrap04 .komi_box05 p.komi_photo{ margin:26px 0px 26px 60px; padding:0;}
+.komi_wrap04 .komi_box05 .boxRight03{ float:left; margin:30px 0px 0px 30px; width:370px; padding:0; display:inline;}
+.komi_wrap04 .komi_box05 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap04 .komi_box05 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap04 .komi_box05 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap04 .komi_box05 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap04 .komi_box05 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+
+/*WRAP*/
+.komi_wrap05{ margin:10px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap05 .komi_box06{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line10.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap05 .komi_box06 .boxLeft04{ float:left; margin:30px 0px 0px 60px; width:350px; padding:0; display:inline;}
+.komi_wrap05 .komi_box06 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap05 .komi_box06 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap05 .komi_box06 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap05 .komi_box06 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap05 .komi_box06 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+.komi_wrap05 .komi_box06 .boxRight04{ float:left; margin:0; padding:0; width:355px; display:inline;}
+.komi_wrap05 .komi_box06 p.komi_photo{ margin:26px 50px 26px 0px; padding:0;}
+
+/*WRAP*/
+.komi_wrap06{ margin:10px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap06 .komi_box07{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line07.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap06 .komi_box07 .boxLeft05{ float:left; margin:0; padding:0; width:365px; display:inline;}
+.komi_wrap06 .komi_box07 p.komi_photo{ margin:26px 0px 26px 60px; padding:0;}
+.komi_wrap06 .komi_box07 .boxRight05{ float:left; margin:30px 0px 0px 30px; width:370px; padding:0; display:inline;}
+.komi_wrap06 .komi_box07 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap06 .komi_box07 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap06 .komi_box07 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap06 .komi_box07 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap06 .komi_box07 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+
+/*WRAP*/
+.komi_wrap07{ margin:10px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap07 .komi_box08{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line10.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap07 .komi_box08 .boxLeft06{ float:left; margin:30px 0px 0px 60px; width:350px; padding:0; display:inline;}
+.komi_wrap07 .komi_box08 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap07 .komi_box08 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap07 .komi_box08 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap07 .komi_box08 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap07 .komi_box08 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+.komi_wrap07 .komi_box08 .boxRight06{ float:left; margin:0; padding:0; width:355px; display:inline;}
+.komi_wrap07 .komi_box08 p.komi_photo{ margin:26px 50px 26px 0px; padding:0;}
+
+/*WRAP*/
+.komi_wrap08{ margin: 20px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap08 .komi_box09{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line04.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap08 .komi_box09 .boxLeft07{ float:left; margin:0; padding:0; width:393px; display:inline;}
+.komi_wrap08 .komi_box09 .boxRight07{ float:left; margin:0; padding:0; width:377px; display:inline;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_photo{ margin:10px 15px 10px 39px; padding:0;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_photo{ margin:10px 23px 10px 15px; padding:0;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_name{ margin:0px 0px 10px 39px; padding:0;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_name{ margin:0px 0px 10px 15px; padding:0;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_price{ margin:0px 0px 0px 51px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_price{ margin:0px 0px 0px 27px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_buy01{ margin:0px 23px 20px 220px; padding:0;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_buy01{ margin:0px 28px 20px 199px; padding:0;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_title{ margin:20px 10px 0px 45px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_title{ margin:20px 10px 0px 19px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap08 .komi_box09 .boxLeft07 p.komi_text{ margin: 10px 10px 20px 45px; padding:0; width:330px;}
+.komi_wrap08 .komi_box09 .boxRight07 p.komi_text{ margin: 10px 10px 20px 19px; padding:0; width:330px;}
+
+/*WRAP*/
+.komi_wrap09{ margin:0; padding:0; width:770px;}
+.komi_wrap09 .komi_box10{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line07.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap09 .komi_box10 .boxLeft08{ float:left; margin:0; padding:0; width:365px; display:inline;}
+.komi_wrap09 .komi_box10 p.komi_photo{ margin:26px 0px 26px 60px; padding:0;}
+.komi_wrap09 .komi_box10 .boxRight08{ float:left; margin:30px 0px 0px 30px; width:370px; padding:0; display:inline;}
+.komi_wrap09 .komi_box10 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap09 .komi_box10 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap09 .komi_box10 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap09 .komi_box10 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap09 .komi_box10 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+
+/*WRAP*/
+.komi_wrap10{ margin:10px 0px 0px 0px; padding:0; width:770px;}
+.komi_wrap10 .komi_box11{ margin:0; padding:0;  background:url(http://www.famima.com/images/p/komi/line10.gif) left top repeat-y; overflow:hidden; width: 770px; text-align:left;}
+.komi_wrap10 .komi_box11 .boxLeft09{ float:left; margin:30px 0px 0px 60px; width:350px; padding:0; display:inline;}
+.komi_wrap10 .komi_box11 p.komi_name{ margin:0px 0px 10px 0px; padding:0;}
+.komi_wrap10 .komi_box11 p.komi_price{ margin:0px 0px 0px 5px; padding:0; color:#d62c0b; font-weight:bold;}
+.komi_wrap10 .komi_box11 p.komi_buy01{ margin:0px 0px 20px 178px; padding:0;}
+.komi_wrap10 .komi_box11 p.komi_title{ margin:20px 10px 0px 0px; padding:0; color:#F60; font-weight:bold;}
+.komi_wrap10 .komi_box11 p.komi_text{ margin:10px 10px 20px 0px; padding:0; width:330px;}
+.komi_wrap10 .komi_box11 .boxRight09{ float:left; margin:0; padding:0; width:355px; display:inline;}
+.komi_wrap10 .komi_box11 p.komi_photo{ margin:26px 50px 26px 0px; padding:0;}
+
+/*WRAP*/
+.komi_wrap11{margin:30px;}
+
+/*FOOTER*/
+#komi_footer{ padding:0px 0px 10px 0px; width:770px;}
+#komi_pagetop{ margin: 0px 20px 0px 0px; padding: 10px 0px 20px 0px; }
+
+/* IE6 */
+* html #komi_body { 
+	height: 1%;}
+	
+	
+/* newitem_20110427UP */
+#komi_body #n_item01{
+	width:315px; height:229px; float:left;}
+#komi_body #n_item02{
+	width:225px; height:229px; float:left;}
+#komi_body #n_item03{
+	width:230px; height:229px; float:left;}
+#komi_body #n_item04{
+	width:195px; height:275px; float:left;}
+#komi_body #n_item05{
+	width:190px; height:275px; float:left;}
+#komi_body #n_item06{
+	width:190px; height:275px; float:left;}
+#komi_body #n_item07{
+	width:195px; height:275px; float:left;}
+
+
+
+
+
+
+

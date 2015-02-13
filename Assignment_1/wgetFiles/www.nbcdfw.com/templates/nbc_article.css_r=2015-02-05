@@ -1,0 +1,507 @@
+/***************************************************
+****************************************************/
+/****** GLOBAL ****************************************/
+div.clear {clear:both;}
+.ad {clear: both;}
+#contentTrigger {height:1px;}
+#footer {position: relative;z-index: 1;}
+/****** GLOBAL ****************************************/
+
+/****** HEADLINES, BREADCRUMBS, ETC. ******************/
+#adBackgroundContainer {width:100%;height:100%;position:absolute;z-index:0;display:block}
+
+.breadcrumb_container{clear:both;}
+body #header #ad_hdr_2 {background: none repeat scroll 0 0 #ffffff !important;float: none !important;margin: 0px auto !important;padding:0 !important;text-align: center;width: 1008px !important;}
+#article #header #ad_hdr_2 {border-left:none !important; border-right:none !important;}
+#header #ad_hdr_2 div.adSlot {padding:20px 0 7px;}/* needs to be here when Xfinity doesn't exist */
+#article div.ad .adSlot div {margin: 0 auto !important;text-align: center;}
+
+    body#article {position:relative;}
+    #article #header #ad_hdr_2 {z-index:1;position:relative;}
+    #header #ad_hdr_2 div.adSlot {z-index:2}
+    .ad {z-index:2;position:relative;}
+
+/****** FEATURE HEADER RIBBON ******************/
+/**CSS MOVED TO GLOBAL_SHARED**/
+.feature_header .headerTitleText {color:#666666;font-family:Helvetica, Arial, San-Serif;font-size:44px;margin-left:5px;line-height:46px;font-weight:bold;width:auto;height:auto;text-align:left;text-transform:uppercase;display:block;float:left;}
+.feature_header .headerTitleText:hover {text-decoration:none;}
+
+body#article > section {position:relative;z-index:999;margin-top:33px;}
+
+.feature_header .logo_text {color:#828282;float:left;font-size:24px;padding:32px 20px 20px 0;}
+.feature_header .logo_tune_in {font-family:ahMed;font-weight:normal;float:left;margin:0px 10px 0;text-align:left;font-size:16px;padding:10px 0px ;background:none transparent;}
+body #canvas .headerBannerContainer {clear:both;float:left;height:30px;}
+.feature_header .logo_tune_in_header {clear:both;color:#000000;float:left;font-size:23px;font-weight:bold;text-transform:capitalize;}
+.feature_header .logo_tune_in_info {clear:both;float:left;line-height:24px;}
+.feature-header-container #feature_header #featureTopRight #logo_ad{margin:11px 10px 0;}
+.logo_ad {float:right;height:auto;margin:10px;margin-top:20px;width:auto;position:relative;}
+.logo_ad .fbLikeBox {right:0px!important;left:auto;}
+.logo_ad .fbLikeBox.hover {top:38px!important;}
+.advertHead {display:none;}
+
+.headerBannerContainer {position:relative;clear:both;height:30px;}
+.headerBanner {height:25px;color:#FFFFFF;position:absolute;width:1008px;left:0;z-index:1;text-align:left;margin:0;padding:1px 0;line-height:1em;}
+.feature_header .headerTitleText {font-family:'Roboto',Helvetica,sans-serif;font-size:44px;margin-left:5px;line-height:46px;font-weight:bold;width:auto;height:auto;text-align:left;text-transform:uppercase;display:block;float:left;}
+.feature_header .headerTitleText:hover {text-decoration:none;}
+.headerBanner span, .headerBanner h2 {padding:3px 10px 5px 10px !important;height:16px;display:block;margin:0;position:relative;text-transform:uppercase;font-family:'Arimo',Helvetica, Arial, San-Serif;font-size:15px;line-height:18px;font-weight:normal;}
+.blog_header .logo_ad {float:right;margin:10px;width:auto;position:relative;}
+.blog_header .blogIdGraphic {float:left;line-height:1em;margin-left:16px;}
+.blog_header .blogIdGraphic a {display:block;}
+.blog_header {width:1008px;height:108px;z-index: 1;margin:20px auto 0 auto; background-color:#fff;position:relative;}
+
+/**** AD SKIN BAND AID FIX REMOVE ONCE VENDOR FIXES *****/
+#masthead,#sectionNav,#breaking-news{z-index:999;}
+#nav,div.article_elements{position:relative;z-index:999;}
+body #header #ad_hdr_2 {position:relative;/*z-index:999;*/} 
+
+/**** SPONSORED CONTENT ARTICLE ELEMENTS ***************/
+
+div.article_elements.sponsored {background: #a1dbff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxOSUiIHN0b3AtY29sb3I9IiNhMWRiZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI0NyUiIHN0b3AtY29sb3I9IiNjYmViZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjBmOWZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: linear-gradient(#e4ebf5 7%,#fff 20%);}
+
+h2.sponsored {text-transform: uppercase;font-size: 1.0em;font-family: 'Roboto'; color:#26518d; padding-top:30px; background:none !important; float:left;}
+div.tipLink {height: auto;width: 150px;float: left;margin-top: 30px;margin-left: 10px;}
+a.tooltip {background: #e2e2e2;color: #999;display: inline;font-size: .75em;padding: 3px 5px 4px !important;position: relative;text-decoration: none;text-transform: none;font-family: 'Roboto';}
+a.tooltip:hover:after{background:#e2e2e2;border-radius:5px;bottom:-12px !important;color:#999;content:attr(title);font-size:10px;left:110px !important;line-height:12px;padding:5px 15px;position:absolute;z-index:98;width:220px;}
+a.tooltip:hover:before{border-top:10px solid transparent !important;border-bottom:10px solid transparent !important;border-right:10px solid #e2e2e2 !important; bottom:0 !important;border-left:none  !important;content:"";left:100px !important;position:absolute;z-index:99;}
+
+/**** SPONSORED CONTENT ARTICLE ELEMENTS ***************/
+
+h3.breadcrumb {float:left; margin-right:4px;margin-bottom:18px; text-transform: uppercase; color:#999;font-family:'Arimo';font-size: 0.875em;font-weight: 800;}
+h3.byline {font-family: 'Arimo';font-size: 1em;color: #969696;margin-top:20px;}
+h3.byline a{color:#26518e;}
+h1.headline {clear:both;width:99%;height:auto;margin-top:10px;font-family:'Roboto';font-size:2.857em;font-weight:300;color:#333;padding-right:16px;}
+h2.subtitle {font-family: 'Roboto';color: #777;font-weight: 300; font-size:1.125em;margin-top:9px;margin-right:16px;margin-left:2px;}
+h5.copyright {margin-top:32px;margin-left:32px;font-size:.875em;color:#777;}
+div.headline_region{padding-left:16px; margin-bottom:0;}
+
+.invBanner {width:1010px; height:90px; background-color:#000; background:url("http://media.nbclosangeles.com/designimages/investigations_sprite.png") no-repeat 0 0; margin:0 auto; position:relative;clear:both}
+.invBanner .invName {font-family:Helvetica,Arial,sans-serif;font-size:32px;font-weight:bold;color:#fff;text-transform:uppercase;position:absolute;top:0;left:0;padding:40px 15px 20px;}
+.invBanner .invName a {color:#fff;}
+.invHeader {width:1010px; height:40px; background:url("http://media.nbclosangeles.com/designimages/investigations_sprite.png") no-repeat 0 -90px #222222;margin:0 auto;position:relative;text-align:left!important;}
+.invHeader .invSubtitle {font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;color:#fff;text-transform:uppercase;float:left;margin:0;padding:12px 18px 0;}
+.invHeader .sendTips {background:url("http://media.nbclosangeles.com/designimages/investigations_gradients.png") repeat-x 0 -520px;border:1px solid #666666;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;float:right;font-family:Helvetica,Arial,Sans-Serif;font-size:18px;font-weight:bold;height:38px;margin:0 15px 0 0;max-height:38px;padding:0 8px;text-transform:uppercase;}
+.invHeader .sendTips p {padding:10px 0 0;}
+.invHeader .sendTips p a {color:#FFFFFF;margin:0;padding:0;text-decoration:none;}
+.invHeader .sendTips p a span {background:url("http://media.nbclosangeles.com/designimages/investigations_sprite.png") no-repeat  0 -130px;float:left;height:20px;left:0;margin:0 8px 0 0;padding:0;position:relative;top:0;width:20px;}
+.invHeader .sendTips p span.phone {border-left:1px solid #666666;margin:0 0 0 6px;padding:0 0 0 8px;color:#FFFFFF;}
+
+#invMeetTheTeam {width:293px; height:30px; background-color:#fff; font-family:Helvetica, arial, sans-serif; font-weight:bold;color:#124584; border:1px solid #CDCDCD; padding-left:5px; margin-top:20px; padding-top:5px; text-align:center;}
+#invMeetTheTeam .invMeetTheTeamCopy {text-transform:uppercase; margin-top:5px; font-size:16px;}
+#invMeetTeamImage {width:300px; height:250px;}
+
+#invShareWidget {background:#FFFFFF;border:1px solid #CDCDCD;width:300px;padding:0;text-align:center;margin:0 0 24px;}
+#invShareWidget p {color:#26518E;float:left;font-size:11px;margin:0;font-weight:bold;padding:14px 0 14px 14px;text-transform:uppercase;}
+#invShareWidget .followButtons {float:right;width:170px;}
+#invShareWidget .followButtons .twitterBtn, #invShareWidget .followButtons .facebookBtn {float:left;margin:9px 0 0 12px;}
+#invShareWidget .followButtons .twitterBtn {margin-left:0;}
+#invShareWidget .followButtons .facebookBtn {width:90px;}
+
+.invBanner a.backLink {float:left;overflow:hidden;padding:4px 15px;text-align:left;color:#FFF;text-transform:uppercase;font-size:12px;font-weight:bold;text-decoration:none;background-color:#182c3f;margin:0;position:relative;top:6px;clear:both;z-index:2;}
+.invBanner a.backLink span {background:url('http://media.nbcnewyork.com/designimages/investigations_sprite.png') no-repeat -25px -133px transparent;float:left;width:14px;height:11px;position:relative;}
+.invBanner a.invHeaderImage {position:absolute; top:0px; left:0px;}
+li.invConnection {background-color:#edfaff;}
+
+/****** HEADLINES, BREADCRUMBS, ETC. ******************/
+
+/****** LEAD MEDIA SIZE/POSITION SHIFTING *************/
+.leadMediaThumbnail.image img {display:block;}
+div.leadMediaRegion.false {display:none}
+.small .leadMediaThumbnail .leadMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88% !important;left: 130px;}
+.small .leadMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88%;left: 130px;}
+.small div.leadMediaRegion.video {position:relative;}
+.small div.leadMediaRegion {position:relative; width: 320px;height: 180px;float:left; margin-left:19px; margin-right:18px; overflow:hidden; border:1px solid #CCC;}
+.small div.leadMediaThumbnail.video {position:relative;width:320px; height:180px;}
+.small div.leadMediaCaption {width: 294px;height:auto; float:left; clear:left;margin-right:18px; margin-left:19px;background-color: #EEE;padding: 10px 14px;font-family: 'Roboto',helvetica,arial,sans-serif;font-size: 0.875em;color: #777;}
+.small div.leadMediaCredit {position: absolute; top:151px;padding: 7px;font-family: 'Arimo';font-size: .8em;right: 0px;background-color: #000;opacity: 0.5;color: #FFF;}
+.small div.dateline {width:302px; float:right;margin-right:30px; margin-top:10px; font-family: 'Arimo';font-size: .875em;color: #666;}
+.small div.dateline.bottom {
+  float: none;
+}
+.small div.articleText {margin-top: 60px; float:none;}
+
+.medium .leadMediaThumbnail .leadMediaTitle {font-size: 1.063em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88% !important;left: 130px;}
+.medium .leadMediaTitle {font-size: 1.063em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88% !important;left: 130px;}
+
+
+.medium h3.galleryMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88%;left: 81px;}
+.medium div.leadMediaRegion.video {position:relative;}
+.medium div.leadMediaRegion {width:652px;height:367px;margin-left:16px; overflow:hidden; border:1px solid #CCC;}
+.medium div.leadMediaRegion.gallery {height:531px;}
+.medium div.leadMediaRegion.image {position:relative;}
+.medium .leadMediaRegion.city_module iframe {width:652px; height:367px;}
+.medium div.leadMediaThumbnail.image {position:relative;width:652px;height:367px;}
+.medium div.leadMediaThumbnail.video {position:relative;width:652px;height:367px;}
+.medium div.leadMediaCaption {width: 622px;height: auto;margin-left:16px;background-color: #EEE;padding:16px;font-family: 'Arimo',helvetica,arial,sans-serif;font-size: 0.875em;color: #777;}
+.medium div.leadMediaCredit {position: absolute; top: 339px;padding: 7px;font-family: 'Arimo';font-size: .8em;right: 0px;background-color: #000;opacity: 0.5;color: #FFF;}
+.medium div.dateline {float:left;margin-left:32px;font-family:'Arimo';font-size: .875em;color: #777;margin-top: 32px;width:650px;}
+
+.large .leadMediaThumbnail .leadMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 91% !important;left: 130px;}
+.large .leadMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 88%;left: 130px;}
+.large div.leadMediaRegion.video {position:relative;}
+.large div.leadMediaRegion {width: 970px;height: 546px;margin: 0px auto; overflow:hidden; border:1px solid #CCC;}
+.large div.leadMediaThumbnail.video {position:relative;width: 970px;height: 546px;}
+.large div.leadMediaCaption {width: 957px;height: auto;margin: 0px auto;background-color: #EEE;padding: 10px 0px 10px 14px;font-family: 'Roboto',helvetica,arial,sans-serif;font-size: 0.875em;color: #777;}
+.large div.dateline {float:left;margin-left: 32px;font-family:'Arimo';font-size: .875em;color: #666;margin-top: 32px; width:685px;}
+.large div.leadMediaRegion.image {position:relative;}
+.large div.leadMediaCredit {position: absolute; bottom: 0px;padding: 7px;font-family: 'Arimo';font-size: .8em;right: 0px;background-color: #000;opacity: 0.5;color: #FFF;}
+.large div.articleText {min-height:1075px;}
+html>body .large div.articleText {min-height:1100px;}
+
+.leadMediaRegion.city_module {height:auto !important;}
+
+.medium div.leadMediaRegion.iframeEmbed, .small div.leadMediaRegion.iframeEmbed, .large div.leadMediaRegion.iframeEmbed  {
+    height:auto;
+}
+
+#loader {display:none;background: #fff url('http://media.nbcdfw.com/designimages/article_preloader.gif') no-repeat center center;
+width:1010px;background-color:#fff; margin: 0 auto;height:148px;border-left: 1px solid #E0E7EE;border-right: 1px solid #E0E7EE;position: relative;z-index: 1000;}
+
+#cScrollIndicatorRect {text-align:center;margin:auto;width:100%;position:fixed;z-index:999999;bottom:215px;display:none;}
+#cScrollIndicator {height:76px;width:110px;background-image:url('http://media.nbcdfw.com/images/article-desktop-scroll-110x76.png');display:block;float:right;background-repeat:no-repeat;}
+#cScrollIndicatorRect .upwardScrollContainer {width:1009px;height:90px;margin:0px auto;}
+
+#upwardScrollFixedRect {text-align:center;margin:auto;width:100%;position:fixed;z-index:999999;bottom:10px;display:none;}
+#upwardScrollArrow {height:96px;width:82px;background-image:url('http://media.nbcdfw.com/images/96x82-arrowup.png');display:block;float:right;background-repeat:no-repeat;}
+#upwardScrollArrow:hover {cursor:pointer}
+#upwardScrollFixedRect .upwardScrollContainer {width:1009px;height:96px;margin:0px auto;}
+/****** LEAD MEDIA SIZE/POSITION SHIFTING *************/
+
+/****** MEDIUM-SIZED END CARD *************************/
+
+#endcard, .endcardCS {font-family:'Roboto',Helvetica,sans-serif;width:654px;height:368px;color:#FFFFFF;z-index:6;position:absolute; top:0px;}
+
+#endcard p.replayButton, .endcardCS p.replayButton {position:absolute;top:142px;left:260px;width:117px;height:32px;text-align:center;}
+#endcard p.replayButton a, .endcardCS p.replayButton a {font-size:12px;text-indent:-9999em;text-decoration:none!important;display:block;height:32px;width:117px;background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat -540px 0 transparent;}
+#endcard a, .endcardCS a {color:#999999;cursor:pointer;}
+#endcard #backplate, .endcardCS .backplateCS {width:654px; height:368px; background-color:#000000;opacity:.5;filter:alpha(opacity=50);z-index:0;}
+#endcard #backplateTop, .endcardCS .backplateTopCS {background-color:#000000;width: 654px;border-bottom:1px solid #FFFFFF;height:74px;opacity:.6;filter:alpha(opacity=60);position:absolute;z-index:1;}
+#endcard #backplateBottom, .endcardCS .backplateBottomCS {background-color:#000000;border-top:1px solid #FFFFFF;width:654px;height:138px;opacity:.5;filter:alpha(opacity=50);position:absolute;z-index:1;}
+#endcard #topRegion .items, #endcard #bottomRegion .items, .endcardCS .topRegionCS .items, .endcardCS .bottomRegionCS .items {z-index:2;position:relative;}
+#endcard #topRegion .items, .endcardCS .topRegionCS .items {z-index:3;}
+#endcard #topRegion, .endcardCS .topRegionCS {position:absolute;top:0;left:0;width:654px;height:74px;z-index:3;}
+#endcard #topRegion p.videoTitle, .endcardCS .topRegionCS p.videoTitle {font-family: 'Roboto',Helvetica,sans-serif;font-weight:bold;font-size:24px;line-height:1em;padding:12px 12px 0;color:#F4F4F4;z-index:1;position:absolute;height:24px;overflow:hidden;}
+#endcard #topRegion ul#socialTools, .endcardCS .topRegionCS ul.socialToolsCS {position:absolute;left:12px;top:48px;width:475px;height:auto;float:left;padding:0;}
+#endcard #topRegion ul#socialTools li, .endcardCS .topRegionCS ul.socialToolsCS li {float:left;margin:0 10px 0 0;}
+#endcard #topRegion ul#socialTools li.twitter, .endcardCS .topRegionCS ul.socialToolsCS li.twitter {width:110px;margin:0;}
+#endcard #topRegion ul#socialTools li.twitter span.twitter-share, .endcardCS .topRegionCS ul.socialToolsCS li.twitter span.twitter-share {width:110px;padding:0;}
+#endcard #topRegion ul#socialTools li.fbRecommend, .endcardCS .topRegionCS ul.socialToolsCS li.fbRecommend {width:128px;}
+#endcard #topRegion ul#socialTools li.fbRecommend span.facebookRecommend, .endcardCS .topRegionCS ul.socialToolsCS li.fbRecommend span.facebookRecommend {padding:0;margin:0;width:128px;}
+#endcard #topRegion ul#socialTools li.gplus, .endcardCS .topRegionCS ul.socialToolsCS li.gplus {width:70px;overflow:hidden;margin:0;}
+#endcard #topRegion ul#additionalShare, .endcardCS .topRegionCS ul.additionalShareCS {position:absolute;top:38px;right:12px;width:130px;overflow:hidden;font-size:12px;}
+#endcard #topRegion ul#additionalShare li, .endcardCS .topRegionCS ul.additionalShareCS li {float:left;color:#FFFFFF;cursor:pointer;text-decoration:none;padding:0;margin:0 1px 0 0;text-transform:uppercase;font-size:9px;border:none;width:42px;height:33px;text-align:center;text-indent:-9999em;}
+#endcard #topRegion ul#additionalShare li span, .endcardCS .topRegionCS ul.additionalShareCS li span {color:#FFFFFF;display:block;background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat -190px 0 transparent;width:40px;height:33px;}
+#endcard #topRegion ul#additionalShare li.shareEmbed span, .endcardCS .topRegionCS ul.additionalShareCS li.shareEmbed span {background-position:-230px 0;}
+#endcard #topRegion ul#additionalShare li.shareEmail span, .endcardCS .topRegionCS ul.additionalShareCS li.shareEmail span {background-position:-270px 0;}
+#endcard #topRegion ul#additionalShare li:hover, .endcardCS .topRegionCS ul.additionalShareCS li:hover, body #endcard #topRegion ul#additionalShare li.active, .endcardCS .topRegionCS ul.additionalShareCS li.active {background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat -310px 0 transparent;}
+#endcard #bottomRegion, .endcardCS .bottomRegionCS {position:absolute;bottom:0;left:0;height:138px;width:654px;z-index:2;}
+#endcard #bottomRegion p.related, .endcardCS .bottomRegionCS p.related {font-size:14px;margin:0;padding:8px 12px 4px;color:#FFFFFF;text-transform:uppercase;position:relative;}
+#endcard #bottomRegion .relatedVideos, .endcardCS .bottomRegionCS .relatedVideos {display:block;margin:0 60px;padding:0;position:relative;width:534px;height:110px;overflow:hidden;}
+#endcard #bottomRegion ul, .endcardCS .bottomRegionCS ul {margin:0;overflow:hidden;padding:0;display:block;position:relative;}
+#endcard #bottomRegion ul li, .endcardCS .bottomRegionCS ul li {width:178px;height:110px;float:left;display:block;padding:0;margin:0;font-size:11px;}
+#endcard #bottomRegion ul li span, .endcardCS .bottomRegionCS ul li span {padding:0 20px;display:block;position:relative;}
+#endcard #bottomRegion ul li span a span.icon, .endcardCS .bottomRegionCS ul li span a span.icon {background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat -190px -35px;width:18px;height:18px;position:absolute;top:4px;left:24px;padding:0;}
+#endcard #bottomRegion ul li span a:hover span.icon, .endcardCS .bottomRegionCS ul li span a:hover span.icon {background-position:-208px -35px;}
+#endcard #bottomRegion ul li a, .endcardCS .bottomRegionCS ul li a {display:block;color:#999999; font-size:9px;}
+#endcard #bottomRegion ul li img, .endcardCS .bottomRegionCS ul li img {width:136px;height:76px;border:1px solid #8CB0CD;display:block;margin:0 0 4px;padding:0;}
+#endcard span.pager, .endcardCS span.pager {position:absolute;left:30px;top:60px;display:block;width:14px;height:22px;cursor:pointer;color:#0074BC;background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat 0 -22px transparent;padding:0;text-align:center;text-indent:-9999em;}
+#endcard span.next, .endcardCS span.next {left:auto;right:30px;background-position:-20px -22px;}
+
+#endcard span.disabled, .endcardCS span.disabled {display:none!important;}
+#endcard span.pager:hover, .endcardCS span.pager:hover {background-position:0 0;}
+#endcard span.next.pager:hover, .endcardCS span.next.pager:hover {background-position:-20px 0px;}
+#endcard .shareBoxes, .endcardCS .shareBoxes {position:absolute;top:75px;left:0;padding:0;margin:0;width:654px;height:auto;z-index:5;}
+#endcard .shareBoxes .zclip, .endcardCS .shareBoxes .zclip {top:24px!important;left:auto!important;right:90px!important;}
+#endcard .shareBoxes .linkBox, #endcard .shareBoxes .embedBox, .endcardCS .shareBoxes .linkBox, .endcardCS .shareBoxes .embedBox {position:absolute;top:2px;left:0;margin:0 0 0 30px;padding:32px 0 0;width:594px;height:68px;background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat 0px -300px transparent;}
+#endcard .shareBoxes .embedBox, .endcardCS .shareBoxes .embedBox {height:115px;background-position:0px -150px;}
+#endcard .shareBoxes .boxBtn, .endcardCS .shareBoxes .boxBtn {font-size:12px;position:absolute;top:24px;right:12px;cursor:pointer;background:url('http://media.nbcdfw.com/designimages/endcard-sprite.png') no-repeat -40px 0 transparent;width:72px;height:26px;}
+#endcard .shareBoxes .boxBtn span, .endcardCS .shareBoxes .boxBtn span {text-indent:-9999em;display:block;}
+#endcard .shareBoxes .boxCopy, .endcardCS .shareBoxes .boxCopy {right:90px;background-position:-40px -26px;width:69px;}
+#endcard .shareBoxes .boxBtn:hover, .endcardCS .shareBoxes .boxBtn:hover {background-position:-112px 0;}
+#endcard .shareBoxes .boxCopy:hover, .endcardCS .shareBoxes .boxCopy:hover {background-position:-112px -26px;}
+#endcard .shareBoxes p.boxLabel, .endcardCS .shareBoxes p.boxLabel {font-family:Helvetica, Arial, San-serif;font-size:14px;color:#FFFFFF;font-weight:bold;padding:0 12px;}
+#endcard .shareBoxes form, .endcardCS .shareBoxes form {border:none;padding:12px ;width:566px;margin:0 auto;}
+#endcard .shareBoxes form textarea, .endcardCS .shareBoxes form textarea {border:1px solid #FFFFFF;background:#333333;color:#FFFFFF;width:554px;resize:none;height:11;margin:0 auto;padding:6px;font-family:Helvetica, Arial, San-Serif;font-size:11px;min-height:11px;max-height:11px;}
+#endcard .shareBoxes .embedBox form textarea, .endcardCS .shareBoxes .embedBox form textarea {min-height:60px;max-height:60px;}
+#endcard .shareBoxes .boxBtn:hover, .endcardCS .shareBoxes .boxBtn:hover {text-decoration:none;}
+
+/****** MEDIUM-SIZED END CARD *************************/
+
+/****** LARGE-SIZED END CARD *************************/
+.large #endcard, .large .endcardCS {height:546px; width:970px}
+.large #endcard p.replayButton, .large .endcardCS p.replayButton {left: 401px;top: 190px;}
+.large #endcard p.replayButton a, .large .endcardCS p.replayButton a {height:48px;width: 186px;background:url('http://media.nbcdfw.com/images/endcard-sprite-large.png') no-repeat -589px 0 transparent;}
+.large #endcard #backplate, .large .backplateCS {height:546px; width:970px}
+.large #endcard #backplateTop, .large .endcardCS .backplateTopCS {width:970px;height:101px;}
+.large #endcard #backplateBottom, .large .endcardCS .backplateBottomCS {width:970px;height:338px;}
+.large #endcard #topRegion, .large .endcardCS .topRegionCS {height:101px;width:970px}
+.large #endcard #bottomRegion, .large .endcardCS .bottomRegionCS {height:239px;width:970px;}
+.large #endcard #bottomRegion p.related, .large .endcardCS .bottomRegionCS p.related {font-size:20px;padding: 19px 12px 17px;}
+.large #endcard #bottomRegion .relatedVideos, .large .endcardCS .bottomRegionCS .relatedVideos {width:756px;height:402px;margin:0 99px;}
+.large #endcard #bottomRegion ul li, .large .endcardCS .bottomRegionCS ul li {width:260px;height:267px;font-size:14px;}
+.large #endcard #bottomRegion ul li a, .large .endcardCS .bottomRegionCS ul li a {font-size:14px;color:#FFF;}
+.large #endcard #bottomRegion ul li img, .large .endcardCS .bottomRegionCS ul li img {width:200px;height:112px;}
+.large #endcard span.pager, .large .endcardCS span.pager {top: 107px;background:url('http://media.nbcdfw.com/images/endcard-sprite-large.png') no-repeat 0 0px transparent;width:21px;height:35px;}
+.large #endcard span.next, .large .endcardCS span.next, .large #endcard span.next.pager:hover, .large .endcardCS span.next.pager:hover {background-position:-27px 0px;}
+.large #endcard #topRegion ul#additionalShare li span, .large .endcardCS .topRegionCS ul.additionalShareCS li span {color:#FFFFFF;display:block;background:url('http://media.nbcdfw.com/images/endcard-sprite-large.png') no-repeat -210px 0 transparent;width:40px;height:33px;}
+.large #endcard #topRegion ul#additionalShare, .large .endcardCS .topRegionCS ul.additionalShareCS {width: 187px;}
+.large #endcard #topRegion ul#additionalShare li, .large .endcardCS .topRegionCS ul.additionalShareCS li {width:41px;margin: 0 8px 0 0;padding-left: 8px;}
+.large #endcard #topRegion ul#additionalShare li.shareEmbed span, .large .endcardCS .topRegionCS ul.additionalShareCS li.shareEmbed span {background-position:-251px 0;width:49px;}
+.large #endcard #topRegion ul#additionalShare li.shareEmbed, .large .endcardCS .topRegionCS ul.additionalShareCS li.shareEmbed {margin-right: 13px;}
+.large #endcard #topRegion ul#additionalShare li.shareEmail span, .large .endcardCS .topRegionCS ul.additionalShareCS li.shareEmail span {background-position:-306px 0;}
+.large #endcard #topRegion ul#additionalShare li:hover, .large .endcardCS .topRegionCS ul.additionalShareCS li:hover, body .large #endcard #topRegion ul#additionalShare li.active, body .large .endcardCS .topRegionCS ul.additionalShareCS li.active {background:url('http://media.nbcdfw.com/images/endcard-sprite-large.png') no-repeat -354px 0 transparent;}
+/****** LARGE-SIZED END CARD *************************/
+
+/****** ARTICLE CONTENT *******************************/
+div.article_elements{width: 1008px;margin: 0 auto;background-color: #FFF;}
+div.investigation {padding-top:20px !important;}
+div.articleText {width:670px; margin-bottom:50px; font-family: 'Arimo',helvetica,arial,sans-serif; float:left;min-height: 1210px;}
+.sponsored div.articleText {
+  min-height: 600px;
+}
+div.articleText > p {font-size:1.063em;line-height:26px;margin-top: 26px;margin-left: 32px;margin-right: 16px;color: #444;}
+div.articleText > ul li {list-style-type: disc !important;}
+h3.commentBlock {font-size: 15px;line-height: 25px;margin-top: 15px;margin-left: 19px;color: #333;}
+
+div.articleText .paragraph img{padding:0 10px 10px;}
+
+div.articleText .paragraph .embedded img{padding:0;}
+
+div.articleText > div {font-size:1.125em; line-height:25px; margin-top:15px; margin-left:32px; color:#333;} /* Because some people can't stop copying/pasting into the CMS */
+div.articleText .embedded{margin-top:20px;}
+div.articleText .articleAutoFooter{font-size:1.063em; float:left; width:630px; margin-bottom:33px;margin-right:16px;}
+div.articleText .embedded ul{margin-left:17px;}
+
+div.articleText ul {margin-left:48px; clear: left;}
+div.articleText div iframe{margin-left:0;}
+div.articleText iframe {margin-left:32px;}
+div.articleText .twitter-tweet{margin-left:32px !important;}
+div.articleText p iframe{margin-left:0;}
+div.articleText p.paragraph iframe {margin-left:0;}
+div.article.rightrail {width:300px; height:950px; margin-right:16px; background-color:#fff; float:right;}
+.videoPlayButton.large {position:absolute; top:283px; left:20px; width:90px; height:48px; cursor:pointer; background-image:url('http://media.nbcdfw.com/designimages/playbtn-overlay-90x48.png'); background-size:90px 48px; z-index:3;}
+.scrollArticle .videoPlayButton.large {
+    top:auto;
+    bottom:20px;
+}
+
+
+.videoPlayButton.medium {position:absolute; top:81%; left:20px; width:90px; height:48px; cursor:pointer; background-image:url('http://media.nbcdfw.com/designimages/playbtn-overlay-90x48.png'); background-size:90px 48px; z-index:3;}
+.videoPlayButton.small {position:absolute; bottom:8%; left:14px; width:45px; height:24px; cursor:pointer; background-image:url('http://media.nbcdfw.com/designimages/playbtn-overlay-90x48.png'); background-size:45px 24px; z-index:3;}
+.videoOverlay {position:absolute;top:0px; left:0px;width:100%; height:100%; background:url('http://media.nbcdfw.com/designimages/carouseul_summary_bg.png') repeat-x scroll 0 100%; z-index:2;}
+.leadMediaThumbnail.video img {position:absolute;top:0px;left:0px;z-index:1;}
+.embedded.video img {position:absolute; top:0px; left:0px; z-index:1;}
+.embedded iframe {margin-left:0px !important;}
+.embedded {margin-left:19px;}
+.embedded.video {position:relative; width:620px; height:349px; overflow:hidden;display:block !important;}
+.embedded.gallery {position:relative; width:620px; height:349px; cursor:pointer;}
+.embedded.cm.photo {position:relative; width:auto; height:auto;}
+.embedded.cm.photo img{display:block;}
+div .embedded.video.C {margin-left:0px !important;}
+.embedded.article {font-family:'Arimo',Helvetica; font-weight:700; color:#26518e;}
+.embedded.article li {color:#444;list-style:disc;}
+div.articleText ul li{color:#444;font-sze:1.063em;}
+.embedded.article li h3, .articleText ul li a {font-weight:bold;font-size:16px;}
+.embedded .galleryMask {display: inline-block;position: absolute;width: 100%;height: 100%;overflow: hidden;}
+
+div.articleText ul.inlineLinkEmbed{margin-left:80px;}
+
+/*div.embedded{margin-left:0px !important;} */
+span.embedded,span.embeddedMediaCredit,span.embeddedMediaCaption {display:inline-block !important; margin-left:0px !important;}
+span.embedded.L {width: 320px !important;display: inline;float: left;margin: 5px 16px 10px 0 !important;}
+span.embedded.R {width: 320px !important;display: inline;float: right;margin: 5px 10px 10px 16px !important;}
+
+
+span.embedded.gallery.L,span.embedded.video.L{height: 180px!important;}
+span.embedded.gallery.R,span.embedded.video.R{height: 180px!important;}
+span.embedded.gallery.R .pg_article {margin-left:-290px !important;}
+
+/* When the video player starts up, the host span is replaced with a <div> That's fun...*/
+div.embedded.video.L {width: 320px !important;height: 180px!important;display: inline;float: left;margin: 10px 10px 10px 15px !important;}
+div.embedded.video.R {width: 320px !important;height: 180px!important;display: inline;float: right;margin: 10px 10px 10px 15px !important;}
+/* And sometimes I need the span as a block. */
+.embedded.cm.embed {display:block !important; float: left; margin-right: 15px;margin-bottom: 15px;}
+.embedded.cm.embed.L {float: left; margin-right: 15px; margin-bottom: 15px;}
+.embedded.cm.embed.R {float: right; margin-left: 15px; margin-bottom: 15px;}
+
+.smallestTitle {font-size: .75em !important;position: absolute;color: #fff;bottom: 7% !important;left: 65px !important;z-index: 3;line-height: 1.25em;padding-right:10px;padding-left:4px;}
+.smallTitle {font-size:.75em !important; position:absolute; color:#fff; bottom: 7% !important;left:64px !important; z-index:3;padding-right: 10px;line-height:19px;}
+.largeTitle {font-size:1.0em !important; position:absolute; color:#fff; top: 84% !important;left:80px !important; z-index:3;}
+
+.embedded.video h3.videoMediaTitle {font-size: 1.0em;color: #fff;position: relative;z-index: 3;font-family: 'Arimo';position: absolute;top: 83%;left: 130px;}
+
+.embeddedMediaCredit.nested {position: absolute;padding: 1px 14px;font-family: 'Arimo';font-size: 0.7em;right: 0px;background-color: #000;opacity: 0.5;color: #FFF;}
+.embeddedMediaCaption.nested {width: auto;height: auto;background-color: #EEE;padding: 10px 14px 10px 14px;margin-top:0px; font-family: 'Roboto',helvetica,arial,sans-serif;font-size: 0.813em;line-height:18px; color: #777;}
+.embeddedMediaCaption.medium {width: 593px;height: auto;background-color: #EEE;padding: 10px 14px 10px 14px;margin-top:0px; font-family: 'Roboto',helvetica,arial,sans-serif;font-size: 00.813em;line-height:18px; color: #777;}
+.embedded.pullquote {min-height:100px;width:100%; padding-top:14px; background-color: #fff;background-image: url(http://media.nbcdfw.com/designimages/pq_left_quote.png),url(http://media.nbcdfw.com/designimages/pq_right_quote.png);background-repeat: no-repeat;background-position: left top, right 85%; background-size:57px 38px;margin-bottom:4px;}
+.embedded.pullquote .quote {font-family:'Roboto';display:inline-block;font-weight: 300;color: #26518e;font-size:1.875em;line-height: 1.3em;margin-bottom:10px;text-align:center;width:100%;}
+.embedded.pullquote .source {font-family:'Roboto';font-weight: 300;font-style: italic;color: #363636; font-size: 1.250em;float: right;margin-right:10px;}
+
+
+.icon {background:url("http://media.nbcdfw.com/designimages/mobile_sprite_global.png") no-repeat;}
+.embedded.L .icon.gallery {position: absolute;z-index: 5;top: 132px;width: 46px;height: 36px;background-position: -75px -33px;left: 12px;}
+.embedded.R .icon.gallery {position: absolute;z-index: 5;top: 132px;width: 46px;height: 36px;background-position: -75px -33px;left: 12px;}
+.embedded .icon.gallery {position: absolute;z-index: 5;top: 296px;width: 46px;height: 36px;background-position: -75px -33px;left: 12px;}
+/****** ARTICLE CONTENT *******************************/
+
+/****** RIGHT RAIL ************************************/
+
+.article.rightrail h3.rightrail.title {float:left; color:#333; margin-left:13px;margin-bottom:6x;font-family: 'Roboto';font-weight:400;font-size:1.250em; text-transform:uppercase; width:auto;}
+.article.rightrail h3.rightrail.title a {color:#333}
+.article.rightrail .blackdivider1 {width:100%; height:1px; background-color:#bbb; clear:both;}
+.article.rightrail .topstories li, .article.rightrail .xfinity li {border-bottom: 1px dotted #dbe4f0;line-height: 22px;font-family: 'Roboto',helvetica,arial,sans-serif;font-size:.938em;padding:17px 10px;margin:0 10px;}
+.article.rightrail .topstories li:hover, .article.rightrail .xfinity li:hover {background: #F5F7FA ;cursor:pointer;}
+.article.rightrail .topstories li a, .article.rightrail .xfinity li a {color:#333;}
+
+/* Tags */
+.rightrail .Live, .rightrail .Video, .rightrail .Gallery, .rightrail .Exclusive, .rightrail .Opinion, .rightrail .Sponsored, .rightrail .Investigative, .rightrail .Photos, .rightrail .Quiz, .rightrail .Infographic, .rightrail .Interactive, .rightrail .Map, .rightrail .Timeline {color:#FFFFFF;float:left;width:auto;height:9px;font-family:'Arimo',arial,sans-serif;font-size:10px;font-weight:bold;line-height:1em;margin:2px 10px 0 0;padding:4px 7px;text-transform:uppercase;}
+.rightrail .Live, .rightrail .Video {
+background: #df4037; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RmNDAzNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZDBkMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #df4037 0%, #bd0d00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#df4037), color-stop(100%,#bd0d00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* IE10+ */
+background: linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df4037', endColorstr='#bd0d00',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+
+.rightrail .Opinion, .rightrail .Gallery, .rightrail .Investigative, .rightrail .Photos, .rightrail .Quiz, .rightrail .Infographic, .rightrail .Interactive, .rightrail .Map, .rightrail .Timeline  {
+background: #648cb9; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0OGNiOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMDVjOGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #648cb9 0%, #305c8e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#648cb9), color-stop(100%,#305c8e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* IE10+ */
+background: linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#648cb9', endColorstr='#305c8e',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+.rightrail .Sponsored {
+background-color: #26518E;
+}
+
+/****** AD SLOTS *************************/
+.article.rightrail div.rail.adunit.rect1, .article.rightrail div.rail.adunit.rect2 {width:300px;}
+/****** AD SLOTS *************************/
+
+
+/****** NEWSLETTER SIGN UP MODULE ********/
+.article.rightrail .newsletterSignupBox {width:300px; margin-top:36px; margin-bottom:36px;font-family:'Roboto',helvetica,arial,sans-serif;}
+.article.rightrail .newsletterSignupBox h3.newsletter.copy {width:271px; margin:8px auto; font-size:.8em; color:#26518d;}
+.article.rightrail .newsletterSignupBox div.icon.envelope, .article.rightrail .newsletterSignupBox span.icon.envelope {width:35px; height:20px; float:right;margin-right:10px; background-image:url('http://media.nbcnewyork.com/designimages/desktop-newsletter-icon.jpg');}
+.article.rightrail .newsletterSignupBox .nsForm {width:271px; margin:0 auto; clear:both;}
+.article.rightrail .newsletterSignupBox .nsEmail {height:20px; border:1px solid #ccc; background-color:#eee;width:200px;}
+.article.rightrail .newsletterSignupBox .nsBox {width:300px;}
+
+.article.rightrail .newsletterSignupBox .nsBox .nsForm .nsSubscribe {width:61px;font-family: 'Roboto';font-size: 0.875em;font-weight:700;background-color:#fff; border:none; color:#26518D;letter-spacing:-.05em;padding-left:3px;}
+.article.rightrail .newsletterSignupBox .nsFooter {width:190px; margin:10px auto; font-weight:400; font-size:.7em; color:#aaa;}
+.article.rightrail .newsletterSignupBox .nsFooter a {color:#aaa;}
+@media all and (device-width: 768px) and (device-height: 1024px) {
+  .article.rightrail .newsletterSignupBox .nsBox .nsForm .nsSubscribe {width:82px;}
+  .article.rightrail .newsletterSignupBox .nsEmail {width: 170px;}
+}
+
+/****** NEWSLETTER SIGN UP MODULE ********/
+
+
+/****** TOP STORIES **********************/
+.article.rightrail div.rail.topstories {margin:36px 0px 36px;} /* HEIGHT IS PLACEHOLDER UNTIL CONTENT IS FINISHED */
+/****** TOP STORIES **********************/
+
+/****** RIGHT RAIL ************************************/
+
+
+aside{padding-bottom:40px;}
+aside #ad_3, aside #ad_4{margin:20px auto 0;width: 1040px;}
+
+
+/****** SOCIAL ****************************************/
+.article-comments {width:670px;}
+#article-comments-header, .article-comments-header {float:none;padding-top:0;}
+.article_elements .socialNetworks {font-family:'Arimo'; border-top:1px solid #bbb;margin:25px 0 0;width:971px;height:28px;padding-top:13px;color:#666;font-size:12px;position:relative;z-index:1000;}
+aside .socialNetworks {font-family:'Arimo';margin:25px 0 0;width:971px;height:24px;padding-top:13px;padding-left:5px;color:#666;font-size:12px;position:relative;z-index:1000;}
+.socialNetworks.bottom {border-bottom:1px solid #CCC;clear:both;overflow:hidden;margin:40px 14px 20px 17px;width:648px;}
+.socialNetworks .emailArticle {cursor:pointer;background-position:0px 0px;margin-top:0px;margin-left:10px;*margin-left:10px;width:43px;height:14px;float:left;}
+* html .socialNetworks .emailArticle {margin-left:5px;}
+.socialNetworks .printArticle {cursor:pointer;margin-top:0px;margin-left:10px;height:14px;float:left;}
+.socialNetworks .facebookRecommend, .socialNetworks .fb-like {float:left;width:165px !important;}
+.socialNetworks .twitter-share {width:100px;}
+.socialNetworks .fb-send {float:left;width:55px !important;}
+.socialNetworks .topShareLeft {float:left;width:240px;}
+.socialNetworks .topShareRight {float:left;width:70%;position:relative;top:-4px;}
+.socialNetworks .google-plus {float:left;margin-left:10px;width:70px;}
+.socialNetworks .viewComments {margin-right:7px;float:left;}
+.socialNetworks .fb-comments-count {display:inline;}
+#article-comments, .article-comments {float:none;margin: 0 20px;overflow: visible;background-color:transparent}
+.socialNetworks .fb-comments {overflow: visible;}
+/****** SOCIAL ****************************************/
+
+/****** XFINITY RECIRCULATION *************************/
+.rail.xfinity.recirc {width:300px;height:auto;margin-bottom:36px;}
+#xfinityNavBar_footer, #nbc_xfinity_footer {position:relative;z-index:100}
+.cScroll #xfinityNavBar_footer, .cScroll #nbc_xfinity_footer {display:none !important;}
+.cScroll #stickyNav {
+  top: 50px;
+}
+
+/****** IN DEV - ELECTION MODULE FOR ARTICLE CONTENT WELL/RIGHT RAIL ******/
+.embedded.cm.election {width:620px; height:auto; border-bottom:1px solid #ddd;}
+.embedded.cm.election.L, .embedded.cm.election.R {width:324px; height:auto;}
+.embedded.cm.election .race-one {position:relative; padding-bottom: 24px;}
+.embedded.cm.election .race-two {position:relative; padding-bottom: 24px;}
+.embedded.cm.election .race-stats {position:relative; width:auto; height:23px;}
+.embedded.cm.election .related {position:relative;}
+.embedded.cm.election .extLink {color:#1259A5;font-family:'Arimo';font-size:.7em;position: relative;float: left;}
+.embedded.cm.election.L .extLink, .embedded.cm.election.R .extLink {position:absolute !important;}
+
+.embedded.cm.election .election-name {font-family: 'Roboto';font-weight: 400;font-size: 1.1em;color: #727272;border-bottom: 1px solid #bbb;padding-left: 0px;text-transform: uppercase;}
+.embedded.cm.election .race-name {font-family: roboto condensed;font-weight: 700;font-size: 1em;color: #000;letter-spacing: -1px;margin-top: 30px;margin-bottom: 6px;text-transform: uppercase;}
+
+.embedded.cm.election span.reporting {font-family: 'Arimo';font-size: .6em;color: #3f3f3f; position:absolute; left:0px;}
+.embedded.cm.election span.timestamp {font-family: 'Arimo';font-size: .6em;color: #aaa; position:absolute; right:4px; text-transform:uppercase;}
+
+.embedded.cm.election .candidate {position:relative; height:50px; clear: left; margin-bottom:0px;}
+.embedded.cm.election .candidate.last {position:relative; height:50px; clear: left; margin-bottom:8px;}
+.embedded.cm.election .candidate-data {width: auto;float: left;margin-top: 18px;}
+.embedded.cm.election .candidate-name {font-family: 'Arimo';font-weight: 700;font-size: .86em; display:block; margin-bottom:-4px;}
+.embedded.cm.election .vote-percentage {position: absolute;right: 6px;top: 20px; font-family: 'Arimo';font-weight: 700;font-size: .86em;}
+.embedded.cm.election .winner {width:35px; height:48px; float:left; background-color:#fff;}
+.embedded.cm.election .winner.yes {background-image:url('http://media.nbcdfw.com/designimages/winner-checkmark.png'); background-repeat: no-repeat;background-position: 0 24px;}
+.embedded.cm.election .candidate-count {font-family: 'Arimo';font-size: .6em;color: #777; float:left;}
+.embedded.cm.election .meter {width: 537px;height: 11px;background-color: #ededed;overflow: hidden;margin-left: 42px;margin-top: 6px;}
+
+/****** OFFSET SIZES *******/
+
+.embedded.cm.election .leftside {margin-right:40px;}
+
+.embedded.cm.election .race-one.offset {width:324px !important; float:left;}
+.embedded.cm.election .race-one.offset .meter{width:246px !important;}
+.embedded.cm.election .content {width: 256px; margin-top:30px; float: left;}
+.embedded.cm.election .content .thumbnail {width: 79px;height: 59px;background-color: #aaa;margin-right: 10px;float: left;}
+.embedded.cm.election .content .headline {font-family:'Arimo';font-size:.73em; font-weight:700; color:#333; line-height:18px;}
+.embedded.cm.election .content .timestamp {font-family:'Arimo';font-size:.5em; font-weight:700; margin-left:6px; color:#aaa; position:relative;}
+.embedded.cm.election .content .summaryRegion {font-size: .74em;font-family: 'Arimo';color: #666;line-height: 19px; margin-top:5px;}
+.embedded.cm.election .content .summaryRegion a {color:#1259a5 !important;}
+
+
+/****** HALF SIZES *******/
+.embedded.cm.election.L {margin-right:15px; float:left; margin-bottom:10px;}
+.embedded.cm.election.R {margin-left:15px; float:right; margin-bottom:10px;}
+.embedded.cm.election.L .meter, .embedded.cm.election.R .meter {width:247px;}
+.embedded.cm.election .race-one.half {margin-right:40px;}
+.embedded.cm.election .race-one.half, .embedded.cm.election .race-two.half {width:290px !important; float:left;}
+.embedded.cm.election .race-one.half .meter, .embedded.cm.election .race-two.half .meter {width:213px !important;}
+
+
+/****** FILL COLORS ******/
+.embedded.cm.election .meter .fill.red {height:11px; background-color:#dd4056;}
+.embedded.cm.election .meter .fill.grey {height:11px; background-color:#777;}
+.embedded.cm.election .meter .fill.blue {height:11px; background-color:#2b7ab4;}

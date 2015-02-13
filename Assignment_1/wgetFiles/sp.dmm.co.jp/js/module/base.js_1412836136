@@ -1,0 +1,1147 @@
+/**
+ *  base.js
+ *  スマートフォン用共通機能js
+ *
+ *  @version 2.8 (10/07/2014)
+ *
+ */
+
+$(document).ready(function() {
+	var link, max;
+
+//▼以下20130117マージ部分▼──────────────────────────────────────────────
+	//URLバー非表示
+	(function() {
+		if((document.URL).indexOf('#')<0) {setTimeout('scrollTo(0,1)', 100);}
+	})();
+
+	//オリエンテーション変更対応
+	var agent = navigator.userAgent;
+	if(agent.search(/Mac/) != -1) {
+		window.onorientationchange = switchOrientation;
+		myDevice='iOS';
+	} else {
+		window.onresize = switchOrientation;
+		myDevice='Android';
+	}
+
+	//自動高さ調整
+	var myPageH = $('#dm-main').height();
+	var myDeviceRatio = window.devicePixelRatio;
+	if (myDeviceRatio > 0) {var myDeviceH = $(document).height() * myDeviceRatio;}
+	else {var myDeviceH = $(document).height();}
+
+	if (myPageH < (myDeviceH/myDeviceRatio)) {$('#dm-main').css('min-height', myDeviceH/myDeviceRatio);}
+
+	//【グローバルナビ・ローカルナビ展開関係】
+	$body = $('body');
+	$hdGlobal = $('#dm-header .hd-global');
+
+	//上ナビ開閉
+	$hdGlobal.one('touchstart', function() {myHideGlobal = $('#hd-gnav .hd-btn-exchange').attr('href')}).bind('touchstart', hdGlobalTouch);
+
+	//検索開閉
+	$('#dm-header .hd-search').bind('touchstart', hdSearchTouch);
+	if(location.hash=='#hd-search-area'){ hdSearchTouch(); }
+
+	//ユーザー情報開閉
+	$('#dm-header .hd-acount').one('touchstart', function(){myBoughtLink = $('#hd-acount-area .acount-boughtlist .bought-digi').attr('href')}).bind('touchstart', hdAcountTouch);
+	if(location.hash=='#hd-acount-area'){ hdAcountTouch(); }
+	
+	//左ナビ開閉
+	$('#dm-header .hd-local')
+		.one('touchstart', function() {
+			myHideLocal = $('#dm-side a:first').attr('href');
+			myHideLocal2 = $('#dm-side a:eq(1)').attr('href');
+		})
+		.bind('touchstart', hdLocalTouch)
+		.bind('touchend', hdLocalTouch);
+
+	$('#dm-main').bind('click', preventLink);
+
+    // Google Analyticsトラッキングコード
+    if (typeof _gaq !== 'undefined') {
+        $('#dm-header02 .hd-local').bind('touchstart', function(){
+            _gaq.push(['_trackEvent', 'sp_navi', 'Left_navi', location.href]);
+        });
+        $('#dm-header02 .hd-global').bind('touchstart', function(){
+            _gaq.push(['_trackEvent', 'sp_navi', 'On_navi', location.href]);
+        });
+        $('#dm-header02 .hd-acount').bind('touchstart', function(){
+            _gaq.push(['_trackEvent', 'sp_navi', 'Login_navi', location.href]);
+        });
+        $('#dm-header02 .hd-search').bind('touchstart', function(){
+            _gaq.push(['_trackEvent', 'sp_navi', 'Search_navi', location.href]);
+        });
+
+        if ($('#dm-side02 .sd-snav-list').size() > 0) {
+            var dmSideDLCnt = $('#dm-side02 .sd-snav-list').length;
+            var gaqTitle = ($('.hd-location span').length > 1) ? $('.hd-location span')[0].innerHTML + '[' + $('.hd-location span')[1].innerHTML + ']' : $('.hd-location span:first')[0].innerHTML;
+            gaqTouchKey = '';
+            for (var i = 0; i < dmSideDLCnt; i++) {
+                $('#dm-side02 .sd-snav-list').eq(i).find('dt').each(function(){
+                    var gaqTitle2 = (i > 0) ? $(this).text()+'/' : '';
+                    $(this).nextAll().each(function(){
+                        if($(this).is('a')) {return false;}
+                        $(this).bind('touchstart', function(){
+                            gaqTouchKey = $.trim(gaqTitle) + '/' + $.trim(gaqTitle2) + $.trim($(this).text());
+                        }).bind('click', function(){
+                            var gaqParam = $.trim(gaqTitle) + '/' + $.trim(gaqTitle2) + $.trim($(this).text());
+                            if (gaqTouchKey == gaqParam) {
+                                _gaq.push(['_trackEvent', 'Left_navi', gaqParam.replace(/ *[0-9]+点$/, ''), location.href]);
+                            }
+                            gaqTouchKey = '';
+                        });
+                    });
+                });
+            }
+        }
+    }
+
+
+    fn_dmmNaviBehavior();
+	fn_slidedown(); //スライドダウン
+	fn_popup(); //ポップアップ
+	switchOrientation(); //縦横処理
+//▲以上20130117マージ部分▲──────────────────────────────────────────────
+
+
+
+    if ($('.tapbox').length > 0){
+        link = new createURL($('.tapbox').attr('link'));
+        max  = Math.ceil(parseInt($('.tapbox').attr('maximum')) / parseInt($('.tapbox').attr('limit')));
+        link.set('page', link.has('page') ? link.get('page') : 1);
+        $('.render-page').html(Math.min(parseInt(link.get('page')) * parseInt($('.tapbox').attr('limit')), parseInt($('.tapbox').attr('maximum'))));
+        if (parseInt(link.get('page')) >= max) $('.tapbox').hide();
+    }
+
+
+
+    $('.tapbox').click(function() {
+        if ($('.tapbox').find('#pnl > p').hasClass('loading')) return false;
+        $('.tapbox').find('#pnl > p').addClass('loading');
+        link.set('page', parseInt(link.get('page')) + 1);
+
+        $.get(link.getURL(), function(data) {
+            $('.tap-list').append(data);
+            $('.render-page').html(Math.min(parseInt(link.get('page')) * parseInt($('.tapbox').attr('limit')), parseInt($('.tapbox').attr('maximum'))));
+            $('.tapbox').find('#pnl > p').removeClass('loading');
+            if (parseInt(link.get('page') * $('.tapbox').attr('limit')) >= $('.tapbox').attr('maximum')) $('.tapbox').hide();
+        });
+    });
+
+    // ヘッダーナビ（スライド含む）
+    $('header#top nav li a').click(function() {
+        var target = '#menu-' + ($(this).parent().attr('id')).replace('hd-', '');
+        if ($(target).queue() != '' ){return;}
+        if ($(this).hasClass('on')) {
+            $(target).slideUp();
+            $('header#top nav li').removeClass('on');
+            $('header#top nav li a').removeClass('on');
+        } else {
+            $('header#top .hd-menu').hide();
+            $(target).slideDown();
+
+            $('header#top nav li').removeClass('on');
+            $('header#top nav li a').removeClass('on');
+
+            $(this).parent().addClass('on');
+            $(this).addClass('on');
+        }
+    });
+
+    // スライドメニュー（ヘッダー以外のスライド部分）
+    $('.slide-btn').click(function() {
+        slidebtn_run($(this));
+    });
+
+    var qLINK = location.hash;
+    if (qLINK.slice(0,2) == '#q') {$(qLINK).next().css('display','block');}
+
+    $('a.faq_target').click(function() {
+        var myLink = $(this).attr('href');
+        if (typeof myLink !== 'undefined' && myLink !== false) {
+            if (myLink.slice(0,2) == '#q') {
+                $(this).parents('dd').css('display', 'none');
+                $(myLink).next().slideDown();
+                $(myLink).find('.sb-img').attr('src',($(myLink).find('.sb-img').attr('src')).replace('_down','_up'));
+                $(this).parents('dl').find('.sb-img').attr('src',($(this).parents('dl').find('.sb-img').attr('src')).replace('_up','_down'));
+            }
+        }
+    });
+
+    // メニュー開閉（ボタンの開閉が同じ要素の場合）
+    $('.open-list').toggle(function() {
+        $('p', this).children('img').attr('src', '/images/iphone/base_new/ico_tri_up.png');
+        $(this).parent().children('dd').slideDown();
+    }, function() {
+        $('p', this).children('img').attr('src', '/images/iphone/base_new/ico_tri_down.png');
+        $(this).parent().children('dd').slideUP();
+    });
+
+    // メニュー開閉（ボタンの開閉が別々の要素の場合）
+    $('.slide-btn-option').click(function() {
+        $('.slide-area-'+$(this).attr('name')).slideDown();
+        return false;
+    });
+    $('.btn-close').click(function() {
+        $('.slide-area-'+$(this).attr('name')).slideUp();
+        return false;
+    });
+
+    // リスト開閉
+    $('.popup-btn').toggle(function() {
+        $(this).html('▲閉じる');
+        $('.popup-area-'+$(this).attr('name')).fadeIn(600);
+    }, function() {
+        $(this).html('▼もっと見る');
+        $('.popup-area-'+$(this).attr('name')).fadeOut(400);
+    });
+
+    // タブ切替
+    $('.fta').children('div').click(function() {
+        $('.fta').children('div').attr('class', 'tab-btn');
+        $(this).attr('class', 'tab-btn-on');
+
+        $('.ftl').css('display', 'none');
+        $('#' + ($(this).attr('name')) + '-list').css('display', 'block');
+    });
+
+    // 「全てチェックする」
+    $('a.f-check').click(function() {
+        $('.f-check-box').attr('checked', 'checked');
+    });
+    // 「全てのチェックをはずす」
+    $('a.f-not-check').click(function() {
+        $('.f-check-box').removeAttr('checked');
+    });
+});
+
+//スライドメニュー（ヘッダー以外のスライド部分）の実行関数
+function slidebtn_run(target) {
+    if ($('.slide-area-' + target.attr('name')).css('display') == 'none') {
+        if (target.find('.sb-img').length == 0) {
+            $('.slide-area-' + target.attr('name')).slideDown(function() {
+                //★関数追加。ポップアップ内にスライドダウンがある場合、背景の縦幅調整
+                if (document.getElementById('dm-popup-overlay') != null) {
+                    fn_popupOverlayAdjust('.dm-page-popup');
+                }
+            });
+        } else {
+            $('.slide-area-' + target.attr('name')).slideDown(function() {
+                //★関数追加。ポップアップ内にスライドダウンがある場合、背景の縦幅調整
+                if (document.getElementById('dm-popup-overlay') != null) {
+                    fn_popupOverlayAdjust('.dm-page-popup');
+                }
+            });
+            target.find('.sb-img').attr('src', (target.find('.sb-img').attr('src')).replace('_down', '_up'));
+        }
+    } else {
+        if (target.find('.sb-img').length == 0) {
+            $('.slide-area-' + target.attr('name')).slideUp();
+        } else {
+            $('.slide-area-' + target.attr('name')).slideUp();
+            target.find('.sb-img').attr('src', (target.find('.sb-img').attr('src')).replace('_up', '_down'));
+        }
+    }
+}
+
+//createURL──────────────────────────────────────────────
+function createURL(pathname) {
+    this.pathname   = pathname;
+    this.base       = '';
+    this.module     = '';
+    this.controller = '';
+    this.action     = '';
+    this.params     = {};
+
+    this._construct = function() {
+        if ((typeof this.pathname) == 'undefined') return;
+
+        var p;
+        var tmp = this.pathname.replace(/\/+$/g, "").split('/');
+        if ((tmp.length %2) == 0)
+        {
+            this.module     = tmp[1];
+            this.controller = tmp[2] ? tmp[2] : 'index';
+            this.action     = tmp[3] ? tmp[3] : 'index';
+            p = 4;
+
+            this.base = '/' + this.module + '/' + this.controller + '/' + this.action;
+        }
+        else
+        {
+            this.controller = tmp[1] ? tmp[1] : 'index';
+            this.action     = tmp[2] ? tmp[2] : 'index';
+            p = 3;
+
+            this.base = '/' + this.controller + '/' + this.action;
+        }
+
+        for (var i = p; i < tmp.length; i += 2)
+        {
+            this.params[tmp[i]] = tmp[i+1];
+        }
+    }
+
+    this.set = function (name, value) {
+        this.params[name] = value;
+    }
+
+    this.get = function (name) {
+        return this.params[name];
+    }
+
+    this.has = function (name) {
+        return ((typeof this.params[name]) != 'undefined');
+    }
+
+    this.unset = function (name) {
+        return delete this.params[name];
+    }
+
+    this.getURL = function () {
+        var i;
+        var url = this.base;
+
+        var _front = new Array('shop','media');
+        var _back  = new Array('page');
+
+        var front  = new Array();
+        var middle = new Array();
+        var back   = new Array();
+
+        for (var key in this.params)
+        {
+            if (_front.indexOf(key) != -1)
+            {
+                front.push(key);
+            }
+            else if (_back.indexOf(key) != -1)
+            {
+                back.push(key);
+            }
+            else
+            {
+                middle.push(key);
+            }
+        }
+
+        front.sort();
+        middle.sort();
+        back.sort();
+
+        for (i = 0; i < front.length; i++)
+        {
+            url += '/' + front[i] + '/' + this.params[front[i]];
+        }
+        for (i = 0; i < middle.length; i++)
+        {
+            url += '/' + middle[i] + '/' + this.params[middle[i]];
+        }
+        for (i = 0; i < back.length; i++)
+        {
+            url += '/' + back[i] + '/' + this.params[back[i]];
+        }
+
+        if(this.controller == 'search') {
+            url += '#hd-search-area';
+        }
+
+        return url;
+    }
+
+    this._construct();
+}
+
+
+
+//dmmSubmit──────────────────────────────────────────────
+function dmmSubmit(form)
+{
+    if (form.attr('method') == 'POST')
+    {
+        return true;
+    }
+
+    var node, nodes = form.find('input,select');
+    var url = new createURL(form.attr('action'));
+    var max = nodes.length;
+    for (var i = 0; i < max; i++)
+    {
+        node = nodes.eq(i);
+        switch (node.get(0).type)
+        {
+            case 'text':
+            case 'number':
+            case 'hidden':
+            case 'select-one':
+                if (node.val())
+                {
+                    url.set(node.attr('name'), node.val());
+                }
+                break;
+        }
+    }
+
+    location.href = url.getURL();
+
+    return false;
+}
+
+
+
+//openerSubdomain──────────────────────────────────────────────
+function openerSubdomain()
+{
+    try
+    {
+        window.opener.document.domain;
+    }
+    catch (e)
+    {
+        document.domain = document.domain.replace('sp.', '');
+    }
+}
+
+
+
+
+
+//▼以下20130117マージ部分▼──────────────────────────────────────────────
+//縦横処理──────────────────────────────────────────────
+function switchOrientation(){
+	var orientation = window.orientation;
+	var sideWidth = 90;
+	var imgWidth = 74;
+	if(orientation == 0){
+		//縦
+		var myNum = Math.floor((($('body').width())-sideWidth)/imgWidth);
+		$('.dm-header-style').remove();
+		$('body').append('<div class="dm-header-style"><style>#hd-gnav .hd-gnav-btnarea > a:nth-child('+myNum+'n+1) {border-left:#a4a4a4 solid 1px;}</style></div>');
+	}else{
+		//横
+		if(myDevice == 'iOS'){
+			var myNum = Math.floor((($(document).height())-sideWidth)/imgWidth);
+			$('.dm-header-style').remove();
+			$('body').append('<div class="dm-header-style"><style>#hd-gnav .hd-gnav-btnarea > a:nth-child('+myNum+'n+1) {border-left:#a4a4a4 solid 1px;}</style></div>');
+		}else{
+			var myNum = Math.floor((($('body').width())-sideWidth)/imgWidth);
+			$('.dm-header-style').remove();
+			$('body').append('<div class="dm-header-style"><style>#hd-gnav .hd-gnav-btnarea > a:nth-child('+myNum+'n+1) {border-left:#a4a4a4 solid 1px;}</style></div>');
+		}
+	}
+}
+
+
+
+//上ナビ展開──────────────────────────────────────────────
+function hdGlobalTouch(){
+	$body.toggleClass('bd-gnav').removeClass('bd-search bd-acount');
+	//android用リンク　遅延エラー処理
+	if($body.hasClass('bd-gnav') == true){
+		$('#hd-gnav .hd-btn-exchange').removeAttr('href');
+		setTimeout(function(){$('#hd-gnav .hd-btn-exchange').attr('href', myHideGlobal)}, 600);
+	}
+}
+
+
+
+//検索展開──────────────────────────────────────────────
+function hdSearchTouch(){
+	$body.toggleClass('bd-search').removeClass('bd-gnav bd-acount');
+	//android用リンク　遅延エラー処理
+	if($body.hasClass('bd-search') == true){
+		setTimeout(function(){$('#hd-search-area .hd-btn-search').removeAttr('disabled')}, 300);
+	}else{
+		$('#hd-search-area .hd-btn-search').attr('disabled', 'disabled');
+	}
+}
+
+
+
+//ユーザー情報展開──────────────────────────────────────────────
+function hdAcountTouch(){
+	$body.toggleClass('bd-acount').removeClass('bd-gnav bd-search');
+	//android用リンク　遅延エラー処理
+	if($body.hasClass('bd-acount') == true){
+	    $('#hd-acount-area .acount-boughtlist .bought-digi').removeAttr('href');
+		setTimeout(function(){$('#hd-acount-area .acount-boughtlist .bought-digi').attr('href',myBoughtLink)}, 300);
+	}
+}
+
+
+
+//左ナビ展開──────────────────────────────────────────────
+function hdLocalTouch(event){
+	scrollTo(0,1);
+	switch(event.originalEvent.type){
+		case 'touchstart':
+			var myInnerH = window.innerHeight;
+			$('#dm-header').before('<div class="preventlink"></div>');
+			$('#dm-side a:first').removeAttr('href');
+			$('#dm-side a:eq(1)').removeAttr('href');
+			$body.removeClass('bd-gnav bd-search bd-acount').toggleClass('bd-side');
+			var mainH = $('#dm-main').height();
+			var sideH = $('#dm-side').height();
+
+			if ($body.hasClass('bd-side') == true) {
+				if (sideH < myInnerH) {sideH = myInnerH;}
+				$('#dm-page').css('height', sideH);
+				$('#dm-main').css('height', sideH);
+			} else {
+				$('#dm-page').css('height', 'auto');
+				$('#dm-main').css('height', 'auto');
+			}
+
+			if ($body.hasClass('dm-android-2-3') || navigator.userAgent.indexOf('Android 3') > 0){
+				//android用リンク　遅延エラー処理
+				if($body.hasClass('bd-side') == true){
+					setTimeout(function(){
+						$('#dm-side a:first').attr('href', myHideLocal);
+						$('#dm-side a:eq(1)').attr('href', myHideLocal2);
+					}, 500);
+				}
+			}
+		break;
+
+		case 'touchend':
+			if ($body.hasClass('dm-android-2-3') || navigator.userAgent.indexOf('Android 3') == -1){
+				//android用リンク　遅延エラー処理
+				if($body.hasClass('bd-side') == true){
+					setTimeout(function(){
+						$('#dm-side a:first').attr('href', myHideLocal);
+						$('#dm-side a:eq(1)').attr('href', myHideLocal2);
+					}, 500);
+				}
+			}
+		break;
+	}
+}
+
+
+
+//領域外で閉じる──────────────────────────────────────────────
+function naviClose(){
+	if($body.hasClass('bd-gnav')){
+		$body.removeClass('bd-gnav');
+		setTimeout(function(){location.href='#dm-page';}, 10);
+	};
+}
+
+
+//スライドダウン──────────────────────────────────────────────
+function fn_slidedown() {
+    var $myDisp, $myTxt, $target;
+    $('.fn-slidedown').click(function() {
+        $myDisp = $('#' + $(this).attr('id') + '-dtl');
+        $target = $(this);
+        $myTxt = $target.text();
+        fn_slidedown_run($target, $myDisp, $myTxt);
+    });
+}
+
+// スライドダウン実行関数
+function fn_slidedown_run(target, display, text) {
+    if (display.css('display') == 'none') {
+        display.slideDown(function() {
+            //ポップアップ内にスライドダウンがある場合、ポップアップの背景調整
+            if (document.getElementById('dm-popup-overlay') != null) { fn_popupOverlayAdjust('.dm-page-popup'); }
+        });
+        target.addClass('on');
+        if (text == '全て表示する') { target.text('閉じる'); }
+    } else if (display.css('display') == 'block') {
+        display.slideUp(function() {
+            //ポップアップ内にスライドダウンがある場合、ポップアップの背景調整
+            if (document.getElementById('dm-popup-overlay') != null) { fn_popupOverlayAdjust('.dm-page-popup'); }
+        });
+        target.removeClass('on');
+        if (text == '閉じる') { target.text('全て表示する'); }
+    }
+}
+
+
+//ポップアップ──────────────────────────────────────────────
+function fn_popup() {
+
+    var dmAndroid23 = 1;
+    if ($('body').hasClass('dm-android-2-3')) { dmAndroid23 = 0; }
+
+    $('.fn-popup').click(function() {
+
+        // Android 2.3 なら1度だけ flickable.js 読み込み
+        if (dmAndroid23 == 0){
+            function addScript() {
+                var s = document.createElement('script');
+                s.src = '/js/module/jquery.flickable.js';
+                s.charset = 'UTF-8';
+                document.head.appendChild(s);
+            }
+            addScript();
+            dmAndroid23 = 1;
+        }
+
+        //ポップアップ
+        $('#dm-main').after('<div class="dm-page-popup"><div id="dm-popup-overlay"></div><section class="dm-popup-content"><div id="dm-popup-load"></div><div class="dm-popup-close"></div></section></div>');
+
+        var $this = $(this),
+            nowURL = $this.attr('href').split('#'),
+            noAnchor = '#undefined',
+            myHeight = $(document).height(),
+            myScroll = $(document).scrollTop(),
+            myId = '#' + nowURL[1],
+            myUrl = $this.attr('href'),
+            $dmPagePop = $('.dm-page-popup'),
+            $dmPopLocal = $('.dm-popup-local'),
+            $dmPopLoad = $('#dm-popup-load');
+
+        event.preventDefault();
+
+        //もしURLがページ内アンカーの場合
+        if (myUrl == myId) {
+
+            var myUrlHeight = $(myUrl).innerHeight();
+            $dmPopLoad.append($(myUrl));
+            $(myUrl).show(100, function(){
+
+                // 高さ400pxで止めるなら
+                if ($this.hasClass('fn-popup-adjust') == false && myUrlHeight > 400 && !$dmPagePop.find('.fn-slidedown').length && !$dmPagePop.find('.slide-btn').length) { //.fn-popup-adjustが無い、且つ高さが400px以上、且つスライドダウンが無いなら
+                    $dmPopLoad.addClass('over');
+
+                    if ($('body').hasClass('dm-android-2-3')){ //Android OS 2.3 なら flickable() 実行
+                        $('#dm-popup-load.over').flickable();
+                    }
+
+                // 高さ400pxで止めない ＆ 中身にスライドダウンが無いなら
+                } else {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+                }
+            });
+
+        //もしURLが外部URL+idなしの場合
+        } else if (myId == noAnchor) {
+            $.get(myUrl, function(data) {
+                $dmPopLoad.append($(data).find('#dm-popup'));
+
+                // 高さ400pxで止めるなら
+                if ($this.hasClass('fn-popup-adjust') == false && $('#dm-popup').innerHeight() > 400 && !$dmPagePop.find('.fn-slidedown').length && !$dmPagePop.find('.slide-btn').length) {
+                    $dmPopLoad.addClass('over');
+
+                    if ($('body').hasClass('dm-android-2-3')){ //Android OS 2.3 なら flickable() 実行
+                        $('#dm-popup-load.over').flickable();
+                    }
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウン（.fn-slidedown）があるなら
+                } else if($dmPagePop.find('.fn-slidedown').length) {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+
+                    var $myDisp, $myTxt, $target; //スライドダウン実行
+                    $dmPagePop.find('.fn-slidedown').click(function() {
+                        $myDisp = $('#' + $(this).attr('id') + '-dtl');
+                        $target = $(this);
+                        $myTxt = $target.text();
+                        fn_slidedown_run($target, $myDisp, $myTxt);
+                    });
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウン（.slide-btn）があるなら
+                } else if($dmPagePop.find('.slide-btn').length) {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+
+                    $dmPagePop.find('.slide-btn').click(function() { //.slide-btnを起点としたスライドダウンの実行
+                        slidebtn_run($(this));
+                    });
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウンが無いなら
+                } else {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+                }
+            });
+
+        //もしURLが外部URL+id付きの場合
+        } else {
+            $.get(myUrl, function(data) {
+
+                if($(data).find(myId).length == 0){
+                    myId = myId + '02';
+                }
+
+                $dmPopLoad.append($(data).find(myId));
+                if(myId == '#dm-content02'){
+                    $('#hd-search-area02',$dmPopLoad).remove();
+                    $('#hd-acount-area02',$dmPopLoad).remove();
+                    $('#hd-gnav02',$dmPopLoad).remove();
+                    $('#dm-footer',$dmPopLoad).remove();
+                }
+
+                // 高さ400pxで止めるなら
+                if ($this.hasClass('fn-popup-adjust') == false && $(myId).innerHeight() > 400 && !$dmPagePop.find('.fn-slidedown').length && !$dmPagePop.find('.slide-btn').length) {
+                    $dmPopLoad.addClass('over');
+
+                    if ($('body').hasClass('dm-android-2-3')){ //Android OS 2.3 なら flickable() 実行
+                        $('#dm-popup-load.over').flickable();
+                    }
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウン（.fn-slidedown）があるなら
+                } else if($dmPagePop.find('.fn-slidedown').length) {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+
+                    var $myDisp, $myTxt, $target; //スライドダウン実行
+                    $dmPagePop.find('.fn-slidedown').click(function() {
+                        $myDisp = $('#' + $(this).attr('id') + '-dtl');
+                        $target = $(this);
+                        $myTxt = $target.text();
+                        fn_slidedown_run($target, $myDisp, $myTxt);
+                    });
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウン（.slide-btn）があるなら
+                } else if($dmPagePop.find('.slide-btn').length) {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+
+                    $dmPagePop.find('.slide-btn').click(function() { //.slide-btnを起点としたスライドダウンの実行
+                        slidebtn_run($(this));
+                    });
+
+                // 高さ400pxで止めない ＆ 中身に動的生成したスライドダウンが無いなら
+                } else {
+                    fn_popupOverlayAdjust('.dm-page-popup'); //背景高さ調整
+                }
+            });
+        }
+
+        $('#dm-main').find('a,form').css('-webkit-tap-highlight-color', 'rgba(0, 0, 0, 0)');
+        $dmPagePop.fadeIn().css('height', myHeight);
+        $('.dm-popup-content').css('top', myScroll + 14);
+
+        // 閉じる
+        $('#dm-popup-overlay, .dm-popup-close').click(function() {
+            $dmPagePop.fadeOut(function() {
+                $dmPopLocal.appendTo('#dm-main');
+                $dmPopLocal.css('display', 'none');
+                $dmPagePop.remove();
+                setTimeout(function() {
+                    $('#dm-main').find('a,form').css('-webkit-tap-highlight-color', '');
+                }, 500);
+            });
+        });
+
+    });
+}
+
+// ポップアップの背景を調整する関数
+function fn_popupOverlayAdjust(e) {
+    var $el = $(e);
+    var $overlay = $('#dm-popup-overlay', $el);
+    var $popup = $('.dm-popup-content', $el);
+    var popupH = $popup.outerHeight() + $popup.offset().top + 15;
+    
+    if($overlay.height() < popupH) {
+        $overlay.height(popupH);
+    }
+}
+
+
+//左ナビ閉じる──────────────────────────────────────────────
+function preventLink(e) {
+	if($body.hasClass('bd-side') == true){
+		$('.bd-side #dm-page').css('height', 'auto');
+		$('.bd-side #dm-main').css('height', 'auto');
+		$body.removeClass('bd-side');
+		$('.preventlink').remove();
+	}
+}
+
+
+// 最上部に戻る ──────────────────────────────────────────────
+function fnPagetop() {
+    $('body').append('<p id="dm-pagetop"><a href="#"></a></p>');
+    
+    var $pageTop = $('#dm-pagetop'),
+        $docHeight = $(document).height(),
+        $winHeight = $(window).height();
+    
+    $pageTop.hide();
+    
+    // スクロールで一定の範囲に入ったら表示する
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $pageTop.fadeIn();
+        } else {
+            $pageTop.fadeOut();
+        }
+    });
+
+    // タップ時の挙動
+    $pageTop.click(function() {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+}
+
+
+// タッチイベントの初期化
+//document.addEventListener('touchstart', preventScroll, false);
+//document.addEventListener('touchmove', preventScroll, false);
+//document.addEventListener('touchend', preventScroll, false);
+
+// ジェスチャーイベントの初期化
+/*
+document.addEventListener('gesturestart', preventScroll, false);
+document.addEventListener('gesturechange', preventScroll, false);
+document.addEventListener('gestureend', preventScroll, false);
+*/
+
+
+
+//searchSubmit──────────────────────────────────────────────
+function searchSubmit(form) {
+    if (form.attr('method') == 'POST') {
+        return true;
+    }
+    var url = new createURL(form.attr('action'));
+    var node;
+    var nodes = form.find('input,select');
+    var max   = nodes.length;
+    for (var i = 0; i < max; i++) {
+        node = nodes.eq(i);
+        switch (node.get(0).type) {
+            case 'text':
+            case 'number':
+            case 'hidden':
+            case 'select-one':
+                if (node.val()) {
+                    url.set(node.attr('name'), node.val());
+                }
+                break;
+            case 'checkbox':
+                if (node[0].name == 'actress_cbox') {
+                    var keyword = 'DgRJTglEBQ4GpoD6,YyI,qs_';
+                    var j = 1;
+                    if (node[0].checked) {
+                        while(1) {
+                            if (n_val = url.get('n' + j)) {
+                                n_val = decodeURIComponent(n_val);
+                                if (n_val == keyword) {
+                                    break;
+                                }
+                            } else {
+                                url.set('n' + j, keyword);
+                                break;
+                            }
+                            j++
+                        }
+                    } else {
+                        var n_val;
+                        var del_n = false;
+                        while(1) {
+                            if (n_val = url.get('n' + j)) {
+                                n_val = decodeURIComponent(n_val);
+                                if (del_n) {
+                                    url.unset('n' + j);
+                                    new_j = j - 1;
+                                    url.set('n' + new_j, n_val);
+                                }
+                                if (n_val == keyword) {
+                                    url.unset('n' + j);
+                                    del_n = true;
+                                }
+                            } else {
+                                break;
+                            }
+                            j++
+                        }
+                    }
+                }
+                break;
+        }
+    }
+    location.href = url.getURL();
+    return false;
+}
+
+
+
+function fn_dmmNaviBehavior() {
+
+    //#dm-headerが存在する場合は処理を中断
+    if($('#dm-header').length == true){
+        return false;
+    }
+
+//assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+//    var nav = dmmLib.navigator();
+
+    var $parts = {
+        body: $('body'),
+        hdLocal: $('#dm-header02 .hd-local'),
+        hdGlobal: $('#dm-header02 .hd-global'),
+        hdAcount: $('#dm-header02 .hd-acount'),
+        hdSearch: $('#dm-header02 .hd-search')
+    };
+
+    //検索の位置変更
+    $('#hd-search-area02').insertAfter('.hd-wrap');
+
+    //左ナビ開閉準備
+    if ($('#dm-side02').length == 1) {
+        $('#dm-header02').append('<div class="hd-overlay" id="hd-js-overlay"></div>');
+    }
+
+    // iOS8対策
+    if ($('body').hasClass('dm-ios')) {
+        var uaVer = $('body').attr('class');
+        var uaVerRep = uaVer.replace(/.*dm-ios-(\d+).*/g,"$1");
+        if(uaVerRep == 8){
+            var scroll;
+            $(window).scroll(function() {
+                scroll = $(document).scrollTop();
+                if (scroll <= -1) {
+                    $('#dm-header02 > .hd-wrapwrap').css('position','relative');
+                }else{
+                    $('#dm-header02 > .hd-wrapwrap').css('position','fixed');
+                }
+            });
+        }
+    }
+
+    // ios ログインナビ展開時用の処理
+    var winMin = window.innerHeight;
+
+    function setMinH(e) {
+        $parts.body.css('min-height', e + 124 + 'px');
+        $('#dm-content02').css('min-height', e + 124 - 44 + 'px');
+        $('#hd-acount-area02').css('min-height', e + 124 - 44 + 'px');
+    }
+
+    setMinH(winMin);
+
+
+
+    var navState = {
+        hdNavM: 0,
+        hdNavG: 0,
+        hdNavA: 0,
+        hdNavS: 0,
+        mainContent: 1,
+        contentScrollTop: 0
+    };
+
+    /* 左ナビ展開*/
+    /* open */
+    $parts.hdLocal.bind('touchmove.noScroll', function(e) {
+        e.preventDefault();
+    });
+
+    $parts.hdLocal.bind('touchstart', function(e) {
+
+        if (navState.hdNavM == 0) {
+
+            e.preventDefault();
+            
+            $('#dm-header02 , #dm-side02 , #dm-content02').removeClass('dm-off').addClass('dm-on');
+            $(this).addClass('dm-on');
+            
+            
+            //スクロール禁止処理
+//assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+//          if (dmmLib.navigator().getOsVersion() >= 6) {
+            if ($('body').hasClass('dm-ios')) {
+                var uaVer = $('body').attr('class');
+                var uaVerRep = uaVer.replace(/.*dm-ios-(\d+).*/g,"$1");
+                if(uaVerRep >= 6){
+                    navState.contentScrollTop = $(document).scrollTop();
+                    $parts.body.css('overflow', 'hidden');
+                    $('#dm-page02').css({
+                        position : 'fixed',
+                        height : winMin + 124 + 'px'
+                    });
+                    $('#dm-content02-inn').css({
+                        marginTop : '-' + navState.contentScrollTop + 'px'
+                    });
+                }
+            }
+
+//assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+//          if (nav.isAndroidOs()) {
+            if ($('body').hasClass('dm-android')) {
+                var hSideNav = $('#dm-side02').height();
+                $('#dm-content02').css('min-height', hSideNav - 45 + 'px');
+            }
+
+            navState.hdNavM = 1;
+        }
+        return false;
+
+    });
+
+    /* close */
+    function hdOverlay() {
+    
+        $('#dm-side02 #dm-side').scrollTop(0);
+        $('#dm-header02 , #dm-side02 , #dm-content02').removeClass('dm-on').addClass('dm-off');
+        $parts.hdLocal.removeClass('dm-on');
+        
+        //スクロール禁止処理　解除
+//assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+//      if (dmmLib.navigator().getOsVersion() >= 6) {
+        if ($('body').hasClass('dm-ios')) {
+            var uaVer = $('body').attr('class');
+            var uaVerRep = uaVer.replace(/.*dm-ios-(\d+).*/g,"$1");
+            if(uaVerRep >= 6){
+                $parts.body.css('overflow', 'inherit');
+                $('#dm-page02').css({
+                    position : 'inherit',
+                    height : 'auto'
+                })
+                $('#dm-content02-inn').css({
+                    marginTop : 0
+                });
+                $(document).scrollTop(navState.contentScrollTop);
+            }
+        }
+
+//assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+//      if (nav.isAndroidOs()) {
+        if ($('body').hasClass('dm-android')) {
+            setMinH(winMin);
+        }
+        
+        navState.hdNavM = 0;
+        return false;
+    }
+
+    $('#hd-js-overlay').bind('click', function(e) {
+        e.stopPropagation();
+    });
+
+    /* close */
+    $('#hd-js-overlay').bind('touchstart', hdOverlay);
+
+
+
+    //サービスナビ
+    $parts.hdGlobal.bind('touchstart', function(e) {
+        if (navState.hdNavG == 0) {
+            if (navState.mainContent == 1) {
+                navState.contentScrollTop = $(document).scrollTop();
+                $('#dm-content02-inn').removeClass('dm-on').addClass('dm-off');
+                navState.mainContent = 0;
+            }
+            $('#hd-gnav02').removeClass('dm-off').addClass('dm-on');
+            $parts.hdGlobal.addClass('dm-on');
+            navState.hdNavG = 1;
+            $(document).scrollTop(0);
+
+            $('#hd-acount-area02').removeClass('dm-on').addClass('dm-off');
+            $parts.hdAcount.removeClass('dm-on');
+            navState.hdNavA = 0;
+
+            if (navState.hdNavS == 1) {
+                $('#hd-search-area02').removeClass('dm-on').addClass('dm-off');
+                $parts.hdSearch.removeClass('dm-on');
+                navState.hdNavS = 0;
+            }
+
+        } else {
+            $('#hd-gnav02').removeClass('dm-on').addClass('dm-off');
+            $('#dm-content02-inn').removeClass('dm-off').addClass('dm-on');
+            $parts.hdGlobal.removeClass('dm-on');
+            navState.hdNavG = 0;
+            $(document).scrollTop(navState.contentScrollTop);
+            navState.mainContent = 1;
+        }
+        return false;
+    });
+
+
+    //ログインナビ
+    $parts.hdAcount.bind('touchstart', function(e) {
+        if (navState.hdNavA == 0) {
+            if (navState.mainContent == 1) {
+                navState.contentScrollTop = $(document).scrollTop();
+                $('#dm-content02-inn').removeClass('dm-on').addClass('dm-off');
+                navState.mainContent = 0;
+            }
+            $('#hd-acount-area02').removeClass('dm-off').addClass('dm-on');
+            $parts.hdAcount.addClass('dm-on');
+            navState.hdNavA = 1;
+            $(document).scrollTop(0);
+
+            $('#hd-gnav02').removeClass('dm-on').addClass('dm-off');
+            $parts.hdGlobal.removeClass('dm-on');
+            navState.hdNavG = 0;
+
+            if (navState.hdNavS == 1) {
+                $('#hd-search-area02').removeClass('dm-on').addClass('dm-off');
+                $parts.hdSearch.removeClass('dm-on');
+                navState.hdNavS = 0;
+            }
+
+        } else {
+            $('#hd-acount-area02').removeClass('dm-on').addClass('dm-off');
+            $('#dm-content02-inn').removeClass('dm-off').addClass('dm-on');
+            $parts.hdAcount.removeClass('dm-on');
+            navState.hdNavA = 0;
+            $(document).scrollTop(navState.contentScrollTop);
+            navState.mainContent = 1;
+
+        }
+        return false;
+    });
+
+
+    //検索ナビ
+    $parts.hdSearch.bind('touchstart', function(e) {
+        if (navState.hdNavS == 0) {
+            $('#hd-search-area02').removeClass('dm-off').addClass('dm-on');
+            $parts.hdSearch.addClass('dm-on');
+            navState.hdNavS = 1;
+
+            if (navState.mainContent == 0) {
+                $('#hd-gnav02').removeClass('dm-on').addClass('dm-off');
+                $('#dm-content02-inn').removeClass('dm-off').addClass('dm-on');
+                $parts.hdGlobal.removeClass('dm-on');
+                navState.hdNavG = 0;
+                $('#hd-acount-area02').removeClass('dm-on').addClass('dm-off');
+                $('#dm-content02-inn').removeClass('dm-off').addClass('dm-on');
+                $parts.hdAcount.removeClass('dm-on');
+                navState.hdNavA = 0;
+                $(document).scrollTop(navState.contentScrollTop);
+                navState.mainContent = 1;
+            }
+
+        } else {
+            $('#hd-search-area02').removeClass('dm-on').addClass('dm-off');
+            $('#frmSearch #searchstr,#frmSearch #hd-search-service').blur();
+            $parts.hdSearch.removeClass('dm-on');
+            navState.hdNavS = 0;
+        }
+        return false;
+    });
+
+    //検索ボックス、絞り込みフロア　フォーカス時の処理
+    if($parts.hdSearch.length == true){
+    
+        //assemble_library.sp.jsから独立のため暫定対応（140704石橋）
+        // if (dmmLib.navigator().getOsVersion() >= 6) {
+        if ($('body').hasClass('dm-ios')) {
+            var uaVer = $('body').attr('class');
+            var uaVerRep = uaVer.replace(/.*dm-ios-(\d+).*/g,"$1");
+            if(uaVerRep >= 6){
+                $('#frmSearch #searchstr,#frmSearch #hd-search-service').bind('focus', function(e) {
+                    navState.contentScrollTop = $(document).scrollTop();
+                    $(document).scrollTop(0);
+                    $('.hd-wrapwrap').css('position','relative');
+                    $('#frmSearch #searchstr,#frmSearch #hd-search-service').bind('blur.blur_search', function(e) {
+                        $('.hd-wrapwrap').css('position','fixed');
+                        if(uaVerRep < 8){
+                            $(document).scrollTop(navState.contentScrollTop);
+                        }
+                        $('#frmSearch #searchstr,#frmSearch #hd-search-service').unbind('blur.blur_search');
+                    });
+                });
+            }
+        }
+    }
+}

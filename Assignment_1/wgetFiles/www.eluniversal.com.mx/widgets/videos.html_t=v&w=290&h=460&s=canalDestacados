@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>El Universal Televisión</title>    
+    <link rel="stylesheet" href="css/general.css" type="text/css" />
+    <link rel="stylesheet" href="css/skin.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/widget.js"></script>   
+</head>
+<body>
+<div id="Widget" class="WidgetEU">
+    <a title="El Universal, el Gran Diario de México" target="_blank" href="http://www.eluniversal.com.mx/noticias.html" id="ElUniversal"></a>
+    <div class="Contenedor">
+        <div class="Header">
+            <div class="Title">Lo más visto</div>
+            <div class="EstiloSelect">
+                <select id="Secciones">
+                    <option value="canalDestacados">Todas</option>
+                    <option value="nacion">Nación</option>
+                    <option value="metropoli">Metrópoli</option>
+                    <option value="edomex">Estádo de México</option>
+                    <option value="estados">Estados</option>
+                    <option value="elmundo">El Mundo</option>
+                    <option value="cartera">Cartera</option>
+                    <option value="sociedad">Sociedad</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="espectaculos">Espectáculos</option>
+                    <option value="cultura">Cultura</option>
+                    <option value="estilos">Estilos</option>
+                    <!--<option value="metropoli"Videos</option>-->
+                    <!--<option value="metropoli">Audios</option>-->
+                </select>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="Videos">
+            <a id="videoPrincipal" href="videos.html?t=v&amp;w=290&amp;h=460&amp;s=canalDestacados" target="_new">
+                <div id="imgPrincipal">
+                    <img title="" alt="" src="img/player.jpg" id="Player" style="cursor:pointer;position:absolute;z-index:0;width:300px;height:auto;border:none;">
+                    <img id=playImgVideoPrincipal src="img/play_large.png" alt="Muestra el video" rel="min" style="top:40%;left:43%;position:relative;z-index:1;cursor:pointer;width:50px;height:50px;border:none;">
+                </div>     
+                <div id="tituloPrincipal"></div>
+            </a>
+            <div id="videosSecundarios"></div>
+        </div>
+        <div class="Foot">
+            <a target="_blank" href="http://www.eluniversal.com.mx/widgets/widgets.html" id="LlevateWidget">Llévanos a tu web</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

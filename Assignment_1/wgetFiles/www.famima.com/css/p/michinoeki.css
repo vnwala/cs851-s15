@@ -1,0 +1,222 @@
+@charset "Shift_JIS";
+
+/*
+Title: michinoeki_genre
+URI:
+*/
+
+#michinoeki-wrap{
+	margin:0; padding:0; width:700px;}
+
+#michinoeki-wrap h1, #michinoeki-wrap h2, #michinoeki-wrap h3, #michinoeki-wrap h4,
+#michinoeki-wrap img, #michinoeki-wrap p, #michinoeki-wrap div, #michinoeki-wrap ul, #michinoeki-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+	
+#michinoeki-wrap a:link, 
+#michinoeki-wrap a:visited{
+	text-decoration:underline; color:#333333;}
+#michinoeki-wrap a:hover,
+#michinoeki-wrap a:active{
+	text-decoration:none; color:#333333;}
+
+#michinoeki-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#michinoeki-wrap .bt a{
+	outline:0;}
+
+/* clearfix */
+#michinoeki-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#michinoeki-wrap .clearfix {
+  min-height: 1px;}
+
+* html #michinoeki-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #michinoeki-wrap{ 
+	height: 1%;}
+	
+/*-------------------------------------------------------
+　各道の駅トップページ
+-------------------------------------------------------*/
+#michinoeki-wrap #top-headertxt{
+	width:700px; height:100px; background:url(http://www.famima.com/images/p/michinoeki/top_headertxt.jpg) no-repeat;
+	text-indent:-9999px;}
+	
+#michinoeki-wrap .top-bg{
+	width:700px; background:url(http://www.famima.com/images/p/michinoeki/top_bg.jpg) repeat;}
+	
+#michinoeki-wrap .top-itemBaseL{
+	width:380px; float:left;}
+	
+#michinoeki-wrap .top-itemBaseR{
+	width:320px; float:left;}
+	
+#michinoeki-wrap .top-itemBorder{
+	/* width:700px; height:22px; clear:both; background:url(/images/p/michinoeki/top_itemborder.jpg) no-repeat;} */
+	width:700px; height:22px; clear:both; background:url(http://www.famima.com/images/p/michinoeki/top_itemborder.jpg) no-repeat;}
+
+#michinoeki-wrap .top-ekichoBG{
+	/* width:370px; margin:0 0 0 10px; background-color:#f7f3e3;} */
+	width:370px; margin:0 0 0 10px; background-color:#ffffcc;}
+	
+#michinoeki-wrap .top-ekichoBG .photo{
+	width:101px; float:left; padding:5px 5px;}
+	
+#michinoeki-wrap .top-ekichoBG .ekichoName{
+	font-size:90%; color:#333333; padding:4px 0 0 0;}
+	
+#michinoeki-wrap .top-ekichoBG .txtBase{
+	width:250px; float:left; padding:5px 0 0 0;}
+	
+#michinoeki-wrap .top-ekichoBG .txt{
+	color:#333333; line-height:130%; padding:4px 0;}
+
+#michinoeki-wrap .top-itemBaseR .date{
+	/* text-align:right; font-weight:bold; color:#666666; padding:5px 10px;} */
+	text-align:right; font-weight:bold; color:#666666; padding:5px;}
+
+#michinoeki-wrap .top-iteminfoBG{
+	width:370px; margin:0 0 0 10px;}
+
+#michinoeki-wrap p.top-copy{
+	font-size:110%; color:#990000; font-weight:bold; padding:15px 0 0 0;}
+
+#michinoeki-wrap h3.top-name{
+	font-size:140%; color:#333333; line-height:140%; font-weight:bold; padding:5px 0 0 0;}
+
+#michinoeki-wrap h3.top-name a:link, 
+#michinoeki-wrap h3.top-name a:visited{
+	text-decoration:underline; color:#333333;}
+#michinoeki-wrap h3.top-name a:hover,
+#michinoeki-wrap h3.top-name a:active{
+	text-decoration:none; color:#333333;}
+	
+#michinoeki-wrap p.top-price{
+	color:#CC0000; padding:5px 0 10px 0;}
+
+/*------ michinoeki_list --------*/
+#michinoeki-wrap ul#michi_list{
+	margin:0; list-style:none;}
+
+#michinoeki-wrap ul#michi_list li{
+	display:block; width:200px; height:16px; float:left; padding:0 0 5px 12px;}	
+
+
+/*------ movie_thumnail --------*/
+#michinoeki-wrap #top_movie{
+	width:685px; margin:0 0 0 10px;}
+
+#michinoeki-wrap .top_movielist{
+	width:132px; float:left; padding:0 5px 0 0;}
+	
+#michinoeki-wrap .top_movielist .date{
+	font-size:85%; color:#FF0000; padding:3px 0 0 0;}
+	
+#michinoeki-wrap .top_movielist .title{
+	font-size:90%; color:#333333; font-weight:bold;}
+
+
+/*-------------------------------------------------------
+　各道の駅トップページ（フッター）
+-------------------------------------------------------*/
+#michinoeki-wrap #footerBG{
+	width:700px; height:220px; background:url(http://www.famima.com/images/p/michinoeki/footer_bg.jpg) no-repeat;}
+	
+#michinoeki-wrap #footerBG #pagetop{
+	width:154px; margin:0 0 0 530px;}
+	
+/*-------------------------------------------------------
+　各道の駅ジャンルページ
+-------------------------------------------------------*/
+#michinoeki-wrap #GRBase{
+	width:700px; padding:0; background:url(http://www.famima.com/images/p/michinoeki/info_bg.jpg) repeat-y;}
+
+#michinoeki-wrap .GRmainBase{
+	width:470px; float:left;}
+
+#michinoeki-wrap .GRInfoBG{
+	width:230px; float:left;}
+
+#michinoeki-wrap .infoBaseWH{
+	width:220px; padding:7px 0; margin-bottom:10px; background-color:#ffffff;
+	border-radius: 5px;         /* CSS3 */
+	-moz-border-radius: 5px;    /* Firefox */
+	-webkit-border-radius: 5px; /* Safari,Chrome */
+   }
+   
+#michinoeki-wrap .infoBaseWH img{
+	 padding:0 0 0 7px;}
+   	
+#michinoeki-wrap .GRmainBase .base450{
+	width:450px; padding:0 10px;}
+	
+#michinoeki-wrap .GRInfoBG .base220{
+	width:220px; padding:0 0 0 5px; margin:0;}
+
+#michinoeki-wrap #GRBase h2.cmnt{
+	color:#76a56e; font-weight:bold; padding:10px 0 5px 0;}
+
+#michinoeki-wrap #GRBase p.cmnt{
+	color:#333333; padding:0; line-height:130%;}
+
+#michinoeki-wrap #GRBase h3.txt{
+	width:213px; padding:3px 0 3px 7px; margin:10px 0 5px 0; color:#FFFFFF; background-color:#000000;}
+	
+#michinoeki-wrap #GRBase p.infoTXT{
+	width:208px; text-align:left; padding:5px 7px;
+	color:#333333; line-height:130%; font-size:90%;}
+
+#michinoeki-wrap #GRBase .ekichoPhoto{
+	width:101px; float:left;}
+#michinoeki-wrap #GRBase .ekichoName{
+	width:101px; float:left; padding:4px 0 0 4px; font-size:90%; color:#333333; line-height:120%; text-align:left;}
+	
+#michinoeki-wrap #GRBase .michiclubBT{
+	/* padding:5px 0 15px 10px; border:0;} */
+	padding:5px 0 10px 10px; border:0;}
+
+#michinoeki-wrap #GRBase .michiclubBT a{
+	outline:0;}
+
+#michinoeki-wrap .ph_txt{
+	padding:3px 0 10px 0; font-size:90%; line-height:120%;}
+	
+#michinoeki-wrap .sb_btn{
+	/* margin-bottom:5px;} */
+	margin:0 0 5px 7px;}
+
+#michinoeki-wrap .ttl_itemall{
+	width:700px; height:23px; text-indent:-9999px; margin:10px 0;
+	background:url(http://www.famima.com/images/p/michinoeki/ttl_itemall.gif) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,436 @@
+/*
+	Theme Name: Eroticxxx
+	Theme URI: http://teenspornx.com
+	Description: Premium erotic theme
+	Version: 1.0.0
+	Author: memoadian (@memoadian)
+	Author URI: http://comprar-web.com
+	Tags: HTML5, CSS3, Responsive, videos, tube, xxx, erotic
+
+	License: Copyright
+*/
+
+body{
+	background:#000;
+	color:#9FA0A2;
+}
+ul{
+	list-style-type:none;
+	margin:0;
+}
+a, a:focus, a:hover{
+	text-decoration:none;
+	outline:none;
+	color:#fff;
+}
+header{
+	background:#1D1E22;
+}
+.add-header{
+	margin-top:5px;
+	text-align:center;
+}
+.footer-add{
+	margin-bottom:5px;
+	text-align:center;
+}
+.sidebar-content{
+	background:#1D1E22;
+}
+.widget{
+	background:#1D1E22;
+	padding:10px;
+}
+.widget ul{
+	padding:0;
+	margin:0;
+}
+/*page*/
+.page{
+	background:#1d1e22;
+	padding:10px;
+}
+.page h1{
+	margin:0 0 10px;
+}
+/*nav*/
+nav{
+	background:#1d1e22;
+	border-top:2px solid #EE577C;
+}
+nav li{
+	float:left;
+	border-right:1px solid #333;
+}
+nav li a{
+	color:#fff;
+	text-transform:uppercase;
+	display:block;
+	padding:10px 20px;
+	font-weight:bold;
+}
+nav li a:hover{
+	background:#EE577C;
+}
+nav li ul li{
+	border:0;
+	float:none;
+}
+nav li a:hover{
+	color:#fff;
+}
+nav li:hover .sub-menu{
+	display:block
+}
+nav li.current-menu-item > a{
+	background:#EE577C;
+}
+nav .sub-menu{
+	position:absolute;
+	z-index:1;
+	padding:0;
+	display:none;
+}
+.main{
+	padding:10px;
+}
+.grid-videos{
+	margin:0;
+	padding:0;
+}
+.grid-videos li{
+
+}
+.grid-videos li > div{
+	background:#1D1E22;
+	margin:0 0 30px 0;
+	padding:3px;
+	border:1px solid #3d3d3d;
+}
+.title{
+	font-size:14px;
+	padding:5px;
+	display:block;
+	color:#fff;
+	background:#EE577C;
+}
+.rated{
+	
+}
+.rated .img-rated{
+	display:none;
+}
+.rated-single .img-rated{
+	display:inline-block;
+}
+.img-rated img{
+	background:#EE577C;
+	border-radius:5px;
+	padding:5px 10px;
+	margin:3px;
+	-webkit-box-shadow:2px 2px 0px 0px #fff;
+	-moz-box-shadow:2px 2px 0px 0px #fff;
+	-o-box-shadow:2px 2px 0px 0px #fff;
+	box-shadow:2px 2px 0px 0px #fff;
+}
+.percentage{
+	color:#fff;
+}
+.thumb{
+	position:relative;
+	display:block;
+}
+.thumb img{
+	width:100%;
+}
+.duration{
+	opacity:.8;
+	font-weight:bold;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:#EE577C;
+	padding:5px;
+	color:#fff;
+}
+/*article*/
+article h1{
+	font-size:30px;
+	margin:5px 0;
+}
+article img{
+	max-width:100%;
+}
+.tabs{
+	overflow:hidden;
+}
+.tabs li{
+	float:left;
+	background:#000;
+	border-radius:5px 5px 0 0;
+}
+.tabs li a{
+	display:block;
+	padding:10px;
+}
+.tabs li.active{
+	background:#fff;
+}
+#tab-description, #tab-reviews{
+	padding:0 20px;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*gallery*/
+.item{
+	width:260px;
+}
+.item img{
+	max-width:100%;
+}
+/*comments*/
+span.comments{
+	display:none;
+}
+div.comments{
+	padding:10px;
+}
+div.comments h2{
+	margin:0 0 5px 0;
+}
+div.comments ul{
+	margin:0;
+	padding:0;
+}
+div.comments p{
+	padding:10px;
+	margin:0;
+}
+div.comments ul ul{
+	padding:0 0 0 20px;
+}
+.avatar{
+	height:28px;
+	width:auto;
+}
+.vcard{
+	height:30px;
+	border-bottom:1px solid #EE577C;
+}
+.commentmetadata{
+	display:none;
+}
+#submit{
+	background:#EE577C;
+	color:#fff;
+	border:0;
+	padding:5px;
+}
+.reply a{
+	background:#EE577C;
+	display: inline-block;
+	padding:5px;
+	margin:0px 5px 15px;
+	color:#fff;
+}
+.comments label{
+	display: block;
+}
+#comment{
+	width:100%;
+	color:#333;
+}
+/*sidebar*/
+.search-input{
+	padding:5px;
+	border-radius:5px 0 0 5px;
+	border:0;
+	width:95%;
+}
+.search-submit{
+	background:#EE577C;
+	padding:5px;
+	border:0;
+	border-radius:0 5px 5px 0;
+	color:#fff;
+	margin-left:-4px;
+	position:absolute;
+	right:25px;
+	top:10px;
+}
+/*pagination*/
+.paginationl {
+	background:#1d1e22; /* Old browsers */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border-bottom:3px solid #3d3d3d;
+	margin:10px auto;
+	text-align:center;
+}
+.current.page-numbers{
+	border-bottom:3px solid #aaa !important;
+}
+.paginationl .page-numbers {
+	display:inline-block;
+	margin-left:-4px;
+	margin-bottom:-3px;
+	padding:10px 16px;
+	font-size:15px;
+	font-weight:bold;
+	border-left:1px solid #000;
+	border-bottom:3px solid #EE577C;
+}
+.paginationl .page-numbers:hover{
+	background:#333;
+}
+.paginationl .current {
+	background:#333;
+    color:#fff;
+}
+/*footer*/
+footer{
+	background:#202020;
+}
+footer h3{
+	margin:5px 0;
+}
+.copyright{
+	text-align:center;
+}
+.widget-copyright{
+	padding:20px;
+}
+
+/*inputs, textareas etc.*/
+input[type="search"], input[type="text"], textarea{
+	color:#333;
+}
+/*slicknav*/
+/*
+    Mobile Menu Core Style
+*/
+
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { cursor: pointer; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* IE6/7 support */
+.slicknav_menu { *zoom: 1 }
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    font-size:16px;
+    border-top:3px solid #EE577C;
+}
+/* Button */
+.slicknav_btn {
+    margin: 5px 5px 6px;
+    text-decoration:none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+    background-color: #EE577C;
+}
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #f5f5f5;
+}
+.slicknav_menu {
+    background:#202020;
+    padding:5px;
+}
+.slicknav_nav {
+    color:#fff;
+    margin:0;
+    padding:0;
+    font-size:0.875em;
+    border-top:1px solid #333;
+}
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+}
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+.slicknav_nav .slicknav_row {
+    padding:5px 10px;
+    margin:2px 5px;
+}
+.slicknav_nav a{
+    padding:5px 10px;
+    margin:2px 5px;
+    text-decoration:none;
+    color:#fff;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    padding:0;
+    margin:0;
+}
+.slicknav_nav .slicknav_row:hover {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#fff;
+}
+.slicknav_nav a:hover{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#222;
+}
+.slicknav_nav .slicknav_txtnode {
+     margin-left:15px;   
+}
+@media (max-width:800px){
+	header h1 a{
+		display:inline-block;
+		max-width:100%;
+	}
+	header h1{
+		text-align:center;
+	}
+}

@@ -1,0 +1,488 @@
+@charset "utf-8";
+#guestHomeTop {
+	display:table;
+	vertical-align:top;
+	padding: 0 20px 0 0;
+	margin:0;
+}
+.topLeft, .loginSignup {
+	display:table-cell;
+	vertical-align:top;
+}
+.topLeft{
+	padding:0;
+	margin:0;
+}
+.loginSignup {
+	width:250px !important;
+	background:rgb(243,243,243);
+}
+.siteCatch {
+	width:100%;
+	padding:0 0 0 20px;
+}
+.siteCatch h1 {
+	margin:20px 0;
+	font-size: 24px;
+	font-weight: normal;
+	line-height:32px;
+	float:none;
+}
+.siteCatch dl{
+	display:table;
+	width:100%;
+}
+.siteCatch dd{
+	display:table-cell;
+}
+.siteCatch dd.margin{
+	width:1%;
+}
+.siteCatch dd.cell{
+	width:32%;
+	background:rgb(243,243,243);
+}
+.siteCatch dd div{
+	width:100%;
+}
+.copyTitle{
+	border-bottom:
+	rgb(255,255,255) 1px solid;
+}
+.copyTitle p{
+	width:100%;
+	height:30px;
+	padding:0 10px;
+	background:#38a1f0;
+	background: -moz-linear-gradient(top, #4fb3fe, #2593e4);
+	background: -webkit-gradient(linear, center top, center bottom, from(#4fb3fe), to(#2593e4));
+	background: linear-gradient(to bottom, #4fb3fe, #2593e4);
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#4fb3fe, EndColorStr=#2593e4);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#4fb3fe, EndColorStr=#2593e4)";
+	border-radius:5px 5px 0 0;
+	color:#fff;
+	line-height:30px;
+}
+.copyImg img{
+	width:100%;
+}
+.copyTxt{
+	padding:10px;
+}
+.loginSignup #signUp {
+	margin-top:0;
+	margin-bottom:0;
+}
+/* guest sign up */
+#signUp {
+	padding-bottom: 1px;
+	background: rgb(255,255,255);
+}
+.signUpBox {
+	padding: 30px 20px;
+	background: rgb(252,251,234);
+	border-bottom: rgb(208,208,208) 1px solid;
+}
+.signUpBtn {
+	display: block;
+	overflow:hidden;
+	white-space:nowrap;
+	width: 100%;
+	height: 48px;
+	margin: 10px 0;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.4em;
+	line-height: 48px;
+	text-align: center;
+}
+.sign4M {
+	background: #3ba3f1;
+	background: -moz-linear-gradient(top, #4fb3fe, #2492e3);
+	background: -webkit-gradient(linear, center top, center bottom, from(#4fb3fe), to(#2492e3));
+	background: linear-gradient(to bottom, #4fb3fe, #2492e3);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#4fb3fe, EndColorStr=#2492e3);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#4fb3fe, EndColorStr=#2492e3)";
+}
+.sign4M:hover {
+	background: #7ec8ff;
+	color: #fff;
+}
+.sign4F {
+	background: #f1993b;
+	background: -moz-linear-gradient(top, #fd9c44, #fc7800);
+	background: -webkit-gradient(linear, center top, center bottom, from(#fd9c44), to(#fc7800));
+	background: linear-gradient(to bottom, #fd9c44, #fc7800);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fd9c44, EndColorStr=#fc7800);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#fd9c44, EndColorStr=#fc7800)";
+}
+.sign4F:hover {
+	background: #ffb470;
+	color: #fff;
+}
+.btnSub {
+	margin-left: 10px;
+	font-size: 0.7em;
+}
+/* guest sign in */
+#signIn {
+	padding: 30px 20px;
+}
+.homeSubTitle {
+	position:relative;
+	height:30px;
+	padding:0 5px;
+	background:rgb(183,183,183);
+	color:#fff;
+	font-weight:normal;
+	line-height:30px;
+}
+.homeSubTitle .fa {
+	color:#757575;
+}
+.legend {
+	position:absolute;
+	right:20px;
+	white-space:nowrap;
+	font-size:0.65em;
+}
+#siteReview {
+	display:none;
+}
+#realTimeMonroo, #timeLine, #chatRooms, #popular, #signUpBottom, #siteReview {
+	clear:both;
+	padding:10px 20px;
+}
+ @media screen and (max-width: 830px) {
+h1, h2 {
+	font-size:1.3em;
+}
+h3 {
+	font-size:1em;
+}
+#guestHomeTop {
+	margin-top:10px;
+}
+#guestHomeTop, .siteCatch {
+	padding:0;
+}
+#realTimeMonroo, #timeLine, #chatRooms, #popular, #signUpBottom, #siteReview {
+	padding:10px 1%;
+}
+}
+/* real time monroo */
+#realStats {
+	width:100%;
+	height:200px;
+	border:rgb(214,214,214) 1px solid;
+	border-right:0;
+}
+.block1, .block2, .block3{
+	float:left;
+}
+#realStats dl {
+	display:table;
+	width:100%;
+	height:100%;
+}
+#realStats dd {
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	border-right:rgb(214,214,214) 1px solid;
+	background-position:left 30%;
+	background-repeat:no-repeat;
+	background-size:60% auto ;
+	text-align:center;
+}
+@media screen and (min-width: 831px) {
+.block1 {
+	width:16%;
+	height:200px;
+}
+.block1 dd {
+	width:100%;
+}
+.block2, .block3 {
+	width:42%;
+	height:200px;
+}
+.block2 dd, .block3 dd {
+	width:14%;
+}
+}
+@media screen and (max-width: 830px) {
+.block1 {
+	width:28%;
+	height:200px;
+}
+.block1 dd {
+	width:100%;
+}
+.block2, .block3 {
+	width:72%;
+	height:100px;
+}
+.block2 {
+	border-bottom:rgb(214,214,214) 1px solid;
+}
+.block2 dd, .block3 dd {
+	width:24%;
+}
+}
+.diary {
+	background-image:url(../img/real/realtime_diary.png);
+}
+.movie {
+	background-image:url(../img/real/realtime_movie.png);
+}
+.picture {
+	background-image:url(../img/real/realtime_picture.png);
+}
+.mail {
+	background-image:url(../img/real/realtime_mail.png);
+}
+.monrooslot {
+	background-image:url(../img/real/realtime_monrooslot.png);
+}
+.guest {
+	background-image:url(../img/real/realtime_guest.png);
+}
+.realtime_balloon_diary, .realtime_balloon_video, .realtime_balloon_picture, .realtime_balloon_mail, .realtime_balloon_slot, .realtime_balloon {
+	position:absolute;
+	top:5px;
+	left:2%;
+	display:none;
+	width:96%;
+	padding:5px;
+	background:rgba(255,255,204,0.85);
+	border:rgb(241,241,241) 1px solid;
+	border-radius:3px;
+	box-shadow:rgba(0,0,0,0.15) 2px 2px 3px 0;
+}
+.block1 p {
+	font-weight:bold;
+}
+#guest_count, .count, .nin {
+	color:#004d99;
+	font-weight:bold;
+}
+#guest_count {
+	font-size:4em;
+	font-weight:normal;
+}
+.count {
+	font-size:2.5em;
+}
+/* chat rooms */
+.chatBase {
+	width:100%;
+	min-height:135px;
+	padding:0 40px;
+}
+.eachRoom {
+	position:relative;
+	display:block;
+	float:left;
+	width:300px;
+	height:95px;
+	margin:5px;
+	padding:10px;
+	background:rgb(252,234,241);
+	border:rgb(227,36,105) 1px solid;
+}
+.eachPrivateRoom {
+	display: table;
+	float: left;
+	overflow:hidden;
+	width: 300px;
+	height:125px;
+	margin: 5px;
+	padding: 10px;
+	background: rgb(252,234,241);
+	border: rgb(227,36,105) 1px solid;
+}
+.priThumbL {
+	display:table-cell;
+	vertical-align:top;
+	width:180px;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.priThumbL a {
+	color:#959595;
+}
+.priThumbL a:hover {
+	color:#3198bd;
+}
+.priThumbR {
+	display:table-cell;
+	width:100px;
+}
+.chatNames {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 160px;
+	height: 32px;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 32px;
+	text-overflow: ellipsis;
+}
+.chatNames {
+	position:absolute;
+	top:20px;
+	left:10px;
+	overflow:hidden;
+	white-space:nowrap;
+	width:160px;
+	height:32px;
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:32px;
+	text-overflow:ellipsis;
+}
+.chatNames .fa {
+	font-size:1.5em;
+	font-weight:normal;
+	vertical-align:middle;
+}
+.chatMembers {
+	position:absolute;
+	top:52px;
+	left:10px;
+	white-space:nowrap;
+	width:160px;
+	height:32px;
+	color:#959595;
+	line-height:32px;
+	text-overflow:ellipsis;
+}
+.chatBtnArea {
+	position:absolute;
+	top:20px;
+	right:0;
+	display:table;
+	width:130px;
+	height:64px;
+	padding-top:15px;
+	line-height:34px;
+	text-align:center;
+}
+.chatMemberIcons {
+	position:absolute;
+	top:84px;
+	left:10px;
+	display:block;
+	overflow:hidden;
+	width:100%;
+	height:40px;
+}
+.chatMemberIcons a {
+	float:left;
+	margin-right:1px;
+}
+/* popular girls */
+.popBase {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:235px;
+	margin:20px 0;
+	padding:20px 40px;
+	background:rgb(243,243,243);
+	box-sizing:border-box;
+}
+.popBase #prevThumbs, .popBase #nextThumbs {
+	position:absolute;
+	top:0;
+	display:block;
+	cursor:pointer;
+	width:40px;
+	height:235px;
+	background:rgb(243,243,243);
+	color:#a6a6a6;
+	font-size:1.5em;
+	line-height:235px;
+	text-align:center;
+}
+.popBase #prevThumbs:hover, .popBase #nextThumbs:hover {
+	background:rgb(49,152,189);
+	color:#fff;
+}
+.popBase #prevThumbs {
+	left:0;
+}
+.popBase #nextThumbs {
+	right:0;
+}
+#popular .popGirls {
+	display:inline-block;
+	width:200px;
+	height:195px;
+	margin:0 10px;
+	padding:10px;
+	background:rgb(43,43,43);
+	text-align:center;
+	color:#fff;
+}
+#popular .popGirls img {
+	width:100%;
+}
+#popular .age {
+	font-size:0.8em;
+}
+#popular .fa-envelope {
+	opacity:0.75;
+}
+#popular a {
+	color:#fff;
+}
+#popular a:hover {
+	color:#3198bd;
+}
+ @media screen and (max-width: 830px) {
+.popBase {
+	height:215px;
+	padding:10px 0;
+}
+}
+/* freejoin */
+#signUpBottom .signUpBtn {
+	display:inline-block;
+	width:210px;
+	margin-right:20px;
+}
+.aboutd2p {
+	display:table;
+	width:100%;
+	min-height:85px;
+	padding:20px;
+	background:	rgb(243,243,243);
+	border:rgb(208,208,208) 1px solid;
+}
+.d2logo {
+	display:table-cell;
+	width:135px;
+	height:100%;
+	background-image:url(../img/common/d2pLogo.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:105px;
+}
+.about {
+	display:table-cell;
+	padding-left:15px;
+}
+ @media screen and (max-width: 830px) {
+.d2logo {
+	width:30%;
+}
+#signUpBottom .signUpBtn {
+	width:100%;
+}
+}

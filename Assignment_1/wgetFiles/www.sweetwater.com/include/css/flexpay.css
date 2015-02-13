@@ -1,0 +1,345 @@
+/* Popup */
+#overlay {
+	background:#FFF;
+	display:none;
+	position:absolute;
+	z-index:200;
+}
+#threePaymentsPopup {
+	border: 10px solid;
+	border-color:#7f7f7f;
+	border-color:rgba(0,0,0,0.5);
+	box-shadow: 0 5px 55px rgba(0,0,0,0.5);
+	border-radius:20px;
+	display:none;
+	margin-left:-395px;
+	position:absolute;
+	top:200px;
+	left:50%;
+	z-index:230;
+	width:770px;
+}
+#threePaymentsPopup .buttons {
+	margin-bottom: 15px;
+}
+#threePaymentsPopup .button {
+	border:1px solid;
+	border-radius:3px;
+	cursor:pointer;
+	display:inline-block;
+	*display:inline;
+	position:relative;
+	text-align:center;
+	text-decoration:none !important;
+	zoom:1.0;
+}
+#threePaymentsPopup .button button, #threePaymentsPopup .button input {
+	background:none repeat scroll 0 0 transparent;
+	border:0 none;
+	box-sizing: border-box; /* css3 rec */
+	-moz-box-sizing: border-box; /* ff2 */
+	-ms-box-sizing: border-box; /* ie8 */
+	-webkit-box-sizing: border-box; /* safari3 */
+	-khtml-box-sizing: border-box; /* konqueror */
+	color: inherit;
+	cursor: pointer;
+	display:block;
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	height:100%;
+	margin:0;
+	overflow:visible;
+	padding:0;
+	position:relative;
+	z-index:10;
+	text-shadow: inherit;
+	width:100%;
+	*width: auto;
+}
+#threePaymentsPopup button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+#threePaymentsPopup p {
+	margin: 15px 0;
+}
+
+/* Red Button */
+#threePaymentsPopup .redbutton,
+#threePaymentsPopup .redbtn {
+	background: #de0000;
+	background: -moz-linear-gradient(top, #de0000, #b20000);
+	background: -webkit-linear-gradient(top, #de0000, #b20000);
+	background: -ms-linear-gradient(top, #de0000, #b20000);
+	background: linear-gradient(top, #de0000, #b20000);
+	border-color: #7a0000 #7a0000 #450101;
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.4),
+		inset -1px 0 0 rgba(255, 255, 255, 0.1),
+		inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+		inset 1px 0 0 rgba(255, 255, 255, 0.1),
+		0 1px 2px rgba(0, 0, 0, 0.3);
+	color: #FFF !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+#threePaymentsPopup .redbutton button, #threePaymentsPopup .redbutton input,
+#threePaymentsPopup .redbtn button, #threePaymentsPopup .redbtn input {
+	color: #FFF;
+	text-shadow: 1px 1px 0 #830600;
+}
+#threePaymentsPopup .redbutton:hover,
+#threePaymentsPopup .redbtn:hover {
+	background: #c90000;
+	background: -moz-linear-gradient(top, #c90000, #9c0000);
+	background: -webkit-linear-gradient(top, #c90000, #9c0000);
+	background: -ms-linear-gradient(top, #c90000, #9c0000);
+	background: linear-gradient(top, #c90000, #9c0000);
+	border-color: #630000 #630000 #330101;
+}
+#threePaymentsPopup .redbutton:active,
+#threePaymentsPopup .redbtn:active {
+	background: #7d0000;
+	background: -moz-linear-gradient(top, #7d0000, #ab0000);
+	background: -webkit-linear-gradient(top, #7d0000, #ab0000);
+	background: -ms-linear-gradient(top, #7d0000, #ab0000);
+	background: linear-gradient(top, #7d0000, #ab0000);
+	border-color: #330101 #630000 #630000;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#threePaymentsPopup h3,
+#threePaymentsPopup h4,
+#threePaymentsPopup ul {
+	margin: 0;
+	padding: 0;
+}
+#threePaymentsPopup ul {
+	list-style: none;
+}
+#threePaymentsPopup .wrap {
+	background:#FFF;
+	background: -moz-linear-gradient(top, #FFF, #e5e5e5);
+	background: -webkit-linear-gradient(top, #FFF, #e5e5e5);
+	background: -ms-linear-gradient(top, #FFF, #e5e5e5);
+	background: linear-gradient(top, #FFF, #e5e5e5);
+	bordeR:2px solid #FFF;
+	border-radius:10px;
+	padding:15px;
+	position:relative;
+}
+#threePaymentsPopup h3 {
+	background: url(../checkout/images/3payments-divider.jpg) no-repeat center bottom;
+	border-radius:10px 10px 0 0;
+	color:#0a264d;
+	font-size:22px;
+	height:90px;
+	margin:0;
+	padding-left:15px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:721px;
+}
+#threePaymentsPopup h3 em {
+	font-style: normal;
+	text-transform: uppercase;
+}
+#threePaymentsPopup h3 .logo {
+	background: url(../checkout/images/3payments-logo.png) no-repeat 0 0;
+	_background-image: url(../checkout/images/3payments-logo.gif);
+	display:inline-block;
+	*display:inline;
+	height:115px;
+	margin:-7px auto auto -5px;
+	overflow:hidden;
+	text-align:left;
+	text-indent:-99999px;
+	vertical-align: middle;
+	width:229px;
+	zoom:1.0;
+}
+#threePaymentsPopup .col1,
+#threePaymentsPopup .col2 {
+	display: inline-block;
+	*display: inline;
+	float: none;
+	vertical-align: top;
+	zoom: 1.0;
+}
+#threePaymentsPopup .col1 {
+	margin:0;
+	padding:75px 0 0;
+	width:435px;
+}
+#threePaymentsPopup .col1 p {
+	line-height:20px;
+}
+#threePaymentsPopup .col1 em {
+	color:#222;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+}
+#threePaymentsPopup .col1 strong {
+	color:#222;
+}
+#threePaymentsPopup .col1 .buttons {
+	text-align:center;
+}
+#threePaymentsPopup .col1 h4 {
+	margin: 10px 0;
+}
+#threePaymentsPopup .close, #threePaymentsPopup .close:hover {
+	color:#FFF;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+	padding:0 10px;
+	text-decoration:none;
+	width:auto;
+}
+#threePaymentsPopup .close:before {
+	background:url(../form/images/form-sprite.png) no-repeat 1px -496px;
+	content:"";
+	display:inline-block;
+	height:11px;
+	margin:-3px 3px auto auto;
+	vertical-align: middle;
+	width:11px;
+}
+#threePaymentsPopup .col2 {
+	margin:0 0 0 15px;
+	padding:0;
+	position:relative;
+	z-index:211;
+	width:282px;
+}
+#threePaymentsPopup .img {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: block;
+	margin: 0 auto 10px;
+	padding: 5px;
+	width: 120px;
+}
+#threePaymentsPopup img {
+	display: block;
+	margin: 0 auto;
+}
+#threePaymentsPopup .schedule_wrap {
+	border-radius: 6px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+	padding: 0;
+}
+#threePaymentsPopup .col2 h4 {
+	background:#092449;
+	background: -moz-linear-gradient(top, #173c79, #092449);
+	background: -webkit-linear-gradient(top, #173c79, #092449);
+	background: -ms-linear-gradient(top, #173c79, #092449);
+	background: linear-gradient(top, #173c79, #092449);
+	border: 1px solid #061831;
+	border-bottom-color:#030b17;
+	border-radius: 6px 6px 0 0;
+	box-shadow:
+		inset 0 1px 0 rgba(255,255,255,0.15),
+		inset -1px 0 0 rgba(255,255,255,0.15),
+		inset 0 -1px 0 rgba(255,255,255,0.15),
+		inset 1px 0 0 rgba(255,255,255,0.15);
+	color:#FFF;
+	font-size:22px;
+	line-height:22px;
+	padding:15px 0;
+	position:relative;
+	text-align:center;
+	text-shadow:1px 1px 0 #000;
+	text-transform:uppercase;
+}
+#threePaymentsPopup .col2 h4:before,
+#threePaymentsPopup .col2 h4 strong:before,
+#threePaymentsPopup .col2 h4 strong:after,
+#threePaymentsPopup .col2 h4:after {
+	border-color: #092449 transparent;
+	border-style:solid;
+	border-width: 20px 20px 0;
+	content:"";
+	margin-left:-20px;
+	position:absolute;
+	top:auto;
+	right:auto;
+	bottom:-19px; /* value = - border-top-width - border-bottom-width */
+	left:50%;
+	display:block;
+	width:0;
+}
+#threePaymentsPopup .col2 h4 strong:after {
+	border-color: rgba(255,255,255,0.25) transparent;
+	border-width: 20px 20px 0;
+	bottom:-20px;
+	margin-left: -20px;
+}
+#threePaymentsPopup .col2 h4 strong:before {
+	border-color: #030b17 transparent;
+	border-width: 20px 20px 0;
+	margin-left:-20px;
+	bottom:-21px;
+}
+#threePaymentsPopup .col2 h4:before {
+	border-color: #fffce5 transparent;
+	border-width: 22px 22px 0;
+	margin-left:-22px;
+	bottom:-23px;
+}
+#threePaymentsPopup .col2 h4 strong {
+	display:block;
+	font-size:36px;
+	line-height:36px;
+}
+#threePaymentsSchedule {
+	background: #fffce5;
+	border-color: #e0c331 #e0c331 #d6ba2f;
+	border-style: solid;
+	border-width:0 1px 1px;
+	border-radius: 0 0 6px 6px;
+}
+#threePaymentsSchedule li {
+	background: url(../checkout/images/texture-1.png) repeat 0 0;
+	border-color: #fffce5 transparent #EDCD34;
+	border-style:solid;
+	border-width: 1px 0;
+	padding:12px 12px;
+}
+#threePaymentsSchedule .label, #threePaymentsSchedule .amount {
+	display:inline-block;
+	*display:inline;
+	vertical-align:baseline;
+	zoom:1.0;
+	width:50%;
+}
+#threePaymentsSchedule .label {
+	color:#092449;
+	font-size:13px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+#threePaymentsSchedule .amount {
+	color:#db1801;
+	font-size:22px;
+	text-align:right;
+}
+#threePaymentsSchedule .note {
+	color:#576a80;
+	display:block;
+	font-size:11px;
+}
+#threePaymentsSchedule  .payment1 {
+	background-color: #fff7b8;
+	padding-top:30px;
+}
+#threePaymentsSchedule  .payment2 {
+	background-color:#fff9cc;
+}
+#threePaymentsSchedule .last {
+	border-bottom-color:transparent;
+}

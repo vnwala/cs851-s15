@@ -1,0 +1,26 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	トップページ　ID:index
+-------------------------------------------------------------------- */
+#index {
+}
+#index div.contents_ {
+	width: 700px;
+}
+#index div.leftmenuframe_{
+	/* display: none; */
+	display: block;
+	float: left;
+}
+#index div.rightmenuframe_{
+/* 
+	display: block;
+	float: right;
+ */
+	display: none;
+}
+#index div.contents_{
+	/* float: left; */
+	float: right;
+}

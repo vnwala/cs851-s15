@@ -1,0 +1,46 @@
+#popOverbrowse {
+        padding: 0px;
+	margin: 0px;
+        float:right;
+        position:absolute;
+        visibility: hidden;
+        lineHeight: 0pt;
+	height: 0px;
+        width: 0px;
+        border:#808080 2px groove;
+	background:#004e2c url(../images/popover_back.gif) repeat-x;
+        }
+#popOvergames {
+	padding: 0px;
+        margin: 0px;
+        float:right;
+        position:absolute;
+        visibility: hidden;
+        lineHeight: 0pt;
+        height: 0px;
+        width: 0px;
+        border:#808080 2px groove;
+        background:#004e2c url(../images/popover_back.gif) repeat-x;
+        }
+.popOverTable {
+        padding: 2px;
+        margin: 0px;
+        width: auto;
+        font-family: arial,helvetica,verdana,sans-serif;
+        font-size: 11px;
+        color:#ffffff;
+        lineHeight: 0pt;
+        }
+td.popOverTable {
+        border-top:#bfbfbf 1px dotted;
+        }
+A.divLink:link, A.divLink:visited {
+        color:#ffffff;
+	padding: 1px;
+        }
+A.divLink:active, A.divLink:hover {
+        color:#000000;
+	background: #ffffff;	
+	text-decoration: none;
+	padding: 1px;
+	}

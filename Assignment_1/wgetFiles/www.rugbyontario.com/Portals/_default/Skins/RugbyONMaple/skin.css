@@ -1,0 +1,1061 @@
+/* 
+================================
+<!--**********************************************************************************-->
+<!-- WEB Design Freelancer - Tiago Tavares(skinning, design, DNN, eFsusion, Drupal, Word Press Flashs)  -->
+<!-- http://tiagot.carbonmade.com/                                                    -->
+<!-- e-mail: linktiago@gmail.com                                                      -->
+<!--**********************************************************************************-->
+================================
+*/
+body
+{
+	/* set default font size for skin (Titles etc. will then use a percentage to specify their sizes) */
+    margin: 0;
+	padding: 0;
+	line-height: 1.1;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/grey_bk.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	font-size: 12px;
+	background-attachment: fixed;
+}
+
+#b002 {
+	background-color: #FFFFFF;
+	background-image: none;
+}
+
+*{
+margin:0;
+padding:0;
+}
+
+html,body{
+margin:0;
+padding:0;
+}
+
+.Normal ul {
+	list-style-type: square;
+	list-style-image: none;
+	list-style-position: inside;
+}
+
+
+.Normal ol {
+	list-style-image: none;
+	list-style-position: inside;
+	list-style-type: decimal;
+}
+
+.Normal li {
+	display: list-item;
+	list-style-image: none;
+}
+
+a img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+p {
+	padding-bottom: 12px;
+}
+
+a.logo_link:link {
+	float: left;
+	height: 69px;
+	width: 235px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+a.logo_link {
+	float: left;
+	height: 69px;
+	width: 235px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+
+
+.Normal a.bt:link {
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/bt.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 5px;
+	height: 28px;
+	width: 168px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	display: block;
+	line-height: 28px;
+}
+
+.Normal a.bt:hover {
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/bt.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 5px;
+	height: 28px;
+	width: 168px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	display: block;
+	line-height: 28px;
+}
+
+.Normal a.bt:visited {
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/bt.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 5px;
+	height: 28px;
+	width: 168px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	display: block;
+	line-height: 28px;
+}
+
+/* Not Dynamic Areas */
+
+
+/* Main Layout */
+div.container{
+	text-align:left;
+	width:980px;
+	padding: 0px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+div.container_b{
+	text-align:left;
+	width:960px;
+	padding: 0px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+
+div.container_c{
+	text-align:left;
+	width: 100%;
+	width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 980)? "980px" : "100%"); 
+	min-width:980px;
+	padding: 0px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-attachment: fixed;
+	background-image: url(bk.jpg);
+	background-repeat: repeat-x;
+}
+
+div.container_d{
+	text-align:left;
+	width:980px;
+	padding: 0px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-color: #FFFFFF;
+}
+
+
+div.separator_b {
+	clear: both;
+	padding: 0px;
+	height: 12px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+div.separator_c {
+	clear: both;
+	padding: 0px;
+	height: 6px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+div.separator_d {
+	clear: both;
+	padding: 0px;
+	height: 18px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-image: url(separator.jpg);
+	background-repeat: repeat-x;
+}
+
+/**/
+div#top_area {
+	float: left;
+	width: 980px;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/top.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+div#top_area_b {
+	float: left;
+	width: 980px;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/internal_top_bk.jpg);
+	background-repeat: no-repeat;
+	height: 171px;
+}
+
+div#top_area_01 {
+	float: left;
+	width: 980px;
+	height:108px;
+}
+
+div#top_area_02 {
+	float: left;
+	width: 960px;
+	height: 30px;
+	line-height: 30px;
+}
+
+div#top_area_03 {
+	float: left;
+	width: 960px;
+}
+
+div#top_area_04 {
+	float: left;
+	width: 980px;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/top_02.jpg);
+	background-repeat: no-repeat;
+	height: 276px;
+	padding-top: 14px;
+}
+
+div#lef_area {
+	width: 106px;
+	float: left;
+}
+
+div#rig_area {
+	width: 765px;
+	float: right;
+}
+/*-------------------*/
+
+div#content{
+	width: 875px;
+}
+
+/**/
+div#menu_area{
+	height: 90px;
+	float: left;
+	width: 100%;
+	width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 980)? "980px" : "100%"); 
+	min-width:980px;
+	background-image: url(menu_bar.jpg);
+	background-repeat: repeat-x;
+}
+
+div#menu {
+	float: left;
+	height: 60px;
+	width: 960px;
+}
+
+
+div#log_area {
+	float: right;
+	width: 186px;
+	margin-top: 8px;
+	margin-right: 10px;
+}
+
+div.bread {
+	width: 700px;
+	float: left;
+} 
+
+div.ser_area {
+	background-image: url(ser_bar.jpg);
+	background-repeat: no-repeat;
+	height: 23px;
+	width: 215px;
+	float: right;
+	margin-top: 3px;
+	line-height: 23px;
+} 
+
+input#dnn_dnnSEARCH_txtSearch {
+	background-color: transparent;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	height: 15px;
+	width: 145px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	color: #FFFFFF;
+}
+
+/*-------------*/
+
+
+div#footer{
+	height: 40px;
+	float: left;
+	width: 100%;
+	width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 980)? "980px" : "100%"); 
+	min-width:980px;
+	background-image: url(footer_bk.jpg);
+	background-repeat: repeat-x;
+}
+
+div#footer A.SkinItem:link, div#footer A.SkinItem:visited, div#footer A.SkinItem:active
+{
+	text-decoration: none;
+	color: #fff;
+	font-size: 11px;
+}
+div#footer A.SkinItem:hover
+{
+    text-decoration: underline;
+    color: #ccc;
+	font-size: 11px;
+}
+
+div#footer .SkinItem
+{
+	text-decoration: none;
+	color: #fff;
+	font-size: 11px;
+}
+
+/* -----------------
+DAQUI PARA BAIXO É CÓDIGO PARA MÓDULOS, DNN ECT
+--------------------
+ */
+
+/* Pane Styles */
+
+div.logoPane{
+	width: 205px;
+	float: left;
+	text-align: center;
+}
+
+div.Top_Pane{
+	width: 728px;
+	float: right;
+}
+
+
+div.Top_Links_Pane {
+	height: 24px;
+	width: 186px;
+	float: left;
+} 
+
+div.TopBannerPane {
+	width: 960px;
+	float: left;
+}
+
+div.video_player {
+	width: 640px;
+	float: left;
+}
+
+/*-------------*/
+
+div.left_pane {
+	float: left;
+	width: 630px;
+}
+
+div.RightBucket_main {
+	float: right;
+	width: 300px;
+}
+
+div.RightBucket {
+	float: right;
+	width: 300px;
+}
+
+
+/**/
+div.LeftBucket {
+	float: left;
+	width: 292px;
+}
+
+div.LeftBucket_b {
+	float: left;
+	width: 292px;
+	margin-left: 0px;
+}
+
+div.MiddleBucket {
+	float: right;
+	width: 292px;
+}
+
+div.MiddleBucket_b {
+	float: right;
+	width: 292px;
+	margin-right: 0px;
+}
+
+div.content_area{
+	float: left;
+	width: 980px;
+	background-image: url(http://www.rugbyontario.com/Portals/_default/Skins/RugbyONMaple/content_area.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+div.TopBucket {
+	float: left;
+	width: 628px;
+}
+
+div.TopBucket_b {
+	float: left;
+	width: 960px;
+}
+
+div.TopBucket_c {
+	float: left;
+	width: 628px;
+}
+
+div.TopBucket_d {
+	float: left;
+	width: 628px;
+}
+
+div.BannerPaneBottom {
+	float: left;
+	width: 960px;
+}
+
+div.BannerPaneBottom_b {
+	float: left;
+	width: 960px;
+}
+
+/*-----------------------*/
+
+div.contentpane {
+    float: right;
+	width: 300px;
+}
+
+
+/* -----------------
+Set default font for modules
+--------------------
+ */
+
+
+.Normal, .NormalDisabled, .NormalBold, .NormalRed, .NormalTextBox
+{
+	color: #4B4B4B;
+    font-family: arial,verdana,helvetica,sans-serif;
+    font-size: 12px;
+}
+
+.Normal p {
+	font-size: 12px;
+	font-family: arial,verdana,helvetica,sans-serif;
+}
+
+BannerPaneBottom_b span {
+	font-size: 12px;
+}
+
+/* ================================
+style for module titles
+================================ */
+.Head
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 160%;
+	font-weight: bold;
+	color: #000; /* letter-spacing: 2; */
+}
+/* style of item titles on edit and admin pages */
+.SubHead    {
+    font-size:  100%;
+}
+/* module title style used instead of Head for compact rendering by QuickLinks and Signin modules */
+.SubSubHead {
+    font-size:  100%; 
+}
+
+/* ===============
+button style for standard HTML buttons 
+================== */
+.StandardButton
+{
+	font-size: 90%;
+}
+/* =======================
+ HTML Tag Styles 
+=========================== */
+H1, H2, H3, H4, H5, DT, H6
+{
+	font-family: arial,verdana,helvetica,sans-serif;
+}
+/*---=== HEADING STYLES ===---*/
+h1 {
+    color: #3c4770;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h2 {
+    color: #3c4770;
+    font-size: 16px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+h4 {
+    color: #3c4770;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+h5 {
+    color: #3c4770;
+    font-size: 13px;
+    font-weight: bold;
+}
+h6 {
+}
+
+/* ------------------------
+Links format added for opera browser  ----- ESTILO DE LINKS INSEIDOS DENTRO DO MÓDULO  "TEXT/HTML"
+----------- */
+
+.Normal a:link {text-decoration: none; color: #a63341;}
+.Normal a:visited {text-decoration: none; color: #72232D;}
+.Normal a:hover {text-decoration: underline; color: #a63341;}
+.Normal a:active {text-decoration: none; color: #a63341;}
+
+
+/* This is the Date eg. any items that are not links   ------ ESTILO DOS LINKS E NÃO LINKS DE MÓDULOS RÁPIDOS COMO PRIVACY,USER, LOGIN ...ETC  */  
+.SkinItem
+{
+	text-decoration: none;
+	color: #666;
+}
+/* This sets the style for all skin items that are links */
+A.SkinItem:link, A.SkinItem:visited, A.SkinItem:active
+{
+    text-decoration: none;
+    color: #666;
+}
+A.SkinItem:hover
+{
+    text-decoration: underline;
+    color: #666;
+}
+
+A.SkinItem_b:link, A.SkinItem_b:visited, A.SkinItem_b:active
+{
+    text-decoration: none;
+    color: #a63341;
+}
+A.SkinItem_b:hover
+{
+    text-decoration: underline;
+    color: #a63341;
+}
+
+
+/** RIGHT SIDE NAVIGATION **/
+
+.RadPanelBar .rpRootGroup {
+	border:0px solid transparent;
+	width:266px;
+}
+.RadPanelBar .rpText {
+	/*color:#CC742C;
+text-decoration:none;
+font-size:12px;*/
+background:url(images/bulet.gif) no-repeat scroll 5px 50% transparent;
+	color:#333333;
+	display:block;
+	font-size:1.167em;
+	font-weight:bold;
+	padding:0 0 0 23px !important;
+	text-decoration:none;
+	width:217px;
+}
+.RadPanelBar .rpOut {
+	border:0px solid transparent;
+}
+/*.RadPanelBar .rpItem {
+	background:url(images/border.gif) repeat-x scroll 0 100% transparent;
+	padding:5px 0;
+	list-style:none;
+}*/
+.RadPanelBar .rpItem.rpLast {
+	border-bottom:0px dashed transparent;
+	display:block;
+	margin-bottom:8px;
+	margin-top:6px;
+	padding-bottom:6px;
+}
+.RadPanelBar .rpLink, .RadPanelBar .rpOut, .RadPanelBar .rpText {
+	display:block;
+}
+.RadPanelBar .rpLink {
+	border:0px solid transparent;
+	cursor:pointer;
+	overflow:hidden;
+	text-decoration:none;
+	margin-top:6px;
+	padding-bottom:6px;
+	font-weight:bold;
+}
+.RadPanelBar .rpSlide {
+	margin-top:-12px;
+}
+.RadPanelBar .rpSlide .rpLink {
+	border:0px solid transparent;
+	cursor:pointer;
+	overflow:hidden;
+	text-decoration:none;
+	margin-top:6px;
+	padding-bottom:6px;
+	font-weight:normal;
+	color:#666;
+}
+.RadPanelBar .rpSlide .rpItem {
+	border-bottom:0px solid transparent;
+	display:block;
+	margin-top:2px;
+	padding-bottom:0px;
+	margin-bottom:0px;
+	height:24px;
+}
+.RadPanelBar .rpSlide .rpItem.rpLast {
+	padding-bottom:14px;
+	height:24px;
+}
+
+.RadPanelBar ul li {
+    list-style-type: none;
+}
+
+
+div#rightnav
+{
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+
+
+/** white expand container definition **/
+
+.whitexpand {
+    margin-bottom: 11px;
+}
+.whitelt {
+    background: url("images/white-left.gif") no-repeat scroll left center transparent;
+    height: 7px;
+}
+.whitert {
+    background: url("images/white-right.gif") no-repeat scroll right center transparent;
+    height: 7px;
+    padding: 0 10px;
+}
+.whitebt {
+    background: url("images/white-left-bottom.gif") no-repeat scroll left center transparent;
+    height: 7px;
+}
+.whitebrt {
+    background: url("images/white-right-bottom.gif") no-repeat scroll right center transparent;
+    height: 7px;
+    padding: 0 10px;
+}
+.white_block {
+    background: url("images/white-bg.gif") repeat scroll left center transparent;
+    border-right: 1px solid #E5E5E5;
+    padding: 10px;
+}
+.white_block .Normal h3 {
+    color: #CC0000;
+    font-size: 1.083em;
+    font-weight: bold;
+    padding: 0 0 5px 85px;
+}
+
+/** from the old skin **/
+.hp_rightbucket {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.follow h4, .skate h4 {
+    color: #999999;
+    font-size: 0.917em;
+    font-weight: normal;
+    position: relative;
+}
+.follow {
+    float: left;
+    width: 105px;
+}
+.follow ul {
+    float: left;
+    height: 35px;
+    width: 140px;
+}
+.follow ul li {
+    float: left;
+    height: 35px;
+    list-style: none outside none;
+    padding: 0 5px 0 0;
+}
+.follow ul li a {
+    background: url("images/ico_share.gif") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 35px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 30px;
+}
+.follow ul li a.twitter {
+    background-position: 0 0;
+}
+.follow ul li a.facebook {
+    background-position: -30px 0;
+}
+.follow ul li a.rss {
+    background-position: -60px 0;
+}
+.follow ul li a.you_tube {
+    background-position: -90px 0;
+}
+
+.share {
+    float: right;
+    overflow: hidden;
+    padding: 0 0 10px;
+    width: 300px;
+}
+
+.bcrumb {
+	height:30px;
+	float:left;
+	width:600px;
+}
+
+
+#nav{
+width: 100%;
+}
+
+#nav img{
+	margin: 0px;
+	padding: 0px;
+	height: 0px;
+	width: 0px;
+}
+
+#navHContainer {
+    position:absolute;
+    left:400px;
+    top:110px;
+    display:block;
+    width:600px;
+}
+
+#nav ul {
+	margin:0px;
+	list-style:none;
+	float:left;
+	width:auto;
+	padding: 0px;
+}
+
+#nav li {
+  position: relative;
+  float:left;
+  line-height : 1.3em;
+  list-style: none;
+  padding: 0px;
+  margin:0px;
+}
+
+#nav li ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	width:14em;
+	border:1px solid #666;
+}
+
+
+#nav a {
+	font-size:13px;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-weight: normal;
+	color:#FFF;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 12px;
+	padding-left: 12px;
+	float: left;
+	margin-right: 1px;
+	line-height: 60px;
+	height: 60px;
+}
+
+#nav li li a {
+	padding: 6px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	margin: 0px;
+	float: none;
+	width: auto;
+	height: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	text-align:left;
+	line-height: normal;
+	background-color: #323f69;
+	margin-right: -2px !important;
+}
+
+#nav li li a:hover {
+	padding: 6px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #fff;
+	margin: 0px;
+	float: none;
+	width: auto;
+	height: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	text-align:left;
+	line-height: normal;
+	background-color: #9a2f3e;
+	background-image: none;
+	margin-right: -2px !important;
+}
+
+#nav li li {
+	padding: 0px;
+	width:14em;
+}
+
+#nav li a:hover {
+	font-size:13px;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-weight: normal;
+	color:#FFF;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 12px;
+	padding-left: 12px;
+	float: left;
+	margin-right: 1px;
+	line-height: 60px;
+	height: 60px;
+	background-image: url(menu-hover.jpg);
+	background-repeat: repeat-x;
+}
+
+
+#nav li a.SelectedTab {
+    font-size:13px;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-weight: normal;
+	color:#FFF;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 12px;
+	padding-left: 12px;
+	float: left;
+	margin-right: 1px;
+	line-height: 60px;
+	height: 60px;
+	background-image: url(menu-hover.jpg);
+	background-repeat: repeat-x;
+}
+
+#nav li.SelectedTab a {
+    font-size:13px;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-weight: normal;
+	color:#FFF;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 12px;
+	padding-left: 12px;
+	float: left;
+	margin-right: 1px;
+	line-height: 60px;
+	height: 60px;
+	background-image: url(menu-hover.jpg);
+	background-repeat: repeat-x;
+}
+
+
+/* REGRAS PARA SELECTED SUB MENU */
+
+#nav li.SelectedTab ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	width:14em;
+	border:1px solid #666;
+}
+
+#nav li.SelectedTab li { /* second-level lists */
+}
+
+#nav li.SelectedTab li a {
+    padding: 6px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	margin: 0px;
+	float: none;
+	width: auto;
+	height: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	text-align:left;
+	line-height: normal;
+	background-color: #323f69;
+	margin-right: -2px !important;
+}
+
+#nav li.SelectedTab li a:hover {
+    padding: 6px;
+	font-size: 10px;
+	font-weight: normal;
+	color: #fff;
+	margin: 0px;
+	float: none;
+	width: auto;
+	height: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666;
+	text-align:left;
+	line-height: normal;
+	background-color: #9a2f3e;
+	background-image: none;
+	margin-right: -2px !important;
+}
+
+#nav .DisabledTab {
+    color:#ccc;
+}
+/* no need to change these hover classes 
+unless you need more than 4 levels */
+#nav li:hover ul ul,
+#nav li:hover ul ul ul,
+#nav li:hover ul ul ul ul,
+#nav li.iehover ul ul,
+#nav li.iehover ul ul ul,
+#nav li.iehover ul ul ul ul{
+  left: -999em;
+}
+
+#nav li:hover ul, 
+#nav li.iehover ul {
+	top: 60px;
+	left:0;
+}
+#nav li li:hover ul,
+#nav li li li:hover ul,
+#nav li li.iehover ul,  
+#nav li li li.iehover ul {
+	top: 0;
+	left:14.0em;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: none;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 0px;
+right: 0px;
+display: none;
+}

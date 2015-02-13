@@ -1,0 +1,376 @@
+
+              
+      
+#overlay {
+  display: none;
+  width:80%;  
+  /* a border, so the player can fill the flexible-sized overlay */
+  border: 10px solid #c3c3c3;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 0px;
+  background-color: #c3c3c3;
+  -webkit-box-shadow: 0 0 30px #000;
+  -moz-box-shadow: 0 0 30px #000;
+  box-shadow: 0 0 30px #000;
+}
+#overlay .close {
+  display: block;
+  position: absolute;
+  top: -32px;
+  right: -32px; 
+  width: 28px;
+  height: 28px;
+  /* flowplayer close button in opposite color */
+  background-image: url(../../html/images/black.png);
+  background-size: 37px 300px;
+  background-position: 8px -171px;
+  background-color: #eee;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  -webkit-box-shadow: 0 0 10px #777;
+  -moz-box-shadow: 0 0 10px #777;
+  box-shadow: 0 0 10px #777;
+  cursor: pointer;
+}
+@media(-webkit-min-device-pixel-ratio: 2) {
+  #overlay .close {
+    background-image: url(../../html/images/black@x2.png);
+  }
+}
+ 
+#overlay-player {
+  background-color: white;
+}
+ 
+#overlay-triggers {
+  color: #777;
+  list-style: none;
+  font-size: 18px;
+  width: 7em;
+}
+#overlay-triggers li {
+  cursor: pointer;
+  background: url(../../html/images/fp5arrow.png) 0 2px no-repeat;
+  padding-left: 24px;
+  margin: 0.5ex 0;
+}
+#overlay-triggers li:hover {
+  color: #111;
+}
+
+
+    
+
+.ThumbImageHD
+{
+    width:324px;
+    height:182px;   
+    overflow:hidden;        
+}
+.PinUpSpaccer
+{  
+    width:16px;
+    height:272px;    
+    float:left;     
+    
+}
+
+.PinUpSpaccerSmall
+{  
+    width:6px;
+    height:102px;    
+    float:left;  
+}
+
+
+
+
+
+.MainMenuButton 
+{
+   cursor:pointer;
+   border:none;
+   margin-left:0px;
+   margin-right:0px;
+   float:left;   
+}
+.MainMenuActive
+{
+   cursor:pointer;
+   border:none;
+   margin-left:0px;
+   margin-right:0px;
+   float:left;   
+}
+
+#MainMenu
+{
+    margin:0px auto;    
+}
+
+#slider {
+    overflow: auto;
+	position: relative;	
+	-ms-touch-action: none;
+}
+
+
+.SliderMobile 
+{
+    max-width:1400px; 
+    min-width:984px;
+    margin:0px auto;
+    height:auto;
+}
+.SliderMobile .SliderImage {max-width:100%;min-width:984px;height:auto;border:none;}   
+
+#slider .SliderImage {max-width:100%;/*min-width:984px;*/min-width:284px;height:400px;border:none;}   
+
+#slider .PlayImage
+{
+    position:absolute; 
+    top:35%;
+    z-index: 1;
+    width:107px;
+    height:107px;
+    left:46%;
+    filter: alpha(opacity=0);	
+	opacity: 0;
+	border:none;
+}
+
+
+#slider:hover .PlayImage {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#slider .PlayImageMobile
+{
+    position:absolute; 
+    top:35%;
+    z-index: 1;
+    width:107px;
+    height:107px;
+    left:46%;
+	border:none;
+}
+
+
+.SlidePlayButton
+{
+    /*Temp*/
+}
+
+.as-prev-arrow, .as-next-arrow {
+	background: url(../../html/images/sipky.png) no-repeat;
+	filter: alpha(opacity=0);
+	height: 48px;
+	opacity: 0;
+	top:42%;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 100%;	
+	white-space: nowrap;
+	width: 27px;
+	z-index: 1;
+}
+
+.as-prev-arrow {
+	left: 20px;
+}
+
+.as-next-arrow {
+	background-position: -27px 0;
+	right: 20px;
+}
+
+
+#slider:hover .as-arrows a {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.as-nav {
+	margin:0px auto;
+	z-index: 1;
+	width:110px;
+	text-align:center;
+}
+
+.as-nav a {
+	background: url(../../html/images/puntik-na.png) no-repeat;
+	height: 15px;
+    display: inline-block;
+	margin: 0 3px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	width: 15px;
+}
+
+a.as-active, .as-nav a:hover {
+    background: url(../../html/images/puntik-a.png) no-repeat;
+}
+ 
+
+
+
+#slider2 {
+	-ms-touch-action: none;
+	overflow: auto;
+	position: relative;	
+}
+
+ 
+
+#slider2 .SliderImage {max-width:100%;/*min-width:984px;*/min-width:284px;height:400px;border:none;}    
+
+#slider2 .PlayImage
+{
+    position:absolute; 
+    top:35%;
+    z-index: 1;
+    width:107px;
+    height:107px;
+    left:46%;
+    filter: alpha(opacity=0);	
+	opacity: 0;
+	border:none;
+}
+
+
+#slider2:hover .PlayImage {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#slider2:hover .as-arrows a {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+
+
+#slider3 {
+	-ms-touch-action: none;
+	overflow: auto;
+	position: relative;	
+}
+
+#slider3 .SliderImage {max-width:100%;/*min-width:984px;*/min-width:284px;height:400px;border:none;}      
+
+#slider3 .PlayImage
+{
+    position:absolute; 
+    top:35%;
+    z-index: 1;
+    width:107px;
+    height:107px;
+    left:46%;
+    filter: alpha(opacity=0);	
+	opacity: 0;
+	border:none;
+}
+
+#slider3:hover .PlayImage {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#slider3:hover .as-arrows a {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+
+
+
+
+
+
+      
+ .simple_overlay {
+   display: none;
+  width: 520px;  
+  height:290px;
+  /* a border, so the player can fill the flexible-sized overlay */
+  background-image:url(http://tour.belamionline.com/Images/Login/LOGIN-podklad.png);
+  background-repeat:none;
+  border: 20px solid #ffffff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 40px #000;
+  -moz-box-shadow: 0 0 40px #000;
+  box-shadow: 0 0 40px #000;
+}
+ 
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+   display: block;
+  position: absolute;
+  top: -42px;
+  right: -42px; 
+  width: 28px;
+  height: 28px;
+  /* flowplayer close button in opposite color */
+  background-image: url(../../html/images/black.png);
+  background-size: 37px 300px;
+  background-position: 8px -171px;
+  background-color: #eee;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  -webkit-box-shadow: 0 0 10px #777;
+  -moz-box-shadow: 0 0 10px #777;
+  box-shadow: 0 0 10px #777;
+  cursor: pointer;
+}
+
+
+
+.flowplayer .endscreen {
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  transition: opacity .5s;
+  width:  100%; 
+  height: 100%;     
+}
+
+.flowplayer .endscreen img 
+{
+    width:100%;    
+    border:0px;
+}
+
+.flowplayer.is-finished .endscreen {
+  z-index: 2;
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+
+.PlayImageSmallVersion
+{
+    width:484px;
+    height:247px;
+    filter: alpha(opacity=0);	
+	opacity: 0;
+	border:none;
+	margin-left:0px; 
+	margin-top:0px;
+}
+
+
+.PlayImageSmallVersion:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}

@@ -1,0 +1,692 @@
+@charset "utf-8";
+
+/* -----------------------------------------------------------
+CSS Information
+
+ File name:      default.css
+ Author:         Your Name (admin)
+ Style Info:     デフォルトのスタイルのリセット及び基本設定
+----------------------------------------------------------- */
+
+/*----------------------------------------------------
+	Reset
+----------------------------------------------------*/
+
+html {
+	overflow-y: scroll;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,th {
+	text-align: left;
+}
+
+q:before,q:after {
+	content: '';
+}
+
+object,
+embed {
+	vertical-align: top;
+}
+
+hr,legend {
+	display: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+img,abbr,acronym,fieldset {
+	border: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+table {
+	font-size:10pt;
+}
+
+/*----------------------------------------------------
+	Base
+----------------------------------------------------*/
+
+body {
+	color: #333;
+	font-size: 10pt;
+	line-height: 160%;
+	text-align: center;
+
+}
+
+
+* + html body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+*{
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+
+
+
+/*----------------------------------------------------
+	Link
+----------------------------------------------------*/
+
+a:link,a:visited{
+	color:#3366cc;
+	text-decoration:underline;
+}
+a:hover,a:active{
+	color:#CC3300;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------
+	汎用class
+--------------------------------------------------------------------------------------------------------*/
+
+#contents {
+	width:950px;
+	height:auto;
+	margin:5px auto 20px;
+}
+
+#sub_contents {
+	width:950px;
+	height:auto;
+	margin:30px auto 20px;	
+}
+
+/*clearFix*/
+#contents:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------#header---------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+#header_box {
+	width:auto;
+	height:156px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/header_bg1.jpg) repeat-x;
+}
+#header {
+	width:950px;
+	height:156px;
+	margin:0 auto;
+	text-align:left;
+	position:relative;
+}
+
+h1 {
+	height:16px;
+	line-height:26px;
+	font-weight:normal;
+	font-size:9pt;
+	color:#FFF;
+}
+
+
+#logo img {
+	width:601px;
+	height:56px;
+	position:absolute;
+	top: 39px;
+	left:0px;
+}
+#catch {
+	width:188px;
+	height:15px;
+	position:absolute;
+	top: 61px;
+	left:328px;	
+}
+
+#tell {
+	width:266px;
+	height:55px;
+	position:absolute;
+	top: 31px;
+	left:725px;			
+}
+.tell {
+	width:200px;
+	height:55px;
+	position:absolute;
+	top: 30px;
+	left:300px;			
+}
+.tell1 {
+	width:200px;
+	height:55px;
+	position:absolute;
+	top: 30px;
+	left:465px;			
+}
+
+.tell2 {
+	width:200px;
+	height:55px;
+	position:absolute;
+	top: 30px;
+	left:630px;			
+}
+
+.tell3 {
+	width:200px;
+	height:55px;
+	position:absolute;
+	top: 30px;
+	left:795px;			
+}
+.tell4 {
+	width:200px;
+	height:55px;
+	position:absolute;
+	top: 37px;
+	right:63px;			
+}
+
+#gnavi_box {
+	width:958px;
+	height:57px;
+	position:absolute;
+	top:93px;
+	left:-2px;	
+}
+
+
+ul.gnavi li {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:8px;
+}
+
+.g_c_bg {
+	width: 142px;
+	position:absolute;
+	top:59px;
+	left:408px;
+	z-index:10;	
+}
+
+.g_c_bg li{
+	width: 142px;
+	height: 40px;
+	margin:0!important;
+}
+
+.g_c_bg li a{
+	display:block;
+	width: 142px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	line-height:42px;
+	text-align:center;
+	text-decoration:none;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+
+.g_c_bg li a:hover,.g_c_bg li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+.g_c_bg1 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:595px;
+	z-index:10;	
+}
+
+.g_c_bg1 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+}
+
+.g_c_bg1 li a{
+	display:block;
+	width: 117px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	line-height:42px;
+	text-align:center;
+	text-decoration:none;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+
+.g_c_bg1 li a:hover,.g_c_bg1 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+.g_c_bg2 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:122px;
+	z-index:10;	
+}
+
+.g_c_bg2 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+}
+
+.g_c_bg2 li a{
+	display:block;
+	width: 117px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	line-height:42px;
+	text-align:center;
+	text-decoration:none;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+.g_c_bg3 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:358px;
+	z-index:10;	
+}
+
+.g_c_bg3 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+	line-height:15px;
+
+}
+.g_c_bg3 li .g_c_bg3_1{
+	padding-top:10px;
+
+}
+
+.g_c_bg3 li a{
+	display:block;
+	width: 117px;
+	height: 45px;
+	padding:5px 0;
+	font-size:11pt;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+.g_c_bg3 li .g_c_bg3_1{
+	padding-top:10px;
+
+}
+.g_c_bg4 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:475px;
+	z-index:10;	
+}
+
+.g_c_bg4 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+
+}
+
+
+.g_c_bg4 li a{
+	display:block;
+	width: 117px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	line-height:42px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+.g_c_bg5 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:713px;
+	z-index:10;	
+}
+
+.g_c_bg5 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+
+}
+
+
+.g_c_bg5 li a{
+	display:block;
+	width: 117px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	line-height:42px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+.g_c_bg6 {
+	width: 117px;
+	position:absolute;
+	top:59px;
+	left:240px;
+	z-index:10;	
+}
+
+.g_c_bg6 li{
+	width: 117px;
+	height: 40px;
+	margin:0!important;
+
+}
+
+
+.g_c_bg6 li a{
+	display:block;
+	width: 117px;
+	height: 42px;
+	font-size:11pt;
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	line-height:42px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c.png) no-repeat;
+}
+.g_c_bg6 li a:hover,.g_c_bg6 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+
+.g_c_bg5 li a:hover,.g_c_bg5 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+.g_c_bg4 li a:hover,.g_c_bg4 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+.g_c_bg3 li a:hover,.g_c_bg3 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+
+.g_c_bg2 li a:hover,.g_c_bg1 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+
+.g_c_bg1 li a:hover,.g_c_bg1 li a:active{
+	background:url(http://www.iphone-d.jp/user_data/pc/images/header/gnavi/gnavi_c_on.png) no-repeat;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------#main_contents-------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+#main_contents {
+	width:697px;
+	height:auto;
+	float:right;
+	text-align:left;
+	position:relative;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------#left_box-------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+#order_button_l_1 img, #order_button_l_2 img {
+    display: block;
+    margin: 6px auto;
+    width: 225px;
+}
+#order_button_l_2, #order_button_l_1 {
+    margin: 10px 0;
+    width: 238px;
+}
+#left_box {
+	width:227px;
+	height:auto;
+	float:left;
+	font-size:9pt;
+	text-align:left;
+}
+
+#order_button_l_1 {
+	margin-bottom:10px;
+}
+
+#order_button_l_2 {
+	margin-bottom:10px;
+}
+#order_button_l_3 {
+	margin-bottom:20px;
+}
+#calendarr_box {
+	width:228px;
+	height:269px;
+	margin-bottom:26px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/left_box/calendar_bg.gif) no-repeat;
+	position:relative;	
+}
+
+#calendarr_text {
+	width:228px;
+	font-size:7pt;
+	line-height:150%;
+	position:absolute;
+	top:238px;
+	left:10px;
+}
+
+#map_left {
+	width:227px;
+	height:380px;
+	margin-top:26px;
+	margin-bottom:20px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/left_box/map_bg.gif) no-repeat;
+	position:relative;		
+}
+
+#map_left_text {
+	width:228px;
+	font-size:8pt;
+	line-height:145%;
+	position:absolute;
+	top:45px;
+	left:10px;
+}
+
+#map_left_text_b{
+	font-weight:bold;	
+}
+
+#map_left_google{ 
+	width:206px;
+	height:220px;
+	position:absolute;
+	top:130px;
+	left:10px;
+}
+
+#hover a:hover img {
+
+opacity:0.6;
+filter: alpha(opacity=60);
+-ms-filter: "alpha( opacity=60 )";
+background: #fff;
+
+
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------#footer---------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+#footer_box {
+	width:auto;
+	height:134px;
+	background:url(http://www.iphone-d.jp/user_data/pc/images/footer/footer_bg.jpg) repeat-x;	
+	clear:both;
+}
+
+#footer {
+	width:950px;
+	height:134px;
+	margin:0 auto;
+	position:relative;
+	text-align:left;
+}
+
+#footer_logo{
+	width:303px;
+	height:45px;
+	position:absolute;
+	top:25px;
+	left:0px;
+}
+
+#page_top {
+	width:118px;
+	height:27px;
+	position:absolute;
+	top:-8px;
+	right:0;	
+}
+
+#footer_zip {
+	width:310px;
+	font-size:8pt;
+	line-height:160%;
+	position:absolute;
+	top:86px;
+	left:15px;
+}
+
+#footer_tell {
+	width:267px;
+	height:75px;
+	position:absolute;
+	top:25px;
+	left:358px;
+}
+
+
+#copy{
+	text-align:left;
+	color:#333333;
+	font-size:8pt;
+	position:absolute;
+	bottom:5px;
+	left:325px;
+}
+
+#footer_link {
+	width:250px;
+	height:auto;
+	position:absolute;
+	top:25px;
+	right:0;	
+}
+
+ul.link {
+	font-size:8pt;
+}
+
+ul.link li{
+	display:inline;
+	margin-right:10px;	
+}
+
+.link_l {
+	border-right:1px solid #999;
+	padding-right:15px;	
+}
+
+#footer a:link,#footer a:visited{
+	color:#333333;
+	text-decoration:none;
+}
+#footer a:hover,#footer a:active{
+	color:#999;
+}
+
+#check_icon {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/icon_warning.jpg) no-repeat;
+	padding-left: 65px;
+	margin-left:15px;
+	padding-bottom:10px;
+	
+    
+}
+
+#circle_icon {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/icon_circle.jpg) no-repeat;
+	padding-left: 65px;
+	margin-left:15px;
+	padding-bottom:10px;
+	
+    
+}
+
+#yen_icon {
+	background:url(http://www.iphone-d.jp/user_data/pc/images/icon_yen.jpg) no-repeat;
+	padding-left: 65px;
+	margin-left:15px;
+	padding-bottom:10px;
+}
+
+
+
+
+
+.h4_bar{
+	font-size:24px;
+    background: url(http://www.iphone-d.jp/user_data/pc/images/repair/black-line.gif) repeat-x scroll 0 50% rgba(0, 0, 0, 0);
+    text-align: center;
+margin: 10px 0 10px;	
+}
+.h4_bar span{
+background: url(http://www.iphone-d.jp/user_data/pc/images/repair/body-bg.gif) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 0 20px;
+}

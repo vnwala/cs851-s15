@@ -1,0 +1,27 @@
+jQuery(document).ready(function() {
+
+	// Mega Menu Scrolling Effects
+	top_menu_scroll();
+	jQuery(window).scroll(top_menu_scroll);
+	
+	// tabs
+	jQuery('.tabs .tab').each(function(index){
+		jQuery(this).mouseover(function(){
+			jQuery('.tabs .tab').removeClass('hover');
+			jQuery(this).addClass('hover');
+			jQuery('.cons .con').hide();
+			jQuery('.cons .con:eq('+index+')').show();
+		});
+	});
+});
+
+function top_menu_scroll() {
+	var get_scroll_top = jQuery(document).scrollTop();
+	if (get_scroll_top >= 65) {
+		jQuery('#header').addClass('scrolling');
+		jQuery('#main').addClass('scrolling');
+	} else if (get_scroll_top == 0) {
+		jQuery('#header').removeClass('scrolling');
+		jQuery('#main').removeClass('scrolling');
+	}
+}

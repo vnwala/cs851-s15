@@ -1,0 +1,258 @@
+/*
+ + JQuery         : switchHat.js 0.10
+ +
+ + Author         : Takashi Hirasawa
+ + Special Thanks : kotarok (http://nodot.jp/)
+ + Copyright (c) 2010 CSS HappyLife (http://css-happylife.com/)
+ + Licensed under the MIT License:
+ + http://www.opensource.org/licenses/mit-license.php
+ +
+ + Since    : 2010-06-24
+ + Modified : 2010-06-27
+ */
+
+(function($) {
+
+	//設定（コメントアウトすれば機能停止）
+	//$(function(){
+		//$.uHat.switchHat();
+		//$.uHat.close();
+		//$.uHat.openAll();
+	//});
+
+	$.uHat = {
+
+		// 折りたたみ
+		switchHat: function(settings) {
+			uHatConA = $.extend({
+				switchBtn: '.switchHat_AcDesc',
+				switchContents: '.switchDetail_AcDesc',
+				switchClickAddClass: 'nowOpen',
+				switchSpeed: 'slow',
+        switchBtnLabelOpened: 'Show less', /*開いてる*/
+        switchBtnLabelClosed: 'Show more' /*閉じてる*/
+			}, settings);
+			$(uHatConA.switchContents).hide();
+			$(uHatConA.switchBtn).addClass("switchOn").click(function(){
+				var index = $(uHatConA.switchBtn).index(this);
+				$(uHatConA.switchContents).eq(index).slideToggle(uHatConA.switchSpeed);
+				$(this).toggleClass(uHatConA.switchClickAddClass);
+        if(uHatConA.switchBtnLabelClosed && !$(this).hasClass('nowOpen')) { $(this).text(uHatConA.switchBtnLabelClosed); }
+        else if(uHatConA.switchBtnLabelOpened && $(this).hasClass('nowOpen')) { $(this).text(uHatConA.switchBtnLabelOpened); }
+			}).css("cursor","pointer");
+		},
+
+		// 下の方に閉じるボタンを表示する
+		close: function(settings) {
+			uHatConB = $.extend({
+				closeBtnSet: uHatConA.switchContents,
+				apCloseBtn: '<span>X Close</span>'
+			}, settings);
+			$(uHatConB.closeBtnSet).append('<p class="closeBtnHat">'+uHatConB.apCloseBtn+'</p>');
+			$(".closeBtnHat").children().click(function(){
+				//$(this).parents(uHatConA.switchContents).fadeOut(uHatConA.switchSpeed);
+        $(this).parents(uHatConA.switchContents).slideToggle(uHatConA.switchSpeed);
+				$(this).parents().prev().contents(uHatConA.switchBtn).removeClass(uHatConA.switchClickAddClass);
+			}).css("cursor","pointer");
+		}
+
+	};
+
+
+  //ひとまず丸ごとコピーして対応
+	$.uHatB = {
+
+		// 折りたたみ
+		switchHat: function(settings) {
+			uHatConC = $.extend({
+				switchBtn: '.switchHat',
+				switchContents: '.switchDetail',
+				switchClickAddClass: 'nowOpen',
+				switchSpeed: 'slow',
+        switchBtnLabelOpened: '', /*開いてる*/
+        switchBtnLabelClosed: '' /*閉じてる*/
+			}, settings);
+			$(uHatConC.switchContents).hide();
+			$(uHatConC.switchBtn).addClass("switchOn").click(function(){
+				var index = $(uHatConC.switchBtn).index(this);
+				$(uHatConC.switchContents).eq(index).slideToggle(uHatConC.switchSpeed);
+				$(this).toggleClass(uHatConC.switchClickAddClass);
+        if(uHatConC.switchBtnLabelClosed && !$(this).hasClass('nowOpen')) { $(this).text(uHatConC.switchBtnLabelClosed); }
+        else if(uHatConC.switchBtnLabelOpened && $(this).hasClass('nowOpen')) { $(this).text(uHatConC.switchBtnLabelOpened); }
+			}).css("cursor","pointer");
+		},
+
+		// 下の方に閉じるボタンを表示する
+		close: function(settings) {
+			uHatConD = $.extend({
+				closeBtnSet: uHatConC.switchContents,
+				apCloseBtn: '<span>X Close</span>'
+			}, settings);
+			$(uHatConD.closeBtnSet).append('<p class="closeBtnHat">'+uHatConD.apCloseBtn+'</p>');
+			$(".closeBtnHat").children().click(function(){
+//console.log($(this).parent().parent().parent().parent().parent().prev());
+        //.ac_pricelist_headの位置を取得
+        $offset_top = $(this).parent().parent().parent().parent().parent().parent().prev().offset().top;
+				//$(this).parents(uHatConC.switchContents).fadeOut(uHatConC.switchSpeed);
+        $(this).parent().parent(uHatConC.switchContents).slideToggle(uHatConC.switchSpeed);
+				//$(this).parent().parent().prev().contents(uHatConC.switchBtn).removeClass(uHatConC.switchClickAddClass);
+				$(this).parent().parent().prev().removeClass(uHatConC.switchClickAddClass);
+        $('html,body').animate({ scrollTop: $offset_top }, uHatConC.switchSpeed);
+			}).css("cursor","pointer");
+		}
+
+	};
+
+
+  //ひとまず丸ごとコピーして対応
+	$.uHatC = {
+
+		// 折りたたみ
+		switchHat: function(settings) {
+			uHatConE = $.extend({
+				switchBtn: '.switchHat',
+				switchContents: '.switchDetail',
+				switchClickAddClass: 'nowOpen',
+				switchSpeed: 'slow',
+        switchBtnLabelOpened: '', /*開いてる*/
+        switchBtnLabelClosed: '' /*閉じてる*/
+			}, settings);
+			$(uHatConE.switchContents).hide();
+			$(uHatConE.switchBtn).addClass("switchOn").click(function(){
+				var index = $(uHatConE.switchBtn).index(this);
+				$(uHatConE.switchContents).eq(index).slideToggle(uHatConE.switchSpeed);
+				$(this).toggleClass(uHatConE.switchClickAddClass);
+        if(uHatConE.switchBtnLabelClosed && !$(this).hasClass('nowOpen')) { $(this).text(uHatConE.switchBtnLabelClosed); }
+        else if(uHatConE.switchBtnLabelOpened && $(this).hasClass('nowOpen')) { $(this).text(uHatConE.switchBtnLabelOpened); }
+
+checkOpenClose();
+
+			}).css("cursor","pointer");
+		},
+
+		// 下の方に閉じるボタンを表示する
+		close: function(settings) {
+			uHatConF = $.extend({
+				closeBtnSet: uHatConE.switchContents,
+				apCloseBtn: '<span>X Close</span>'
+			}, settings);
+			$(uHatConF.closeBtnSet).append('<p class="closeBtnHat">'+uHatConF.apCloseBtn+'</p>');
+			$(".closeBtnHat").children().click(function(){
+//console.log($(this).parent().parent().parent().parent().parent().prev());
+        //.ac_pricelist_headの位置を取得
+        $offset_top = $(this).parent().parent().parent().parent().parent().prev().offset().top;
+				//$(this).parents(uHatConE.switchContents).fadeOut(uHatConE.switchSpeed);
+        $(this).parent().parent(uHatConE.switchContents).slideToggle(uHatConE.switchSpeed);
+				//$(this).parent().parent().prev().contents(uHatConE.switchBtn).removeClass(uHatConE.switchClickAddClass);
+				$(this).parent().parent().prev().removeClass(uHatConE.switchClickAddClass);
+        $('html,body').animate({ scrollTop: $offset_top }, uHatConE.switchSpeed);
+			}).css("cursor","pointer");
+		},
+
+		// 全部開く/閉じるボタン
+		openCloseAll: function(settings) {
+      $('.allOpenCloseBtn').click(function(){
+        if($('.v2_faq_box .switchHat_Faq').length == $('.v2_faq_box').find('.nowOpen_Faq').length) {
+          //全部閉じる
+          //console.log('close');
+					$('.switchDetail_Faq').slideUp("normal");
+					$('.switchHat_Faq').each(function(){
+            $(this).removeClass("nowOpen_Faq");
+          });
+        } else {
+          //全部開く
+          //console.log('open');
+					$('.switchDetail_Faq').slideDown("normal");
+					$('.switchHat_Faq').each(function(){
+  					$(this).addClass("nowOpen_Faq");
+          });
+        }
+        checkOpenClose();
+      }).css("cursor","pointer");
+		}
+
+	};
+
+
+  // 全部開く/閉じるの表示切替
+  function checkOpenClose() {
+    //console.log($('.v2_faq_box .switchHat_Faq').length);
+    //console.log($('.v2_faq_box').find('.nowOpen_Faq').length);
+    if($('.v2_faq_box').find('.nowOpen_Faq').length == $('.v2_faq_box .switchHat_Faq').length) {
+      //$('.allOpenCloseBtn').toggleClass('nowOpenAll').toggleClass('nowCloseAll');
+      $('.faq_expand_all').hide();
+      $('.faq_collapse_all').show();
+    } else {
+      //$('.allOpenCloseBtn').toggleClass('nowOpenAll').toggleClass('nowCloseAll');
+      $('.faq_expand_all').show();
+      $('.faq_collapse_all').hide();
+    }
+  }
+
+})(jQuery);
+
+ 
+  // new faq inquiry page (jp only)
+	$.uHatD = {
+
+		// accordion function
+		switchHat: function(settings) {
+			uHatConG = $.extend({
+				switchBtn: '.switchHat_newFaqQuestion',
+				switchContents: '.switchDetail_newFaqAnswer',
+				switchClickAddClass: 'nowOpen',
+				switchSpeed: 'slow',
+        switchBtnLabelOpened: '', 
+        switchBtnLabelClosed: '' 
+			}, settings);
+			$(uHatConG.switchContents).hide();
+			$(uHatConG.switchBtn).addClass("switchOn").click(function(){
+				var index = $(uHatConG.switchBtn).index(this);
+				$(uHatConG.switchContents).eq(index).slideToggle(uHatConG.switchSpeed);
+				$(this).toggleClass(uHatConG.switchClickAddClass);
+        if(uHatConG.switchBtnLabelClosed && !$(this).hasClass('nowOpen')) { $(this).text(uHatConG.switchBtnLabelClosed); }
+        else if(uHatConG.switchBtnLabelOpened && $(this).hasClass('nowOpen')) { $(this).text(uHatConG.switchBtnLabelOpened); }
+			}).css("cursor","pointer");
+		},
+
+		// add close button below each content
+		close: function(settings) {
+			uHatConH = $.extend({
+				closeBtnSet: uHatConG.switchContents,
+				apCloseBtn: '<span>X 閉じる</span>'
+			}, settings);
+			$(uHatConH.closeBtnSet).append('<p class="closeBtnHat">'+uHatConH.apCloseBtn+'</p>');
+			$(".closeBtnHat").children().click(function(){
+    		$(this).parent().parent(uHatConH.switchContents).slideToggle(uHatConH.switchSpeed);
+//            $('html,body').animate({ scrollTop: 0}, uHatConH.switchSpeed);
+			}).css("cursor","pointer");
+		}
+	};
+	
+	 // new faq menu sidebar (jp only)
+	$.uHatE = {
+
+		// accordion function
+		switchHat: function(settings) {
+			uHatConI = $.extend({
+				switchBtn: '.switchHat_newFaqmenu',
+				switchContents: '.switchDetail_newFaqmenu',
+				switchClickAddClass: 'nowOpen',
+				switchSpeed: 'slow',
+        switchBtnLabelOpened: '', 
+        switchBtnLabelClosed: '' 
+			}, settings);
+			$(uHatConI.switchContents).hide();
+			$(uHatConI.switchBtn).addClass("switchOn").click(function(){
+				var index = $(uHatConI.switchBtn).index(this);
+				$(uHatConI.switchContents).eq(index).slideToggle(uHatConI.switchSpeed);
+				$(this).toggleClass(uHatConI.switchClickAddClass);
+        if(uHatConI.switchBtnLabelClosed && !$(this).hasClass('nowOpen')) { $(this).text(uHatConI.switchBtnLabelClosed); }
+        else if(uHatConI.switchBtnLabelOpened && $(this).hasClass('nowOpen')) { $(this).text(uHatConI.switchBtnLabelOpened); }
+			}).css("cursor","pointer");
+		}
+
+	};
+
+
+

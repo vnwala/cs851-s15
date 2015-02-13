@@ -1,0 +1,114 @@
+
+
+
+
+
+/**
+ * NBC Player Maker
+ * A Javascript widget that will dynamically create an iframe pointing to
+ * our video player
+ * 
+ * Created by: Rob Sable
+ * Date created: 11/19/2013
+ * 
+ * Last edited by: Rob Sable
+ * Last modified: 11/19/2013
+ */
+
+/**
+ * Usage:
+ * <script type="text/javascript" charset="UTF-8" defer="true" src="/some/path/will/be/here/tomyfile.js?vrid=123456789&tpid=sOm3keyb0ardM4sh"></script>
+ */
+if(typeof console == "undefined") {
+
+	console = {};
+	console.log = function(msg) {
+	// fail silently
+	}
+	
+	console.warn = function(msg) {
+	// fail silently
+	}
+	
+	console.error = function(msg) {
+	// fail silently
+	}
+
+}
+
+(function() {
+	
+	//console.log("/////////////////////////////////////////");
+	//console.log("/// NBC PLAYER MAKER ////////////////////");
+	//console.log("/////////////////////////////////////////");
+	
+	// Gather the scripts on the page.
+	window['nbcLMP290849461'] = {};
+	
+	// Parameter parsing
+	window['nbcLMP290849461'].scriptTagsOnPage = document.getElementsByTagName('script');
+	window['nbcLMP290849461'].thisScriptName = 'portableplayer';
+	window['nbcLMP290849461'].thisScriptSource = null;
+	window['nbcLMP290849461'].activeEmbeds = new Array();
+	window['nbcLMP290849461'].usedEmbeds = new Array();
+	window['nbcLMP290849461'].scriptSplit = null;
+	window['nbcLMP290849461'].scriptParams = null;
+	window['nbcLMP290849461'].discreteParams = null;
+	window['nbcLMP290849461'].useThisAsParent = null;
+	window['nbcLMP290849461'].encodedURI = encodeURIComponent(location.origin+location.pathname);
+	window['nbcLMP290849461'].encodedHost = encodeURIComponent(location.origin);
+	window['nbcLMP290849461'].origin = null;
+	
+	
+	
+	
+	// Comb the scripts!
+	for(var a=0; a<window['nbcLMP290849461'].scriptTagsOnPage.length; a++) {
+		//console.log("/// NBC PLAYER MAKER IS SEARCHING FOR ITSELF (How zen...) | " + window['nbcLMP290849461'].scriptTagsOnPage[a].src);
+			if(window['nbcLMP290849461'].scriptTagsOnPage[a].src.match(window['nbcLMP290849461'].thisScriptName)) {
+				
+				
+				window['nbcLMP290849461'].thisScriptSource = window['nbcLMP290849461'].scriptTagsOnPage[a].src;
+				window['nbcLMP290849461'].activeEmbeds.push(window['nbcLMP290849461'].scriptTagsOnPage[a].src);
+				
+				//console.log("/// NBC PLAYER MAKER | " + window['nbcLMP290849461'].scriptTagsOnPage[a].parentNode.id);
+				window['nbcLMP290849461'].useThisAsParent = window['nbcLMP290849461'].scriptTagsOnPage[a].parentNode;
+				
+			}
+	};
+	
+
+	// Do some splits...
+	window['nbcLMP290849461'].scriptSplit = window['nbcLMP290849461'].thisScriptSource.split('/portableplayer/');
+	window['nbcLMP290849461'].scriptParams = window['nbcLMP290849461'].scriptSplit[1].split('?');
+	window['nbcLMP290849461'].discreteParams = window['nbcLMP290849461'].scriptParams[1].split('&');
+	
+	// Now dig through the parameters for the origin
+	
+	function getParams(requestedParam) {
+	for(var q=0; q<window['nbcLMP290849461'].discreteParams.length; q++) {
+		if(window['nbcLMP290849461'].discreteParams[q].match(requestedParam)) {
+			var parsedParam = window['nbcLMP290849461'].discreteParams[q].split('=');
+			break;
+		}
+	}
+	return parsedParam[1];
+	}
+	
+	window['nbcLMP290849461'].origin = getParams('origin');
+	
+	//console.log("/// NBC PLAYER MAKER PARAMETERS | "+ window['nbcLMP290849461'].scriptParams[1]);
+	//console.log('/// NBC PLAYER MAKER IFRAME PREVIEW... | <iframe id="window['nbcLMP290849461']layer" width="X" height="Y" src="http://www.'+ window['nbcLMP290849461'].origin + '/templates/nbc_partner_player?'+window['nbcLMP290849461'].scriptParams[1] + "&turl="+location.origin+location.pathname+'"></iframe>');
+	
+	
+	// DOM element creation
+	window['nbcLMP290849461'].videoframe = document.createElement('iframe');
+	window['nbcLMP290849461'].videoframe.style.border = 'none';
+	window['nbcLMP290849461'].videoframe.width = getParams('width');
+	window['nbcLMP290849461'].videoframe.height = getParams('height');
+	window['nbcLMP290849461'].videoframe.scrolling = "no";
+	window['nbcLMP290849461'].videoframe.src = "http://www." + window['nbcLMP290849461'].origin + "/templates/nbc_partner_player?"+window['nbcLMP290849461'].scriptParams[1] + "&turl="+window['nbcLMP290849461'].encodedURI + "&ourl=" + window['nbcLMP290849461'].encodedHost + "&lp=1";
+	
+	window['nbcLMP290849461'].useThisAsParent.appendChild(window['nbcLMP290849461'].videoframe);
+	//console.log("/// NBC PLAYER MAKER | COMPLETE!");
+})();

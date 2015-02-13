@@ -1,0 +1,19 @@
+@charset "utf-8";
+.jThumbnailScroller								{ position: relative; width: 640px; height:122px; margin: 0 auto 20px; background: #FFF; padding:0; overflow: hidden; }
+
+.jThumbnailScroller .jTscrollerContainer 		{ position: absolute; }
+.jThumbnailScroller .jTscroller 				{ position: relative; height: 100%; margin: 0; left: 0; top: 0; display: inline-block; *display: inline; }
+
+.jThumbnailScroller .jTscrollerNextButton,
+.jThumbnailScroller .jTscrollerPrevButton 		{ position: absolute; display: block; width: 40px; height: 40px; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; opacity: 0.5; -moz-opacity: 0.5; filter:alpha(opacity=5); }
+.jThumbnailScroller .jTscrollerNextButton 		{ background:#000 url('http://www.tirebusiness.com/images/thumbnail-scroller/nextArrow.png') center center; margin: -20px 10px 0; right: 0; top: 50%; }
+.jThumbnailScroller .jTscrollerPrevButton 		{ background:#000 url('http://www.tirebusiness.com/images/thumbnail-scroller/prevArrow.png') center center; margin: -20px 10px 0; left: 0; top: 50%; }
+
+.jThumbnailScroller .jTscrollerNextButton:hover,
+.jThumbnailScroller .jTscrollerPrevButton:hover { background-color: #333333; opacity:1; }
+
+.jThumbnailScroller .jTscroller a 				{ display: block; float: left; border: 5px solid #E6E6E6; margin: 6px 10px 6px 0; background: #FFFFFF; }
+.jThumbnailScroller .jTscroller a:hover 		{ border-color: #E6E6E6; }
+.jThumbnailScroller .jTscroller a img 			{ border: none; opacity: 0.5; -moz-opacity: 0.5; filter:alpha(opacity=5); }
+.jThumbnailScroller .jTscroller a:hover img,
+.jThumbnailScroller .jTscroller img.active		{ opacity: 1; -moz-opacity: 1; filter:alpha(opacity=10); }

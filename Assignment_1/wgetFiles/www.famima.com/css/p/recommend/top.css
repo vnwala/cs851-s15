@@ -1,0 +1,272 @@
+/* ranking CSS */
+#ranking_placeholder {
+	margin-top:5px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#ranking_placeholder #logrecom_results{
+	background-color:#F4F4F4;
+	padding:10px;
+}
+
+#ranking_placeholder #logrecom_results:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+#ranking_placeholder #logrecom_rank_result{
+	background-color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	padding:0;
+	overflow:hidden;
+	font-stretch: normal;
+	width: 223px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#ranking_placeholder .logrecom_title {
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+
+#ranking_placeholder .productcheck {
+	desplay:inline;
+	float:left;
+	padding:0;
+	width:194px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left:11px;	
+	*margin-left:11px;
+	_margin-left:6px;
+}
+#ranking_placeholder .rank1 {
+	margin-left:11px;	
+	*margin-left:11px;
+	_margin-left:11px;
+}
+
+#ranking_placeholder .rank2 {
+	margin-left:11px;	
+	*margin-left:11px;
+	_margin-left:11px;
+}
+#ranking_placeholder .rank3 {
+	margin-left:11px;
+	*margin-left:11px;
+	_margin-left:11px;
+}
+
+#ranking_placeholder .item{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+#ranking_placeholder .lastitem{
+	padding-bottom:15px;
+}
+
+#ranking_placeholder .r1{
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	width: 194px;
+	border-top-color: #f0e1b8;
+	border-right-color: #f0e1b8;
+	border-bottom-color: #f0e1b8;
+	border-left-color: #f0e1b8;
+}
+#ranking_placeholder .r2{
+	border-bottom-color: #879099;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-right-color: #879099;
+	border-left-color: #879099;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	width: 194px;
+	
+
+}
+#ranking_placeholder .r3{
+	border-bottom-color: #761F01;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-right-color: #761F01;
+	border-left-color: #761F01;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	width: 194px;
+}
+
+#ranking_placeholder .r4{
+	width: 194px;
+}
+#ranking_placeholder .r5{
+	width: 194px;
+}
+#ranking_placeholder .lastitem{
+	border-bottom:none;
+}
+
+#ranking_placeholder .r4 .product_image,
+#ranking_placeholder .r5 .product_image{
+	display:none;
+}
+#ranking_placeholder .productrank{
+	list-style-type:none;
+	padding:0px;
+}
+
+
+#ranking_placeholder li.product_image {
+	margin-bottom:10px;
+	padding:0;
+	text-align:center;
+}
+
+#ranking_placeholder img.product_image {
+	border:medium none;
+	width:100px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#ranking_placeholder .name{
+	text-align:left;
+	text-decoration:underline;
+}
+
+#ranking_placeholder .no1{
+	padding-left:10px;
+	padding-right:10px;
+}
+#ranking_placeholder .no2{
+	padding-left:10px;
+	padding-right:10px;
+}
+#ranking_placeholder .no3{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+
+/* personalized-recommend CSS */
+
+#multiple_placeholder{
+	text-align:left;
+	margin-top:5px;
+	margin-bottom:40px;
+	margin-left:auto;
+	margin-right:auto;
+	width:700px; /* 追加：2011/12/8用 */
+}
+
+
+#multiple_placeholder #multiple_results{
+	/* background-color:#F4F4F4; 削除：2011/12/7以前まで掲載 */
+	/* padding:10px; 削除：2011/12/7以前まで掲載 */
+}
+
+#multiple_placeholder #multiple_results:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+
+#multiple_placeholder #multiple_relate_result{
+	padding:0;
+	margin: 0 auto;
+	text-align: center;
+	overflow:hidden;
+	/* 削除：2011/12/7以前まで掲載 border:1px solid #CCCCCC; */
+	width: 700px;  /* 変更：2011/12/7以前の数値　width:223px; */
+	border-bottom:1px solid #e6e6e6; /* 追加：2011/12/8用 */
+}
+
+
+/*　削除：2011/12/7以前まで掲載
+#multiple_placeholder .multiple_title {
+	clear:both;
+	margin:0;
+	padding:0;
+}
+*/
+
+
+#multiple_placeholder .multiple_title {
+	clear:both;
+	font-size:14px;
+	color:#FFFFFF;
+	font-weight:bold;
+	margin:0px;
+	width:100%;
+}
+
+
+
+#multiple_placeholder .productcheck {
+	display:inline-block;
+	float:left;
+	/* 削除：2011/12/7以前まで掲載　margin:0 5px; */
+	padding:0px 17px;  /* 変更：2011/12/7以前の数値　padding:0; */
+	width:132px;  /* 変更：2011/12/7以前の数値　width:210px; */
+}
+
+#multiple_placeholder .r1{
+	margin-left:18px;
+}
+#multiple_placeholder .item{
+	/* 削除：2011/12/7以前まで掲載 border-bottom:1px solid #CCCCCC; */
+	margin-bottom:20px; /* 追加：2011/12/8用 */
+}
+
+/*
+#multiple_placeholder .r2 .product_image,
+#multiple_placeholder .r3 .product_image{
+	display:none;
+}
+*/
+
+#multiple_placeholder .productconnect{
+	list-style-type:none;
+	margin:10px 0;  /* 変更：2011/12/7以前の数値　margin:10px 5px; */
+	padding:0px;
+}
+#multiple_placeholder li.product_image {
+	margin-bottom:10px;
+	padding:0;
+	text-align:center;
+}
+
+#multiple_placeholder img.product_image {
+	border:1px solid #ccc; /* 変更：2011/12/7以前の数値　border:medium none; */
+	width:130px; /* 変更：2011/12/7以前の数値　width:100px; */
+	padding: 0px;
+	margin: 0px;
+}
+
+#multiple_placeholder .name{
+	text-align:left;
+	text-decoration:underline;
+	font-size:12px;
+}

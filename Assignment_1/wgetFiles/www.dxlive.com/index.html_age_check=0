@@ -1,0 +1,1010 @@
+<!doctype html>
+<!--[if IE 7 ]><html lang="ja" class="ie ie7 newLayout"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie ie8 newLayout"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie ie9 newLayout"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ja" class="newLayout">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ライブチャットDXLIVE: 業界最大級のアダルトチャット</title>
+<meta NAME="description" CONTENT="ライブチャットDXLIVE: 業界最大級のアダルトチャットです。学生から主婦、素人、熟女、外人等とアダルトな出会いのチャンス。今すぐ楽しめる無料体験コースをお試しください。">
+<meta NAME="keywords" CONTENT="ライブチャット,2ショット,アダルトチャット,アダルトライブチャット,無料,ライブ映像">
+<link rel="canonical" href="http://www.dxlive.com/">
+<link rel="alternate" media="only screen and (max-width: 480px)" href="http://m.dxlive.com/" >
+<link rel="alternate" media="handheld" href="http://m.dxlive.com/" >
+<link rel="SHORTCUT ICON" href="img/logo.ico">
+<meta name="viewport" content="width=1004">
+<script>
+
+/* Designer RT 18879 */
+/* This has to be called before everything else, preferably before anything being rendered. */
+if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	var chk = getQueryVariable('age_check'), url = '';
+	if(typeof chk !== 'undefined'&&chk==='1') {
+		url = 'http://m.dxlive.com/?utm_source=site_home_agecheck&utm_medium=bn&utm_campaign=bn_mobile_redirect';
+	} else {
+		url = 'http://m.dxlive.com/home/?utm_source=site_home&utm_medium=bn&utm_campaign=bn_mobile_redirect';
+	}
+	if(confirm("スマホ版を表示しますか？")) { 
+		window.location.href = url;
+	}
+}
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
+  return '';
+}
+</script>
+<script type="text/javascript" src="json/performer"></script>
+<script>
+function displayRollover(user_name, has_next_date_online) {
+    var new_var = "performers.online."+user_name;
+    var online = eval(new_var);
+    if (online != null) {
+                //alert('list five 2');
+        document.writeln('<div class="posting_img online"><a href="javascript:;" onclick="openPreview(\''+user_name+'\', 110);return(false);" target="performer" class="rollover_img"><img class="HM_photo" width="120" height="90" src="http://imageup.dxlive.com/WebArchive/'+user_name+'/vctp/LinkedImage.jpg"><span>&nbsp;</span></a><div class="status_on_offline onl"><img src="img/hanamaru/btn_onlinenow.gif" width="120" height="30"></div></div>');
+            }else{
+        if(has_next_date_online){
+            //alert('list five 3');
+            document.writeln('<div class="posting_img"><a href="javascript:;" onclick="openPreview(\''+user_name+'\', 110);return(false);" target="performer" class="rollover_img"><img class="HM_photo" width="120" height="90" src="http://imageup.dxlive.com/WebArchive/'+user_name+'/vctp/LinkedImage.jpg"><span>&nbsp;</span></a><div class="status_on_offline">次回ログイン予定<br />'+has_next_date_online+'</div></div>');
+        }else{
+            //alert('list five 4');
+            document.writeln('<div class="posting_img"><a href="javascript:;" onclick="openPreview(\''+user_name+'\', 110);return(false);" target="performer" class="rollover_img"><img class="HM_photo" width="120" height="90" src="http://imageup.dxlive.com/WebArchive/'+user_name+'/vctp/LinkedImage.jpg"><span>&nbsp;</span></a><div class="status_on_offline"><img src="img/hanamaru/btn_offlinenow.png" width="120" height="30"></div></div>');
+        }
+    }
+    //$("#"+id).html(html);
+    return;
+}
+</script>
+<!--meta name="viewport" content="initial-scale=1.0"-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<link type="text/css" href="min/index.html?f=c%252Fglobal.css,c%252Fage_check.css,c%252Fthumbnails.css,c%252Ftop_picks_home.css,c%252Frkg_new.css,j%252Fdxbannerslider%252Fdxbannerslider.css,c%252Fchbnr.css,js%252Flatest%252FdxNyuBanner%252Fjquery.dxNyuBanner.css" rel="stylesheet">
+
+<script src="urchin.js" type="text/javascript"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-41327480-1', 'dxlive.com');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+//GA custom dimension
+var xx = document.cookie.indexOf('gaCusDim');
+var domain = 'dxlive.com'; //This is so setCookie call doesn't cause a javascript error.
+if( 'function' === typeof isUser)
+{
+    if( xx == -1)
+    {
+        if( isUser() || isVIP())
+        {
+            setCookie('gaCusDim','1','','/','dxlive.com');
+            xx = 1;
+        }
+    }
+}
+if( xx != -1)
+{
+    ga('set', 'dimension1', 'member');
+}
+else
+{
+    ga('set', 'dimension1', 'guest');
+}
+
+/*vcrt 18951, wito2009, Apr 7 2014*/
+window.__utl_gaTimeOutID=setTimeout(window.cancelBounce,3E4);window.__utl_gaTryCnt=0;function cancelBounce(){try{if("undefined"===typeof ga)throw"Google Analytics is not present.";ga("send",{hitType:"event",eventCategory:"NoBounce",eventAction:"stay",eventLabel:"Over 10 seconds",nonInteraction:!1})}catch(a){10>window.__utl_gaTryCnt&&(window.__utl_gaTryCnt++,clearTimeout(window.__utl_gaTimeOutID),window.__utl_gaTimeOutID=setTimeout(window.cancelBounce,1E3))}};
+</script>
+<!-- <link href="/c/d2p_global_toolbar.css" rel="stylesheet"> --><!— Track a specific Crazy Egg snapshot by name —>
+<script type="text/javascript">
+    var CE_SNAPSHOT_NAME = "Guest Top";
+</script>
+<!-- NAGIOSHEALTHCHECK ..this line is required for health check.. -->
+</head>
+<body class="gl_home " onLoad="home_init()">
+<div id="d2p_toolbarHolder" style="width:100%;min-height:46px;background-color: #2e4a66;"></div>  
+<div id="gl_headerOuter">
+	<div id="gl_header" class="cf">
+		<p id="gl_headerLogo"><a href="http://www.dxlive.com/"><img src="i/gl_logo_b.gif" alt="DXLIVE アダルトライブチャット" width="104" height="41"></a></p>
+		<ul id="gl_globalNav">
+			<li class="gl_gloNav_li on" id="gl_gloNav_li_1">
+				<a href="http://www.dxlive.com/">トップページ</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_2">
+				<a href="javascript:openHanamaru()">女の子レビュー</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_3">
+				<a href="http://www.dxlive.com/first_time01.html">遊びガイド</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_4">
+				<a href="http://www.dxlive.com/join.html">ポイント購入</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_5">
+				<a href="http://www.dxlive.com/search/search_page/">女の子検索</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_6">
+				<a href="http://www.dxlive.com/blog/">ブログ</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_7">
+                <a href="javascript:openVideo()">DXビデオ</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_8">
+				<a href="http://www.dxlive.com/fanclub">ファンクラブ</a>
+			</li>
+			<li class="gl_gloNav_li" id="gl_gloNav_li_9">
+				<a href="http://www.dxlive.com/faq.html">よくある質問</a>
+			</li>
+		</ul>
+	
+	</div><!--/#gl_headerContents-->
+</div><!--/#gl_headerOuter--><div id="gl_mainOuter">
+  <div id="gl_main"> <div class="topBannerArea">
+  <div class="bannerBase">
+    <div id="channelBanners"></div>
+    <div class="bannerThumbs"></div>
+  </div>
+</div>    <div id="gl_contentsOuter">
+      <div id="gl_contents" class="cf">
+        <div id="gl_mainContentsOuter">
+          <div id="gl_mainContents"> <span id="bk_bakuhatsuHolder"> </span><!--/#bk_bakuhatsuHolder-->
+            
+            <div id="hm_onlineTabOuter">
+              <div id="app_onlineTab" class="hm_onlineTab">
+                <ul class="hm_otUl cf">
+                  <li class="hm_otLi hm_otLi_first"> <a href="javascript: void(0);" title="オンライン" data-tabcat="online_performers" class="app_ot_btn hm_otA hm_ot_selected"> <span class="hm_otTxt">オンライン</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="オンライン"></span> </a> </li>
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="DXスタジオ対応" data-tabcat="dxstudio" id="hm_ot_dxstudio" class="app_ot_btn hm_otA"> <span class="hm_otTxt" style="font-size:12px;">DXスタジオ対応</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="DXスタジオ対応"></span> </a> </li>
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="巨乳" data-tabcat="big_tits_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">巨乳</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="巨乳"></span> </a> </li>
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="バイブ操作可" data-tabcat="vibeuse_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">バイブ操作可</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="バイブ操作可"></span> </a> </li>
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="人気ガール" data-tabcat="recommended_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">人気ガール</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="人気ガール"></span> </a> </li>
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="新人" data-tabcat="new_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">新人</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="新人"></span> </a> </li>
+                  <!-- <li class="hm_otLi">
+											<a href="javascript: void(0);" title="人妻" data-tabcat="housewives_performers" class="app_ot_btn hm_otA">
+												<span class="hm_otTxt">人妻</span>
+												<span class="hm_otHover">&nbsp;</span>
+												<span class="hm_otOn"><img src="/i/hm_otOn.png" width="8" height="38" alt="人妻"></span>
+											</a>
+										</li> -->
+                  <li class="hm_otLi"> <a href="javascript: void(0);" title="人妻・熟女" id="milf_performers" data-tabcat="milf_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">人妻・熟女</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="人妻・熟女"></span> </a> </li>
+                  <li class="hm_otLi hm_otLi_last"> <a href="javascript: void(0);" title="顔出しOK" data-tabcat="show_face_performers" class="app_ot_btn hm_otA"> <span class="hm_otTxt">顔出しOK</span> <span class="hm_otHover">&nbsp;</span> <span class="hm_otOn"><img src="i/hm_otOn.png" width="8" height="38" alt="顔出しOK"></span> </a> </li>
+                                  </ul>
+              </div>
+              <!--/#hm_onlineTab--> 
+            </div>
+            <!--/#hm_onlineTabOuter-->
+            
+            <div id="hm_onlineSecOuter">
+              <div id="hm_onlineSec">
+                      <div class="hm_thSubBox cf"> 　
+                  <div class="hm_thumb_size">
+                    <div class="hts_holder"> <span class="hmts_title">写真サイズ</span>
+                      <p class="hmar_btnHolder"> <span id="thsbtn_on" class="hmts_btn" onclick="setThumbSize();"></span> </p>
+                    </div>
+                  </div>
+                  <div class="hm_auto_reload">
+                    <div class="hmar_holder"> <span class="hmar_title">自動更新</span>
+                      <p class="hmar_btnHolder"> <span id="thumbtn_on" class="hmar_btn hmar_selected" onclick="onoffswitch(0)">オン</span>  </p>
+                    </div>
+                  </div>
+                  <div class="hm_manual_reload"> <a href="javascript: void (0);" id="app_hm_mr_link" class="hm_mr_link" title="女の子を手動で更新" onClick="window.categoryView(window.global_tab_cat,'', 'reg');">更新</a> </div>
+                  <!--icon description parts: アイコン説明開始-->
+				  <!--アイコン説明内部 = .hm_thSub_icon-->
+                  <div class="hm_thSub_icon"> <span id="hm_si_hook">
+                    <div id="hm_si_descOuter" style="display:none;">
+                      <div id="hm_si_descContents">
+                        <div id="hm_si_tail"></div>
+                        <a href="javascript:;" id="hm_si_toggleBtn2" title="閉じる" data-target="#hm_si_descOuter"></a>
+                        <div id="hm_si_descInner" class="gr_container">
+                          <div class="gr_row">
+                            <div class="gr_col_4 hm_si_left">
+                              <div class="hm_si_l_top"> <img src="i/hm_si_thumb.gif" width="132" height="184" alt="サムネイル説明"> </div>
+                              <ul class="hm_si_l_lower">
+                                  <li class="hm_si_li_1 cf"><span></span>ステータス</li>
+                                  <li class="hm_si_li_2 cf"><span></span>入室人数</li>
+                                  <li class="hm_si_li_3 cf"><span></span>人気度</li>
+                                  <li class="hm_si_li_4 cf"><span></span>アイコン</li>
+                                  <li class="hm_si_li_5 cf"><span></span>一言メッセ</li>
+                              </ul>
+                            </div>
+                            <div class="gr_col_8 hm_si_right">
+                              <div class="hm_si_r_box cf">
+                                <h5>アイコン解説</h5>
+                                  <table class="hm_si_table">
+                                    <tbody>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/prof.gif" width="16" height="16" alt="プロフィールアイコン"></td>
+                                        <td class="hm_si_tdr">プロフィール</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_toy_shake.gif" width="16" height="16" alt="リモちゃ使用可アイコン"></td>
+                                        <td class="hm_si_tdr">リモちゃ使用可</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_double_toy_shake.gif" width="16" height="16" alt="リモちゃ2個使用可アイコン"></td>
+                                        <td class="hm_si_tdr">リモちゃ2個使用可</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_fg4Final.gif" width="16" height="16" alt="ログイン回数10日以内の超新人アイコン"></td>
+                                        <td class="hm_si_tdr">ログイン回数10日以内の超新人</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_new_girl.gif" width="16" height="16" alt="初ログインから60日以内の新人アイコン"></td>
+                                        <td class="hm_si_tdr">初ログインから60日以内の新人</td>
+                                      </tr>
+                                    
+                                    </tbody>
+                                  </table>
+                                  <table class="hm_si_table">
+                                    <tbody>
+                                       <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_welcomeback.gif" width="16" height="16" alt="久しぶりにサイトに戻ってきてくれた女の子アイコン"></td>
+                                        <td class="hm_si_tdr">久しぶりにオンライン</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/icon_sound.gif" width="16" height="16" alt="マイクがオン"></td>
+                                        <td class="hm_si_tdr">マイクがオン</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/japanese.png" width="16" height="16" alt="日本語アイコン"></td>
+                                        <td class="hm_si_tdr">日本語</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/earth.png" width="16" height="16" alt="外国語アイコン"></td>
+                                        <td class="hm_si_tdr">外国語</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="hm_si_tdl"><img src="img/icons/dxstudio.gif" width="16" height="16" alt="DXスタジオ対応アイコン"></td>
+                                        <td class="hm_si_tdr">DXスタジオ対応</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                              </div>
+                              <div class="hm_si_btm">DXスタジオの詳細は<a href="http://www.dxlive.com/dxstudio/" target="_blank">こちら</a></div>
+                              
+                              <div class="hm_si_r_box cf"><img src="img/icons/mobile.gif"> モバイルでログインした女性会員　<!--0.6ポイント/1分--></div>
+                              <div class="hm_si_r_box" style="padding-top:4px;">
+                                <h5>ステータス解説</h5>
+                                <table id="hm_si_tblStts">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hm_si_tdStts"><span class="hm_si_r_span_1"></span></td>
+                                      <td class="hm_si_tdSttsTxt">チャット中<span style="font-size:10px;">(*途中からの参加、大歓迎)</span></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hm_si_tdStts"><span class="hm_si_r_span_2"></span></td>
+                                      <td class="hm_si_tdSttsTxt">只今リモちゃ使用中</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hm_si_tdStts"><span class="hm_si_r_span_3"></span></td>
+                                      <td class="hm_si_tdSttsTxt">只今リモちゃ2個使用中</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hm_si_tdStts"><span class="hm_si_r_span_4"></span></td>
+                                      <td class="hm_si_tdSttsTxt">待機中<span style="font-size:10px;">(*すぐに話せます)</span></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hm_si_tdStts"><span class="hm_si_r_span_5"></span></td>
+                                      <td class="hm_si_tdSttsTxt">2ショット中</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hm_si_tdStts" style="border-bottom:0;"><span class="hm_si_r_span_6"></span></td>
+                                      <td class="hm_si_tdSttsTxt" style="border-bottom:0;">完全2ショット中<span style="font-size:10px;">(*入室出来ません)</span></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </span> <a href="javascript:;" id="hm_si_toggleBtn" data-target="#hm_si_descOuter"><img src="i/hm_si_info.gif" width="16" height="16" alt="アイコン説明">アイコン説明</a> </div><!--/.hm_thSub_icon-->
+					
+                    <div style="color:#FFF; line-height:140%;text-align:left;padding-top:25px;"><img src="i/icon/starIII_prof.png" title="スター3" style="vertical-align:middle;width: 85px; ">&nbsp;【 新登場 】&nbsp;女の子の人気度に応じてリボンの星が1～3個に変化します。
+					</div><!--/スター-->                </div>
+                <!--/.hm_thSubBox-->
+                
+                                <div id="sessionhere"><img src="img/thumbnail/online_loading.gif" alt="ただいまローディング中です。"></div>
+                		    
+                    <div id="twoshotouter1" style="margin:0 auto;display:none;"></div>
+              </div>
+              <!--/#hm_onlineSec--> 
+            </div>
+            <!--/#hm_onlineSecOuter-->
+            <div class="hm_devider_d"></div>
+            <div class="hm_subSecOuter">
+              <div class="hm_subSec cf"> <a id="osusume"></a>
+                <div id="app_recomenBox">  </div>
+              </div>
+              <!--/.hm_subSec--> 
+            </div>
+            <!--/.hm_subSecOuter-->
+            
+            <div class="hm_subSecOuter">
+              <h4 id="hm_hanaHeader" style="height:34px;width:810px;margin:0 auto;background:-moz-linear-gradient(top, #c20054, #ea005f);background:-webkit-gradient(linear, center top, center bottom, from(#c20054), to(#ea005f));background:linear-gradient(to bottom, #c20054, #ea005f);filter:progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#c20054, EndColorStr=#ea005f);line-height:34px;color:#FFF;font-size:16px;font-weight:bold;text-align:left;"><span style="margin-left:15px;">女の子推薦</span><span style="margin-left:15px;font-size:12px;font-weight:normal;">～ DXLIVEの会員様が太鼓判を押したオススメの女の子たちへの推薦文を一部ご紹介 ～</span><span style="margin-right:10px;float:right;font-weight:normal;font-size:12px;"><a href="http://www.dxlive.com/recommended/" target="_top" style="color:#fff;">&raquo;もっと見る</a> </span></h4>
+              <div class="hm_subSec" style="padding:10px 0;"> 
+                <!-- <div id="list_five"></div> -->
+                <style>
+.PF_posting{padding:5px 15px 3px 15px;height:165px;width:739px;border:1px dotted #000000;margin:5px 0 5px 30px;}
+.posting_title {float:left;width:739px;height:20px;text-align:left;margin-bottom:0px;}
+.profLink{float:right}
+.profLink a{padding:0 0.5em;background-color:#F6C;border-radius:3px;box-shadow:2px 2px 2px rgba(0,0,0,0.2);color:#fff;}
+.profLink a:hover{background-color:#F09;}
+.status_on_offline{height:3em; margin-top:-5px;padding:3px 0;background-color:#666666;border-radius:8px;line-height:1.4em;color:#fff;font-size:0.9em;letter-spacing:-0.05em;}
+.onl{background:#ff0066;}
+.posting_img {float:left;width:120px;height:90px;padding:5px 0 0 0;}
+.posting_info {float:right;width:580px;height:10px;text-align:left;padding:5px;font-weight:bold;}
+.posting_detail {float:right;width:580px;height:65px;text-align:left;padding:5px;}
+</style>
+                                <div class="PF_posting">
+                  <div class="posting_title"><a href="http://www.dxlive.com/preview/SAYAKAkd" target="_blank">SAYAKAkd</a>ちゃんへの推薦文 <span class="profLink"><a href="http://www.dxlive.com/preview/SAYAKAkd" target="_blank">プロフィールを見る&rarr;</a> </span></div>
+                  <script>displayRollover("SAYAKAkd", "");</script>
+                  <div class="posting_info">2015-02-07 23:39:51 ：  couper様</div>
+                  <div class="posting_detail">色白で細くてとってもきれいです。
+きれいなおっぱい、うすい色の乳首、とっても品のいい形で最高です。
+ヘアも濃すぎず薄すぎずあそこもとっても綺麗です。
+ </div>
+                </div>
+                                <div class="PF_posting">
+                  <div class="posting_title"><a href="http://www.dxlive.com/preview/Airys" target="_blank">Airys</a>ちゃんへの推薦文 <span class="profLink"><a href="http://www.dxlive.com/preview/Airys" target="_blank">プロフィールを見る&rarr;</a> </span></div>
+                  <script>displayRollover("Airys", "2015-02-14 21:00:00");</script>
+                  <div class="posting_info">2015-02-07 22:48:04 ：  TAKUTOsama様</div>
+                  <div class="posting_detail">今日も可愛いね、藍李。
+
+今度デートしようって約束忘れてないよね？ </div>
+                </div>
+                                <div class="PF_posting">
+                  <div class="posting_title"><a href="http://www.dxlive.com/preview/NATSUMIsos" target="_blank">NATSUMIsos</a>ちゃんへの推薦文 <span class="profLink"><a href="http://www.dxlive.com/preview/NATSUMIsos" target="_blank">プロフィールを見る&rarr;</a> </span></div>
+                  <script>displayRollover("NATSUMIsos", "2015-02-13 22:00:00");</script>
+                  <div class="posting_info">2015-02-07 22:26:44 ：  kumakuma様</div>
+                  <div class="posting_detail">気配りができて、とても優しい素敵な方です。
+こんなおっぱい見たことない！ってぐらい、インパクトがあって癒されます。 </div>
+                </div>
+                                <div class="PF_posting">
+                  <div class="posting_title"><a href="http://www.dxlive.com/preview/MIxxWA" target="_blank">MIxxWA</a>ちゃんへの推薦文 <span class="profLink"><a href="http://www.dxlive.com/preview/MIxxWA" target="_blank">プロフィールを見る&rarr;</a> </span></div>
+                  <script>displayRollover("MIxxWA", "2015-02-10 19:00:00");</script>
+                  <div class="posting_info">2015-02-07 20:39:35 ：  snd2pBfwWl4n様</div>
+                  <div class="posting_detail">ホント可愛いね♥ </div>
+                </div>
+                                <div class="PF_posting">
+                  <div class="posting_title"><a href="http://www.dxlive.com/preview/MISAKImxm" target="_blank">MISAKImxm</a>ちゃんへの推薦文 <span class="profLink"><a href="http://www.dxlive.com/preview/MISAKImxm" target="_blank">プロフィールを見る&rarr;</a> </span></div>
+                  <script>displayRollover("MISAKImxm", "");</script>
+                  <div class="posting_info">2015-02-07 15:54:41 ：  匿名様</div>
+                  <div class="posting_detail">乳首・クリ・オメコの3点攻めでひたすらイカせず、もっとも、途中で軽く何回かイっているようだったけど、リモちゃを最後にフル活用するとマジのイキ狂いが始まりますよ。 </div>
+                </div>
+                                <div style="margin-right:35px;float:right;"><a href="http://www.dxlive.com/recommended/" target="_top">&raquo;もっと見る</a></div>
+                <br style="clear:both;"/>
+              </div>
+              <!--/.hm_subSec--> 
+            </div>
+            <!--/.hm_subSecOuter-->
+            
+            <div class="hm_subSecOuter">
+              <h4 id="hm_newsHeader" class="hm_subSecHeader_b">DXLIVEよりお知らせ</h4>
+              <div class="hm_subSec">
+                <div class="hm_newsBlock">                   <h5>決済メンテナンス終了のお知らせ<span>(2015/02/10)</span></h5>
+                  <p>本日午前5時30分より実施しておりました決済メンテナンスは無事終了致しました。皆様のご協力ありがとうございました。</p>
+                                    <h5>決済メンテナンスのお知らせ<span>(2015/02/10)</span></h5>
+                  <p>本日2月10日午前5時30分より約40分間、決済に関するメンテナンスを行います関係で、新規ご入会、ポイントの購入並びにファンクラブへの入会ができなくなりますのでご了承下さい。なお、チャットやファンクラブ内の機能、ビデオ機能、サイト内メール等は通常通りご利用頂けます。その間ご不便をおかけ致しますが、ご理解並びにご協力の程何卒宜しくお願い致します。</p>
+                                    <p class="gl_p_btmMargin text-right" style="border-bottom:0;"> <a href="http://www.dxlive.com/home/siteNews">&raquo;もっと見る</a> </p>
+                </div>
+              </div>
+              <!--/.hm_subSec--> 
+            </div>
+            <!--/.hm_subSecOuter-->
+            <div class="hm_subSecOuter mainArticle cf">
+              <h2 id="hm_dxliveHeader" class="hm_subSecHeader_b">アダルトライブチャット DXLIVEとは？</h2>
+              <div class="hm_subSec hm_dxliveSec">
+                <article>
+                  <p class="gl_dxlive_imgRight"><img src="i/hm_dxlive_1.jpg" width="308" height="214" alt="ライブチャットDXLIVEにご登録頂いている女性（＝チャットレディ）は、OL、学生、人妻や熟女など多種多様" title="ライブチャットDXLIVEにご登録頂いている女性（＝チャットレディ）は、OL、学生、人妻や熟女など多種多様"></p>
+                  <p class="gl_p_btmMargin"> <strong>ライブチャット</strong>の老舗として業界最大級の<em>アダルトライブチャット</em>サービスの礎を築き、11年目を迎えることができた現在では約5万人以上の多くの会員様に日々ご愛顧頂いており、<em>Webカメラ</em>越しの<em>恋愛</em>や迫力の<span class="bold">オナニーショー</span>など、あらゆる男性と女性の<span class="bold">コミュニケーション</span>の場として、サービスをご提供しております。 </p>
+                  <p class="gl_p_btmMargin"> <em>DXLIVE</em>にご登録頂いている女性（＝<strong>チャットレディ</strong>）は、<span class="bold">OL、学生、人妻</span>や<span class="bold">熟女</span>など多種多様です。また、<span class="bold">エロ</span>さ<span class="bold">丸出し</span>の<span class="bold">外国人</span>や、<em>レズプレイ</em>を売りにしているカップルパフォーマーも人気です。 </p>
+                  <p class="gl_p_btmMargin"> 昼夜を問わず<span class="bold">女性がオンライン</span>しておりますので、その中から女の子検索機能でお好みのタイプの女性を選び、お部屋に入室するだけで、カンタンにビデオチャットをご利用頂けます。 </p>
+                  <p class="gl_p_btmMargin"> 女性一人一人の<span class="bold">プロフィール</span>情報や<span class="bold">ギャラリー、モバイル</span>でもご利用頂ける<span class="bold">DXLIVEメールサービス、</span>特定の女性が開設する<span class="bold">ファンクラブ</span>などをお使いいただくことで、チャット以外にもお楽しみいただけるコンテンツが充実しています。 </p>
+                  <p class="gl_p_btmMargin"> コミュニケーションの方法として、女の子と会話をするだけでなく、「<span class="bold">のぞき</span>」機能を使って、盛り上がっているライブ映像をのぞいたりする楽しみ方や「<span class="bold">秘密リクエスト</span>」機能を使って、女の子にエッチなお願いをすることもできます。 </p>
+                  <p class="gl_dxlive_imgLeft"><img src="i/hm_dxlive_2.jpg" width="244" height="190" alt="モちゃオリジナル、天使のクリオネ、つぶつぶローター、うさたま、ラブキャンディ、吸盤Qちゃんと全6種類" title="ちゃオリジナル、天使のクリオネ、つぶつぶローター、うさたま、ラブキャンディ、吸盤Qちゃんと全6種類"></p>
+                  <p class="gl_p_btmMargin"> また、<span class="bold">リモちゃ</span>と呼ばれる<span class="bold">遠隔操作</span>が可能なバイブレータータイプのオモチャがあります。DXLIVEの完全オリジナルサービスで、他に類をみない<span class="bold">アダルトエンターテイメント</span>をご提供します。 </p>
+                  <p class="gl_p_btmMargin"> 方法は簡単で、まず女性側でリモちゃをパソコンに繋げます。次にお客様の方で<span class="bold">無料チャットアプリ</span>を操作することでバイブの振動強度などをご自由にコントロールすることができます。 </p>
+                  <p class="gl_p_btmMargin"> りもちゃの種類には、<span class="bold">リモちゃオリジナル、天使のクリオネ、つぶつぶローター、うさたま、ラブキャンディ、</span>そして<span class="bold">吸盤Qちゃん</span>と全6種類あり、男性が女性にプレゼントするサービスを通してご自分の分身となるおもちゃをお好みの女性に使ってもらえば、あなたのことをより身近に感じてくれることは間違いありません。 </p>
+                  <p class="gl_p_btmMargin"> その他にもDXLIVEでは、チャットをお楽しみいただくために以下のような機能／サービスをご用意しております。 </p>
+                  <p class="gl_p_btmMargin"> お好みの女性を独り占め出来る<span class="bold">2ショット</span>サービス、男性会員様の映像と音声を配信できる<span class="bold">2Way</span>サービス、女の子への感謝の気持ちをプレゼントできる<span class="bold">チップ機能</span>など、これらは女の子との親密度をアップさせるツールとしてご用意しました。 </p>
+                  <p class="gl_p_btmMargin"> 更に、最近リリースされたばかりの新サービスとして<span class="bold">DXスタジオ</span>があります。
+                    この機能では、チャット映像のみならず、<a href="http://dxjob.dxlive.com" target="_blank">チャットレディ</a>との会話内容も含めて全て録画することができ、チャットが終了してから、女の子との楽しい思い出を再生、閲覧することが出来ます。
+                    まるで<span class="bold">動画AV</span>を体験しているような感覚をお楽しみいただけます。 </p>
+                  <p class="gl_dxlive_imgRight"><img src="i/hm_dxlive_3.jpg" width="244" height="156" alt="スマホ（iPhone / アンドロイド)にも対応" title="スマホ（iPhone / アンドロイド)にも対応"></p>
+                  <p class="gl_p_btmMargin"> このようにDXLIVEでは、お客様と女の子が楽しく遊べて、気持ち良くなっていただける<span class="bold">LIVE情報、</span>機能／サービスをご用意致しております。 </p>
+                  <p class="gl_p_btmMargin"> PCだけでなく、<span class="bold">スマホ（iPhone / アンドロイド)</span>にも対応していて24時間、好きなときにご利用いただけます。 </p>
+                  <p class=""> 初めてDXLIVEをお試しになる方には、<span class="bold">無料チャット</span>をお楽しみいただけるポイントをプレゼントしていますのでご登録をお待ちしております。 </p>
+                  <p class=""><br> 【臨時ニュース】今だけ！入会した後ポイント購入頂くと、フラッシュ［１０月７日発売号］で『<a href="http://www.dxlive.com/promo/2014/special/%E5%90%89%E9%87%8E%E5%85%AC%E4%BD%B3/m.html" target="_blank">吉野公佳 Ｍ</a>、<a href="http://www.dxlive.com/promo/2014/special/%E5%90%89%E9%87%8E%E5%85%AC%E4%BD%B3/%E9%80%86%E8%BC%B8%E5%85%A5.html" target="_blank">逆輸入</a>ヘ●ヌード』という記事で話題の吉野公佳の特別動画が見れます。 </p>
+                  <p class="gl_p_btmMargin text-right"> <a href="http://www.dxlive.com/promo/FREE/newfreejoin/index.html?utm_source=guest_home&amp;utm_medium=dxtext&amp;utm_campaign=dxtxt_bottom">&raquo;10分間無料体験はコチラ</a> </p>
+                </article>
+              </div>
+              <!--/.hm_subSec.hm_dxliveSec.gr_contents--> 
+            </div>
+             </div>
+          <!--/#gl_mainContents--> 
+        </div>
+        <!--/#gl_mainContentsOuter--> 
+        
+        				<div id="gl_sideColOuter">
+					<div id="gl_sideCol">
+<!--random preview starts-->
+						<!--random preview ends-->		
+						<ul id="gl_loginBtns">
+							<li id="gl_login_vw" class="gl_login_li">
+								<a href="http://www.dxlive.com/member/pageSelect" class="gl_fade">男性会員ログイン</a>
+							</li>
+							<!--li id="gl_login_trial" class="gl_login_li">
+								<a href="/member" class="gl_fade">ログイン(トライアル)</a>
+							</li-->
+							<li id="gl_login_pf" class="gl_login_li">
+								<a href="http://www.dxlive.com/performer" class="gl_fade">女性会員ログイン</a>
+							</li>
+						</ul>
+
+                        <div class="btn_Rjoin" style="margin-bottom:1px;">
+                        	<a href="http://www.dxlive.com/promo/FREE/newfreejoin/index.html" onMouseDown="ga('send', {hitType:'event', eventCategory:'link_all', eventAction:'click_newjoin', eventLabel:'banner_g',eventValue:1, nonInteraction:true});">無料10ポイント獲得</a>
+                        </div>
+						
+						
+						<div class="gl_sideHeader">女の子情報</div>
+						
+						<div class="gl_sideBlock">
+							<!--temporary adjustment by wito2009 10/10/2013--><span id="totalhere" style="display:none"></span>
+																					<table class="gl_stsTable">
+								<tbody>
+								<!--tr>
+								  <td class="white size12">登録数：</td>
+								  <td class="pink size12" id="totalhere">-</td>
+								</tr-->
+								<tr>
+								  <td class="white size12">オンライン：</td>
+								  <td class="pink size14" id="onlinehere">-</td>
+								</tr>
+								<tr>
+								  <td class="white size12">チャット中：</td>
+								  <td class="pink size14" id="chathere">-</td>
+								</tr>
+							  </tbody>
+							</table>
+						</div>
+
+
+<!-- イベントカレンダーここから
+<div class="gl_sideHeader">お知らせ</div>
+<div class="gl_sideBlock">
+<img src="/i/calendar.gif" width="166" height="195" usemap="#calendarMap" border="0">
+<map name="calendarMap">
+	<area shape="circle" coords="130,57,25" href="/promo/2013/100713_hiruwari/index_home.html" title="昼割30%OFF">
+	<area shape="circle" coords="61,42,24" href="/promo/2013/100413_hanamaru/index_home.html" title="花丸半額">
+	<area shape="circle" coords="59,125,22" href="/promo/2013/100413_kaeruday/index_home.html" title="かえるデー半額">
+	<area shape="circle" coords="36,174,21" href="/promo/2013/100413_rookies30off/index_home.html" title="新人30%OFF">
+	<area shape="rect" coords="88,49,112,164" href="/promo/2013/100713_hiruwari/index_home.html" title="昼割30%OFF">
+</map>
+</div>
+イベントカレンダーここまで　-->	
+						
+						<div id="rkg" class="user_guest">
+							<!--div class="gl_sideHeader">女の子ランキング</div-->
+							<div class="gl_sideDevider"></div>
+							<div class="gl_sideBlock">
+								<div id="ranking_holder">
+								
+								</div><!-- #ranking_holder--><!--this holder holds all of div.rkg_category_box s-->
+							</div>
+						</div>
+						<!--div class="gl_sideBlock"><a href="http://www.dtiserv.com/cgi-bin/ranklink/ranklink.cgi?id=dxlive" onClick="urchinTracker('/virtualpage/ranking1');" onFocus="this.blur()" target="_blank"><img src="/img/BN/rankingBan.jpg" width="165" height="355"></a></div-->
+						
+						
+						<!--div class="gl_sideHeader">アイコン説明</div>
+						<div class="gl_sideBlock">
+						<img src="/i/icon_instruction.gif" width="166" height="249" alt="アイコンの説明">
+						</div-->
+
+
+						<!--div class="gl_sideHeader">ただいま開催中！</div-->
+							
+                                
+
+
+						<div id="app_stickyAdd">
+							<div class="gl_sideHeader">お知らせ</div>
+							<div class="gl_sideBlock">
+								<!-- Challenge Mode Starts-->
+								<a href="http://www.dxlive.com/ch_intro.html" target="_blank"><img src="promo/2015/2015_challenge/ch_right_column_166x200.jpg" alt="燃えろ! チャレンジモード" width="166" height="200" border="0"></a>
+								<!-- Challenge Mode Ends-->
+                            	<!-- DX Gift Starts-->
+								<a href="http://www.dxlive.com/gift/present_rule.html" target="_blank"><img src="img/BN/2014/DXgift/DXgift166x200.jpg" alt="DXギフト" width="166" height="200" border="0"></a>
+								<!-- DX Gift Ends-->
+							<!--<a href="http://www.dxlive.com/promo/2014/112514_kaikin/index_kaikin.html" target="_blank" style="display:block; width:166px; height:200px;"><img src="http://www.dxlive.com/promo/2014/102114_kaikin/166x200.jpg" border="0" width="166" height="200"></a>-->
+							</div>
+						<!--<a href="/promo/2014/062514_expert/index.html" target="_blank" style="display:block; width:166px; height:200px;"><img src="/promo/2014/062514_expert/img/bn_right_tatsujin.jpg" border="0" width="166" height="200"></a>-->
+							<!--<div class="gl_sideHeader">次回ログイン予定一覧ページ</div>-->
+							<div class="gl_sideBlock">
+								<a href="http://www.dxlive.com/nextlogin/"  style="display:block; width:165px; height:200px;"><img src="img/BN/bn_right_nextlogin.jpg" border="0" width="165" height="200" alt="次回ログイン予定一覧ページ"></a>
+							</div>
+							
+						
+							
+							<div class="gl_sideHeader">募集情報</div>
+							<div class="gl_sideBlock">
+								<a href="http://click.dtiserv2.com/redir.fcgi?click=1401&amp;site=100&amp;b=1401&amp;lang=tokyo" target="_blank"><img src="img/BN/chatgirl.gif" style="border:0;border-bottom:2px solid #000; border-top:#000 1px solid;" alt="チャットレディ募集"></a>
+								<a href="http://www.910work.com/agent/index.shtml" target="_blank"><img src="img/BN/910.jpg" style="border:0;border-bottom:2px solid #000;" width="166" height="132" alt="DXLIVE代理店募集"></a>
+							
+								<a href="http://www.affiliate-dti.com/vchat/index02.html" target="_blank"><img src="img/BN/side_affiliatePR.gif" width="166" height="130" style="border:0" alt="DXLIVEアフィリエイト募集"></a>
+							</div>
+							<div class="gl_sideHeader">その他</div>
+								<div class="gl_sideBlock">
+									<a href="http://www.adultmango.com/cgi-bin/ranklink.cgi?id=dxlive" target="_blank" style="display:block; width:165px; height:287px;"><img src="img/BN/bn_right_rank_access.jpg" style="border:0" width="165" height="287" alt="アダルトランキング"></a>
+								</div>
+								<div class="gl_sideBlock">
+									<a href="http://www.adultpeach.com/cgi-bin/contentsranking.cgi?id=dxlive" target="_blank"><img src="img/BN/bn_right_rank_contents.gif" width="166" height="129" alt="アダルト動画ランキング" style="border:0"></a>
+								</div>
+							</div>
+							
+						</div><!--/#app_stickyAdd-->
+
+					</div><!--/#gl_sideContents-->
+				</div><!--/#gl_sideContentsOuter-->
+
+
+
+
+ </div>
+      <!--/#gl_contents--> 
+    </div>
+    <!--/#gl_contentsOuter--> 
+    
+  </div>
+  <!--/#gl_mainContents--> 
+  
+</div>
+<!--/#gl_mainOuter--> 
+
+<div id="gl_btmOuter">
+	<div id="gl_btm">
+		<div class="gl_btmDevider"></div>
+		<!--grid-->
+		<div class="gr_container">
+			
+			
+			<div class="gr_row gl_btm_contents">
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">ご利用ガイド</h5>
+						<ul class="hm_btm_ul">
+							<li><a href="http://www.dxlive.com/first_time01.html">初めての方へ</a></li>
+							<li><a href="http://www.dxlive.com/howto_guest01.html">遊びガイド</a></li>
+							<li><a href="http://www.dxlive.com/recommendedEnv.html">利用環境ガイド</a></li>
+							<li><a href="http://www.dxlive.com/faq.html">よくある質問</a></li>
+							<li><a href="http://www.dxlive.com/warning.html">注意事項</a></li>
+							<li><a href="https://service.d2pass.com/dxnonmember/inquiry/" target="_blank">お問い合わせはこちら</a></li>
+							<li><a href="http://www.dxlive.com/sitemap.html">サイトマップ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">サイト情報</h5>
+						<ul class="hm_btm_ul">
+                        	<li><a href="https://twitter.com/DXLIVE_INFO" target="_blank">DXLIVE公式ツイッター</a></li>							
+							<li><a href="http://www.dxlive.com/blog/" target="_blank">DXLIVE公式ブログ</a></li>
+							<li><a href="http://www.dxlive.com/history/index.html">DXLIVEの歴史</a></li>
+							<li><a href="http://www.dxlive.com/promo/zukan/zukan.html">DXLIVE図鑑</a></li>
+							<li><a href="http://www.dxlive.com/terms.html">DXLIVE利用規約</a></li>
+                            <li><a href="http://www.dxlive.com/privacy.html">DXLIVEプライバシー声明</a></li>
+							<li><a href="http://www.dxlive.com/mag/guest">メルマガ登録＆解除</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">会員情報</h5>
+						<ul class="hm_btm_ul">
+							<!--li><a href="/myPage/" target="_blank">マイページ</a></li-->
+                            <li><a href="http://www.dxlive.com/recommended" onclick="openRecommended();return false;" >女の子推薦</a></li>
+							<li><a href="http://www.dxlive.com/search/search_page/">女の子検索</a></li>
+                            <li><a href="http://www.dxlive.com/gift/present_rule.html">DXギフト</a></li>
+							<li><a href="http://www.dxlive.com/ranking/all">ランキング</a></li>
+							<li><a href="http://www.dxlive.com/video">DXビデオ</a></li>
+							<li><a href="http://www.dxlive.com/fanclub">ファンクラブ</a></li>
+							<li><a href="http://www.dxlive.com/perf_links.html">女の子一覧</a></li>
+					
+						</ul>
+					</div>
+				</div>
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">募集情報</h5>
+						<ul class="hm_btm_ul">
+																																			<li><a href="http://www.dxlive.com/job/" style="background-image:url(i/gl_hm_btm_ul_li_a_PF.gif); color:#ffccff; font-weight:bold;" target="_blank">チャットレディ募集中</a></li>
+							<li><a href="http://www.910work.com/agent/index.shtml" target="_blank">エージェント募集</a></li>
+							<li><a href="http://www.affiliate-dti.com/" target="_blank">アダルトアフィリエイト</a><!--募集--></li>
+							<!--li><a href="http://jp.vctp.com/" target="_blank">ネット起業したい方募集</a></li-->
+						</ul>
+					</div>
+				</div>
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">おすすめサイト</h5>
+						<ul class="hm_btm_ul">
+							<li><a href="http://www.d2pass.com/guest/" target="_blank">D2PASS(ポータル)</a></li>
+							<li><a href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=6&amp;b=1400&amp;lang=tokyo" target="_blank">カリビアンコム(動画)</a></li>
+							<li><a href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=18&amp;b=1400&amp;lang=tokyo" target="_blank">一本道(動画)</a></li>
+							<li><a href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=173&amp;b=1400&amp;lang=tokyo" target="_blank">カリビアンコムガール</a></li>
+							<li><a href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=132&amp;b=1400&amp;lang=tokyo" target="_blank">感熟ライブ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="gr_col_2">
+					<div class="btm_section_b">
+						<h5 class="hm_btm_secHeader_b">D2関連情報</h5>
+						<ul class="hm_btm_ul">
+							<li><a href="http://www.d2pass.com/guide/" target="_blank">D2PASSガイド</a></li>
+							<li><a href="http://www.d2pass.com/guide/2/" target="_blank">D2PASS加盟サイト比較</a></li>
+						</ul>
+					</div>
+				</div>
+					
+			</div>
+
+		</div>
+	<div class="gl_btmDevider_b"></div>
+	</div><!--/#gl_btm-->
+</div><!--/#gl_btmOuter-->
+
+
+<div id="gl_footerOuter">
+	<div id="gl_footer">
+	
+		<div id="gl_footer_copyright">
+			<!--<script>copyright();</script>-->(C)2002 DXLIVE.COM ALL RIGHTS RESERVED&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="http://www.dxlive.com/cert.html" target="_blank" rel="nofollow">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</a>
+		</div> 
+		<a href="https://service.d2pass.com/cp/inquiry/" target="_blank"><img src="img/site_18_text_b_c.gif" alt="D2PASS 通報フォーム" style="margin-top:5px; border:0;"></a>
+        <div style="width:600px; margin:0 auto 0 auto;"><p style=" margin:0; text-align:left; color:#FFF;">Parents!<br>
+			Click here to block this website with parental controls.
+			This site contains (sexually explicit) content of an adult-oriented nature inappropriate for those under the age of 18.<br>
+			<a href="http://www.d2pass.com/hogosha_eng" target="_blank">&gt;&gt; For more information click here. </a></p>
+		</div> 
+	</div>
+</div>
+<img src="ping" width="0" height="0" alt="DXLIVE System Related Image">
+<!--crazzy egg tracking script Jan 15 2015 put by wito2009 on request from K-san-->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0028/5431.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+ 
+<script type="text/javascript" src="json/performer_hana"></script> 
+<script type="text/javascript" src="json/performer"></script> 
+<script type="text/javascript" src="json/performer_jp"></script> 
+<script type="text/javascript" src="js/home/new_girls.js"></script> 
+<script type="text/javascript" src="min/index.html?f=js%252Flatest%252Fjquery-1.10.2.min.js,js%252Flatest%252Fjquery-migrate-1.2.1.min.js,js%252Fflash%252Fchat.js,js%252Flatest%252Fjquery.cookie.min.js,js%252Fcommon.js,js%252Fsearch.js,js%252Fd2pass.js,js%252Flatest%252Fjquery.dxMiniRanking.js,js%252Fho"></script> 
+<!--,j/dxbannerslider/dxbannerslider.min.js--> 
+<script type="text/javascript" src="j/chbnrV3.js"></script> 
+ 
+<script type="text/javascript" src="js/random_preview_dxhome_hana.js"></script> 
+
+<div id="age_overlay" class="age_display"></div>
+<div id="age_modalOuter" class="age_display">
+	<div id="age_modalInner">
+		<div id="age_warning_jp">
+			<p>
+				ここから先は、<span class="bold" style="color:#f39">アダルト商品を取り扱うアダルトサイト</span>と<br>なります。18歳未満の方のアクセスは固くお断り致します。
+			</p>
+		</div>
+		<div id="age_btns_jp" class="cf">
+			<a href="javascript:void(0);" id="age_btns_jp_enter" onclick="verifyAge()">
+				<p class="ab_smlTxt">18歳以上の方</p>
+				<p class="ab_lrgTxt">入場する</p>
+			</a>
+			
+			<p class="ab_leaveTxt">18歳未満の方&nbsp;&nbsp;<a href="http://www.yahoo.co.jp" rel="nofollow" id="age_jp_leave">退場する</a></p>
+				
+			
+		</div>
+		<div id="age_warning_en">
+			<p>
+				This site contains <span class="bold" style="color:#f39">sexually explicit material.</span><br>
+				Enter ONLY if you are over 18.
+			</p>
+		</div>
+		<div id="age_btns_en" class="cf">
+			<a href="http://en.dxlive.com/home" id="age_btns_en_enter" onclick="">
+				<p class="ab_smlTxt">18 and over</p>
+				<p class="ab_lrgTxt">Continue</p>
+			</a>
+			<a href="http://www.yahoo.com" rel="nofollow" id="age_btns_en_leave">
+				<p class="ab_smlTxt">Under 18</p>
+				<p class="ab_lrgTxt">Leave</p>
+			</a>
+		</div>
+		
+		<div id="age_jobBanner">
+			<a href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=100&amp;b=1400&amp;lang=tokyo" target="_blank"><img src="img/BN/job_banner_112613.gif" width="360" height="30" alt="チャットレディ募集"></a>
+		</div>
+		
+		<div id="age_terms" class="cf">
+			<div class="age_termsBox">
+				
+				<div class="at_scrllBox">
+<span class="bold">当サイトのコンテンツは成人を対象としています。<br>下記事項に同意する方のみご利用頂けます。</span><br>
+アダルトコンテンツ表示のご注意：<br>
+貴殿がこれから開こうとしているウェブサイトにはアダルトコンテンツが含まれています。このページを閲覧するには、下記内容に同意しなければなりません。
+私は18歳以上の成人であり、このアダルトコンテンツ同意書を読んでその内容を理解しました。本同意書の規約は DXLIVE（ＤＸライブ）およびその後継サイト、譲渡人、使用権所得者の利益のために、効力を生じることを理解します。<br>
+私は本サイトの内容が、アダルト関連または物議の対象となりそうな言語、コンテンツ、イメージ、テーマを含むものであること、本サイトには不快なヌードコンテンツあるいは性的描写は含まれていないことを理解します。<br>
+私は私の居住する地域社会における風俗関連のメディアに関する規範・法律を理解しています。こうした地域社会の規範・法律を理解している私は、本サイトの閲覧がこうした規範・法律に違反しないことを言明します。また、私の本サイトの閲覧に関し、DXLIVE (DXライブ) には一切の責任がないことを言明し、本同意書の規約に同意します。<br>
+私は本サイトに表示されるコンテンツが、本サイト、すなわちパフォーマーと私の意見や見識を反映するものであり、 DXLIVE（ＤＸライブ）の意見や見識を反映するものではないことを理解します。また、こうしたパフォーマーは DXLIVE（ＤＸライブ）の社員または代理人ではなく、またそうした解釈の範囲にも含まれないことを理解します。<br>
+本サイトを利用する私またパフォーマーは、共に独立した利用者であり、よって、独立した情報コンテンツのプロバイダーとして認識されることを理解し、それに同意します。 DXLIVE（ＤＸライブ）はインタラクティブ（相互対話型）のコンピュータサービスを提供しているに過ぎないことを理解します。<br>
+私に不快感を与えるコンテンツがあった場合にも、 DXLIVE（ＤＸライブ）は、そのコンテンツを削除する義務を負いません。<br>
+契約または保証の違反、過失を含む不法行為、補償的損害賠償、利益の損失、データおよび製造物責任他により発生したいかなる実害、付随的損害、間接的損害、懲罰的損害に関しても、 DXLIVE（ＤＸライブ）は私に対して一切の責任を負う必要はありません。仮に DXLIVE　（ＤＸライブ）がこうした損害の可能性を事前に知らされていた場合にも、 DXLIVE（ＤＸライブ）には責任がないことを理解します。<br>
+本同意書に対する改訂または条項への修正は、 DXLIVE　（ＤＸライブ）による署名入りの書面により有効となることを理解します。何らかの理由により、管轄の裁判所が本同意書内の条項または一部を施行不可とみなした場合にも、それ以外の本同意書の条項ならびに内容は施行可能・有効となります。本同意書は、本同意書の目的に関する当事者間の完全な了解事項を含みかつ過去の書面または口頭による明示的または黙示的な全ての了解事項に優先することを理解します。
+				</div>
+			</div>
+			<div class="age_termsBox">
+				
+				<div class="at_scrllBox atsb_right">
+<span class="bold">ADULT CONTENT WARNING</span><br>
+NOTE: Before continuing to enter this web site, you must affirm the following: "I hereby affirm, under penalty of perjury pursuant to 28 U.S.C. § 1746, that I am currently 18 years of age (or the age of legal majority in the jurisdiction in which I reside, whichever is greater) or older." Providing a false declaration under penalty of perjury is a criminal offense. This affidavit constitutes a sworn declaration under Federal law, and is intended to be governed by the Electronic Signatures Act.
+				</div>
+			</div>
+		</div>
+		<a id="age_cert" target="_blank" rel="nofollow">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</a> 
+	</div>
+</div>
+<script>
+/* have to be called immediately*/
+//console.log($.cookie('ageVerifiedB'))
+/*deals with swf object z-index issue*/
+
+$('#vidPlayerHere').css('visibility','hidden');
+window._agck = parseInt(getQueryVariable('age_check'));
+if(window._agck === 0 || (parseInt($.cookie('ageVerifiedC'))===1 && window._agck !== 1) ){
+	/*redundnt but precaution*/
+	$('#vidPlayerHere').css('visibility','visible');
+	$(".age_display").css('display','none').remove();
+}
+function verifyAge(){
+	$.cookie('ageVerifiedC',1,{expires:7, path:'/'});
+	$('#vidPlayerHere').css('visibility','visible');
+	$(".age_display").css('display','none').remove();
+}
+</script> 
+<script>
+var vip_from_member_template = '';
+function home_init(){
+	
+	//cyclePreview();
+	
+//	xmlHttpGet('/search?online=1&session_type=115,120&order_by=jp_en_then_wait_time&online=1','sessionhere');
+        xmlHttpGet('/search?online=1&order_by=fav_count_only&online=1','sessionhere');
+	
+//	xmlHttpGet('/search?online=1&session_type=110&order_by=random&online=1','thumbshere');
+  	
+//  	xmlHttpGet('/search?online=1&session_type=125,130&order_by=jp_2shot&online=1','twoshothere');
+	
+	xmlHttpGet('/search?tpl=bakuhatsu_new&limit=4&force_limit=1&online=1&session_type=115,120,135&order_by=popular_bakuhatsu','bk_bakuhatsuHolder');
+
+	/*cyclePreview();*//*this is after random_preview_dxhome.js rady*/
+	/*MM_preloadImages('/img/home/btn_regist_b2_ov.jpg')*/
+	
+
+	
+	/***********side ranking:start***********/
+	$('#ranking_holder').dxMiniRanking({
+                                rkgURLs: ['/ranking/miniRanking/general','/ranking/miniRanking/toys_daily','/ranking/miniRanking/new_daily','/ranking/miniRanking/vip_daily','/ranking/miniRanking/daytime_daily','/ranking/miniRanking/total_daily'],
+                                duration: 11000,
+                                fadeInDuration:150,
+                                fadeOutDuration:150
+                        });
+	/***********side ranking:end***********/
+	
+	
+	
+	$('#app_stickyAdd').stickIt({si_main:'#gl_mainContentsOuter', si_side:'#gl_sideColOuter'});
+	
+	
+	
+/*****************bannerSlider: begin****************/
+bannerListURL='http://www.dxlive.com/include/js/schedule/banner_new_guest.js';
+
+//$('#hm_bannerSlider').dxbannerslider({
+//			dxbs_targetList: 'http://franchat-jp.dxlive.com/include/js/schedule/banner_new_guest.js',/*リストURL・ここだけfranchat-jpで*/
+//			dxbs_spacer: 'http://www.dxlive.com/img/s.gif',/*フラッシュバナーのスペーサー用*/
+//			dxbs_loaderImg: 'http://www.dxlive.com/img/ranking_new/ajax-loader.gif',/*ローディング画像*/
+//			dxbs_width:996,/*横幅*/
+//			dxbs_height:186,/*縦幅*/
+//			dxbs_bgcolor:'#111',
+	
+//			dxbs_ifBannerPosition:true,/*丸ボタンの有無 falseで消えます。*/
+		
+//			dxbs_ifCount:true,/*ループをカウントするか*/
+//			dxbs_countNumber:20/*上がtrueの時、カウントが20すると自動アニメは停止*/
+//		});
+/*****************bannerSlider: end****************/
+
+	/*auto reload*/  
+	//init_onoffswitch();
+	setTimeout("autoupdate('home')", global_tab_interval);
+	/*mac compensation css hook: start*/
+	if (navigator.appVersion.indexOf("Mac") !=-1){  
+ 		 $('body').addClass('gl_mac');
+	}  
+	/*mac compensation css hook: end*/
+	//  xmlHttpGet('/search/bakuhatsu/kl','bakuhatsu_kl');
+  //xmlHttpGet('/search?online=1&tpl=count', 'onlinehere');
+  //xmlHttpGet('/search?online=1&tpl=count&session_type=115,120,125,130', 'chathere');
+  	
+	var onlinehere = document.getElementById('onlinehere'),
+	chathere = document.getElementById('chathere');
+	
+	onlinehere.innerHTML = performers.list.length;
+	chathere.innerHTML = performers.busy.length;
+	//hm_showRecomen();
+	xmlHttpGet('/search/totalCount', 'totalhere');
+  	//xmlHttpGet('/search/viewer/points/viewer/?tpl=ajax','pointhere');
+	xmlHttpGet('/pickup', 'app_recomenBox');
+  
+  	/*start: icon description right below the online tab.*/
+	var $hm_si_toggleBtn = $('#hm_si_toggleBtn'),
+	$hm_si_descOuter = $('#hm_si_descOuter');
+	window.__hm_si_toggleTimmer;
+  	
+	$('#hm_si_toggleBtn2, #hm_si_toggleBtn').on('click',function(){
+	  	clearTimeout(window.__hm_si_toggleTimmer);
+		//var $this = $(this),
+	  	//$trgt = $($this.data('target'));
+	  	$hm_si_descOuter.fadeToggle(200);
+		
+	});
+	
+	$hm_si_toggleBtn.on('mouseover',function(){
+	  	clearTimeout(window.__hm_si_toggleTimmer);
+		//var $this = $(this),
+	  	//$trgt = $($this.data('target'));
+		if(!$hm_si_descOuter.is(':visible')){
+			$hm_si_descOuter.fadeToggle(200);
+		}
+	});
+	$hm_si_descOuter.on('mouseover',function(){
+	  	clearTimeout(window.__hm_si_toggleTimmer);
+	});
+	$hm_si_toggleBtn.on('mouseout',function(){
+	  	window.__hm_si_toggleTimmer = setTimeout(function(){
+			if($hm_si_descOuter.is(':visible')){
+				$hm_si_descOuter.fadeToggle(200);
+			}
+		},500);
+	});
+	$hm_si_descOuter.on('mouseout',function(){
+	  	window.__hm_si_toggleTimmer = setTimeout(function(){
+			if($hm_si_descOuter.is(':visible')){
+				$hm_si_descOuter.fadeToggle(200);
+			}
+		},500);
+	});
+	/*end: icon description right below the online tab.*/
+
+
+/*****************online tab: start******************/
+var $app_ot_btns = $('.app_ot_btn'),
+app_ot_usr;
+if(userType===undefined||userType===null||userType===''){
+	app_ot_usr = 'guest';
+} else if (userType==='205' || userType==='208') {
+	app_ot_usr = 'reg';
+} else if (userType === '206' || parseInt(userType) >= 206 ) {
+	app_ot_usr = 'vip';
+}
+
+$app_ot_btns.on('click',function(){
+	var $this = $(this);
+	if (!$this.hasClass('hm_ot_selected')) {
+		$app_ot_btns.removeClass('hm_ot_selected');
+		$this.addClass('hm_ot_selected');
+		categoryView($this.data('tabcat'),'',app_ot_usr);
+		tabga($this.data('tabcat'));
+	}
+	$this = null;//just in case... 
+});
+
+var milf = null;
+
+if(milf)
+{
+    $app_ot_btns.removeClass('hm_ot_selected');
+    $('#milf_performers').addClass('hm_ot_selected');
+    categoryView('milf_performers','',app_ot_usr);
+    milf = null;
+}
+/*****************online tab: end********************/ 
+
+
+
+
+var large=getCookie('thumbsize');
+
+if(large == 1)
+	$('#thsbtn_on').html('大');	
+else
+	$('#thsbtn_on').html('小');	
+
+}
+
+</script> 
+<!--bottom part--> 
+ 
+<script>
+/**********temporary code by wito2009 11/08/13 ***********/
+//$.ajax({
+//	url:'/include/newtb',
+//	dataType:'html',
+//	success:function(data,status,jqXHR){
+//		//console.log(data,status,jqXHR);
+//		$('body').prepend(data);
+//	}
+//});
+</script> 
+ 
+<!--script src="http://bn.dxlive.com/js/latest/chroms27swf.min.js" type="text/javascript"></script--> 
+<img src="http://tar1.d2pass.com/t/dx/home/1.gif" width="1" height="1" alt="DXLIVE System Related Image"> 
+<!--script src="/js/latest/dxNyuBanner/jquery.dxNyuBanner.min.js"></script--><!--bottom promotional banner space-->
+<!--when not in use, let's just un-include from /home, or comment out this section--> 
+<script>
+ global_cookiname  = "refreshflag_guest";
+ onoffswitch();
+</script> 
+<script>
+/*if(document.getElementById('d2p_toolbarHolder')){
+	
+	//scrollBy(0,46);
+	
+	window.scrollTo(0, (  (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop )  + document.getElementById('d2p_toolbarHolder').offsetHeight );
+}*/
+/*in case this is called when div#d2p_toolbarHolder is not present*/
+window._d2ptbq = window._d2ptbq || {
+	prepend : function(html){
+		//console.log(html);
+		//console.log(this.$);
+		//window._d2ptbqInner = this.$(html);
+		//window._d2ptbqInner.css('opacity',0);
+		if(document.getElementById('d2p_toolbarHolder')){
+			this.$('#d2p_toolbarHolder').append(html);
+		} else {
+  			this.$('body').prepend(html);
+		}
+		//console.log(this);
+  		/*if(document.getElementById('d2p_toolbarHolder')){
+  			window._d2ptbqInner.appendTo('#d2p_toolbarHolder').animate({opacity:1},400,function(){window._toolbar2.$('#d2p_toolbarHolder').css('background','none')});
+  		} else {
+  			window._d2ptbqInner.prependTo('body').animate({opacity:1},400);
+		}*/
+	}
+};
+(function() {
+var d2ptb = document.createElement('script'); d2ptb.type = 'text/javascript'; d2ptb.async
+= true;
+d2ptb.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +
+'images.d2pass.com/images/d2p_toolbar/min.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(d2ptb, s);
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+
+/* ==== INDEX ==== */
+
+/*	SECTION =1 PRE INDEX
+
+/*	SECTION =2 OTHER PAGE COMPONENTS	-	sitemap, contact, help
+
+/*	SECTION =3 JOIN		-	join page components
+
+/*	SECTION =4 FORUM	-	forum page components
+
+/*	SECTION =5 REVIEW	-	review page components
+
+/*	SECTION =6 CANCEL	-	membership expiration page
+
+
+
+/*	SECTION =1 PRE INDEX
+----------------------------------------------------------------------------------------------------*/
+
+#pre-cont {
+	width: 700px;
+	margin: 0 auto;
+	background-color: #000;
+	padding: 10px 0;
+	display: block;
+}
+
+#pre-cont div {
+	width: 630px;
+	margin: 0 auto;
+}
+
+
+
+/*	SECTION =2 OTHER PAGE COMPONENTS
+----------------------------------------------------------------------------------------------------*/
+
+#etc-main {
+	float: left;
+	width: 630px;
+}
+
+#etc-main ul {
+	margin: 0 0 15px;
+	line-height: 1.5em;
+}
+
+#etc-main ul li.qq {
+	color: #f00;
+	padding: 10px 0 0 0;
+}
+
+#etc-main h1 {
+	background-color: #282828;
+	color: #fff;
+	width: 620px;
+}
+
+#etc-main h2 {
+ q background-color:#790102;
+	color: #fff;
+	width: 620px;
+}
+
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10, #q11, #q12, #q13, #q14, #q15, #q16, #q17, #q18, #q19, #q20, #q21, #q22, #q23, #q24, #q25, #q26, #q27, #q28, #q29, #q30, #q31, #q32, #q33, #q34, #q35, #q36, #q37,#q37-a, #q38, #q39, #q40, #q41, #q42, #q43, #q44, #q45, #q46, #q47, #q48, #q49, #q50 {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #fc0;
+}
+
+div.point-cont {
+}
+
+div.point-cont em {
+	color: #c00;
+	font-style: normal;
+	padding: 0 10px 0 0;
+	font-weight: bold;
+}
+
+div.point-cont dl {
+	background-color: #fff;
+	padding: 10px;
+	color: #000;
+	border: 1px solid #000;
+	position: relative;
+}
+
+div.point-cont dl dt {
+	border: 1px solid #000;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+div.point-cont dl dd {
+	padding: 0 0 3px;
+}
+
+div.point-cont dl dd.btn {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+div.point-cont dl a {
+	color: #000;
+}
+
+
+
+/*	SECTION =3 JOIN
+----------------------------------------------------------------------------------------------------*/			
+
+table.join {
+	border-collapse: collapse;
+	width: 630px;
+	color: #fff;
+	margin: 20px 0;
+	background-color: #151515;
+}
+
+table.join th {
+	color: #fff;
+	border: 1px solid #282828;
+	background: url(http://www.muramura.tv/images/bg-hdg-join.gif) 0 0 repeat-x;
+}
+
+table.join td {
+	border: 1px solid #282828;
+ q background-color:#f1f1f1;
+	padding: 2px 5px;
+	text-align: center;
+}
+
+table.join span {
+	display: block;
+}
+
+table.join img {
+	vertical-align: bottom;
+}
+
+table.join ul {
+	padding: 10px 5px 10px 20px;
+	text-align: left;
+}
+
+table.join ul li {
+	padding: 0 0 5px;
+	list-style: outside;
+}
+
+table.join ul li em {
+	font-style: normal;
+	color: #fc0;
+	padding: 0 3px 0 0;
+}
+
+table.join form {
+	padding: 10px 10px 10px 20px;
+ q width:110px;
+	margin: 0 auto;
+}
+
+textarea.join-kiyaku {
+	font-size: 10px;
+}
+
+em.emph4 {
+	color: #fff;
+	font-weight: bold;
+	font-style: normal;
+	padding: 0 0 10px;
+}
+
+table.price td {
+	padding: 15px;
+}
+
+li#price_list {
+	list-style-type: square;
+}
+
+#d2pq {
+	background-color: #fff;
+	color: #000;
+	padding: 10px;
+	margin: 20px 0;
+	border: 5px solid #eee;
+}
+
+#d2pq dl {
+}
+
+#d2pq dl dt {
+	background-color: #666;
+	color: #fff;
+	padding: 3px 5px;
+	text-align: left;
+}
+
+#d2pq dl dd {
+	background-color: #eee;
+	padding: 3px 5px;
+}
+
+#d2pq a img {
+	border: none;
+}
+
+#d2pq p.cs-info {
+	margin: 18px 0 0;
+	padding-left: 2px;
+}
+
+#d2pq p.cs-info small {
+	font-size: 11px;
+	color: #666;
+}
+
+
+
+/*	SECTION =4 FORUM
+----------------------------------------------------------------------------------------------------*/	
+
+table.forum {
+	margin: 10px 0;
+	border-collapse: collapse;
+}
+
+table.forum td, table.forum th {
+	padding: 10px 30px;
+	border: 1px solid #000;
+}
+
+table.forum th {
+	color: #000;
+}
+
+table.forum td.diff {
+	padding: 10px;
+	font-weight: bold;
+}
+
+table.forum td.mids {
+	text-align: center;
+}
+
+table.forum th {
+	background-color: #a6a6a6;
+}
+
+table.forum td {
+	background-color: #282828;
+}
+
+table.forum td.bsheep {
+	background-color: #000;
+}
+
+table.forum .pagenate {
+	background-color: #000;
+	text-align: left;
+	margin: 0 0 0 -20px;
+}
+
+table.forum .pagenate2 {
+	text-align: center;
+}
+
+p.think {
+	font-weight: bold;
+}
+
+em.emph5 {
+	color: #f00;
+	font-weight: bold;
+	font-style: normal;
+}
+
+h2.topic_title {
+	background-color: #000;
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffcc00;
+}
+
+
+
+/*	SECTION =5 REVIEW PAGE
+----------------------------------------------------------------------------------------------------*/	
+
+div.review-cont {
+}
+
+div.review-cont dl {
+	margin: 0 0 40px;
+}
+
+div.review-cont h1 {
+	background-color: #000 !important;
+	color: #fff;
+}
+
+div.review-cont dl a.title {
+	display: block;
+	padding: 0 0 5px;
+}
+
+div.review-cont dl dt {
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+div.review-cont dl dd {
+	padding: 0 0 10px;
+}
+
+div.review-cont dl dd.info {
+	position: relative;
+}
+
+div.review-cont dl em {
+	font-style: normal;
+	color: #fc0;
+	padding: 0 10px 0 0;
+}
+
+div.review-cont dl dd.info span {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+div.review-cont dl dd.link {
+	position: relative;
+}
+
+div.review-cont dl dd.link a {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/* added on 10/8/2013 for affi embed code part */
+
+#embedForm {
+	width: 800px;
+}
+
+#embedForm h2 {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+#embedForm p {
+	margin: 10px;
+}
+
+#embedForm p#id_error {
+	color: #cc0000;
+	margin: -5px auto 10px 100px;
+}
+
+#embedPlayer {
+	margin: 20px 40px;
+}
+
+#embedCode {
+	word-break: normal;
+	word-break: break-all;
+	margin: 10px 40px;
+	padding: 10px;
+	line-height: 1.6;
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#embedText h3, #embedImgText h3 {
+	margin: 10px 40px;
+0px;
+}
+
+#embedBann {
+	margin: 10px 40px;
+	padding: 10px;
+	line-height: 1.6;
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+
+/*	SECTION =6 CANCEL
+----------------------------------------------------------------------------------------------------*/	
+
+#main #mem-expire h1 {
+	background: none;
+	border: 2px solid #D00;
+	color: #D00;
+	font-size: 18px;
+	margin: 10px 0 30px;
+	padding: 40px 0;
+	text-align: center;
+}
+
+#main #mem-expire li {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 16px;
+}
+
+#main #mem-expire li a {
+	font-size: 14px;
+	line-height: 24px;
+}
+

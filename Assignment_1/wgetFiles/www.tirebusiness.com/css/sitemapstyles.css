@@ -1,0 +1,23 @@
+/*Sitemap styles*/
+
+
+/*Heading and list styles*/
+#main.sitemap h2 {font-family:  'Yanone Kaffeesatz','Helvetica Neue',Helvetica,sans-serif;
+margin-bottom: 10px;
+}
+#main.sitemap ul li { list-style:square;
+padding-bottom: 5px; }
+
+/*div styles*/
+#main.sitemap .block{clear:both;
+background-color: white;
+border:#999999, thin;
+padding: 10px;}
+
+#main.sitemap .block-content {display: inline-block;
+padding: 0px 0px 0px 10px;}
+
+#main.sitemap .listcolumn1 {float:left; 
+padding: 10px 125px 10px 20px;}
+#main.sitemap .listcolumn2{float:right;
+padding: 10px 10px 10px 10px}

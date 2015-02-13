@@ -1,0 +1,928 @@
+/* CSS Document */
+@charset "UTF-8";
+
+/*-- header --*/
+
+#header
+{
+	width: 950px;
+	margin: 0 auto;
+	padding: 0;
+	position:relative;
+}
+
+#header .headerRibbon
+{
+	background-color: #000;
+}
+
+#header h1
+{
+	float: left;
+	width: 600px;
+	padding: 0.3em 0 0.3em 0.75em;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: normal;
+	letter-spacing:-0.1em;	
+}
+
+#header .headerRibbon ul
+{
+	float: right;
+	width: 330px;
+	padding: 0.3em 0 0;
+	list-style: none;
+}
+
+#header .headerRibbon ul li
+{
+	float: left;
+	padding: 0 0.5em;
+	font-size: 10px;
+	color: #FFF;
+	white-space: nowrap;
+	border-left: #FFF solid 1px;
+}
+
+#header .headerRibbon ul li:first-child
+{
+	border-left: none;
+}
+
+#header .headerRibbon ul li a
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#header .signboard
+{
+	position: relative;
+	background: url(../shop/item/foula/design/img05/h_bg-signboard.jpg) center no-repeat;
+}
+
+#header .signboard .h2
+{
+	float: left;
+	width: 255px;
+}
+
+#header .signboard .signboardRBox
+{
+	position: absolute;
+	width: 205px;
+	height: 78px;
+	left: 740px;
+	top: 0;
+}
+
+#header .signboard .signboardRBox ul
+{
+	margin-bottom: 0.25em;
+}
+
+#header .signboard .signboardRBox ul li
+{
+	float: left;
+	padding: 0 0.5em;
+	font-size: 10px;
+	white-space: nowrap;
+	border-left: #666 solid 1px;
+}
+
+#header .signboard .signboardRBox ul li:first-child
+{
+	border-left: none;
+}
+
+#header .signboard .signboardRBox p
+{
+	float: left;
+	margin-top: 0.3em;
+	text-align: center;
+}
+
+#header .freedial{
+	padding:3px 0 0;
+}
+
+/********** ヘッダーカテゴリー **********/
+#header ul.h-nav{
+	padding:5px;
+}
+#header ul.h-nav li{
+	float:left;
+	padding:0 4px 0 0;
+}
+
+
+#header ul.h-nav-n{
+}
+#header ul.h-nav-n li{
+	float:left;
+	padding:0 0 0 4px;
+}
+
+
+/********** ヘッダーメインバナー **********/
+#header .main_bnr{
+	
+}
+#header .main_bnr ul li{
+	float:left;
+	margin:0 0 10px 8px;
+}
+
+#header .main_bnr ul.f_col li{
+	float:left;
+	margin:0 0 10px 6px;
+}
+
+
+
+
+/********** 什器 **********/
+#header ul.h-nav li.h-nav-juki{
+	width:114px;
+	height:90px;
+	padding:0;
+	background:url(../shop/item/foula/design/img05/h-nav-juki-bg.jpg) no-repeat 0 0;
+	font-size:
+}
+#header ul.h-nav li.h-nav-juki a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-juki a.top-cat{
+	width:114px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-juki-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-juki ul{
+	padding:0 5px 0;
+}
+#header ul.h-nav li.h-nav-juki ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-juki ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-juki ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-juki ul li.h-nav-juki-cat01{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-juki ul li.h-nav-juki-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-juki ul li.h-nav-juki-cat03{
+	border-top:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-juki ul li.h-nav-juki-cat04{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** エクステ（バラ） **********/
+#header ul.h-nav li.h-nav-extebara{
+	width:200px;
+	height:90px;
+	padding:0 6px 0 0;
+	background:url(../shop/item/foula/design/img05/h-nav-exte-bara-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-extebara a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-extebara a.top-cat{
+	width:200px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-extebara-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-extebara ul{
+	padding:0 6px 0;
+}
+#header ul.h-nav li.h-nav-extebara ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-extebara ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-extebara ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat01{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat02{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat03{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat04{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat05{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat06{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat07{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-extebara ul li.h-nav-extebara-cat08{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+
+/********** エクステ（シート） **********/
+#header ul.h-nav li.h-nav-exteseet{
+	width:143px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-exte-seet-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-exteseet a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-exteseet a.top-cat{
+	width:143px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-exteseet-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-exteseet ul{
+	padding:0 5px 0;
+}
+#header ul.h-nav li.h-nav-exteseet ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-exteseet ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-exteseet ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat01{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat03{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat04{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat05{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-exteseet ul li.h-nav-exteseet-cat06{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+}
+
+/********** Y Lash **********/
+#header ul.h-nav li.h-nav-ylash{
+	width:55px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-ylash-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-ylash a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-ylash a.top-cat{
+	width:55px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-ylash-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-ylash ul{
+	padding:0 4px 0;
+}
+#header ul.h-nav li.h-nav-ylash ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-ylash ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-ylash ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-ylash ul li.h-nav-ylash-cat01{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-ylash ul li.h-nav-ylash-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** カラー（バラ） **********/
+#header ul.h-nav li.h-nav-colorbara{
+	width:55px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-colorbara-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-colorbara a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-colorbara a.top-cat{
+	width:55px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-colorbara-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-colorbara ul{
+	padding:0 4px 0;
+}
+#header ul.h-nav li.h-nav-colorbara ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-colorbara ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-colorbara ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-colorbara ul li.h-nav-colorbara-cat01{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-colorbara ul li.h-nav-colorbara-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** カラー（シート） **********/
+#header ul.h-nav li.h-nav-colorseet{
+	width:55px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-colorseet-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-colorseet a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-colorseet a.top-cat{
+	width:55px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-colorseet-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-colorseet ul{
+	padding:0 4px 0;
+}
+#header ul.h-nav li.h-nav-colorseet ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-colorseet ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-colorseet ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-colorseet ul li.h-nav-colorseet-cat01{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-colorseet ul li.h-nav-colorseet-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** ラメ（エクステ） **********/
+#header ul.h-nav li.h-nav-lame{
+	width:55px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-lame-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-lame a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-lame a.top-cat{
+	width:55px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-lame-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-lame ul{
+	padding:0 4px 0;
+}
+#header ul.h-nav li.h-nav-lame ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-lame ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-lame ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-lame ul li.h-nav-lame-cat01{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-lame ul li.h-nav-lame-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** ストーンラッシュ **********/
+#header ul.h-nav li.h-nav-lashstone{
+	width:55px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-lashstone-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-lashstone a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-lashstone a.top-cat{
+	width:55px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-lashstone-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-lashstone ul{
+	padding:0 4px 0;
+}
+#header ul.h-nav li.h-nav-lashstone ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-lashstone ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-lashstone ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-lashstone ul li.h-nav-lashstone-cat01{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-lashstone ul li.h-nav-lashstone-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** バービー・ラピド・エクステ他 **********/
+#header ul.h-nav li.h-nav-barbie{
+	width:114px;
+	height:90px;
+	background:url(../shop/item/foula/design/img05/h-nav-barbie-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-barbie a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-barbie a.top-cat{
+	width:114px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-barbie-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-barbie ul{
+	padding:0 5px 0;
+}
+#header ul.h-nav li.h-nav-barbie ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-barbie ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-barbie ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-barbie ul li.h-nav-barbie-cat01{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-barbie ul li.h-nav-barbie-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-barbie ul li.h-nav-barbie-cat03{
+	border-top:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-barbie ul li.h-nav-barbie-cat04{
+	border-top:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+/********** ネイル **********/
+#header ul.h-nav li.h-nav-nail{
+	width:114px;
+	height:90px;
+	padding:0;
+	background:url(../shop/item/foula/design/img05/h-nav-nail-bg.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-nail a{
+	display:block;
+}
+#header ul.h-nav li.h-nav-nail a.top-cat{
+	width:114px;
+	height:27px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	text-indent:-9999px;
+	background:url(../shop/item/foula/design/img05/h-nav-nail-cat.jpg) no-repeat 0 0;
+}
+#header ul.h-nav li.h-nav-nail ul{
+	padding:0 5px 0;
+}
+#header ul.h-nav li.h-nav-nail ul li{
+	padding:0;
+}
+#header ul.h-nav li.h-nav-nail ul li a{
+	display:block;
+	border-bottom:solid 2px #000;
+}
+#header ul.h-nav li.h-nav-nail ul li a:hover{
+	border-bottom:solid 2px #f04a9e;
+}
+#header ul.h-nav li.h-nav-nail ul li.h-nav-nail-cat01{
+	border-top:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-nail ul li.h-nav-nail-cat02{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-nail ul li.h-nav-nail-cat03{
+	border-top:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+#header ul.h-nav li.h-nav-nail ul li.h-nav-nail-cat04{
+	border-top:solid 1px #999;
+	border-right:solid 1px #999;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+
+#header iframe#scrollText
+{
+	width: 100%;
+	height: 1.75em;
+	margin: 0.5em 0 0;
+}
+
+#header ul.headerBnrBox
+{
+	margin-top: 0.75em;
+}
+
+#header ul.headerBnrBox
+{
+	margin-top: 0.75em;
+}
+
+#header ul.headerBnrBox li
+{
+	float: left;
+	width: 316px;
+	text-align: center;
+}
+
+
+
+
+
+
+/*-- sidenavi --*/
+
+#sideNavi
+{
+	float: left;
+	width: 190px;
+}
+
+#sideNavi .customerMenu{
+	margin:0 0 10px;
+}
+
+#sideNavi .customerMenu .customerMenuBox{
+	padding:5px;
+	border-right:solid 1px #9e7f46;
+	border-bottom:solid 1px #9e7f46;
+	border-left:solid 1px #9e7f46;
+}
+
+#sideNavi .customerMenu ul{
+	width:169px;
+	list-style:none;
+	margin:0 auto;
+	padding:5px 0;
+}
+
+#sideNavi .customerMenu ul li{
+	float:left;
+}
+
+#sideNavi .customerMenu ul li.list-right{
+	float:right;
+}
+
+#sideNavi .customerMenu p{
+	text-align:center;
+	font-size:11px;
+}
+
+#sideNavi p.bnrBox
+{
+	margin-top: 1em;
+}
+
+#sideNavi .searchBox,
+#sideNavi .categoryBox,
+#sideNavi .priceSearchBox,
+#sideNavi .troubleSearchBox
+{
+	padding-bottom: 0.5em;
+	text-align: center;
+	border: #000 solid 1px;
+}
+
+#sideNavi .categoryBox,
+#sideNavi .priceSearchBox,
+#sideNavi .shopmasterBox,
+#calendarBox,
+#sideNavi .troubleSearchBox,
+#sideNavi .informationBox
+{
+	margin-top: 1em;
+}
+
+#sideNavi .searchBox p.subTitle
+{
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+#sideNavi form input
+{
+	margin: 0.3em 0;
+}
+
+#sideNavi form input.keyword,
+#sideNavi form select
+{
+	width: 90%;
+}
+
+#sideNavi form select option
+{
+	overflow: auto;
+}
+
+#sideNavi .categoryBox dl
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#sideNavi .categoryBox dt
+{
+	margin: 0.5em 0 0;
+}
+
+#sideNavi .categoryBox dl dd ul li,
+#sideNavi .priceSearchBox ul li,
+#sideNavi .troubleSearchBox ul li,
+#sideNavi .informationBox ul li,
+#index .mainCol .troubleSearchBox ul li
+{
+	width: 87%;
+	margin-left: 5px;
+	padding: 0.5em 0 0.5em 0.75em;
+	text-align: left;
+	background: url(../shop/item/foula/design/img05/common-arrow01.gif) 0.1em center no-repeat;
+	border-bottom: #666 dotted 1px;
+}
+
+#sideNavi .shopmasterBox
+{
+	background-color: #F04A9D;
+}
+
+#sideNavi .shopmasterBox .innerBox
+{
+	margin: 0 0.5em;
+	padding: 0.3em 0;
+	background-color: #FFF;
+}
+
+#sideNavi .shopmasterBox dl
+{
+	padding: 0 0.3em;
+}
+
+#sideNavi .shopmasterBox dl dt
+{
+	text-align: center;
+}
+
+#sideNavi .shopmasterBox dl dd
+{
+	margin: 0.5em 0 0.25em;
+	padding: 0.75em;
+	font-size: 0.8em;
+	color: #333;
+	background-color:#FCF;
+}
+
+#calendarBox p
+{
+	width: 90%;
+	margin: 0.5em auto;
+}
+
+#calendarBox p span
+{
+	color: #FCC;
+}
+
+#sideNavi .troubleSearchBox ul
+{
+	max-height: 180px;
+	overflow: auto;
+}
+
+#sideNavi .informationBox
+{
+	padding-bottom: 0.5em;
+	border: #CCC solid 5px;
+}
+
+#sideNavi .informationBox ul
+{
+	width: 92%;
+	margin: 0 auto;
+}
+
+#sideNavi .informationBox ul li
+{
+	padding: 0.25em 0 0.25em 0.75em;
+	border-bottom: none;
+}
+
+/*-- footer --*/
+
+#footer
+{
+	width: 930px;
+	margin: 1em auto;
+	background: url(../shop/item/foula/design/img05/f_bg-border_vertical.gif) center repeat-y;
+}
+
+#footer h4
+{
+	margin-top: 1em;
+}
+
+#footer p,
+#footer dl dd img
+{
+	margin: 1em 0;
+}
+
+#footer p em
+{
+	font-style: normal;
+	color: #C00;
+}
+
+#footer span
+{
+	display: block;
+}
+
+#footer .innerBox
+{
+	padding: 0 2em 1em;
+}
+
+#footer .innerBox .footLeftCol,
+#footer .innerBox .footRightCol
+{
+	width: 430px;
+}
+
+#footer .innerBox .footLeftCol
+{
+	float: left;
+}
+
+#footer .innerBox .footRightCol
+{
+	float: right;
+}
+
+#footer .innerBox .footLeftCol .shipping dl dt,
+#footer .innerBox .footLeftCol .shipping dl dd,
+#footer .innerBox .footRightCol .shopInfo dl dt,
+#footer .innerBox .footRightCol .shopInfo dl dd
+{
+	float: left;
+	padding: 0.3em 0;
+}
+
+#footer .innerBox .footLeftCol .shipping dl dt
+{
+	width: 7em;
+}
+
+#footer .innerBox .footLeftCol .shipping dl dd
+{
+	width: 25em;
+}
+
+address
+{
+	text-align: center;
+}
+
+address a
+{
+	color: #666;
+	text-decoration: none;
+}

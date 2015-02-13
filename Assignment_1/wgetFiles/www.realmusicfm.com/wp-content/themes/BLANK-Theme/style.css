@@ -1,0 +1,176 @@
+/*   
+Theme Name: Real Music Theme
+Theme URI: http://www.realmusicfm.com
+Description: This is Theme for http://www.realmusicfm.com-- WordPress v3.0.1
+Author: Roy Adams
+Author URI: http://www.eden-grafix.co.uk
+Version: 1
+*/
+@import url('css/reset.css');
+@import url('css/text.css');
+@import url('css/ugrid.css');
+@media screen {
+
+body{background:#000 url(images/bg.jpg) top  center no-repeat;}
+#page-top {position:relative; width:100%; height:190px; background:url(images/top-bg.png) top center repeat-x}
+
+#branding{margin:0 auto; width:950px; height:198px ; background: url(images/site-top.png) top center no-repeat; position:relative; clear:both}
+#branding h1{text-indent:-9999px!important; overflow:hidden; padding:0px; margin:0; visibility:hidden; display:none}
+#branding a:link{color:#fff; font-size:12px; margin:0 5px; text-decoration:none}
+#branding a:visited{color:#fff; font-size:12px;}
+#branding a:hover{text-decoration: underline}
+#branding a:active{color:#fff; font-size:12px;}
+
+/*class for branding when about page*/
+.branding_about_us{height:700px !important;background:url(images/about.png) top center no-repeat !important;}
+.container_about_us{margin-top:490px !important}
+/*class for branding when about page*/
+#login_form{width:415px; height:31px; position:absolute; left:550px; top:0; padding:2px 0; margin-top:10px; color:#fff}
+
+#login_form input[type="text"], #login_form input[type="password"]{width:130px; height:15px ;margin:0 5px; padding:0; float:left; color:#666}
+#login_form label{width:415px; font-size:9px; color:#fff; float:left; text-align:left; margin-top:2px}
+#login_form input[type="checkbox"]{width:15px; height:15px;margin:0 5px 0 ; position: relative; float:left}
+.login_submit{float:left}
+
+#breadcrumbs {color:#000; margin-bottom:5px; font-size:1.3em; font-weight:bold; text-align:left}
+#breadcrumbs a{color:#060; }
+#breadcrumbs a:hover{color:#000!important;}
+#breadcrumbs a:last-child{color:#333!important}
+
+#top_nav{ color:#fff!important; padding-top:10px; margin:0 auto;}
+
+#top_nav ul{ list-style:none; text-transform:uppercase!important;}
+#top_nav ul li{display:inline-block;}
+
+
+#top_nav a:link{margin:0 5px; padding:0;}
+#top_nav span{font-size: 12px;color:#fff!important;}
+#menu-main_menu{ text-align:left; padding-left:30px}
+#member_info{text-align:right; padding-left:0!important;}
+#member_info ul{ margin-right:-50px} 
+
+
+/*#for_reg{width:415px; height:31px; position:absolute; left:50px; top:0; padding:5px 0; margin-top:10px}
+#for_reg a:link{margin:0 15px}*/
+.clear{clear:both}
+.hide_txt a{width:inherit; height:inherit;display:block;text-indent:-9999px}
+#container{margin:8px auto;padding:0 25px 15px; width:900px; min-height:400px;  background:url(images/container.png) top center repeat-y;/*  border-style:solid; border-width:1px;border-color:#000 ;opacity:0.6;filter:alpha(opacity=60)For IE8 and earlier */}
+/*for facebook and twitter buttons*/
+ #social{height:50px; width:47px; position:absolute; top:200px ; left:950px}
+  
+	#facebook_like_button_holder {
+	position:relative;
+	margin-top:2px;
+	width: 47px;
+	height: 23px;
+	
+	}
+	
+	#facebook_like_button_holder iframe {
+	position:absolute;
+	top: 0px;
+	
+	
+	}
+	
+/*	#myFacebook_button {
+	width: 45px;
+	height: 45px;
+	margin:0 auto; 
+	
+	background: url(images/facebook.png) no-repeat top center;	
+	}*/
+	
+	#twitter {width:47px; height:23px;margin-top:2px;}
+	
+/*for facebook and twitter buttons*/
+
+
+#mask {position:absolute;left:0;top:0;z-index:9000;background-color:#000;display:none;}
+
+#chat_info{
+/* must be initially hidden */
+display:none; 
+/* place overlay on top of other elements */
+z-index:10000;  
+width:510px;  
+min-height:100px; 
+border:1px solid #000; 
+background:#fff;
+/* CSS3 styling for latest browsers */ 
+-moz-box-shadow:0 0 90px 5px #000;  
+-webkit-box-shadow: 0 0 90px #000;}
+#chat_info p{width:80%; margin:0 auto; font-size:1.7em}
+#instruct_img{float:right; background:url(images/instructions.png) top center no-repeat; width:280px; height:162px}
+#chat{height:102px; background:url(images/chat.png) top center no-repeat}
+
+/*#south{height:102px; background:url(images/south_on.png) top center no-repeat}
+#east{height:102px; background:url(images/east_on.png) top center no-repeat}*/
+
+#rightTopBTN{height:102px; background:url(images/other_btn.png) top center no-repeat}
+#leftTopBTN{height:102px; background:url(images/listen_btn.png) top center no-repeat}
+
+#tell{height:102px; background:url(images/tel_us.png) top center no-repeat}
+#leftTopBTN a,#rightTopBTN a,#chat a, #tell a{text-indent:-9999px; overflow:hidden; display:block; height:102px; width:444px}
+label{display:block; width:50%; clear:left; color:#000; font-size:18px ; padding:5px 0 5px; text-align:left; margin:0 auto}
+input[type="text"], input[type="password"]{width:50%; height:23px ;margin:0 auto 5px; padding:0; color:#666}
+
+legend { 
+width: 0;
+height: 0;
+position: absolute;
+overflow: hidden;
+font-size: 1px;
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.noinput{display:block; width:50%; clear:left; color: #005500; font-size:18px ; padding:5px 0 5px; text-align:left; margin:0 auto}
+#recaptcha_area{
+	text-align:center;
+	margin:10px auto;
+	padding:0;
+	width:50%;
+	background:#fff
+}
+table#recaptcha_table{
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+	border:none !important;
+	}
+.button_div{
+	margin:10px auto;
+}
+.wo_map{margin:0 auto}
+/**
+ *Buttons
+
+ */
+.go_home{display:block;margin:0 auto; width:300px; height:40px; background:url(images/back_home.png); clear:both}
+.close_btn a{display:block; margin:5px auto; height:40px; width:140px; background: url(images/close_btn.png) top center no-repeat; text-indent:-9999px}
+#footer	{font-size: 9px; color:#fff; width:940px; margin:0 auto;}
+#footer	.right{float:right}
+#footer	.left{float:left}
+#footer	a:link{font-size: 9px; color:#fff;}
+#footer	a:visited{font-size: 9px; color:#fff;}
+#footer	a:hover{font-size: 9px; color:#fff; text-decoration:none}
+#footer	a:active{font-size: 9px; color:#fff;}
+
+#category_list .pagenav li{ float:left; width:50%;}
+#category_details p{ width:70%; float:right;text-align: left;}
+#category_details .wp-caption-text{width: 80% !important; margin-left:auto; margin-right:auto; float:none!important; text-align:center; margin-top:0!important; clear:none!important}
+
+
+
+  
+ #category_details img{margin-top:10px!important}
+  #category_details p:nth-child(1) {  
+  font-weight:bold;
+}
+
+.links a, .links p{ font-size:1.5em!important; text-align:center; font-weight:bold; display:block; margin-top:10px; margin-bottom:10px}
+
+/*POST PAGES*/
+.single_entry a{ text-decoration:none;}
+
+}  /*END print media */

@@ -1,0 +1,421 @@
+@charset "shift_jis";
+
+/*---------------------------------------------------
+   G-SHOCK STORE
+   http://www.famima.com/shop/pages/gshock.aspx (FREEPAGE)
+   http://www.famima.com/shop/c/cg-shock/ (CATEGORY)
+---------------------------------------------------*/
+
+/*-------------------------------------------
+   FOR FREEPAGE
+-------------------------------------------*/
+
+#g-shock {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+	text-align:left;
+}
+
+#g-shock h1,h2,h3,ul,li,img {
+	margin:0;
+	padding:0;
+	}
+
+#g-shock h1 {
+	background:url(http://www.famima.com/images/p/gshock/title_g-shock_store.png) no-repeat;
+	width:321px;
+	height:41px;
+	text-indent:-9999px;
+	}
+
+#g-shock h2.items {
+	width:352px;
+	height:403px;
+	}
+
+#g-shock h2.items img.watch {
+	border:1px solid #ccc;
+	}
+
+#g-shock h2.mainvisual {
+	background:url(http://www.famima.com/images/p/gshock/mainvisual.jpg) no-repeat;
+	width:608px;
+	height:403px;
+	text-indent:-9999px;
+	}
+
+#g-shock h2.st_new {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_new.png) no-repeat;
+	width:960px;
+	height:25px;
+	text-indent:-9999px;
+	}
+
+#g-shock h2.st_brand {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_brand.png) no-repeat;
+	width:960px;
+	height:28px;
+	text-indent:-9999px;
+	}
+
+#g-shock h2.st_search {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_search.png) no-repeat;
+	width:960px;
+	height:28px;
+	text-indent:-9999px;
+	}
+
+#g-shock h3.series {
+	background:url(http://www.famima.com/images/p/gshock/cap_series.png) no-repeat;
+	width:112px;
+	height:13px;
+	text-indent:-9999px;
+	margin:20px 0 10px 20px;
+	}
+
+#g-shock h3.colors {
+	background:url(http://www.famima.com/images/p/gshock/cap_colors.png) no-repeat;
+	width:56px;
+	height:13px;
+	text-indent:-9999px;
+	margin:20px 0 10px 20px;
+	}
+
+#g-shock h3.go_fashion {
+	width:960px;
+	height:84px;
+	background:url(http://www.famima.com/images/p/gshock/back_fashion.jpg) no-repeat;
+}
+
+#g-shock .left {
+	float:left;
+	display:inline;
+	}
+
+#g-shock .right {
+	float:right;
+	display:inline;
+	}
+
+#g-shock .clear {
+	clear:both;
+}
+
+#g-shock .inline {
+	display:inline;
+	}
+
+#g-shock li {
+	display:inline;
+}
+
+#g-shock .txt {
+	text-indent:-9999px;
+	}
+
+
+
+#g-shock ul.new {
+	background:url(http://www.famima.com/images/p/gshock/back_koushi.png);
+	border:1px solid #666;
+	padding:10px 10px 5px;
+	width:918px;
+	margin:10px 0 0 10px;
+	}
+
+#g-shock ul.new li {
+	display:block;
+	margin:0 0 5px 0
+	}
+
+#g-shock ul.brand {
+	width:940px;
+	margin:10px 0 0 10px;
+	}
+
+#g-shock ul.brand li.g-shock {
+	display:inline;
+	float:left;
+	margin:0 20px 20px 0;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_g-shock.png) no-repeat;
+	}
+
+#g-shock ul.brand li.baby-g {
+	display:inline;
+	float:left;
+	margin:0 20px 20px 0;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_baby-g.png) no-repeat;
+	}
+
+#g-shock ul.brand li.protorek {
+	display:inline;
+	float:left;
+	margin:0 0 20px 0;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_protrek.png) no-repeat;
+	}
+
+#g-shock ul.search {
+	width:960px;
+	margin:0 0 30px 0;
+	}
+
+#g-shock ul.search li.btn {
+	display:inline;
+	float:left;
+	width:140px;
+	height:60px;
+	margin:0 10px 20px 10px;
+	}
+	
+
+#g-shock .mt20mb10 {
+	margin:20px 0 10px;
+	}
+
+#g-shock .mt10 {
+	margin:10px 0 0 0;
+	}
+
+#g-shock .mt24 {
+	margin:24px 0 0 0;
+	}
+
+#g-shock .mt28 {
+	margin:28px 0 0 0;
+	}
+
+#g-shock .mt30 {
+	margin:30px 0 0 0;
+	}
+	
+#g-shock .mt35 {
+	margin:35px 0 0 0;
+	}
+
+#g-shock .mt40 {
+	margin:40px 0 0 0;
+	}
+
+#g-shock .ml10{
+	margin:0 0 0 10px;
+	}
+
+#g-shock .mb10 {
+	margin:0 0 10px 0;
+	}
+
+#g-shock .btn_fashion {
+	margin:0 0 0 434px;
+	width:526px;
+}
+
+
+/*-------------------------------------------
+   FOR CATEGORY
+-------------------------------------------*/
+
+
+#g-shock_c {
+	width:700px;
+	margin:0 auto;
+	padding:0;
+	text-align:left;
+}
+
+#g-shock_c h1,h2,h3,ul,li,img {
+	margin:0;
+	padding:0;
+	}
+
+#g-shock_c img.smallimg {
+	-ms-interpolation-mode:bicubic;
+}
+
+#g-shock_c .left {
+	float:left;
+	display:inline;
+	}
+
+#g-shock_c .right {
+	float:right;
+	display:inline;
+	}
+
+#g-shock_c .clear {
+	clear:both;
+}
+
+#g-shock_c .inline {
+	display:inline;
+	}
+
+#g-shock_c li {
+	display:inline;
+}
+
+#g-shock_c .txt {
+	text-indent:-9999px;
+	}
+
+#g-shock_c .top_txtarea {
+	background:#666;
+	width:660px;
+	padding:5px 20px;
+	}
+
+#g-shock_c .brandditail_txtarea {
+	background:url(http://www.famima.com/images/p/gshock/back_koushi.png);
+	border:1px solid #666;
+	padding:10px;
+	width:678px;
+	margin:5px 0 10px;
+	}
+
+#g-shock_c .white {
+	color:#fff;
+	}
+
+
+#g-shock_c h1 {
+	background:url(http://www.famima.com/images/p/gshock/title_g-shock_store_s.png) no-repeat;
+	width:233px;
+	height:31px;
+	text-indent:-9999px;
+	}
+
+#g-shock_c h2.mainvisual {
+	background:url(http://www.famima.com/images/p/gshock/mainvisual_s.jpg) no-repeat;
+	width:700px;
+	height:295px;
+	}
+
+#g-shock_c h2.mainvisual img.watch {
+	margin:20px 0 0 19px;
+	border:5px solid #ccc;
+	}
+
+#g-shock_c h2.st_brand {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_brand.png) no-repeat;
+	width:700px;
+	height:28px;
+	text-indent:-9999px;
+	}
+
+#g-shock_c h2.st_search {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_search.png) no-repeat;
+	width:700px;
+	height:28px;
+	text-indent:-9999px;
+	}
+
+#g-shock_c h2.st_gshock {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_g-shock.png) no-repeat;
+	width:700px;
+	height:50px;
+	text-indent:-9999px;
+	margin:5px 0 0 0;
+	}
+
+#g-shock_c h2.st_babyg {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_baby-g.png) no-repeat;
+	width:700px;
+	height:50px;
+	text-indent:-9999px;
+	margin:5px 0 0 0;
+	}
+
+#g-shock_c h2.st_protrek {
+	background:url(http://www.famima.com/images/p/gshock/subtitle_protrek.png) no-repeat;
+	width:700px;
+	height:50px;
+	text-indent:-9999px;
+	margin:5px 0 0 0;
+	}
+
+
+#g-shock_c h3.series {
+	background:url(http://www.famima.com/images/p/gshock/cap_series.png) no-repeat;
+	width:112px;
+	height:13px;
+	text-indent:-9999px;
+	margin:20px 0 10px 20px;
+	}
+
+#g-shock_c h3.colors {
+	background:url(http://www.famima.com/images/p/gshock/cap_colors.png) no-repeat;
+	width:56px;
+	height:13px;
+	text-indent:-9999px;
+	margin:20px 0 10px 20px;
+	}
+
+#g-shock_c h3.g_title {
+	font-size:1.5em;
+	font-weight:bold;
+	margin:10px 0 0 25px;
+}
+
+
+
+#g-shock_c ul.brand {
+	width:640px;
+	margin:10px 0 0 30px;
+	}
+
+#g-shock_c ul.brand li.g-shock {
+	display:inline;
+	float:left;
+	margin:0 10px 20px 10px;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_g-shock.png) no-repeat;
+	}
+
+#g-shock_c ul.brand li.baby-g {
+	display:inline;
+	float:left;
+	margin:0 10px 20px 10px;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_baby-g.png) no-repeat;
+	}
+
+#g-shock_c ul.brand li.protorek {
+	display:inline;
+	float:left;
+	margin:0 10px 20px 10px;
+	width:300px;
+	height:153px;
+	background:url(http://www.famima.com/images/p/gshock/btn_brand_protrek.png) no-repeat;
+	}
+
+
+
+#g-shock_c ul.search {
+	width:640px;
+	margin:0 30px 30px 30px;
+	}
+
+#g-shock_c ul.search li.btn {
+	display:inline;
+	float:left;
+	width:140px;
+	height:60px;
+	margin:0 10px 20px 10px;
+	}
+	
+
+#g-shock_c .mt5mb10 {
+	margin:5px 0 10px;
+}
+
+#g-shock_c .mt10 {
+	margin:10px 0 0;
+}

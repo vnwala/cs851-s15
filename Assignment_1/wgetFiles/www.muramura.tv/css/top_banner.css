@@ -1,0 +1,227 @@
+@charset "euc-jp";
+/* CSS Document */
+
+.folio_block {
+	position: absolute;
+	left: 50%; top: 50%;
+	margin: -140px 0 0 -395px;
+}
+
+
+/*--Main Container--*/
+.main_view {
+	float: left;
+	position: relative;
+}
+/*--Window/Masking Styles--*/
+.window {
+	height:315px;	width: 560px;
+	overflow: hidden; /*--Hides anything outside of the set width/height--*/
+	position: relative;
+}
+.image_reel {
+	position: absolute;
+	top: 0; left: 0;
+}
+.image_reel img {float: left;}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	bottom: 5px; left: -8px;
+	width: 178px; height:47px;
+	z-index: 100;
+	text-align: center;
+	line-height: 40px;
+	background: url(../images/top_new/paging_bg2.png) no-repeat;
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+	padding: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+.paging a.active {
+	font-weight: bold; 
+	background: #900; 
+	border: 1px solid #900;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.paging a:hover {font-weight: bold;}
+
+/*--sites.html--*/
+
+#hot-channel {
+	width:990px;
+	padding:0;
+	height:300px;
+	background-color:#000;
+}
+
+#hot-list {
+	margin-top:5px;
+	margin-right:-15px !important;
+	padding:0;
+	overflow-x:hidden;
+}
+
+#hot-channel ul#hot-list li {
+	width: 215px;
+	height: auto;
+	margin-right: 13px;
+	margin-left: 2px;
+	line-height: 1.5em;
+	list-style:none;
+	float: left;
+	padding: 10px 10px 6px 10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: -moz-linear-gradient(top, #474747, #191919);
+	background: -webkit-gradient(linear, left top, left bottom, from(#474747), to(#191919));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#474747, EndColorStr=#191919);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#474747, EndColorStr=#191919)";
+	text-align:center;
+}
+
+
+#hot-channel ul#hot-list li .pake {
+	margin: 0 0 4px 0;
+}
+
+#hot-channel ul#hot-list li p {
+	width: 215px;
+	margin: 0 0 4px 0;
+	padding: 0 0 4px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	border-bottom: 1px solid #434343;
+}
+
+#hot-channel ul#hot-list li a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#hot-channel ul#hot-list li a:hover {
+	color:#fc0;
+	text-decoration:none;
+}
+
+#hot-channel ul#hot-list li a img {
+	opacity:1.0;
+	filter: alpha(opacity=100);
+}
+
+#hot-channel ul#hot-list li a img:hover {
+	opacity:0.8;
+	filter: alpha(opacity=80);
+}
+
+#hot-channel ul#hot-list li p.logo-1300 {
+	text-indent: -9999px;
+	display: block;
+	width: 180px;
+	height: 28px;
+	background-image: url(../images/sites/logo_all.png);
+	background-repeat: no-repeat;
+	background-position:0;
+	margin:6px 0 0 13px;
+	padding:0;
+	border:none;
+}
+
+#hot-channel ul#hot-list li p.logo-1800 {
+	text-indent: -9999px;
+	display: block;
+	width: 180px;
+	height: 28px;
+	background-image: url(../images/sites/logo_all.png);
+	background-repeat: no-repeat;
+	background-position:-180px 0;
+	margin:6px 0 0 13px;
+	padding:0;
+	border:none;
+}
+
+#hot-channel ul#hot-list li p.logo-2200 {
+	text-indent: -9999px;
+	display: block;
+	width: 180px;
+	height: 28px;
+	background-image: url(../images/sites/logo_all.png);
+	background-repeat: no-repeat;
+	background-position:-360px 0;
+	margin:6px 0 0 13px;
+	padding:0;
+	border:none;
+}
+
+#hot-channel ul#hot-list li p.logo-1100 {
+	text-indent: -9999px;
+	display: block;
+	width: 180px;
+	height: 28px;
+	background-image: url(../images/sites/logo_all.png);
+	background-repeat: no-repeat;
+	background-position:-563px 0;
+	margin:6px 0 0 13px;
+	padding:0;
+	border:none;
+}
+
+.cf::after {
+	clear: both;
+}
+
+.cf::before, .cf::after {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+
+/*--chat--*/
+iframe.iframe_top
+        {
+        border-style: none;
+        width: 990px; 
+        height: 200px;
+		overflow:hidden;
+        }
+		
+iframe.iframe_top2
+        {
+        border-style: none;
+        width: 630px; 
+        height: 550px;
+		overflow:hidden;
+        }		
+
+/*for news section on index2.html*/
+div#news {
+	background: black;
+	padding: 5px 0;
+	width: 990px;
+	margin: auto;
+}
+div#news  ul{
+	text-align: left;
+	padding: .5rem;
+	border: #B00 solid .1rem;
+}
+#news ul li{
+	list-style:none;
+	margin-left: .2rem;
+}
+#news ul li.title{
+	font-weight: bold;
+	margin-bottom: .2rem;
+}
+#news ul li em{
+	font-style: normal;
+	margin-right: .2rem;
+}

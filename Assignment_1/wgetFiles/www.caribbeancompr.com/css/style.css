@@ -1,0 +1,6465 @@
+@charset "euc-jp";
+
+/* CSS Document */
+
+
+/* =======================================================================
+
+総合
+
+======================================================================= */
+
+body {
+	background: #1f1f1f;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a:hover {
+	color: #de3831;
+}
+
+a:hover strong {
+	color: inherit
+}
+
+a:hover img {
+	opacity: 0.8;
+	filter: alpha(opacity=80);		/* ie 6? 7 */
+	-ms-filter: "alpha(opacity=80)";		/* ie 8 */
+	transition: 0.2s;
+}
+
+div {
+	margin: 0;
+ q overflow:hidden;
+}
+
+p {
+	font-size: 12px;
+	margin: 0 0 24px 0;
+	line-height: 20px;
+}
+
+h1, h2, h3, h4 {
+	line-height: 1;
+	margin: 0;
+}
+
+#main>h1, .main-940>h1 {
+	/* 入会、規約、プライバシー、その他の静的ページ等のヘディング */
+
+	color: #999;
+	font-weight: normal;
+	font-size: 22px;
+	margin: 0 auto 30px;
+	width: 940px;
+}
+
+@media screen and (min-width: 1200px) {
+
+#main>h1, .main-940>h1 {
+	width: 1111px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+#main>h1, .main-940>h1 {
+	width: 1282px;
+}
+}
+
+#main-content h1 {
+	/* サイドバーがあるページの主なヘディング */
+	border-bottom: 1px #555 solid;
+	color: #999;
+	font-size: 20px;
+	font-weight: normal;
+	padding-bottom: 14px;
+	margin: 2px 0 10px
+}
+
+#main h2 {
+	color: #999;
+	font-weight: normal;
+	font-size: 18px;
+ q max-width: 940px;
+	margin: 0 auto 20px;
+}
+
+.selected {
+	color: #de3831 !important;
+	font-weight: bold;
+}
+
+
+/*メインの色*/
+
+.cc-green, .cc-green-hover a:hover {
+	color: #2ecc71 !important;
+}
+
+.cc-yellow, .cc-yellow-hover a:hover {
+	color: #f1c40f !important;
+}
+
+.cc-pink, .cc-pink-hover a:hover {
+	color: #fe7a7a !important;
+}
+
+.cc-ltpink, .cc-ltpink-hover a:hover {
+	color: #fab !important;
+}
+
+.cc-blue, .cc-blue-hover a:hover {
+	color: #3498db !important;
+}
+
+.cc-purple, .cc-purple-hover a:hover {
+	color: #af7ac4 !important;
+}
+
+.cc-ltgreen, .cc-ltgreen-hover a:hover {
+	color: #88beb2 !important;
+}
+
+.cc-inactive, .cc-inactive-hover:hover {
+	color: #999 !important;
+}
+
+.cc-green-bg {
+	background-color: #2ecc71;
+}
+
+.cc-yellow-bg {
+	background-color: #f1c40f;
+}
+
+.cc-pink-bg {
+	background-color: #fe7a7a;
+}
+
+.cc-blue-bg-hov a:hover {
+	background-color: #3498db;
+}
+
+.cc-green-bg-hov a:hover {
+	background-color: #2ecc71;
+}
+
+.cc-pink-bg-hov a:hover {
+	background-color: #fe7a7a;
+}
+
+.cc-blue-bg-hov a:hover {
+	background-color: #3498db;
+}
+
+.cc-yellow-bg-hov a:hover {
+	background-color: #f1c40f;
+}
+
+*[class|="icon"] {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: -9999px;
+	text-transform: capitalize; /*IE7*/
+}
+
+*[class|="after"], *[class|="before"] {
+	position: relative;
+}
+
+*[class|="after"]:after, *[class|="before"]:before {
+	background-image: url(../images/spr_main.png);
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+}
+
+
+
+/* =======================================================================
+
+全体の構成
+
+======================================================================= */
+
+#container {
+	background: #1f1f1f;
+	overflow: visible;
+	width: 100%;
+}
+
+#main {
+	margin: 38px auto 0;
+	overflow: hidden;
+	padding-bottom: 100px;
+	width: 980px;
+}
+
+#container .main-100 {
+	width: 100%;
+	/*mainを100%にしたい時用*/
+	min-width: 1000px;
+}
+
+#container .main-940 {
+	margin: 0 auto;
+	width: 940px;/*mainを940pxにしたい時用*/
+
+}
+
+#container .main-980 {
+	margin: 0 auto;
+	width: 980px;
+
+}
+
+#sidebar {
+	display: inline; /*IE6*/
+	float: left;
+	margin: 0 40px 0 20px;
+	width: 240px;
+	overflow: visible;
+}
+
+#sidebar div {
+	overflow: visible;
+}
+
+#main-content {
+	display: inline; /*IE6*/
+	float: left;
+	margin-right: 20px;
+	width: 660px;
+}
+
+.list-area {
+	width: 684px;
+	/*サムネ１つ 204px x 3 + margin:24px x 3* = 660px(margin-content) + 右端のmargin24px */
+	margin: 30px 0;
+}
+
+@media screen and (min-width: 1200px) {
+
+/*1200以上でリスト表示5列*/
+
+#main {
+	width: 1151px;
+}
+
+#main-content {
+	width: 831px;
+}
+
+.list-area {
+	width: 855px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+/*1400以上でリスト表示6列*/
+
+
+#main {
+	width: 1322px;
+}
+
+#main-content {
+	width: 1002px;
+}
+
+.list-area {
+	width: 1026px;
+}
+}
+
+
+
+/* =======================================================================
+
+Header
+
+======================================================================= */
+
+#header {
+	overflow: visible;
+	position: relative;
+	min-width: 980px;
+	width: 100%;
+	z-index: 1;
+}
+
+#header div {
+ q overflow: visible;
+}
+
+.btn-red {
+	border: #a02d27 solid 1px;
+	border-radius: 1px;
+	display: inline-block;
+	text-align: center;
+	background: #da322c;
+	background: -webkit-gradient(linear, center top, center bottom, from(#dc352e), to(#d8302a));
+	background: linear-gradient(top, #dc352e, #d8302a);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#dc352e, EndColorStr=#d8302a);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#dc352e, EndColorStr=#d8302a)";
+	-webkit-box-shadow: 0 2px 1px rgba(255,255,255,0.15), 0 2px 1px rgba(255,255,255,0.15) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.15), 0 1px 0 rgba(255,255,255,0.15) inset; /*IE対策必要*/
+	vertical-align: middle;
+	text-shadow: 0 1px 1px #B4B4B4; /*IE対策必要*/
+}
+
+.btn-red:hover {
+	background: #c93429;
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#c93429, EndColorStr=#c93429);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#c93429, EndColorStr=#c93429)";
+	color: #f1f1f1;
+}
+
+.btn-red:active, #header-login .btn-on {
+	background: #a12f29;
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#a12f29, EndColorStr=#a12f29);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#a12f29, EndColorStr=#a12f29)";
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255, 0.15);
+	box-shadow: 0 1px 0 rgba(255,255,255, 0.15); /*IE対策必要*/
+}
+
+.btn-on {
+	background-color: #a12f29;
+}
+
+
+/* 月額、チャット、PPV */
+
+#header-top {
+	margin: 0 auto;
+	position: relative;
+	height: 60px;
+	width: 100%;
+	z-index: 4;
+}
+
+#header-top li {
+	float: left;
+	height: 60px;
+}
+
+
+/*#header-top li[class|="bg"]*/
+
+#header-top .bg-cc, #header-top .bg-ccg, #header-top .bg-ppv {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	width: 100px !important;
+	text-indent: -9999px;
+	text-transform: capitalize;
+}
+
+.bg-cc {
+	background-position: 0 0
+}
+
+.bg-ccg {
+	background-position: -100px 0
+}
+
+.bg-ppv {
+	background-position: -200px 0
+}
+
+#header-top li a {
+	display: block;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+#header-top li>a {
+	font-weight: bold;
+}
+
+#header-top li>a:hover {
+	color: inherit;
+}
+
+
+/* カリブブランド最新情報 (.after-arrow-sld-dwがついているリンク＝下にサブコンテンツが開く) */
+
+.sub-content strong {
+	color: inherit;
+	margin-right: 4px;
+}
+
+.header-news {
+	font-size: 12px;
+	line-height: 20px;
+	width: 180px;
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+}
+
+.header-news a.after-arrow-sld-dw {
+	height: 13px !important;
+	width: 170px !important;
+	padding: 23px 10px 24px 0 !important;
+}
+
+.header-news a.after-arrow-sld-dw:hover {
+	background: #4c4c4c;
+	color: #ccc;
+}
+
+.header-news .sub-content {
+	min-height: 100px;
+	width: 600px;
+	padding: 20px 0;
+	top: 70px;
+	left: 0;
+}
+
+.header-news dl {
+	background: url(../images/dot_dark.gif) repeat-x right top;
+	margin: 0 20px 0;
+	min-height: 22px;
+	padding: 20px 0;
+}
+
+.header-news dl:first-child {
+	background: none;
+}
+
+.header-news dt {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 66px;
+	text-indent: -9999px;
+	text-transform: capitalize;
+}
+
+.header-news .news-cc dt {
+	background-position: -270px -60px
+}
+
+.header-news .news-ccg dt {
+	background-position: -270px -90px
+}
+
+.header-news .news-ppv dt {
+	background-position: -270px -120px
+}
+
+.header-news dd {
+	margin-left: 82px;
+}
+
+.header-news dd a {
+	display: inline !important;
+}
+
+.header-news dd a:hover {
+	text-decoration: underline;
+}
+
+.header-news .news-cc dd a:hover {
+	color: #139f2e;
+}
+
+.header-news .news-ccg dd a:hover {
+	color: #e9b810;
+}
+
+.header-news .news-ppv dd a:hover {
+	color: #e74b3d;
+}
+
+
+/* ロゴ、検索、ログイン、カートボタン */
+
+#header-main {
+	background: #de3831;
+	background: -webkit-gradient(linear, center top, center bottom, from(#e03c34), to(#dc342e));
+	background: linear-gradient(top, #e03c34, #dc342e);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#e03c34, EndColorStr=#dc342e);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#e03c34, EndColorStr=#dc342e)";
+	height: 70px;
+	min-width: 980px;
+ q position: relative;
+	z-index: 3;
+}
+
+#header-main-left {
+	height: 70px;
+	position: absolute;
+	left: 20px;
+	z-index: 1;
+	width: 590px;
+}
+
+#header-main-right {
+	height: 70px;
+	position: absolute;
+	right: 20px;
+}
+
+@media screen and (min-width: 981px) {
+
+#header-main-left {
+	left: 30px;
+}
+
+#header-main-right {
+	right: 30px;
+}
+}
+
+#header-main-left > div {
+	display: block;
+	float: left;
+	margin-right: 24px;
+}
+
+#header-main-left div {
+	_float: left; /*IE6*/
+}
+
+
+/* #header-main-right div { */
+
+#header-main-right > div {
+	display: block;
+	float: right;
+	margin-left: 10px;
+}
+
+#header-logo {
+	height: 40px;
+	width: 127px;
+	margin: 15px 0;
+}
+
+#header-logo h1 {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	background-position: 0 -60px;
+	font-size: 22px;
+	height: 100%;
+	text-indent: -9999px;
+	text-transform: capitalize; /*IE7*/
+	_background: none;
+	_text-indent: 0;
+}
+
+#header-logo a {
+	display: block;
+	height: 100%
+}
+
+#header-search {
+	height: 30px;
+	width: 408px;
+	margin: 20px 0;
+}
+
+#header-search input {
+	width: 318px;
+}
+
+#header-search .search-result {
+	width: 350px;
+}
+
+.search-box {
+	height: 30px;
+ q overflow: visible;
+	position: relative;
+}
+
+.search-box-input {
+	position: absolute;
+	left: 0;
+	height: 30px;
+}
+
+.search-box input {
+	height: 13px;
+	outline: none;
+	padding: 8px 35px 9px 13px;
+}
+
+.search-box input, .search-result {
+	background: #F1f1f1;
+	border: 0;
+	border-radius: 1px;
+	color: #1f1f1f;
+}
+
+.icon-delete {
+	background-position: -240px -60px;
+	cursor: pointer;
+	position: absolute;
+	right: 8px;
+	top: 0;
+	height: 30px;
+	width: 20px;
+}
+
+.icon-delete:hover {
+	background-position: -240px -90px;
+}
+
+.search-btn {
+	position: absolute;
+	right: 0;
+	height: 30px;
+	width: 36px;
+}
+
+.icon-search {
+	background-position: -200px -60px;
+	height: 28px;
+	width: 34px;
+}
+
+.search-result {
+	position: absolute;
+	top: 31px;
+	padding: 8px;
+}
+
+.search-result li {
+	height: 25px;
+}
+
+.search-result a {
+	color: #1f1f1f;
+	display: block;
+	height: 13px;
+	padding: 6px 5px;
+}
+
+.search-result a:hover {
+	background: #ddd;
+}
+
+#header-login, #header-cart {
+	margin: 20px 0;
+}
+
+#header-login a, #header-cart a {
+	padding: 7px 20px 8px;
+	height: 13px;
+	line-height: 13px;
+	font-weight: bold;
+}
+
+#header-cart a {
+	letter-spacing: -0.4em;
+}
+
+#header-cart span {
+	float: left;
+	overflow: visible !important;
+	letter-spacing: normal;
+	margin-right: 6px;
+}
+
+#header-cart span.icon-cart {
+	background: url(../images/spr_main.png) no-repeat -240px -130px;
+	display: block;
+	height: 15px;
+	width: 19px;
+}
+
+#header-cart span.header-cart-count {
+	font-size: 11px;
+	margin-top: 4px;
+	margin-left: -4px;
+}
+
+
+/* メンバー用 */
+
+.icon-user {
+	background-position: -140px -60px;
+	border-radius: 2px;
+	cursor: pointer;
+	display: inline-block;
+ *display: block; /* IE7 */
+ *zoom: 1; /* IE7 */
+	margin: 19px 0;
+	vertical-align: middle;
+	height: 32px;
+	width: 45px;
+}
+
+
+
+/* =======================================================================
+
+Header内 nav
+
+======================================================================= */
+
+#nav {
+	background: #444;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.08) inset;
+　  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.08) inset;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.08) inset; /*IE対策必要*/
+	height: 50px;
+ q overflow: visible;
+ q position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+#nav>ul {
+	letter-spacing: -0.4em;
+	margin: 0 auto;
+	height: 50px;
+	padding: 0;
+	width: 980px;
+}
+
+#nav >ul>li {
+	display: inline-block;
+ *display: inline; /* for IE6 */
+ *zoom: 1; /* for IE6 */
+	letter-spacing: normal;
+	margin: 0;
+	position: relative;
+	height: 50px;
+	vertical-align: middle;
+}
+
+#nav ul li {
+	_display: inline; /* for IE6 */
+	_zoom: 1; /* for IE6 */
+}
+
+#nav >ul>li:hover {
+	background: #4c4c4c;
+}
+
+a[class~="after-arrow-sld-dw"][class~="selected"] {
+	background: #555;
+	color: #f1f1f1 !important;
+	margin: 0;
+	position: relative;
+}
+
+#nav li.selected>a:hover {
+	background: #555;
+	color: #f1f1f1;
+}
+
+#nav >ul>li>a {
+	display: block;
+	font-weight: bold;
+	height: 13px;
+	padding: 18px 24px 19px;
+}
+
+#nav >ul>li>a:hover {
+	color: #ccc;
+}
+
+#nav >ul> li:first-child a {
+	padding: 15px 24px 15px;
+	height: 20px;
+}
+
+.after-arrow-sld-dw {
+	padding-right: 26px !important;
+}
+
+.after-arrow-sld-dw:after {
+	background-position: -40px -110px;
+	margin: -5px 0 0 4px;
+	height: 10px;
+	width: 10px;
+}
+
+.icon-home {
+	background-position: 0 -110px;
+	height: 20px;
+	width: 20px;
+}
+
+.icon-home:hover {
+	background-position: 0 -130px;
+}
+
+
+/* ナビ サブコンテンツ*/
+
+.sub-content {
+	background: #f1f1f1;
+	border-radius: 1px;
+	-moz-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 4px rgba(0,0,0,0.3); /*IE対策必要*/
+	color: #1f1f1f;
+	padding: 30px 0 10px;
+	position: absolute;
+	top: 60px;
+	*top: 50px; /* IE7 */
+	width: 218px;
+	left: -30px;
+	text-align: left;
+	z-index: 1000;
+}
+
+.sub-content:before {
+	/* ナビとドロップダウンの隙間 */
+	content: " ";
+	position: absolute;
+	display: block;
+	z-index: 1500;
+	left: 0;
+	top: -10px;
+	height: 10px;
+	width: 100%;
+}
+
+
+.sub-content a {
+	color: #1f1f1f;
+}
+
+.sub-content li a {
+	display: block;
+	height: 13px;
+	padding: 8px 10px;
+	width: 130px;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sub-content li a:hover {
+	color: #f1f1f1;
+}
+
+.sub-content li.ichiran a {
+	color: #999;
+	font-size: 12px;
+}
+
+.sub-content li.ichiran a:hover {
+	background: none !important;
+	text-decoration: underline;
+}
+
+.sub-content div {
+	/* .nav-sub>div{ */
+
+	padding: 0 26px 0;
+}
+
+.sub-content ul {
+ q overflow: hidden;
+}
+
+.sub-content li {
+	background: url(../images/dot_light.gif) repeat-x;
+	height: 29px;
+	padding: 8px 0;
+}
+
+.sub-content li:first-child {
+	background: none;
+	margin-top: -8px;
+	padding-top: 0;
+}
+
+#header .nav-sub-cat {
+	width: 812px;
+	left: -342px; /* 1024の画面でも左端が切れない距離*/
+	padding-bottom: 30px;
+}
+
+#header .nav-sub-cat div {
+	/* #header .nav-sub-cat>div { */
+
+	background: url(../images/dot_light.gif) repeat-y;
+	float: left;
+	padding: 0 26px 0;
+	width: 150px;
+}
+
+#header .nav-sub-cat > div:first-child {
+	background: none;
+}
+
+#header .nav-sub-cat h4 {
+	font-size: 16px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+#header .nav-sub-cat li {
+	background: none;
+	height: 29px;
+	padding: 0;
+}
+
+#header .nav-sub-cat li:first-child {
+	background: none;
+	margin-top: 0;
+}
+
+#header .nav-sub-other {
+	width: 406px;
+	left: -100px; /* 1024の画面でも右端が切れない距離*/
+	padding-bottom: 30px;
+}
+
+#header .nav-sub-other div {
+	/* #header .nav-sub-other>div { */
+
+	background: url(../images/dot_light.gif) repeat-y;
+	float: left;
+	height: 200px;
+	padding: 0 26px 0;
+	width: 150px;
+}
+
+#header .nav-sub-other > div:first-child {
+	background: none;
+}
+
+#header .nav-sub-other h4 {
+	font-size: 16px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+#header .nav-sub-other li {
+	background: none;
+	height: 29px;
+	padding: 0;
+}
+
+#header .nav-sub-other li:first-child {
+	background: none;
+	margin-top: 0;
+}
+
+
+/* IE6,7へアップデートを促すメッセージ（簡易版） */
+
+.iemsg {
+	background: #EA8E05;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset;
+　  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset; /*IE対策必要*/
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.iemsg a {
+	color: #f1f1f1;
+	text-decoration: underline;
+}
+
+.iemsg a:hover {
+	text-decoration: none;
+}
+
+.iemsg span {
+	display: inline-block;
+	font-weight: bold;
+	height: 13px;
+	padding: 13px 0 14px;
+}
+
+
+
+/* =======================================================================
+
+Login (popup)
+
+======================================================================= */
+
+#login-screen {
+	background: #f1f1f1;
+	border-radius: 3px;
+	-moz-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 4px rgba(0,0,0,0.3); /*IE対策必要*/
+	color: #333;
+	font-size: 11px;
+	height: 384px;
+	width: 380px;
+}
+
+#login-hdr {
+	background: #12972b;
+	background: -moz-linear-gradient(top, #139c2d, #119229);
+	background: -webkit-gradient(linear, center top, center bottom, from(#139c2d), to(#119229));
+	background: -o-linear-gradient(top, #139c2d, #119229);
+	background: linear-gradient(top, #139c2d, #119229);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#139c2d, EndColorStr=#119229);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#139c2d, EndColorStr=#119229)";
+	-moz-box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+　  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 6px rgba(0,0,0,0.15); /*IE対策必要*/
+	height: 60px;
+	text-align: center
+}
+
+.icon-logo-eng {
+	background-position: 0 -340px;
+	margin: 22px auto;
+	height: 16px;
+	width: 200px;
+}
+
+#login-main {
+	border-bottom: 1px solid #bbb;
+	height: 214px;
+	padding: 30px;
+}
+
+.cell-label-id, .cell-label-pw {
+	margin-bottom: 10px;
+}
+
+.cell-input-id {
+	margin-bottom: 18px;
+}
+
+.cell-input-pw {
+	margin-bottom: 28px;
+}
+
+#login-screen div[class|="cell"] a {
+	color: #999;
+	float: right;
+}
+
+#login-screen div[class|="cell"] a:hover {
+	color: #390;
+}
+
+#login-screen div[class|="cell"] label {
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#login-screen div[class|="cell"] input {
+	background: #e6e9e9;
+	border: 1px solid #bbb;
+	border-radius: 1px;
+	font-size: 12px;
+	height: 12px;
+	outline: none;
+	padding: 13px;
+	width: 292px;
+	vertical-align: middle;
+}
+
+.login-btn-area {
+	display: table;
+	position: relative;
+	height: 39px;
+	width: 100%;
+}
+
+.login-btn-area >div {
+	display: table-cell;
+	width: 200px;
+	vertical-align: middle;
+ *display: block;
+}
+
+.login-btn-area div {
+ *width: 160px;
+ *display: block;
+}
+
+.login-btn-area input {
+	display: none;
+	display: inline-block\9; /* IE 8 and below */
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	margin: 8px 0 0\9; /* IE 8 and below */
+	width: 13px\9; /* IE 8 and below */
+}
+
+.login-btn-area label {
+	cursor: pointer;
+	display: inline-block;
+	height: 14px;
+	line-height: 12px;
+	padding-left: 20px;
+	padding-left: 0\9; /* IE 8 and below */
+	position: relative;
+	width: 104px;
+}
+
+.login-btn-area label:before {
+	display: none\9;
+	content: "";
+	background: #e6e9e9;
+	border: 1px #bbb solid;
+	outline: none;
+	position: absolute;
+	left: 0;
+	height: 12px;
+	width: 12px;
+}
+
+.login-btn-area input[type="checkbox"]:checked + label:before {
+	content: "\2714";
+	color: #42b90e;
+	text-align: center;
+	line-height: 8px;
+}
+
+.login-btn {
+	background: #be3831;
+	background: -webkit-gradient(linear, center top, center bottom, from(#c13b33), to(#bb352f));
+	background: linear-gradient(top, #c13b33, #bb352f);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#c13b33, EndColorStr=#bb352f);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#c13b33, EndColorStr=#bb352f)";
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+　  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1); /*IE対策必要*/
+	color: #f1f1f1 !important;
+	cursor: pointer;
+	height: 14px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 1px;
+	overflow: visible;
+	padding: 12px 0;
+	position: absolute;
+	right: 0;
+	width: 120px !important;
+	text-align: center;
+	top: 0;
+}
+
+#login-ftr {
+	background: #e6e9e9;
+	font-size: 12px;
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+}
+
+#login-ftr a {
+	color: #05ae45;
+}
+
+
+
+/* =======================================================================
+
+アカウント情報 (popup)
+
+======================================================================= */
+
+#account-popup {
+	background: #333;
+	border: 1px #666 solid;
+	border-radius: 2px;
+	-moz-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 4px rgba(0,0,0,0.3); /*IE対策必要*/
+	overflow: visible;
+	padding: 20px 24px 0;
+	text-align: right;
+ q height: 308px;
+	width: 190px;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	z-index: 1000;
+	float: none !important;
+	margin-left: 0 !important;
+}
+
+#account-popup h2 {
+	color: #999;
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+#account-popup >dl, #account-popup >div {
+	padding: 13px 0;
+	overflow: hidden;
+}
+
+#account-popup .username div {
+	display: inline-block !important;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	overflow: hidden !important;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 15px;
+	width: 170px;
+}
+
+#account-popup dl {
+	border-top: 0;
+	border-bottom: 1px #555 solid;
+}
+
+#account-popup .username + dl {
+	border-top: 1px #555 solid;
+}
+
+#account-popup dt {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+#account-popup dt span {
+	margin-left: 4px;
+}
+
+#account-popup dd, #account-popup dd a, #account-popup .username a {
+	color: #999;
+	font-size: 11px;
+}
+
+#account-popup dd a:hover, #account-popup .username a:hover {
+	color: #fe7a7a;
+}
+
+#account-popup .login-btn {
+	top: 12px;
+	padding: 0;
+	height: 34px;
+	width: 110px;
+}
+
+.login-btn a {
+	color: #f1f1f1;
+	display: block;
+	height: 14px;
+	padding: 10px 0;
+	width: 100%
+}
+
+
+
+/* =======================================================================
+
+Footer
+
+======================================================================= */
+
+#footer {
+	clear: both;
+	min-width: 980px;
+	width: 100%;
+}
+
+#footer-main {
+	background: #333;
+	background: -webkit-gradient(linear, center top, center bottom, from(#373737), to(#2f2f2f));
+	background: linear-gradient(top, #373737, #2f2f2f);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#373737, EndColorStr=#2f2f2f);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#373737, EndColorStr=#2f2f2f)";
+ q height: 340px;
+}
+
+#footer-nav, #footer-actors {
+	margin: 0 auto;
+	text-align: center;
+	width: 940px;
+}
+
+#footer-nav {
+	letter-spacing: -0.4em;
+	padding: 30px 0 18px;
+}
+
+#footer-actors {
+	padding: 22px 0 10px;
+}
+
+/*
+#footer-nav .footer-menu:first-child {
+	margin-left: 14px;
+}
+*/
+
+.footer-menu {
+	display: inline-block;
+ /display: inline;/*IE6*/
+ /zoom: 1; /*IE6*/
+	letter-spacing: normal;
+	margin-left: 12px;
+	width: 176px;
+	vertical-align: top;
+}
+
+.footer-menu h4 {
+	color: #666;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 22px;
+	text-align: left;
+}
+
+.footer-menu li {
+	font-size: 12px;
+	margin-bottom: 18px;
+	text-align: left;
+}
+
+
+/* 2段目女優 */
+
+#footer-actors .footer-menu {
+	width: 880px;
+	margin-left: 0 30px !important;
+}
+
+#footer-actors .footer-menu ul {
+	overflow: hidden;
+	margin-left: 154px;
+}
+
+#footer-actors .footer-menu h4 {
+	float: left;
+	line-height: 66px;
+	height: 66px;
+}
+
+#footer-actors .footer-menu li {
+	float: left;
+	line-height: 17px;
+	height: 17px;
+	width: 102px;
+	margin: 8px 0;
+}
+
+
+/* 3段目コピーライト */
+
+#footer-copyright ul {
+	margin: 14px auto;
+	text-align: center;
+	width: 980px;
+}
+
+#footer-copyright ul li {
+	display: inline;
+}
+
+#footer-copyright a {
+	color: #999;
+	font-size: 11px;
+	margin-right: 20px;
+}
+
+#footer-copyright .usc2257 {
+	color: #666;
+	font-size: 10px;
+	margin-right: 0;
+}
+
+
+/* added on 03/04/2014 for affi embed code part */
+
+#embedForm {
+	width: 800px;
+}
+
+#embedForm h2 {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+#embedForm p {
+	margin: 10px;
+}
+
+#embedForm p#id_error {
+	color: #cc0000;
+	margin: -5px auto 10px 100px;
+}
+
+#embedPlayer {
+	margin: 20px 40px;
+}
+
+#embedCode {
+	word-break: normal;
+	word-break: break-all;
+	margin: 10px 40px;
+	padding: 10px;
+	line-height: 1.6;
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#embedText h3, #embedImgText h3 {
+	margin: 10px 40px; 0px;
+}
+
+#embedBann {
+	margin: 10px 40px;
+	padding: 10px;
+	line-height: 1.6;
+	background: #EEE;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+
+
+/* =======================================================================
+
+Sidebar Nav
+
+======================================================================= */
+
+#sidebar h2 {
+	background: #DA322C;
+	background: -webkit-gradient(linear, center top, center bottom, from(#DA322C), to(#D12C26));
+	background: linear-gradient(top, #DA322C, #D12C26);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#DA322C, EndColorStr=#D12C26);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#DA322C, EndColorStr=#D12C26)";
+	border-radius: 1px;
+	color: #f1f1f1;
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	height: 15px;
+	line-height: 15px;
+	padding: 10px;
+	margin: 0;
+	width: 220px;
+}
+
+#sidebar a {
+	display: block;
+	height: 100%;
+}
+
+#sidebar>div {
+	margin-bottom: 40px;
+}
+
+
+/* 動画検索 */
+
+#sidebar h3 {
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: normal;
+	height: 39px;
+	margin: 0;
+	padding-left: 4px;
+	padding-top: 10px;
+	position: relative;
+}
+
+#sidebar h3:hover {
+	background: #2d2d2d;
+}
+
+#sidebar h3:after {
+	content: "";
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+}
+
+#sidebar h3:after {
+	background-position: -200px -150px;
+	right: 10px;
+	margin-top: -7px;
+	height: 13px;
+	width: 13px;
+}
+
+#sidebar h3.after-nega:after {
+	background-position: -200px -190px;
+}
+
+#sidebar h3.after-arrow-rt:after {
+	background-position: 0 -160px;
+	right: 0;
+	margin-top: -25px;
+	height: 50px;
+	width: 32px;
+}
+
+.after-arrow-rt a:hover {
+	color: #f1f1f1;
+}
+
+#sidebar h3 div {
+	margin-bottom: 2px;
+}
+
+#sidebar small {
+	color: #777;
+}
+
+.sidebar-main-menu {
+	margin-top: 8px;
+}
+
+.sidebar-main-menu>li {
+	border-bottom: 1px #444 solid;
+}
+
+.sidebar-sub-menu {
+	margin: 8px 0 18px 10px;
+}
+
+.sidebar-sub-menu li {
+	margin: 0 0 14px;
+}
+
+.ichiran {
+	color: #999;
+}
+
+.sidebar-moviesearch .ichiran {
+	margin-top: 18px;
+}
+
+.sidebar-sub-menu small {
+	margin-left: 6px;
+}
+
+
+/* オススメ人気動画 & ランキング */
+
+.sidebar-recommended > div {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	margin: 12px 0 0;
+	padding-bottom: 12px;
+}
+
+.sidebar-recommended h2 + div {
+	margin-top: 20px;
+}
+
+#sidebar .sidebar-recommended div a {
+	min-height: 84px;
+}
+
+.sidebar-recommended img {
+	float: left;
+	height: 84px;
+}
+
+.sidebar-recommended span {
+	color: #ccc;
+	display: block;
+	font-size: 11px;
+	line-height: 18px;
+	margin-left: 104px;
+	max-height: 54px;
+	overflow: hidden;
+}
+
+.sidebar-recommended i {
+	float: left;
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.icon-sb-no1 {
+	background-position: -100px -220px;
+}
+
+.icon-sb-no2 {
+	background-position: -120px -220px;
+}
+
+.icon-sb-no3 {
+	background-position: -140px -220px;
+}
+
+.icon-sb-no4 {
+	background-position: -160px -220px;
+}
+
+.icon-sb-no5 {
+	background-position: -180px -220px;
+}
+
+.icon-sb-no6 {
+	background-position: -280px -220px;
+}
+
+.icon-sb-no7 {
+	background-position: -300px -220px;
+}
+
+.icon-sb-no8 {
+	background-position: -320px -220px;
+}
+
+.icon-sb-no9 {
+	background-position: -340px -220px;
+}
+
+.icon-sb-no10 {
+	background-position: -360px -220px;
+}
+
+.sidebar-recommended .ichiran {
+	margin-top: 12px;
+}
+
+
+/* イベント情報 */
+
+.sidebar-campaign >div {
+	margin: 20px 0 0;
+}
+
+
+/* イベント情報 バナーの高さは統一すること*/
+
+.sidebar-campaign img {
+	height: 80px;
+	width: 240px
+}
+
+
+/* ヘルプ */
+
+#sidebar .sidebar-help h3 {
+	padding: 6px 0 6px 4px;
+}
+
+.sidebar-help h3 a > div {
+	height: 39px;
+	line-height: 39px;
+}
+
+
+/* その他のサイドバー */
+
+.sidebar-default .sidebar-main-menu>li {
+	height: 49px
+}
+
+.sidebar-default .sidebar-main-menu>li a {
+	height: 13px !important;
+	padding: 18px 0 18px 4px;
+	position: relative;
+}
+
+.sidebar-default .sidebar-main-menu>li a:after {
+	background-image: url(../images/spr_main.png);
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	background-position: 0 -160px;
+	right: 0;
+	margin-top: -25px;
+	height: 50px;
+	width: 32px;
+}
+
+.sidebar-default .sidebar-main-menu>li:hover {
+	background: #2d2d2d;
+}
+
+.sidebar-default .sidebar-main-menu>li:hover a {
+	color: #f1f1f1;
+}
+
+
+
+/* =======================================================================
+
+【リストページ】 Main-content
+
+======================================================================= */
+
+/* ページネーション上 */
+
+.pagenation-top {
+	height: 24px;
+	margin: 16px 6px 36px;
+	width: 648px;
+}
+
+.rearrange, .rearrange span, .rearrange ul, .rearrange li {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+	font-size: 12px;
+	vertical-align: middle;
+	overflow: visible;
+}
+
+.rearrange {
+	margin-right: 30px;
+	width: 420px;
+ *display: inline;
+ *zoom: 1;
+}
+
+.rearrange span {
+	color: #999;
+	font-weight: bold;
+	margin-right: 6px;
+}
+
+.rearrange ul {
+	margin-right: 30px;
+}
+
+#main-content h1 .go-to-page {
+	color: #f1f1f1;
+	font-size: 13px;
+	float: right;
+}
+
+.go-to-page {
+	display: inline-block;
+ *display: inline;
+	vertical-align: middle;
+	width: 160px;
+	position: relative;
+	text-align: center;
+}
+
+.go-to-page a {
+	margin-top: -5px;
+	top: 50%;
+}
+
+.go-to-page input {
+	background: none;
+	border: 1px solid #888;
+	color: #F1F1F1;
+	height: 13px;
+	width: 38px;
+	line-height: 13px;
+	padding: 3px 0 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.go-to-prev, .go-to-next {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	text-indent: -9999px;
+	text-transform: capitalize;
+	vertical-align: middle;
+}
+
+h1 .go-to-prev, h1 .go-to-next {
+	position: absolute;
+}
+
+h1 .go-to-prev {
+	left: 0;
+}
+
+h1 .go-to-next {
+	right: 0;
+}
+
+.go-to-prev {
+	background-position: -70px -120px
+}
+
+.go-to-prev:hover, a:hover .go-to-prev {
+	background-position: -70px -110px
+}
+
+.go-to-prev-inactive {
+	background-position: -70px -130px !important
+}
+
+.go-to-next {
+	background-position: -60px -120px
+}
+
+.go-to-next:hover, a:hover .go-to-next {
+	background-position: -60px -110px
+}
+
+.go-to-next-inactive {
+	background-position: -60px -130px !important
+}
+
+
+/* リスト部分 */
+
+.list-area>div {
+ q height: 288px;
+	width: 147px;
+	float: left;
+	margin: 0 24px 40px 0;
+	overflow: visible;
+ q padding-top: 12px;
+}
+
+.list-area div {
+	overflow: visible;
+ /height: 288px;/*IE6*/
+ /width: 147px;/*IE6*/
+ /float: left;/*IE6*/
+ /margin: 0 24px 20px 0;/*IE6*/
+}
+
+.list-area div div {
+ /height: 200px;
+ /width: 147px;
+ /margin-bottom: 6px;
+}
+
+.list-area > div > div {
+	-moz-box-shadow: 0 2px 8px #000;
+	-webkit-box-shadow: 0 2px 8px #000;
+	box-shadow: 0 2px 8px #000;
+	height: 200px;
+	width: 147px;
+	margin-bottom: 6px;
+}
+
+.list-area div>a {
+	/*	-moz-box-shadow: 0 2px 8px #000;
+
+	-webkit-box-shadow: 0 2px 8px #000;
+
+	box-shadow: 0 2px 8px #000;
+
+	height: 200px;
+
+	width: 147px;*/
+
+	display: block;
+}
+
+.list-area img {
+	display: block;
+	margin: 0 auto;
+	height: 200px;
+	max-width: 147px;
+ q width: 147px;
+}
+
+.list-area span, .list-area-sammov span, .futurelist-area span {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	color: #ccc;
+	display: block;
+	height: 27px;
+	line-height: 26px;
+	-ms-text-overflow: clip;
+	-o-text-overflow: clip;
+	text-overflow: clip;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.list-area span i, .list-area-sammov span i, .futurelist-area span i {
+	color: #F1C40F;
+}
+
+.list-area span .cc-yellow {
+	margin-left: 6px;
+}
+
+#main .cart-btn {
+	background: none;
+	display: block;
+	height: auto;
+}
+
+#main .cart-btn a {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	background-position: -220px 0;
+	display: block;
+	margin: 10px auto;
+	height: 26px;
+	width: 135px;
+	text-indent: -9999px;
+}
+
+#main .cart-btn a:hover {
+	background-position: -220px -26px;
+}
+
+#main [class~="cart-btn"][class~="inactive"] a {
+	background-position: -220px -52px;
+	cursor: default;
+}
+
+.list-area span a, .list-area-sammov span a, .futurelist-area span a {
+	color: #ccc;
+}
+
+.list-area span a {
+	line-height: 26px;
+}
+
+.list-area span a:hover, .list-area-sammov span a:hover, .futurelist-area span a:hover {
+	color: #de3831;
+}
+
+.list-area span a:hover strong, .list-area-sammov span a:hover strong, .futurelist-area span a:hover strong {
+	color: inherit;
+}
+
+
+/*ラベル*/
+
+.status-label-list, .sale-label {
+	position: relative;
+}
+
+.status-label-list div, .sale-label div {
+	clear: both;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+}
+
+.status-label-list a:hover, .sale-label a:hover {
+	color: #f1f1f1;
+}
+
+.status-label-list div {
+	padding: 6px 0;
+	left: 0;
+ q bottom: 0; /*ie7でおかしい*/
+	top: 175px;
+	height: 13px !important;
+	width: 147px !important;
+}
+
+.limited div {
+	background: #e53e2d;
+	background: rgba(229,62,45,0.9);
+}
+
+.future div {
+	background: #2c87c3;
+	background: rgba(44,135,195,0.85);
+}
+
+.sale-label div {
+	background: url(../images/spr_main.png) no-repeat -260px -320px;
+	padding-top: 9px;
+	height: 39px !important;
+	width: 48px !important;
+	left: -12px;
+	top: -12px;
+}
+
+
+/*リスト タグ*/
+
+*[class|="tag"] {
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	display: inline-block !important;
+ /display: inline;/*IE6*/
+ /zoom: 1; /*IE6*/
+	height: 20px;
+	margin-right: 4px;
+}
+
+*[class|="tag"] a {
+	display: block;
+	height: 100%;
+}
+
+.tag-list-hd {
+	background-position: 0 -260px;
+	width: 30px
+}
+
+.tag-list-fullhd {
+	background-position: -40px -260px;
+	width: 52px
+}
+
+.tag-list-60 {
+	background-position: -100px -260px;
+	width: 36px
+}
+
+.tag-list-vip {
+	background-position: -140px -260px;
+	width: 34px
+}
+
+.tag-list-svip {
+	background-position: -180px -260px;
+	width: 44px
+}
+
+.tag-list-recur {
+	background-position: -230px -260px;
+	width: 58px
+}
+
+
+/* ページネーション下 */
+
+.pagenation-btm {
+	height: 30px;
+	margin: 16px 6px 36px;
+}
+
+.pagenation-btm ul {
+	text-align: center;
+	letter-spacing: -0.4em;
+}
+
+.pagenation-btm li {
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	letter-spacing: normal;
+	margin-left: 10px;
+	height: 28px;
+	min-width: 28px;
+	vertical-align: middle;
+}
+
+.pagenation-btm li a:first-child {
+	margin-left: 0;
+}
+
+.pagenation-btm li a {
+	border: 1px #666 solid;
+	padding: 7px 10px 8px;
+}
+
+.pagenation-btm li a, .pagenation-btm li span {
+	display: block;
+}
+
+.pagenation-btm li span {
+	padding: 7px 0 8px;
+}
+
+.pagenation-btm li a:hover {
+	border: 1px #e54639 solid;
+	color: #f1f1f1;
+}
+
+.pagenation-btm li a.on-this-page {
+	border: 0;
+}
+
+.pagenation-btm li a i {
+ *display: block;
+	vertical-align: baseline;
+}
+
+
+/* リストページ用バナー */
+
+#list-banner {
+	border: none;
+	display: block;
+	font-size: 0;
+	width: 100%;
+	margin: 0 0 38px;
+	min-width: 660px;
+	padding: 0;
+	text-align: center;
+}
+
+
+#list-banner img {
+	width: 660px;
+}
+
+
+@media screen and (min-width: 1200px) {
+
+#list-banner img {
+	width: 831px;
+}
+
+}
+
+@media screen and (min-width: 1400px) {
+
+#list-banner img {
+	width: 100%;
+}
+
+}
+
+
+
+/* =======================================================================
+
+【リストページ】 検索結果
+
+======================================================================= */
+
+#main-content h1 strong {
+	display: inline-block !important;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	overflow: hidden !important;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 300px;
+}
+
+@media screen and (min-width: 1200px) {
+
+#main-content h1 strong {
+	max-width: 471px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+#main-content h1 strong {
+	max-width: 642px;
+}
+}
+
+#main-content h1 small {
+	color: #999;
+	font-size: 13px;
+	margin-left: 4px;
+}
+
+.no-result, .cat-list-area {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	overflow: hidden;
+}
+
+.no-result p {
+	color: #999;
+	font-size: 18px;
+	height: 42px;
+	line-height: 1;
+	margin: 110px 0 140px !important;
+	overflow: hidden;
+	text-align: center;
+}
+
+.no-result p small {
+	display: block;
+	margin-top: 12px;
+}
+
+.cat-list-area {
+	padding: 30px 0 16px;
+	text-align: left;
+}
+
+#main-content .cat-list-area h2 {
+	border: none;
+	display: block;
+	font-size: 16px !important;
+	float: left;
+	width: 150px;
+}
+
+.cat-list-area ul {
+ q float: left;
+ q width: 510px;
+	min-width: 510px;
+	margin-left: 150px;
+	overflow: hidden;
+}
+
+.cat-list-area li {
+	display: block;
+	float: left;
+	font-size: 12px;
+	margin-bottom: 14px;
+	width: 170px;
+}
+
+.cat-list-area li a small {
+	color: #777;
+	font-size: 10px;
+	margin-left: 4px;
+}
+
+
+
+/* =======================================================================
+
+【詳細ページ】 video-area
+
+======================================================================= */
+
+#video-area {
+	background: #3c3c3c;
+	background: -moz-linear-gradient(top, #101010, #3c3c3c);
+	background: -webkit-gradient(linear, center top, center bottom, from(#101010), to(#3c3c3c));
+	background: -o-linear-gradient(top, #101010, #3c3c3c);
+	background: linear-gradient(top, #101010, #3c3c3c);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#101010, EndColorStr=#3c3c3c);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#101010, EndColorStr=#3c3c3c)";
+	min-width: 980px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+/* ステータス注釈・動画によって表示 */
+
+.status-label {
+	background: #EA8E05;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset;
+　  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.25) inset; /*IE対策必要*/
+	height: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.status-label a {
+	display: block;
+	height: 40px;
+	width: 100%;
+}
+
+.status-label a:hover {
+	color: #f1f1f1;
+}
+
+.status-label span {
+	display: inline-block;
+	font-weight: bold;
+	height: 13px;
+	padding: 13px 0 14px;
+}
+
+.after-link-arrow:after {
+	background-position: -240px -220px;
+	width: 12px;
+	height: 12px;
+	margin-top: -6px;
+	right: -14px;
+}
+
+#video-content {
+	margin: 40px auto;
+	position: relative;
+	width: 980px;
+}
+
+.player-outer {
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+	box-shadow: 0 4px 6px rgba(0,0,0,0.3); /*IE対策必要*/
+	margin: 0 auto;
+	overflow: visible;
+	position: relative;
+	height: 474px;
+	width: 800px;
+	background-color: #000;
+}
+
+.prev, .next {
+	background: url(../images/slider-control.png) no-repeat;
+	display: block;
+	outline: none;
+	position: absolute;
+	text-indent: -9999px;
+	text-transform: capitalize;
+	top: 50%;
+	margin-top: -20px;
+	height: 40px;
+	width: 30px;
+}
+
+.prev {
+	background-position: 0 0;
+	left: 30px;
+}
+
+.next {
+	background-position: -30px 0;
+	right: 30px;
+}
+
+.prev:hover {
+	background-position: 0 -40px;
+}
+
+.next:hover {
+	background-position: -30px -40px;
+}
+
+
+
+/* =======================================================================
+
+【詳細ページ】 Sidebar
+
+======================================================================= */
+
+/* ダウンロード箇所'総合' */
+
+.download-box {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	padding: 0 0 10px;
+	margin: 20px 0 0 0 !important;
+}
+
+#main .download-box div {
+	overflow: hidden;
+}
+
+#main .download-box h3 {
+	cursor: default;
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+	margin-bottom: 16px;
+	padding: 0;
+}
+
+#main .download-box h3:after {
+	background: none;
+}
+
+#main .download-box h3:hover {
+	background: none;
+}
+
+#main .movie_sample h3 {
+	margin-top: 20px;
+}
+
+
+/* 購入オプション' */
+
+.purchase-box {
+	border: 1px solid #CF2822;
+}
+
+.purchase-box > div {
+	background: url(../images/dot_dark.gif) repeat-x top;
+	width: 214px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.purchase-box > div:first-child {
+	background: none;
+}
+
+.purchase-box > div span:first-child {
+	font-size: 14px;
+	display: block;
+	line-height: 22px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.purchase-box > div span:first-child strong, .purchase-box > div span:first-child del {
+	margin-left: 6px;
+}
+
+.purchase-box > div span.cc-inactive {
+	font-size: 13px;
+}
+
+.purchase-box > div span.cc-inactive a {
+	color: inherit;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.purchase-box > div span.cc-inactive a:hover {
+	color: #de3831;
+}
+
+
+/* チケット購入確認ポップアップ */
+
+#ticket-confirm {
+	width: 320px;
+	margin: 16px 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#ticket-confirm p {
+	font-size: 13px;
+	margin: 10px 0;
+}
+
+#fancyConfirm_cancel, #fancyConfirm_ok {
+	width: 120px;
+	height: 35px;
+	margin: 12px;
+	border: none;
+	border-radius: 2px;
+}
+
+#fancyConfirm_cancel:hover {
+	background-color: #B9B7B2;
+}
+
+#fancyConfirm_ok {
+	background-color: #DE3831;
+	color: #f1f1f1;
+}
+
+#fancyConfirm_ok:hover {
+	background-color: #cd231b;
+}
+
+
+/* ツールチップ */
+
+.icon-hatena {
+	background-position: -260px -220px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	height: 12px;
+	width: 12px;
+	vertical-align: middle;
+}
+
+.tipanswer {
+	background: #f1f1f1;
+	border-radius: 3px;
+	-moz-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 3px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 3px 4px rgba(0,0,0,0.3); /*IE対策必要*/
+	color: #1f1f1f;
+	display: none;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 1.5;
+	margin-left: -110px;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	width: 180px;
+	text-indent: 0;
+	text-shadow: none;
+	z-index: 1000;
+}
+
+.tipanswer:after {
+	content: "";
+	border-style: solid;
+	border-color: transparent #f1f1f1;
+	margin-top: -4px;
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+
+div[class~="tipanswer"][class~="tip-top"], div[class~="tipanswer"][class~="tip-btm"] {
+	left: 50%;
+}
+
+div[class~="tipanswer"][class~="tip-right"]:after {
+	/*右に出るツールチップ （class "tip-right"を追加）*/
+
+	border-width: 4px 8px 4px 0;
+	left: -8px;
+	top: 50%;
+}
+
+div[class~="tipanswer"][class~="tip-left"]:after {
+	/*左に出るツールチップ （class "tip-left"を追加）*/
+
+	border-width: 4px 0 4px 8px;
+	right: -8px;
+	top: 50%;
+}
+
+div[class~="tipanswer"][class~="tip-top"]:after {
+	/*上に出るツールチップ （class "tip-top"を追加）*/
+
+	border-width: 8px 4px 0;
+	border-color: #f1f1f1 transparent;
+	left: 50%;
+	margin-top: 0;
+	margin-left: -4px;
+	bottom: -8px;
+}
+
+div[class~="tipanswer"][class~="tip-btm"]:after {
+	/*下に出るツールチップ （class "tip-btm"を追加）*/
+
+	border-width: 0 4px 8px;
+	border-color: #f1f1f1 transparent;
+	left: 50%;
+	margin-top: 0;
+	margin-left: -4px;
+	top: -8px;
+}
+
+.tipanswer strong {
+	color: #de3831;
+	margin-left: 0 !important;
+}
+
+.purchase-box .icon-hatena {
+	margin-left: 2px;
+}
+
+
+/* 購入オプションの画像ボタン */
+
+.purchase-box .sb-btn, .table-cart .sb-btn {
+	height: 42px !important;
+	width: 214px;
+	margin-bottom: 0;
+}
+
+.purchase-box .sb-btn-inactive {
+	background-position: 0 -514px !important;
+}
+
+#main .btn-orng {
+	background-position: 0 -430px
+}
+
+#main .btn-orng:hover {
+	background-position: 0 -472px
+}
+
+#main .btn-gry {
+	background-position: -110px -340px;
+}
+
+#main .btn-gry:hover {
+	background-position: -110px -382px
+}
+
+#main .btn-grn {
+	background-position: -214px -430px
+}
+
+#main .btn-grn:hover {
+	background-position: -214px -472px
+}
+
+.purchase-box .sb-btn a, .table-cart .sb-btn a {
+	font-size: 16px;
+	height: 16px !important;
+	padding: 12px 0 14px;
+	text-align: center;
+}
+
+.purchase-box .sb-btn a[class], .table-cart .btn-grn a {
+	padding-left: 66px;
+	text-align: left;
+}
+
+.purchase-box a[class|="btnicon"]:before, .table-cart a[class|="btnicon"]:before {
+	height: 42px;
+	width: 30px;
+	margin-top: -21px;
+	left: 36px;
+}
+
+.purchase-box .btnicon-cart:before {
+	background-position: -220px -250px
+}
+
+.purchase-box .sb-btn-inactive .btnicon-cart:before {
+	background-position: -220px -292px
+}
+
+#main .btnicon-arw {
+	padding-left: 46px !important;
+}
+
+#main .btnicon-arw:before {
+	background-position: -250px -250px;
+	right: 24px;
+	left: auto !important;
+}
+
+.sb-btn-inactive .btnicon-arw:before {
+	background-position: -250px -292px;
+}
+
+
+/* 対応フォーマットなどの表 */
+
+.purchase-box dl {
+	height: 30px;
+	letter-spacing: -0.4em;
+	padding: 0 12px 0;
+}
+
+.purchase-box dt, .purchase-box dd {
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	letter-spacing: normal;
+	line-height: 30px;
+}
+
+.purchase-box dl:nth-child(odd) {
+	background-color: #2a2a2a
+}
+
+.purchase-box dt {
+	font-size: 12px;
+	max-width: 168px;
+	text-align: left;
+}
+
+.purchase-box dt small {
+	margin-left: 6px;
+}
+
+.purchase-box dd {
+	float: right;
+	min-width: 22px;
+	text-align: right;
+}
+
+
+/* ダウンロードのメインの画像ボタン */
+
+.sb-btn {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin-bottom: 20px;
+	height: 38px !important;
+	width: 210px;
+}
+
+.sb-btn:hover {
+	background-position: 0 -38px;
+}
+
+.sb-btn:hover a, .sb-btn-small:hover a, .sb-btn-split:hover a {
+	color: inherit;
+}
+
+.sb-btn a {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 14px !important;
+	padding: 11px 0 13px 60px;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.25); /* IE対策必要 */
+	vertical-align: middle;
+}
+
+*[class|="btnicon"] {
+	position: relative;
+}
+
+*[class|="btnicon"]:before {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	content: "";
+	display: inline-block;
+	height: 38px;
+	width: 22px;
+	margin: -19px 0 0;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+}
+
+.btnicon-dl:before {
+	background-position: 0 -114px;
+}
+
+.btnicon-cloud:before {
+	background-position: -22px -114px
+}
+
+.btnicon-cart:before {
+	background-position: -44px -114px
+}
+
+.btnicon-watchlater:before {
+	background-position: -66px -114px
+}
+
+
+/* サイドバーのメインの画像ボタン(分割) */
+
+.sb-btn-split {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	background-position: 0 -340px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	height: 30px !important;
+	width: 110px;
+	text-align: center;
+}
+
+.sb-btn-split:hover {
+	background-position: 0 -370px;
+}
+
+.sb-btn-split a {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	height: 13px !important;
+	padding: 8px 0 9px;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.25); /*IE対策必要*/
+}
+
+
+/* サイドバーのメインの画像ボタン (Inactive) */
+
+.sb-btn-inactive {
+	background-position: 0 -76px !important;
+}
+
+.sb-btn-split-inactive {
+	background-position: 0 -400px !important;
+}
+
+.sb-btn-inactive a, .sb-btn-split-inactive a {
+	color: #555 !important;
+	cursor: default;
+}
+
+.sb-btn-inactive .btnicon-dl:before {
+	background-position: 0 -152px;
+}
+
+.sb-btn-inactive .btnicon-cloud:before {
+	background-position: -22px -152px
+}
+
+.sb-btn-inactive .btnicon-cart:before {
+	background-position: -44px -152px
+}
+
+.sb-btn-inactive .btnicon-watchlater:before {
+	background-position: -66px -152px
+}
+
+
+/*D2ブックマークボタン*/
+
+.bookmark {
+	padding-bottom: 24px;
+}
+
+.bookmark h3 {
+	color: #999;
+}
+
+.bookmark .sb-btn-small {
+	background-position: -150px -190px;
+	display: inline-block;
+	margin-bottom: 0;
+	width: 122px;
+	vertical-align: middle;
+}
+
+.bookmark .sb-btn-small:hover {
+	background-position: -150px -220px
+}
+
+.bookmark .sb-btn-small a {
+	text-indent: -9999px;
+}
+
+.bookmark .sb-btn-small + a {
+	color: #999;
+	display: inline !important;
+	font-size: 11px;
+	margin-left: 14px;
+	vertical-align: middle;
+}
+
+.bookmark .sb-btn-small + a:hover {
+	color: #de3831;
+}
+
+
+/* ムービースペック / 同じ指定をmain-content内の 作品詳細にも */
+
+.movie-spec, .movie-info {
+	margin-bottom: 14px;
+}
+
+.movie-spec dl, .movie-info dl {
+	font-size: 12px;
+	margin-bottom: 12px;
+}
+
+.movie-spec dt, .movie-info dt {
+	display: inline;
+	margin-right: 4px
+}
+
+.movie-spec dd, .movie-info dd {
+	display: inline;
+}
+
+
+/* ムービースペック下のヘルプリンク */
+
+.movie-help {
+	margin-top: 40px;
+}
+
+
+
+/* =======================================================================
+
+【詳細ページ】 Main-content
+
+======================================================================= */
+
+/* main-content-movieinfo 動画タイトル、詳細、コメント */
+
+.main-content-movieinfo {
+	margin-bottom: 50px;
+}
+
+/* タイトル箇所 */
+
+.video-detail {
+	margin-bottom: 20px;
+}
+
+#main-content .video-detail h1 {
+	border: 0;
+	color: #f1f1f1;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+.video-detail span {
+	vertical-align: middle;
+}
+
+
+/*詳細メイン タグ*/
+
+/* 詳細とリストタグに共通のクラスはリストページ用のCSS記述箇所にあります */
+
+.tag-movie-hd {
+	background-position: 0 -300px;
+	width: 34px
+}
+
+.tag-movie-fullhd {
+	background-position: -40px -300px;
+	width: 58px
+}
+
+.tag-movie-60 {
+	background-position: -100px -300px;
+	width: 40px
+}
+
+.tag-movie-vip {
+	background-position: -150px -300px;
+	width: 42px
+}
+
+.tag-movie-svip {
+	background-position: -200px -300px;
+	width: 54px
+}
+
+.tag-movie-recur {
+	background-position: -260px -300px;
+	width: 64px
+}
+
+
+/* 作品詳細 （↑のSidebar .movie-spec参照） */
+
+.movie-info dl {
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.movie-info dt {
+	color: #999;
+	font-weight: bold;
+}
+
+.movie-info-cat {
+ q height: 20px;
+ q overflow: hidden;
+	word-break: keep-all;
+}
+
+.movie-info-cat dd {
+	border-left: 1px #999 solid;
+	padding-left: 8px;
+	margin-left: 4px;
+}
+
+.movie-info-cat dt + dd {
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;/*カテゴリーを区切る線最初のみなし*/
+
+}
+
+.movie-comment h3 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.movie-comment p {
+	font-size: 12px;
+	line-height: 1.8;
+	margin-bottom: 0 !important;
+	width: 660px;
+}
+
+@media screen and (min-width: 1200px) {
+
+.movie-comment p {
+	width: 831px;
+}
+}
+
+
+/* tab部分 (収録作品、セット販売、切り替えタブ) */
+
+#detail-nav ul, .movie-source-nav ul, .addtnl-nav ul {
+	border-bottom: 1px #444 solid;
+	height: 30px;
+	overflow: hidden;
+ q width: 660px;
+	width: 100%;
+}
+
+#detail-nav li, .movie-source-nav li, .addtnl-nav li {
+	color: #ccc;
+	cursor: pointer;
+	display: inline;
+	float: left;
+	font-size: 15px;
+	height: 26px;
+	margin: 0 20px;
+	text-align: center;
+}
+
+#detail-nav .selected, .movie-source-nav .selected, .addtnl-nav .selected {
+	color: #F1F1F1 !important;
+	border-bottom: 4px #e54639 solid;
+	font-weight: bold;
+}
+
+
+/*収録作品*/
+
+#movie-source {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.movie-source-nav {
+	margin-bottom: 30px;
+}
+
+.movie-source-nav li {
+	cursor: default !important;/*タブが増えたら外す。ひとつなら必要*/
+
+}
+
+.movie-source-nav li small {
+	margin-left: 4px;
+}
+
+.movie-source-content ul {
+	overflow: hidden;
+}
+
+.movie-source-content li {
+	float: left;
+	width: 310px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+
+.movie-source-content li {
+	width: 256px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+.movie-source-content li {
+	width: 310px;
+}
+}
+
+.movie-source-content li a {
+	display: block;
+	line-height: 12px;
+}
+
+.movie-source-content dl {
+	color: #999;
+	font-size: 11px;
+	overflow: hidden;
+}
+
+.movie-source-content li a:hover dl {
+	color: inherit;
+}
+
+.movie-source-content dt, .movie-source-content dd {
+	margin-bottom: 8px;
+}
+
+.movie-source-content img {
+	height: 64px;
+	width: 94px;
+}
+
+.movie-source-content dd {
+	cursor: pointer;
+	margin-left: 108px;
+ q height: 11px;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.movie-source-content dd strong {
+	color: #f1f1f1;
+}
+
+.movie-source-content li a:hover strong {
+	color: inherit;
+}
+
+.movie-source-content dd[class|="tag"] {
+	display: block !important;
+	height: 15px;
+	width: 56px;
+}
+
+.tag-carib {
+	background-position: 0 -440px;
+}
+
+.tag-1pon {
+	background-position: -60px -440px;
+}
+
+.tag-10musume {
+	background-position: -120px -440px;
+}
+
+.tag-paco {
+	background-position: -180px -440px;
+}
+
+.tag-mura {
+	background-position: -240px -440px;
+}
+
+
+/* セット販売、ぬくもり等 */
+
+#addtnl {
+	margin-bottom: 50px;
+}
+
+.addtnl-nav {
+	margin-bottom: 30px;
+}
+
+.addtnl-nav li {
+ q cursor: default !important;
+/*タブが増えたら外す。ひとつなら必要*/
+
+}
+
+.addtnl-content {
+	overflow: hidden;
+}
+
+.img-area {
+	float: left;
+}
+
+.addtnl-content .movie-info dl {
+	margin-bottom: 2px;
+	margin-top: 1px;
+}
+
+
+/* 切り替え部分中身・ぬくもり */
+
+.addtnl-content-nuku .img-area {
+	margin-right: 20px;
+}
+
+.addtnl-content-nuku img {
+	height: 100px;
+	width: 100px;
+}
+
+.addtnl-content-nuku .movie-info {
+	float: left;
+	margin-bottom: 0;
+	position: relative;
+	height: 100px;
+	width: 540px;
+}
+
+.addtnl-content-nuku .movie-info strong {
+	line-height: 22px;
+}
+
+.before-nukumori {
+	display: inline-block;
+	margin-bottom: 10px;
+	height: 22px;
+	overflow: hidden !important;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 540px;
+}
+
+.before-nukumori:before {
+	background-position: -220px -340px;
+	margin-top: -11px;
+	height: 22px;
+	width: 32px;
+}
+
+.before-nukumori a {
+	margin-left: 40px;
+}
+
+@media screen and (min-width: 830px) {
+
+.addtnl-content-nuku .movie-info {
+	width: 711px;
+}
+
+.before-nukumori {
+	max-width: 711px;
+}
+}
+
+
+/* ぬくもり詳細へ画像ボタン */
+
+.addtnl-content .sb-btn-small {
+	margin-bottom: 0;
+	position: absolute;
+	right: 0;
+	bottom: 1px;
+}
+
+.btnicon-arw-small {
+	padding-left: 36px !important;
+}
+
+.btnicon-arw-small:before {
+	background-position: -88px -280px;
+	left: 103px !important;
+	margin-top: -15px !important;
+	height: 30px !important;
+}
+
+.sb-btn-small-inactive .btnicon-arw-small:before {
+	background-position: -88px -310px;
+}
+
+
+/* 切り替え部分中身・セット販売 */
+
+.addtnl-content-set .img-area {
+	margin-right: 6px;
+	max-width: 444px; /* (width 62px + mr 12px )*6 */
+}
+
+@media screen and (min-width: 1200px) {
+
+.addtnl-content-set .img-area {
+	max-width: 592px; /* (width 62px + mr 12px )*8 */
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+.addtnl-content-set .img-area {
+	max-width: 740px; /* (width 62px + mr 12px )*10 */
+}
+}
+
+.addtnl-content-set li {
+	float: left;
+	margin: 0 12px 12px 0;
+	width: 62px;
+}
+
+.addtnl-content-set .movie-info {
+	float: left;
+	margin-bottom: 0;
+	margin-top: -4px;
+	position: relative;
+	height: 90px;
+	width: 210px;
+}
+
+.addtnl-content-set .movie-info a strong {
+	line-height: 20px;
+	max-height: 40px;
+	margin-bottom: 4px;
+}
+
+#addtnl .cart-btn {
+	margin-bottom: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#addtnl .cart-btn a {
+	margin-bottom: 0;
+}
+
+
+/* 切り替え部分中身 */
+
+.detail-content {
+	min-height: 500px;
+}
+
+.nodisplay {
+	display: none;
+}
+
+
+/* 切り替え部分中身・関連動画 */
+
+.btn-blk {
+	background: #333;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#2e2e2e));
+	background: -webkit-linear-gradient(#333, #2e2e2e);
+	background: -moz-linear-gradient(#333, #2e2e2e);
+	background: -o-linear-gradient(#333, #2e2e2e);
+	background: linear-gradient(#333, #2e2e2e);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#333333, EndColorStr=#2e2e2e);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#333333, EndColorStr=#2e2e2e)";
+	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+　  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.3); /*IE対策必要*/
+	border: 1px #666 solid;
+	border-radius: 3px;
+	color: #f1f1f1;
+	display: block;
+	margin: 0 auto;
+	padding: 14px 0;
+	height: 13px;
+	width: 240px;
+	text-align: center;
+}
+
+.btn-blk:hover {
+	background: #404040;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#3f3f3f), to(#3a3a3a));
+	background: -webkit-linear-gradient(#3f3f3f, #3a3a3a);
+	background: -moz-linear-gradient(#3f3f3f, #3a3a3a);
+	background: -o-linear-gradient(#3f3f3f, #3a3a3a);
+	background: linear-gradient(#3f3f3f, #3a3a3a);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#3f3f3f, EndColorStr=#3a3a3a);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#3f3f3f, EndColorStr=#3a3a3a)";
+}
+
+
+/* 切り替え部分中身・ギャラリー */
+
+.detail-content-gallery, .detail-content-gallery-old {
+	padding-top: 30px;
+}
+
+.detail-content-gallery ul, .detail-content-gallery-old ul {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.detail-content-gallery li {
+	float: left;
+	height: 130px;
+	width: 130px;
+}
+
+.detail-content-gallery li div {
+	display: table-cell;
+	height: 130px;
+	width: 130px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.detail-content-gallery a img, .detail-content-gallery-old a img {
+	border: 1px solid #de3831;
+}
+
+.detail-content-gallery a[href*="/member/"] img, .detail-content-gallery-old a[href*="/member/"] img {
+	/*member階層にギャラリー画像がなければサムネにボーダー表示*/
+
+	border: none;
+}
+
+.detail-content-gallery-old li {
+	float: left;
+	height: 136px;
+	width: 110px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.zip-download {
+	border: 1px solid #555;
+	height: 60px;
+ q width: 658px;
+	text-align: center;
+}
+
+.zip-download .sb-btn-small {
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	margin: 15px 0 15px 32px;
+	vertical-align: middle;
+}
+
+
+/* ZIPDL画像ボタン */
+
+.sb-btn-small {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	background-position: 0 -190px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	height: 30px !important;
+	width: 150px;
+}
+
+.sb-btn-small:hover {
+	background-position: 0 -220px;
+}
+
+.sb-btn-small a {
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	height: 13px !important;
+	padding: 8px 0 9px 16px;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.25); /*IE対策必要*/
+	vertical-align: middle;
+}
+
+.btnicon-dl-small:before {
+	background-position: 0 -280px;
+	left: 24px !important;
+	margin-top: -15px !important;
+	height: 30px !important;
+}
+
+
+/* ZIPDLの画像ボタン (Inactive) */
+
+.sb-btn-small-inactive {
+	background-position: 0 -250px !important;
+}
+
+.sb-btn-small-inactive .btnicon-dl-small:before {
+	background-position: 0 -310px;
+}
+
+
+/* 切り替え部分中身・レビュー */
+
+.detail-content-review {
+	padding-top: 30px;
+}
+
+.detail-content-review textarea {
+	color: #999;
+ *color: #1f1f1f; /*ie6,7は:focusがきかないため*/
+	line-height: 18px;
+	height: 36px;
+	margin-bottom: 15px;
+	padding: 7px 20px;
+	width: 620px;
+}
+
+@media screen and (min-width: 1200px) {
+
+.detail-content-review {
+	width: 831px;
+}
+
+.detail-content-review textarea {
+	width: 791px;
+}
+}
+
+.detail-content-review textarea:focus {
+	color: #1f1f1f;
+}
+
+.review-input {
+	min-height: 91px;
+	margin-bottom: 30px;
+}
+
+.review-input textarea, .review-input input {
+	border-radius: 1px;
+}
+
+.review-row2 {
+	letter-spacing: -0.4em;
+	text-align: right;
+	height: 28px;
+ q width: 660px;
+}
+
+.review-input span, .review-row2 div {
+	color: #999;
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	height: 12px;
+	letter-spacing: normal;
+	margin-left: 20px;
+	overflow: visible;
+}
+
+.review-input div.login-btn {
+	border-radius: 1px !important;
+	font-size: 12px;
+	height: 12px;
+	padding: 7px 0;
+	position: static;
+	width: 62px !important;
+}
+
+.review-input input {
+	border: 0;
+	color: #1f1f1f;
+	display: inline;
+	font-size: 12px;
+	height: 26px;
+	letter-spacing: normal;
+	margin-left: 20px;
+	vertical-align: middle;
+}
+
+.review-row2 input[type="text"] {
+	width: 110px;
+	padding: 7px 10px 9px;
+	height: 12px;
+}
+
+.review-input input[type="radio"] {
+	display: none;
+}
+
+.review-input label:hover {
+	cursor: pointer;
+}
+
+.review-input .btn-blk {
+	border: 1px #666 solid;
+	border-radius: 1px !important;
+	color: #f1f1f1;
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	height: 28px;
+	padding: 5px 0 !important;
+	width: 62px !important;
+}
+
+.review-input span + input, .review-input span + div {
+	margin-left: 8px;
+}
+
+.review-list-area dl {
+	letter-spacing: -0.4em;
+	margin-bottom: 20px;
+}
+
+.review-list-area dt {
+	color: #999;
+	letter-spacing: normal;
+	margin-bottom: 6px;
+}
+
+.review-list-area dd {
+	color: #999;
+	font-size: 12px;
+	display: inline-block;
+ *display: inline;/* IE 7 and below */
+ *zoom: 1;/* IE 7 and below */
+	letter-spacing: normal;
+	margin: 0 10px 10px 0;
+}
+
+.review-list-area dd a {
+	color: #f1f1f1;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+.review-list-area dd a:hover {
+	color: #de3831;
+}
+
+.review-list-area dt + dd {
+	color: #f1f1f1;
+	display: block;
+	line-height: 20px;
+	margin: 0 0 6px 0;
+}
+
+
+
+/* =======================================================================
+
+【ショッピングカート】
+
+======================================================================= */
+
+.cartpage h1 {
+	border-bottom: 1px #555 solid;
+	padding-bottom: 14px;
+}
+
+.cartpage h1 div {
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+
+.cartpage h1 .after-arrow-sld-dw {
+	color: #f1f1f1;
+	font-size: 12px;
+	padding: 10px 16px 10px 10px!important;
+	text-align: right;
+	width: auto;
+}
+
+.cartpage h1 .after-arrow-sld-dw:after {
+	right: 0;
+}
+
+.cartpage h1 .selected {
+	font-weight: normal;
+	background: none;
+}
+
+.cartpage h1 .sub-content {
+	top: 36px;
+	left: auto;
+	right: 0;
+	padding: 10px 10px 0;
+	position: absolute;
+	width: auto;
+}
+
+.cartpage h1 .sub-content li {
+	font-size: 12px;
+	padding: 4px 0;
+}
+
+.cartpage h1 .sub-content li a {
+	width: auto;
+}
+
+.cartpage h1 .sub-content li a:hover {
+	color: #DE3831;
+}
+
+*[class|="shopimg"] {
+	background-image: url(../images/spr_shopping.png);
+	background-repeat: no-repeat;
+}
+
+.shopimg-flow1, .shopimg-flow2, .shopimg-flow3, .shopimg-flow4 {
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 548px;
+}
+
+.shopimg-flow1 {
+	background-position: 0 0;
+}
+
+.shopimg-flow2 {
+	background-position: 0 -30px;
+}
+
+.shopimg-flow3 {
+	background-position: -560px 0;
+}
+
+.shopimg-flow4 {
+	background-position: -560px -30px;
+}
+
+
+/*更新メッセージ*/
+
+.cartpage .warning {
+	border: 1px #de3831 solid;
+	font-size: 16px;
+	height: 58px;
+	line-height: 58px;
+	margin: 0 20px 20px;
+	text-align: center;
+}
+
+.before-warning:before {
+	background-position: -240px -190px;
+	height: 20px;
+	width: 20px;
+	left: -30px;
+	margin-top: -9px;
+}
+
+
+/*カートテーブル*/
+
+.table-cart {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+@media screen and (min-width: 1200px) {
+
+.table-cart {
+	width: 1111px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+.table-cart {
+	width: 1282px;
+}
+}
+
+.table-cart a:hover {
+	color: #DE3831;
+}
+
+.table-cart small {
+	color: inherit;
+}
+
+.table-cart th {
+	background: #de3831;
+	border-left: 1px #bbb solid;
+	height: 40px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.table-cart th small {
+	font-weight: normal;
+	margin-left: 4px;
+}
+
+.table-cart td {
+	background: #fff;
+	border-left: 1px #bbb solid;
+	border-top: 1px #bbb solid;
+	color: #1f1f1f;
+	line-height: 22px;
+}
+
+.table-cart td small {
+	display: block;
+}
+
+.table-cart tr:first-child + tr td {
+	border-top: none;
+}
+
+.table-cart th:first-child, .table-cart td:first-child {
+	border-left: none;
+}
+
+.table-cart th, .table-cart td {
+	/*幅固定のセル*/
+
+	width: 140px !important;
+	text-align: center;
+}
+
+.table-cart th[class], .table-cart td[class] {
+	/*幅可変のセル*/
+
+	width: auto !important;
+	line-height: 1;
+}
+
+.table-cart td:first-child, .table-cart .table-cart-mid ~ td {
+	height: 140px;
+}
+
+.table-cart .table-cart-mid + td + td + td {
+	/*値段のセル*/
+
+	color: #9a1f1a;
+	font-weight: bold;
+}
+
+.table-cart .table-cart-mid + td + td + td small {
+	color: #1f1f1f;
+}
+
+
+/*幅可変のセル（動画情報）*/
+
+#main td.table-cart-mid {
+	text-align: left;
+}
+
+.table-cart-mid dl {
+	color: #666;
+	margin: 0 26px;
+}
+
+.table-cart-mid dt {
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+
+.table-cart-mid dt .cc-blue {
+	/*予約作品*/
+
+	margin-right: 6px;
+}
+
+.table-cart-mid dt {
+	color: #1f1f1f;
+	font-weight: bold;
+}
+
+.table-cart-mid dt a {
+	color: inherit;
+*color: #1f1f1f;
+}
+
+.table-cart-mid dd {
+	margin-bottom: 10px;
+}
+
+.table-cart-mid dd small {
+	color: #9a1f1a;
+	line-height: 16px;
+}
+
+.table-cart-mid dd> a {
+	border-left: 1px solid #999;
+	color: #9a1f1a;
+	font-size: 12px;
+	margin-left: 6px;
+	padding-left: 6px;
+	text-decoration: underline;
+}
+
+.table-cart-mid dd>a:hover {
+	text-decoration: none;
+}
+
+.table-cart-mid dd>a small {
+	color: inherit;
+	display: inline;
+}
+
+.table-cart-mid dd>a:first-child {
+	border: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.table-cart-mid dt + dd>a {
+	/*dt=動画タイトルの次に来る項目=女優名*/
+
+	border: 0;
+	color: inherit;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*セット*/
+
+#main .set-title {
+	color: #9a1f1a;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.set-title + dd dl {
+	margin-left: 0;
+}
+
+.table-cart-mid li {
+	margin-bottom: 14px;
+}
+
+
+/*ボタンのセル*/
+
+.table-cart-btn {
+	padding: 0 20px;
+}
+
+
+/*#main span[class~="cart-btn"][class~="goto-dl"] a{*/
+
+#main span.goto-dl a {
+	background-position: -360px 0 !important;
+}
+
+#main span.goto-dl a:hover {
+	background-position: -360px -26px !important;
+}
+
+
+/*一番下のセル（合計金額・購入ボタン等）*/
+
+.table-cart-last td {
+	background: #eee;
+ q height: 82px !important;
+	height: auto !important;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.table-cart-last span a {
+	color: #1f1f1f;
+	font-size: 12px;
+}
+
+.table-cart-last td > div:first-child {
+	float: left;
+	margin-left: 20px;
+}
+
+.table-cart-last td > div:first-child ~ div {
+	float: right;
+	margin-right: 20px;
+}
+
+.table-cart-last td > div:first-child ~ div span {
+	font-size: 14px;
+}
+
+.table-cart-last span {
+	color: #1f1f1f;
+	line-height: 42px;
+	vertical-align: middle;
+}
+
+.table-cart-last strong {
+	color: #9a1f1a;
+	font-size: 16px;
+	margin-left: 6px;
+}
+
+.table-cart-last .islogin {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.table-cart-last .notlogin {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.table-cart-last .sb-btn {
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.table-cart-last .sb-btn a {
+	color: #f1f1f1;
+}
+
+#main .table-cart-last .btn-orng .btnicon-arw {
+	padding-left: 0 !important;
+}
+
+#main .table-cart-last .btn-gry .btnicon-arw {
+	font-size: 13px;
+	padding-top: 13px;
+	padding-right: 60px;
+	padding-bottom: 13px;
+	padding-left: 0 !important;
+	text-align: right;
+}
+
+
+/*DTI会員用のパスワード入力ボックス*/
+
+.cart-dti-pw {
+	margin-top: 26px
+}
+
+#cart-dti-pw-box {
+	height: 13px;
+	margin: 0 20px 0 8px;
+	padding: 7px;
+	width: 270px;
+}
+
+.cart-dti-pw input[type="checkbox"] {
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+
+/*カート左ナビ*/
+
+.cart-total strong {
+	font-size: 16px;
+	float: right;
+}
+
+#sidebar .purchase-box + small {
+	color: #999;
+	display: block;
+	line-height: 17px;
+	margin: 8px 0 40px;
+}
+
+
+/*カート関連作品*/
+
+.cartpage #main-content h2 {
+	border-bottom: 1px #555 solid;
+	font-size: 17px;
+	padding-bottom: 14px;
+	margin: 0 0 20px;
+	max-width: none;
+}
+
+.row-1 {
+	height: 363px;
+	overflow: hidden;
+}
+
+.cartpage .row-1 {
+	width: 696px;
+	margin-left: -12px;
+}
+
+@media screen and (min-width: 1200px) {
+
+/*1200以上でリスト表示5列*/
+
+
+.cartpage .row-1 {
+	width: 867px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+/*1400以上でリスト表示6列*/
+
+
+.cartpage .row-1 {
+	width: 1038px;
+}
+}
+
+div[class~="list-area"][class~="row-1"] {
+	margin-top: 18px !important;
+}
+
+div[class~="list-area"][class~="row-1"] >div {
+	padding-top: 12px;
+}
+
+div[class~="list-area"][class~="row-1"] >div:first-child {
+	padding-left: 12px;
+}
+
+
+/*購入完了ページ*/
+
+.cartpage #confirm-box {
+	height: 260px;
+	margin: 0 20px;
+	padding: 70px 0;
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+#confirm-box .confirm-box-cont {
+	width: 600px;
+	overflow: hidden;
+	margin: 0 auto;
+	color: #1f1f1f;
+}
+
+#confirm-box .confirm-box-cont h2 {
+	height: 50px;
+	background-color: #de3831;
+	color: #f1f1f1;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 50px;
+}
+
+#confirm-box .confirm-box-cont p {
+	font-size: 13px;
+	margin: 0 0 20px 0;
+}
+
+#confirm-box .confirm-box-cont p span {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.history-btn {
+	margin: 50px 0 0 0;
+}
+
+.history-btn .btn-small {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 14px;
+}
+
+.history-btn .btn-small a {
+	background-image: url(../images/spr_btn.png);
+	background-repeat: no-repeat;
+	background-position: -272px -190px;
+	cursor: pointer;
+	height: 30px !important;
+	width: 150px;
+	display: block;
+	text-indent: -9999px;
+}
+
+.history-btn .btn-small a:hover {
+	background-position: -272px -220px;
+}
+
+
+
+/* =======================================================================
+
+【トップページ】
+
+======================================================================= */
+
+.top-list-area, .top-list-area-sammov, .top-list-area, .top-list-area-preview, .top-list-area-chat {
+	margin: 0 auto 50px;
+}
+
+.main-top {
+	/* margin-top: 0 !important; */
+}
+
+.main-top h2 {
+	color: #999;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0 auto 20px;
+	width: 940px;
+	position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+
+.main-top h2 {
+	width: 1130px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+.main-top h2 {
+	width: 1321px;
+}
+}
+
+.main-top h2 .ichiran {
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+
+.main-top h2 .ichiran:after {
+	content: "\00BB"
+}
+
+
+/* メインバナー*/
+
+#slider-top {
+	background: url(../images/slider/bg.png) repeat-x;
+	height: 400px;
+	width: 100%;
+}
+
+#slider-top .bx-wrapper {
+	height: 400px;
+}
+
+@media screen and (min-width: 1200px) {
+
+#slider-top .bx-wrapper {
+	width: 100%;
+	max-width: 100% !important;
+}
+
+#slider-top .bx-wrapper .bx-viewport {
+	width: 940px !important;
+	margin: 0 auto;
+}
+
+#slider-top .bx-prev {
+	left: 30px
+}
+
+#slider-top .bx-next {
+	right: 30px
+}
+}
+
+#slider-top li a {
+	height: auto;
+}
+
+#slider-top ul {
+	margin: 0 auto;
+	width: 940px;
+}
+
+#slider-top li {
+	display: block;
+	position: relative;
+	width: 940px;
+	height: 400px;
+}
+
+#slider-top li>a {
+	height: 270px;
+	width: 480px;
+	position: absolute;
+	top: 60px;
+	z-index: 0;
+}
+
+#slider-top li.reg-banner > a {
+	width: 760px;
+	left: 90px;
+}
+
+#slider-top li>a:after {
+	content: "";
+	background: url(../images/slider/shadow.png) no-repeat;
+	display: block;
+	height: 55px;
+	width: 480px;
+	bottom: -51px;
+	left: 0;
+	position: absolute;
+	z-index: -2;
+}
+
+#slider-top li.reg-banner>a:after {
+	left: 140px;
+}
+
+#slider-top li img {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 480px;
+	z-index: -1;
+}
+
+#slider-top li.reg-banner img {
+	display: block;
+	width: 760px;
+}
+
+#slider-top li div {
+	position: absolute;
+	bottom: 70px;
+	right: 30px;
+	width: 406px;
+	z-index: 0;
+}
+
+#slider-top li span {
+	color: #f1f1f1;
+	font-size: 16px;
+	display: block;
+	margin-bottom: 6px;
+}
+
+#slider-top li span small {
+	color: #666;
+	font-size: 13px;
+}
+
+#slider-top li span strong {
+	color: inherit;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+#slider-top li span a {
+	line-height: inherit;
+}
+
+#slider-top li p {
+	color: #ccc;
+	line-height: 20px;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+#slider-top li p a {
+	color: #666;
+	display: inline;
+	margin-left: 10px;
+}
+
+#slider-top li p a:hover {
+	color: #DE3831
+}
+
+
+/*トップバナー部分*/
+
+div[class|="bannerarea"] img {
+	border: 1px solid #999;
+}
+
+div[class|="bannerarea"] .bx-wrapper {
+	height: auto;
+}
+
+
+/*横長一枚バナー*/
+
+.bannerarea-top-1 {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+.bannerarea-top-1 img {
+	width: 938px;
+}
+
+
+/*横長2枚バナー*/
+
+.bannerarea-top-2col {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+.bannerarea-top-2colInner { width:100%; }
+
+.bannerarea-top-2col img {
+	width: /*938px*/ 49%;
+}
+
+
+/*横長3枚バナー*/
+
+
+.bannerarea-top-3col {
+	width: 940px;
+	margin: 0 auto 40px;
+	overflow: hidden;
+}
+
+.bannerarea-top-3colInner { width:1350px; }
+
+.bannerarea-top-3col img { border: none !important; }
+
+.bannerarea-top-3col img.topBnrImg01
+ {
+	width: 362px /*38%*/; margin-right: 1px;
+}
+
+.bannerarea-top-3col img.topBnrImg02
+ {
+	width: 214.5px /*22.5%*/; margin-right: 1px;
+}
+
+.bannerarea-top-3col img.topBnrImg03
+ {
+	width: 362px /*38%*/; 
+}
+
+
+
+
+
+/*横長4枚バナー*/
+
+.bannerarea-top-4 {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+.bannerarea-top-4 ul {
+	overflow: hidden;
+}
+
+.bannerarea-top-4 li {
+	float: left;
+ q margin-right: 16px;
+	/*スライダーにしない場合はマージンが必要*/
+
+	width: 270px;
+}
+
+.bannerarea-top-4 li img {
+	width: 268px;
+}
+
+
+/*トップバナー部分 レスポンシブ*/
+
+@media screen and (min-width: 1200px) {
+
+.bannerarea-top-1, .bannerarea-top-4 {
+	width: 1130px;
+}
+
+
+.bannerarea-top-1 img {
+	width: 1128px;
+	
+}
+
+
+.bannerarea-top-2col, .bannerarea-top-3col {
+	width: 1130px;
+}
+
+
+.bannerarea-top-3col img.topBnrImg01
+ {
+	width: 435px;
+}
+
+.bannerarea-top-3col img.topBnrImg02
+ {
+	width: 257.8px;
+}
+
+.bannerarea-top-3col img.topBnrImg03
+ {
+	width: 435px; 
+}
+
+
+
+
+}
+
+@media screen and (min-width: 1400px) {
+
+div[class|="bannerarea"] .bx-wrapper {
+ q width: 1130px;
+}
+
+.bannerarea-top-1 img {
+	width: 1319px;
+}
+
+.bannerarea-top-1, .bannerarea-top-4 {
+	width: 1321px;
+}
+
+
+.bannerarea-top-2col, .bannerarea-top-3col {
+	width: 1321px;
+}
+
+
+
+
+
+
+
+.bannerarea-top-3col img.topBnrImg01
+ {
+	width: 508px; 
+}
+
+.bannerarea-top-3col img.topBnrImg02
+ {
+	width: 301px; 
+}
+
+.bannerarea-top-3col img.topBnrImg03
+ {
+	width: 508px; 
+}
+
+}
+
+
+/* 人気動画ランキングの順位*/
+
+.rank-corner {
+	width: 0;
+	height: 0;
+	border-top: 46px solid #de3831;
+	border-right: 46px solid transparent;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 0;
+}
+
+.rank-no {
+	color: #f1f1f1;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	height: 16px;
+	min-width: 20px;
+	position: absolute;
+	top: 6px;
+	left: 2px;
+	z-index: 1;
+}
+
+.top-list-area li {
+	height: 238px;
+	width: 175px;
+}
+
+.top-list-area li img {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 無料サンプル fancyboxプレイヤー*/
+
+.fancy-playbtn, .fancy-playbtn-big {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.fancy-playbtn {
+	background: url(http://www.caribbeancompr.com/images/fancybox/fancy_playbtn.png) no-repeat 0 0;
+	margin: -28px 0 0 -28px;
+	height: 56px;
+	width: 56px;
+}
+
+.fancy-playbtn-big {
+	background: url(http://www.caribbeancompr.com/images/fancybox/fancy_playbtn_big.png) no-repeat 0 0;
+	margin: -36px 0 0 -36px;
+	height: 72px;
+	width: 72px;
+}
+
+#fancybox-outer, #fancybox-content {
+	border-radius: 3px;
+}
+
+
+/* スライダー bxSlider用の指定 */
+
+.bx-wrapper {
+	width: 940px;
+	height: 238px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.slider-outer {
+	position: relative;
+	margin: 0 auto 50px;
+	overflow: visible;
+	width: 100%;/*コントロールボタンの配置のためのはこ*/
+
+}
+
+.slider-outer .row-1 {
+	height: 238px
+}
+
+.top-campaign {
+	position: relative; 	
+	margin: 0px auto;	
+	width: 960px;/*campaign用*/
+}
+
+.slider-outer .top-campaign a:hover img {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	-ms-filter: "alpha(opacity=100)";
+}
+
+@media screen and (min-width: 1200px) {
+
+/*1200以上でリスト表示6列*/
+
+/*	.slider-outer {
+
+		width: 1191px;
+
+	}*/
+
+
+.bx-wrapper {
+	width: 1130px
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+/*1400以上でリスト表示7列*/
+
+/*	.slider-outer {
+
+		width: 1382px;
+
+	}*/
+
+.bx-wrapper {
+	width: 1321px
+}
+}
+
+.bx-prev, .bx-next {
+	background: url(../images/slider-control.png) no-repeat;
+	display: block;
+	outline: none;
+	position: absolute;
+	text-indent: -9999px;
+	text-transform: capitalize;
+	top: 50%;
+	margin-top: -20px;
+	height: 40px;
+	width: 30px;
+}
+
+.bx-prev {
+	background-position: 0 0;
+	left: -40px;
+}
+
+.bx-next {
+	background-position: -30px 0;
+	right: -40px;
+}
+
+.bx-prev:hover {
+	background-position: 0 -40px;
+}
+
+.bx-next:hover {
+	background-position: -30px -40px;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+.bx-pager {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	text-align: center;
+	z-index: 0;
+}
+
+.bx-pager-item {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+	margin: 0 7px;
+}
+
+.bx-pager-item a {
+	background-image: url(../images/spr_main.png);
+	background-position: -290px -190px;
+	background-repeat: no-repeat;
+	display: block;
+	height: 12px;
+	width: 11px;
+	text-indent: -9999px;
+}
+
+.bx-pager-item .active {
+	background-position: -270px -190px;
+}
+
+
+
+/* =======================================================================
+
+【カテゴリーページ】
+
+======================================================================= */
+
+.cat2-list-area {
+	overflow: hidden;
+	padding: 30px 0 16px;
+	text-align: left;
+}
+
+.cat2-list-area h2 {
+}
+
+.cat2-list-area ul {
+	width: 100%;
+}
+
+.cat2-list-area li {
+	border: 1px solid #555;
+	display: block;
+	float: left;
+	margin: 0 10px 10px 0;
+	height: 34px;
+	width: 208px;
+}
+
+.list-series li {
+	width: 318px !important;
+}
+
+.cat2-list-area li:hover {
+	background: #de3831;
+	border: 1px solid #de3831;
+}
+
+.cat2-list-area li a {
+	display: block;
+	font-size: 13px;
+	height: 13px;
+	padding: 9px 8px 10px 20px;
+}
+
+.cat2-list-area li a:hover, .cat2-list-area li a:hover small {
+	color: inherit;
+}
+
+.cat2-list-area li a small {
+	color: #777;
+	font-size: 11px;
+	float: right;
+}
+ @media screen and (min-width: 1200px) {
+
+.cat2-list-area {
+	width: 841px;
+}
+
+.cat2-list-area li {
+	width: 268px;
+}
+
+.list-series li {
+	width: 408px !important;
+}
+}
+ @media screen and (min-width: 1400px) {
+
+.cat2-list-area {
+	width: 1012px;
+}
+
+.cat2-list-area li {
+	width: 241px;
+}
+
+.list-series li {
+	width: 325px !important;
+}
+}
+
+
+
+/* =======================================================================
+
+【女優・男優リストページ】
+
+======================================================================= */
+
+/* メニュー部分 */
+
+*[class|="abc"] {
+	float: right;
+	letter-spacing: -0.4em;
+	margin-top: 7px;
+	height: 13px;
+	max-width: 174px;
+}
+
+*[class|="abc"] li {
+	border-left: 1px #f1f1f1 solid;
+	display: inline-block;
+	float: left;
+	font-size: 13px;
+	letter-spacing: normal;
+	margin-left: 10px;
+	text-align: right;
+	height: 13px;
+	width: 24px;
+}
+
+*[class|="abc"] li:first-child {
+	border: 0;
+}
+
+.abc-all {
+	max-width: 469px !important
+}
+
+.abc-all li {
+	width: 36px !important;
+}
+
+.actor-list-area {
+	background: url(../images/dot_dark.gif) repeat-x right 0 bottom -3px;
+	background: url(../images/dot_dark.gif) repeat-x bottom\9;
+	clear: both;
+	padding: 30px 0 10px;
+	text-align: left;
+}
+
+.actor-list-area h2 {
+	margin-bottom: 30px !important;
+	margin-top: -38px !important; /* アンカーリンク位置上昇分 + 2px */
+	padding-top: 40px; /* 上昇分を戻す分 */
+}
+
+.actor-list-area li {
+	float: left;
+	letter-spacing: -0.4em;
+	margin: 0 10px 20px 0;
+	width: 155px;
+}
+
+.actor-list-area li img {
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: middle;
+ *zoom: 1; /* for IE6-7 */
+ *display: inline; /* for IE6-7 */
+}
+
+.actor-list-area li span {
+	display: inline-block;
+ *zoom: 1; /* for IE6-7 */
+ *display: inline; /* for IE6-7 */
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 16px;
+	margin-left: 12px;
+	max-height: 48px;
+ _height:expression(document.body.clientHeight > 48? "48px" : "auto"); /*IE6 max-height用*/
+	overflow: hidden;
+	vertical-align: middle;
+	width: 83px;
+}
+
+
+
+/* =======================================================================
+
+【ランキングページ】
+
+======================================================================= */
+
+/* ranking sidebar */
+
+.sidebar-default .sidebar-main-menu>li a.after-ranking:after {
+	background-position: -160px -400px;
+	right: 11px;
+	margin-top: -7px;
+	height: 15px;
+	width: 15px;
+}
+
+.updatedon {
+	font-size: 11px;
+	float: right;
+	height: 11px;
+	margin-top: 9px;
+}
+
+.ranking-area-1, .ranking-actor-area-1 {
+	overflow: hidden;
+}
+
+
+/* ＋アイコン */
+
+.ranking-area-1 dd a.before-plus {
+	padding-left: 18px;
+	color: #888;
+}
+
+.before-plus:before {
+	background-position: -200px -110px;
+	height: 11px;
+	width: 11px;
+	margin-top: -6px;
+	left: 0;
+}
+
+.before-plus:hover:before {
+	background-position: -200px -130px;
+}
+
+
+/* 動画ランキング上部 */
+
+.ranking-area-1 dl, .ranking-actor-area-1 dl {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	float: left;
+	margin-right: 30px;
+	overflow: hidden;
+	padding: 20px 0;
+ q width: 310px;
+}
+
+.ranking-area-1 dt, .ranking-actor-area-1 dt {
+	float: left;
+	margin-right: 20px;
+	width: 30px;
+}
+
+.ranking-area-1 div[class|="icon"], .ranking-actor-area-1 div[class|="icon"] {
+	margin-bottom: 6px;
+	height: 30px;
+	width: 30px;
+}
+
+.icon-no1 {
+	background-position: 0 -370px;
+}
+
+.icon-no2 {
+	background-position: -30px -370px;
+}
+
+.icon-no3 {
+	background-position: -60px -370px;
+}
+
+.icon-no4 {
+	background-position: -90px -370px;
+}
+
+.icon-no5 {
+	background-position: -120px -370px;
+}
+
+.icon-no6 {
+	background-position: -150px -370px;
+}
+
+.icon-no7 {
+	background-position: -180px -370px;
+}
+
+.icon-no8 {
+	background-position: -210px -370px;
+}
+
+.icon-no9 {
+	background-position: -240px -370px;
+}
+
+.icon-no10 {
+	background-position: -270px -370px;
+}
+
+.icon-no11 {
+	background-position: 0 -460px;
+}
+
+.icon-no12 {
+	background-position: -30px -460px;
+}
+
+.icon-no13 {
+	background-position: -60px -460px;
+}
+
+.icon-no14 {
+	background-position: -90px -460px;
+}
+
+.icon-no15 {
+	background-position: -120px -460px;
+}
+
+.icon-no16 {
+	background-position: -150px -460px;
+}
+
+.icon-no17 {
+	background-position: -180px -460px;
+}
+
+.icon-no18 {
+	background-position: -210px -460px;
+}
+
+.icon-no19 {
+	background-position: -240px -460px;
+}
+
+.icon-no20 {
+	background-position: -270px -460px;
+}
+
+.icon-up, .icon-stay, .icon-down {
+	height: 32px !important;
+}
+
+.icon-up {
+	background-position: 0 -400px;
+}
+
+.icon-stay {
+	background-position: -30px -400px;
+}
+
+.icon-down {
+	background-position: -60px -400px;
+}
+
+.ranking-area-1 dd.img-area, .ranking-actor-area-1 dd.img-area {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.ranking-area-1 dd.img-area {
+	width: 137px;
+	max-height: 200px;
+	overflow: visible;
+}
+
+.ranking-area-1 .movie-img a, .ranking-actor-area-1 .movie-img a {
+	display: block;
+}
+
+.ranking-area-1 dd.img-area img {
+	display: block;
+	height: 200px;
+	max-width: 147px;
+}
+
+.ranking-area-1 dd {
+	color: #ccc;
+	display: block;
+	font-size: 12px;
+	line-height: 1.5;
+	margin-bottom: 4px;
+	max-height: 72px;
+	margin-left: 217px;
+	overflow: hidden;
+}
+
+.ranking-area-1 dd a {
+	color: inherit
+}
+
+.ranking-area-1 dd a:hover {
+	color: #de3831
+}
+
+.ranking-area-1 dd strong {
+	display: block;
+	font-size: 14px;
+	line-height: 17px;
+	max-height: 34px;
+	overflow: hidden;
+}
+
+.ranking-area-1 dd:last-child {
+	margin-bottom: 0;
+}
+ @media screen and (min-width: 1200px) {
+
+.ranking-area-1 dl, .ranking-actor-area-1 dl, .ranking-area-2 dl {
+	width: 385px;
+}
+}
+ @media screen and (min-width: 1400px) {
+
+.ranking-area-1 dl, .ranking-actor-area-1 dl, .ranking-area-2 dl {
+	width: 470px;
+}
+}
+
+
+/* 動画ランキング下部 */
+
+.ranking-area-2, .ranking-actor-area-2 {
+	padding: 0;
+	overflow: hidden;
+}
+
+.ranking-area-2 dl {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	letter-spacing: -0.4em;
+	margin-right: 30px;
+	padding: 20px 0;
+}
+ @media screen and (min-width: 1200px) {
+
+.ranking-area-2 dl {
+	float: left;
+}
+}
+
+.ranking-area-2 dt, .ranking-area-2 dd {
+	display: inline-block;
+ *zoom: 1; /* for IE6-7 */
+ *display: inline; /* for IE6-7 */
+	letter-spacing: normal;
+	line-height: 1;
+	margin-right: 10px;
+	vertical-align: baseline;
+}
+
+.ranking-area-2 dt a, .ranking-area-2 dd a {
+	line-height: 1 !important;
+}
+
+.ranking-area-2 *[class|="before"] {
+	font-size: 12px;
+	padding-left: 26px;
+}
+
+.ranking-area-2 *[class|="before"]:before {
+	height: 16px;
+	width: 16px;
+	left: 0;
+	margin-top: -9px;
+}
+
+.ranking-area-2 *[class|="before"]:after {
+	content: ".";
+}
+
+.before-up-mini:before {
+	background-position: -100px -400px;
+}
+
+.before-stay-mini:before {
+	background-position: -120px -400px;
+}
+
+.before-down-mini:before {
+	background-position: -140px -400px;
+}
+
+
+/* phase1ではランキングステータスの表示は不可能なので、今のところは非表示に↓ */
+
+.icon-up, .icon-stay, .icon-down, .ranking-area-2 *[class|="before"]:before {
+	display: none;
+}
+
+
+/* phase1ではランキングステータスの表示は不可能なので、今のところは非表示に↑ */
+
+/* 年間ランキングメニュー部分 */
+
+.year {
+	letter-spacing: -0.4em;
+	margin: 20px 0 10px;
+	height: 13px;
+}
+
+.year li {
+	border-left: 1px #999 solid;
+	display: inline-block;
+	float: left;
+	font-size: 13px;
+	letter-spacing: normal;
+	margin-left: 10px;
+	padding-left: 10px;
+	text-align: left;
+	height: 13px;
+}
+
+.year li:first-child {
+	border: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.year li a {
+	color: #999;
+}
+
+.year li a:hover {
+	color: #de3831;
+}
+
+
+/* 女優ランキング */
+
+.ranking-actor-area-1 dd.img-area {
+}
+
+.ranking-actor-area-1 dd.img-area a {
+	display: block;
+}
+
+.ranking-actor-area-1 dd {
+	float: left;
+}
+
+.ranking-actor-area-1 .img-area + dd {
+	padding-top: 36px;
+}
+
+.ranking-actor-area-1 dd strong {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-bottom: 6px;
+	text-align: left;
+}
+
+.ranking-actor-area-1 dd strong, .ranking-actor-area-1 dd small {
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 150px;
+}
+
+.ranking-actor-area-1 dd a:hover small {
+	color: inherit;
+}
+
+.ranking-actor-area-1 dd small {
+	display: block;
+}
+
+.ranking-actor-area-1 .img-area + dd + dd {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1;
+	width: 270px;
+}
+
+.ranking-actor-area-1 dd div {
+	color: #999;
+	margin-bottom: 12px
+}
+
+.ranking-actor-area-1 dd ul {
+	height: 78px;
+	overflow: hidden;
+}
+
+.ranking-actor-area-1 dd li {
+	list-style-position: inside;
+	list-style-type: disc;
+	margin-bottom: 10px;
+	padding-left: 3px;
+	width: 270px;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ranking-actor-area-1 dd li a {
+	margin-left: -2px;
+}
+ @media screen and (min-width: 1200px) {
+
+.ranking-actor-area-1 dd strong, .ranking-actor-area-1 dd small {
+	width: 175px;
+}
+
+.ranking-actor-area-1 .img-area + dd + dd {
+	clear: both;
+	margin: 20px 0 0 50px;
+	width: 335px;
+}
+
+.ranking-actor-area-1 dd li {
+	width: 335px;
+}
+}
+ @media screen and (min-width: 1400px) {
+
+.ranking-actor-area-1 dd strong, .ranking-actor-area-1 dd small {
+	width: 260px;
+}
+
+.ranking-actor-area-1 .img-area + dd + dd {
+	width: 420px;
+}
+
+.ranking-actor-area-1 dd li {
+	width: 420px;
+}
+}
+
+
+/* 女優ランキング下部 */
+
+.ranking-actor-area-2 {
+	float: left;
+	width: 220px;
+}
+
+.ranking-actor-area-2 li {
+	float: left;
+	letter-spacing: -0.4em;
+	margin: 0 0 20px 0;
+	width: 220px;
+}
+
+.ranking-actor-area-2 li img {
+	display: inline-block;
+	letter-spacing: normal;
+	vertical-align: middle;
+ *zoom: 1; /* for IE6-7 */
+ *display: inline; /* for IE6-7 */
+}
+
+.ranking-actor-area-2 li span {
+	display: inline-block;
+ *zoom: 1; /* for IE6-7 */
+ *display: inline; /* for IE6-7 */
+	font-size: 12px;
+	letter-spacing: normal;
+	margin-right: 16px;
+}
+
+.ranking-actor-area-2 li img + span {
+	line-height: 16px;
+	margin-left: 12px;
+	max-height: 48px;
+ _height:expression(document.body.clientHeight > 48? "48px" : "auto"); /*IE6 max-height用*/
+	overflow: hidden;
+	vertical-align: middle;
+	width: 100px;
+}
+
+.see-more {
+	float: right;
+}
+
+.see-more a {
+	color: #999;
+	font-size: 14px;
+}
+
+.see-more a:hover {
+	color: #de3831;
+}
+
+
+
+/* =======================================================================
+
+【まとめ買いページ】
+
+======================================================================= */
+
+.ticket {
+	max-width: 1280px;
+}
+
+.top-content {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.ticket h1 {
+	background: url(../images/ticket/title.png) no-repeat 0 0;
+	
+	
+	width: 940px;
+	height: 150px;
+	margin: 0 auto 50px;
+	text-indent: -9999px;
+}
+ @media screen and (max-width: 1259px) {
+
+.ticket {
+	width: 980px !important;
+}
+
+.ticket #main-content {
+	width: 660px;
+}
+}
+ @media screen and (min-width: 1260px) {
+
+.ticket {
+	width: 1260px !important;
+}
+
+.top-content {
+	float: right;
+	margin-right: 20px;
+}
+
+.ticket #main-content {
+	width: 940px;
+	max-width: 940px;
+}
+}
+
+
+/* tab部分 */
+
+.horizontal-nav {
+	border-bottom: 4px #DE3831 solid;
+	margin: 0 auto 30px;
+	position: relative;
+	height: 36px;
+	width: 940px;
+}
+
+.horizontal-nav ul {
+	display: inline-block;
+ *display: inline;
+ *zoom: 1;
+	letter-spacing: -0.4em;
+	height: 36px;
+	width: 552px;
+}
+
+.ticket-nav li {
+	background-image: url(../images/spr_shopping.png);
+}
+
+.horizontal-nav li {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: inline-block;
+ *display: block;
+ *zoom: 1;
+	float: left;
+	letter-spacing: normal;
+	margin-right: 4px;
+	height: 36px;
+	width: 180px;
+	text-indent: -9999px;
+	text-transform: capitalize; /*IE7*/
+}
+
+.ticket-nav-card {
+	background-position: -400px -640px;
+}
+
+.ticket-nav-bank {
+	background-position: -400px -680px;
+}
+
+.ticket-nav-card:hover {
+	background-position: -580px -640px;
+}
+
+.ticket-nav-bank:hover {
+	background-position: -580px -680px;
+}
+
+li[class~="ticket-nav-card"][class~="selected"] {
+	background-position: -220px -640px;
+}
+
+li[class~="ticket-nav-bank"][class~="selected"] {
+	background-position: -220px -680px;
+}
+
+.horizontal-nav span {
+	color: #999;
+	font-size: 12px;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+
+/* Join (& Upgrade) プライステーブル */
+
+.price-table {
+	background: #ececec;
+	color: #1f1f1f;
+	text-align: center;
+	margin: 0 auto 50px;
+	width: 940px;
+}
+
+.price-table tr {
+ *border: 1px #bbb solid;
+}
+
+.price-table tr:first-child td:first-child {
+	background-image: url(../images/spr_shopping.png);
+	background-repeat: no-repeat;
+	background-position: -720px -80px;
+	height: 260px;
+	width: 220px;
+}
+
+.table-card-10 tr:first-child td:first-child {
+	background-position: -720px -360px;
+	width: 190px;
+}
+
+.price-table td {
+	height: 74px;
+}
+
+.ticketprice {
+	background-image: url(../images/spr_shopping.png);
+	background-repeat: no-repeat;
+}
+
+.table-card .ticketprice {
+	background-position: 0 -80px;
+}
+
+.table-bank .ticketprice {
+	background-position: 0 -360px;
+}
+
+.table-card-10 .ticketprice {
+	background-position: 0 -880px;
+}
+
+.table-bank-10 .ticketprice {
+	background-position: 0 -1160px;
+}
+
+.price-table tr:last-child td {
+	border-top: 1px #bbb solid;
+}
+
+.price-table input {
+	background: #eee;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#e8e8e8));
+	background: -webkit-linear-gradient(#f4f4f4, #e8e8e8);
+	background: -moz-linear-gradient(#f4f4f4, #e8e8e8);
+	background: -o-linear-gradient(#f4f4f4, #e8e8e8);
+	background: linear-gradient(#f4f4f4, #e8e8e8);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f4f4f4, EndColorStr=#e8e8e8);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f4f4f4, EndColorStr=#e8e8e8)";
+	border: 1px #b6b6b6 solid;
+	border-radius: 2px;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 1px 0 rgba(255,255,255,0.8) inset;
+　  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 1px 0 rgba(255,255,255,0.8) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 1px 0 rgba(255,255,255,0.8) inset; /*IE対策必要*/
+	color: #333;
+	font-weight: bold;
+	height: 32px;
+	width: 118px;
+	text-shadow: 0 1px 1px #fff; /*IE対策必要*/
+}
+
+.price-table input.inactive, .price-table input.inactive:hover {
+	background: #eee;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#e9e9e9));
+	background: -webkit-linear-gradient(#f2f2f2, #e9e9e9);
+	background: -moz-linear-gradient(#f2f2f2, #e9e9e9);
+	background: -o-linear-gradient(#f2f2f2, #e9e9e9);
+	background: linear-gradient(#f2f2f2, #e9e9e9);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f2f2f2, EndColorStr=#e9e9e9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#f2f2f2, EndColorStr=#e9e9e9)";
+	border: 1px #dadada solid;
+	-moz-box-shadow: 0 2px 0 rgba(255,255,255,0.4), 0 1px 0 rgba(255,255,255,0.4) inset;
+　  -webkit-box-shadow: 0 2px 0 rgba(255,255,255,0.4), 0 1px 0 rgba(255,255,255,0.4) inset;
+	box-shadow: 0 2px 0 rgba(255,255,255,0.4), 0 1px 0 rgba(255,255,255,0.4) inset; /*IE対策必要*/
+	color: #a2a2a2;
+	cursor: default;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #f1f1f1; /*IE対策必要*/
+}
+
+.price-table input:hover {
+	background: #eee;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#e8e8e8), to(#e3e3e3));
+	background: -webkit-linear-gradient(#e8e8e8, #e3e3e3);
+	background: -moz-linear-gradient(#e8e8e8, #e3e3e3);
+	background: -o-linear-gradient(#e8e8e8, #e3e3e3);
+	background: linear-gradient(#e8e8e8, #e3e3e3);
+ filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#e8e8e8, EndColorStr=#e3e3e3);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#e8e8e8, EndColorStr=#e3e3e3)";
+}
+
+*[class|="ticketimg"] {
+	background-image: url(../images/spr_shopping.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	text-transform: capitalize; /*IE7*/
+	_background: none; /*IE6*/
+	_text-indent: 0; /*IE6*/
+}
+
+
+/* Ticket Main-content */
+
+.ppv-desc {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.ppv-desc > div {
+	margin-bottom: 60px;
+}
+
+.ppv-desc a {
+	text-decoration: underline;
+}
+
+.ppv-desc ul li {
+	list-style-type: disc;
+}
+
+.ppv-desc ol li {
+	list-style-type: decimal;
+}
+
+.ppv-desc li {
+	margin-bottom: 2px;
+	margin-left: 18px;
+}
+
+#main-content h2[id|="ticket"], #main-content h2[id|="firstpage"] {
+	border-bottom: 1px solid #de3831;
+	font-size: 20px;
+	font-weight: normal;
+	padding-bottom: 14px;
+	margin: 2px 0 18px;
+	margin-top: -38px; /* アンカーリンク位置上昇分 + 2px */
+	padding-top: 40px; /* 上昇分を戻す分 */
+}
+
+*[class|="ticketimgb4"] {
+	position: relative;
+}
+
+*[class|="ticketimgb4"]:before {
+	background-image: url(../images/spr_shopping.png);
+	background-repeat: no-repeat;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+}
+
+.ticketimgb4-creditcard {
+	padding-left: 158px;
+}
+
+.ticketimgb4-creditcard:before {
+	background-position: -300px -730px;
+	left: 0;
+	height: 22px;
+	width: 148px;
+	margin: -11px 0 0;
+}
+
+.ticketimgb4-bank {
+	padding-top: 60px;
+}
+
+.ticketimgb4-bank:before {
+	background-position: 0 -800px;
+	left: 0;
+	top: -10px;
+	height: 40px;
+	width: 600px;
+}
+
+.ticketimgb4-d2logo, .ticketimgb4-ablogo, .ticketimgb4-verilogo {
+	padding-left: 140px;
+}
+
+.ticketimgb4-d2logo:before, .ticketimgb4-ablogo:before, .ticketimgb4-verilogo:before {
+	left: 0;
+	height: 60px;
+	width: 120px;
+	margin: -27px 0 0;
+}
+
+.ticketimgb4-d2logo:before {
+	background-position: -500px -730px;
+}
+
+.ticketimgb4-ablogo:before {
+	background-position: -640px -730px;
+}
+
+.ticketimgb4-verilogo:before {
+	background-position: -780px -730px;
+}
+
+img.cs-img {
+	display: block;
+	margin-top: 10px;
+	width: 200px;
+}
+
+.ppv-desc .sb-btn {
+	line-height: 14px;
+}
+
+.ppv-desc .sb-btn a {
+	display: block;
+	text-decoration: none;
+	padding: 11px 0 13px;
+	text-align: center;
+}
+
+#ticket-sec8 + ul a {
+	text-decoration: none;
+}
+
+.sidebar-follow {
+	display: block;
+	position: relative;
+}
+
+.sidebar-follow .sidebar-default {
+	background: #1f1f1f;
+	position: absolute;
+	top: 0;
+	width: 240px;
+}
+
+
+
+/* =======================================================================
+
+【初めての方へ】
+
+======================================================================= */
+
+.firstpage #main-content h1 {
+	border: none;
+	background: #dd3e2b;
+	height: 300px;
+	width: 100%;
+	margin: 0 0 40px;
+	padding: 0;
+}
+
+.firstpage h1 span {
+	background: url(../images/first/top.png) no-repeat 0 0;
+	display: block;
+	height: 300px;
+	width: 660px;
+	margin: 0 auto;
+	text-indent: -9999px;
+ *text-indent: 0;
+}
+
+.firstpage .ppv-desc dl {
+	float: left;
+	margin-right: 40px;
+	height: 320px;
+	width: 240px;
+	position: relative;
+}
+
+.firstpage .ppv-desc dl span.zoom-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 210px;
+	right: 10px;
+	background: url('../images/first/zoom_icon.png') 0 0 no-repeat;
+	text-indent: -9999px;
+	z-index: 1;
+}
+
+.firstpage .ppv-desc dt {
+	margin-bottom: 8px;
+}
+
+.firstpage .ppv-desc dt img {
+	border: 1px solid #999;
+	width: 238px;
+}
+
+.firstpage .ppv-desc dd {
+	line-height: 20px;
+}
+
+#firstpage-sec7 + ul a {
+	text-decoration: none;
+}
+ @media screen and (min-width: 1200px) {
+
+.firstpage .ppv-desc dl {
+	margin-right: 32px;
+}
+}
+ @media screen and (min-width: 1400px) {
+
+.firstpage .ppv-desc dl {
+	margin-right: 40px;
+}
+}
+
+
+
+/* =======================================================================
+
+【特設ページ】
+
+======================================================================= */
+
+/* テンプレ・リストが入るボックス (#main-contentと同じ) */
+
+.list-area-outer {
+	display: inline; /*IE6*/
+	float: left;
+	margin-right: 20px;
+	width: 660px;
+}
+
+.list-area-outer .list-area {
+	margin-top: 0;
+}
+
+
+
+/* =======================================================================
+
+【シリーズページ】
+
+======================================================================= */
+
+.series-top {
+	background: url(../images/dot_dark.gif) repeat-x right 0 bottom;
+	margin: 24px 0;
+}
+
+.series-top img {
+	margin-bottom: 22px;
+}
+
+
+
+/* =======================================================================
+
+【規約/プライバシーページ】
+
+======================================================================= */
+
+.kiyaku-nav li {
+	background-image: url(../images/spr_etc.png);
+	width: 200px;
+}
+
+.kiyaku-nav-1 {
+	background-position: -200px 0;
+}
+
+.kiyaku-nav-2 {
+	background-position: -200px -40px;
+}
+
+.kiyaku-nav-1:hover {
+	background-position: -400px 0;
+}
+
+.kiyaku-nav-2:hover {
+	background-position: -400px -40px;
+}
+
+li[class~="kiyaku-nav-1"][class~="selected"] {
+	background-position: 0 0;
+}
+
+li[class~="kiyaku-nav-2"][class~="selected"] {
+	background-position: 0 -40px;
+}
+
+.main-article p, .main-article ol, .main-article ul {
+	font-size: 12px;
+	margin-bottom: 40px;
+}
+
+.main-article p + ol, .main-article p + ul, .main-article ul + p, .main-article ol + p {
+	margin-top: -30px;
+}
+
+.main-article p strong {
+	display: block;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+}
+
+.main-article li {
+	line-height: 20px;
+	margin-left: 20px;
+}
+
+.main-article ol>li {
+	list-style: decimal;
+}
+
+.main-article ul>li {
+	list-style: disc;
+}
+
+
+
+/* =======================================================================
+
+【FAQ よくあるご質問】
+
+======================================================================= */
+
+.main-article small li {
+	font-size: 11px;
+	margin-left: 17px;
+}
+
+.faq-title {
+	clear: both;
+	margin-top: -40px; /* アンカーリンク位置上昇分 */
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+.faq-title h2 {
+	float: left;
+	padding-top: 40px; /* 上昇分を戻す分 */
+}
+
+.faq-title a {
+	float: right;
+	padding-top: 40px; /* 上昇分を戻す分 */
+}
+
+.faq a {
+	color: #999;
+}
+
+.faq a:hover {
+	color: #de3831;
+}
+
+.faq >ul>li {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	list-style: none;
+	margin: 0;
+	padding-bottom: 1px;
+}
+
+#main .faq >ul {
+ q width: 660px;
+	margin-bottom: 40px !important;
+}
+
+.faq dt {
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: normal;
+	height: 14px;
+	margin: 0;
+	padding: 14px 10px 22px;
+	position: relative;
+}
+
+.faq dt:hover {
+	background: #2d2d2d;
+}
+
+.faq dt:after {
+	content: "";
+	background-image: url(../images/spr_main.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+}
+
+.faq dt:after {
+	background-position: -200px -150px;
+	right: 10px;
+	margin-top: -7px;
+	height: 13px;
+	width: 13px;
+}
+
+.faq dt.after-nega:after {
+	background-position: -200px -190px;
+}
+
+.faq dd {
+	padding: 20px;
+	background-color: #2a2a2a;
+	margin-bottom: 14px;
+}
+
+.faq p, .faq ol, .faq ul {
+	margin: 0 0 10px 0 !important;
+}
+
+.faq table {
+	line-height: 16px;
+	margin: 10px 0 30px;
+	text-align: center;
+	width: 618px;
+}
+
+.faq table th, .faq table td {
+	border: #555 1px solid;
+	height: 32px;
+	padding: 6px 2px;
+}
+
+.faq table th {
+	background: #333;
+}
+
+.faq table td:first-child {
+	background: #666;
+	width: 80px
+}
+
+.faq table td {
+	width: 179px;
+}
+
+
+
+/* =======================================================================
+
+【お問い合わせ】
+
+======================================================================= */
+
+.contact h2 {
+	margin-top: -40px !important; /* アンカーリンク位置上昇分 */
+	padding-top: 38px; /* 上昇分を戻す分 + 2px */
+}
+
+.contact >ul {
+	background: url(../images/dot_dark.gif) repeat-x top;
+	margin-bottom: 70px !important;
+	padding-top: 1px;
+ q width: 660px;
+}
+
+.contact >ul>li {
+	background: url(../images/dot_dark.gif) repeat-x bottom;
+	list-style: none;
+	margin: 0;
+}
+
+.contact li {
+	height: 49px
+}
+
+.contact li a {
+	color: #f1f1f1;
+	display: block;
+	font-size: 13px;
+	height: 13px !important;
+	padding: 18px 0 18px 10px;
+	position: relative;
+}
+
+.contact li a:after {
+	background-image: url(../images/spr_main.png);
+	content: "";
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	background-position: 0 -160px;
+	right: 0;
+	margin-top: -25px;
+	height: 50px;
+	width: 32px;
+}
+
+.contact li:hover {
+	background-color: #2d2d2d;
+	background-image: url(../images/dot_dark.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.contact li:hover a {
+	color: #f1f1f1;
+}
+
+
+
+/* =======================================================================
+
+【サイトマップ】
+
+======================================================================= */
+
+.sitemap h1 {
+	width: 100% !important;
+}
+
+.sitemap h2 {
+	border-bottom: 1px #555 solid;
+	padding-bottom: 10px;
+	margin: 0 !important;
+}
+
+.sitemap > div {
+	float: left;
+	margin: 10px 0 0 5%;
+	width: 30%;
+}
+
+.sitemap > h1+div {
+	margin-left: 0;
+}
+
+.sitemap > div > ul {
+	margin-bottom: 60px;
+}
+
+.sitemap li {
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.sitemap .sm-sub-menu li {
+	margin: 14px 0 0 8px;
+}
+
+.sitemap .sm-sub-menu li a {
+	font-size: 12px;
+	font-weight: normal;
+	color: #888;
+}
+
+ul.sm-sub-menu > li:first-child {
+	margin-top: 16px;
+}
+
+.sitemap .sm-sub-menu li a:hover {
+	color: #de3831;
+}
+
+
+
+/* =======================================================================
+
+【イベント一覧ページ・トップメンバーのイベント箇所】
+
+======================================================================= */
+
+.eventlist-area {
+	min-height: 600px;
+}
+
+.eventlist-area dl {
+	background: url(../images/dot_dark.gif) repeat-x right 0 bottom -3px;
+	background: url(../images/dot_dark.gif) repeat-x bottom\9;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+.eventlist-area dt {
+	float: left;
+	margin-right: 30px;
+	height: 135px;
+	width: 180px;
+	text-align: left;
+}
+
+.eventlist-area dt img {
+	max-width: 180px;
+}
+
+.eventlist-area dt a {
+	display: block;
+}
+
+.eventlist-area dd {
+	color: #ccc;
+	font-size: 12px;
+	float: right;
+	line-height: 1.5;
+	margin-bottom: 10px;
+	width: 450px;
+}
+
+.eventlist-area .movie-date {
+	line-height: 1 !important;
+}
+
+.eventlist-area .movie-title {
+	font-size: 14px;
+}
+
+.eventlist-area .movie-title span {
+	margin-right: 8px;
+}
+
+.eventlist-area dd:last-child {
+	margin-bottom: 0;
+}
+
+
+
+/* =======================================================================
+
+【無料サンプルページ】
+
+======================================================================= */
+
+/* プレイヤー部分 */
+
+#video-area h1 {
+	color: #999;
+	font-weight: normal;
+	font-size: 22px;
+	margin: 36px auto 20px;
+	width: 800px;
+}
+
+#video-area .slider-outer {
+	margin-bottom: 30px;
+}
+
+#video-area .bx-prev {
+	left: 40px;
+	margin-top: -70px
+}
+
+#video-area .bx-next {
+	right: 40px;
+	margin-top: -70px
+}
+
+#video-area .bx-wrapper {
+	width: 820px;
+}
+
+#video-area .video-detail {
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+/* リスト部分 */
+
+.list-area-sammov {
+	width: 972px; /*(223px x 4) + (margin 16px x 5)*/
+	margin: 0 auto;
+}
+
+.list-area-sammov>div {
+	float: left;
+	margin: 0 0 0 16px;
+	overflow: hidden;
+	height: 255px;
+	width: 223px;
+ q position: relative;
+}
+
+.list-area-sammov div>div {
+	-moz-box-shadow: 0 2px 8px #000;
+	-webkit-box-shadow: 0 2px 8px #000;
+	box-shadow: 0 2px 8px #000;
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+	height: 125px;
+	width: 223px;
+}
+
+.list-area-sammov div img {
+	display: block;
+	margin: 0 auto;
+	height: 125px;
+	max-width: 223px;
+}
+
+
+/* =======================================================================
+
+【Enterページ】 (エンターは入り口なのでIE6でも一応見れるように)
+
+======================================================================= */
+
+.enter-img {
+	height: 540px;
+	width: 100%;
+	margin: 0 auto 64px;
+	position: relative;
+	background-color: #dd4631;
+	overflow: hidden;
+}
+
+.enter-img img {
+	position: absolute;
+	left: 50%;
+	width: 1200px;
+	margin-left: -600px;
+}
+
+.enter-img a:hover img {
+	opacity: 1;
+}
+
+.enter-img + #main {
+	padding-bottom: 0 !important;
+}
+
+.enter-btn-area, .enter-kiyaku {
+	margin: 0 auto;
+}
+
+.enter-btn-area {
+	overflow: hidden;
+	position: relative;
+	height: 140px;
+	width: 940px;
+}
+
+.enter-btn-area span {
+	color: #999;
+	font-size: 11px;
+}
+
+.btn-enter a, .logo, .tagline p, .logo-18 {
+	background-image: url(../images/spr_etc.png);
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: -9999px
+}
+
+.logo {
+	background-position: 0 -80px;
+	height: 90px;
+	width: 310px;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+
+.tagline p {
+	background-position: 0 -170px;
+	height: 40px;
+	width: 500px;
+	position: absolute;
+	top: 30px;
+	left: 410px;
+}
+
+.tagline span {
+	font-size: 13px;
+	position: absolute;
+	top: 70px;
+	left: 414px;
+}
+
+.btn-enter {
+	text-align: center;
+	width: 220px;
+	position: absolute;
+}
+
+.btn-enter-jp {
+	left: 230px;
+}
+
+.btn-enter-eng {
+	left: 490px;
+}
+
+.btn-enter a {
+	height: 60px;
+	width: 220px;
+}
+
+.btn-enter-jp a {
+	background-position: -0 -220px;
+}
+
+.btn-enter-jp a:hover {
+	background-position: -220px -220px;
+}
+
+.btn-enter-eng a {
+	background-position: -0 -280px;
+}
+
+.btn-enter-eng a:hover {
+	background-position: -220px -280px;
+}
+
+.btn-enter span {
+	display: block;
+	height: 12px;
+}
+
+.btn-enter-jp a:hover + span, .btn-enter-eng a:hover + span {
+	color: #f1f1f1;
+	text-decoration: underline
+}
+
+.enter-kiyaku {
+	font-size: 12px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.enter-warning {
+	height: 90px;
+	width: 940px;
+	margin: 0 auto;
+	overflow: visible;
+	position: relative;
+}
+
+.logo-18 {
+	background-position: -310px -80px;
+	height: 64px;
+	width: 66px;
+	position: absolute;
+	top: 6px;
+}
+
+.enter-warning p {
+	line-height: 18px;
+	position: absolute;
+	left: 90px;
+	width: 850px;
+	margin: 12px 0 0;
+	color: #ccc;
+}
+
+.enter-kiyaku a {
+	color: #f3cf3f;
+}
+
+.enter-kiyaku a:hover {
+	text-decoration: underline;
+}
+
+.enter-kiyaku small {
+	color: #666;
+	font-size: 10px;
+	line-height: 15px;
+}
+
+.enter-kiyaku small strong {
+	color: inherit;
+}
+
+.enter-kiyaku-text {
+	color: #777;
+	display: block;
+	font-size: 11px;
+	width: 940px;
+	line-height: 20px;
+	margin: 0 auto;
+}
+
+
+/* ナビのセットボタン色変更 */
+#nav > ul.setSaleNav li {background:#1b9db9;}
+#nav > ul.setSaleNav > li:hover { background:red; }

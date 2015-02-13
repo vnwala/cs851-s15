@@ -1,0 +1,168 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	LANTIKI
+	http://www.famima.com/shop/pages/lantiki.aspx
+--------------------------------------------------------------------- */
+
+#lantiki {
+	width:960px;
+	margin:0 auto;
+
+}
+
+
+
+
+
+/* basic */
+#lantiki h1 {
+	display:none;
+	margin:0;
+}
+
+#lantiki .mb20 {
+	margin:0 0 20px 0;
+}
+
+#lantiki br.clear {
+	clear:both;
+}
+
+#lantiki .subtitle {
+	border:1px solid #666;
+	padding:10px 20px;
+	font-weight:bold;
+}
+
+
+
+
+
+/* detail */
+#lantiki #mainvisual {
+	width:960px;
+	margin:0 auto;
+}
+
+
+
+
+
+#lantiki #line_up {
+	width:960px;
+}
+
+#lantiki #line_up ul {
+	margin:0;
+	display:inline;
+}
+
+#lantiki #line_up li {
+	margin:0 0 0 100px;
+	float:left;
+	display:inline;
+	height:101px;
+}
+
+
+
+
+
+#lantiki #motihada {
+	width:960px;
+	/*margin-top:95px;*/
+}
+
+#lantiki #motihada .explanation {
+	width:898px;
+	margin:20px 20px 50px;
+	padding:10px;
+	border:1px dashed #666;
+}
+
+#lantiki #motihada ul.pickup_items_m {
+	width:960px;
+	margin:0;
+	display:inline;
+}
+
+#lantiki #motihada ul.pickup_items_m li {
+	margin:0 0 20px 40px;
+	float:left;
+	display:inline;
+}
+
+#lantiki #motihada ul.pickup_items_m li div.pickup_item01 {
+	background:url(http://www.famima.com/images/p/lantiki/motihada_items_01.jpg) no-repeat;
+	display:block;
+	width:150px;/*190px*/
+	height:78px;/*303px*/
+	padding:205px 20px 20px 20px;
+}
+
+#lantiki #motihada ul.pickup_items_m li div.pickup_item02 {
+	background:url(http://www.famima.com/images/p/lantiki/motihada_items_02.jpg) no-repeat;
+	display:block;
+	width:150px;/*190px*/
+	height:58px;/*303px*/
+	padding:225px 20px 20px 20px;
+}
+
+#lantiki #motihada ul.pickup_items_m li div.pickup_item03 {
+	background:url(http://www.famima.com/images/p/lantiki/motihada_items_03.jpg) no-repeat;
+	display:block;
+	width:150px;/*190px*/
+	height:78px;/*303px*/
+	padding:205px 20px 20px 20px;
+}
+
+#lantiki #motihada ul.pickup_items_m li div.pickup_item04 {
+	background:url(http://www.famima.com/images/p/lantiki/motihada_items_04.jpg) no-repeat;
+	display:block;
+	width:150px;/*190px*/
+	height:78px;/*303px*/
+	padding:205px 20px 20px 20px;
+}
+
+
+
+
+
+#lantiki #highland2000 {
+	width:960px;
+	margin-top:95px;
+}
+
+#lantiki #highland2000 ul.pickup_items_h {
+	width:960px;
+	margin:0;
+	display:inline;
+}
+
+#lantiki #highland2000 ul.pickup_items_h li.pickup_item {
+	margin:0 0 0 95px;
+	float:left;
+	display:inline;
+	width:166px;/* width:190px */
+	height:243px;/* height:303px */
+	border:10px solid #e6e6e6;
+	padding:3px 2px 10px;
+}
+
+#lantiki #highland2000 ul.pickup_items_h li {
+	margin:0 0 0 95px;
+	float:left;
+	display:inline;
+	width:190px;
+	height:100px;
+}
+
+
+
+
+
+#lantiki #btn {
+	width:420px;
+	margin:50px auto;
+}

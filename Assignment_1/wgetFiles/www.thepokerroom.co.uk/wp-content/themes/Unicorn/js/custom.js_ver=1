@@ -1,0 +1,110 @@
+jQuery(document).ready(function(jQuery) {
+	
+////////////////////////// Main Menu /////////////////////////////////
+	jQuery("ul.sf-menu").supersubs({ 
+            minWidth:    14,   // minimum width of sub-menus in em units 
+            maxWidth:    37,   // maximum width of sub-menus in em units 
+            extraWidth:  1     // extra width can ensure lines don't sometimes turn over 
+                               // due to slight rounding differences and font-family 
+        }).superfish();  // call supersubs first, then superfish, so that subs are 
+                         // not display:none when measuring. Call before initialising 
+                         // containing tabs for same reason. 
+						 
+	
+
+	////////////////////////// Gallery /////////////////////////////////
+//	 jQuery('#gallery').royalSlider({
+//		fullscreen: {
+//			enabled: true,
+//			nativeFS: true
+//		},
+//		controlNavigation: 'thumbnails',
+//		autoScaleSlider: true, 
+//		autoScaleSliderWidth: 628,     
+//		autoScaleSliderHeight: 500,
+//		loop: false,
+//		numImagesToPreload:4,
+//		imageScalePadding:5,
+//		arrowsNavAutohide: true,
+//		arrowsNavHideOnTouch: true,
+//		arrowsNav:false,
+//		keyboardNavEnabled: true
+//	});
+	
+	////////////////////////// Prettyphoto /////////////////////////////////
+	jQuery(".gallery-item a[rel^='prettyPhoto']").prettyPhoto({
+		animation_speed:'normal',
+		theme:'pp_default',
+		show_title: false,
+		autoplay_slideshow: false,
+		gallery_markup: '',
+	});
+	jQuery(".featured-image-post a[rel^='prettyPhoto']").prettyPhoto({
+		animation_speed:'normal',
+		theme:'pp_default', 
+		autoplay_slideshow: false
+	});
+	jQuery(".social-widget li a").animate({ opacity: '0.7'});
+	jQuery(".social-widget li a").hover(function() {
+		jQuery(this).stop().animate({ opacity: '1'},300);
+		},function() {
+		jQuery(this).stop().animate({ opacity: '0.7'},300);
+	});
+	
+	////////////////////////// Fade Hover Effect /////////////////////////////////
+    jQuery(".overlay, .flickr_badge_image a img").hover(function() {
+		jQuery(this).stop().animate({ opacity: '0.3'},300);
+		},function() {
+		jQuery(this).stop().animate({ opacity: '1'},300);
+	});
+	jQuery(".magz-image, .content-big-image").hover(
+		function() {
+            jQuery('.big-title', this).stop().animate({
+                left: "-100%"
+            }, 300);
+        },
+		function() {
+             jQuery('.big-title', this).stop().animate({
+                left: "10px"
+            }, 300);
+        }
+	);
+
+	
+	////////////////////////////// Tabs /////////////////////////////////////
+	jQuery('.tabs-wrapper').each(function() {
+		jQuery(this).find(".tab_content").hide(); //Hide all content
+		jQuery(this).find("ul.tabs li:first").addClass("active").show(); //Activate first tab
+		jQuery(this).find(".tab_content:first").show(); //Show first tab content
+	});
+	jQuery("ul.tabs li").click(function(e) {
+		jQuery(this).parents('.tabs-wrapper').find("ul.tabs li").removeClass("active"); //Remove any "active" class
+		jQuery(this).addClass("active"); //Add "active" class to selected tab
+		jQuery(this).parents('.tabs-wrapper').find(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = jQuery(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		jQuery(this).parents('.tabs-wrapper').find(activeTab).fadeIn(); //Fade in the active ID content
+		
+		e.preventDefault();
+	});
+	jQuery("ul.tabs li a").click(function(e) {
+		e.preventDefault();
+	})
+	
+	///////////////////////// Toggle //////////////////////////////////
+	jQuery(".toggle-content").hide(); 
+	jQuery("h5.toggle").toggle(function(){
+		jQuery(this).addClass("active");
+		}, function () {
+		jQuery(this).removeClass("active");
+	});
+	jQuery("h5.toggle").click(function(){
+		jQuery(this).next(".toggle-content").slideToggle();
+	});
+	
+	
+});
+
+
+
+

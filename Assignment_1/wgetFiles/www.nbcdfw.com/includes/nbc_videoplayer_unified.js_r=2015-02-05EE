@@ -1,0 +1,1252 @@
+// If the object doesn't exist, create it.
+if (typeof nbcVideoPageUtils == "undefined") {
+    nbcVideoPageUtils = {}; 
+}
+
+if (typeof nbcPdkEventMaster == "undefined") {
+    nbcPdkEventMaster = {}; 
+}
+
+if (typeof nbcPdkEvents == "undefined") {
+    nbcPdkEvents = {}; 
+}
+
+var nbcVPUtools = nbcVPUtools || new nbc.tools('nbcVPUtools');
+
+// Initialize commonly required pieces of data
+nbcVideoPageUtils.currentClipHomeSection = null;
+nbcVideoPageUtils.currentClipHomeSubsection = null;
+nbcVideoPageUtils.currentClipAuthor = null;
+nbcVideoPageUtils.currentClipTitle = null;
+nbcVideoPageUtils.currentClipRunTime = null;
+nbcVideoPageUtils.currentClipPlatformPid = null;
+nbcVideoPageUtils.currentClipAdCampaign = null;
+nbcVideoPageUtils.currentClipContentSource = null;
+nbcVideoPageUtils.currentClipContentCode = null;
+nbcVideoPageUtils.currentClipSummary = null;
+nbcVideoPageUtils.isSyndicationAllowed = null;
+nbcVideoPageUtils.isLongForm = null;
+nbcVideoPageUtils.isThisALiveStream = false;
+nbcVideoPageUtils.isStaticLeadAVideo = null;
+nbcVideoPageUtils.omnitureFriendlyTitle = null;
+nbcVideoPageUtils.didMetaDataHandlerFire = null;
+nbcVideoPageUtils.playerPreviewImage = null;
+nbcVideoPageUtils.embeddedPlayerHTML = null;
+nbcVideoPageUtils.videoReleaseId = null;
+nbcVideoPageUtils.closedCaptionState = false;
+nbcVideoPageUtils.pdkPreferredRuntime = null;
+nbcVideoPageUtils.playerHasLaunched = false;
+nbcVideoPageUtils.targetForEndCard = null;
+nbcVideoPageUtils.playerWidth = null;
+nbcVideoPageUtils.playerHeight = null;
+nbcVideoPageUtils.fullPageTitle = null;
+nbcVideoPageUtils.shortPageTitle = null;
+nbcVideoPageUtils.customPlayerLayout = "null";
+nbcVideoPageUtils.videoStillSeq = 0;
+nbcVideoPageUtils.liveVideoAdRefreshActive = false;
+nbcVideoPageUtils.adHocPlayerExists = false; // Should only be used on pages running a carousel. Deprecated, do not use moving forward, including new carousels.
+nbcVideoPageUtils.unifiedActive = true;
+
+nbcVideoPageUtils.RSID = nbc.market.replace("nbc","nbcuots"); //created to get the market value  ex: nbcuotsnewyork
+nbcVideoPageUtils.platformOmnitureActivate = false;
+
+if(nbc.env=="stage." && (nbc.omniture.pageType=="article" || nbc.omniture.pageType=="blog" || nbc.isMobile=="true" || nbc.omniture.pageType.indexOf('weather') > -1 )){
+    nbcVideoPageUtils.platformOmnitureActivate = true;
+}
+
+/* nbcVideoPageUtils.pdkPluginParams
+ * JS OBJECT - Contains paths to The Platform Player plugins.
+ * Absolute URLs are highly recommended.  
+ */
+nbcVideoPageUtils.pdkPluginPath = {
+    "flash": [
+              {
+                "omniture" :  "type=tracking|URL="+nbc.mediaDomain +"/designvideo/omnitureMedia_v3.swf",
+                //"omnitureCypress" :  "type=tracking|URL="+nbc.mediaDomain +"/designvideo/omnitureMedia.swf",
+                "akamaiHD" : "type=player|URL=/assets/"+nbc.pdkPath+"/pdk/swf/akamaiHD.swf",
+                "comscore" : "type=tracking|URL=http://"+nbc.domain+"/assets/"+nbc.pdkPath+"/pdk/swf/comScore.swf",
+                "f4mparser": "http://"+nbc.domain+"/assets/pdk449/pdk/swf/F4mParser.swf",
+                "tremor"   : "type=adcomponent|URL=http://objects.tremormedia.com/embed/swf/tpacudeoplugin46.swf",
+                "chartbeat": "type=tracking|URL=http://static.chartbeat.com/swf/ChartbeatPDK.swf",
+                "conviva" : "type=reporting|url=http://livepassdl.conviva.com/thePlatform/ConvivaThePlatformPlugin_5_0_5.swf",
+                "closeCaption" : "type=Captions|URL=http://"+nbc.env+nbc.domain+"/assets/"+nbc.pdkPath+"/pdk/swf/liveCaptions.swf"
+                // "tremorBeta" : "http://objectsorigin.beta.tremormedia.com/embed/swf/tpacudeoplugin46.swf"
+              }
+    ],
+        
+    "html5": [
+              {
+                "omniture" : "type=tracking|URL=/includes/omnitureMedia.js",
+                "akamaiHD" : "type=player|URL=http://"+nbc.domain+"/assets/"+nbc.pdkPath+"/pdk/js/plugins/akamaiHD.js",
+                "comscore" : "type=tracking|URL=http://"+nbc.domain+"/assets/"+nbc.pdkPath+"/pdk/js/plugins/comScore.js",
+                "tremor"   : "type=adcomponent|URL=http://objects.tremormedia.com/embed/sjs/html5/plugins/theplatform/tpAcudeoPlugIn.js",
+                "conviva" : "type=reporting|url=http://livepassdl.conviva.com/thePlatform/ConvivaThePlatformPlugin.js"
+              }
+     ]
+        
+}
+
+    
+
+
+/* nbcVideoPageUtils.pageTitleParser()
+ * Returns either the full title of the page via document.title or the text immediately preceding the pipe
+ */
+nbcVideoPageUtils.pageTitleParser = function (preferredTitle) {
+    var titlePipeLocation = document.title.indexOf("|");
+    var shortPageTitle = document.title.slice(0,(titlePipeLocation-1));
+
+    switch(preferredTitle) {
+    case "fullTitle":
+        return document.title;
+        break;
+
+    
+    case "shortTitle":
+        return shortPageTitle;
+        break;
+    }
+}
+
+
+/* nbcVideoPageUtils.updateSocialMedia()
+ * Refresh the social media buttons on a page with a new URL
+ * NOTE: AS OF NOW IT ONLY WORKS ON THE COZI TV VIDEO HUB.
+ */
+nbcVideoPageUtils.updateSocialMedia = function() {
+    
+    if(typeof episodeMetaData != undefined) {
+        jQuery('li.gplus').html('<span class="g-plusone" data-size="medium" data-href="http://www.cozitv.com/video/'+episodeMetaData.series+'/'+episodeMetaData.episodeName+'/'+episodeMetaData.cmsid+'"></span>');
+        jQuery('li.twitter').html('<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="http://www.cozitv.com/video/'+episodeMetaData.series+'/'+episodeMetaData.episodeName+'/'+episodeMetaData.cmsid+'" data-via="'+nbc.globalTwitter+'"></a>');
+        jQuery('li.facebookBtn').html('<span class="fb-like" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-href="http://www.cozitv.com/video/'+episodeMetaData.series+'/'+episodeMetaData.episodeName+'/'+episodeMetaData.cmsid+'" data-font="arial"></span>');
+    
+        FB.XFBML.parse(); // RE-RENDER FACEBOOK RECOMMEND/LIKE/SEND
+        jQuery.ajax( {url : 'http://platform.twitter.com/widgets.js',dataType : 'script', cache : true} ); // RE-RENDER TWEET BUTTON
+        jQuery.ajax( {url : 'https://apis.google.com/js/plusone.js', dataType : 'script', cache : true} ); // RE-RENDER GOOGLE+ BUTTON
+    
+    } else {
+        // console.warn("nbcVideoPageUtils.updateSocialMedia | Metadata unavailable, aborting...");
+    }
+}
+
+/* nbcVideoPageUtils.getVideoMetaData()
+ * Get a video's metadata. Pass the CMS ID of the release, the <div> ID of where you'd like the video to play,
+ * and a boolean flag that signals whether or not you want the video to actually start. (Sometimes you just want
+ * some metadata!)
+ */
+nbcVideoPageUtils.getVideoMetaData = function(videoID, targetContainer, width, height, startAfterDataRequest) {
+    if(!startAfterDataRequest) {
+        var startAfterDataRequest = false;
+    }
+    
+    if(nbcVideoPageUtils.currentPlayer) {
+    nbcVideoPageUtils.pauseActivePlayer();
+    }
+    
+    nbcVideoPageUtils.targetForEndCard = targetContainer;
+    nbcVideoPageUtils.playerWidth = width;
+    nbcVideoPageUtils.playerHeight = height;
+    //tpController.removeEventListener("OnMediaEnd","nbcVideoPageUtils.generateEndCard",['*']);
+    
+        jQuery.ajax( {
+                url : "/i/dispatcher/?id=" + videoID + "&thumbWidth=" + width + "&thumbHeight=" + height+ "&h=v3_videoMetadata",
+                dataType : "json",
+                cache : false,
+                
+                success : function(data) {
+                    nbcVideoPageUtils.currentClipAuthor = data.author;
+                    nbcVideoPageUtils.currentClipTitle = escape(data.title);
+                    nbcVideoPageUtils.currentClipSubTitle = escape(data.subtitle);
+                    nbcVideoPageUtils.currentClipRunTime = data.length;
+                    nbcVideoPageUtils.currentClipPlatformPid = data.videoId;
+                    nbcVideoPageUtils.currentClipAdCampaign = data.adCampaign;
+                    nbcVideoPageUtils.currentClipContentSource = data.contentSources;
+                    nbcVideoPageUtils.currentClipContentCode = nbcVideoPageUtils.currentClipContentSource.split(" -")[0];
+                    nbcVideoPageUtils.playerPreviewImage = data.thumbnailUrl;
+                    nbcVideoPageUtils.currentClipSummary = data.fullSummary;
+                    nbcVideoPageUtils.videoReleaseId = data.contentId;
+                    nbcVideoPageUtils.videoMediaId = data.videoMediaId;
+                    nbcVideoPageUtils.liveVideoPIDHLS = data.m3uPid;
+                    nbcVideoPageUtils.liveVideoPIDMobile = data.videoId;
+                    nbcVideoPageUtils.liveVideoPID = data.desktopFlashPid;
+                    nbcVideoPageUtils.liveVideoShellId = data.contentId;
+                    nbcVideoPageUtils.runpreroll = data.noPreRollBasedOnCAC;
+                    nbcVideoPageUtils.thisIsALiveStream = data.isThisALiveStream;
+                    
+                    
+                    nbcVideoPageUtils.currentClipTitleDashed = data.title.replace(/ /g,"-");
+                    nbcVideoPageUtils.currentClipSubTitleDashed = data.subtitle.replace(/ /g,"-");
+                    
+                    
+                    // This will eventually have to be wrapped in an IF statement to support the city sites as well.
+                    if(nbc.siteKey == "cozi") {
+                        nbcVideoPageUtils.shareUrlForPlatform = "http://www.cozitv.com/video/"+nbcVideoPageUtils.currentClipTitleDashed+"/"+nbcVideoPageUtils.currentClipSubTitleDashed+"/"+nbcVideoPageUtils.videoReleaseId;
+                    } else {
+                        nbcVideoPageUtils.shareUrlForPlatform = data.contentUrl;
+                    }
+
+                },
+
+                complete : function(data) {
+                    
+                    nbcVideoPageUtils.didMetaDataHandlerFire = "YES| VIDEO ID REQUESTED: "+videoID;
+                    
+                    //Move to player instantiation so runtime variable is available.
+                    //nbcVideoPageUtils.writeThepdkPluginParams();
+                    
+                    
+                    if(parseInt(nbcVideoPageUtils.currentClipRunTime) >= 22) {
+                        nbcVideoPageUtils.isLongForm = "longform";
+                    } else {
+                        nbcVideoPageUtils.isLongForm = "shortform";
+                    }
+                   
+                    // MOVE THIS SOMEPLACE ELSE ASAP.
+                    if(document.getElementById('currentlyPlayingSummary')) {
+                        jQuery('#currentlyPlayingSummary').text(nbcVideoPageUtils.currentClipSummary);
+                    }
+                    
+
+                    
+                    if(startAfterDataRequest && targetContainer) {
+                        if (nbcVideoPageUtils.playerHasLaunched && (nbc.domain == "www.cozitv.com" && nbcVideoPageUtils.playerHasLaunched == true && nbcVideoPageUtils.pdkPreferredRuntime == "html5")) {
+                            // If the player is already in the DOM and it's running the HTML5 version, just swap the video source.
+                            nbcVideoPageUtils.globalForceNewVideoSource();
+                        
+                        // Condition that should only exist on section pages with a carousel.
+                        } else if(nbcVideoPageUtils.adHocPlayerExists == true && nbcVideoPageUtils.pdkPreferredRuntime == "html5") {
+                            console.log("nbcVPU - getVideoMetaData | Forcing new video.");
+                            nbcVideoPageUtils.omnitureInit();
+                            nbcVideoPageUtils.forceNewVideoSource(nbcVideoPageUtils.currentClipPlatformPid,nbcVideoPageUtils.currentPlayer);
+                        } else {
+                            // In every other case, hard reset the player.
+                            console.log("nbcVPU - getVideoMetaData | generating new player");
+                            nbcVideoPageUtils.nbcPDKPlayer(targetContainer,width,height);
+                            if(nbcVideoPageUtils.pdkPreferredRuntime == "html5" && targetContainer == "VODPlayer") {nbcVideoPageUtils.adHocPlayerExists = true;}
+
+                            
+                        }
+                    
+                    } else {
+                        // console.log("nbcVideoPageUtils.getVideoMetaData | Player can't start, make sure a target <div> is specified and startAfterDataRequest is set to true.");
+                    }
+
+                }
+        });
+}
+
+
+/* nbcVideoPageUtils.requestManager()
+ * A more robust requestUrl construction.
+ * NOTE: STILL AN EXPERIMENT, NOT CURRENTLY IN USE.
+ */
+
+nbcVideoPageUtils.requestManager = function(targetContainer) {
+    var thePlayer = window["nbcLMPlayer" + targetContainer];
+    var isThisAndroid = nbcVPUtools.VK();
+    
+    
+    switch(thePlayer._runtime) {
+    
+    case "flash":
+    
+        // If it's live and Flash
+        if( (typeof nbcVideoPageUtils.thisIsALiveStream !=undefined) && (nbcVideoPageUtils.thisIsALiveStream == true) ) {
+            // If it's live, Flash, and a mobile device
+            if( (navigator.userAgent.match(/mobile/i)) ) {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.liveVideoPIDMobile;           
+            } else {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.liveVideoPID;
+            }
+        
+        // If it's VOD and Flash    
+        } else {
+        useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?mbr=true&assetTypes=LegacyRelease";
+        }
+        break;
+        
+    case "html5":
+    
+        // Android conditional
+        if(isThisAndroid == true) {
+            // If it's live, HTML5, and Android
+            if( (typeof nbcVideoPageUtils.thisIsALiveStream !=undefined) && (nbcVideoPageUtils.thisIsALiveStream == true) ) {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.liveVideoPIDHLS;
+            // If it's VOD, HTML5, and Android
+            } else {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?manifest=m3u&format=SMIL";
+            }
+        
+        // iOS conditional
+        } else if (isThisAndroid == false) {
+            // If it's live, HTML5, and iOS
+            if( (typeof nbcVideoPageUtils.thisIsALiveStream !=undefined) && (nbcVideoPageUtils.thisIsALiveStream == true) ) {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.liveVideoPIDHLS;
+            // If it's VOD, HTML5, and iOS
+            } else {
+                useThisRequest = "http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?manifest=m3u&format=SMIL";
+            }
+        }
+        break;
+        
+        
+    default:
+        // nothing
+        break;
+    
+    
+    }
+    
+    return useThisRequest;
+    
+}
+
+/* nbcVideoPageUtils.globalForceNewVideoSource()
+ * Force a new video into a player that's already rendered on the page
+ * NOTE: DO NOT USE IN FLASH ENVIRONMENT, USE ON HTML5 PLAYER ONLY.
+ * NOTE: STILL AN EXPERIMENT, NOT CURRENTLY IN USE.
+ */
+nbcVideoPageUtils.globalForceNewVideoSource = function() {
+    // Room for potential plugin reset.
+    if (navigator.userAgent.match(/like Mac OS X/i)) {
+        if(typeof tsCarousel !="undefined") {
+            console.log('nbcVideoPageUtils.globalForceNewVideoSource | iPad sequence | tsCarousel !=undefined');
+            $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?manifest=m3u&format=SMIL",true,['carouselPlayeriOS']);
+        } else {
+            console.log('nbcVideoPageUtils.globalForceNewVideoSource | iPad sequence | tsCarousel is undefined');
+            $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?manifest=m3u&format=SMIL",true,['CorePlayer']);
+        }
+    } else {
+        if(typeof tsCarousel !="undefined") {
+            $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?mbr=true&assetTypes=LegacyRelease",true,['carouselPlayeriOS']);
+        } else {
+            $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/"+nbcVideoPageUtils.currentClipPlatformPid+"?mbr=true&assetTypes=LegacyRelease",true,['CorePlayer']);
+        }
+        
+    }
+    // Does precisely what it sounds like...
+    nbcVideoPageUtils.resetPreroll();
+}
+
+
+
+/* nbcVideoPageUtils.forceNewVideoSource
+ * Force a new video source into a player instantiation.
+ * NOTE: ONLY USE THIS ON HTML5 PLAYERS
+ */
+
+nbcVideoPageUtils.forceNewVideoSource = function(videoID,scopeID) {
+ // Room for potential plugin reset.
+    if(nbcVideoPageUtils.platformOmnitureActivate){
+        nbcVideoPageUtils.omnitureInit();
+    }
+    console.log("Trying to force a new video. Passed ID is"+ videoID);
+    $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/"+videoID+"?manifest=m3u&format=SMIL",true,[scopeID]);
+    console.warn('nbcVPU.forceNewVideoSource | Attempting to execute: $pdk.controller.setReleaseURL("http://link.theplatform.com/s/Yh1nAC/'+videoID+'?manifest=m3u&format=SMIL",replaceDefault=true,["'+scopeID+'"]);');
+}
+
+
+/* nbcVideoPageUtils.writeThepdkPluginParams()
+ * Write the parameter half of the video plugin calls 
+ * with dynamic data returned from the AJAX request to the CMS. 
+ */
+
+nbcVideoPageUtils.writeThepdkPluginParams = function() {
+    var now = jQuery.now();
+   
+   
+    additionalTrackingValues="|trackVars=eVar11,eVar12,eVar13,eVar14,eVar27,eVar36,eVar37,eVar38,eVar39,eVar40,eVar41,eVar42,eVar43,eVar45,eVar47,eVar48,eVar50,prop2,prop8,prop9,prop20,prop42,prop43,prop44,prop45,prop46,prop50,products,eVar9,eVar10|trackEvents=event20,event21,event22,event23,event24,event25,event26,event27,event28,event29,event30,event31,event81,event82,event70,event71,event72,event73,event74,event75,event76,event77,event78,event79,event80|prop2=none|prop8=none|prop9=none|eVar9="+nbc.siteKey+"|eVar10="+nbc.callLetters+"|prop20="+nbcVideoPageUtils.RSID+"|eVar36=Video|eVar27=Flash|eVar37="+nbcVideoPageUtils.currentClipTitle+"|eVar39=Video Player|eVar41=|eVar42=|eVar45="+nbc.brand+"|eVar47=normal|prop50="+nbcVideoPageUtils.currentClipTitle+"|eVar48="+nbc.omniture.playerType+"|eVar42=|a.media.name=eVar40|mediaCategoryVars=eVar36|mediaIdVars=eVar50|trackMilestones=25%25,50%25,75%25|pageName=" + nbcu.pageName;
+    if(!nbcVideoPageUtils.platformOmnitureActivate) {
+        //nbcuomniture.getStandardParameter(nbcVideoPageUtils.isLongForm, true, "eVar9,eVar10");
+    }
+    
+    
+    // Plugin parameters in this IF statement have different configuration rules between Flash and Javascript. Weird, right?
+        if(nbcVideoPageUtils.pdkPreferredRuntime == "flash") {
+            nbcVideoPageUtils.tremorParams = "|priority=3|progId="+nbc.tremorKey+"|videoDescriptionUrl="+location.href+"|AdUnit1stLevel="+nbc.gptParams.suitename+"|AdUnit2nd-5thLevel="+nbc.gptParams.gptZone+"|videoplatform=flash|feature="+nbc.gptParams.pageData.feature+"|contentid="+nbcVideoPageUtils.videoMediaId+"|cid="+nbcVideoPageUtils.videoMediaId+"|pagetype="+nbc.gptParams.pageData.pagetype+"|sponsor="+nbc.gptParams.pageData.sponsor+"|pt="+nbc.omniture.playerType+"|stage="+nbc.gptParams.pageData.stage+"|sensitive="+nbc.gptParams.pageData.sensitive+"|nopreroll="+nbcVideoPageUtils.runpreroll+"|adtest="+nbc.gptParams.pageData.adtest+"|TIMESTAMP="+now;
+            nbcVideoPageUtils.closeCaptionParams = "|priority=6";
+            nbcVideoPageUtils.convivaParams = "?customerId=c3.theplatform|customerId=c3.TP-NbcUniversal|priority=5|cdnName=AKAMAI|serviceUrl=http%3A%2F%2Flivepass.conviva.com";
+            
+            if(nbcVideoPageUtils.thisIsALiveStream == true) {
+                //nbcVideoPageUtils.omnitureParams = "|priority=8|account="+ nbc.omniture.suite +"|jsInstanceName=nbcu|visitorNamespace=nbcuniversal|dc=122|host=oimg.nbcuni.com|secureHost=osimg.nbcuni.com|eVar27=Flash|mediaCategoryVars=eVar36|eVar37="+nbcVideoPageUtils.currentClipTitle+"|eVar39=Video Player|eVar48=liveplayer|a.media.name=eVar40|mediaGuidVars=eVar42,prop42|mediaIdVars=eVar50,prop43|prop50="+nbcVideoPageUtils.currentClipTitle+"adViewEvent=event70|adCompleteEvent=event71|a.media.timePlayed=event73|a.media.view=event74|a.media.complete=event78|prop2=Video Player|frequency=10|trackVars=eVar11,eVar12,eVar13,eVar14,eVar27,eVar36,eVar37,eVar38,eVar39,eVar40,eVar41,eVar42,eVar43,eVar45,eVar47,eVar48,eVar50,prop2,prop8,prop9,prop20,prop42,prop43,prop44,prop45,prop46,prop50,products|trackEvents=event70,event71,event72,event73,event74,event75,event76,event77,event78,event79,event80|useJS=true|pageName=" + nbcu.pageName;
+            } else {
+                //nbcVideoPageUtils.omnitureParams = "|priority=8|account="+ nbc.omniture.suite +"|jsInstanceName=nbcu|visitorNamespace=nbcuniversal|dc=122|host=oimg.nbcuni.com|secureHost=osimg.nbcuni.com" + additionalTrackingValues;
+            }
+           
+           
+           
+           
+        } else {
+            //nbcVideoPageUtils.omnitureParams = "|account="+ nbc.omniture.suite +"|jsInstanceName=nbcu|visitorNamespace=nbcuniversal|dc=122|host=oimg.nbcuni.com|secureHost=osimg.nbcuni.com" + additionalTrackingValues;
+            nbcVideoPageUtils.tremorParams = "|priority=3|policy="+nbc.tremorHTMLKey+"|contentData.videoDescriptionUrl="+location.href+"|contentData.AdUnit1stLevel="+nbc.gptParams.suitename+"|contentData.AdUnit2nd-5thLevel="+nbc.gptParams.gptZone+"|contentData.videoplatform=html5|contentData.feature="+nbc.gptParams.pageData.feature+"|contentData.contentid="+nbcVideoPageUtils.videoMediaId+"|contentData.cid="+nbcVideoPageUtils.videoMediaId+"|contentData.pagetype="+nbc.gptParams.pageData.pagetype+"|contentData.sponsor="+nbc.gptParams.pageData.sponsor+"|contentData.pt="+nbc.omniture.playerType+"|contentData.stage="+nbc.gptParams.pageData.stage+"|contentData.sensitive="+nbc.gptParams.pageData.sensitive+"|contentData.nopreroll="+nbcVideoPageUtils.runpreroll+"|contentData.adtest="+nbc.gptParams.pageData.adtest+"|contentData.TIMESTAMP="+now;
+            nbcVideoPageUtils.convivaParams = "|customerId=c3.TP-NbcUniversal|priority=5|cdnName=AKAMAI|serviceUrl=http%3A%2F%2Flivepass.conviva.com";
+        
+        }
+        nbcVideoPageUtils.akamaiHDParams = "|priority=1|hosts=-f.akamaihd.net";
+        nbcVideoPageUtils.comscoreParams = "|priority=4|trackEachChapter=true|c1=1|c2=13846865|c3="+ nbcVideoPageUtils.videoReleaseId +"|c4="+nbc.brand+"|c6="+escape(nbc.brand)+"|c7="+document.location.href+"|c8="+escape(document.title)+"c9="+document.domain;
+        nbcVideoPageUtils.chartbeatParams = "|priority=6|acctId=15527|appId=video@"+nbc.host;
+      
+}   
+
+
+nbcVideoPageUtils.initializePlugins = function(playerPreferredState) {
+    var loadAllPlugins = nbc.loadVideoPlugins[0]; // "All" or a defined set of plugins.
+    
+    
+    if(playerPreferredState == "flash") {
+        
+        switch(loadAllPlugins) {
+        case "all":
+            window[nbcVideoPageUtils.thePlayerName].pluginAkamaiHDFlash = nbcVideoPageUtils.pdkPluginPath.flash[0].akamaiHD + nbcVideoPageUtils.akamaiHDParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginTremorFlash = nbcVideoPageUtils.pdkPluginPath.flash[0].tremor + nbcVideoPageUtils.tremorParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginComscoreFlash = nbcVideoPageUtils.pdkPluginPath.flash[0].comscore + nbcVideoPageUtils.comscoreParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginChartbeatFlash = nbcVideoPageUtils.pdkPluginPath.flash[0].chartbeat + nbcVideoPageUtils.chartbeatParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginConvivaFlash = nbcVideoPageUtils.pdkPluginPath.flash[0].conviva + nbcVideoPageUtils.convivaParams;
+            
+            // Omniture is no longer a plugin. We'll need to somehow figure this out.
+            if(nbcVideoPageUtils.platformOmnitureActivate) {
+                nbcVideoPageUtils.omnitureInit();
+            }
+
+            return true;
+            break;
+            
+        default:
+            try {
+                jQuery.each(nbc.loadVideoPlugins, function (idx, val) {
+
+                    window[nbcVideoPageUtils.thePlayerName]['plugin'+val+'Flash'] = window.nbcVideoPageUtils.pdkPluginPath.flash[0][val] + window.nbcVideoPageUtils[val+'Params'];
+                    
+                    
+                });
+                nbcVideoPageUtils.omnitureInit();
+                return true;
+            }
+        
+            catch(e) {
+                alert(e);
+                console.warn("nbcVideoPageUtils.initializePlugins | Plugin not available or misconfigured.");
+            }
+            break;
+        }
+    
+    
+    } else if (playerPreferredState == "html5") {
+        
+        switch(loadAllPlugins) {
+        case "all":
+            window[nbcVideoPageUtils.thePlayerName].pluginAkamaiJS = nbcVideoPageUtils.pdkPluginPath.html5[0].akamaiHD + nbcVideoPageUtils.akamaiHDParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginTremorJS = nbcVideoPageUtils.pdkPluginPath.html5[0].tremor + nbcVideoPageUtils.tremorParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginComscoreJS = nbcVideoPageUtils.pdkPluginPath.html5[0].comscore + nbcVideoPageUtils.comscoreParams;
+            window[nbcVideoPageUtils.thePlayerName].pluginConvivaJS = nbcVideoPageUtils.pdkPluginPath.html5[0].conviva + nbcVideoPageUtils.convivaParams;
+            
+            if(nbc.video.config.htmlOmniture == true && nbcVideoPageUtils.platformOmnitureActivate) {
+                nbcVideoPageUtils.omnitureInit();
+            }
+            
+            
+            return true;
+            break;
+            
+        default:
+            try {
+                jQuery.each(nbc.loadVideoPlugins, function (idx, val) {
+                    if(val == "omniture") {
+                    //nbcVideoPageUtils.omnitureInit();
+                    } else {
+                    window[nbcVideoPageUtils.thePlayerName]['plugin'+val+'JS'] = window.nbcVideoPageUtils.pdkPluginPath.html5[0][val] + window.nbcVideoPageUtils[val+'Params'];
+                    }
+                });
+                
+            nbcVideoPageUtils.omnitureInit();
+            return true;
+            }
+        
+            catch(e) {
+                alert(e);
+                console.warn("nbcVideoPageUtils.initializePlugins | something's gone wrong.");
+            }
+            break;
+        }
+        
+    }
+    
+    
+    
+}
+
+nbcVideoPageUtils.omnitureInit = function() {
+
+
+    
+        console.log("**** DELIVERY BUNDLE FROM thePLATFORM ****");
+        console.log("**** ADDING thePLATFORM OMNITURE BEACON | 1548H - 04/29/2014 | Buncha changes ****");
+        
+        var cleanMkt = nbc.market.replace("nbc","");
+        
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar8","D=c8","division");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar9","D=c9","business unit");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar10",nbc.callLetters,"station");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar11",NBCUPDKOmniture.date.getTime,"minute");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar12",NBCUPDKOmniture.date.getHour,"hour");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar13",NBCUPDKOmniture.date.getDayOfWeek,"day");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar14",NBCUPDKOmniture.date.getDate,"date");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar27",nbcVideoPageUtils.pdkPreferredRuntime,"runtime");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar36","noprogram","program"); // check on this one
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar37",nbcVideoPageUtils.shortPageTitle,"title");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar38","normal","screen");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar39","Video Player","contentGroup");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar42","noguid","guid");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar43", document.URL,"href");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar45",nbc.callLetters,"provider");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar47",nbcVideoPageUtils.isLongForm,"longform");
+        if(nbcVideoPageUtils.thisIsALiveStream == true) {
+            NBCUPDKOmniture.trackingEventFactory.setDefault("eVar48","liveplayer","nbc.omniture.playerType");
+            } else {
+            NBCUPDKOmniture.trackingEventFactory.setDefault("eVar48",nbc.omniture.playerType,"nbc.omniture.playerType");
+        }
+        NBCUPDKOmniture.trackingEventFactory.setDefault("eVar50",nbcVideoPageUtils.videoMediaId,"clipid");
+        // props
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop8","nbc","division");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop9",nbc.siteKey,"business unit");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop10",nbc.callLetters,"station");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop20","nbcotsvideo"+cleanMkt,"rsid");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop42", "noguid","guid");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop43", "noclipid","clipid");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop44", "normal","screen");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop46",nbcVideoPageUtils.isLongForm,"longform");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop45", 0,"bitrate");
+        NBCUPDKOmniture.trackingEventFactory.setDefault("prop50",nbcVideoPageUtils.currentClipTitle,"title");
+        // overrides
+        NBCUPDKOmniture.trackingEventFactory.setOverride("eVar10",nbc.callLetters,"provider");
+        
+        //NBCUPDKOmniture.trackingEventFactory.setOverride("prop48", nbc.omniture.playerType,"nbc.omniture.playerType");
+
+        // attach the pdk controller
+        PDKTrackingEvents.bus.initialize($pdk.controller);
+    
+    console.log("**** nbcVideoPageUtils.omnitureInit | SUCCESS! ****");
+
+
+}
+
+nbcVideoPageUtils.defineControlLayout = function(overridePageType) {
+    
+    // If you don't want to override based on the nbc.omniture.pageType value
+    if(!overridePageType) {
+        var layoutKey = nbc.omniture.pageType;
+    } else {
+        var layoutKey = overridePageType;
+    }
+    
+    switch(layoutKey) {
+    case "slideshow":
+        nbcVideoPageUtils.customPlayerLayout = "slideshow";
+        break;
+
+    
+    case "weather":
+        nbcVideoPageUtils.customPlayerLayout = "weather";
+        break;
+
+    
+    default:
+        nbcVideoPageUtils.customPlayerLayout = "default";
+    break;
+    
+    }
+}
+
+nbcVideoPageUtils.pauseActivePlayer = function() {
+    $pdk.controller.pause(true,[nbcVideoPageUtils.currentPlayer],true);
+}
+
+nbcVideoPageUtils.nbcPDKPlayer = function(targetContainer,width,height) {
+    
+// nbcLMPlayer._runtime returns HTML5 or FLASH
+//window["nbcLMPlayer" + targetContainer]
+
+    window["nbcLMPlayer" + targetContainer] = new Player(targetContainer, width, height);
+    nbcVideoPageUtils.thePlayerName = "nbcLMPlayer" + targetContainer;
+    nbcVideoPageUtils.pdkPreferredRuntime = window["nbcLMPlayer" + targetContainer]._runtime;
+    nbcVideoPageUtils.currentPlayer = "nbcLMPlayer" + targetContainer;
+    var writeThePluginData = nbcVideoPageUtils.writeThepdkPluginParams();
+    var areThePluginsLoaded = nbcVideoPageUtils.initializePlugins(nbcVideoPageUtils.pdkPreferredRuntime, window["nbcLMPlayer" + targetContainer]);
+    
+    
+    // Simplify this!
+    if(typeof tsCarousel !="undefined") {
+        if(tsCarousel.thisIsACarousel == true) {
+            window["nbcLMPlayer" + targetContainer].scopes = 'carouselPlayeriOS';   
+        }
+    } else {
+        window["nbcLMPlayer" + targetContainer].scopes = targetContainer;
+    }
+    
+    window["nbcLMPlayer" + targetContainer].scopes = "nbcLMPlayer" + targetContainer;
+    window["nbcLMPlayer" + targetContainer].fp.wmode = "opaque";
+    window["nbcLMPlayer" + targetContainer].fp.allowFullScreen = true;
+    window["nbcLMPlayer" + targetContainer].logLevel = "warn";
+    window["nbcLMPlayer" + targetContainer].allowFullScreen = "true";
+    window["nbcLMPlayer" + targetContainer].width = width;
+    window["nbcLMPlayer" + targetContainer].height = height;
+    window["nbcLMPlayer" + targetContainer].logLevel = "error";
+    window["nbcLMPlayer" + targetContainer].showAdCountdown = true;
+    window["nbcLMPlayer" + targetContainer].wmode = "opaque";
+    window["nbcLMPlayer" + targetContainer].backgroundColor = "0x131313";
+    window["nbcLMPlayer" + targetContainer].controlBackgroundColor = "0x131313";
+    window["nbcLMPlayer" + targetContainer].controlColor = "0xBEBEBE";
+    window["nbcLMPlayer" + targetContainer].controlFrameColor = "0x545759";
+    window["nbcLMPlayer" + targetContainer].controlHoverColor = "0xBEBEBE";
+    window["nbcLMPlayer" + targetContainer].controlSelectedColor = "0x00CCFF";
+    window["nbcLMPlayer" + targetContainer].frameColor = "0x545759";
+    window["nbcLMPlayer" + targetContainer].pageBackgroundColor = "0x131313";
+    window["nbcLMPlayer" + targetContainer].playProgressColor = "0x00CCFF";
+    window["nbcLMPlayer" + targetContainer].scrubberColor = "0xBEBEBE";
+    window["nbcLMPlayer" + targetContainer].scrubTrackColor = "0xBEBEBE";
+    window["nbcLMPlayer" + targetContainer].textBackgroundColor = "0x383838";
+    window["nbcLMPlayer" + targetContainer].textColor = "0xFFFFFF";
+    window["nbcLMPlayer" + targetContainer].loadProgressColor = "0x5D9070";
+    window["nbcLMPlayer" + targetContainer].videoScalingMethod = "fit";
+    window["nbcLMPlayer" + targetContainer].useDefaultPlayOverlay = true;
+    window["nbcLMPlayer" + targetContainer].previewImageURL = nbcVideoPageUtils.playerPreviewImage;
+    window["nbcLMPlayer" + targetContainer].playerURL = nbcVideoPageUtils.shareUrlForPlatform;
+        if(nbcVideoPageUtils.thisIsALiveStream == true) {
+    window["nbcLMPlayer" + targetContainer].embeddedPlayerHTML = '<scr'+'ipt type="text/javascript" charset="UTF-8" src="http://'+nbc.env+nbc.domain+'/portableplayer/?cmsID='+nbcVideoPageUtils.videoReleaseId+'&videoID={releasePID}&lvshell='+nbcVideoPageUtils.liveVideoShellId+'&origin='+nbc.host+'&sec='+nbc.section+'&subsec='+nbc.subsection+'&width=600&height=360"></scr'+'ipt>';
+    } else {
+    window["nbcLMPlayer" + targetContainer].embeddedPlayerHTML = '<scr'+'ipt type="text/javascript" charset="UTF-8" src="http://'+nbc.env+nbc.domain+'/portableplayer/?cmsID='+nbcVideoPageUtils.videoReleaseId+'&videoID='+nbcVideoPageUtils.currentClipPlatformPid+'&origin='+nbc.host+'&sec='+nbc.section+'&subsec='+nbc.subsection+'&width=600&height=360"></scr'+'ipt>';
+    }
+    window["nbcLMPlayer" + targetContainer].autoPlay = true;
+    window["nbcLMPlayer" + targetContainer].autoLoad = true;
+    //nbcLMPlayer.skinUrl = nbc.fullDomain + '/assets/pdk449/pdk/skins/glass/glass.json';
+    
+    var playerPath = nbc.fullDomain;
+    if(nbc.env === "dev.") {
+        playerPath = location.protocol + "//" + nbc.domain
+    }
+    
+    if(window["nbcLMPlayer" + targetContainer]._runtime == "html5") {
+    // IF THIS TURNS INTO AN HTML5 PLAYER
+    window["nbcLMPlayer" + targetContainer].skinUrl = playerPath + '/assets/'+nbc.pdkPath+'/pdk/skins/glass/glass.json';
+    window["nbcLMPlayer" + targetContainer].layoutUrl = playerPath + '/templates/nbc_mobileplayer_layout';
+        } else {
+    // OR BECOMES A FLASH PLAYER
+    window["nbcLMPlayer" + targetContainer].skinUrl = playerPath + '/assets/'+nbc.pdkPath+'/pdk/skins/glass/glass.json';
+    window["nbcLMPlayer" + targetContainer].layoutUrl = playerPath + '/templates/nbc_metaLayout_glass?layout='+nbcVideoPageUtils.customPlayerLayout;
+    
+    }
+    window["nbcLMPlayer" + targetContainer].releaseUrl = nbcVideoPageUtils.requestManager(targetContainer);
+    
+    if (areThePluginsLoaded) {
+        
+        //nbcPdkEventMaster.definePdkEvents(null, targetContainer);
+        window["nbcLMPlayer" + targetContainer].bind();
+        if(!nbcVideoPageUtils.platformOmnitureActivate) {
+            //nbcuomniture.initialize('nbcu');
+        }
+        
+        nbcVideoPageUtils.playerHasLaunched = true;
+        
+        
+
+    }
+    
+}
+
+/* nbcVideoPageUtils.generateEndCard()
+ * Dynamically build an end card. Hard-coded values for now
+ * It's just a v1.0, after all.
+ */
+nbcVideoPageUtils.generateEndCard = function(evt) {
+    if(!document.getElementById('endcard') && (evt.data.baseClip.isAd == false) ) {
+        var playerEndCard = document.createElement('div');
+        var endcardElementreplayButton = document.createElement('div');
+        
+        playerEndCard.id = 'endcard';
+        playerEndCard.style.width = nbcVideoPageUtils.playerWidth + "px";
+        playerEndCard.style.height = nbcVideoPageUtils.playerHeight + "px";
+        playerEndCard.style.position = "absolute";
+        playerEndCard.style.backgroundColor = '#000000';
+        playerEndCard.style.opacity = .5;
+        playerEndCard.style.filter = 'alpha(opacity=50)'; // IE ONLY, OBVIOUSLY
+        
+        endcardElementreplayButton.style.position = "absolute";
+        endcardElementreplayButton.style.width = "117px";
+        endcardElementreplayButton.style.height = "32px";
+        endcardElementreplayButton.style.top = "45%";
+        endcardElementreplayButton.style.left = "41%";
+        endcardElementreplayButton.style.background = 'url('+ nbc.mediaDomain+ '/designimages/endcard-sprite.png) no-repeat -540px 0 transparent';
+        jQuery('#'+nbcVideoPageUtils.targetForEndCard).prepend(playerEndCard);
+        document.getElementById(nbcVideoPageUtils.targetForEndCard).appendChild(endcardElementreplayButton);
+        
+        return true;
+        
+    }
+}
+
+nbcVideoPageUtils.resetPreroll = function() {
+    var content = {
+            id:nbcVideoPageUtils.videoReleaseId,
+            title:nbcVideoPageUtils.currentClipTitle,
+            site:"cozi",
+            zone:nbc.zone,
+            descriptionUrl:location.href,
+            sect:nbc.section,
+            sub:nbc.subsection,
+            contentgroup:nbcVideoPageUtils.currentClipAdCampaign,
+            pid:nbcVideoPageUtils.currentClipContentCode,
+            hascompanion:"companion",
+            companionexists:true,
+            pt:nbc.omniture.playerType,
+            catetory:nbc.omniture.playerType
+    }
+    
+    try {
+    if(console) {
+    console.warn("Attempting to re-write Tremor plugin data...");
+    }
+    AcudeoSetContentData(content);
+    }
+    
+    catch(e) {
+        if(console) {
+            console.warn("nbcVideoPageUtils.resetPreroll | Call to AcudeoSetContentData(content) | " + e);
+        }
+    }
+}
+
+/* nbcVideoPageUtils.pageInit()
+ * Things we need to do on page load.
+ */
+
+nbcVideoPageUtils.pageInit = function() {
+    nbcVideoPageUtils.fullPageTitle = nbcVideoPageUtils.pageTitleParser('fullTitle');
+    nbcVideoPageUtils.shortPageTitle = nbcVideoPageUtils.pageTitleParser('shortTitle');
+    nbcVideoPageUtils.defineControlLayout();
+    nbcPdkEventMaster.definePdkEvents();
+    
+    if(nbc.isMobile == "true" && nbc.omniture.pageType == "article") {
+    nbcVideoPageUtils.loadAllVideoSlots();
+    } else {
+    nbcVideoPageUtils.pagetypeInits();
+    }
+
+    
+    
+}
+
+
+nbcVideoPageUtils.pagetypeInits = function() {
+    if(!nbc.omniture.pageType) {
+        return false;
+    } else {
+        var pagetype = nbc.omniture.pageType;
+    }
+    
+    switch(pagetype) {
+    
+    case "article":
+        var thisLeadVideo = jQuery('#leadVideo0');
+        var isAPEnabled = jQuery(thisLeadVideo).data('ap');
+        var embeddedVids = jQuery('.embedded.video');
+        nbcVideoPageUtils.targetEndCard = jQuery('#endcard');
+        
+        // Refresh ads every ~10 minutes if a live video is running.
+        if(jQuery(".leadMediaRegion.live_video").length > 0) {
+            nbcVideoPageUtils.liveVideoAdRefresh = setInterval(function(){googletag.pubads().refresh()},120000);
+            nbcVideoPageUtils.liveVideoAdRefreshActive = true;
+        }
+
+        
+            if (isAPEnabled == true) {
+                // Start the video player immediately!
+                var videoID = jQuery(thisLeadVideo).data('cid');
+                var hostElemID = jQuery(thisLeadVideo).attr('id');
+                var vw = nbcVPUtools.getDimensions('width',hostElemID);
+                var vh = nbcVPUtools.getDimensions('height',hostElemID);
+                nbcVideoPageUtils.targetEndCard = jQuery('#endcard');
+                //nbcVideoPageUtils.populateRelatedMedia(videoID);
+                nbcVideoPageUtils.getVideoMetaData(videoID,hostElemID,vw,vh,true);
+            } else {
+                // Just attach a click event to the button.
+                nbcVideoPageUtils.playScanner('#leadVideo0');
+            }
+            // Attach click events to embedded videos, if any.
+            if( (nbc.omniture.pageType && nbc.omniture.pageType == "article") && embeddedVids.length > 0) {
+                nbcVideoPageUtils.playScanner('#at_0'); // Automatically scan for and attach a click event to any play buttons.
+            }
+            console.log('nbcVideoPageUtils.pagetypeInits | videos primed for this article.');
+            break;
+            
+    case "blog":
+        //var thisLeadVideo = jQuery('#videoPlayer1');
+        var isAPEnabled = false;
+        nbcVideoPageUtils.targetEndCard = jQuery('#endcard');
+        nbcVideoPageUtils.playScanner('#blogMain');
+        break;
+        
+    case "weather_map":
+    case "weather_school":
+    case "weather_severe":
+    case "weather":
+        var thisLeadVideo = jQuery('#centralVideoPlayer');
+        var isAPEnabled = jQuery(thisLeadVideo).data('ap');
+        nbcVideoPageUtils.targetEndCard = jQuery('#endcard');
+        if (isAPEnabled == true) {
+                // Start the video player immediately!
+            var videoID = jQuery(thisLeadVideo).data('cid');
+            var hostElemID = jQuery(thisLeadVideo).attr('id');
+            var vw = nbcVPUtools.getDimensions('width',hostElemID);
+            var vh = nbcVPUtools.getDimensions('height',hostElemID);
+                //nbcVideoPageUtils.populateRelatedMedia(videoID);
+            nbcVideoPageUtils.getVideoMetaData(videoID,hostElemID,vw,vh,true);
+        } else {
+            nbcVideoPageUtils.playScanner('#' + pagetype);
+        }
+        break;
+    
+    case "investigations":
+        var thisLeadVideo = jQuery('#leadVideo');
+        var offLeadVideos = jQuery('div.offleadsVideoContainer');
+        var isAPEnabled = false;
+        nbcVideoPageUtils.playScanner('#leadVideo');
+        
+        if(offLeadVideos.length > 0) {
+        nbcVideoPageUtils.playScanner('#columns');
+        }
+        
+        if(nbc.env != "") {
+        console.log('nbcVideoPageUtils.pagetypeInits | videos primed for this investigations landing page.');
+        }
+    
+    break;
+    
+    default:
+    // Do nothing.
+    if(nbc.env !="")
+    console.log("NBCVPU | Nothing to do on this page.") 
+    break;
+    
+    }
+}
+
+
+nbcVideoPageUtils.populateRelatedMedia = function(videoID) {
+    sectionForRelatedMedia = "home";
+    subsectionForRelatedMedia = "top-videos";
+    thisVideoBox = jQuery(nbcVideoPageUtils.targetEndCard).find('.videoBox');
+    thisShareBoxes = jQuery(nbcVideoPageUtils.targetEndCard).find('.shareBoxes');
+    
+    jQuery.getJSON(nbc.fullDomain+ '/i/dispatcher/?h=v3_videoPlaylist&show=yes&id='+ videoID + '&embedding_parent_path=/'+ sectionForRelatedMedia + '/'+ subsectionForRelatedMedia,
+                    function(response) {
+                        jQuery(thisVideoBox).empty();
+                        for ( var i = 0; i < response.length; i++) {
+                            if (i == 0) {
+                                nbcVideoPageUtils.shareUrl = nbc.fullDomain+ '/video/#!'+ response[i].path+ '/'+ response[i].esctitle.split(" ").join("_") + '/'+ response[i].contentId;
+                            } else {
+                                jQuery(thisVideoBox).append('<li><span><a href="'+ nbc.fullDomain+ '/video/#!'+ response[i].path+ '/'+ response[i].esctitle.split(" ").join("_")+ '/'+ response[i].contentId+ '" onclick="s.linkTrackVars=\'eVar50,events\';s.linkTrackEvents=\'event55\';s.eVar50=\''+ escape(response[i].title)+ '\'; s.events=\'event55\';s.tl(this, \'o\',\'More Video Click\');">'+ '<span class="icon">'+ '</span><img src="'+ response[i].thumbUrl+ '" width="136" height="76" alt="'+ response[i].esctitle+ '" />'+ response[i].trunctitle+ '&nbsp;&nbsp;'+ response[i].length+ '</a></span></li>');
+                            }
+                        }
+
+                        /* 
+                        try {
+                        jQuery(thisShareBoxes).html('<div id="linkBox" class="boxContainer" style="display:none;"><span></span><div class="boxCopy boxBtn"><div class="transparency"></div><span>Copy</span></div><div class="boxClose boxBtn"><div class="transparency"></div><span>Close</span></div><p class="boxLabel">Link to this video</p><form action="#"><fieldset><textarea rows="1" cols="2" readonly="readonly">'+nbcVideoPageUtils.shareUrl+'</textarea></fieldset></form></div><div id="embedBox" class="boxContainer" style="display:none;"><span></span><div class="boxCopy boxBtn"><div class="transparency"></div><span>Copy</span></div><div class="boxClose boxBtn"><div class="transparency"></div><span>Close</span></div><p class="boxLabel">Embed this video</p><form action="#"><fieldset><textarea rows="1" cols="2" readonly="readonly">'+embeddedPlayerHTML+'</textarea></fieldset></form></div></div>');
+                        }
+
+                        catch(e) {
+                        U.log(e);
+                        }
+                         */
+
+                        try {
+                            jQuery('#multimedia-module #linkField').val(nbcVideoPageUtils.shareUrl);
+                            jQuery('#multimedia-module #embedField').val(embeddedPlayerHTML);
+
+
+                        }
+
+                        catch (e) {
+                            // U.log(e);
+                        }
+                        nbcCarousel.init(nbcVideoPageUtils.targetEndCard,'videoBox', false);
+                    });
+
+}
+
+/* nbcVideoPageUtils.loadAllVideoSlots()
+ * Primes any videos that are staged via <div> on the page.
+ * Tested only on mobile article v2
+ * FOR USE ON MOBILE ONLY
+ */
+
+nbcVideoPageUtils.loadAllVideoSlots = function() {
+    // We're going to make switch statements for pagetypes.
+    // If there's a lead video on an article, load the players immediately.
+    document.getElementById('leadVideo0') ? nbcVideoPageUtils.isStaticLeadAVideo = true : nbcVideoPageUtils.isStaticLeadAVideo = false;
+    
+    //nbcVideoPageUtils.isStaticLeadAVideo = false;
+    
+    if(nbcVideoPageUtils.isStaticLeadAVideo == true) {
+            var loadThisLeadVideo = jQuery('#leadVideo0').data('cid');
+            var lvw = nbcVPUtools.getDimensions('width','leadVideo0');
+            var lvh = nbcVPUtools.getDimensions('height','leadVideo0');
+            nbcVideoPageUtils.getVideoMetaData(loadThisLeadVideo,"leadVideo0",lvw,lvh,true);
+    }
+    
+    // If there are embedded videos...
+    var loadEmbeddedVideos = jQuery("#article_0_elements [id*='embeddedVideo']");
+    
+    if(loadEmbeddedVideos.length > 0 && nbc.isMobile == "true") {
+        jQuery.each(loadEmbeddedVideos,function(i,v) {
+            var videoID = jQuery(this).data('cid');
+            var hostElemID = jQuery(this).attr('id');
+            var evw = nbcVPUtools.getDimensions('width',hostElemID);
+            var evh = nbcVPUtools.getDimensions('height',hostElemID);
+            nbcVideoPageUtils.getVideoMetaData(videoID,hostElemID,evw,evh,true);
+        });
+    }
+}
+
+
+/* nbcVideoPageUtils.recognizer()
+ * Attach PLAY VIDEO functionality to any element you need.
+ * Although, let's be honest, it's probably just gonna be a play button.
+ * 
+ * This may become a private function within playScanner()!!!
+ * nbcVideoPageUtils.recognizer(obj,obj,string)
+ * hostElemID - jQuery object
+ * playTarget - jQuery object
+ * hostOverride - "#someIDAsAString"
+ */
+
+
+nbcVideoPageUtils.recognizer = function(hostElem, playTarget, hostOverride) {
+    var dataLivesHere = hostElem; // This is where the data lives
+    var reqElement = playTarget; // This is the play button
+    
+    console.log("Recognizing...");
+    jQuery(reqElement).click(function() {
+        var videoID = jQuery(dataLivesHere).data('cid'); // Gather the CID of the video
+        var hostElemID = jQuery(dataLivesHere).attr('id'); // Gather the host element ID of the video
+        var vw = nbcVPUtools.getDimensions('width',hostElemID); // Get the width of the host
+        var vh = nbcVPUtools.getDimensions('height',hostElemID); // Get the height of the host
+        if(nbc.omniture.pageType=="blog") {
+          jQuery('#' + hostElemID).parent().find(".title").hide();
+          nbcVideoPageUtils.targetEndCard = jQuery('#' + hostElemID).prev();
+        }
+        if(nbc.omniture.pageType=="article") {
+          if(jQuery(dataLivesHere).data('cscroll')) {
+              nbcVideoPageUtils.targetEndCard = jQuery('#' + hostElemID).prev();
+          }
+        }
+        console.log(videoID);
+        console.log(hostElemID);
+        console.log(vw);
+        console.log(vh);
+        nbcVideoPageUtils.getVideoMetaData(videoID,hostElemID,vw,vh,true);
+    });
+    
+    console.log("Recognized! 1227H");
+}
+
+
+/* nbcVideoPageUtils.playScanner()
+ * Collect all the play elements on the page and attach a click event to them that will start the player.
+ * nbcVideoPageUtils.playScanner(string, string)
+ * 
+ * elemClass - Class of your play element as a string
+ * hostOverride - If you don't want the video to play in the play element's host, pass the #fullID as a string.
+ * 
+ */
+
+nbcVideoPageUtils.playScanner = function(parentID,elemClass,hostOverride) {
+console.log("Scanning");
+var scanTheseVideos = jQuery(parentID+" [class*='videoPlayButton']"); // Make the class a variable
+
+if(scanTheseVideos.length > 0) {
+    jQuery.each(scanTheseVideos,function(i,v) {
+        var hostElemID = jQuery(this).parent(); // The play button should be encapsulated directly beneath the host element; the host element should have the required data attributes.
+        var playElement = jQuery(this); // The play button.
+        console.log(hostElemID);
+        console.log(playElement);
+        nbcVideoPageUtils.recognizer(hostElemID,playElement); // Start attaching the click events!
+    });
+}
+
+}
+
+
+// Create a fresh DOM element to host a video.
+nbcVideoPageUtils.createVOD = function (vodTargetName) {
+
+if(!vodTargetName) {
+    vodTargetName = 'VODPlayer';
+}
+
+if(!document.querySelectorAll('.vodDisplayRegion')[0]) {
+    var targetContainer = document.getElementById('carousel-hero-region');
+    var VODPlayer = document.createElement('div');
+    VODPlayer.id = vodTargetName;
+    VODPlayer.className = 'vodDisplayRegion';
+    VODPlayer.style.backgroundColor = '#000';
+    
+    jQuery(targetContainer).prepend(VODPlayer);
+    // Eventually create random number internally, return <div> ID instead
+    return true;
+    
+} else {
+    //document.getElementsByClassName('vodDisplayRegion')[0].style.display = "block";
+    document.querySelectorAll('.vodDisplayRegion')[0].style.visibility = "visible";
+    return true;
+}
+
+} 
+
+// Remove the DOM element hosting the video.
+nbcVideoPageUtils.destroyVOD = function () {
+    if (document.querySelectorAll('.vodDisplayRegion')[0]) {
+        
+            if(navigator.userAgent.match(/like Mac OS X/i)) {
+                var targetContainer = document.getElementById('carousel-hero-region');
+                var currentVOD = document.querySelectorAll('.vodDisplayRegion')[0];
+                //currentVOD.style.display = "none";
+                //document.getElementsByClassName('vodDisplayRegion')[0].style.zIndex = "0";
+                $pdk.controller.pause(true,['carouselPlayeriOS'],true);
+                document.querySelectorAll('.vodDisplayRegion')[0].style.visibility = "hidden";
+                //document.getElementsByClassName('vodDisplayRegion')[0].style.visibility = "hidden";
+            } else {
+                var targetContainer = document.getElementById('carousel-hero-region');
+                var currentVOD = document.querySelectorAll('.vodDisplayRegion')[0];
+                targetContainer.removeChild(currentVOD);
+                return true;
+            }
+    } else {
+        // NOTHING TO DESTROY.
+        return false;
+    }
+    
+    console.log("nbcVPU | destroyVOD executed.");
+
+}
+
+nbcVideoPageUtils.videoReplay = function(targetScope) {
+    jQuery(nbcVideoPageUtils.targetEndCard).hide();
+    $pdk.controller.clickPlayButton([nbcVideoPageUtils.currentPlayer]);
+}
+
+
+nbcPdkEventMaster.definePdkEvents = function(useDefaults, targetContainer) {
+    var thePlayer = window["nbcLMPlayer" + targetContainer];
+    if( (typeof nbc.omniture.pageType == "undefined") || useDefaults == true) {
+        return false;
+    } else {
+        
+        switch (nbc.omniture.pageType) {
+        
+        case "slideshow":
+            /*
+            tpController.addEventListener("OnMediaStart", "nbcPdkEvents.slideshowMediaStart");
+            tpController.addEventListener("OnMediaEnd", "nbcPdkEvents.slideshowMediaEnd");
+            tpController.addEventListener("OnMediaPlaying","nbcPdkEvents.slideshowPlaying");
+            */
+            
+            $pdk.controller.addEventListener("OnMediaStart", "nbcPdkEvents.slideshowMediaStart",[thePlayer.scopes]);
+            $pdk.controller.addEventListener("OnMediaEnd", "nbcPdkEvents.slideshowMediaEnd",[thePlayer.scopes]);
+            $pdk.controller.addEventListener("OnMediaPlaying","nbcPdkEvents.slideshowPlaying",[thePlayer.scopes]);
+            
+            if(typeof console == "object") {
+                console.warn("**** NBC OTS | nbcPdkEventMaster.definePdkEvents | Slideshow events selected.");
+            }
+
+            break;
+        
+        case "article":
+        console.log("nbcPdkEventMaster.definePdkEvents Attaching article PDK events...");
+            $pdk.controller.addEventListener("OnMediaEnd","nbcPdkEvents.endCardDisplay",['*']); // All players.
+            break;
+        
+        case "blog":
+        console.log("nbcPdkEventMaster.definePdkEvents Attaching article PDK events...");
+            $pdk.controller.addEventListener("OnMediaEnd","nbcPdkEvents.endCardDisplay",['*']); // All players.
+            break;
+            
+        case "weather":
+        console.log("nbcPdkEventMaster.definePdkEvents Attaching article PDK events...");
+            $pdk.controller.addEventListener("OnMediaEnd","nbcPdkEvents.endCardDisplay",['nbcLMPlayercentralVideoPlayer']); // All players.
+            break;
+            
+        
+        default:
+        /*
+        $pdk.controller.addEventListener("OnMediaStart", "nbcPdkEvents.slideshowMediaStart",[nbcLMPlayer.scopes]);
+        $pdk.controller.addEventListener("OnMediaEnd", "nbcPdkEvents.slideshowMediaEnd",[nbcLMPlayer.scopes]);
+        $pdk.controller.addEventListener("OnMediaPlaying","nbcPdkEvents.slideshowPlaying",[nbcLMPlayer.scopes]);
+        
+        if(typeof console == "object") {
+            console.warn("**** NBC OTS | nbcPdkEventMaster.definePdkEvents | DEFAULT EVENTS ****");
+        }
+        */
+
+            break;
+        
+        }
+        
+    }
+    
+    if(typeof console == "object") {
+        console.warn("**** NBC OTS | nbcPdkEventMaster.definePdkEvents | END");
+    }
+    
+    return false;
+    
+}
+
+nbcPdkEvents.endCardDisplay = function(evt) {
+    
+    
+    function enableEndCardControls() {
+    // Legacy end card control handlers. It's a little verbose, but it still works.
+    
+    jQuery('.replayButton').one('click',nbcVideoPageUtils.videoReplay);
+    console.log("nbcPdkEvents.endCardDisplay | Attaching end card controls.");
+    //Link toggle
+        jQuery('.shareLink').click( function() {
+            if (jQuery('.shareEmbed').hasClass('active')) {
+                jQuery('.shareEmbed').removeClass('active');
+                jQuery('.embedBox').fadeOut('fast');
+            }
+            ;
+            jQuery(this).addClass('active');
+            jQuery('.linkBox').fadeIn('fast');
+        });
+        jQuery('.linkBox .boxClose').click( function() {
+            jQuery('.linkBox').fadeOut('fast');
+            jQuery('.shareLink').removeClass('active');
+        });
+        // Embed toggle
+        jQuery('.shareEmbed').click( function() {
+            if (jQuery('.shareLink').hasClass('active')) {
+                jQuery('.shareLink').removeClass('active');
+                jQuery('.linkBox').fadeOut('fast');
+            }
+            ;
+            jQuery(this).addClass('active');
+            jQuery('.embedBox').fadeIn('fast');
+        });
+        jQuery('.embedBox .boxClose').click( function() {
+            jQuery('.embedBox').fadeOut('fast');
+            jQuery('.shareEmbed').removeClass('active');
+        });
+
+        // Carousel arrows
+        jQuery('.prev').one('click', nbcCarousel.pressedLeftArrow);
+        jQuery('.next').one('click', nbcCarousel.pressedRightArrow);
+        // Carousel arrows
+        
+        // ZCLIP Events
+        if($('.shareLink').hasClass('zclipActive')) {
+            // do nothing
+        } else {
+        
+            jQuery('.linkBox .boxCopy').zclip({
+                path:nbc.mediaDomain+'/designvideo/ZeroClipboard.swf',
+                copy:jQuery('#endcard .linkBox textarea').text(),
+                afterCopy:function(){
+                    if(jQuery('.shareLink').hasClass('zclipActive')){
+                        //do nothing
+                    } else {
+                    jQuery('.shareLink').addClass('zclipActive');
+                    }
+                    alert('Copied link to clipboard.');
+                    }
+                });
+       }
+       
+       
+       if($('.shareEmbed').hasClass('zclipActive')){
+                // do nothing
+            } else {
+                $('.embedBox .boxCopy').zclip({
+                    path:nbc.mediaDomain+'/designvideo/ZeroClipboard.swf',
+                    copy:$('#endcard .embedBox textarea').text(),
+                    afterCopy:function(){
+                        if($('.shareEmbed').hasClass('zclipActive')){
+                            //do nothing
+                        }else{
+                            $('.shareEmbed').addClass('zclipActive');
+                        }
+                        alert('Copied embed code to clipboard.');
+                    }
+                });
+        }
+       // ZCLIP Events
+       
+        jQuery('.linkBox').css( {
+            'visibility' : 'visible',
+            'display' : 'none'
+        });
+        jQuery('.embedBox').css( {
+            'visibility' : 'visible',
+            'display' : 'none'
+        });
+
+    
+    }
+
+    console.log("END CARD DISPLAY");
+    if (evt.data.baseClip.isAd == false  && nbcVideoPageUtils.pdkPreferredRuntime !== "html5" ) {
+        if(nbcVideoPageUtils.targetEndCard.length > 0) {
+            nbcVideoPageUtils.targetEndCard.toggle();
+            enableEndCardControls();
+            nbcVideoPageUtils.populateRelatedMedia(nbcVideoPageUtils.videoReleaseId);
+        }
+    }
+
+}
+
+nbcPdkEvents.slideshowMediaStart = function (evt) {
+    
+    if (typeof console == "object") {
+        console.log("***** NBC OTS | nbcPdkEvents.slideshowMediaStart ****");
+        console.log(evt);
+    }
+    
+}
+
+nbcPdkEvents.slideshowMediaEnd = function (evt) {
+    
+    if (typeof console == "object") {
+        console.log("***** NBC OTS | nbcPdkEvents.slideshowMediaEnd ****");
+        console.log(evt);
+    }
+    
+}
+
+nbcPdkEvents.slideshowPlaying = function (evt) {
+    
+    if (typeof console == "object") {
+        console.log("***** NBC OTS | nbcPdkEvents.slideshowPlaying ****");
+        console.log(evt);
+    }
+    
+}
+
+jQuery(document).ready(function() {
+    nbcVideoPageUtils.pageInit();
+});
+
+if (navigator.userAgent.match(/like Mac OS X/i)) {
+    //do nothing
+} else {
+    // do nothing
+}
+
+try {
+window.onload = callSetContent;
+}
+
+catch(e) {
+    if (console) {
+        console.warn("ERROR FROM window.onload = callSetContent | " + e);
+    }
+}

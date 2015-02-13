@@ -1,0 +1,152 @@
+@charset "shift_jis";
+
+/*
+Title: ボクのおやつお楽しみパック
+URI: http://famima.com/shop/c/cbokuoya/
+*/
+
+
+/* --------------------------------------------------------------------
+	共通
+-------------------------------------------------------------------- */
+#bokuoya{
+	margin:0; padding:0; width:700px;
+	background:url(http://www.famima.com/images/p/bokuoya/bg.gif) repeat-y;}
+
+#bokuoya h1, #bokuoya h2, #bokuoya h3, #bokuoya h4,
+#bokuoya img, #bokuoya p, #bokuoya div, #bokuoya ul, #bokuoya li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+/* clearfix */
+#bokuoya .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#bokuoya .clearfix {
+  min-height: 1px;}
+
+* html #bokuoya .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #bokuoya { 
+	height: 1%;}
+
+/* --------------------------------------------------------------------
+	ボクおや
+-------------------------------------------------------------------- */
+#bokuoya .header{
+	margin:0; padding:0; width:700px; height:285px;}
+
+#bokuoya .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#bokuoya .mainbase{
+	margin:0 0 30px 0; padding:0;
+	background:url(http://www.famima.com/images/p/bokuoya/border.jpg) repeat-y;}
+	
+#bokuoya .hd_txtbase{
+	padding-top:10px;
+	background:url(http://www.famima.com/images/p/bokuoya/border.jpg) repeat-y;}
+	
+#bokuoya .illust{
+	width:156px; float:left;}
+
+#bokuoya .hd_txtbase p{
+	width:400px; float:left; color:#FFFFFF;
+	padding-right:10px;}
+
+#bokuoya .bt img{
+	width:115px;
+	border:none; outline:none; float:left;}
+
+#bokuoya table{
+	margin:0 0 0 13px; padding:0 0 20px 0; width:675px; text-align:center;}
+
+#bokuoya td{
+	width:130px; background-color:#f4f4d5; text-align:center; vertical-align:top;}
+
+#bokuoya .itemDetal{
+	text-align:left; padding:5px 0 5px 7px; width:120px; vertical-align:top;}
+	
+#bokuoya .name{
+	color:#FF6600; font-weight:bold;
+	padding-bottom:3px; vertical-align:top;}
+	
+#bokuoya .itemDetal .text{
+	color:#666666; font-size:90%; line-height:110%;}
+	
+#bokuoya .about{
+	width:700px; height:99px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/bokuoya/boku_info.gif) no-repeat;}
+
+
+
+#bokuoya .newBase{
+	width:673px; background-color:#f4f4d5; margin:0 0 20px 13px;}
+
+#bokuoya dl, #bokuoya dt, #bokuoya dd {
+	margin: 0; padding: 0;}
+
+#bokuoya dl{
+	width: 650px;
+	padding-left:12px;}
+
+#bokuoya dt, #bokuoya dd {
+	padding: 0px 0 10px 0;}
+
+#bokuoya dt {
+	clear: left; float: left; width: 70px;
+	font-size:100%; color:#555555;}
+
+#bokuoya dd {
+	margin-left: 80px;
+	font-size:100%; color:#555555; line-height:130%;}
+
+
+#bokuoya #itemBT{
+	padding:0 0 15px 0; margin:0; width:700px;}
+	
+#bokuoya #itemBT li{
+	float:left; list-style-type: none; padding-left:12px;}
+	
+#bokuoya #itemBT li a#item10BT{
+     display: block; text-indent:-9999px;
+     width: 332px;
+     height: 98px;
+     margin-left: 0px;
+	 background:url(http://www.famima.com/images/p/bokuoya/item10_bt.jpg) no-repeat;}
+	 
+#bokuoya #itemBT ul li a#item10BT:hover,
+#bokuoya #itemBT ul li a#item10BT:active {
+     background-position:0px -98px;}
+	 
+#bokuoya #itemBT li a#item15BT{
+     display: block; text-indent:-9999px;
+     width: 332px;
+     height: 98px;
+     margin-left: 0px;
+	 background:url(http://www.famima.com/images/p/bokuoya/item15_bt.jpg) no-repeat;}
+	 
+#bokuoya #itemBT ul li a#item15BT:hover,
+#bokuoya #itemBT ul li a#item15BT:active {
+     background-position:0px -98px;}
+
+
+
+
+

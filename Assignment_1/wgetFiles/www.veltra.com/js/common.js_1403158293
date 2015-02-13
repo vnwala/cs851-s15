@@ -1,0 +1,745 @@
+$(function(){
+
+    // 画像表示であらかじめ画像がセットされている場合は、画像を表示する処理
+    $("div.image_popup_target_div").each(function(){
+        _this = $(this);
+        $(this).children(".popimage").each(function(){
+            if($(this).attr("src").match(/\.(png|jpg|jpeg|gif|bmp)$/)){
+                _this.show();
+
+                var img_area   = _this.attr("id").replace("target","area");
+                var img_toggle = _this.attr("id").replace("target","toggle");
+                $("#"+img_area).show();
+                $("#"+img_toggle).hide();
+            }
+        });
+    });
+
+    // ヘルプ
+    $("a.help").live("hover click", function(){
+        var key_array = $(this).attr('id').split('_');
+        var help_url  = HELP_URL + '/' + key_array[1] + '/' + key_array[2];
+        if ($(this).attr('help')) return false;
+        $(this).attr('help', true);
+        $("#" + $(this).attr('id')).bt({
+            ajaxPath  : help_url + ' div#contents',
+            ajaxError : HELP_ERROR_MESSAGE,
+            trigger      : 'hoverIntent',
+            hoverIntentOpts: {
+                interval : 0200,
+                timeout  : 1000
+            },
+            padding      : 10,
+            width        : 250,
+            spikeLength  : 10,
+            spikeGirth   : 10,
+            cornerRadius : 4,
+            fill         : 'rgba(254, 254, 192, 1.0)',
+            strokeWidth  : 1,
+            strokeStyle  : '#333333',
+            cssStyles    : {color: '#222222'}
+        })
+        .trigger('mouseover');
+        return false;
+    });
+
+    // ページ内スクロール
+    $("a.scroll").live("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        var speed    = SCROLL_SPEED_MILLI_SECOND;    // スクロール速度 ( ミリ秒 )
+        var href     = $(this).attr('href');
+        if(href == '#' || href.substring(0, 1) != '#') return;
+        var target   = (href == '#pagetop') ? $("body") : ($(href).length) ? $(href) : $("a[name='" + href.substring(1) + "']");
+
+        if(!target.length) return;
+        var position = target.offset().top;          // 移動先を数値で取得
+
+        $($.browser.safari ? 'body' : 'html').animate({scrollTop:position}, 'slow', 'swing');
+
+        return false;
+    });
+
+    // CHECKBOX の All 選択
+    $("input.all_checked").live("click", function(){
+        var id  = $(this).attr('id');
+        var val = $(this).attr('checked');
+        $("input." + id + ":enabled").attr('checked', val);
+/*
+        $("input." + id + ":hidden").each(function(){
+            if(!$(this).attr('disabled')){
+                $(this).attr('checked', val);
+            }
+        });
+*/
+        $(this).trigger("afterAllChecked", [id]);
+    });
+
+    // CHECKBOX の All 選択解除
+    $("input.detail_checked").live("click", function(){
+/*
+        var id = $(this).attr('class').split(' ')[0];
+        if(!$(this).attr('checked')){
+            $("#" + id + ":enabled").attr('checked', false).click();
+        }
+        $(this).trigger("afterDetailChecked", [id]);
+*/
+        var id_array = $(this).attr('class').replace('detail_checked','').split(' ');
+        for(var i = 0; i < id_array.length; i++){
+            if(id_array[i] != ''){
+                if(!$(this).attr('checked')){
+                    $("#" + id_array[i] + ":enabled").attr('checked', false);
+/*
+                    $("#" + id_array[i] + ":hidden").each(function(){
+                        if(!$(this).attr('disabled')){
+                            $(this).attr('checked', false);
+                        }
+                    });
+*/
+                }
+                $(this).trigger("afterDetailChecked", [id_array[i]]);
+            }
+        }
+    });
+
+    // TEXT, TEXTAREA のガイド文言表示
+    $("input.please_input, textarea.please_input").live("focus", function(){
+        $(this).addClass('is_focus');
+
+        if($(this).val() == "" || $(this).val() == $(this).attr('default_value')){
+            $(this).css('color', INPUT_VALUE_COLOR).val('');
+        }
+    }).live("blur", function(){
+        $(this).removeClass('is_focus');
+        if(jQuery.trim($(this).val()) == "" && $(this).attr('default_value') != undefined){
+            $(this).css('color', INPUT_DEFAULT_VALUE_COLOR).val($(this).attr('default_value'));
+        }
+    });
+    
+    $(document).ready(function (){
+        $("input.please_input, textarea.please_input").each(function(){
+            var default_value   = $(this).attr('default_value');
+            var value           = $(this).val();
+            if(typeof default_value != 'undefined' && default_value && default_value == value){
+                //console.log('default_value:%s, value:%s', default_value, value);
+                $(this).css('color', INPUT_DEFAULT_VALUE_COLOR);
+            }
+        });
+    });
+
+    // TEXT, TEXTAREA の入力バイト数表示
+    $("input.show_byte, textarea.show_byte").live("keyup change", function(){
+        var num   = 0;
+        var value = $(this).val();
+        if(value != $(this).attr('default_value')){
+            num = replaceNumComma(getStrByte(value));
+        }
+        $('#' + $(this).attr('id') + 'Num').text(num);
+    });
+
+    // TEXT, TEXTAREA の入力文字数表示
+    $("input.show_characters, textarea.show_characters").live("keyup change", function(){
+        var num   = 0;
+        var value = $(this).val();
+        if(value != $(this).attr('default_value')){
+            num = replaceNumComma(value.replace(/\r\n/g,"\n").replace(/(\n|\r)/g, "  ").length);
+        }
+        $('#' + $(this).attr('id') + 'Num').text(num);
+    });
+
+    // 初期設定
+    $("input.show_byte, textarea.show_byte, input.show_characters, textarea.show_characters").each(function(i){
+        $(this).change();
+    });
+
+/*
+    // 初期設定 ( 画像先読込み )
+    $("a.preload_image").each(function(i){
+        $("<img />").attr('src', $(this).attr('href'));
+    });
+
+    $("li.preload_image").each(function(i){
+        var val = this.getAttribute('onmouseover');
+        if(val.length && val.substring(0, 11) == 'changeImage'){
+            $("<img />").attr('src', val.substring(12).split(',')[0].slice(1, -1));
+        }
+    });
+*/
+
+    // ADD ボタン ( 1 次元 )
+    $("a.btn_add1").live("click", function(){
+        var key_array   = $(this).attr('id').split('_');
+        key_array[0]    = key_array[0].substring(0, (key_array[0].length - 3));
+        var replace_key = (!key_array[1].length) ? 0 : parseInt(key_array[1]) + 1;
+        var add_html    = $("#" + key_array[0] + "TmpArea").html().split('$key1').join(replace_key);
+        var sort        = 0;
+
+        // ソートの取得
+        for (i = key_array[1]; i < replace_key; i++) {
+            if($("#"+key_array[0]+i+"InputArea").css("display") != "none"){
+                var no = parseInt($("#"+key_array[0]+i+"SortNum").val());
+                if(sort<no){sort=no;}
+            }
+        }
+        sort++;
+
+        if($("#" + key_array[0] + "InputArea").length){
+            $("#" + key_array[0] + "InputArea").append(add_html);
+            $("#" + key_array[0] + "InputArea").trigger("afterAdd1", [replace_key]);
+        }
+        else{
+            $("#" + key_array[0] + key_array[1] + "InputArea").after(add_html);
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("afterAdd1",$(this).attr('id'));
+        }
+        setTimePicker("#" + key_array[0] + replace_key + "InputArea");
+        $("#"+key_array[0]+i+"SortNum").val(sort);
+        $(this).attr('id', key_array[0] + 'Add_' + replace_key);
+        return false;
+    });
+
+    // DELETE ボタン ( 1 次元 )
+    $("a.btn_delete1").live("click", function(){
+        if(confirm(CONFIRM_MESSAGE_DELETE1)){
+            var key_array = $(this).attr('id').split('_');
+            key_array[0]  = key_array[0].substring(0, (key_array[0].length - 3));
+            $("#" + key_array[0] + key_array[1] + "InputArea").slideUp('fast');
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("beforeDelete1", [key_array[1]]);
+            if($("#" + key_array[0] + key_array[1] + "Id").length){
+                $("#" + key_array[0] + key_array[1] + "DeleteFlg").val('1');
+            }
+            else{
+                $("#" + key_array[0] + key_array[1] + "InputArea").empty();
+            }
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("afterDelete1", $(this).attr('id'));
+        }
+        return false;
+    });
+
+    // 言語切り替え ラジオボタン ( 1 次元 )
+    $("input[name^='btn_lang_radio1']").live("change", function(){
+        var lang_array = $(this).attr('id').split('-');
+        $("div." + lang_array[0] + ",span." + lang_array[0]).each(function(i){
+            var lang = $(this).attr('lang');
+            if(lang == lang_array[1]){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    });
+
+    // ADD ボタン ( 2 次元 )
+    $("a.btn_add2").live("click", function(){
+        var key_array    = $(this).attr('id').split('_');
+        var tmp_array    = key_array[1].split('-');
+        key_array[0]     = key_array[0].substring(0, (key_array[0].length - 3));
+        key_array[1]     = tmp_array[0];
+        key_array[2]     = tmp_array[1];
+        var replace_key1 = key_array[1];
+        var replace_key2 = (!key_array[2].length) ? 0 : parseInt(key_array[2]) + 1;
+        var replace_key  = replace_key1 + '-' + replace_key2;
+        var add_html     = $("#" + key_array[0] + "TmpArea").html().split('$key1').join(replace_key1).split('$key2').join(replace_key2);
+        if($("#" + key_array[0] + key_array[1] + "InputArea").length){
+            $("#" + key_array[0] + key_array[1] + "InputArea").append(add_html);
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("afterAdd2", [replace_key]);
+        }
+        else{
+            $("#" + key_array[0] + key_array[1] + '-' + key_array[2] + "InputArea").after(add_html);
+        }
+        setTimePicker("#" + key_array[0] + replace_key + "InputArea");
+        $(this).attr('id', key_array[0] + 'Add_' + replace_key);
+        return false;
+    });
+
+    // DELETE ボタン ( 2 次元 )
+    $("a.btn_delete2").live("click", function(){
+        if(confirm(CONFIRM_MESSAGE_DELETE2)){
+            var key_array = $(this).attr('id').split('_');
+            key_array[0]  = key_array[0].substring(0, (key_array[0].length - 3));
+            $("#" + key_array[0] + key_array[1] + "InputArea").slideUp('fast');
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("beforeDelete2", [key_array[1]]);
+            if($("#" + key_array[0] + key_array[1] + "Id").length){
+                $("#" + key_array[0] + key_array[1] + "DeleteFlg").val('1');
+            }
+            else{
+                $("#" + key_array[0] + key_array[1] + "InputArea").empty();
+            }
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("afterDelete2", $(this).attr('id'));
+        }
+        return false;
+    });
+
+    // 言語切り替え ラジオボタン ( 2 次元 )
+    $("input[name^='btn_lang_radio2']").live("change", function(){
+        var lang_array = $(this).attr('id').split('-');
+        $("div." + lang_array[0] + "-" + lang_array[1] + ",span." + lang_array[0] + "-" + lang_array[1]).each(function(i){
+            var lang = $(this).attr('lang');
+            if(lang == lang_array[2]){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    });
+
+    // ADD ボタン ( 3 次元 )
+    $("a.btn_add3").live("click", function(){
+        var key_array    = $(this).attr('id').split('_');
+        var tmp_array    = key_array[1].split('-');
+        key_array[0]     = key_array[0].substring(0, (key_array[0].length - 3));
+        key_array[1]     = tmp_array[0];
+        key_array[2]     = tmp_array[1];
+        key_array[3]     = tmp_array[2];
+        var replace_key1 = key_array[1];
+        var replace_key2 = key_array[2];
+        var replace_key3 = (!key_array[3].length) ? 0 : parseInt(key_array[3]) + 1;
+        var replace_key  = replace_key1 + '-' + replace_key2 + '-' + replace_key3;
+        var add_html     = $("#" + key_array[0] + "TmpArea").html().split('$key1').join(replace_key1).split('$key2').join(replace_key2).split('$key3').join(replace_key3);
+        if($("#" + key_array[0] + key_array[1] + '-' + key_array[2] + "InputArea").length){
+            $("#" + key_array[0] + key_array[1] + '-' + key_array[2] + "InputArea").append(add_html);
+            $("#" + key_array[0] + key_array[1] + '-' + key_array[2] + "InputArea").trigger("afterAdd3", [replace_key]);
+        }
+        else{
+            $("#" + key_array[0] + key_array[1] + '-' + key_array[2] + '-' + key_array[3] + "InputArea").after(add_html);
+        }
+        setTimePicker("#" + key_array[0] + replace_key + "InputArea");
+        $(this).attr('id', key_array[0] + 'Add_' + replace_key);
+        return false;
+    });
+
+    // DELETE ボタン ( 3 次元 )
+    $("a.btn_delete3").live("click", function(){
+        if(confirm(CONFIRM_MESSAGE_DELETE3)){
+            var key_array = $(this).attr('id').split('_');
+            key_array[0]  = key_array[0].substring(0, (key_array[0].length - 3));
+            $("#" + key_array[0] + key_array[1] + "InputArea").slideUp('fast');
+            $("#" + key_array[0] + key_array[1] + "InputArea").trigger("beforeDelete3", [key_array[1]]);
+            if($("#" + key_array[0] + key_array[1] + "Id").length){
+                $("#" + key_array[0] + key_array[1] + "DeleteFlg").val('1');
+            }
+            else{
+                $("#" + key_array[0] + key_array[1] + "InputArea").empty();
+            }
+        }
+        return false;
+    });
+
+    // 言語切り替え ラジオボタン ( 3 次元 )
+    $("input[name^='btn_lang_radio3']").live("change", function(){
+        var lang_array = $(this).attr('id').split('-');
+        $("div." + lang_array[0] + "-" + lang_array[1] + "-" + lang_array[2] + ",span." + lang_array[0] + "-" + lang_array[1] + "-" + lang_array[2]).each(function(i){
+            var lang = $(this).attr('lang');
+            if(lang == lang_array[3]){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    });
+
+    // フッタの言語切り替え
+    $("#lang_select input.lang_select").live('change', function(){
+        var select_lang = $(this).val();
+
+        // 言語切り替え時に入力データが消えてもいいかの確認
+        if(window.confirm(CONFIRM_MESSAGE_CHANGE_LANG)){
+            document.change_lang.submit();
+        }
+        else{
+            document.change_lang.reset();
+            return false;
+        }
+    });
+
+    // timePickerのフォーマット設定
+    if($("input.time_input").size()){
+        $("input.time_input").timePicker({show24Hours:timePicker_flg});
+    }
+
+    // 選択言語設定
+    $("#lang_select > label").attr('style', 'margin-right:10px; font-size:11px;');
+    $("label[for='LangSelectRadio" + LANG_ID + "']").html('<span class="bold" style="font-size:11px">' + $("label[for='LangSelectRadio" + LANG_ID + "']").text() + '</span>');
+
+  // テキストエリアとカレンダーの表示
+  $(".calendar_img").click(function(){
+      $(this).prev().focus().blur().focus();
+  });
+
+});
+
+// 文字列バイト数取得
+function getStrByte(strSrc) {
+    var len = 0;
+    var strSrc = escape(strSrc.replace(/\r\n/g,"\n").replace(/(\n|\r)/g, "  "));
+    for(var i = 0; i < strSrc.length; i++, len++){
+        if(strSrc.charAt(i) == "%"){
+            if(strSrc.charAt(++i) == "u"){
+                i += 3;
+                len++;
+            }
+            i++;
+        }
+    }
+    return len;
+}
+
+// 数字カンマ区切り変換
+function replaceNumComma(num) {
+    return num.toString().replace(/([0-9]+?)(?=(?:[0-9]{3})+$)/g, '$1,');
+}
+
+// 数字一ケタの場合は先頭に0を付与
+function formatZero(num) {
+    var num = parseInt(num);
+    if(num < 10){
+        return "0" + num;
+    }
+    else{
+        return num;
+    }
+}
+
+// 英字大文字小文字変換
+function changeAlphabet(strValue, intPattern) {
+    var strAlphabet1 = 'abcdefghijklmnopqrstuvwxyz';
+    var strAlphabet2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var strPattern   = (intPattern == 1) ? strAlphabet2 : strAlphabet1;
+    var strReplace   = (intPattern == 1) ? strAlphabet1 : strAlphabet2;
+    var strResult    = '';
+    var index        = 0;
+    for(i = 0; i < strValue.length; i++){
+        index = strPattern.indexOf(strValue.charAt(i));
+        if(index != -1){
+            strResult += strReplace.charAt(index);
+        }
+        else{
+            strResult += strValue.charAt(i);
+        }
+    }
+    return strResult;
+}
+
+// timepicker設定
+function setTimePicker(strSelector) {
+    var tmp = $(strSelector);
+    $("input.time_inp", tmp).each(function(){
+        var type_id = parseInt($(this).attr('type_id'));
+        if(type_id == 1){
+            $(this).timePicker({show24Hours : false});
+        }
+        else if(type_id == 2){
+            $(this).timePicker({show24Hours : true});
+        }
+    });
+}
+
+// autoResize設定
+function setAutoResize(obj_id) {
+    $("#" + obj_id + " textarea.auto_resize").each(function(i){
+        var id = $(this).attr('id');
+        $("#" + id).autoResize({
+            // On resize:
+            onResize : function() {
+                $(this).css({opacity:1});
+            },
+            // After resize:
+            animateCallback : function() {
+                $(this).css({opacity:1});
+            },
+            // Quite slow animation:
+            animateDuration : 300,
+
+            // More extra space:
+            extraSpace : 40
+        });
+    });
+}
+
+// 国旗の表示
+function ShowFormImage(obj, lang_id, lang_id_name) {
+    if(lang_id == null){
+        lang_id = $("input[name='" + lang_id_name + "']:checked").val();
+    }
+    if(!lang_id){
+        return;
+    }
+    $(obj).css("background-image", "url(" + ptr_path + "img/form_bg_" + lang_id + ".png)");
+}
+
+// 国旗の非表示
+function HideFormImage(obj) {
+    $(obj).css("background-image", "");
+}
+
+// フォーム送信
+function sendForm(btm, form) {
+    var id = changeAlphabet(btm, 2);
+    if(form == null){
+        form = document.form1;
+    }
+    if(!$("#" + id, form).length){
+        var name    = changeAlphabet(btm, 1);
+        var div     = document.createElement('div');
+        var input   = document.createElement('input');
+        //div.setAttribute('style', 'display: none;');
+        div.style.display = 'none'; //ie7対策
+        input.type  = 'submit';
+        input.id    = id;
+        input.name  = name;
+        input.value = btm;
+        div.appendChild(input);
+        form.appendChild(div);
+    }
+
+    $("#job_btm").val(btm);
+    if(btm == 'Book_Now'){
+        if((IS_VTR_LOGIN == true || IS_TA_LOGIN == true)){
+            //get domain name from form action url
+            var form_action_url  = $(form).attr('action');
+            var tmp_a            = document.createElement('a');
+            tmp_a.href           = form_action_url;
+            var form_domain_name = tmp_a.hostname;
+            
+            //check if form action domain is ha
+            if(form_domain_name.indexOf('hawaii') != -1){                
+                var new_form_action_url = '';
+                if(SERVER_TYPE == 'dev'){
+                    new_form_action_url = HOST_NAME;
+                }
+                else {
+                    new_form_action_url = HOST_NAME.replace('http://', 'https://');
+                }
+                path_name = (tmp_a.pathname.charAt(0) == "/") ? tmp_a.pathname : "/" + tmp_a.pathname;
+
+                new_form_action_url += path_name;
+                new_form_action_url += tmp_a.search;
+                $(form).attr('action', new_form_action_url);
+                
+            }
+        }        
+    }
+    document.getElementById(id).click();
+//    form.submit();
+}
+
+//フォーム送信(2度押し禁止バージョン)
+var double_count = 0;
+function sendForm2(btm, form) {
+    double_count++;
+    if(double_count == 1){
+        var id = changeAlphabet(btm, 2);
+        if(form == null){
+            form = document.form1;
+        }
+        if(!$("#" + id, form).length){
+            var name    = changeAlphabet(btm, 1);
+            var div     = document.createElement('div');
+            var input   = document.createElement('input');
+            div.setAttribute('style', 'display: none;');
+            input.type  = 'submit';
+            input.id    = id;
+            input.name  = name;
+            input.value = btm;
+            div.appendChild(input);
+            form.appendChild(div);
+        }
+
+        $("#job_btm").val(btm);
+        document.getElementById(id).click();
+
+    }
+}
+
+
+
+
+
+function image_popup_target(image_type , activity_id , image_base){
+
+    var target = 'imagelist';
+    window.open('about:blank', target ,'width=820,left='+($(window).width()-820)+',titlebar=no,menubar=no,toolbar=no,location=no,status=no,directories=no, scrollbars=yes');
+
+    // formを生成
+    var form = document.createElement("form");
+    form.action = '/ptr/ptr_popup/imagelist/'+activity_id;
+    form.target = target;
+    form.method = 'post';
+
+    // hidden生成
+    var qs = [{type:'hidden',name:'image_type',value:image_type},{type:'hidden',name:'image_base',value:image_base}];
+    for(var i = 0; i < qs.length; i++) {
+        var ol = qs[i];
+        var input = document.createElement("input");
+        for(var p in ol) {
+          input.setAttribute(p, ol[p]);
+        }
+        form.appendChild(input);
+    }
+
+    // formをbodyに追加&submit&form削除
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(form);
+    form.submit();
+    body.removeChild(form);
+}
+
+
+function popimage_del(e){
+    var id = e.parentNode.id;
+    var h_id = id.replace("target","hidden");
+    var t_id = id.replace("target","toggle");
+    $("#"+h_id).val("");
+    $("#"+id).hide();
+    $("#"+t_id).show();
+}
+
+
+//全体ローディング開始
+function loading_set(filename){
+
+    if(navigator.userAgent.indexOf("Chrome") != -1){
+        var sc = $('body').scrollTop();
+    }
+    else{
+        var sc = $('html, body').scrollTop();
+    }
+
+    document.body.style.overflow="hidden";
+    var wid = $(window).width();
+    var hei = $(window).height();
+
+    switch(filename){
+        case "circle":
+            var frame_id = 2;
+            var top_style = sc + 250;
+        break;
+        default:
+            var frame_id = 1;
+            var top_style = sc+ hei/2;
+        break;
+    }
+
+    // 1層目を作成
+    uiFrame = $('<div id="loadingPopupFrame'+frame_id+'"></div>').appendTo(document.body);
+
+    // 2層目を作成
+    uiContents = $('<center id="loadingPopupContents" style="top:'+(top_style)+'px;left:0px;width:'+wid+'px;height:'+hei+'px;"></center>').appendTo(document.body);
+
+    // ボックスを作成
+    uiContents.html('<div id="loadingPopupBox'+frame_id+'"><img src="/_ptr/en/img/loader/'+filename+'.gif"></div>');
+}
+
+
+// 全体ローディング終了
+function loading_close(){
+    $("#loadingPopupFrame1,#loadingPopupFrame2,#loadingPopupContents").remove();
+    document.body.style.overflow="auto";
+}
+
+
+// くるくるボタン開始
+function loading_set_button(e){
+    e.hide();
+    e.after("<img src='/_ptr/en/img/loader/ajax.gif' style='margin-left:30px;'>");
+}
+
+
+// くるくるボタン終了
+function loading_close_button(e){
+    e.show();
+    e.next().remove();
+}
+
+
+// Vtrなりすましログイン時に表示される検索フォーム送信
+function sendSearchForm(btm) {
+    var id = changeAlphabet(btm, 2);
+    if(!$("#" + id, document.vtr_header_search_form).length){
+        var name    = changeAlphabet(btm, 1);
+        var div     = document.createElement('div');
+        var input   = document.createElement('input');
+        div.setAttribute('style', 'display: none;');
+        input.type  = 'submit';
+        input.id    = id;
+        input.name  = name;
+        input.value = btm;
+        div.appendChild(input);
+        document.vtr_header_search_form.appendChild(div);
+    }
+
+    $("#job_btm").val(btm);
+    document.getElementById(id).click();
+//    document.vtr_header_search_form.submit();
+}
+
+//Vtrヘッダ変更に伴う修正
+function sendSearchForm2(btm) {
+    var id = changeAlphabet(btm, 2);
+    if(!$("#" + id, document.vtr_header_search_form).length){
+        var name    = changeAlphabet(btm, 1);
+
+                var qstr = $('#vtr_header_search_query_string').val().replace(/^\s+|\s+$/g, "");//先頭と末尾のスペースを削除
+
+                if(name == "search_booking_no") {
+                    location.href = '/vtr/vtr_search/search_bookings/page:1?v_id=' + qstr;
+                } else if(name == "search_ptr_name") {
+                    location.href = '/vtr/vtr_search/search_partner_companies/page:1?ac_name=&status=all&beginner=0&name=' + qstr;
+                } else if(name == "search_ptr_ac_name") {
+                    location.href = '/vtr/vtr_search/search_partner_companies/page:1?status=all&beginner=0&name=&ac_name=' + qstr;
+                } else if(name == "search_tr_name") {
+                    location.href = '/vtr/vtr_search/search_travelers/page:1?lang_id=&country_id=&mobile_number=&start_date=&end_date=&date_status=last_login&name=' + qstr;
+                } else if(name == "search_tr_email") {
+                    location.href = '/vtr/vtr_search/search_travelers/page:1?email=' + qstr;
+                }
+    }
+}
+
+$(document).ready(function(){
+    //console.log('is_login: ' + (IS_TR_LOGIN == true ? 'Y': 'N'));
+    //console.log('auto_login:' + (AUTO_LOGIN == true ? 'Y': 'N'));
+    if(typeof IS_TR_LOGIN != 'undefined' && IS_TR_LOGIN == false && AUTO_LOGIN == true){
+        $.ajax({
+           type: 'GET',
+            url: '/tr_json/authorize/',
+           data: {lang_id: LANG_ID},
+           dataType: 'json',
+           success: function(data)
+           {    
+               if(data != null && data.status == 'success' && jQuery.isEmptyObject(data.dom) == false){
+                   if(jQuery.isEmptyObject(data.dom.login_info) == false){
+                        $('#header_login_info').html(data.dom.login_info);
+                   }
+                   
+                   if(jQuery.isEmptyObject(data.dom.button_info) == false){
+                        $('#header_login_btn').html(data.dom.button_info);
+                   }
+               }
+           }
+        });
+        
+        $.ajax({
+            url : '/tr_json/reset_wishlist_count',
+            type : 'GET',
+            dataType: 'json',
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+            },
+            success: function(data){
+                $(window).trigger('resize');
+                $('#wish_list_count').html(data['wish_list_count']);
+            }
+        });
+    }
+    else {
+        //console.log('skipped authorize');
+    }
+});
+
+function scrollToFaqTitle(aid){
+    var aTag = $("div[id='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    return false;
+}

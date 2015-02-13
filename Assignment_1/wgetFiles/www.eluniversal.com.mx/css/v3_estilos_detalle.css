@@ -1,0 +1,322 @@
+/* Notas */
+
+#noteContent{
+float:left;
+width:630px;
+padding-left:10px;
+}
+#noteContentTop{
+    /*border: 1px solid #CCCCCC;*/
+    height: auto;
+    /*margin: 1px auto 10px;*/
+    margin: 0 0 30px;
+    text-align: center;
+    width: 980px;    
+}
+
+.noteGallery{
+width:100%;
+height:400px;
+background-color:#333333;
+}
+
+	.noteTitle{
+	font-size:34px;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	color:#336699;
+	margin-bottom:10px;
+	}
+	
+	.noteTitleDell{
+	font-size:34px;
+	font-family:"Trebuchet MS",Times,serif;
+	color:#646464;
+	margin-bottom:10px;
+	}
+	
+	.noteIntro{
+	line-height:150%;
+	}
+	
+	.noteText{
+	margin:10px 0;
+	}
+	
+		.noteText p{
+		margin:5px 0;
+		line-height:140% !important;
+		}
+	
+	.extraRelated{
+	margin-bottom:15px;
+	}
+	
+	.noteInfo{
+	display:block;
+	margin:3px 0;
+	color:#969696;
+	clear:left;
+	}
+	
+	.noteExtras{
+	float:right; 
+	width:310px;
+	margin-bottom:25px;
+	}
+	
+	.extraMedia, .extraOptions{
+	border-bottom:1px solid #D2D2D2;
+	padding:10px 0;
+	}
+	
+		.extraMedia p, .optionMail, .optionSize, .optionPrint{
+		font-size:11px;
+		color:#666666;
+		background-repeat:no-repeat;
+		}
+		
+		.optionMail{
+		background-position:-137px -1311px;
+		}
+		
+		.optionSize{
+		background-position:10px -1305px;
+		}
+		
+		.optionPrint{
+		background-position:-66px -1311px;
+		}
+		
+		.optionsLists li{
+			float:left;
+			display:block;
+			width:60px;
+			text-align:center;
+			padding-top:40px;
+		}
+		
+		.optionsFeed{
+		margin-top:5px;
+		border-top:1px solid #D2D2D2;
+		padding-top:10px;
+		}
+		
+		
+			.optionsFeed li{
+			display:block;
+			float:left;
+			line-height:160%;
+			text-align:right;
+			width:145px;
+			}
+			
+		.iconsTechnorati, .iconsFacebook, .iconsTwitter, .iconsYahoo, .iconsGoogle, .iconsNing{
+		font-size:11px;
+		color:#666666;
+		background-repeat:no-repeat;
+		display:block;
+		text-indent:-9999px;
+		width:40px;
+		height:40px;
+		float:left;
+		}
+		
+	.relatedHead{
+	color:#8B272D;
+	font-size:18px;
+	font-weight:bold;
+	margin:20px 0 5px 0;
+	}
+	
+	.footerComments, .sideHead{
+	color:#8B272D;
+	font-size:18px;
+	font-weight:bold;
+	}
+	
+	.footerComments{
+	display:block;
+	margin-bottom:10px;
+	}
+	
+	.noteFooter{border-bottom:1px solid #999999; padding:20px 0; }
+	
+	.noteFooter .botonRplus{float:left;}
+	
+	.login{float:right;width:200px;}
+	
+	.sideInfo{color:#333333;}
+	
+	#comments{
+	width:100%;
+	}	
+	
+		#comments a, .noteFooter a, .commentText a{
+		color:#336699;
+		text-decoration:none;
+		}
+		
+		#comments p{
+		line-height:150%;
+		}	
+	
+		.commentContent{
+		border-bottom:1px solid #999999;
+		padding:10px 0;
+		/*float:right;*/
+		/*float:auto;*/
+		/*width:390px;*/
+		width:630px;
+		line-height:150%;
+		}
+		
+			.commentContent ul{
+			margin-top:5px;
+			}
+				.commentContent ul li{
+				float:left;
+				margin-right:3px;
+				}
+		
+		.infoLike, .infoDontlike, .infoComment, .infoReport{
+		padding:2px 0 2px 20px;
+		background-repeat:no-repeat;
+		}
+		
+		.infoLike{
+		background-position:-400px -1326px;
+		}
+		
+		.infoDontlike{
+		background-position:-400px -1348px;
+		}
+		
+		.infoComment{
+		background-position:-400px -1372px;
+		}
+		
+		.infoReport{
+		background-position:-398px -1397px;
+		}
+		
+		.commentInfo{color:#666666;}
+
+		.commentText{
+		padding:5px 0;
+		border-top:1px solid #999999;
+		border-bottom:1px solid #999999;
+		margin:10px 0;
+		}
+		
+		.commentText .alignLeft{
+		width:400px;
+		}
+		
+	#commentSide{
+	padding-left:5px;
+	float:left;
+	width:215px;
+	background-image:url(../imagenes/bg_side_comments.png);
+	background-repeat:repeat-y;
+	}
+		#commentSide p{margin:0 20px 0 0;}
+		#commentSide li{font-weight:bold;}
+	.footerText{
+	float:right;
+	margin-right:15px;
+	}
+		.footerIcons{
+		float:right;
+		margin-top:-10px;
+		}
+		
+#noteSidebar{
+width:320px;
+padding-top:0 10px;
+float:right;
+}
+
+/* Terminan Notas*/
+
+/* misc */
+
+.tabCategoria{
+float:right;
+font-size:14px;
+width:200px;
+color:#872226;
+}
+.tabtext{
+float:right;
+font-size:12px;
+width:200px;
+}
+.tabTitle{
+font-size:12px;
+float:right;
+font-size:12px;
+width:200px;
+margin:5px 0;
+}
+.tabTitle a{
+font-weight:bold;
+color:#336699;
+}
+.reporteDura{
+color:#FFFFFF;
+font-weight:bold;
+font-size:12px;
+float:left;
+margin:10px 0 0 3px;
+text-transform:uppercase;
+}
+.botonN, .botonR {
+background-repeat:no-repeat;
+width:80px;
+padding:2px 0;
+display:inline-block;
+text-decoration:none;
+color:#FFFFFF;
+text-align:center;
+}
+
+.botonN{
+background-image:url(../imagenes/botonN.png);
+background-repeat:no-repeat;
+}
+
+.botonR{
+background-image:url(../imagenes/botonR.png);
+background-repeat:no-repeat;
+}
+
+.botonRplus{
+background-position:-270px -1232px;
+background-repeat:no-repeat;
+display:block;
+width:146px;
+height:18px;
+padding-top:5px;
+color:#FFFFFF !important;
+text-align:center;
+}
+
+.imgLeft{
+float:left;
+margin-right:5px;
+}
+.clearLeft{
+clear:left;
+}
+.centerText{
+text-align:center;
+}
+
+.alignLeft{
+float:left;
+}
+
+.bold{
+font-weight:bold;
+}
+/* termina misc */

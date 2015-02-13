@@ -1,0 +1,105 @@
+#superGallery,#superGallery-sec1 {width: 100%;}
+#superGallery {margin-top: 10px; display: none;}
+#btnSuperGallery  {
+  width: 207px;
+  height: 31px;
+  cursor: pointer;
+  background-repeat: none;
+}
+
+.box {margin:10px 0px 0px 0;}
+#superGallery a img, #gallery a img {
+  border: 1px solid #ff0066;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+.panels, .effects, .lines {}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+.download-gallery-btn, #SDXG-wrapper h2, #gallery {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#SDXG-wrapper h2 {
+  font-size:24px;
+  color: #ff0066;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#SDXG-wrapper > a {
+  padding: 0px 10px 10px;
+}
+
+#SDXG-wrapper{
+/*  width:1100px;*/
+  height:auto;
+  margin: 10px auto;
+  padding-top: 0px;
+  position: relative;
+
+}
+#SDXG-wrapper h3:first-letter {
+    color: #FF0066;
+    font-size: 140%;
+    margin-right: 3px;
+}
+#SDXG-wrapper h3 {
+    background: url("../images/common/parts/heading-bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    float: left;
+    font-weight: bold;
+    height: 53px;
+    font-size: 195%;
+    line-height: 53px;
+    margin-bottom: 15px;
+    padding: 7px 10px 0;
+    vertical-align: bottom;
+    width: 100%;
+}
+#SDXG-wrapper h1 {
+    font-size: 185%;
+}
+
+
+/*------------------------追加------------------------------------*/
+#SDXG-wrapper #lightbox-image{ position:relative; z-index:20; }
+#SDXG-wrapper #lightbox-nav { display:none !important; }
+/*----------------------------------------------------------------*/

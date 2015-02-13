@@ -1,0 +1,80 @@
+.cust-paneltable {margin-bottom:5px;table-layout:fixed;}
+.cust-panelsitetable {margin-bottom:0;table-layout:fixed;}
+
+.cust-paneltable tbody>tr>td, .cust-panelsitetable tbody>tr>td{padding:0;}
+.cust-paneltable a, .cust-panelsitetable a{display: block;padding:8px;
+	text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+
+
+/*右下オーバーレイ*/
+* html #meerkat-contents{
+	overflow: auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+div#meerkat-wrap {
+	margin:0 8px 0 0;
+	position: fixed !important;
+	position: absolute;
+	z-index: 10000;
+	width: 306px;
+	height: 265px;
+	right: 0px;
+	bottom:10px;
+	display: block;
+}
+
+div#meerkat-container{
+
+	background-image: none;
+	background-attachment:initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	height: 265px;
+	background-position: initial initial;
+	background-repeat: initial initial; 
+}
+
+
+div#meerkat div#adframe_header{
+	height:17px;
+	text-align:right;
+}
+
+div#meerkat div#adframe_header p.close{
+	padding:0px;
+	margin:0;
+	height:7px;
+}
+
+div#meerkat div#adframe_header .close-meerkat{
+	padding:0px;
+	margin:0;
+	height:7px;
+}
+
+div#meerkat div#adframe_header #close-btn{
+	padding:0px;
+	border:0;
+	height:7px;
+	width:7px;
+}
+
+div#meerkat div#adframe_header p.close a.link{
+	text-decoration:none;
+}
+
+
+div#meerkat div#adframe_body{
+	border:0px 0px 0 0px;
+	border-style:solid;
+	border-color:#23538a;
+	height:256px;
+}
+
+div#meerkat div#adframe_body iframe{
+	border: none;
+}
+/*ここまで*/

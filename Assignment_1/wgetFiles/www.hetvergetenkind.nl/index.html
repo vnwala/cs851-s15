@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="nl"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--
+    * Deze code is met veel plezier geschreven, getest en met trots opgeleverd door Multimove webworks
+    *
+    * Voor vragen kunt u contact opnemen per e-mail (info@multimove.nl) of per telefoon (0524-592930)
+    * Meer informatie over Multimove webworks vindt u op http://www.multimove.nl
+    -->
+    <title>Het Vergeten Kind</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Multimove CMS" />
+    <meta name="author" content="Martijn van den Berg @ Multimove" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/default.css" media="all" />
+    <link rel="stylesheet" href="styles/style.css" media="all" />
+    <link rel="stylesheet" href="styles/fancybox.css" media="all" />
+    <link rel="alternate" href="http://www.hetvergetenkind.nl/nl/news/nieuws/xml,true" title="Nieuws" type="application/rss+xml" />
+    <script>BASE_URL = 'http://www.hetvergetenkind.nl/';</script>
+    <script src="scripts/vendor/jquery-1.10.2.min.js"></script>
+    <script src="scripts/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="scripts/jquery-cycle2.min.js"></script>
+    <script src="scripts/jquery.fancybox.pack.js"></script>
+    <script src="scripts/jquery.cookie.js"></script>
+    <script src="flash/mediaplayer/jwplayer.js"></script>
+    <script src="http://s7.addthis.com/js/300/addthis_widget.js#username=xa-4d33ed67378ef02b"></script>
+    <script src="http://cdn.multimove.nl/etc/jwplayer/6.7/jwplayer.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/info.js"></script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-5FB84N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FB84N');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="top" class="group">
+            <div id="logo" class="left">
+                <a href="index.html">
+                    <img src="images/layout/logov4.png" alt="Het Vergeten Kind" />
+                </a>
+            </div>
+            <div id="navigation" class="right">
+                <div id="top-action" class="group">
+                    <script type="text/javascript">
+//<![CDATA[
+function getRadioValue() {
+	theRadioValue = 0;
+	for (var i = 0; i < document.signup_frm.gender.length; i++) {
+		if (document.signup_frm.gender[i].checked) {
+			theRadioValue = document.signup_frm.gender[i].value;
+			break;
+		}
+	}
+	return theRadioValue;
+}
+
+function submitInput() {
+	//var f_firstname = document.getElementById('f_firstname').value;
+	//var f_lastname = document.getElementById('f_lastname').value;
+	//var f_gender = getRadioValue();
+	var f_email = document.getElementById('f_email').value;
+	var query = //'f_firstname=' + f_firstname + '&f_lastname=' + f_lastname + '&f_gender=' + f_gender +
+	            '&f_email=' + f_email;
+
+	mailinglistXmlhttpPost('http://www.hetvergetenkind.nl/nl/mailinglist/mailinglist', query);
+}
+
+function show_unsubscribe() {
+	document.getElementById('mailinglist_content').style.display = 'none';
+	document.getElementById('mailinglist_unsubscribe').style.display = 'block';
+}
+
+function error_back() {
+	document.getElementById('mailinglist_error').style.display = 'none';
+	document.getElementById('mailinglist_content').style.display = 'block';
+}
+
+function submitUnsubscribe() {
+	var f_email = document.getElementById('f_email_unsubscribe').value;
+	var query = 'f_email=' + f_email;
+	mailinglistXmlhttpPost('http://www.hetvergetenkind.nl/nl/mailinglist/mailinglist/sub,2', query);
+}
+//]]>
+</script>
+
+<h1>Nieuwsbrief</h1>
+<h2>Schrijf je nu in!</h2>
+
+<div id="mailinglist_content"  class="group">
+    <!--<p style="margin-top: 0; margin-bottom: 5px; font-size: 75%;">
+        Om af te melden, <a href="javascript:show_unsubscribe();">klik hier</a>
+    </p>-->
+    <form name="signup_frm" method="get" action="index.html" onsubmit="return false;">
+        <input type="text" id="f_email" value="" placeholder="E-MAILADRES" />
+        <input type="button" value="Verstuur" onclick="javascript:submitInput();" />
+    </form>
+</div>
+
+<div id="mailinglist_unsubscribe" style="display: none;">
+    <p>
+        Vul hieronder uw e-mail adres in en klik op "Afmelden" om u af te melden van de mailinglist.
+    </p>
+    <form action="index.html" method="get" onsubmit="return false;">
+        <p>
+            <input type="text" id="f_email_unsubscribe" />
+        </p>
+        <input type="button" value="Afmelden" onclick="javascript:submitUnsubscribe();" />
+    </form>
+</div>
+
+<div id="mailinglist_error" style="display: none;">
+    <p id="error_text" style="color: #E7004D;"></p>
+    <p>
+        <a href="javascript:error_back();">terug</a>
+    </p>
+</div>
+
+<div id="mailinglist_succes" style="display: none;">
+    <p>
+        Bedankt voor uw aanmelding.
+    </p>
+</div>
+
+                </div>
+                <div id="top-nav">
+                    <ul id="nav" class="group"><li><a href="http://www.hetvergetenkind.nl/nl/site/home" class="rounded  current item1">Home</a></li><li><a href="http://www.hetvergetenkind.nl/nl/site/over-ons" class="rounded  item3">Over ons</a><ul><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/manifest" class="rounded">Manifest</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/guusje-nederhorst" class="rounded">Guusje Nederhorst</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/organisatie" class="rounded">Organisatie</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/bestuur" class="rounded">Bestuur</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/ambassadeurs" class="rounded">Ambassadeurs</a></li></ul></li><li><a href="http://www.hetvergetenkind.nl/nl/site/ons-werk" class="rounded  item4">Ons werk</a><ul><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/tovertuinen" class="rounded">VERBETEREN LEEFOMGEVING</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/tovertuin-tour" class="rounded">ACTIVEREN KIND IN OPVANG</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/week-van-het-vergeten-kind" class="rounded">Week van het Vergeten Kind</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/sint-express-tour" class="rounded">Sint Express Tour</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/gallery/fotoalbum" class="rounded">Foto</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/video/videoplayer" class="rounded">Video</a></li></ul></li><li><a href="http://www.hetvergetenkind.nl/nl/site/help-ons" class="rounded  item5">Help ons!</a><ul><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/donation/doneren" class="rounded">Doneren</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/kom-in-actie-voor-vergeten-kinderen" class="rounded">Kom in actie</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/bedrijven" class="rounded">Bedrijven, serviceorganisaties en verenigingen</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/voordelig_schenken" class="rounded">Voordelig schenken</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/iban" class="rounded">IBAN</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/help_mee2" class="rounded">Vrijwilliger worden</a></li></ul></li><li><a href="http://www.hetvergetenkind.nl/nl/news/nieuws" class="rounded  item6">Nieuws</a></li><li><a href="http://www.hetvergetenkind.nl/nl/site/partners_sponsors" class="rounded  item8">Partners & Sponsors</a><ul><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/partners_tovertuinen" class="rounded">Partners Tovertuinen</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/media_sponsors" class="rounded">Media sponsors</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/sponsors_van_de_gnf" class="rounded">Sponsors</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/woezel_pip" class="rounded">Woezel & Pip</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/royalty_partners" class="rounded">Royaltypartners</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/partners_bedrijfsvoering" class="rounded">Partners bedrijfsvoering</a></li><li class="lvl1"><a href="http://www.hetvergetenkind.nl/nl/site/clubvanmicrodonateurs" class="rounded">Club van Microdonateurs</a></li></ul></li><li><a href="http://www.hetvergetenkind.nl/nl/site/contact" class="rounded  item10">Contact</a></li></ul>
+                </div>
+                <div id="top-socialmedia">
+                    <a href="http://www.twitter.com/hetvergetenkind" class="twitter" title="Volg ons op Twitter" target="_blank"><img src="images/icons/twitter.png" alt="Twitter" /></a>
+                    <a href="https://www.facebook.com/hetvergetenkind" class="facebook" title="Like ons op Facebook" target="_blank"><img src="images/icons/facebook.png" alt="Facebook" /></a>
+                    <a href="https://www.youtube.com/channel/UCnp6q3t0db2j8vIgUxG6Mxw" class="youtube" title="YouTube" target="_blank"><img src="images/icons/youtube.png" alt="YouTube" /></a>
+                </div>
+            </div>
+        </div>
+        <div id="topbar"></div>
+
+        <div id="header-nav"></div>
+
+        <div id="top_banner">
+        <!--<a href="http://www.hetvergetenkind.nl/nl/banner/banner/banner_id,7" target="_blank" style="border: 0;"><img src="http://www.hetvergetenkind.nl/storage/banners/Banner website HVK - Dromenboom kerst + Sandd.jpg" alt="" width="1300" height="410" border="0" /></a>-->
+            <div id="header">
+                <div id="header-inner">
+                    <div id="header-shadow-left"></div>
+<div id="header-shadow-right"></div>
+
+<div id="slideshow">
+
+    <img class="cycle-slide slideshow-img" src="nl/images/874" alt="" data-cap="&lt;h1&gt;
+    Igor&lt;/h1&gt;
+&lt;h2&gt;
+    3 maand&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <img class="cycle-slide slideshow-img" src="nl/images/861" alt="" data-cap="&lt;h1&gt;
+    David&lt;/h1&gt;
+&lt;h2&gt;
+    10 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen.  &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;"  />
+
+    <img class="cycle-slide slideshow-img" src="nl/images/875" alt="" data-cap="&lt;h1&gt;
+    Eva&lt;/h1&gt;
+&lt;h2&gt;
+    12 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <img class="cycle-slide slideshow-img" src="nl/images/876" alt="" data-cap="&lt;h1&gt;
+    Rashid&lt;/h1&gt;
+&lt;h2&gt;
+    4 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <div class="cycle-slide slideshow-video" data-cap="&lt;p&gt;Bekijk het filmpje en neem een kijkje in de levens van Bram, Sophie, Igor, Rashid en nog veel meer kinderen die niet meer thuis kunnen wonen. Kinderen met onzichtbare littekens die noodgedwongen verblijven in een sobere opvanglocatie in Nederland.&lt;/p&gt;&lt;a class=&quot;download &quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief &quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;">
+        <a target="_blank" href="https://www.youtube.com/watch?v=ypPgz_Sry3Y">
+            <div class="play"></div>
+            <img class="cycle-slide slideshow-img" src="images/wvhvk/vergentenkind_youtube.jpg" alt="">
+        </a>
+    </div>
+
+
+    <div id="slideshow-pager"></div>
+    <div id="slideshow-caption"></div>
+</div>
+
+                </div>
+                <div id="videoplayer"></div>
+            </div>
+        </div>
+
+		<div id="content" class="home">
+            <div id="content-inner" class="group">
+                <div id="content-twitter" class="left">
+                    <h1>Twitter updates</h1>
+                    <div class="tweet">
+
+    <div class="tweet-divider"></div>
+
+    <div class="tweet-header">
+        <a class="account-group" href="http://twitter.com/HetVergetenKind" target="_blank"><strong class="fullname">Het Vergeten Kind</strong> <span class="username"><s>@</s><b>HetVergetenKind</b></span></a>
+    </div>
+    <div class="tweet-text">
+        Campagne Het Vergeten Kind in <a href="http://twitter.com/#!/search?q=%23Sportwijs" target="_blank" class="tweet_hashtag">#Sportwijs</a> dankzij <a href="http://twitter.com/#!/search?q=%23DoelbewustMedia" target="_blank" class="tweet_hashtag">#DoelbewustMedia</a>.  Dank voor jullie steun! <a href="http://t.co/Jhhi0ZlJN8" target="_blank" class="tweet_link">http://t.co/Jhhi0ZlJN8</a>
+    </div>
+    <div class="tweet-time">
+        - <a href="http://twitter.com/HetVergetenKind/status/564801615706988544" title="Bekijk op twitter" target="_blank">14 uren geleden.</a>
+    </div>
+
+</div>
+<div class="tweet">
+
+    <div class="tweet-divider"></div>
+
+    <div class="tweet-header">
+        <a class="account-group" href="http://twitter.com/HetVergetenKind" target="_blank"><strong class="fullname">Het Vergeten Kind</strong> <span class="username"><s>@</s><b>HetVergetenKind</b></span></a>
+    </div>
+    <div class="tweet-text">
+        Maximale aandacht voor <a href="http://twitter.com/#!/search?q=%23hetvergetenkind" target="_blank" class="tweet_hashtag">#hetvergetenkind</a> bij café <a href="http://twitter.com/#!/search?q=%23Bedier" target="_blank" class="tweet_hashtag">#Bedier</a> aan de Amstelveenseweg. Dank! <a href="http://twitter.com/#!/search?q=%23freevilts" target="_blank" class="tweet_hashtag">#freevilts</a> <a href="http://twitter.com/#!/BoomerangCreate" target="_blank" class="tweet_mention">@BoomerangCreate</a> <a href="http://t.co/2pYNMb3BkE" target="_blank" class="tweet_link">http://t.co/2pYNMb3BkE</a>
+    </div>
+    <div class="tweet-time">
+        - <a href="http://twitter.com/HetVergetenKind/status/564555303317168130" title="Bekijk op twitter" target="_blank">8 feb.</a>
+    </div>
+
+</div>
+<div class="tweet">
+
+    <div class="tweet-divider"></div>
+
+    <div class="tweet-header">
+        <a class="account-group" href="http://twitter.com/RomyKane95" target="_blank"><strong class="fullname">Romy van Hal</strong> <span class="username"><s>@</s><b>RomyKane95</b></span></a>
+    </div>
+    <div class="tweet-text">
+        Laten we samen deze stichting helpen! ?? <a href="http://twitter.com/#!/HetVergetenKind" target="_blank" class="tweet_mention">@HetVergetenKind</a> <a href="http://twitter.com/#!/search?q=%23weekvanhetvergetenkind" target="_blank" class="tweet_hashtag">#weekvanhetvergetenkind</a> <a href="http://t.co/YPbUZoFcWy" target="_blank" class="tweet_link">http://t.co/YPbUZoFcWy</a>
+    </div>
+    <div class="tweet-time">
+        - <a href="http://twitter.com/RomyKane95/status/564515259118268417" title="Bekijk op twitter" target="_blank">8 feb.</a>
+    </div>
+
+</div>
+
+                </div>
+                <div id="content-content" class="left">
+                    <h1>33.000 KINDEREN IN NEDERLAND LEVEN IN SOBERE OPVANGCENTRA!</h1>
+
+<p class="intro" style="text-align: justify;">Soms zonder dat u het weet op een geheime locatie bij u om de hoek om hun veiligheid te garanderen. Vergeten kinderen van 0 tot 18 jaar die mishandeld, misbruikt, verwaarloosd, verstoten en gevlucht zijn en opgroeien in sobere opvangcentra met minimale speelmogelijkheden. Dit is niet hoe een kinderleven moet beginnen. We geven deze kinderen een kindvriendelijke leefomgeving waar ze kunnen spelen, bewegen en ontspannen. We bieden vrolijke activiteiten en evenementen waardoor ze weer gewoon kind kunnen zijn. En we ondernemen initiatieven om de situatie van deze kinderen onder de aandacht te brengen bij de verantwoordelijke instanties en het Nederlandse publiek.</p>
+
+                    <a href="http://www.hetvergetenkind.nl/nl/donation/doneren">
+                        <img src="images/layout/button_doneernu.png" alt="Doneer nu!" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--<div id="header">
+            <div id="header-inner">
+                <div id="header-shadow-left"></div>
+<div id="header-shadow-right"></div>
+
+<div id="slideshow">
+
+    <img class="cycle-slide slideshow-img" src="http://www.hetvergetenkind.nl/nl/images/874" alt="" data-cap="&lt;h1&gt;
+    Igor&lt;/h1&gt;
+&lt;h2&gt;
+    3 maand&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <img class="cycle-slide slideshow-img" src="http://www.hetvergetenkind.nl/nl/images/861" alt="" data-cap="&lt;h1&gt;
+    David&lt;/h1&gt;
+&lt;h2&gt;
+    10 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen.  &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;"  />
+
+    <img class="cycle-slide slideshow-img" src="http://www.hetvergetenkind.nl/nl/images/875" alt="" data-cap="&lt;h1&gt;
+    Eva&lt;/h1&gt;
+&lt;h2&gt;
+    12 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <img class="cycle-slide slideshow-img" src="http://www.hetvergetenkind.nl/nl/images/876" alt="" data-cap="&lt;h1&gt;
+    Rashid&lt;/h1&gt;
+&lt;h2&gt;
+    4 jaar&lt;/h2&gt;
+&lt;p&gt;
+    Igor is nog maar 3 maanden, David is net 10  jaar, Eva 12 en Rashid is pas 4 jaar. Om uiteenlopende redenen, die soms maar moeilijk zijn te bevatten, verblijven ze noodgedwongen samen met 33.000 kinderen in sobere opvanglocaties. Ieder vergeten kind heeft zijn eigen verhaal. Tijdens de Week van het Vergeten Kind vertellen we hun verhalen en vragen wij extra aandacht voor hun situatie. Aandacht van de politiek, beleidsmakers, media en van het Nederlandse publiek. En dat allemaal om een bijdrage te leveren om hun kwaliteit van leven te verbeteren. Want geen enkel kinderleven hoort zo te beginnen. &lt;/p&gt;&lt;a class=&quot;download&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief&quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;" />
+
+    <div class="cycle-slide slideshow-video" data-cap="&lt;p&gt;Bekijk het filmpje en neem een kijkje in de levens van Bram, Sophie, Igor, Rashid en nog veel meer kinderen die niet meer thuis kunnen wonen. Kinderen met onzichtbare littekens die noodgedwongen verblijven in een sobere opvanglocatie in Nederland.&lt;/p&gt;&lt;a class=&quot;download &quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/weekagenda_2015&quot;&gt;AGENDA&lt;/a&gt;  &lt;a class=&quot;nieuwsbrief &quot; href=&quot;http://www.hetvergetenkind.nl/nl/site/nieuwbrief_viaheader&quot;&gt;INSCHRIJVEN NIEUWSBRIEF&lt;/a&gt;">
+        <a target="_blank" href="https://www.youtube.com/watch?v=ypPgz_Sry3Y">
+            <div class="play"></div>
+            <img class="cycle-slide slideshow-img" src="http://www.hetvergetenkind.nl/images/wvhvk/vergentenkind_youtube.jpg" alt="">
+        </a>
+    </div>
+
+
+    <div id="slideshow-pager"></div>
+    <div id="slideshow-caption"></div>
+</div>
+
+            </div>
+            <div id="videoplayer"></div>
+        </div>-->
+
+        <div id="latestnews"
+style="background-image: url('image.php?image=storage%252Fimages%252F1423143438_95q2926_kopie_3.jpg&st=true&width=1300&height=370');"
+>
+    <div id="latest-inner">
+
+        <h1>Laatste nieuws</h1>
+
+        <div id="highlighted">
+            <div class="text">
+               05/02/2015 - Groot feest ter afsluiting Week van Het Vergeten Kind  
+            </div>
+            <a href="http://www.hetvergetenkind.nl/nl/news/nieuws/news_id,219/year,2015/month,2/groot-feest-ter-afsluiting-week-van-het-vergeten-kind">Lees meer</a>
+        </div>
+
+        <div class="news">
+            <a href="http://www.hetvergetenkind.nl/nl/news/nieuws/news_id,218/year,2015/month,2/koningin-mxima-aanwezig-bij-uitreiking-kind-centraal-award-aan-kompaan-en-de-bocht-in-goirle">03/02/2015 - Koningin Máxima aanwezig bij uitreiking ‘Kind Centraal’ Award aan Kompaan en De Bocht in Goirle</a>
+        </div>
+        <div class="news">
+            <a href="http://www.hetvergetenkind.nl/nl/news/nieuws/news_id,217/year,2015/month,2/azc-hesselanden-uit-emmen-wint-award-voor-beste-film-op-de-premire-van-het-vergeten-kind-filmfestival">01/02/2015 - AZC Hesselanden uit Emmen wint award voor Beste Film op de première van Het Vergeten Kind Filmfestival</a>
+        </div>
+        <div class="news">
+            <a href="http://www.hetvergetenkind.nl/nl/news/nieuws/news_id,216/year,2015/month,1/het-vergeten-kind-opent-buiten-tovertuin-in-amersfoort">31/01/2015 - Het Vergeten Kind opent Buiten Tovertuin in Amersfoort</a>
+        </div>
+        <div class="news">
+            <a href="http://www.hetvergetenkind.nl/nl/news/nieuws/news_id,215/year,2015/month,1/het-vergeten-kind-realiseert-18e-tovertuin-bij-vrouwenopvang-arosa-locatie-sophie-in-rotterdam">31/01/2015 - Het Vergeten Kind realiseert 18e Tovertuin bij vrouwenopvang Arosa locatie Sophie in Rotterdam </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+        <div id="about">
+            <div id="about-inner" class="group">
+
+                <h1>Over ons werk</h1>
+
+                <div class="column left">
+                    <table border="0" cellpadding="0" cellspacing="0" class="about" style="width:242px;">
+	<tbody>
+		<tr>
+			<td>
+			<p class="intro"><img alt="" src="nl/images/674/rnd,491854" style="width: 242px; height: 153px;" /></p>
+
+			<p class="intro"><strong><span style="color:#FFD700;">VERBETEREN LEEFOMGEVING</span></strong><br />
+			Het verbeteren van de leef- en speelomgeving binnen de veilige muren van de opvang noemen we een &#39;Tovertuin&#39;...</p>
+
+			<p><a href="http://www.hetvergetenkind.nl/nl/site/tovertuinen">meer &raquo;</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+                </div>
+
+                <div class="column left">
+                    <table border="0" cellpadding="0" cellspacing="0" class="about" style="width:242px;">
+	<tbody>
+		<tr>
+			<td><img alt="" src="nl/images/795/rnd,541642" style="width: 242px; height: 153px;" />
+			<p><strong>Activeren kind in opvang</strong></p>
+
+			<p>De Tovertuin Tour is een activiteitenprogramma dat aangeboden wordt aan de kinderen van de diverse opvangcentra...</p>
+
+			<p><a href="http://www.hetvergetenkind.nl/nl/site/tovertuin-tour">meer &raquo;</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+                </div>
+
+                <div class="column left">
+                    <table border="0" cellpadding="0" cellspacing="0" class="about" style="width:242px;">
+	<tbody>
+		<tr>
+			<td><img alt="" src="nl/images/676/rnd,655830" style="width: 242px; height: 153px;" />
+			<p><strong>Week van het vergeten kind</strong></p>
+
+			<p>Nadat in 2011 en 2012 op de geboortedag van Guusje Nederhorst (4 februari) de Dag van het Vergeten Kind werd gevierd...</p>
+
+			<p><a href="http://www.hetvergetenkind.nl/nl/site/week-van-het-vergeten-kind">meer &raquo;</a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+                </div>
+
+                <div class="column left">
+                    <table border="0" cellpadding="0" cellspacing="0" class="about" style="width:242px;">
+	<tbody>
+		<tr>
+			<td><img alt="" src="nl/images/675/rnd,480648" style="width: 242px; height: 153px;" />
+			<p><span style="color:#FFD700;"><strong>Sint Express Tour</strong></span></p>
+
+			<p>Een Sinterklaasfeest vieren is voor kinderen in opvangcentra helaas niet zo vanzelfsprekend als voor veel van hun leeftijdgenootjes...</p>
+
+			<p><a href="http://www.hetvergetenkind.nl/nl/site/sint-express-tour"><span style="color:#FFD700;">meer &raquo;</span></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    <div id="footer">
+
+        <div id="footer-donate" class="right">
+            <a href="http://www.hetvergetenkind.nl/nl/donation/doneren">
+                <img src="images/layout/footer-action.png" alt="Doneer nu! Help hen, help ons!" />
+            </a>
+        </div>
+
+        <div id="footer-newsletter" class="right">
+            <script type="text/javascript">
+//<![CDATA[
+function getRadioValue() {
+	theRadioValue = 0;
+	for (var i = 0; i < document.signup_frm.gender.length; i++) {
+		if (document.signup_frm.gender[i].checked) {
+			theRadioValue = document.signup_frm.gender[i].value;
+			break;
+		}
+	}
+	return theRadioValue;
+}
+
+function submitInput() {
+	//var f_firstname = document.getElementById('f_firstname').value;
+	//var f_lastname = document.getElementById('f_lastname').value;
+	//var f_gender = getRadioValue();
+	var f_email = document.getElementById('f_email').value;
+	var query = //'f_firstname=' + f_firstname + '&f_lastname=' + f_lastname + '&f_gender=' + f_gender +
+	            '&f_email=' + f_email;
+
+	mailinglistXmlhttpPost('http://www.hetvergetenkind.nl/nl/mailinglist/mailinglist', query);
+}
+
+function show_unsubscribe() {
+	document.getElementById('mailinglist_content').style.display = 'none';
+	document.getElementById('mailinglist_unsubscribe').style.display = 'block';
+}
+
+function error_back() {
+	document.getElementById('mailinglist_error').style.display = 'none';
+	document.getElementById('mailinglist_content').style.display = 'block';
+}
+
+function submitUnsubscribe() {
+	var f_email = document.getElementById('f_email_unsubscribe').value;
+	var query = 'f_email=' + f_email;
+	mailinglistXmlhttpPost('http://www.hetvergetenkind.nl/nl/mailinglist/mailinglist/sub,2', query);
+}
+//]]>
+</script>
+
+<h1>Nieuwsbrief</h1>
+<h2>Schrijf je nu in!</h2>
+
+<div id="mailinglist_content"  class="group">
+    <!--<p style="margin-top: 0; margin-bottom: 5px; font-size: 75%;">
+        Om af te melden, <a href="javascript:show_unsubscribe();">klik hier</a>
+    </p>-->
+    <form name="signup_frm" method="get" action="index.html" onsubmit="return false;">
+        <input type="text" id="f_email" value="" placeholder="E-MAILADRES" />
+        <input type="button" value="Verstuur" onclick="javascript:submitInput();" />
+    </form>
+</div>
+
+<div id="mailinglist_unsubscribe" style="display: none;">
+    <p>
+        Vul hieronder uw e-mail adres in en klik op "Afmelden" om u af te melden van de mailinglist.
+    </p>
+    <form action="index.html" method="get" onsubmit="return false;">
+        <p>
+            <input type="text" id="f_email_unsubscribe" />
+        </p>
+        <input type="button" value="Afmelden" onclick="javascript:submitUnsubscribe();" />
+    </form>
+</div>
+
+<div id="mailinglist_error" style="display: none;">
+    <p id="error_text" style="color: #E7004D;"></p>
+    <p>
+        <a href="javascript:error_back();">terug</a>
+    </p>
+</div>
+
+<div id="mailinglist_succes" style="display: none;">
+    <p>
+        Bedankt voor uw aanmelding.
+    </p>
+</div>
+
+        </div>
+
+        <div id="footer-anbi" class="right">
+            <img src="images/layout/logo-anbi.png" alt="" />
+        </div>
+
+        <div id="footer-nav">
+            <ul id="top_level_menu" class="group">
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/home" id="menuid1" class="top_level_menu_on">Home</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/over-ons" id="menuid3" class="top_level_menu">Over ons</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/ons-werk" id="menuid4" class="top_level_menu">Ons werk</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/help-ons" id="menuid5" class="top_level_menu">Help ons!</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/news/nieuws" id="menuid6" class="top_level_menu">Nieuws</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/partners_sponsors" id="menuid8" class="top_level_menu">Partners & Sponsors</a></li>
+	<li><a href="http://www.hetvergetenkind.nl/nl/site/contact" id="menuid10" class="top_level_menu">Contact</a></li>
+    <li class="iban"><a>IBAN: NL83 RABO 0172 4314 84</a></li>
+    <!--<li class="copyright"><a href="http://www.hetvergetenkind.nl/">Stichting Het Vergeten Kind</a></li>-->
+</ul>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

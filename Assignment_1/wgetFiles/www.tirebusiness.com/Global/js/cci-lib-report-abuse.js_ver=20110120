@@ -1,0 +1,83 @@
+CCI = CCI || {Comments:{Abuse:{}}};
+CCI.Comments = CCI.Comments || {Abuse:{}};
+CCI.Comments.Abuse = CCI.Comments.Abuse || {};
+
+var _CCI_display = function(a,b) {
+		var el = document.getElementById(a);
+		el.style.display = b;
+	}
+
+
+CCI.Comments.buildAbuseItems = function() {
+    
+                            		var validateKey = $("#comments-val").attr("rel");
+                            		var currentUser = $("#comments-u").attr("rel");
+                            		var emailFrom = CCI.Comments.Abuse.emailFrom || "do-not-reply@crain.com";
+                            		var emailFromName = CCI.Comments.Abuse.emailFromName || "Crain Communications Inc";
+                            		var emailTo = CCI.Comments.Abuse.emailTo || "kphill@crain.com";
+                            		var emailSubject = CCI.Comments.Abuse.emailSubject || "Comment Abuse Report Notification";
+                            		var emailObjectClass = CCI.Comments.Abuse.emailObjectClass || "";
+                            		var errorReturnLink = CCI.Comments.Abuse.errorReturnLink || "/";
+                            		var errorReturnText = CCI.Comments.Abuse.errorReturnText || "There was a problem with your request. Please try again.";
+                            		
+                            		var commentArr = $(".cci-comments-item");
+                            		
+                            		$(commentArr).each(function() {
+                            				
+                            			var commentID = this.id.replace(/comment-/,"");
+                            			var commentDate = $(this).find(".timestamp-iso").html();
+                            			var commentAuthor = $(this).find(".comment-author").html();
+                            			var commentText = $(this).find(".comment-text").html();
+                            			var articleLink = $(this).find(".story-url").html();
+                            			var commentURL = "http://" + location.hostname + articleLink + '#comment-' + commentID;
+                            			var redirectURL = articleLink + '?abusiveItemId=' + commentID + '#comment-' + commentID;		
+                            			var formHTML = '<form method="post" action="/apps/XSendMail.dll">\
+                                            <input type="hidden" name="validatekey" value="'+validateKey+'">\
+                                            <input type="hidden" name="from" value="'+emailFrom+'">\
+                                            <input type="hidden" name="fromname" value="'+emailFromName+'">\
+                                            <input type="hidden" name="REDIRECT_URL" value="' + redirectURL +'">\
+                                            <input type="hidden" name="Return_link" value="'+errorReturnLink+'">\
+                                            <input type="hidden" name="Return_text" value="'+errorReturnText+'">\
+                                            <input type="hidden" name="objectclass" value="'+emailObjectClass+'">\
+                                            <input type="hidden" name="SUBJECT" value="'+emailSubject+'">\
+                                            <input type="hidden" name="TO" value="'+emailTo+'">\
+                                            <div><p>This comment is ... \
+                                            	<select name="cci-comments-abuse-type" id="cci-comments-abuse-type">\
+                                            		<option value="other">- choose one -</option>\
+                                            		<option value="advertising or spam">advertising or spam</option>\
+                                            		<option value="obscenity or vulgarity">obscene or vulgar</option>\
+                                            		<option value="hate speech">hate speech</option>\
+                                            		<option value="personal attack">a personal attack</option>\
+                                            		<option value="plagiarism or copyright">plagiarism or a violation of copyright</option>\
+                                            		<option value="other">other</option>\
+                                            	</select></p>\
+                                            	<input type="hidden" name="reportedByUser" value="'+currentUser+'" />\
+                                            	<p>Brief Message: <small>(optional)</small></p>\
+                                            	<p><textarea name="cci-comments-abuse-message" id="cci-comments-abuse-message"></textarea></p>\
+                                            	<input type="hidden" name="comment_date" value="'+commentDate+'" />\
+                                            	<input type="hidden" name="comment_URL" value="'+commentURL+'" />\
+                                            	<input type="hidden" name="comment_author" value="'+commentAuthor+'" />\
+                                            	<input type="hidden" name="comment_text" value="'+encodeURIComponent(commentText)+'" />\
+                                            	<p><input type="submit" value="Send Report" /></p>\
+                                            	</span>\
+                                            </div>\
+                                            </form>';
+                                		
+                                        $("#abuse-" + commentID).html(formHTML);
+                                    });
+                                
+                            		var abuseToggleArr = $(".abuse-toggle");
+                            		
+                            		$(abuseToggleArr).each(function() {
+                            			var commentID = this.id.replace(/abuse-toggle-/,"");
+                            		
+                            			$(this).click(function(e) {
+                            				e.preventDefault();
+                            				$("#abuse-" + commentID).toggle();
+                            			});
+                            		});	
+
+                                }
+                                
+//Run the function
+CCI.Comments.buildAbuseItems();

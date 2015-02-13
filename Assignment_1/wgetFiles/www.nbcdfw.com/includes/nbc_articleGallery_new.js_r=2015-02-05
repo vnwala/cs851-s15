@@ -1,0 +1,2292 @@
+/***********************
+* Alex Tarampi
+* 1/19/2015
+* Ticket #: null out the promoObject so it doesnt get added to every other gallery
+* init: function (ele, galleryID, "URL", galleryTitle, autoLoadGallery, pageType, adVars, vibrant)
+* usage: pg.init("#photoGallery1", 203801991, "URL", "Some Gallery Title", false/true, "landing/Article/A2", "[code]", false/true);
+* Note:  interstitial was turned off globally pg.interstialOnOff = "OFF".  if brought back, know that blog galleries in the A1 position will be affected.  Test thoroughly .
+
+* adRefresh: function (el) { Simply refreshes the GPT ad position (300x250 in the gallery's case)
+* autoPlayer: function (event) { Causes the gallery to auto advance.  Requires pg.autoPlay = false to start
+* doEndCard: function () { Creates and appends the endcard using the endcard markup
+* doFullImageAttach: function (index) { Attaches the full sized image into the viewport
+* doInterstitial: function () { Just builds the interstitial markup
+* doInterstitialTracker: function (evt, index) { Keeps track of when to show/hide the interstitial
+* doReplay: function () { Resets the view position of each image in the viewport and thumbnails
+* doSetup: function () { Does all of the link and button bindings
+* doThumbnailClick: function (el) { Does the action of clicking a thumbnail image
+* doThumbnailSlider: function (el) { Makes the thumbnail tray go left or right depending on direction clicked
+* doUnSetup: function () { Resets the binding of links and buttons
+* doViewPortSlider: function (ele) { Slides the viewport main photo left/right
+* endCardCountdown: function () { Countdown to the next gallery and/or video
+* endGallery: function () { Ends the gallery, completely. Unbinding, resetting variables and in the A1 position it re-inits
+* getPhotoSize: function (src, newWidth) { A method I wrote to create an object of a required size of photo(s); Returns an object: obj({w, h, "origImg", "newImg"})
+* init: function (ele, galleryID, galleryURL, galleryTitle, autoLoadGallery, pageType, adVars, vibrant) { Yep...sets everything up. (ele, galleryID, "URL", galleryTitle, autoLoadGallery(BOOL), pageType, adVars(GPT doesn't require this), vibrant(BOOL, for Vibrant ad code))
+* loadPhotos: function (ssid, ssTitle) { Pulls the photo JSON data from the handler
+* output: function () { A method I wrote to show some data on the screen, if necessary  Doesn't show on PROD
+* setMeta: function (index) {  Sets the meta information when viewing a photo (Credit, Caption, etc)
+* 
+*/
+pg = {};
+pg.adRefreshRate = 1;
+pg.adVars = "";
+pg.adVarsMain = "";
+pg.ap = "";
+pg.apWasOn = "";
+pg.autoPlay = false;
+pg.autoPlaying = false;
+pg.autoPlayTime = 8000;
+pg.currentlyInViewIndex = 0;
+pg.endCardMarkup = "";
+pg.endCardTimeout = null;
+pg.galleryCount = 0;
+pg.galleryLanguage = "";
+pg.galleryMetadata = null;
+pg.galleryStarted = false;
+pg.galleryTitle = "";
+pg.galleryTitle_main = "";
+pg.imagesLoaded = false;
+pg.interstialActive = false;
+pg.interstialRate = "";
+pg.interstialOnOff = "OFF";
+pg.interstialStatus = false;
+pg.interstitialTimer = null;
+pg.isArticleScroll = false;
+pg.isA2 = false;
+pg.isArticle = false;
+pg.isEndCard = false;
+pg.isLanding = false;
+pg.isPreRollOff = false;
+pg.isVibrantOff = false;
+pg.isSponsored = false;
+pg.isSensitive = false;
+pg.keepPlaying = false;
+pg.maxSize = 953;
+pg.origContainer = "";
+pg.origContainer_main = "";
+pg.pgSlidePosition = 1;
+pg.pgThumbnailsPerSlide = 6;
+pg.photoCount = 0;
+pg.photoHeight = 357;
+pg.photoTracker = 0;
+pg.photoWidth = 634;
+pg.preRollCount = "";
+pg.preRollSelection = null;
+pg.preRollSelection_Main = null;
+pg.promoObj = null;
+pg.randomVideoNumber = null;
+pg.recircDataLoaded = false;
+pg.recircObj = null;
+pg.setDomStructure = "";
+pg.setDomStructureA1 = "";
+pg.setRightFlyout = "";
+pg.showHasEnded = false;
+pg.showVibrant = false;
+pg.showVibrantCount = 3;
+pg.showVibrantCounter = 1;
+pg.slideshowID = "";
+pg.slideshowID_main = "";
+pg.slideshowURL = "";
+pg.slideshowURL_main = "";
+pg.thumbnailSlideSpeed = "500";
+pg.thumbnailSliderCount = 1;
+pg.thumbnailViewPortSize = null;
+pg.totalNumOfElements = "";
+pg.transitionType = "ease";
+pg.hasFlash = false;
+pg.embed = false;
+
+try {
+  var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+  if(fo) pg.hasFlash = true;
+}catch(e){
+  if(navigator.mimeTypes ["application/x-shockwave-flash"] != undefined) pg.hasFlash = true;
+}
+///////// end var initialization
+
+pg.adPreloadVideo = function () {};
+pg.adRefresh = function (el) {
+    nbcgptengine.slotRefresh(el);
+};
+
+if (!gigya_enabled) {
+    gigya_enabled = false;
+}
+pg.autoPlayer = function (event) {
+    if (!pg.autoPlay) {
+
+        $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"pauseIcon\">||</div> Pause Gallery").removeClass("paused").addClass("playing");
+
+        if (pg.currentlyInViewIndex > 0 && !pg.interstialStatus) {
+            //skips to the next of currently viewing.  might want this.
+            //$(pg.origContainer + " .goRight").click();
+        };
+
+        pg.ap = setInterval(function autoPlayCallback() {
+            pg.doViewPortSlider($(pg.origContainer + " .goRight"));
+            pg.endCardCountdown();
+        }, pg.autoPlayTime);
+
+
+        pg.autoPlay = true;
+        pg.autoPlaying = true;
+        $(pg.origContainer + " .pg_article_footer_tools .pg_article_counts").css({
+            "width": "248px"
+        });
+        $(pg.origContainer + " .pg_article_footer_tools .pg_article_autoplay").css({
+            "width": "105px"
+        });
+        $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"pauseIcon\">||</div> Pause Gallery").removeClass("paused").addClass("playing");
+    } else {
+        pg.autoPlay = false;
+        pg.autoPlaying = false;
+        $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"playIcon\"></div> Play Gallery").removeClass("playing").addClass("paused");
+        $(pg.origContainer + " .pg_article_footer_tools .pg_article_counts").css({
+            "width": "255px"
+        });
+        $(pg.origContainer + " .pg_article_footer_tools .pg_article_autoplay").css({
+            "width": "100px"
+        });
+        clearInterval(pg.ap);
+        pg.ap = "";
+    };
+};
+pg.doA1Gallery = function () {};
+pg.doA2Gallery = function () {};
+pg.doEndCard = function () {
+    if ((pg.imagesLoaded) || (pg.currentlyInViewIndex == (parseInt(pg.galleryMetadata.totalImages) - 1) || pg.currentlyInViewIndex == pg.galleryMetadata.totalImages) && $(pg.origContainer + " .pg_article_viewport ul li div.endCard").length == 0) {
+
+        $(pg.origContainer + " .endCard a").click(function () {
+            window.location = $(this).attr("href");
+        });
+
+        pg.showHasEnded = true;
+        pg.imagesLoaded = true;
+
+        if (pg.currentlyInViewIndex == parseInt(pg.galleryMetadata.totalImages)) {
+            pg.photoTracker = 0;
+        };
+
+        $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul").append("<li style=\"height: 357px; width: 634px\" data-index=\"" + parseInt(pg.galleryMetadata.totalImages) + "\">" + pg.endCardMarkup + "</li>");
+
+        $(pg.origContainer + " .endCardHeader .endCardGalleryReplay").click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            pg.doReplay();
+            return false;
+        });
+
+        $(document).delegate(pg.origContainer + " .endCardHeader .endCardGalleryReplay", "click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            pg.doReplay();
+            if (!pg.autoPlay) {
+                doOmnitureTracker(e, 44);
+            }
+            return false;
+        });
+
+
+        currentId = pg.slideshowID;
+        currentSocialUrl = pg.slideshowURL;
+        currentSocialTitle = pg.galleryTitle;
+        escapeQuotes = currentSocialTitle.replace(/\"/g, "&quot;");
+        encodedSocialTitle = escapeQuotes.replace(/\'/g, "&rsquo;");
+        currentSummary = "";
+        escapeQuotes = currentSummary.replace(/\"/g, "&quot;");
+        var encodedCurrentSummary = escapeQuotes.replace(/\'/g, "&rsquo;");
+
+        if (nbc.domain == "www.nbcbayarea.com") {
+            var twitterAccount = "nbcbayarea";
+        } else if (nbc.domain == "www.nbcchicago.com") {
+            var twitterAccount = "nbcchicago";
+        } else if (nbc.domain == "www.nbcconnecticut.com") {
+            var twitterAccount = "NBCConnecticut";
+        } else if (nbc.domain == "www.nbcdfw.com") {
+            var twitterAccount = "NBCDFW";
+        } else if (nbc.domain == "www.nbclosangeles.com") {
+            var twitterAccount = "NBCLA";
+        } else if (nbc.domain == "www.nbcnewyork.com") {
+            var twitterAccount = "NBCNewYork";
+        } else if (nbc.domain == "www.nbcsandiego.com") {
+            var twitterAccount = "nbcsandiego";
+        } else if (nbc.domain == "www.nbcwashington.com") {
+            var twitterAccount = "nbcwashington";
+        } else if (nbc.domain == "www.nbcphiladelphia.com") {
+            var twitterAccount = "NBCPhiladelphia";
+        } else if (nbc.domain == "www.nbcmiami.com") {
+            var twitterAccount = "nbc6";
+        } else if (nbc.domain == "www.necn.com") {
+            var twitterAccount = "necn";
+        };
+
+        if (nbc.subsection == "sounddiego") {
+            var twitterAccount = "SoundDiego";
+        };
+
+        encodeSrcStumbleUrl = encodeURI(currentSocialUrl);
+        if ($(".gallery_landing_share .featureHashTag").length) {
+            var getTwitterHashTag = $(".gallery_landing_share .featureHashTag").text();
+        } else {
+            var getTwitterHashTag = "";
+        };
+        if (gigya_enabled == true) {
+            var ua = new gigya.socialize.UserAction();
+            var activityContext = new Object();
+            activityContext["ACTION_CONTEXT"] = "photo_gallery";
+            activityContext["ACTION_CONTENT_ID"] = currentId;
+            activityContext["ACTION_CONTENT_TITLE"] = encodedSocialTitle;
+            activityContext["ACTION_CONTENT_LINK"] = currentSocialUrl;
+            activityContext["ACTION_CONTENT_DESCRIPTION"] = encodedCurrentSummary;
+            activityContext["ACTION_ACTIVITY_FEED_ID"] = "";
+            activityContext["USER_ACTION"] = ua;
+
+            ua.setLinkBack(currentSocialUrl);
+            ua.setTitle(encodedSocialTitle);
+            // Define Share Bar plugin's Parameters
+            var twitterParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "twitter-tweet",
+                    via: twitterAccount,
+                    defaultText: encodedSocialTitle + getTwitterHashTag,
+                    countURL: currentSocialUrl
+                }],
+                containerID: 'tweetBtn'
+            };
+            var facebookParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "facebook-like",
+                    tooltip: "Recommend this on Facebook",
+                    action: "recommend",
+                    width: "160",
+                    font: "arial"
+                }],
+                containerID: 'facebookBtn'
+            };
+            var googleplusParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "google-plusone",
+                    size: "medium",
+                    annotation: "bubble"
+                }],
+                containerID: 'gplusBtn'
+            };
+            var stumbleParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "stumbleupon"
+                }],
+                containerID: 'stumbleBtn'
+            };
+
+            showShareBar(twitterParams, activityContext);
+            showShareBar(facebookParams, activityContext);
+            showShareBar(googleplusParams, activityContext);
+            //showShareBar(stumbleParams,activityContext);
+        } else {
+            jQuery("#tweetBtn").html("<span class='twitter-share'><a href='http://twitter.com/share' class='twitter-share-button' data-count='horizontal' data-url='" + currentSocialUrl + "' data-via='" + twitterAccount + "' data-text='" + encodedSocialTitle + getTwitterHashTag + "'></a></span>");
+            jQuery("#facebookBtn").html("<div class='fb-like' data-href='" + currentSocialUrl + "' data-send='false' data-layout='button_count' data-width='160' data-show-faces='false' data-action='recommend' data-font='arial'></div>");
+            jQuery("#gplusBtn").html("<g:plusone size='medium'></g:plusone>");
+        }
+
+        var galleryDeDup, findGalleryCounter;
+        findGalleryCounter = 0;
+        jQuery.each(pg.recircObj, function (c, d) {
+
+            if (d.typeID != 11289) {
+
+                var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 180); //returns obj({w, h, "origImg", "newImg"})
+                $(pg.origContainer + " .endCardNextGalleryHero span a").attr("id", d.id);
+                $(pg.origContainer + " .endCardNextGalleryHero span a").attr("href", d.url);
+                $(pg.origContainer + " .endCardNextGalleryHero span img").attr("alt", d.title);
+                $(pg.origContainer + " .endCardNextGalleryHero span").css("background", "url(" + getNewImg.newImg + ") no-repeat scroll -5px top transparent"); //css({"background":" url("+getNewImg.newImg+") center center no-repeat"});
+
+                $(pg.origContainer + " .endCardNextGalleryMeta a").attr("href", d.url);
+                $(pg.origContainer + " .endCardNextGalleryMeta div.playNextTitle").html(d.title);
+
+                galleryDeDup = d.id;
+                findGalleryCounter = findGalleryCounter + 1;
+
+                return false;
+            }
+        });
+
+
+        var dcount = 1;
+
+        jQuery.each(pg.recircObj, function (c, d) {
+            if (d.id != galleryDeDup) {
+                if (d.typeID == "10839") { //a gallery
+                    showGalleryMediaIcon = '<img alt="Gallery icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+
+                    var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 100); //returns obj({w, h, "origImg", "newImg"})
+                    $(pg.origContainer + " .endCardFooter ul").append("<li><a name=\"&lpos=bottomrecirc" + (c + 1) + "&lid=" + d.title + "\" href=\"" + d.url + "\" style=\"overflow: hidden; background: url(" + getNewImg.newImg + ") center center no-repeat; background-size: cover\">" + showGalleryMediaIcon + "</a><div>" + d.title + "</div></li>");
+                    dcount = dcount + 1;
+                } else {
+                    showVideoMediaIcon = '<img alt="Video icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+                    if (findGalleryCounter != 1) {
+                        $(pg.origContainer + " .endCardCountdownMeta .mediaTypeNext").text("video");
+                        var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 180); //returns obj({w, h, "origImg", "newImg"})
+                        $(pg.origContainer + " .endCardNextGalleryHero span a").attr("id", d.id);
+                        $(pg.origContainer + " .endCardNextGalleryHero span a").attr("href", d.url);
+                        $(pg.origContainer + " .endCardNextGalleryHero span img").attr("alt", d.title);
+                        $(pg.origContainer + " .endCardNextGalleryHero span img").attr("src", getNewImg.newImg);
+
+                        $(pg.origContainer + " .endCardNextGalleryMeta a").attr("href", d.url);
+                        $(pg.origContainer + " .endCardNextGalleryMeta div.playNextTitle").html(d.title);
+                    }
+                    var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 100); //returns obj({w, h, "origImg", "newImg"})
+                    $(pg.origContainer + " .endCardFooter ul").append("<li><a name=\"&lpos=bottomrecirc" + (c + 1) + "&lid=" + d.title + "\" href=\"" + d.url + "\" style=\"overflow: hidden; background: url(" + getNewImg.newImg + ") center center no-repeat; background-size: cover\">" + showVideoMediaIcon + "</a><div>" + d.title + "</div></li>");
+                    dcount = dcount + 1;
+                }
+            }
+        });
+
+    } else {}
+
+    $(pg.origContainer + " .endCard a").each(function (a, b) {
+
+        $(this).attr("onclick", "window.location='" + $(this).attr("href") + "'");
+
+    });
+
+
+    $(pg.origContainer + " .endCardNextGallery .endCardNextGalleryMeta a").click(function () {
+        window.location = $(pg.origContainer + " .endCardNextGallery .endCardNextGalleryMeta a").attr("href");
+        $(pg.origContainer + " .endCardNextGallery .endCardCountdown").text("0").removeClass("endCardCountdown");
+        clearInterval(pg.endCardTimeout);
+        return false;
+    });
+
+
+};
+pg.doFullImageAttach = function (index) {
+    var loadedImgs = 0;
+    $(pg.origContainer + " .pg_article_viewport ul li").each(function (a, b) {
+        if ($(this).attr("data-index") != "") {
+            loadedImgs = parseInt($(this).attr("data-index"));
+        };
+    });
+    if (loadedImgs != 0) {
+        loadedImgs = loadedImgs + 1;
+    };
+
+    if (index >= loadedImgs) {
+        var photoAttachPosition = true;
+    } else if (pg.photoCount == 4) {
+        var photoAttachPosition = true;
+    } else {
+        var photoAttachPosition = false;
+    };
+
+
+    if (photoAttachPosition && !pg.imagesLoaded && !pg.showHasEnded) {
+        var nextIndexLoadStart = loadedImgs;
+        var nextIndexLoadEnd = nextIndexLoadStart + 5;
+
+        for (var newPhotoIndex = (nextIndexLoadStart); newPhotoIndex <= nextIndexLoadEnd; newPhotoIndex++) {
+            var thisPhoto = $(pg.origContainer + " a.galleryThumb:eq(" + (newPhotoIndex) + ")");
+            var photoUrl = $(thisPhoto).attr("data-url");
+
+            if (typeof (photoUrl) != "undefined" && photoUrl != "") {
+                $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul").append("<li style=\"height: 357px; width: 634px\" data-index=\"" + newPhotoIndex + "\"><img style=\"background: url(" + $(thisPhoto).attr("data-url") + ") no-repeat center center; background-size: contain\" width=\"634\" height=\"357\" src=\"http://media.nbcbayarea.com/designimages/transparent.gif\"></li>");
+            };
+        };
+        pg.photoCount = 1;
+    };
+
+    if (nextIndexLoadEnd >= parseInt((pg.totalNumOfElements - 1))) {
+        pg.imagesLoaded = true;
+    };
+
+
+};
+pg.doInterstitial = function () {
+    jQuery.each(pg.recircObj, function (c, d) {
+        var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 234); //returns obj({w, h, "origImg", "newImg"})
+
+        if (c == 0) {
+            var setSpacer = " margin-right: 17px;";
+        } else {
+            setSpacer = " margin-right: 0px;";
+        };
+        var titleChomp = d.title;
+
+        if (titleChomp.length >= 47) {
+            titleChomp = titleChomp.replace(titleChomp.substring(47), "...");
+        };
+
+        if (c <= 1) {
+            $(pg.origContainer + " .interstitial .interstContent").append("<div onclick=\"window.location = '" + d.url + "'\" style=\"" + setSpacer + "\"><a href=\"" + d.url + "\" style=\"background: url(" + getNewImg.newImg + ") no-repeat center center; background-size: cover\"></a><div>" + d.title + "</div></div>");
+        };
+    });
+};
+pg.doInterstitialTracker = function (evt, index) {
+    var thisPhoto = $(pg.origContainer + " .pg_article_thumbnails_container a").eq(index);
+    pg.photoTracker = pg.photoTracker + 1;
+
+    var indexHolder = index;
+
+    if (pg.isEndCard || pg.interstialActive) {
+        var showTheInter = false;
+    };
+
+    if (index < parseInt(pg.galleryMetadata.totalImages) && pg.photoTracker >= pg.interstialRate) {
+        if (pg.interstialOnOff == "OFF") {
+            var showTheInter = false;
+        } else {
+            var showTheInter = true;
+        }
+        pg.photoTracker = 0;
+    } else {
+        var showTheInter = false;
+    };
+
+    if (!showTheInter) {
+        if (!pg.isEndCard) {
+            $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+                "visibility": "visible"
+            });
+        };
+        clearInterval(pg.interstitialTimer);
+        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+
+        pg.interstialStatus = false;
+        $(pg.origContainer + " .interstitial").removeAttr("data-name").hide();
+
+        if (pg.autoPlaying) {
+            doOmnitureTracker(evt, 43);
+        } else {
+            doOmnitureTracker(evt, 44);
+        };
+    } else {
+
+        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").addClass("forceHideMeta");
+        $(pg.origContainer + " .pg_AdSpot").addClass("adPositionMaint");
+        if (pg.interstitialTimer) {
+            $(pg.origContainer + " .interstitial").hide();
+        }
+        pg.interstialStatus = true;
+        $(pg.origContainer + " .interstitial").attr("data-name", " | Interstitial").show();
+
+        pg.interstialStatus = false;
+
+        pg.apWasOn = $(pg.origContainer + " .pg_article_autoplay button").attr("class");
+        if (pg.apWasOn == "playing") {
+            $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"pauseIcon\">||</div> Pause Gallery").css({
+                "width": "105px"
+            }).removeClass("paused").addClass("playing");
+
+            pg.autoPlay = false;
+            clearInterval(pg.ap);
+        };
+
+
+        pg.interstitialTimer = setTimeout(function afterInterstitial() {
+            $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+            $(pg.origContainer + " .interstitial").removeAttr("data-name").hide();
+
+            $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+
+            pg.currentlyInViewIndex = indexHolder;
+            pg.photoTracker = 0;
+
+            if (pg.apWasOn == "playing") {
+                pg.autoPlayer();
+            }
+            clearTimeout(pg.interstitialTimer);
+        }, pg.autoPlayTime);
+
+
+        if (pg.autoPlaying) {
+            doOmnitureTracker(evt, 43);
+        } else {
+            doOmnitureTracker(evt, 44);
+        };
+
+
+    };
+
+};
+pg.doReplay = function () {
+
+    pg.currentlyInViewIndex = 0;
+    pg.pgSlidePosition = 1;
+
+    pg.setMeta(pg.currentlyInViewIndex);
+    pg.galleryStarted = true;
+    pg.isEndCard = false;
+
+
+    if (pg.galleryMetadata.sponsored) {
+        $(pg.origContainer + " .pgSponsored").css({
+            "z-index": "9"
+        }).show();
+    }
+    $(pg.origContainer + " .pg_article_thumbnails_container .galleryThumb").eq(0).addClass("pg_article_thumbnails_current").click();
+    $(pg.origContainer + " .pg_article_viewport").animate({
+        left: "0px"
+    });
+    $(pg.origContainer + " .pg_article_thumbnails_container").animate({
+        left: "0px"
+    });
+
+
+    if (!pg.autoPlay) {
+        pg.autoPlay = false;
+        pg.autoPlaying = false;
+        $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"playIcon\"></div> Play Gallery").removeClass("playing").addClass("paused");
+    } else {
+        if ((nbc.market !== "nbcsandiego") && (nbc.market !== "nbcphiladelphia")) {
+
+            $(pg.origContainer + " .pg_article_autoplay button").click();
+            pg.autoPlaying = true;
+        }
+    }
+
+    $(pg.origContainer + " .pg_article_footer_tools .pg_article_counts").css({
+        "width": "255px"
+    });
+    $(pg.origContainer + " .pg_article_footer_tools .pg_article_autoplay").css({
+        "width": "100px"
+    });
+    clearInterval(pg.ap);
+    pg.ap = "";
+
+    $(pg.origContainer + " .pg_article_counts_current").text("1 ");
+
+
+    pg.autoPlay = false;
+    pg.autoPlayer();
+
+    return false;
+};
+pg.doSetup = function () {
+    jQuery(pg.origContainer + ' button.pg_article_share_button').click(function (e) {
+        e.preventDefault();
+        jQuery(pg.origContainer + ' .gallery_landing_share').toggleClass("show");
+        nbcu.linkTrackVars = "prop52,prop53,prop54,prop55";
+        nbcu.prop52 = nbcu.pageName;
+        nbcu.prop53 = "sharebuttongallery";
+        nbcu.prop54 = document.title.replace(/^\s+|\n+|\t+|\s+$/g, '') + "|sharebuttongallery";
+        nbcu.prop55 = "gallery";
+
+
+        if (nbc.env != "" && typeof console == "object") {
+            console.log("nbcu.prop52 | " + nbcu.prop52 + "\n");
+            console.log("nbcu.prop53 | " + nbcu.prop53 + "\n");
+            console.log("nbcu.prop54 | " + nbcu.prop54 + "\n");
+            console.log("nbcu.prop55 | " + nbcu.prop55 + "\n");
+        }
+        nbcu.tl(this, 'o', 'sharebutton');
+
+        if (nbc.env != "" && typeof console == "object") {
+            console.log("nbcu.tl call COMPLETE!");
+        }
+        jQuery.ajax({ url: 'http://platform.twitter.com/widgets.js', dataType: 'script', cache:true});
+        FB.XFBML.parse();
+        gapi.plusone.go();
+    });
+
+
+    $(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial").mouseenter(function () {
+        if (!pg.isEndCard) {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").show();
+        } else {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").hide();
+        }
+        if (($(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").length == 0 || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).length == 0) || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).length == 0) {
+            if (($("#pg_lightbox").length != 0 || pg.isLanding) && $(".prerollVideoClass object").length != 1) {
+                $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+                    "visibility": "visible"
+                });
+            }
+            if (pg.currentlyInViewIndex === 0) {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "hidden"
+                });
+            } else {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "visible"
+                });
+            }
+        }
+    });
+
+    $(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial").mouseenter(function () {
+        if (!pg.isEndCard) {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").show();
+        } else {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").hide();
+        }
+        if (($(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).length == 0 || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").length == 0) || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).length == 0) {
+            if (($("#pg_lightbox").length != 0 || pg.isLanding) && $(".prerollVideoClass object").length != 1) {
+                $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+                    "visibility": "visible"
+                });
+            }
+            if (pg.currentlyInViewIndex === 0) {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "hidden"
+                });
+            } else {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "visible"
+                });
+            }
+        }
+    }).mouseleave(function () {
+        /*$(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+            "visibility": "visible"
+        });*/
+    });
+
+
+
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseenter", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!pg.isEndCard) {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").show();
+        } else {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").hide();
+        }
+        if ($(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").length == 0 || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).length == 0) {
+            if (($("#pg_lightbox").length != 0 || pg.isLanding) && $(".prerollVideoClass object").length != 1) {
+                $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+                    "visibility": "visible"
+                });
+            }
+            if (pg.currentlyInViewIndex === 0) {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "hidden"
+                });
+            } else {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "visible"
+                });
+            }
+        }
+    });
+
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseenter", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!pg.isEndCard) {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").show();
+        } else {
+            $(pg.origContainer + " .pg_article a.goLeft, " + pg.origContainer + " .pg_article a.goRight").hide();
+        }
+        if ($(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").length == 0 || $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).length == 0) {
+            if (($("#pg_lightbox").length != 0 || pg.isLanding) && $(".prerollVideoClass object").length != 1) {
+                $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+                    "visibility": "visible"
+                });
+            }
+            if (pg.currentlyInViewIndex === 0) {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "hidden"
+                });
+            } else {
+                $(pg.origContainer + " .goLeft").css({
+                    "visibility": "visible"
+                });
+            }
+        }
+    });
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseleave", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        /*$(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+            "visibility": "visible"
+        });*/
+    });
+
+
+
+    $(pg.origContainer + " .pg_article_thumbnails_container a, " + pg.origContainer + " .pg_article_viewport_container a, " + pg.origContainer + " .pg_article button, " + pg.origContainer + " .pg_article .pg_article_header button").click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var thisClickedItem = $(this).attr("class");
+        if (thisClickedItem == "thumbsLeft" || thisClickedItem == "thumbsRight") {
+
+
+            if (pg.interstialStatus && !pg.isEndCard) {
+                pg.doThumbnailClick($(pg.origContainer + " .pg_article_thumbnails_container a").eq(pg.currentlyInViewIndex));
+                $(pg.origContainer + " .interstitial").hide();
+                pg.interstialStatus = false;
+                pg.photoTracker = 0;
+                if (pg.apWasOn == "playing") {
+                    pg.autoPlay = false;
+                    pg.autoPlayer();
+                }
+
+            } else {
+                pg.doThumbnailSlider($(this));
+                pg.autoPlay = true;
+                pg.autoPlayer();
+
+            }
+
+            var thumbnailViewPortCount = Math.ceil((pg.totalNumOfElements) / pg.pgThumbnailsPerSlide); //total slides left and right
+            var thumbnailSliderPosition = Math.ceil((pg.currentlyInViewIndex + 1) / pg.pgThumbnailsPerSlide);
+
+            if ((pg.pgSlidePosition != 1 && thisClickedItem == "thumbsLeft")) {}
+
+            if ((pg.pgSlidePosition != thumbnailViewPortCount && thisClickedItem == "thumbsRight")) {}
+
+        }
+
+        if (thisClickedItem == "goLeft" || thisClickedItem == "goRight") {
+            e.stopImmediatePropagation();
+            if (pg.interstialStatus) {}
+            if (pg.interstialStatus && !pg.isEndCard) {
+                pg.doThumbnailClick($(pg.origContainer + " .pg_article_thumbnails_container a").eq(pg.currentlyInViewIndex));
+                $(pg.origContainer + " .interstitial").hide();
+                pg.interstialStatus = false;
+                pg.photoTracker = 0;
+
+                if (pg.apWasOn == "playing") {
+                    pg.autoPlay = false;
+                    pg.autoPlayer();
+                };
+
+            } else {
+                pg.doViewPortSlider($(this));
+                pg.autoPlay = true;
+                pg.autoPlayer();
+
+            }
+
+            if ((pg.currentlyInViewIndex != 0 && thisClickedItem == "goLeft")) {}
+
+            if ((pg.currentlyInViewIndex != pg.galleryMetadata.totalImages && thisClickedItem == "goRight")) {}
+
+            if (pg.isEndCard) {
+                pg.isEndCard = false;
+
+                $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+                    "visibility": "visible"
+                });
+            }
+        }
+        if (thisClickedItem == "galleryThumb") {
+            $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+                "visibility": "visible"
+            });
+
+            if (pg.interstialStatus && !pg.isEndCard) {
+                pg.doThumbnailClick($(pg.origContainer + " .pg_article_thumbnails_container a").eq(pg.currentlyInViewIndex));
+                $(pg.origContainer + " .interstitial").hide();
+                pg.interstialStatus = false;
+                pg.photoTracker = 0;
+
+                if (pg.apWasOn == "playing") {
+                    pg.autoPlay = false;
+                    pg.autoPlayer();
+                }
+
+            } else {
+                pg.doThumbnailClick($(this));
+                pg.autoPlay = true;
+                pg.autoPlayer();
+
+            }
+
+            if (pg.isEndCard) {
+                pg.isEndCard = false;
+
+                $(pg.origContainer + " .pg_article_autoplay button").show();
+            }
+        }
+
+        if (thisClickedItem == "pg_article_share") {
+
+            $(pg.origContainer + " .pg_article_share").click(function () {
+                jQuery(pg.origContainer + ' .gallery_landing_share').toggleClass("show");
+            });
+            nbcu.linkTrackVars = "prop52,prop53,prop54,prop55";
+            nbcu.prop52 = nbcu.pageName;
+            nbcu.prop53 = "sharebuttongallery";
+            nbcu.prop54 = document.title.replace(/^\s+|\n+|\t+|\s+$/g, '') + "|sharebuttongallery";
+            nbcu.prop55 = "gallery";
+
+
+            if (nbc.env != "" && typeof console == "object") {
+                console.log("nbcu.prop52 | " + nbcu.prop52 + "\n");
+                console.log("nbcu.prop53 | " + nbcu.prop53 + "\n");
+                console.log("nbcu.prop54 | " + nbcu.prop54 + "\n");
+                console.log("nbcu.prop55 | " + nbcu.prop55 + "\n");
+            }
+            nbcu.tl(this, 'o', 'sharebutton');
+
+            if (nbc.env != "" && typeof console == "object") {
+                console.log("nbcu.tl call COMPLETE!");
+            }
+
+        }
+        if (thisClickedItem == "paused" || thisClickedItem == "playing" || thisClickedItem == "pg_article_autoplay") {
+
+            pg.autoPlayer();
+
+            nbcu.linkTrackVars = "prop52,prop53,prop54,prop55";
+            nbcu.prop52 = nbcu.pageName;
+            nbcu.prop53 = "playpausegallery";
+            nbcu.prop54 = document.title.replace(/^\s+|\n+|\t+|\s+$/g, '') + "|playpausegallery";
+            nbcu.prop55 = "gallery";
+
+            if (nbc.env != "" && typeof console == "object") {
+                console.log("nbcu.prop52 | " + nbcu.prop52 + "\n");
+                console.log("nbcu.prop53 | " + nbcu.prop53 + "\n");
+                console.log("nbcu.prop54 | " + nbcu.prop54 + "\n");
+                console.log("nbcu.prop55 | " + nbcu.prop55 + "\n");
+            }
+            nbcu.tl(this, 'o', 'playpause');
+
+            if (nbc.env != "" && typeof console == "object") {
+                console.log("nbcu.tl call COMPLETE!");
+            }
+            return false;
+        }
+
+        pg.endCardCountdown();
+
+    });
+
+    document.onkeyup = function (e) {
+        var theKey = 0;
+        e = (window.event) ? event : e;
+        theKey = (e.keyCode) ? e.keyCode : e.charCode;
+
+        if (theKey === 37) {
+            $(pg.origContainer + " .goLeft").click();
+            return false;
+        };
+        if (theKey === 39 && pg.currentlyInViewIndex != pg.galleryMetadata.gallerySize) { //right
+            $(pg.origContainer + " .goRight").click();
+            return false;
+        };
+        if (theKey === 9) { //right
+            return false; //$(pg.origContainer + " .goRight").click();
+        };
+    };
+
+
+};
+pg.doThumbnailClick = function (el) {
+    var thisThumb = $(el);
+    var thisClickedThumbIndex = parseInt($(thisThumb).attr("data-index"));
+
+    if (pg.keepPlaying) {
+        $(pg.origContainer + " .pg_article_autoplay button").click();
+        pg.autoPlay = true;
+    };
+
+    if (thisClickedThumbIndex == 0) {
+        $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul li img").eq(0).css({
+            "background-image": "url(" + $(thisThumb).attr("data-url") + ")"
+        });
+    };
+
+    pg.doFullImageAttach(thisClickedThumbIndex);
+
+    if (thisClickedThumbIndex == parseInt(pg.galleryMetadata.totalImages)) {
+        var t = $(pg.origContainer + " .pg_article_viewport ul li div.endCard").position();
+    } else {
+        var t = $(pg.origContainer + " .pg_article_viewport ul li img").eq(thisClickedThumbIndex).position();
+    };
+
+    pg.currentlyInViewIndex = thisClickedThumbIndex;
+    $(pg.origContainer + " .pg_article_viewport").animate({
+        left: "-" + t.left + "px"
+    });
+
+    pg.setMeta(pg.currentlyInViewIndex);
+    $(pg.origContainer + " .pg_article_counts_current").text((pg.currentlyInViewIndex + 1) + " ");
+    pg.doThumbnailSlider($(el));
+    var e = ({
+        originalEvent: ({}),
+        type: "click",
+        isDefaultPrevented: function C() {
+            return !1
+        },
+        timeStamp: 1375810309015,
+        jQuery164006938477891544825: true,
+        which: 1,
+        wheelDelta: (void 0),
+        view: ({}),
+        toElement: (void 0),
+        target: {},
+        srcElement: (void 0),
+        shiftKey: false,
+        screenY: -424,
+        screenX: 807,
+        relatedTarget: null,
+        relatedNode: (void 0),
+        prevValue: (void 0),
+        pageY: 850,
+        pageX: 1437,
+        offsetY: (void 0),
+        offsetX: (void 0),
+        newValue: (void 0),
+        metaKey: false,
+        layerY: 850,
+        layerX: 1437,
+        keyCode: (void 0),
+        handler: (function (e) {
+            console.log(e);
+        }),
+        fromElement: (void 0),
+        eventPhase: 3,
+        detail: 1,
+        data: null,
+        currentTarget: {
+            jQuery164006938477891544825: 8
+        },
+        ctrlKey: false,
+        clientY: 850,
+        clientX: 1437,
+        charCode: (void 0),
+        cancelable: true,
+        button: 0,
+        bubbles: true,
+        attrName: (void 0),
+        attrChange: (void 0),
+        altKey: false,
+        handleObj: {
+            handler: (function (e) {
+                console.log(e);
+            }),
+            data: null,
+            namespace: "",
+            type: "click",
+            guid: 49
+        }
+    });
+    pg.doInterstitialTracker(e, pg.currentlyInViewIndex);
+};
+pg.doThumbnailSlider = function (el) {
+    var thisClassName = $(el).attr("class");
+    var thumbnailViewPortCount = Math.ceil((pg.totalNumOfElements) / pg.pgThumbnailsPerSlide); //total slides left and right
+    var thumbnailSliderPosition = Math.ceil((pg.currentlyInViewIndex + 1) / pg.pgThumbnailsPerSlide);
+    pg.thumbnailViewPortSize = 552;
+
+
+    firstIn = function () {
+        var getFirstThumb = (pg.pgThumbnailsPerSlide * pg.pgSlidePosition) - (pg.pgThumbnailsPerSlide - 1);
+        getFirstThumb = getFirstThumb - 1; //index
+        pg.doThumbnailClick($(pg.origContainer + " a.galleryThumb:eq(" + getFirstThumb + ")"));
+
+    };
+
+    if (thumbnailSliderPosition < pg.pgSlidePosition) {}
+
+    if (thumbnailSliderPosition < pg.pgSlidePosition && (thisClassName != "thumbsLeft" && thisClassName != "thumbsRight")) {
+        $(pg.origContainer + " .pg_article_thumbnails_container").animate({
+            left: "+=" + pg.thumbnailViewPortSize
+        }, pg.thumbnailSlideSpeed);
+        pg.pgSlidePosition = thumbnailSliderPosition;
+
+    } else if (thumbnailSliderPosition > pg.pgSlidePosition && (thisClassName != "thumbsLeft" && thisClassName != "thumbsRight")) {
+        $(pg.origContainer + " .pg_article_thumbnails_container").animate({
+            left: "-=" + pg.thumbnailViewPortSize
+        }, pg.thumbnailSlideSpeed);
+        pg.pgSlidePosition = thumbnailSliderPosition;
+
+    } else {
+
+        if (thisClassName == "thumbsLeft" && pg.pgSlidePosition > 1) {
+            $(pg.origContainer + " .pg_article_thumbnails_container").animate({
+                left: "+=" + pg.thumbnailViewPortSize
+            }, pg.thumbnailSlideSpeed);
+            pg.pgSlidePosition = pg.pgSlidePosition - 1;
+            firstIn();
+
+        } else if (thisClassName == "thumbsRight" && pg.pgSlidePosition != thumbnailViewPortCount) {
+
+            $(pg.origContainer + " .pg_article_thumbnails_container").animate({
+                left: "-=" + pg.thumbnailViewPortSize
+            }, pg.thumbnailSlideSpeed);
+            pg.pgSlidePosition = pg.pgSlidePosition + 1;
+            firstIn();
+
+
+        };
+    };
+
+};
+pg.doUnSetup = function () {
+    jQuery(pg.origContainer + ' button.pg_article_share_button').unbind("click");
+    $(pg.origContainer + " .pg_article_thumbnails_container a, " + pg.origContainer + " .pg_article_viewport_container a, " + pg.origContainer + " .pg_article button, " + pg.origContainer + " .pg_article .pg_article_header button").unbind("click");
+
+    $(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial").mouseenter(function () {
+        return false;
+    });
+
+    $(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial").mouseenter(function () {
+        return false;
+    }).mouseleave(function () {
+        return false;
+    });
+
+
+
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseenter", function (e) {
+
+    });
+
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseenter", function (e) {
+        return false;
+        return false;
+    });
+    $(document).delegate(pg.origContainer + " .pg_article_viewport, " + pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight, " + pg.origContainer + " .interstitial", "mouseleave", function (e) {
+        return false;
+    });
+
+    $(pg.origContainer + " button.pg_article_share_button, " + pg.origContainer + " a.thumbsRight, " + pg.origContainer + " a.thumbsLeft").unbind("click");
+
+};
+pg.doViewPortSlider = function (ele) {
+    var thisClassName = $(ele).attr("class");
+
+    var ViewPortSize = parseInt($(pg.origContainer + " .pg_article_viewport img:first").width());
+
+
+
+    if (thisClassName == "goRight" && (pg.currentlyInViewIndex < (pg.totalNumOfElements))) {
+
+        pg.currentlyInViewIndex = pg.currentlyInViewIndex + 1;
+        pg.photoCount = pg.photoCount + 1;
+
+        pg.doFullImageAttach(); //fill in main photos
+
+    };
+
+    if (thisClassName == "goLeft" && pg.currentlyInViewIndex > 0) {
+        pg.currentlyInViewIndex = pg.currentlyInViewIndex - 1;
+    };
+
+    if ($(pg.origContainer + " .pg_article_viewport ul li div.endCard").length == 0) {
+        pg.doEndCard();
+    };
+
+
+    if (pg.currentlyInViewIndex == parseInt(pg.galleryMetadata.totalImages)) {
+        var t = $(pg.origContainer + " .pg_article_viewport ul li div.endCard").position();
+
+        clearInterval(pg.ap);
+        pg.ap = "";
+    } else {
+        var t = $(pg.origContainer + " .pg_article_viewport ul li img").eq(pg.currentlyInViewIndex).position();
+    };
+
+    if (t.left >= 0) {
+        $(pg.origContainer + " .pg_article_viewport").animate({
+            left: "-" + t.left + "px"
+        });
+    };
+
+    if (pg.currentlyInViewIndex === 0) {
+        $(pg.origContainer + " .goLeft").css({
+            "visibility": "hidden"
+        });
+    } else if (pg.currentlyInViewIndex > 0 && pg.currentlyInViewIndex < parseInt(pg.galleryMetadata.totalImages)) {
+
+    } else if (pg.currentlyInViewIndex === parseInt(pg.galleryMetadata.totalImages)) {
+        $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+            "visibility": "visible"
+        });
+    };
+
+    pg.doThumbnailSlider(ele);
+    $(pg.origContainer + " .pg_article_counts_current").text((pg.currentlyInViewIndex + 1) + "");
+    pg.setMeta(pg.currentlyInViewIndex);
+    var e = ({
+        originalEvent: ({}),
+        type: "click",
+        isDefaultPrevented: function C() {
+            return !1
+        },
+        timeStamp: 1375810309015,
+        jQuery164006938477891544825: true,
+        which: 1,
+        wheelDelta: (void 0),
+        view: ({}),
+        toElement: (void 0),
+        target: {},
+        srcElement: (void 0),
+        shiftKey: false,
+        screenY: -424,
+        screenX: 807,
+        relatedTarget: null,
+        relatedNode: (void 0),
+        prevValue: (void 0),
+        pageY: 850,
+        pageX: 1437,
+        offsetY: (void 0),
+        offsetX: (void 0),
+        newValue: (void 0),
+        metaKey: false,
+        layerY: 850,
+        layerX: 1437,
+        keyCode: (void 0),
+        handler: (function (e) {
+            console.log(e);
+        }),
+        fromElement: (void 0),
+        eventPhase: 3,
+        detail: 1,
+        data: null,
+        currentTarget: {
+            jQuery164006938477891544825: 8
+        },
+        ctrlKey: false,
+        clientY: 850,
+        clientX: 1437,
+        charCode: (void 0),
+        cancelable: true,
+        button: 0,
+        bubbles: true,
+        attrName: (void 0),
+        attrChange: (void 0),
+        altKey: false,
+        handleObj: {
+            handler: (function (e) {
+                console.log(e);
+            }),
+            data: null,
+            namespace: "",
+            type: "click",
+            guid: 49
+        }
+    });
+    pg.doInterstitialTracker(e, pg.currentlyInViewIndex);
+};
+pg.endCardCountdown = function () {
+    if (pg.currentlyInViewIndex == parseInt(pg.galleryMetadata.totalImages)) {
+
+        pg.isEndCard = true;
+
+        if (pg.galleryMetadata.sponsored) {
+            $(pg.origContainer + " .pgSponsored").css({
+                "z-index": "auto"
+            }).hide();
+        };
+        clearInterval(pg.interstitialTimer);
+        $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+            "visibility": "hidden"
+        });
+
+        $(pg.origContainer + " .interstitial").hide();
+        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+        pg.apWasOn = $(pg.origContainer + " .pg_article_autoplay button").attr("class");
+
+
+        if (pg.apWasOn == "playing") {
+            pg.autoPlay = false;
+            pg.keepPlaying = true;
+            $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"playIcon\"></div> Play Gallery").removeClass("playing").addClass("paused");
+            clearInterval(pg.ap);
+
+        } else {
+            pg.keepPlaying = false;
+        };
+
+        $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+            "visibility": "hidden"
+        });
+
+        var thisEndCardCounterValue = 8;
+        $(pg.origContainer + " .endCardNextGallery .endCardCountdown").text(thisEndCardCounterValue);
+
+
+        pg.endCardTimeout = setInterval(function endCardHandler() {
+            thisEndCardCounterValue = thisEndCardCounterValue - 1;
+            $(pg.origContainer + " .endCardNextGallery .endCardCountdown").text(thisEndCardCounterValue);
+
+            if (thisEndCardCounterValue <= 0) {
+                if (pg.isLanding) {
+                    window.location = $(pg.origContainer + " .endCardNextGallery .endCardNextGalleryMeta a").attr("href");
+                } else {
+                    pg.doReplay();
+
+                    $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+                        "visibility": "visible"
+                    });
+                };
+
+                $(pg.origContainer + " .endCardNextGallery .endCardCountdown").text("0");
+                clearInterval(pg.endCardTimeout);
+                return false;
+            }
+        }, 1000);
+
+    } else {
+        clearInterval(pg.endCardTimeout);
+    };
+
+};
+pg.endGallery = function (scrollQueue) {
+    console.warn("closing");
+    pg.galleryQueue = null;
+    pg.promoObj = null;
+    var idCheck = (pg.isArticleScroll) ? scrollQueue : "";
+    var idCheckDash = (pg.isArticleScroll) ? "-" + scrollQueue : "";
+    window.clearInterval(pg.ap);
+    window.clearTimeout(pg.interstitialTimer);
+    window.clearTimeout(pg.endCardTimeout);
+    $pdk.controller.removeEventListener("OnMediaStart", "afterPreRoll_One", "*");
+    $pdk.controller.removeEventListener("OnMediaEnd", "afterPreRoll_Two", "*");
+    $pdk.controller.removeEventListener("OnMediaError", "afterPreRoll_Three", "*");
+
+
+    $(pg.origContainer + " .interstitial").removeAttr("data-name").hide();
+    $(pg.origContainer + " .pg_article_share").unbind("click", function () {
+        jQuery(pg.origContainer + ' .gallery_landing_share').toggleClass("show");
+    });
+    $(".embedded.gallery .pg_article").remove();
+
+    $(pg.origContainer + " .pg_article").animate({
+        "width": pg.photoWidth + "px"
+    }, "fast").css({
+        "position": "absolute"
+    });
+
+    $(".pgWing, #pg_lightbox").remove();
+
+    $(" .doClose").hide();
+    $(pg.origContainer + " .pg_article, .pg_article .pg_article_viewport_container").css({
+        "position": "relative"
+    });
+
+    $(".pg_article .pg_article_viewport ul li").each(function () {
+        if ($(this).html() == "") {
+            $(this).remove();
+        } else {
+            $(this).css({
+                "width": "634px",
+                "height": "357px"
+            });
+        }
+    });
+
+
+    $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).remove();
+
+    if (pg.preRollSelection == "A2") {
+        $("#leadGallery .pg_article_viewport ul li").find(".prerollVideoClass").parent().remove();
+    };
+    $(pg.origContainer + " .interstitial .interstContent").empty();
+
+    if (pg.isArticle) {
+        console.warn("closing article" + idCheckDash);
+        $(pg.origContainer + " .pg_article_autoplay button").html("View Gallery").removeClass("playing").removeClass("paused");
+        $(pg.origContainer + " .prerollVideoClass").parent().hide();
+        $(pg.origContainer + " .pgWing").animate({
+            "width": "0"
+        }, "fast").remove();
+        $(pg.origContainer + " .pg_article_viewport, .pg_article_thumbnails_container").css({
+            left: "0",
+            "margin-left": "0",
+            "position": "relative"
+        });
+        $(pg.origContainer + " .pg_article").animate({
+            "width": pg.photoWidth + "px"
+        }, "fast").css({
+            "position": "absolute"
+        });
+
+        $(pg.origContainer + ".pgWing, #pg_lightbox").remove();
+
+        $(pg.origContainer + " .pg_article, .pg_article .pg_article_viewport_container").css({
+            "position": "relative"
+        });
+
+        $(pg.origContainer + " .pg_article_counts_current").text("1 ");
+
+        $('.pg_article_header #galleryAnyShare').hide();
+
+        $(pg.origContainer + " .pg_article_viewport,  .pg_article_thumbnails_container").animate({
+            left: "0px"
+        }, "1");
+
+        if (pg.galleryMetadata.sponsored) {
+            $(pg.origContainer + " .pgSponsored").css({
+                "z-index": "9"
+            }).show();
+        };
+
+        if ($("#leadGallery" + idCheckDash).find("#nbc_videoplayer_iframeA1" + idCheckDash).length > 0  || $("#leadGallery" + idCheckDash).find("#nbc_videoplayer_iframeA1" + idCheckDash + pg.randomVideoNumber).length > 0 ) {
+           console.warn("found something");
+        } else {
+            if (!pg.galleryMetadata.preRollOff && pg.hasFlash) {
+                console.warn("adding");
+                $("#leadGallery" + idCheckDash + " .pg_article .pg_article_viewport ul").prepend('<li style="height: 357px; width: 634px; display:none"><div id="nbc_videoplayer_iframeA1' + idCheckDash + '" class="prerollVideoClass"></div></li>');
+            };
+        };
+
+        console.warn("out");
+
+    };
+    pg.currentlyInViewIndex = 0;
+    pg.thumbnailSliderCount = 1;
+    pg.pgSlidePosition = 1;
+    pg.showHasEnded = false;
+    pg.galleryStarted = false;
+    galleryPreRollTest = (typeof pg.isPreRollOff !== "undefined") ? pg.isPreRollOff : "";
+    pg.galleryTitle = "";
+    pg.totalNumOfElements = 0;
+    pg.slideshowID = "";
+    pg.galleryMetadata = null;
+    pg.interstialRate = null;
+    //pg.recircObj = null;
+    pg.slideshowURL = "";
+    pg.photoTracker = 0;
+    pg.autoPlay = true;
+    pg.recircDataLoaded = false;
+    pg.imagesLoaded = false;
+    pg.apWasOn = "";
+    pg.photoCount = 1;
+    pg.galleryCount = 0;
+    pg.autoPlaying = false;
+    if (pg.showVibrant) {
+        pg.showVibrantCounter = 1;
+        //picadService.getPJL().ismOff();
+    };
+
+    if (pg.slideshowID_main != "" && pg.isArticle) {
+        pg.origContainer = ""; //pg.origContainer_main;
+        pg.galleryTitle = ""; //pg.galleryTitle_main;
+        pg.slideshowID = ""; //pg.slideshowID_main;
+    };
+
+    $(pg.origContainer + " .pg_article_autoplay button").text("View Gallery");
+    $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+        "visibility": "hidden"
+    });
+    pg.doUnSetup();
+
+    pg.isA2 = false;
+    pg.isArticle = false;
+    pg.isLanding = false;
+
+
+    if ($("#slideShowGallery").length == 0) {
+
+        if (pg.preRollSelection == "A2") {
+            $("#leadGallery" + idCheckDash).empty().append(pg.setDomStructureA1);
+        } else {
+            $("#leadGallery" + idCheckDash).empty().append(pg.setDomStructureA1);
+        };
+        pg.init("#leadGallery" + idCheckDash, pg.slideshowID_main, pg.slideshowURL_main, pg.galleryTitle_main, false, "article", pg.adVarsMain, true);
+
+        if (pg.preRollSelection == "A2") {} else {
+            if ($(pg.origContainer + "#nbc_videoplayer_iframeA1" + idCheckDash).length == 0 && $(pg.origContainer + "#nbc_videoplayer_iframeA1" + idCheckDash + pg.randomVideoNumber).length == 0) {
+                console.warn("resetting this iframe after you init");
+                if (!pg.galleryMetadata.preRollOff) {
+                    $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul").append("<li style=\"height: 357px; width: 634px; display:none;\"><div id=\"nbc_videoplayer_iframeA1" + idCheckDash + pg.randomVideoNumber + "\" class=\"prerollVideoClass\"></div></li>");
+                };
+            };
+        };
+    };
+    pg.ap = "";
+    $(" .pg_article .pg_article_thumbnails_container a").removeClass("pg_article_thumbnails_current");
+    $("#leadGallery" + idCheckDash + " .goLeft, #leadGallery" + idCheckDash + " .goRight").css({
+        "visibility": "hidden"
+    });
+};
+pg.getPhotoSize = function (src, newWidth) {
+    var newDimensions = {};
+    var imagePath = src.split("*"); //http://media.nbcmiami.com/images/599*399/priss_jipsy__0010.JPG
+
+    var arrImagePath1 = imagePath[0];
+    var arrImagePath2 = imagePath[1];
+
+    if (arrImagePath1 == "") {
+        return false;
+    };
+
+    var valWidth1a = arrImagePath1.split('/');
+    var valWidth1 = valWidth1a[valWidth1a.length - 1];
+
+    var valHeight1a = arrImagePath2.split('/'); //original size
+    var valHeight1 = valHeight1a[0]; //original size
+
+    var valWidth2 = newWidth; //needed width
+    var valHeight2 = Math.round((valHeight1 / valWidth1) * valWidth2); //1200h / 1600w x 400w = 300h;
+
+    newDimensions.w = valWidth2;
+    newDimensions.h = valHeight2;
+    newDimensions.origImg = src;
+    newDimensions.newImg = src.replace(valWidth1 + "*" + valHeight1, newWidth + "*" + valHeight2);
+
+    return newDimensions;
+};
+
+pg.init = function (ele, galleryID, galleryURL, galleryTitle, autoLoadGallery, pageType, adVars, vibrant, articleQueue) {
+    var idDifferentiator = (pageType == "articleScroll") ? articleQueue: "";
+    console.warn("INIT");
+    pg.embed = (ele.match(/pgA2/i)) ? true : false;
+    
+
+    if (vibrant == true) {
+        pg.showVibrant = true;
+    };
+
+    pg.origContainer = ele;
+    pg.galleryTitle = galleryTitle;
+    pg.slideshowID = galleryID;
+    pg.slideshowURL = galleryURL;
+    pg.promoObj = null;
+    pg.loadPhotos(pg.slideshowID, pg.galleryTitle, idDifferentiator, articleQueue);
+    pg.randomVideoNumber = Math.floor(Math.random() * 1000);
+    // If hastag exists at the end of the url, add the content ID after it
+    if (window.url.indexOf("#") !== -1) {
+        window.location = (window.url + pg.slideshowID);
+    };
+    if (pageType == "landing") {
+        pg.galleryLanguage = "Next <span class=\"mediaTypeNext\">gallery</span> ";
+    } else {
+        pg.galleryLanguage = "Gallery will replay ";
+    };
+    
+    
+    pg.endCardMarkup = "<div class=\"endCard\"><div class=\"endCardHeader\"><a href=\"javascript:;\" class=\"endCardGalleryReplay\">Replay Gallery</a><div class=\"endCardGalleryShare\"><div id=\"facebookBtn" + idDifferentiator + "\"></div><div id=\"tweetBtn" + idDifferentiator + "\"></div><div id=\"gplusBtn" + idDifferentiator + "\"></div></div></div><div class=\"endCardContent\"><div class=\"endCardNextGallery\"><div class=\"endCardNextGalleryHero dropshadow \"><span class=\"innerFrame\"><a name=\"&lpos=mainrecirc&lid=\" id=\"\" href=\"#\"></a></span></div><div class=\"endCardNextGalleryMeta\"><h3 class=\"endCardCountdownMeta\">" + pg.galleryLanguage + "in <span class=\"endCardCountdown\"></span> seconds</h3><a href=\"#\">Play Next <div class=\"rightArrow\"></div></a><div class=\"playNextTitle\"></div></div></div></div><div class=\"endCardFooter\"><ul></ul></div>";
+    pg.setDomStructure = "<div class=\"pg_article\"><div class=\"pg_article_header\"><h1></h1><button type=\"button\" class=\"pg_article_share_button\"><img src=\"" + nbc.mediaDomain + "/designimages/share-arrow-light.png\"> <span>Share</span></button><div class=\"gallery_landing_share\"> <span class=\"gallery_landing_share_triangle\"></span><ul class=\"socialTools\"><li id=\"tweetBtnA2\" class=\"twitter\"></li><li id=\"facebookBtnA2\" class=\"fbRecommend\"></li><li id=\"gplusBtnA2\" class=\"gplus\"></li></ul></div><button class=\"doClose\">x</button></div><div class=\"pg_article_viewport_container\"><div class=\"interstitial\"><div class=\"doInterClose\"><a href=\"#\" onclick=\"$('.interstitial').hide();\"></a></div><h3>YOU MAY ALSO BE INTERESTED IN...</h3><div class=\"interstContent\"><ul></ul></div></div><div class=\"pg_article_viewport\"><ul></ul></div><div class=\"pg_article_nav_old\"><a href=\"#\" class=\"goLeft\" name=\"&lpos=previousphoto&lid=" + galleryTitle + "\"><div class=\"leftNav\"></div><div class=\"leftNav_under\"></div></a><a href=\"#\" class=\"goRight\" name=\"&lpos=nextphoto&lid=" + galleryTitle + "\"><div class=\"rightNav\"></div><div class=\"rightNav_under\"></div></a></div><div class=\"pg_article_footer\"><div class=\"pg_article_footer_tools\"><div class=\"pg_article_autoplay\"><button type=\"button\">View Gallery</button></div><div class=\"pg_article_counts\"><span class=\"pg_article_counts_current\">1</span>  of <span class=\"pg_article_counts_total\"></span></div><div class=\"pg_article_credit\">&nbsp;</div><div  class=\"pg_article_caption\"></div></div><div class=\"pg_article_thumbnail_nav\"><a href=\"#\" class=\"thumbsLeft\" name=\"&lpos=filmstripleft&lid=\"><div class=\"leftThumbsNav\"></div></a><div class=\"pg_article_thumbnails\"><div class=\"pg_article_thumbnails_container\" style=\"position: relative !important\"></div></div><a href=\"#\" class=\"thumbsRight\" name=\"&lpos=filmstripright&lid=\"><div class=\"rightThumbsNav\"></div></a></div></div></div></div>";
+    if ((nbc.market !== "nbcsandiego") && (nbc.market !== "nbcphiladelphia")) { // If it's not SD or Philly, display "Play Gallery" button, else display "View Gallery"
+        pg.setDomStructureA1 = "<div class=\"pg_article\"><div class=\"pg_article_header\"><h1></h1><button type=\"button\" class=\"pg_article_share_button\"><img src=\"" + nbc.mediaDomain + "/designimages/share-arrow-light.png\"> <span>Share</span></button><div class=\"gallery_landing_share\"><span class=\"gallery_landing_share_triangle\"></span>  <ul class=\"socialTools\"><li id=\"tweetBtnMain" + idDifferentiator + "\" class=\"twitter\"></li>    <li id=\"facebookBtnMain" + idDifferentiator + "\" class=\"fbRecommend\"></li>    <li id=\"gplusBtnMain" + idDifferentiator + "\" class=\"gplus\"></li>  </ul></div><button class=\"doClose\">x</button></div> <div class=\"pg_article_viewport_container\"><div class=\"interstitial\"><div class=\"doInterClose\"><a href=\"#\" onclick=\"$('.interstitial').hide();\"></a></div><h3>YOU MAY ALSO BE INTERESTED IN...</h3><div class=\"interstContent\"><ul></ul></div></div><div class=\"pg_article_viewport\"><ul></ul></div><div class=\"pg_article_nav_old\"><a href=\"#\" class=\"goLeft\" name=\"&lpos=previousphoto&lid=" + galleryTitle + "\"><div class=\"leftNav\"></div><div class=\"leftNav_under\"></div></a><a href=\"#\" class=\"goRight\" name=\"&lpos=nextphoto&lid=" + galleryTitle + "\"><div class=\"rightNav\"></div><div class=\"rightNav_under\"></div></a></div><div class=\"pg_article_footer\"><div class=\"pg_article_footer_tools\"><div class=\"pg_article_autoplay\">  <button type=\"button\" >Play Gallery</button></div><div class=\"pg_article_counts\">    <span class=\"pg_article_counts_current\">1</span>of    <span class=\"pg_article_counts_total\"></span></div><div class=\"pg_article_credit\">&nbsp;</div><div class=\"pg_article_caption\"></div></div><div class=\"pg_article_thumbnail_nav\"><a href=\"#\" class=\"thumbsLeft\" name=\"&lpos=filmstripleft&lid=\">    <div class=\"leftThumbsNav\"></div></a><div class=\"pg_article_thumbnails\">    <div class=\"pg_article_thumbnails_container\" style=\"position: relative !important\"></div></div><a href=\"#\" class=\"thumbsRight\" name=\"&lpos=filmstripright&lid=\">  <div class=\"rightThumbsNav\"></div></a></div></div>  </div></div>";
+    } else {
+        pg.setDomStructureA1 = "<div class=\"pg_article\"><div class=\"pg_article_header\"><h1></h1><button type=\"button\" class=\"pg_article_share_button\"><img src=\"" + nbc.mediaDomain + "/designimages/share-arrow-light.png\"> <span>Share</span></button><div class=\"gallery_landing_share\"><span class=\"gallery_landing_share_triangle\"></span>  <ul class=\"socialTools\"><li id=\"tweetBtnMain" + idDifferentiator + "\" class=\"twitter\"></li>    <li id=\"facebookBtnMain" + idDifferentiator + "\" class=\"fbRecommend\"></li>    <li id=\"gplusBtnMain" + idDifferentiator + "\" class=\"gplus\"></li>  </ul></div><button class=\"doClose\">x</button></div> <div class=\"pg_article_viewport_container\"><div class=\"interstitial\"><div class=\"doInterClose\"><a href=\"#\" onclick=\"$('.interstitial').hide();\"></a></div><h3>YOU MAY ALSO BE INTERESTED IN...</h3><div class=\"interstContent\"><ul></ul></div></div><div class=\"pg_article_viewport\"><ul></ul></div><div class=\"pg_article_nav_old\"><a href=\"#\" class=\"goLeft\" name=\"&lpos=previousphoto&lid=" + galleryTitle + "\"><div class=\"leftNav\"></div><div class=\"leftNav_under\"></div></a><a href=\"#\" class=\"goRight\" name=\"&lpos=nextphoto&lid=" + galleryTitle + "\"><div class=\"rightNav\"></div><div class=\"rightNav_under\"></div></a></div><div class=\"pg_article_footer\"><div class=\"pg_article_footer_tools\"><div class=\"pg_article_autoplay\">  <button type=\"button\" >View Gallery</button></div><div class=\"pg_article_counts\">    <span class=\"pg_article_counts_current\">1</span>of    <span class=\"pg_article_counts_total\"></span></div><div class=\"pg_article_credit\">&nbsp;</div><div class=\"pg_article_caption\"></div></div><div class=\"pg_article_thumbnail_nav\"><a href=\"#\" class=\"thumbsLeft\" name=\"&lpos=filmstripleft&lid=\">    <div class=\"leftThumbsNav\"></div></a><div class=\"pg_article_thumbnails\">    <div class=\"pg_article_thumbnails_container\" style=\"position: relative !important\"></div></div><a href=\"#\" class=\"thumbsRight\" name=\"&lpos=filmstripright&lid=\">  <div class=\"rightThumbsNav\"></div></a></div></div>  </div></div>";
+    };
+
+    pg.setRightFlyout = "<div class='pgWing'><div class=\"pgSponsored\"><span class=\"SponsoredTopEmbed\">Sponsored Content</span><a href=\"#\" title=\"This content is made possible by our sponsor and does not necessarily reflect the views of NBC.\" class=\"tooltipEmbed\"><span title=\"More\">What's This?</span></a></div><div id=\"interCheck\" class=\"forceHideMeta\"><div class=\"pgCredit\"></div><div class=\"pg_article_caption_gradient\"></div><div class=\"recirc\"><h3>Related Media</h3><ul></ul></div></div><div class=\"pg_AdSpot forceHideMeta\"></div><div id=\"adCompanionBannerGallery\" class=\"ad adPositionMaint\" style=\"background-color: transparent;height:250px;position:absolute;text-align:center;visibility:hidden;width:300px;z-index:999;\"></div></div>";
+
+    if (pageType == "landing") {
+        pg.isLanding = true;
+        pg.isArticle = false;
+        pg.isA2 = false;
+    } else if (pageType == "article") {
+        pg.isLanding = false;
+        pg.isArticle = true;
+        pg.isA2 = false;
+    } else if (pageType == "articleScroll") {
+        pg.isLanding = false;
+        pg.isArticle = true;
+        pg.isA2 = false;
+        pg.isArticleScroll = true;
+    } else if (pageType == "a2") {
+        pg.isLanding = false;
+        pg.isArticle = false;
+        pg.isA2 = true;
+    };
+
+    if (autoLoadGallery && pg.isA2) {
+        $(ele).css({
+            "min-height": "520px",
+            "background-color": "#F6F6F6"
+        }).prepend(pg.setDomStructure);
+    };
+
+    if (pg.isArticle) {
+        pg.origContainer_main = ele;
+        pg.galleryTitle_main = galleryTitle;
+        pg.slideshowID_main = galleryID;
+        pg.slideshowURL_main = galleryURL;
+        pg.adVarsMain = adVars;
+    };
+    pg.adVars = adVars;
+
+    if (pg.showVibrant) {
+        //picadService.getPJL().ismOff();
+    };
+
+    currentId = pg.slideshowID;
+    currentSocialUrl = pg.slideshowURL;
+    currentSocialTitle = pg.galleryTitle;
+    escapeQuotes = currentSocialTitle.replace(/\"/g, "&quot;");
+    encodedSocialTitle = escapeQuotes.replace(/\'/g, "&rsquo;");
+    currentSummary = "";
+    escapeQuotes = currentSummary.replace(/\"/g, "&quot;");
+    var encodedCurrentSummary = escapeQuotes.replace(/\'/g, "&rsquo;");
+
+    if (nbc.domain == "www.nbcbayarea.com") {
+        var twitterAccount = "nbcbayarea";
+    } else if (nbc.domain == "www.nbcchicago.com") {
+        var twitterAccount = "nbcchicago";
+    } else if (nbc.domain == "www.nbcconnecticut.com") {
+        var twitterAccount = "NBCConnecticut";
+    } else if (nbc.domain == "www.nbcdfw.com") {
+        var twitterAccount = "NBCDFW";
+    } else if (nbc.domain == "www.nbclosangeles.com") {
+        var twitterAccount = "NBCLA";
+    } else if (nbc.domain == "www.nbcnewyork.com") {
+        var twitterAccount = "NBCNewYork";
+    } else if (nbc.domain == "www.nbcsandiego.com") {
+        var twitterAccount = "nbcsandiego";
+    } else if (nbc.domain == "www.nbcwashington.com") {
+        var twitterAccount = "nbcwashington";
+    } else if (nbc.domain == "www.nbcphiladelphia.com") {
+        var twitterAccount = "NBCPhiladelphia";
+    } else if (nbc.domain == "www.nbcmiami.com") {
+        var twitterAccount = "nbc6";
+    } else if (nbc.domain == "www.necn.com") {
+        var twitterAccount = "necn";
+    };
+
+    if (nbc.subsection == "sounddiego") {
+        var twitterAccount = "SoundDiego";
+    };
+
+    encodeSrcStumbleUrl = encodeURI(currentSocialUrl);
+    if ($(".gallery_landing_share .featureHashTag").length) {
+        var getTwitterHashTag = $(".gallery_landing_share .featureHashTag").text();
+    } else {
+        var getTwitterHashTag = "";
+    };
+    if (gigya_enabled == true) {
+        var ua = new gigya.socialize.UserAction();
+        var activityContext = new Object();
+        activityContext["ACTION_CONTEXT"] = "photo_gallery";
+        activityContext["ACTION_CONTENT_ID"] = currentId;
+        activityContext["ACTION_CONTENT_TITLE"] = encodedSocialTitle;
+        activityContext["ACTION_CONTENT_LINK"] = currentSocialUrl;
+        activityContext["ACTION_CONTENT_DESCRIPTION"] = encodedCurrentSummary;
+        activityContext["ACTION_ACTIVITY_FEED_ID"] = "";
+        activityContext["USER_ACTION"] = ua;
+
+        ua.setLinkBack(currentSocialUrl);
+        ua.setTitle(encodedSocialTitle);
+    }
+    if (pg.isArticle || pg.isLanding) {
+        if (gigya_enabled == true) {
+            // Define Share Bar plugin's Parameters
+            var twitterParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "twitter-tweet",
+                    via: twitterAccount,
+                    defaultText: encodedSocialTitle + getTwitterHashTag,
+                    countURL: currentSocialUrl
+                }],
+                containerID: 'tweetBtnMain'
+
+            };
+            var facebookParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "facebook-like",
+                    tooltip: "Recommend this on Facebook",
+                    action: "recommend",
+                    width: "160",
+                    font: "arial"
+                }],
+                containerID: 'facebookBtnMain'
+            };
+            var googleplusParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "google-plusone",
+                    size: "medium",
+                    annotation: "bubble"
+                }],
+                containerID: 'gplusBtnMain'
+            };
+            showShareBar(twitterParams, activityContext);
+            showShareBar(facebookParams, activityContext);
+            showShareBar(googleplusParams, activityContext);
+        } else {
+            var tweetID = "#tweetBtnMain";
+            var fbID = "#facebookBtnMain";
+            var gplusID = "#gplusBtnMain";
+            if (pageType == "articleScroll") {
+                tweetID = tweetID + articleQueue;
+                fbID = tweetID + articleQueue;
+                gplusID = gplusID + articleQueue;
+            }
+            jQuery(tweetID).html("<span class='twitter-share'><a href='http://twitter.com/share' class='twitter-share-button' data-count='horizontal' data-url='" + currentSocialUrl + "' data-via='" + twitterAccount + "' data-text='" + encodedSocialTitle + getTwitterHashTag + "'></a></span>");
+            jQuery(fbID).html("<div class='fb-like' data-href='" + currentSocialUrl + "' data-send='false' data-layout='button_count' data-width='160' data-show-faces='false' data-action='recommend' data-font='arial'></div>");
+            jQuery(gplusID).html("<g:plusone size='medium'></g:plusone>");
+        }
+
+    } else { //for A2
+        if (gigya_enabled == true) {
+            var twitterParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "twitter-tweet",
+                    via: twitterAccount,
+                    defaultText: encodedSocialTitle,
+                    countURL: currentSocialUrl
+                }],
+                containerID: 'tweetBtnA2'
+            };
+            var facebookParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "facebook-like",
+                    tooltip: "Recommend this on Facebook",
+                    action: "recommend",
+                    width: "160",
+                    font: "arial"
+                }],
+                containerID: 'facebookBtnA2'
+            };
+            var googleplusParams = {
+                userAction: ua,
+                shareButtons: [{
+                    provider: "google-plusone",
+                    size: "medium",
+                    annotation: "bubble"
+                }],
+                containerID: 'gplusBtnA2'
+            };
+            showShareBar(twitterParams, activityContext);
+            showShareBar(facebookParams, activityContext);
+            showShareBar(googleplusParams, activityContext);
+        } else {
+            jQuery("#tweetBtnA2").html("<span class='twitter-share'><a href='http://twitter.com/share' class='twitter-share-button' data-count='horizontal' data-url='" + currentSocialUrl + "' data-via='" + twitterAccount + "' data-text='" + encodedSocialTitle + getTwitterHashTag + "'></a></span>");
+            jQuery("#facebookBtnA2").html("<div class='fb-like' data-href='" + currentSocialUrl + "' data-send='false' data-layout='button_count' data-width='160' data-show-faces='false' data-action='recommend' data-font='arial'></div>");
+            jQuery("#gplusBtnA2").html("<g:plusone size='medium'></g:plusone>");
+        }
+
+    };
+
+
+    $(document).delegate("#pg_lightbox", "click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        pg.endGallery(articleQueue);
+
+    });
+    $(" .doClose").click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        pg.endGallery(articleQueue);
+
+    });
+
+};
+
+pg.loadPhotos = function (ssid, ssTitle, articleQueue, launchedScrollQueue) {
+    console.warn(launchedScrollQueue);
+    var idDash = (articleQueue !== "") ? "-" + articleQueue: "";
+    var slideshowID = ssid;
+    var slideCounter = 1;
+    $(pg.origContainer + " .pg_article h1").html(ssTitle);
+    jQuery.getJSON("http://" + nbc.env + nbc.domain + "/i/dispatcher/?h=slideshow&metadataMode=y&recirculation=y&path=" + nbc.path + "&contentId=" + slideshowID, function (response) {
+        //vibrant setup
+        pg.isPreRollOff = response.metadata.preRollOff;
+        pg.isVibrantOff = response.metadata.vibrantAdsOff;
+        pg.isSponsored = response.metadata.sponsored;
+        pg.isSensitive = response.metadata.adSensitiveContentFilter;
+
+        jQuery.each(response.gallery, function (a, b) {
+            if (b.imageWidth < pg.photoWidth) {
+                var getNewImg = pg.getPhotoSize(b.imagePath, b.imageWidth);
+            } else {
+                var getNewImg = pg.getPhotoSize(b.imagePath, pg.photoWidth); //returns obj({w, h, "origImg", "newImg"})
+            }
+            var getNewImgThumbs = pg.getPhotoSize(b.imagePath, 84);
+            var getCaption = b.imageCaption;
+            var getCaption = getCaption.replace(/"/g, "&quot;");
+            $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container").append("<a href=\"javascript:void(0);\" class=\"galleryThumb\" style=\"background: white; padding: 1px\" data-url=\"" + getNewImg.newImg + "\" data-index=\"" + b.index + "\" data-caption=\"" + getCaption + "\" data-credit=\"" + b.imageCredit + "\" name=\"&lpos=filmstripthumbnail&lid=\"><span style=\"height: 47px; width: 84px; display:block; overflow: hidden; background: url(" + getNewImgThumbs.newImg + ") top center no-repeat; background-size: cover\"></span></a>");
+
+            if (a <= 5 && $(pg.origContainer + ".pg_article_viewport ul li").length <= 4) {
+                $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul").append("<li style=\"height: 357px; width: 634px\" data-index=\"" + a + "\"><img style=\"background: url(" + getNewImg.newImg + ") no-repeat center center; background-size: contain\" width=\"634\" height=\"357\" src=\"http://media.nbcbayarea.com/designimages/transparent.gif\"></li>");
+            }
+            $(pg.origContainer + " .pg_article_counts_total").text((a) + 2);
+
+            if (slideCounter == 1) {
+                pg.setVibrant();
+                slideCounter++;
+            }
+        });
+
+        pg.recircObj = response.recirculation;
+        if (response.promoImage && pg.isArticle) {
+            pg.promoObj = response.promoImage;
+        };
+
+        pg.galleryMetadata = response.metadata;
+        pg.galleryStarted = true;
+
+
+        pg.totalNumOfElements = (parseInt(pg.galleryMetadata.totalImages)) + 1;
+        if (pg.galleryMetadata.interstitialDisabled) {
+            pg.interstialActive = pg.galleryMetadata.interstitialDisabled;
+        }
+        pg.interstialRate = pg.galleryMetadata.interstitialPosition;
+        if (pg.interstialRate == "") {
+            pg.interstialRate = 10;
+        };
+
+        var thumbsContainerWidth = $(pg.origContainer + " .pg_article_thumbnails_container a").eq(0).outerWidth(true) * ($(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container a").length);
+        thumbsContainerWidth = thumbsContainerWidth + 200;
+
+        $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container").css({
+            "width": thumbsContainerWidth + "px"
+        });
+
+
+        if (pg.isLanding) {
+            $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container").append("<a href=\"javascript:void(0);\" class=\"galleryThumb\" style=\"background: white; padding: 1px\" data-index=\"" + parseInt(pg.galleryMetadata.totalImages) + "\" data-caption=\"\"><span style=\"height: 47px; width: 84px; display:block; overflow: hidden; background: url(" + nbc.mediaDomain + "/designimages/gallery-more-image-84x47-dark.jpg) no-repeat scroll center -4px transparent; background-size: 97px auto\" ></span></a>");
+        } else {
+            $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container").append("<a href=\"javascript:void(0);\" class=\"galleryThumb\" style=\"background: white; padding: 1px\" data-index=\"" + parseInt(pg.galleryMetadata.totalImages) + "\" data-caption=\"\"><span style=\"height: 47px; width: 84px; display:block; overflow: hidden; background: url(" + nbc.mediaDomain + "/designimages/gallery-more-image-84x47-light.jpg) no-repeat scroll center -4px transparent; background-size: 97px auto\" ></span></a>");
+        };
+
+
+        video = function (val) {
+            console.log("idDash is " + idDash);
+            pg.galleryQueue = (typeof launchedScrollQueue === "undefined") ? 0 : launchedScrollQueue;
+            if (val == true) {
+                console.log('passed NO PREROLL');
+                pg.startGallery();
+                $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+
+            } else {
+                console.log('passed WITH PREROLL');
+                if (pg.showVibrant) {
+                    //picadService.getPJL().ismOff();
+                };
+
+                if (pg.isA2 || pg.isArticle) {
+
+                    if (pg.preRollSelection == null && pg.galleryStarted) {
+                        if (pg.isA2 == true) {
+                            pg.preRollSelection = "A2";
+
+                        } else {
+                            pg.preRollSelection = "Article";
+                        }
+                    }
+
+
+
+                    $(pg.origContainer + " .pg_article > *").unbind("click");
+                    $(pg.origContainer + " .doClose, " + pg.origContainer + " .pg_article_viewport ul li:eq(0)").show();
+                    $("#article_0").append('<div id="pg_lightbox" style="overflow: auto;"></div>');
+
+                    $(".pg_article").css({
+                        "position": "relative",
+                        "z-index": "9998"
+                    });
+
+                    $(pg.origContainer + " .pg_article .pg_article_viewport_container").css({
+                        "position": "absolute",
+                        "z-index": "9999"
+                    });
+                    $(pg.origContainer + " .pg_article").append(pg.setRightFlyout).animate({
+                        "width": pg.maxSize + "px"
+                    }, "fast").css({
+                        "position": "absolute",
+                        "z-index": "99999"
+                    });
+
+                }
+
+
+                $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit").addClass("forceHideMeta");
+
+                if (pg.isA2 && $(".embedded.gallery .pg_article").length == 1 && pg.preRollSelection == "A2") {
+                    $(pg.origContainer + " .pg_article .pg_article_viewport_container .pg_article_viewport ul").prepend("<li style=\"height: 357px; width: 634px;\"><div id=\"nbc_videoplayer_iframeA2" + pg.randomVideoNumber + "\" class=\"prerollVideoClass\"></div></li>");
+                }
+                if (pg.isLanding && $(" .pg_article_viewport ul li #nbc_videoplayer_iframeA1").length == 0) {
+                    $(pg.origContainer + " .pg_article .pg_article_viewport_container .pg_article_viewport ul").prepend("<li style=\"height: 357px; width: 634px;\"><div id=\"nbc_videoplayer_iframeA1\" class=\"prerollVideoClass\"></div></li>");
+                }
+                if (pg.isArticle && $(".embedded.gallery .pg_article").length == 0) {
+                    $(pg.origContainer + " .pg_article .pg_article_viewport_container .pg_article_viewport ul li .prerollVideoClass").parent().show();
+                }
+
+                if (response.metadata.sponsored) {
+                    $(pg.origContainer + " .pgSponsored").css({
+                        "z-index": "auto"
+                    }).hide();
+                }
+
+                if (!pg.isA2) {
+                    if (pg.isLanding) {
+                        var GalleryPlayerName = "Gallery Landing Page PreRoll Player";
+                        $(".pg_article .pgSponsored").hide();
+                    }
+                    if (pg.isArticle) {
+                        var GalleryPlayerName = "Gallery Article Page PreRoll Player";
+                        $("#leadGallery" + idDash + " .pg_article .pgSponsored").hide();
+
+                        if (pg.preRollSelection == "A2" && pg.isArticle) {
+                            $(pg.origContainer + " #nbc_videoplayer_iframeA1" + idDash + ", " + pg.origContainer + " #nbc_videoplayer_iframeA1" + idDash + pg.randomVideoNumber).parent().remove();
+                            pg.startGallery();
+                            $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                            $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+                        }
+
+                    }
+
+                    if(!pg.hasFlash) {
+                        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").parent().hide();
+                        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1 object").detach();
+                        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).parent().hide();
+                        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber + " object").detach();
+                        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+                        pg.startGallery();
+                    } else {
+                        if ($(pg.origContainer + " #nbc_videoplayer_iframeA1" + idDash + pg.randomVideoNumber).length == 1) {
+    
+                            nbcVideoPageUtils.getVideoMetaData('204176191', 'nbc_videoplayer_iframeA1' + idDash + pg.randomVideoNumber, pg.photoWidth, pg.photoHeight, true);
+    
+                            //nbcVideoPageUtils.getVideoMetaData('nbc_videoplayer_iframeA1'+pg.randomVideoNumber, '204176191-huQF9BYvN1k_-true-article-TK-TK', pg.photoWidth, pg.photoHeight, GalleryPlayerName, 'slideshowplayer');
+                        } else if ($(pg.origContainer + " #nbc_videoplayer_iframeA1" + idDash).length > 0) {
+                            nbcVideoPageUtils.getVideoMetaData('204176191', 'nbc_videoplayer_iframeA1' + idDash, pg.photoWidth, pg.photoHeight, true);
+    
+                            //nbcVideoPageUtils.getVideoMetaData('nbc_videoplayer_iframeA1', '204176191-huQF9BYvN1k_-true-article-TK-TK', pg.photoWidth, pg.photoHeight, GalleryPlayerName, 'slideshowplayer');
+                        } else {
+                            pg.startGallery();
+                        }
+                    }
+
+                } else {
+                    if (pg.isA2) {
+                        var GalleryPlayerName = "Gallery Article Page, A2 PreRoll Player";
+                        $(".embedded.gallery .pg_article .pgSponsored").hide();
+
+
+                        if (pg.preRollSelection == "Article" && pg.isA2) {
+                            pg.startGallery();
+                            $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                            $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+                            return false;
+                        }
+                    }
+                    nbcVideoPageUtils.getVideoMetaData('204176191', 'nbc_videoplayer_iframeA2' + idDash + pg.randomVideoNumber, pg.photoWidth, pg.photoHeight, true);
+                    //nbcVideoPageUtils.getVideoMetaData('nbc_videoplayer_iframeA2' + pg.randomVideoNumber, '204176191-huQF9BYvN1k_-true-article-TK-TK', pg.photoWidth, pg.photoHeight, GalleryPlayerName, 'slideshowplayer');
+                }
+                $pdk.controller.addEventListener("OnMediaStart", function afterPreRoll_One(e) {
+                    //alert("this is On Media Start and isAd is: "+e.data.baseClip.isAd);
+                    console.log("ONMEDIAEND | TESTING BASECLIP");
+                    if (e.data.baseClip.isAd == false && pg.galleryQueue !== null) {
+                        console.log("ONMEDIAEND | BASECLIP TESTED");
+
+                        $(pg.origContainer + " .pg_article_viewport ul li:eq(0)").animate({
+                            "width": "0px"
+                        });
+
+                        if (pg.isA2) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).remove();
+                        } else if (pg.isLanding) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").remove();
+                        } else {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1 object").detach();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber + " object").detach();
+                        }
+
+                        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+                        pg.startGallery();
+
+                    }
+
+
+                }, "*");
+                $pdk.controller.addEventListener("OnMediaEnd", function afterPreRoll_Two(e) {
+                    //alert("this is On Media End and isAd is: "+e.data.baseClip.isAd);
+                    console.log("ONMEDIAEND | TESTING BASECLIP");
+                    if (e.data.baseClip.isAd == false && pg.galleryQueue !== null) {
+                        console.log("ONMEDIAEND | BASECLIP TESTED");
+                        $(pg.origContainer + " .pg_article_viewport ul li:eq(0)").animate({
+                            "width": "0px"
+                        });
+                        if (pg.isA2) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).remove();
+                        } else if (pg.isLanding) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").remove();
+                        } else {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1 object").detach();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber + " object").detach();
+                        }
+                        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+                        pg.startGallery();
+                    };
+
+                }, "*");
+                $pdk.controller.addEventListener("OnMediaError", function afterPreRoll_Three(e) {
+                    //alert("this is On Media Error and isAd is: "+e.data.baseClip.isAd);
+                    if (pg.galleryQueue !== null) {
+                        $(pg.origContainer + " .pg_article_viewport ul li:eq(0)").animate({
+                            "width": "0px"
+                        });
+    
+    
+                        if (pg.isA2) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).remove();
+                        } else if (pg.isLanding) {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").remove();
+                        } else {
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1 object").detach();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).parent().hide();
+                            $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber + " object").detach();
+                        }
+    
+                        $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+                        $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+    
+                        pg.startGallery();
+                    }
+                }, "*");
+
+
+
+
+                $(pg.origContainer + " .pg_article_viewport").animate({
+                    left: "-0px"
+                });
+            };
+
+        };
+
+        galleryPreRollTest = pg.galleryMetadata.preRollOff;
+        //console.log("galleryPreRollTest " + galleryPreRollTest);
+        //don't play preroll on ipad
+        if (navigator.userAgent.match(/like Mac OS X/i)) {
+            console.log("**this is an OS device**");
+            galleryPreRollTest = true;
+        }
+
+
+
+        if (pg.isArticle) {
+            console.warn("I AM HERE");
+            if (pg.galleryMetadata.sponsored) {
+                $(pg.origContainer + " .pgSponsored").css({
+                    "z-index": "9"
+                }).show();
+            }
+            $(pg.origContainer + " .pg_article > *").click(function (e) {
+                pg.origContainer = "#leadGallery" + idDash;
+                console.log("galleryPreRollTest * " + galleryPreRollTest + " what was set: " + pg.galleryMetadata.preRollOff + " what queue: " + pg.galleryQueue);
+                video(pg.galleryMetadata.preRollOff);
+            });
+        } else {
+            video(galleryPreRollTest);
+        }
+
+
+        $(pg.origContainer + " .pg_article").attr("data-id", slideshowID);
+        if (pg.promoObj) {
+            $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul li img").eq(0).css({
+                "background-image": "url(" + pg.promoObj.imagePath + ")"
+            });
+        }
+
+        if (pg.isLanding && !pg.recircDataLoaded) {
+
+            jQuery.each(pg.recircObj, function (c, d) {
+                var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 234); //returns obj({w, h, "origImg", "newImg"})
+
+                if (c == 0) {
+                    var setSpacer = " margin-right: 16px; padding: 0px !important";
+                } else {
+                    setSpacer = " margin-right: 0px; padding: 0px !important";
+                };
+                var titleChomp = d.title;
+
+                if (titleChomp.length >= 47) {
+                    titleChomp = titleChomp.replace(titleChomp.substring(47), "...");
+                }
+
+                if (c <= 1) {
+                    if (parseInt(d.typeID) != 10839) {
+                        showVideoMediaIcon = '<img alt="Video icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+                    } else {
+                        showVideoMediaIcon = '';
+                    }
+                    showVideoMediaIcon = '<img alt="Video icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+
+                    $(pg.origContainer + " .recirc ul").append("<li onclick=\"window.location = '" + d.url + "'\" style=\"background: #222222;" + setSpacer + "\">" + showVideoMediaIcon + "<span class=\"pgMediaType\">" + titleChomp + "</span><a name=\"&lpos=interstitial&lid=" + titleChomp + "\" href=\"" + d.url + "\" style=\"background: url(" + getNewImg.newImg + ") center center;\"></a></li>");
+                }
+            });
+
+
+            $(pg.origContainer + " .pg_article .pgWing .recirc ul li").hover(function () {
+                $(this).find(".galleryVideoMediaIcon").hide(); //.galleryVideoMediaIcon
+                $(this).find("span").show();
+                $(this).find("a").css("opacity", "0.6");
+            }, function () {
+                $(this).find(".galleryVideoMediaIcon").show(); //.galleryVideoMediaIcon
+                $(this).find("span").hide();
+                $(this).find("a").css("opacity", "1");
+            });
+
+            pg.recircDataLoaded = true;
+        }
+
+        pg.doInterstitial();
+        if (galleryPreRollTest) {
+            pg.setMeta(pg.currentlyInViewIndex);
+            $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container a").eq(0).addClass("pg_article_thumbnails_current");
+        }
+        $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport").width((pg.totalNumOfElements + 1) * pg.photoWidth);
+
+        $(pg.origContainer + " .pg_article_counts").css({
+            "visibility": "visible"
+        }).fadeIn("fast");
+    });
+
+};
+
+pg.output = function () {};
+pg.setMeta = function (index) {
+
+    var thisPhoto = $(pg.origContainer + " .pg_article_thumbnails_container a").eq(index);
+    var indexHolder = pg.currentlyInViewIndex;
+
+    $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+        "visibility": "visible"
+    });
+
+    if (pg.galleryMetadata.sponsored) {
+        $(pg.origContainer + " .pgSponsored").css({
+            "z-index": "9"
+        }).show();
+    }
+
+    if (nbc.omniture.pageType != "slideshow") {
+        pg.adRefresh('dyn1');
+    } else {
+        pg.adRefresh('nbcad_300x250_iframe_gallery');
+    }
+
+    $(pg.origContainer + " .pg_article_share").show();
+    $(pg.origContainer + " .pgCredit").html($(thisPhoto).attr("data-caption"));
+    $(pg.origContainer + " .pg_article_credit").html($(thisPhoto).attr("data-credit"));
+    if (parseInt($(pg.origContainer + " a.galleryThumb").eq(pg.currentlyInViewIndex).attr("data-caption").length) <= 200) {
+        $(pg.origContainer + " .pg_article_caption_gradient").hide();
+        $(pg.origContainer + " .recirc").show();
+        $(pg.origContainer + " .pgCredit").addClass("caption200");
+        $(pg.origContainer + " .pgCredit").html($(thisPhoto).attr("data-caption"));
+
+    } else {
+        $(pg.origContainer + " .pg_article_caption_gradient").hide(); //used to be show()
+        $(pg.origContainer + " .recirc").hide();
+
+        $(pg.origContainer + " .pgCredit").removeClass("caption200");
+
+        $(pg.origContainer + " .pgCredit").html($(thisPhoto).attr("data-caption"));
+
+        $(pg.origContainer + " .pgCredit").append("<div style=\"height: 100px; display: block\"></div>");
+    }
+    $(pg.origContainer + " .pg_article_thumbnails_container").find("a.pg_article_thumbnails_current").removeClass("pg_article_thumbnails_current");
+    $(pg.origContainer + " .pg_article_thumbnails_container a:eq(" + index + ")").addClass("pg_article_thumbnails_current");
+
+    if ($(thisPhoto).attr("data-index") == parseInt(pg.galleryMetadata.totalImages)) {
+        $(pg.origContainer + " .goLeft, " + pg.origContainer + " .goRight").css({
+            "visibility": "hidden"
+        });
+        clearInterval(pg.ap);
+    } else {
+
+    }
+    if ($(pg.origContainer + " .pg_article_viewport ul li div.endCard").length == 0) {
+        pg.doEndCard();
+    }
+    if (pg.showVibrantCounter == pg.showVibrantCount && pg.showVibrant) {
+        if (!pg.isEndCard) {
+            try {
+                picadService.getPJL().ismOn();
+            } catch (e) {}
+        };
+        pg.showVibrantCounter = 1;
+    } else if (pg.showVibrantCounter != pg.showVibrantCount && pg.showVibrant) {
+        try {
+            picadService.getPJL().ismOff();
+        } catch (e) {}
+        pg.showVibrantCounter = pg.showVibrantCounter + 1;
+    }
+
+    if (!pg.isEndCard) {
+        $(pg.origContainer + " .pg_article_autoplay button, " + pg.origContainer + " .pg_article_share_button").css({
+            "visibility": "visible"
+        });
+    }
+
+
+    if (!pg.isLanding) {
+        $(pg.origContainer + " .recirc ul").empty();
+        jQuery.each(pg.recircObj, function (c, d) {
+            var getNewImg = pg.getPhotoSize(d.thumbnailUrl, 234); //returns obj({w, h, "origImg", "newImg"})
+
+            if (c == 0) {
+                var setSpacer = " margin-right: 16px; padding: 0px !important";
+            } else {
+                setSpacer = " margin-right: 0px; padding: 0px !important";
+            };
+            var titleChomp = d.title;
+
+            if (titleChomp.length >= 47) {
+                titleChomp = titleChomp.replace(titleChomp.substring(47), "...");
+            }
+
+            if (c <= 1) {
+                if (parseInt(d.typeID) != 10839) {
+                    showVideoMediaIcon = '<img alt="Video icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+                } else {
+                    showVideoMediaIcon = '';
+                }
+                showVideoMediaIcon = '<img alt="Video icon" src="http://media.nbcbayarea.com/designimages/miniPlayBtn.png" height="18" width="18" class="galleryVideoMediaIcon">';
+                $(pg.origContainer + " .recirc ul").append("<li onclick=\"window.location = '" + d.url + "'\" style=\" background: #222222;" + setSpacer + "\">" + showVideoMediaIcon + "<span class=\"pgMediaType\">" + titleChomp + "</span><a name=\"&lpos=mainrecirc&lid=" + titleChomp + "\" href=\"" + d.url + "\" style=\"background: url(" + getNewImg.newImg + ") center center; background-size: cover\"></a></li>");
+            }
+        });
+        pg.recircDataLoaded = true;
+    }
+    $(pg.origContainer + " .pg_article .pgWing .recirc ul li").hover(function () {
+        $(this).find(".galleryVideoMediaIcon").hide(); //.galleryVideoMediaIcon
+        $(this).find("span").show();
+        $(this).find("a").css("opacity", "0.6");
+    }, function () {
+        $(this).find(".galleryVideoMediaIcon").show(); //.galleryVideoMediaIcon
+        $(this).find("span").hide();
+        $(this).find("a").css("opacity", "1");
+    });
+
+
+};
+pg.startGallery = function () {
+    console.log('INSIDE START GALLERY');
+
+    pg.currentlyInViewIndex = 0;
+
+    $(pg.origContainer + " .pg_article_counts").css({
+        "visibility": "visible"
+    }).fadeIn("fast");
+    $(pg.origContainer + " .pg_article_share").click(function () {
+        jQuery(pg.origContainer + ' .gallery_landing_share').toggleClass("show");
+    });
+    if (pg.isA2) {
+
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA2" + pg.randomVideoNumber).remove();
+    } else if (pg.isLanding) {
+
+
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1, " + pg.origContainer + " .prerollVideoClass").remove();
+
+    } else {
+        //console.log('INSIDE START GALLERY - should remove iframe');
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1").parent().remove();
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1 object").detach();
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber).parent().hide();
+        $(pg.origContainer + " .pg_article_viewport ul li #nbc_videoplayer_iframeA1" + pg.randomVideoNumber + " object").detach();
+
+    };
+
+    $(pg.origContainer + " .pg_AdSpot").removeClass("adPositionMaint");
+    $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+
+    if (!pg.isLanding) {
+
+        $(pg.origContainer + " .pgWing, #pg_lightbox").remove();
+        $(pg.origContainer + " .doClose, " + pg.origContainer + " .pg_article_viewport ul li:eq(0)").show();
+        $("#article_0").append('<div id="pg_lightbox" style="overflow: auto;"></div>');
+
+        $(".pg_article").css({
+            "position": "relative",
+            "z-index": "9998"
+        });
+
+        $(pg.origContainer + " .pg_article .pg_article_viewport_container").css({
+            "position": "absolute",
+            "z-index": "9999"
+        });
+        $(pg.origContainer + " .pg_article").append(pg.setRightFlyout).animate({
+            "width": pg.maxSize + "px"
+        }, "fast").css({
+            "position": "absolute",
+            "z-index": "99999"
+        });
+
+    };
+
+
+
+    $(pg.origContainer + " #adCompanionBannerGallery.ad").addClass("forceHideMeta");
+    $(pg.origContainer + " #interCheck, " + pg.origContainer + " .pg_article_credit, " + pg.origContainer + " .pg_AdSpot").removeClass("forceHideMeta");
+
+
+    if (pg.preRollSelection == "Article") {
+        $(pg.origContainer + " .pg_article .pg_article_viewport ul li").each(function () {
+            if ($(this).html() == "") {
+                $(this).remove();
+            }
+        });
+    };
+
+
+    try {
+        pg.setMeta(pg.currentlyInViewIndex);
+    } catch (e) {}
+
+    //jQuery("div#gptAdMarkupForGallery div").appendTo(".pg_AdSpot")
+    //jQuery("div#gptAdMarkupForGallery div").appendTo(".pg_AdSpot");
+    //pg.adRefresh('dyn1');
+    if (jQuery(".pg_AdSpot").html() == "") {
+        nbcgptengine.buildAnAdSlot(pg.origContainer + " .pg_AdSpot", [300, 250], 2, "top", "");
+    }
+
+    $(pg.origContainer + " .pg_article_share").show();
+    pg.galleryStarted = true;
+    pg.galleryCount = pg.galleryCount + 1;
+
+    if (pg.galleryCount == 1) {
+        pg.doSetup();
+    }
+    if (pg.currentlyInViewIndex == 0) {
+        $(pg.origContainer + " .pg_article_thumbnails .pg_article_thumbnails_container a").eq(0).addClass("pg_article_thumbnails_current");
+        $(pg.origContainer + " .pg_article_viewport_container .pg_article_viewport ul li img").eq(0).css({
+            "background-image": "url(" + $(pg.origContainer + " .pg_article_thumbnails_container .galleryThumb").eq(pg.currentlyInViewIndex).attr("data-url") + ")"
+        });
+
+
+    };
+    if ((nbc.market !== "nbcsandiego") && (nbc.market !== "nbcphiladelphia")) {
+        pg.autoPlaying = true;
+        //the 2 commented out lines below are for interstitial tracking, etc.  but causes the gallery in blogs to not autoplay
+        //var e = ({originalEvent:({}), type:"click", isDefaultPrevented:function C(){return!1}, timeStamp:1375810309015, jQuery164006938477891544825:true, which:1, wheelDelta:(void 0), view:({}), toElement:(void 0), target:{}, srcElement:(void 0), shiftKey:false, screenY:-424, screenX:807, relatedTarget:null, relatedNode:(void 0), prevValue:(void 0), pageY:850, pageX:1437, offsetY:(void 0), offsetX:(void 0), newValue:(void 0), metaKey:false, layerY:850, layerX:1437, keyCode:(void 0), handler:(function (e){  console.log(e); }), fromElement:(void 0), eventPhase:3, detail:1, data:null, currentTarget:{jQuery164006938477891544825:8}, ctrlKey:false, clientY:850, clientX:1437, charCode:(void 0), cancelable:true, button:0, bubbles:true, attrName:(void 0), attrChange:(void 0), altKey:false, handleObj:{handler:(function (e){  console.log(e); }), data:null, namespace:"", type:"click", guid:49}});
+        //pg.doInterstitialTracker(e, pg.currentlyInViewIndex);  
+        if (pg.galleryCount == 1) {
+            pg.autoPlay = false;
+            pg.autoPlayer();
+        }
+    } else {
+        pg.autoPlaying = false;
+        $(pg.origContainer + " .pg_article_autoplay button").html("<div class=\"playIcon\"></div> Play Gallery").addClass("paused");
+        //var e = ({originalEvent:({}), type:"click", isDefaultPrevented:function C(){return!1}, timeStamp:1375810309015, jQuery164006938477891544825:true, which:1, wheelDelta:(void 0), view:({}), toElement:(void 0), target:{}, srcElement:(void 0), shiftKey:false, screenY:-424, screenX:807, relatedTarget:null, relatedNode:(void 0), prevValue:(void 0), pageY:850, pageX:1437, offsetY:(void 0), offsetX:(void 0), newValue:(void 0), metaKey:false, layerY:850, layerX:1437, keyCode:(void 0), handler:(function (e){  console.log(e); }), fromElement:(void 0), eventPhase:3, detail:1, data:null, currentTarget:{jQuery164006938477891544825:8}, ctrlKey:false, clientY:850, clientX:1437, charCode:(void 0), cancelable:true, button:0, bubbles:true, attrName:(void 0), attrChange:(void 0), altKey:false, handleObj:{handler:(function (e){  console.log(e); }), data:null, namespace:"", type:"click", guid:49}});
+        //pg.doInterstitialTracker(e, pg.currentlyInViewIndex);
+    }
+};
+
+pg.setVibrant = function () {
+
+    console.log("!!!!!!!!!! LOOOK " + pg.isPreRollOff + "<- preroll " + pg.isVibrantOff + "<- vibrant ads " + pg.isSponsored + "<- sponsored " + pg.isSensitive + " <-- sensitive");
+
+    if (pg.isPreRollOff == true) {
+        pg.showVibrant = false;
+    } else if (pg.isVibrantOff == true) {
+        pg.showVibrant = false;
+    } else if (pg.isSponsored == true) {
+        pg.showVibrant = false;
+    } else if (pg.isSensitive == true) {
+        pg.showVibrant = false;
+    } else {
+        pg.showVibrant = true;
+    }
+};

@@ -1,0 +1,147 @@
+
+*
+{
+	font-size: 10px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+
+a
+{
+	font-size: 11px;
+}
+
+img
+{
+	border: 0;
+}
+
+ul li
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.red
+{
+	color: #c00;
+}
+
+.price
+{
+	font-size: 14px;
+	color: #C00;
+	font-weight: bold;
+}
+
+.price .taxIncluded
+{
+	font-size: 10px;
+	color: #666;
+	font-weight: nomal;
+}
+
+.txt
+{
+	text-align: left;
+	padding: 5px;
+}
+
+#wrap
+{
+	background-color: #eee;
+	width: 930px;
+}
+
+#sub_wrap
+{
+	width: 910px;
+	margin: 0px auto;
+	padding: 10px 0;
+}
+
+/********** スライダー **********/
+.bg_img
+{
+	width: 100%;
+	max-width: 910px;/* margin: 0 auto 10px;*/
+}
+
+.bg_img .bx-wrapper
+{
+	height: 100%;
+}
+
+.bx-window
+{
+}
+
+.slider
+{
+	width: 100%;
+	margin: 0px auto;
+}
+
+/* 前へ、次へのボタン */
+ 
+.bx-prev,
+.bx-next
+{
+	position: absolute;
+	font-size: 36px;
+	text-decoration: none !important;
+	width: 17px;
+	height: 60px;
+}
+
+.bx-prev
+{
+	left: -7px;
+	top: 40%;
+	background-image: url(http://www.foula-store.jp/slider/images/rew.png);
+}
+
+.bx-next
+{
+	right: -7px;
+	top: 40%;
+	background-image: url(http://www.foula-store.jp/slider/images/next.png);
+}
+
+.bx-pager a.thumb
+{
+	border: none;
+	padding: 0;
+	background-color: none;
+	line-height: 0;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.bx-pager a img
+{
+	border: 1px solid #dddddd;
+	padding: 0;
+	text-decoration: none;
+}
+
+.bx-pager a.pager-active img
+{
+	color: #ffffff;
+	border: 1px solid #f00;
+}
+
+/* 3.カルーセルスライダー */
+ 
+.bg_img1 .bx-wrapper
+{
+	width: inherit;
+}
+
+#slider1 li
+{
+	width: 130px;
+	text-align: center;
+}

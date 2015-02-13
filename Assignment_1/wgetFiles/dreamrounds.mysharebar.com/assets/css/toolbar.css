@@ -1,0 +1,123 @@
+html {overflow: hidden;} /*we don't need any scrolls for our html */
+body
+{
+	margin: 0;
+	padding:0;
+	font-family: arial,sans-serif;
+	font-size: 15px;
+}
+
+#toolbar
+{
+	background: url(../../images/bck.png) repeat-x transparent;
+	height: 25px;
+	overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+#toolbarlogo
+{
+	float: left;
+	width: 400px;
+    margin:5px;
+}
+
+
+#main
+{
+	margin-left: 400px;
+}
+
+#links
+{
+	height: 25px;
+    margin-top:5px;
+}
+
+#close
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 5px;
+	background: url(http://dreamrounds.mysharebar.com/images/btn2.gif) transparent no-repeat;
+}
+
+#closegray
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 0px;
+	background: url(../../images/grayclose.png) transparent no-repeat;
+    margin-right:10px;
+    top:2px;
+}
+
+#arrow
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 25px;
+	background: url(http://dreamrounds.mysharebar.com/images/btn2.gif) transparent no-repeat;
+	background-position: -16px 0;
+}
+
+#twitter
+{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 45px;
+	background: url(../../images/twitter.jpeg) transparent no-repeat;
+}
+
+#extra
+{
+	height: 100px;
+    background: #fff;
+}
+
+#iframe { overflow: hidden;} /*this is to remove the scroll when not needed*/
+
+#iframe, iframe
+{
+	width: 100%;
+	height: 100%;
+    border:none;
+}
+
+#pattern {
+        background-image: url("../../img/pattern-pp.png");
+        background-repeat: repeat-x;
+        height: 18px;
+        position: relative;
+        right: 780px;
+        top: 5px;
+        width: 2500px;
+        }
+
+        #xplClose {
+        display: inline;
+        float: right;
+        margin: -2px 15px 0 10px;
+}
+        #xplClose a {
+            background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+            border: 1px solid #CCCCCC;
+            border-radius: 4px 4px 4px 4px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            color: #777777;
+            display: block;
+            font-size: 13px;
+            height: 23px;
+            line-height: 23px;
+            padding: 0 8px;
+            text-decoration: none;
+        }
+        #xplClose a:hover {
+            background: none repeat scroll 0 0 #EEEEEE;
+            border-color: #BBBBBB;
+            color: #333333;
+        }

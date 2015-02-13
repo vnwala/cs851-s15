@@ -1,0 +1,198 @@
+/* ==========================================================================
+   NEWSQUEST PRINT CSS
+   ========================================================================== */
+
+@media print {
+    body,
+    .container_12  {
+    	width:auto;
+    }
+
+    /* Hide generic elements */
+    .noPrint,
+    #adStrip,
+    #headertop,
+    .headersearch,
+    .nav,
+    #bread,
+    .adminLinks,
+    #classFoot,
+    #adStripBottom,
+    .searchEvents,
+    .smSglCol,
+    #three {
+        display:none;
+    }
+    #header {
+        margin-bottom:0;
+    }
+    .headerlogo {
+        margin:0;
+    }
+    #titles {
+        margin:5px 0;
+    }
+    #navFoot .nav {
+        display:block;
+    }
+    #navFoot .navBar,
+    #navFoot .usefulList,
+    #navFoot .lastList.other {
+        display:none;
+    }
+    #navFoot ul.lastList {
+        width: 100%;
+    }
+
+
+    /* BMDs */
+    #bmdContent .grid_2,
+    #bmdContent .noticeBtns,
+    #bmdContent .noticeUtils,
+    #bmdContent #fullNoticeMsgAdd,
+    #bmdContent #fullNoticeGiftAdd,
+    #bmdContent form,
+    #bmdContent .noticeSmallPrint,
+    #bmdContent .shareBox {
+    	display:none;
+    }
+
+    #bmdContent {
+    	background:none;
+    }
+    #bmdContent .grid_8 {
+    	width: 100%;
+    	margin:0;
+    }
+    #bmdContent .grid_8 .grid_4 {
+    	width: 48%;
+    }
+
+    /* Jobs */
+    #jobContent,
+    #jobContent .grid_10,
+    #jobContent .grid_8 {
+    	background: none !important;
+    }
+    #jobContent .grid_10,
+    #jobContent .grid_8,
+    #jobContent.jobCareerTools .grid_7 {
+    	width: auto;
+    	margin: 0;
+    }
+    #jobContent .jobSearchBox,
+    #jobContent .grid_2,
+    #jobContent .jobResultsSort,
+    #jobContent .jobResultsView,
+    #jobContent .jobResultsPager form,
+    #jobContent .jobResultsPager ul,
+    #jobContent .jobListUtils,
+    #jobContent .jobListApply,
+    #jobContent .jobBackTop,
+    #jobContent .jobSaveSearch,
+    #jobContent .genericRead,
+    #jobContent .genericMore ,
+    #jobContent.jobResults .grid_4,
+    #jobContent .jobDetailsApplyTop,
+    #jobContent .jobDetailsApply,
+    #jobContent .jobDetailsPaging,
+    #jobContent .jobDetailsUtils ul,
+    #jobContent.jobDetails h3.jobHead,
+    #jobContent.jobDetails .jobSimilar,
+    #jobContent.jobApply h3.jobHead,
+    #jobContent.jobApply .jobSimilar,
+    #jobContent.jobDetails .grid_6,
+    #jobContent.jobDetails .grid_4,
+    #jobContent.jobDetails .grid_10 .grid_10,
+    #jobContent.jobApply .grid_6,
+    #jobContent.jobApply .grid_4,
+    #jobContent.jobCareerTools .grid_3,
+    #jobContent .jobStandardUtils {
+    	display: none !important;
+    }
+    .jobListSlide {
+    	display: block !important;
+    }
+    #jobContent.jobNews p {
+    	margin-bottom: 10px;
+    }
+    #jobContent.jobNewsArticle .jobNewsUpdate,
+    #jobContent.jobNewsArticle .jobNewsByline {
+    	float: none !important;
+    }
+
+    /* TRAFFIC */
+    #traffic .trafficLocation,
+    #traffic form,
+    #traffic .trafficViewMore,
+    #traffic #panelWeather,
+    #traffic #mpu,
+    #traffic .trafficIncidents h3,
+    #traffic .trafficIncidents .trafficList p.trafficViewMap,
+    #traffic .trafficIncidents .trafficList .trafficShare, #traffic .trafficBubble .trafficShare,
+    #traffic .trafficKey {
+        display: none !important;
+    }
+    #traffic .trafficIncidents {
+        width: auto;
+        margin-right: 0;
+    }
+    #traffic .trafficIncidents .trafficList .trafficIcons {
+        position: static;
+        text-indent: 0;
+    }
+    #traffic .trafficIncidents .trafficList .trafficIcons span {
+       width: auto !important;
+       display: block !important;
+       color: #000 !important;
+       text-indent: 0 !important;
+       float: none !important;
+       left: 0 !important;
+       top: 0 !important;
+       margin: 0 8px !important;
+       padding: 0 !important;
+       text-align: left !important;
+    }
+    #traffic .trafficRight {
+       float: none;
+       clear: both !important;
+    }
+    #traffic #trafficMap {
+       margin-top: 300px !important;
+    }
+
+    /* CRIME */
+    #crime .crimePrint,
+    #crime .crimeFacets h4,
+    #crime .crimeRoads,
+    #crime .crimeLocation,
+    #crime .crimeInfoFacebook,
+    #crime .crimeInfoYouTube,
+    #crime .crimeInfoTwitter,
+    #crime .crimeInfoFlickr,
+    #crime .crimeInfoRss {
+        display: none !important;
+    }
+    #crime .crimeFacets,
+    #crime .crimeInfo,
+    #crime .crimeSocial {
+        width: auto !important;
+        float: none !important;
+    }
+    #crime h3 {
+        text-shadow: none !important;
+    }
+    #crime .crimeSubhead,
+    #crime .crimeInfoContainer,
+    #crime .crimeSocialContainer {
+        border: none !important;
+    }
+
+    /* Can't realy print links but let's give some clue about it */
+    a:link, a:visited {
+        color: #125757;
+        background: transparent;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}/* END @media print */

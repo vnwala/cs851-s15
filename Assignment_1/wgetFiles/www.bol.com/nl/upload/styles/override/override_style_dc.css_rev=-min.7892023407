@@ -1,0 +1,541 @@
+ /* @group Doormat */
+.wrapper_doormats .row {
+  float: left;
+  padding-right: 9px;
+  width: 187px;
+}
+.wrapper_doormats ul {
+  font-size: 11px;
+}
+.wrapper_doormats .last {
+  padding-right: 0px;
+}
+.wrapper_doormats ul li { 
+  line-height: 14px;
+  padding: 2px 0;
+}
+.wrapper_doormats ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.wrapper_doormats ul li a:hover {
+  color: #36c;
+  text-decoration: underline;
+}
+.wrapper_doormats .header {
+  margin-bottom: 18px;
+}
+/* @end */
+
+/*@group Doormat new -- Toegevoegd door Roxanne 140917*/
+  #doormat a{
+    color:#000;
+  }
+  #doormat a:hover{
+    color:#36c;
+  }
+/* @end */
+
+/*@group categorie ingangen*/
+.dci .slot_wrapper {
+  position: relative;
+}
+.dci .slot_content {
+  text-align: center;
+  height: 198px !important;
+}
+.dci img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.dci .content_title {
+  position: absolute;
+  left: 2px;
+  bottom: 24px;
+  width: 190px;
+  height: 36px !important;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.8) !important;
+  height: auto;
+  padding: 12px;
+  text-align: left;
+  z-index: 2;
+  color: #333;
+  font-size: 11px;
+}
+/*@end*/
+
+/*@group dc-cat-entry-slots 20140728*/
+.dc-cat-entry .box {
+  display: block;
+  padding: 0;
+  position: relative;
+  height:204px;
+  overflow:hidden;
+}
+.dc-cat-entry .box:hover {
+  border-color: #c3c1bc;
+}
+
+.dc-cat-entry .content_title {
+  background: rgba(255,255,255,.8);
+  bottom: 0;
+  color: #333;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  width: 100%;
+  height:75px;
+}
+.dc-cat-entry img {
+  width:100% !important;
+}
+/*@end*/
+
+/*@group nieuw opvallend boeken*/
+.nieuw_opvallend.box_radius9 {
+  height: 200px;
+  padding: 0;
+  overflow: hidden;
+}
+.nieuw_opvallend img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.nieuw_opvallend > div {
+  height: 100%;
+}
+.nieuw_opvallend .grid_411 {
+  width:390px;
+}
+.nieuw_opvallend .covers {
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+.nieuw_opvallend .covers table {
+  width: 100%;
+  height: 100%;
+  margin: -10% 0 0 -3px;
+  padding-right: 6px;
+}
+.nieuw_opvallend .covers table td {
+  vertical-align: bottom;
+  text-align: center;
+}
+.nieuw_opvallend .covers table .bottom td {
+  vertical-align: top;
+}
+.nieuw_opvallend .covers table td span {
+  display: block;
+  margin: 0;
+}
+.nieuw_opvallend .covers img {
+  height: auto !important;
+  width: 72.5%;
+  visibility: hidden;
+  opacity: .9;
+}
+.nieuw_opvallend .title {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.nieuw_opvallend .title span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.nieuw_opvallend .title img {
+  text-align: center;
+  width: 180px;
+  height: auto;
+  margin-top: -10px;
+}
+.nieuw_opvallend .bol-btn {
+  position: absolute;
+  bottom: 9px;
+  right: 9px;
+}
+/*@end*/
+
+/*@group bol.com button */
+.bol-btn {
+  display: inline-block;
+  background-color: #3366cc;
+  width: auto;
+  min-width: 1px;
+  margin: 0 auto;
+  color: #FFF;
+  font-size: 0.857em;
+  padding: 0 0.6em 0 1.65em;
+  background: #3366cc url('../../../cms/css/chevron_bol.png') no-repeat 0.75em center;
+  -webkit-border-radius:0.25em;
+  -moz-border-radius:0.25em;
+  border-radius:0.25em;
+  text-align: left;
+  line-height: 2em;
+  text-decoration: none;
+  margin: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.bol-btn:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+/*STYLING SPECIFIEK VOOR BUTTON OP EEN RK BANNER*/
+.bol-btn.rk {
+  width: 0;
+  text-indent: -9999px;
+  padding: 0 0 0 1.95em;
+  background-position: 0.8em center;
+}
+/*STYLING SPECIFIEK VOOR BUTTON OP MHP SLIDE*/
+.bol-btn.big {
+  font-size: 1em;
+  line-height: 2em;
+}
+/*STYLING SPECIFIEK VOOR BUTTON OP LIJSTHEADER*/
+.bol-btn.small {
+  font-size:0.78571em;
+  line-height: 1.75em;
+  background-image: url('../../../cms/css/chevron_bol_small.png');
+}
+.nb-header {
+  position: relative !important;
+}
+/*@end*/
+/*@group SEO block*/
+.seo_block {
+  color: #333;
+}
+/*@end*/
+
+/* @group Prijsbol */
+.price_bol {
+  position:absolute;
+  bottom:14px;
+  top:auto;
+  color:#000;
+  vertical-align:baseline;
+  line-height:1em;
+  display:none;
+}
+.price_bol.show {
+  display:block;
+}
+.price_bol > * {
+  display:inline-block;
+}
+.price_bol .old_price {
+  text-decoration:line-through;
+  padding-right:0.15em;
+}
+.price_bol .old_price.no-strike {
+  text-decoration:none;
+}
+.price_bol .new_price {
+  color:#d12c2a;
+  font-size:1.5em;
+  font-family: 'ClarendonURW-Med',Georgia,serif;
+  -webkit-font-smoothing: antialiased;
+}
+.price_bol .new_price sup {
+  font-size: 1em;
+  vertical-align:top;
+}
+
+/* @end */
+
+/* @group bulk prijsbol */
+  .orange { position:relative; }
+  .orange .price_bol { position:absolute; text-align: center; top: 10px; right:10px; font-weight:normal; text-rendering: optimizeLegibility;}
+  .orange .price_bol .new_price { position:relative; margin-top:3%; }
+  .orange .price_bol .new_price sup { font-size:0.5em; margin-left: -6px; margin-top:0; height: 0; line-height: 1; vertical-align:top; _vertical-align:top; }
+  .orange .price_bol .new_price .blank { font-size:1em; margin-left: -0.2em; line-height:.9em; }
+  
+  .orange .price_bol {
+    color:#FFF;
+    width:72px; height:72px; background: url('images/pricebol_sprite.png') no-repeat center -252px; /*IE8*/ font-size:10px;
+  }
+  .orange .price_bol p { padding:0; display:block; margin:0 auto; text-rendering: optimizeLegibility; font-weight:normal !important; }
+  .orange .price_bol .old_price{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 1.0em;
+    margin-bottom:0.5em;
+    min-height: 15px;
+    color:#FFF;
+    display:block !important; 
+  }
+  .orange .price_bol .old_price.no-strike {
+    background:none;
+  }
+  .orange .price_bol .new_price{
+    position:relative;
+    font-size: 3em;
+    line-height: .75em;
+    letter-spacing:-0.025em;
+    font-family: 'Clarendon FS Medium';
+    text-align:center;
+    display:block !important; 
+    color:#FFF;
+  }
+  
+  .orange .price_bol.digits-1-2 .new_price { font-size:3.5em; }
+  .orange .price_bol.digits-1-2 .new_price.single { margin-top: -6%; }
+  .orange .price_bol.digits-2-2 .new_price { font-size:3em; }
+  .orange .price_bol.digits-3-1 .new_price { margin-left:auto; font-size:2.4em; }
+  .orange .price_bol.digits-3-2 .new_price { font-size:2.6em; line-height:0.75em; margin-left:0%; }
+  .orange .price_bol.digits-4-2 .new_price,
+  .orange .price_bol.digits-5-2 .new_price { font-size: 2.2em; line-height: 1em; }
+  
+  .orange.korting-bol .old_price,
+  .orange.voor-bol .old_price,
+  .orange.plus-bol .old_price,
+  .orange.tot-bol .old_price { visibility:visible !important; line-height:0.5em; color:#FFF; }
+  
+  .orange.voor-bol .old_price,
+  .orange.korting-bol .old_price,
+  .orange.plus-bol .old_price,
+  .orange.plus-bol .old_price,
+  .orange.tot-bol .old_price,
+  .orange.voor-bol .old_price,
+  .orange.korting-bol .old_price,
+  .orange.plus-bol .old_price,
+  .orange.plus-bol .old_price,
+  .orange.tot-bol .old_price { font-family: 'Clarendon FS Medium'; font-size:2.7em; margin: 35% 0 0 0; text-decoration:none; color:#FFF; background:none !important; }
+  .orange.korting-bol .old_price { font-size:2.4em; }
+  .orange.korting-bol .new_price,
+  .orange.plus-bol .new_price { font-size:1.2em; margin:12% 0 0 0; text-decoration:none; color:#FFF; }
+  
+  .orange.voor-bol .old_price,
+  .orange.tot-bol .old_price,
+  .orange.voor-bol .old_price,
+  .orange.tot-bol .old_price { text-decoration:none !important; margin:15% 0 0 0; font-size: 1.2em; line-height: 1em; text-align:center; }
+  .orange.voor-bol .price_bol .new_price,
+  .orange.tot-bol .price_bol .new_price { margin:0; line-height:1em; color: #FFF; }
+  .orange.voor-bol .new_price sup.blank { line-height:.9em; }
+
+  .orange.voor-bol .old_price,
+  .orange.tot-bol .old_price { background:none; font-family: 'Clarendon FS Medium'; font-size:1.2em; text-decoration:none; line-height:.9em; }
+  
+  .orange.voor-bol .old_price,
+  .orange.tot-bol .old_price { margin-top:12px; }
+  
+  .orange.tot-bol .price_bol .new_price { font-size:2.5em; visibility:visible; line-height: 0.65em; }
+  .orange.tot-bol .price_bol .new_price span { font-size:0.4em; display:block; letter-spacing:.05em; margin-top:0; }
+  .orange.halve .old_price,
+  .orange.halve .old_price { font-family: 'Clarendon FS Medium'; margin: 0; line-height: 1em; font-size:3.5em; text-decoration: none; }
+  .orange.halve sup {font-size:0.5em;}
+  .orange.halve .new_price {font-size:1.5em; margin: 0; }
+/* @end */
+
+/*editorial image styling*/
+.editorial.ownimage .editorial_img > a {
+  border-radius: 0.5em;
+  overflow:hidden;
+  display:block;
+}
+.ownimage .editorial_img img {
+  width:100%;
+  height:auto !important;
+}
+/*@end*/
+
+/*dc banners @start*/
+.dc_banner {
+  padding:0;
+  border-radius: .5em;
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  -ms-border-radius: .5em;
+  -o-border-radius: .5em;
+  overflow:hidden;
+  display:inline-block;
+  vertical-align:top;
+}
+.nb-header {
+  border-radius: .5em .5em 0 0;
+  -webkit-border-radius: .5em .5em 0 0;
+  -moz-border-radius: .5em .5em 0 0;
+  -ms-border-radius: .5em .5em 0 0;
+  -o-border-radius: .5em .5em 0 0;
+  overflow:hidden;
+}
+.dc_banner > img {
+  display:block;
+}
+.nb-header .h-fluid-img, .nb-header .slot_navigation_img  {
+    max-width: 100%;
+    width: 100%;
+    height: auto !important;
+    vertical-align: middle
+}
+.endeca_filter {
+  width:100% !important;
+  max-width:100%;
+}
+/*@end*/
+
+/*@group video embed*/
+.video_embed {
+  position:relative;
+  display:inline-block;
+}
+.video_embed > div {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index: 10;
+}
+.video_embed > div > * {
+  max-width:100%;
+  max-height:100%;
+}
+.videoContent {
+  background:url('../../../static/images/layout/loader.gif') no-repeat center center;
+}
+/*@end
+
+/*dc navigation slot -- Toegevoegd door Roxanne 140917*/
+.navigation_slot a{
+  color: #000;
+}
+.navigation_slot a:hover{
+  color: #36c;
+}
+/*@end
+
+/* @group Weblog */
+#uitgelicht-editorials {
+  position: relative;
+}
+#uitgelicht-editorials .bol-uitgelicht-logo {
+  display: block;
+  width: 31%;
+  height: 40px;
+  background: url('http://weblog.bol.com/wp-content/themes/uitgelicht/img/logos/logo-bolcom-uitgelicht.gif') no-repeat;
+  background-size: auto 100%;
+  position: absolute; right: 0; top: -10px;
+}
+#uitgelicht-editorials .weblog-items li .img {
+  width: 333px; height: 164px;
+  background-size: auto 100%;
+}
+#uitgelicht-editorials .weblog-items li a.title {
+  color: #000;
+}
+#uitgelicht-editorials .weblog-items li h2 {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#uitgelicht-editorials .more-link {
+  position: relative; top: -2em;
+}
+
+/* POPUP STYLING */
+.popupContent-uitgelicht {
+  width: 520px;
+}
+.popupContent-uitgelicht > * {
+  padding-left:15px !important;
+  padding-right:15px !important;
+}
+.popupContent-uitgelicht h2:not(.h1) {
+  margin-top: 1em;
+}
+.popupContent-uitgelicht p:empty {
+  display: none;
+}
+.popupContent-uitgelicht .aligncenter,
+.popupContent-uitgelicht iframe {
+  display: block;
+  margin: 0 auto;
+}
+.popupContent-uitgelicht .top5 li,
+.popupContent-uitgelicht .top10 li {
+  display: block;
+  padding: 1em 0;
+  clear: both;
+}
+.popupContent-uitgelicht .top5 iframe,
+.popupContent-uitgelicht .top10 iframe {
+  margin: 0;
+}
+.popupContent-uitgelicht .list-number {
+  float: left;
+  margin-right: 1em; padding: .5em;
+  vertical-align: top;
+  background-color: #73a5d4;
+  color: #fff;
+  font-size: 2em;
+  font-family: 'Clarendon FS Medium',Georgia,serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.popupContent-uitgelicht .first .list-number{
+  background-color: #e7bf02;
+}
+.popupContent-uitgelicht .list-content img {
+  float: left;
+  margin-right: 1em;
+}
+/*@end */
+
+/* content styling ----------------- Elliot 2014-11-24 */
+.popupContent-uitgelicht .featured_img {
+  margin: -15px 0 -1em -30px;
+  width: 630px;
+  height: 200px;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  -ms-background-size: cover !important;
+  position:relative;
+}
+.popupContent-uitgelicht .featured_img:after {
+  content:"";
+  display:block;
+  position:absolute;
+  width:100%;
+  height:42px;
+  background:#FFF;
+  bottom:0;
+}
+
+.popupContent-uitgelicht h2 {
+  padding: 0.5em 0 0.5em;
+}
+.popupContent-uitgelicht img {
+  padding: 1.25em 0 0;
+  max-width: 100%;
+  height: auto;
+}
+.popupContent-uitgelicht center {
+}
+/*@end */
+
+/* @group uitklap promobanner */
+.menu_promobanner {
+  position: absolute;
+  display:inline-block;
+  width:450px;
+  height:auto;
+  bottom:0px;
+  right:0px;
+  padding:1em;
+  color:inherit;
+}
+/*@end*/

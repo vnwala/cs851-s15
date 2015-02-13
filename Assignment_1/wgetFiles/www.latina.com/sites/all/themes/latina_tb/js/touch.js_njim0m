@@ -1,0 +1,32 @@
+jQuery(document).ready(function($) {  
+	//homepage slider
+   $("#views-bootstrap-carousel-1").swiperight(function() {  
+      $("#views-bootstrap-carousel-1").carousel('prev');  
+    });  
+   $("#views-bootstrap-carousel-1").swipeleft(function() {  
+      $("#views-bootstrap-carousel-1").carousel('next');  
+   });
+	//most popular slideshows block
+   $("#myCarousel-popular").swiperight(function() {  
+      $("#myCarousel-popular").carousel('prev');  
+    });  
+   $("#myCarousel-popular").swipeleft(function() {  
+      $("#myCarousel-popular").carousel('next');  
+   });  
+	//slideshows
+   $("#myCarousel-sliders").swiperight(function() {  
+      $("#myCarousel-sliders").carousel('prev');  
+    });  
+   $("#myCarousel-sliders").swipeleft(function() { 
+     var href = $('a.slideshow-right').attr('href');
+     
+     if(href != '#myCarousel-sliders') {
+       // the last slide
+       window.location.href = href;
+     } else {
+       // interior slides
+       $("#myCarousel-sliders").carousel('next');
+     }     
+     
+   });    
+}); 

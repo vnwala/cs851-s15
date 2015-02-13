@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* CSS Document */
+img {
+border: 0;
+}
+
+#footer{
+	/* width:970px !important; */
+	width:960px !important;
+	padding:10px !important;
+	background-image:none !important;
+	height:auto !important;
+	/*position: relative; */
+    background-color: rgb(255, 255, 255); 
+    border-left: 1px solid rgb(214, 219, 224); 
+    border-right: 1px solid rgb(214, 219, 224); 
+    margin: -5px auto 0pt; 
+	width: 980px;
+}
+#footer #redesSociales{
+	color:#660000;
+	width:140px;
+	margin:0 10px 0 0;
+	float:left;
+}
+#footer #redesSociales span{
+	margin: 32px 0 6px 0;
+	text-align:left;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	display:block;
+}
+#footer #redesSociales .SocialIcon{
+	float:left;
+	margin-right:7px;
+}
+#footer #LigasFooter{
+	width:810px;
+	background:#ccc;
+	float:left;
+	margin-bottom:10px;
+}
+#footer #LigasFooter ul{
+	background:#336699;
+	list-style-type:none;
+	float:left;
+	margin:0;
+	padding:0;
+	width: 807px;
+}
+
+#footer #LigasFooter ul li{
+	border-right:1px dotted #003366;
+	padding: 8px 6px;
+	text-transform:uppercase;
+	font:9px Arial, Helvetica, sans-serif;
+	float:left;
+}
+#footer #LigasFooter ul li a{
+	color:#fff;
+}
+#footer #SeccionesFooter{
+	width:600px;
+	float:left;
+	margin:5px 0 10px;
+}
+#footer #SeccionesFooter ul{
+	float:left;
+	margin:0;
+	padding:0;
+	color:#660000;
+}
+
+#footer #SeccionesFooter ul li{
+	text-transform:uppercase;
+	font:10px Arial, Helvetica, sans-serif;
+	float:left;	
+}
+#footer #SeccionesFooter ul li a{
+	color:#333;
+/*	padding-right: 10px !important;*/
+}
+
+#footer .RedTitle{
+	text-align:left;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	display:block;
+	color:#660000;
+}
+#footer #LigasInternet{
+	float:right;
+	width:200px;
+	margin-top: -7px;
+}
+#footer #LigasInternet .empresa{
+	display:inline;
+	margin-left:10px
+}
+#footer #RedSitios{
+	padding: 10px;
+	background:#f5f5f5;
+	width:790px;
+	float:left;
+	border-top:1px dashed #ccc;
+}
+#footer #RedSitios .columna{
+	width:197px;
+	float:left;
+	font:11px Arial, Helvetica, sans-serif;
+}
+#footer #RedSitios .columna ul{
+	list-style-image:url(../img/v3/bulletRojo.png);
+	margin:0;
+	padding:0;
+	padding-left:10px;
+}
+#footer #RedSitios .columna ul li{
+	margin:0;
+	padding:1px 0;
+	line-height:9px;
+        text-align: left; 
+}
+#footer #RedSitios .columna ul li a{
+	color:#333;
+}
+#footer #RedSitios .columna span{
+	text-align: left;
+	font-weight:bold;
+	display: block;
+	color: #600;
+	margin-bottom:2px;
+}
+#footer #RedSitios .columna span .azul{
+	color: #369;
+	display:inline;
+}
+#footer #SeparaDotted{
+	border-bottom:1px dashed #ccc;
+	/* border-top:1px dashed #ccc; */
+	height:1px;
+	width:100%;
+}
+#footer #Derechos{
+	float:left;
+	width:250px;
+	text-transform:uppercase;
+}
+#footer #Derechos .gris{
+	color:#999;
+}
+#footer #Legales{
+	float:right;
+	width:710px;
+}
+#footer #Legales, #Derechos{
+	color:#333;
+	font:12px Arial, Helvetica, sans-serif;
+	margin-top:10px;
+}
+#footer a{
+text-decoration: none;
+}
+#footer #SeccionesFooter ul li.bulletSecciones{
+width:3px;
+height:11px;
+background:url(../img/v3/bulletRojo.png) no-repeat;
+margin:0 5px;
+}

@@ -1,0 +1,199 @@
+@charset "shift_jis";
+/* CSS Document */
+/*--------------------------------------------------
+	NAME
+	#category
+	http://www.famima.com/
+-------------------------------------------------- */
+
+/*===================================================================
+	layout
+===================================================================*/
+#hokkaido {
+	width: 700px;
+	margin: 0 auto;
+	padding: 0;
+	line-height: 1.5;
+	text-align: left;
+	color: #333;
+}
+
+#hokkaido #contentsArea {
+	margin-top: 5px;
+}
+
+#hokkaido .section {
+	clear: both;
+	padding-top: 1px;
+	background: url(http://www.famima.com/images/p/hokkaido/bg_dotline_01.gif) top left no-repeat;
+}
+
+#hokkaido .section .item_l {
+	clear: both;
+	padding: 0 1px;
+	background: url(http://www.famima.com/images/p/hokkaido/bg_dotline_02.gif);
+}
+
+#hokkaido .section .item_l .img {
+	float: left;
+	width: 336px;
+	margin-bottom: 19px;
+	padding: 19px 0 0 23px;
+	
+}
+
+#hokkaido .section .item_l .img ul.shop_img {
+	position: relative;
+	margin-top: 10px;
+}
+
+#hokkaido .section .item_l .img ul.shop_img li {
+	position: relative;
+	float:left;
+	width: 97px;
+	margin-right: 22px;
+}
+
+#hokkaido .section .item_l .img ul.shop_img li.last {
+	margin-right: 0;
+}
+
+#hokkaido .section .item_l .img ul.shop_img li p.cap {
+	margin-top: 2px;
+	text-align: center;
+	font-size: 100%;
+}
+
+#hokkaido .section .item_l .article {
+	position: relative;
+	float: right;
+	width: 293px;
+	min-height: 247px;
+	height: auto !important;
+	height: 247px;
+	margin-bottom: 19px;
+	padding: 19px 23px 0 0;
+	background: url(http://www.famima.com/images/p/hokkaido/bg_leaf.gif) bottom left no-repeat;
+}
+
+#hokkaido .section .item_l .article.article01 {
+	min-height: 345px;
+	height: auto !important;
+	height: 345px;
+}
+
+#hokkaido .section .item_l .article.article02 {
+	background: none;
+}
+
+#hokkaido .section .item_l .article .cap {
+	font-size: 120%;
+	line-height: 1;
+	font-weight: bold;
+}
+
+#hokkaido .section .item_l .article dl {
+	padding-bottom: 50px;
+}
+
+#hokkaido .section .item_l .article.article02 dl {
+	padding-bottom: 98px;
+}
+
+#hokkaido .section .item_l .article dt {
+	margin-top: 5px;
+	color: #4d0e00;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#hokkaido .section .item_l .article dd.price {
+	text-align: right;
+	font-size: 120%;
+}
+
+#hokkaido .section .item_l .article dd.txt p {
+	margin-top: 15px;
+}
+
+#hokkaido .section .item_l .article p.btn {
+	position: absolute;
+	right: 23px;
+	bottom: 0;
+}
+
+#hokkaido .section .item_l .article p.img2 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#hokkaido .section .item_s {
+	clear: both;
+	padding-left: 1px;
+	background: url(http://www.famima.com/images/p/hokkaido/bg_dotline_03.gif) repeat-y;
+}
+
+#hokkaido .section .item_s .col {
+	float:left;
+	width: 232px;
+	padding-right: 1px;
+	background: url(http://www.famima.com/images/p/hokkaido/bg_dotline_04.gif);
+}
+
+#hokkaido .section .item_s .img {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#hokkaido .section .item_s .article {
+	position: relative;
+	padding: 5px 12px 6px 12px;
+	background :url(http://www.famima.com/images/p/hokkaido/bg_dotline_05.gif) bottom left no-repeat;
+}
+
+#hokkaido .section .item_s .article dt {
+	color: #4d0e00;
+	font-weight: bold;
+}
+
+#hokkaido .section .item_s .article dd.price {
+	margin-top: 5px;
+	text-align: right;
+}
+
+#hokkaido .section .item_s .article dd.txt {
+	margin-top: 5px;
+	padding-bottom: 10px;
+}
+
+#hokkaido .section .item_s .article p.btn {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+/*===================================================================
+	module
+===================================================================*/
+
+/* ------ clearfix ------ */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { position:relative; display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+/* ------ clear ------ */
+.clear{ clear:both; display: block; font-size:1px; line-height:0px; }
+*html .clear{ height:0px; }
+
+
+
+@media print {
+	body { zoom: 1; }
+	#hokkaido .section.sec01 { page-break-after: always; }
+	#hokkaido .section .item_s .col { width: 230px; border-right: 1px dotted #9f2601; }
+}

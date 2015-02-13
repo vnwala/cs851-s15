@@ -1,0 +1,701 @@
+/************************************************************************************
+*   /global/js/cci-ads-inter.js                                                     *
+*                                                                                   *
+*   20120320    KPH     Removed dependencies on cci-lib-main.js                     *
+*   20120717    KPH     Prevent setting of cookie for ads when                      *
+*                       adFrequency in CCE object = -1 (for demo purposes only)     *
+*   20120822    KPH     Fix bug that caused -1 adFrequency ads to still increment   *
+*                       the pageview counter cookie                                 *
+*   20120823    KPH     Add support for UA-specific units                           *                                                                               
+*   20130123    KPH     Fix bug that caused counter to increment if                 *
+*                       an ad targeted specific sitepage(s) but did not             *
+*                       exclude any sitepage(s)                                     *
+*   20130306    KPH     Added debugging code                                        *
+*   20130311    KPH     Pass CCE object date to details page                        *
+*   20130422    SMB     Updated CCI.Ads.Interstitial.hideInterstitial to hide the   *
+*                       <iframe> container before initializing the $.unblockUI      *
+*                       to fix issue with interstitial not closing in IE 9-10       *
+*   20131111    KPH     Don't show interstitial if Access Control popup message     *
+*                       is isShowing                                                *
+*   20140114    KPH     Try to check the JSON representation of the programmed ad   *
+                        And prevent display if ad is empty                          *
+*   20140114    KPH     Fix bug in "isOnSitePage()" that caused pages like          *
+                        "/thispage" and "/this" to be considered matches            *
+*   20140414    KPH     Fix exposed/unconditional console.groupEnd() statement      *
+*   20140506    KPH     Fix bug where cookie not getting set for roadblocks         *
+*   20140506    KPH     Add support for third-party ads                             *
+*   20140611    KPH     Add toggling of debug output based on user agent            *
+*   20140611    KPH     Replace double // with / in sitePages (ZD 10553)            *
+*   20140702    KPH     Add support for overriding adType based on Xaxis metadata   *
+************************************************************************************/
+$("#cci-interstitial").css("display", "none");
+_CCI_debug = 0;
+try {
+_CCI_debug = (navigator.userAgent.match("ccidebug")) ? 1 : 0;
+} catch(e) {};
+
+if (_CCI_debug) {
+    console.info("CCE INTERSTITIAL ADS DEBUGGING:")
+}
+
+var CCI = CCI || {};
+CCI.Ads = {};
+CCI.Ads.util = {
+    "createCookie": function (bag) {
+        if (_CCI_debug) {
+            console.log("running createCookie...");
+        }
+        bag = bag || {};
+        var date, expires;
+        var rootDomain = "." + location.host.split(".").slice(-2).join('.');
+        if (bag.days) {
+            date = new Date();
+            date.setTime(date.getTime() + (bag.days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else if (bag.hours) {
+            date = new Date();
+            date.setTime(date.getTime() + (bag.hours * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else {
+            expires = "";
+        }
+
+        document.cookie = bag.name + "=" + escape(bag.value) + ((expires) ? ";expires=" + expires : "") + ((bag.path) ? ";path=" + bag.path : ";path=/") + ";domain=" + rootDomain + ((bag.secure) ? ";secure" : "");
+    },
+
+    "readCookie": function (bag) {
+        if (_CCI_debug) {
+            console.log("running readCookie...");
+        }
+        bag = bag || {};
+        if (_CCI_debug) {
+            console.log("testing for " + bag.name);
+        }
+        var nameEQ, ca, c;
+        nameEQ = bag.name + "=";
+        ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1, c.length);
+            }
+            if (c.indexOf(nameEQ) === 0) {
+                if (_CCI_debug) {
+                    console.log("return " + c.substring(nameEQ.length, c.length));
+                }
+                return c.substring(nameEQ.length, c.length);
+            }
+        }
+        if (_CCI_debug) {
+            console.log("return null");
+        }
+        return null;
+    },
+
+    "testForCookies": function () {
+        if (_CCI_debug) {
+            console.log("running testForCookies...");
+        }
+        var tmpcookie = new Date();
+        var chkcookie = (tmpcookie.getTime() + '');
+        document.cookie = "chkcookie=" + chkcookie + "; path=/";
+        if (document.cookie.indexOf(chkcookie, 0) < 0) {
+            return false;
+        } else {
+            return true;
+        }
+    },
+
+    "getCSCookie": function (bag) {
+        bag = bag || {};
+        demos = bag.demos || null;
+        cookieName = bag.cookieName || "CSDemos";
+        this.Cookie = null;
+        this.cookiesOn = CCI.util.testForCookies();
+        if (this.cookiesOn) {
+            csDemosCookie = CCI.util.readCookie({
+                name: cookieName
+            }) || 0;
+            if (csDemosCookie) {
+                csDemosCookie = csDemosCookie.replace(/\"/g, "");
+                csDemosSplit = csDemosCookie.split("|");
+                this.Cookie = {};
+
+                for (i = 0; i < csDemosSplit.length; i++) {
+                    demo = csDemosSplit[i].split(":");
+                    demoName = demo[0];
+                    demoVal = demo[1];
+                    if (demos) {
+                        if (CCI.util.inArray(demos, demoName)) {
+                            this.Cookie[demoName] = demoVal;
+                        }
+                    } else {
+                        this.Cookie[demoName] = demoVal;
+                    }
+                }
+            }
+        }
+        return this;
+    },
+
+    "countSessionViews": function (bag) {
+        if (_CCI_debug) {
+            console.log("running countSessionViews...");
+        }
+        bag = bag || {};
+        var counterCookieName = bag.counterCookieName || "cciCounter";
+        var counterOffset = bag.counterOffset || 1;
+        var counterReset = bag.counterReset || 0;
+        var cookiesOn = CCI.Ads.util.testForCookies();
+        if (cookiesOn) {
+            var counter = CCI.Ads.util.readCookie({
+                name: counterCookieName
+            });
+            if (counter) {
+                var counterval = (Math.abs(counter) + counterOffset);
+            } else if (counterReset) {
+                var counterval = 0;
+            } else {
+                var counterval = 1;
+            }
+            CCI.Ads.util.createCookie({
+                name: counterCookieName,
+                value: counterval,
+                days: 0
+            });
+        }
+    }
+};
+
+CCI.Ads.Interstitial = {
+    "InitializeTimer": function (bag) {
+        bag = bag || {};
+        var secs;
+        var timerID = null;
+        var timerRunning = false;
+        var delay = 1000;
+
+        secs = bag.s;
+
+        timerRunning = CCI.Ads.Interstitial.StopTheClock({
+            timerRunning: timerRunning
+        });
+        timerRunning = CCI.Ads.Interstitial.StartTheTimer({
+            secs: secs,
+            timerRunning: timerRunning,
+            delay: delay
+        });
+    },
+
+    "StopTheClock": function (bag) {
+        bag = bag || {};
+        if (bag.timerRunning) {
+            clearTimeout(timerID);
+        }
+        return (timerRunning = false);
+    },
+
+    "StartTheTimer": function (bag) {
+        bag = bag || {};
+        secs = bag.secs;
+        delay = bag.delay;
+
+        timerRunning = bag.timerRunning;
+
+        if (secs == 1) {
+            CCI.Ads.Interstitial.StopTheClock({
+                timerRunning: timerRunning
+            });
+            CCI.Ads.Interstitial.hideInterstitial();
+        } else {
+            self.status = secs;
+            secs = secs - 1;
+            timerRunning = true;
+            if (secs == 1) {
+                $("#secondHolder").html(secs + " second");
+            } else {
+                $("#secondHolder").html(secs + " seconds");
+            }
+            timerID = self.setTimeout("CCI.Ads.Interstitial.StartTheTimer({secs: secs, timerRunning: timerRunning, delay: delay})", delay);
+        }
+        return timerRunning;
+    },
+
+    "hideInterstitial": function () {
+        $("#cci-interstitial, #cci-floater").hide();
+        $("body").css("overflow", "visible");
+        $.unblockUI();
+        CCI.Ads.Interstitial.isShowing = false;
+        if (document.querySelector) {
+            if (document.querySelector('meta[name="viewport"]') != null) {
+                CCI.Ads.Interstitial.modViewport({
+                    viewport: "width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=1"
+                });
+            }
+        }
+    },
+
+    "getViewport": function () {
+        var e = window,
+            a = 'inner';
+
+        if (!('innerWidth' in window)) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+
+        return {
+            width: e[a + 'Width'],
+            height: e[a + 'Height']
+        };
+    },
+
+    "modViewport": function (params) {
+
+        params = params || {};
+
+        if (params.viewport) {
+            var viewportmeta = document.querySelector('meta[name="viewport"]');
+            viewportmeta.content = params.viewport;
+        }
+
+        if (document.querySelector('meta[name="viewport"]') == null) {
+            // Create the meta viewport tag and add it in to the header
+            var viewportmeta = document.createElement('meta');
+            viewportmeta.name = "viewport";
+            viewportmeta.content = "width=device-width, initial-scale=0.95, maximum-scale=0.95, minimum-scale=0.95, user-scalable=0";
+
+            document.getElementsByTagName('head')[0].appendChild(viewportmeta);
+
+            var viewportmeta = document.querySelector('meta[name="viewport"]');
+
+            if (viewportmeta) {
+                document.addEventListener('orientationchange', function () {
+                    if ($('.blockUI').length > 0) {
+                        var dim = CCI.Ads.Interstitial.getViewport();
+                        $('.blockUI,body,#blockUIMSCr').css('width', dim.width);
+                        $('.blockUI').css('height', dim.height);
+                    }
+                }, false);
+            }
+        }
+    },
+
+    "showIt": function (params) {
+        var debug = _CCI_debug || params.debug || 0;
+        params = params || {};
+        var is_mobile = false;
+        var adType = params.adType.toLowerCase();
+        var showOnView = params.showOnView || 1;
+        var groupId = params.groupId;
+        var cceId = params.cceId || 0;
+        if (_CCI_debug) {
+            console.group("CCE ID: " + cceId);
+        }
+        var cceDate = params.cceDate || 0;
+        var lastCache = params.cci_lastCache || 0;
+        var cookiesOn = CCI.Ads.util.testForCookies();
+        var cookieName = params.cookieName;
+        var counterCookie = cookieName + "_counter";
+        var currentPageCount = CCI.Ads.util.readCookie({
+            "name": counterCookie
+        });
+        var hours = params.adFrequency || 24;
+        var seenIt = CCI.Ads.util.readCookie({
+            name: cookieName
+        });
+        var adCode = params.adCode || 0;
+        var adCode_decoded = adCode ? decodeURIComponent(adCode) : 0;
+        var adUrlDX = adCode_decoded ? adCode_decoded.replace(/\r\n/g, "").replace(/^.*(https*:\/\/.*)\/adstream_jx\.cgi\/(.*)(\".*)$/, "$1/adstream_dx.ads/jsonp/$2") : 0; // 20140114 KPH : transform the JX tag in the adCode field to the DX/JSON URL
+        adUrlDX = (adUrlDX.indexOf("http") == 0) ? adUrlDX : 0; // 20140114 KPH : simple check to make sure the above regex worked; could be improved later...
+        var autoCloseTimeSecs = params.autoCloseTime || 10;
+        var ad_height = params.ad_height || 480;
+        var ad_width = params.ad_width || 640;
+        var ad_referrerPattern = params.ad_referrerPattern || 0;
+        var ad_urlExcludePattern = params.ad_urlExcludePattern || 0;
+        var ad_urlPattern = params.ad_urlPattern || 0;
+        var ad_uaInclude = params.ad_uaInclude || 0;
+        var ad_uaExclude = params.ad_uaExclude || 0;
+        var ad_urlPattern = params.ad_urlPattern || 0;
+        var ad_opacity = params.ad_opacity || 0.6;
+        var ad_border = params.ad_border || "3px solid #aaa";
+        var cci_module = 49;
+        var cci_class = 490;
+        var cci_type = 4900;
+        var cci_skipText = params.ad_skipText || "Skip this introductory page and go to the site";
+        cci_skipText = unescape(cci_skipText);
+        var autoCloseTimeMilli = autoCloseTimeSecs * 1000;
+        var isOAS = (typeof OAS_sitepage !== "undefined") ? true : false;
+        var isDART = (typeof dc_cat !== "undefined") ? true : false;
+        var sitePageString = isOAS ? OAS_sitepage : isDART ? dc_cat : 0;
+        var acPopup = (function () {
+            try {
+                return CCI.AccessControl.extLoginPopupMsg || false;
+            } catch (e) {
+                return false;
+            }
+        })();
+
+        //Make sure the initial zoom is set at 1 for iPhone
+        // MUST RUN BEFORE GETTING THE VIEWPORT SIZE
+        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/BlackBerry/i)) {
+            CCI.Ads.Interstitial.modViewport();
+            is_mobile = true;
+        }
+
+        var viewport = CCI.Ads.Interstitial.getViewport();
+
+        // work through a truth table to see if the current page
+        // is valid for this ad
+        var isOnSitePage = (function () {
+            var pageMatch = false;
+            var currentSitePage = sitePageString ? sitePageString.replace(/\/$/, "").replace(/\/+/g,"/") + "/" : 0; // 20140114 KPH - standardize site pages to end in / to avoid partial matches like /thispage and /this
+            var sitePagesArr = [];
+            var sitePagesExcludeArr = [];
+            if (currentSitePage) {
+                if (ad_urlPattern) {
+                    sitePagesArr = ad_urlPattern.split(",")
+                } else {
+                    sitePagesArr.push(currentSitePage);
+                }
+                if (ad_urlExcludePattern) {
+                    sitePagesExcludeArr = ad_urlExcludePattern.split(",");
+                }
+                for (i = 0; i < sitePagesArr.length; i++) {
+                    var thisSitePage = sitePagesArr[i].replace(/\/$/, "") + "/"; // 20140114 KPH - standardize site pages to end in / to avoid partial matches like /thispage and /this
+                    if (_CCI_debug) {
+                        console.log("currentSitePage = " + currentSitePage);
+                        console.log("thisSitePage = " + thisSitePage)
+                    }
+                    if (currentSitePage.indexOf(thisSitePage) != -1) {
+                        // TODO fix this to ensure this is a more precise match
+                        pageMatch = true;
+                        break;
+                    }
+                }
+                for (j = 0; j < sitePagesExcludeArr.length; j++) {
+                    var thisSitePageExclusion = sitePagesExcludeArr[j].replace(/\/$/, "") + "/"; // 20140114 KPH - standardize site pages to end in / to avoid partial matches like /thispage and /this
+                    if (currentSitePage.indexOf(thisSitePageExclusion) != -1) {
+                        pageMatch = false;
+                        break;
+                    }
+                }
+            }
+            return pageMatch;
+        })();
+
+        var isOnValidUA = (function () {
+            var uaMatch = false;
+            var currentUA = navigator.userAgent || 0;
+            var uaIncludeArr = [];
+            var uaExcludeArr = [];
+            if (currentUA) {
+                currentUA = currentUA.toLowerCase();
+                if (ad_uaInclude) {
+                    ad_uaInclude = ad_uaInclude.toLowerCase();
+                    uaIncludeArr = ad_uaInclude.split(",")
+                } else {
+                    uaIncludeArr.push(currentUA);
+                }
+                if (ad_uaExclude) {
+                    ad_uaExclude = ad_uaExclude.toLowerCase();
+                    uaExcludeArr = ad_uaExclude.split(",");
+                }
+                for (i = 0; i < uaIncludeArr.length; i++) {
+                    var thisUA = uaIncludeArr[i];
+                    if (currentUA.indexOf(thisUA) != -1) {
+                        uaMatch = true;
+                        break;
+                    }
+                }
+                for (j = 0; j < uaExcludeArr.length; j++) {
+                    var thisExcludedUA = uaExcludeArr[j];
+                    if (currentUA.indexOf(thisExcludedUA) != -1) {
+                        uaMatch = false;
+                        break;
+                    }
+                }
+            }
+            return uaMatch;
+        })();
+
+        // if user has no Group ID, set it to -1, then see if the user's Group ID matches the targeted Group ID in CCE object
+        var isGroupIDMatch = (function () {
+            // console.info("isGroupIDMatch start");
+            // console.log("groupId: " + groupId)
+            if (groupId == null) {
+                return true; // groupId was left blank in CCE, so this ad is OK to show to everyone
+            }
+            var currentGID;
+            var userCookie = CCI.Ads.util.getCSCookie();
+            if (!userCookie.Cookie) {
+                currentGID = "-1"; // if user doesn't have CSDemos, treat their GID as -1
+            } else {
+                currentGID = userCookie.Cookie.GID || 0;
+                currentGID = currentGID + "";
+            }
+            // console.log("currentGID: " + currentGID);
+            // console.log("groupId: " + groupId);
+            if (currentGID == groupId) {
+                return true;
+            }
+            return false; // if we get here, then the above tests failed, a GID is set on the ad and the GID didn't match the user's GID
+        })();
+
+        // set the page count cookie as appropriate
+        if (hours > -1) {
+            if (isOnSitePage && isOnValidUA && !acPopup && !CCI.Ads.Interstitial.isShowing) {
+                // 20140114 KPH: Fix bug where if 2 active ads could be shown on a pageview, the non-showing interstitial was having the counter cookie updated. The non-showing interstitial should not have the counter updated because it would be skipped on the next page view since the counter would be > 0
+                if (_CCI_debug) {
+                    console.log("is on site page match and valid UA match and no other interstitial is showing, increment cookie...");
+                }
+                CCI.Ads.util.countSessionViews({
+                    counterCookieName: counterCookie
+                });
+            } else {
+                if (_CCI_debug) {
+                    console.log("is not a site page match or ua match, or another interstitial is showing, so do nothing...");
+                }
+            }
+        }
+
+        var current_pageView = CCI.Ads.util.readCookie({
+            name: counterCookie
+        }) || 1;
+
+
+
+
+        var displayInterstitial = function (bag) {
+			// 20140114 KPH : Moved all the code related to actually getting/showing the interstitial into a function to make it easier to incorporate the DX/JSON check
+			// 20140702 KPH : Add options for displayInterstitial
+            var bag = bag || {};
+            var adTypeOverride = bag.adTypeOverride || 0;
+            if (adTypeOverride) {
+                adType = adTypeOverride;
+            }
+            var adCampKey = bag.adCampKey || 0;
+            
+            if (_CCI_debug) {
+                console.log("running displayInterstitial...");
+                console.log("adType to use: " + adType);
+            }
+
+            // Display the ad depending on the ad type                              
+
+            //var countdownDiv="#countdown";
+            var floater_opacity = ad_opacity;
+            var floater_border = ad_border;
+
+            // Account for the auto margin on the iframes <body>
+            ad_width = ad_width + 16;
+            ad_height = ad_height + 16;
+            var urlToGet = "/section/cci?template=InterAds";
+            if (adType == "thirdparty") {
+                urlToGet += "ThirdParty";
+            }
+            if (adCampKey) {
+                urlToGet += "&cci_campKey=" + adCampKey; // KPH 20140703 append the campaign key, to be passed into search term targeting to make sure we get correct ad in the JX call;
+            }
+            urlToGet += "&cci_module=" + cci_module + "&cci_class=" + cci_class + "&cci_type=" + cci_type + "&cci_id=" + cceId + "&cci_width=" + ad_width + "&cci_height=" + ad_height + "&cci_date=" + cceDate + "&cci_lastCache=" + lastCache;
+            
+            $.ajax({
+                url: urlToGet,
+                datatype: "html",
+                async: false,
+                cache: false,
+                success: function (data) {
+                    if (adType == "roadblock") {
+                        // roadblock stuff
+                        $("#cci-interstitial").css("display", "block");
+                        $("body").css("overflow", "hidden");
+                        $("#cci-interstitial").prepend("<div id='cci-roadBlock-skipBox-container'><div id='cci-roadBlock-skipBox-logo'></div><div id='cci-roadBlock-skipBox-right'><a href=\"javascript:void CCI.Ads.Interstitial.hideInterstitial();\">" + cci_skipText + "</a><div id='cci-roadBlock-countDown'>Going to the site in <span id='secondHolder' style='margin:2px;'></span></div></div></div>" + data);
+                    } else if (adType == "thirdparty") {
+                        $("body").append(data);
+                    } 
+                    else {
+                        $('#cci-floater').ready(function () {
+                            if (!is_mobile) {
+                                var cssTop = (viewport.height - ad_height) / 2 + 'px';
+                                var cssLeft = (viewport.width - ad_width) / 2 + 'px';
+                                var interWidth = ad_width + 16;
+                                var interHeight = ad_height + 48;
+                                var uiBlockMsg = "<div id='cci-floater-skipBox'><a href='javascript:void(0);' onclick='CCI.Ads.Interstitial.hideInterstitial();'>" + cci_skipText + "</a><div id='cci-floater-countDown'>Going to the site in <span id='secondHolder'></span></div></div>" + data;
+                                var uiBlockBg = "#FFFFFF";
+                                var uiOverBg = "#000";
+
+                            } else {
+
+                                var cssTop = '0px';
+                                var cssLeft = '0px';
+                                var interWidth = viewport.width;
+                                var interHeight = viewport.height;
+                                var uiBlockMsg = "<a id='cci-floater-mobile-close' href='javascript:void(0);' onclick='CCI.Ads.Interstitial.hideInterstitial();'></a><div id='cci-floater-skipBox'><div id='cci-floater-countDown'>Advertisement will end in <span id='secondHolder'></span></div></div>" + data;
+                                var uiBlockBg = "transparent";
+                                var uiOverBg = "#666";
+                                cci_skipText = "Skip this advertisement &raquo;";
+                                floater_border = "none";
+                                floater_opacity = 1;
+
+                            }
+
+                            $.blockUI({
+                                message: uiBlockMsg,
+                                css: {
+                                    top: cssTop,
+                                    left: cssLeft,
+                                    width: interWidth,
+                                    height: interHeight,
+                                    border: floater_border,
+                                    backgroundColor: uiBlockBg
+                                },
+                                overlayCSS: {
+                                    opacity: floater_opacity,
+                                    backgroundColor: uiOverBg
+                                },
+                                baseZ: '6000000' // KPH 20140729 comply with IAB z-index guidelines for full page units; overrides default z-index of 1000
+                            });
+
+
+
+                            // Add in the close message for mobile if is mobile
+                            if (is_mobile) {
+                                var $height;
+
+                                $('#cci-floater')
+                                    .css('width', '100%')
+                                    .load(function () {
+
+                                        $(this)
+                                            .contents()
+                                            .find('body')
+                                            .css('margin', '0')
+                                            .css('padding', '0')
+                                            .find('img')
+                                            .css('display', 'block')
+                                            .css('margin', '0 auto');
+
+                                        $height = $('#cci-floater').contents().find('img').height();
+
+                                        $(this).css('height', $height + 'px');
+
+                                    });
+
+                                $('#cci-floater')
+                                    .after("<a id='cci-mobile-skip-message' href='javascript:void(0);' onclick='CCI.Ads.Interstitial.hideInterstitial();'>" + cci_skipText + "</a>");
+
+                            }
+                        });
+                    } // end floater-specific logic
+                            //Set cookie
+                            if (hours > -1) {
+                                CCI.Ads.util.createCookie({
+                                    hours: hours,
+                                    name: cookieName,
+                                    value: "1"
+                                });
+                            } else {
+                                CCI.Ads.util.countSessionViews({
+                                    counterCookieName: counterCookie,
+                                    counterOffset: -1
+                                });
+                            }
+                        
+                    
+                    CCI.Ads.Interstitial.InitializeTimer({
+                        s: autoCloseTimeSecs
+                    });
+                    setTimeout("CCI.Ads.Interstitial.hideInterstitial();", autoCloseTimeMilli);
+                }
+            });
+        }
+
+        var interIsShowing = CCI.Ads.Interstitial.isShowing || 0;
+
+        if (_CCI_debug) {
+            console.log("current_pageView = " + current_pageView);
+            console.log("showOnView = " + showOnView);
+            console.log("seenIt = " + seenIt);
+            console.log("isOnSitePage = " + isOnSitePage);
+            console.log("isOnValidUA = " + isOnValidUA);
+            console.log("interIsShowing = " + interIsShowing);
+            console.log("groupId = " + groupId);
+            console.log("acPopup = " + acPopup);
+        }
+        if (
+            cookiesOn &&
+            (current_pageView == showOnView) &&
+            seenIt === null &&
+            isOnSitePage &&
+            isOnValidUA &&
+            isGroupIDMatch && !interIsShowing && !acPopup // KPH 20131111 added for MH access control
+        ) {
+
+            CCI.Ads.Interstitial.isShowing = true; // prevent other interstitials coded on the page from showing
+
+            if (adUrlDX) {
+                // 20140114 KPH : get the JSON representation of the ad using *DX* to make sure it is not empty before serving the *JX* tag to the user
+                if (_CCI_debug) {
+                    console.info("try to get DX info...");
+                }
+                $.ajax({
+                    url: adUrlDX,
+                    jsonp: "_RM_HTML_CALLBACK_",
+                    dataType: "jsonp",
+                    async: false,
+                    success: function (d) {
+                        if (_CCI_debug) {
+                            console.log("running processing JSONP response...");
+                        }
+                        var dxAdResponse = d.Ad || [];
+                        if (_CCI_debug) {
+                            console.log("dxAdResponse:");
+                        }
+                        if (_CCI_debug) {
+                            console.dir(dxAdResponse);
+                        }
+                        if (dxAdResponse.length > 0) {
+							// 20140702 KPH: if Extra HTML field in Xaxis creative metadata has data-cci-nostyles attribute, set the adType to "thirdparty" when displayInterstitial() is called
+                            var dxAdInfo = dxAdResponse[0];
+                            var adExtraHT = dxAdInfo.ExtraHT || 0;
+                            var adCampKey = dxAdInfo.CampKey || 0;
+                            var noStyles = (adExtraHT && adExtraHT.match("data-cci-nostyles")) ? 1 : 0;
+                            var displayParams = {}; // 20140805 KPH selectively apply params for CCB workaround
+                            if (location.host.match("chicagobusiness.com") || noStyles) {
+                                 if (_CCI_debug) {
+                                    console.log("including campaign key in ad request");
+                                }
+                                displayParams["adCampKey"] = adCampKey;
+                            }
+                            if (noStyles) {
+                                if (_CCI_debug) {
+                                    console.log("overriding the ad type because ad contains magic word");
+                                }
+                                displayParams["adTypeOverride"] = "thirdparty";
+                            }
+                            displayInterstitial(displayParams); // 20140114 KPH: Ad object in DX response is not empty, so get and display the floater/roadblock using the JX tag as we always have done
+                        } else {
+                            if (_CCI_debug) {
+                                console.info("ad was empty in DX response."); // 20140114 KPH: ad is empty, do nothing
+                            }
+                        }
+                    }
+                });
+            } else {
+                // 20140114 Couldn't get the DX URL based on the Saxotech adcode, so just blindly show the ad before querying the ad server, as before
+                if (_CCI_debug) {
+                    console.info("could not construct DX query based on JX tag in Saxotech, serving ad code from Saxotech anyway");
+                }
+                displayInterstitial();
+            }
+        } else {
+            // 20140114 KPH: if we get here, the ad is not supposed to be shown based on other criteria (wrong sitepage, user is cookied, etc.)
+            if (_CCI_debug) {
+                console.info("interstitial should not be shown, do not even query OAS");
+            }
+        }
+        if (_CCI_debug) {
+        console.groupEnd("CCE ID: " + cceId);
+        }
+    }
+};

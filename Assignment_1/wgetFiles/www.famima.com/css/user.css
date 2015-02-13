@@ -1,0 +1,355 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	ユーザー定義　ヘッダー
+--------------------------------------------------------------------- */
+#header {
+	width: 100%;
+/*	height: 65px;*/
+	height: 85px;
+	overflow: hidden;
+	border-bottom: 1px solid #CCC;
+}
+#index #header {
+	margin-bottom: 10px;
+}
+#header #sitelogo {
+	margin: 27px 0 0 0;
+	padding: 0;
+	float: left;
+}
+#header .header_center_ {
+	padding: 4px 9px 0 8px;
+	float: left;
+	width: 584px;
+	overflow: hidden;
+}
+/* グローバルナビゲーション */
+#header #globalnav {
+/*	margin-bottom: 10px;*/
+	margin-bottom: 7px;
+	padding-bottom: 1px;
+	float: right;
+	width: 360px;
+	height: 22px;
+	overflow: hidden;
+	border-bottom: 1px solid #CCC;
+}
+#header #globalnav li {
+	float: left;
+}
+#header #globalnav li a {
+}
+#header #globalnav li a:hover {
+}
+/* ユーザー情報 */
+#header #userName {
+	clear: both;
+	display: inline;
+	overflow: hidden;
+}
+#header #userName img {
+}
+#header #userName #txt_special,
+#header #userName #btn_entry,
+#header #userName #txt_welcome,
+#header #userName #linkLogout,
+#header #userName #txt_point {
+	float: left;
+}
+#header #userName #txt_special,
+#header #userName #btn_entry,
+#header #userName #txt_welcome,
+#header #userName #linkLogout {
+/*	margin-right: 10px;*/
+	margin-right: 5px;
+}
+#header #userName #txt_welcome,
+#header #userName #linkLogout {
+	padding-top: 3px;
+	font-size: 10px;
+}
+#header #userName #txt_point {
+	font-size: 10px;
+}
+/* 買い物かごエリア */
+#header #cartInner {
+	margin-top: 2px;
+	padding: 5px;
+	float: right;
+	width: 230px;
+	overflow: hidden;
+	background: #F2EED2;
+}
+#header #cartInner #btn_login {
+	padding-bottom: 4px;
+	float: right;
+}
+#header #cartInner #cart_headline {
+	padding-top: 7px;
+	font-size: 10px;
+}
+#header #cartInner .cart_frame_ {
+	padding: 2px;
+	clear: both;
+	width: 226px;
+	overflow: hidden;
+	background: #FFF;
+}
+#header #cartInner .cart_frame_ .cart_total_ {
+	padding: 2px 0 0 15px;
+	float: left;
+	width: 115px;
+	overflow: hidden;
+	background: url(http://www.famima.com/img/usr/icon_cart.png) 0px 4px no-repeat;
+}
+#header #cartInner .cart_frame_ .cart_total_ dt {
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-size: 10px;
+	white-space: nowrap;
+}
+#header #cartInner .cart_frame_ .cart_total_ dd {
+	margin: 0;
+	padding: 0;
+	float: left;
+	color: #000;
+	text-align: left;
+	font-size: 10px;
+	font-weight: normal;
+	white-space: nowrap;
+}
+#header #cartInner .cart_frame_ .cart_to_order_ {
+	float: right;
+}
+#header_search {
+	margin: 0 auto 10px;
+	padding: 5px 0 0 0;
+	clear: both;
+	width: 800px;
+	height: 25px;
+	overflow: hidden;
+}
+#header_search h2 {
+	float: left;
+}
+#header_search form {
+	float: left;
+}
+#header_search .keyword_ {
+	font-size: 14px;
+	width: 520px;
+	background: #FFF;
+	border: 1px solid #CCC;
+}
+#header_search .more_ {
+	padding: 2px 0 0 0;
+	float: right;
+	font-size: 10px;
+}
+/* --------------------------------------------------------------------
+	ユーザー定義　ビジュアル
+--------------------------------------------------------------------- */
+.visual_ {
+	margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------
+	ユーザー定義　フッター
+--------------------------------------------------------------------- */
+#footer {
+	margin-top: 20px;
+	clear: both;
+}
+#footer .footer_inner_ {
+	margin: 0 auto 10px auto;
+	width: 960px;
+	overflow: hidden;
+}
+#footer .footer_inner_ .footer_left_ {
+	margin-right: 10px;
+	float: left;
+}
+#footer .footer_inner_ .footer_left_ img,
+#footer .footer_inner_ .footer_left_ object,
+#footer .footer_inner_ .footer_left_ embed {
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+#footer .footer_inner_ .footer_center_ {
+	padding-top: 15px;
+	float: left;
+}
+#logo_company {
+	margin-bottom: 10px;
+	text-align: left;
+}
+#footernav {
+}
+#footernav li {
+	padding: 0 10px 0 15px;
+	display: inline;
+	background: url(http://www.famima.com/img/usr/tree1.png) left center no-repeat;
+}
+#footernav li.first_ {
+}
+#footer .footer_inner_ .footer_right_ {
+	padding-top: 20px;
+	float: right;
+}
+#copyright {
+	padding-top: 7px;
+	color: #FFF;
+	text-align: center;
+	height: 22px;
+	background: url(http://www.famima.com/img/usr/footer_copy_back.png) center bottom repeat-x;
+}
+
+
+
+/* --------------------------------------------------------------------
+	ユーザー定義　ショップ一覧
+--------------------------------------------------------------------- */
+.shopList_Frame_ {
+	padding-bottom: 10px;
+	width: 710px;
+	overflow: hidden;
+}
+.shopList_Item_ {
+	margin: 0 8px 10px 0;
+	padding: 5px 6px 0 6px;
+	float: left;
+	display: inline;
+	border: 1px solid #CCC;
+}
+
+.shopList_Item_ .name_ {
+	margin-bottom: 5px;
+	background: url(http://www.famima.com/img/usr/back_ami.png);
+}
+.shopList_Item_ .name_ span {
+	padding: 5px;
+	display: block;
+	font-weight: bold;
+}
+.shopList_Item_ .img_ {
+	margin-bottom: 10px;
+	text-align: center;
+	width: 153px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+
+.shopList_Item_ .comment_ {
+	margin: 0 1px 10px 1px;
+	font-size: 10px;
+}
+/* 画像ありの場合 */
+.shopList_Item_.yesimg_ {
+	width: 157px;
+}
+.shopList_Item_.yesimg_ .name_ span {
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	background: url(http://www.famima.com/img/usr/h_shoplist_s.png) 0 6px no-repeat;
+}
+
+/*
+! ピックアップ　画像あり大表示（画像幅188px） !
+各セレクタのシャープ(#)の直後に、該当カテゴリのIDを設定してください。
+*/
+.shopList_Item_.yesimg_#cgotochi,
+.shopList_Item_.yesimg_#cgourmet,
+.shopList_Item_.yesimg_#cchara,
+.shopList_Item_.yesimg_#cfashion,
+.shopList_Item_.yesimg_#cselect {
+	width: 332px;
+}
+.shopList_Item_.yesimg_#cgotochi .name_ span,
+.shopList_Item_.yesimg_#cgourmet .name_ span,
+.shopList_Item_.yesimg_#cchara .name_ span,
+.shopList_Item_.yesimg_#cfashion .name_ span,
+.shopList_Item_.yesimg_#cselect .name_ span {
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	background: url(http://www.famima.com/img/usr/h_shoplist_s.png) 0 6px no-repeat;
+}
+.shopList_Item_#cgotochi .img_,
+.shopList_Item_#cgourmet .img_,
+.shopList_Item_#cchara .img_,
+.shopList_Item_#cfashion .img_,
+.shopList_Item_#cselect .img_ {
+	margin: 0 5px 5px 0;
+	float: left;
+	text-align: center;
+	width: 190px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+.shopList_Item_#cgotochi .comment_,
+.shopList_Item_#cgourmet .comment_,
+.shopList_Item_#cchara .comment_,
+.shopList_Item_#cfashion .comment_,
+.shopList_Item_#cselect .comment_ {
+	margin: 0 0 10px 0;
+	float: left;
+	font-size: 10px;
+	width: 135px;
+}
+.shopList_Frame_ #cselect {
+	margin-right: 342px!important;/* 改行させるためのIE6対策 */
+}
+.shopList_Item_#chands h3.name_ span,
+.shopList_Item_#cjieitai h3.name_ span,
+.shopList_Item_#cgarden h3.name_ span,
+.shopList_Item_#cmuji h3.name_ span {
+	font-size: 10px;
+}
+
+/* ! ピックアップ　画像あり大表示（画像幅188px）ここまで ! */
+
+/* 画像なしの場合 */
+.shopList_Item_.noimg_ {
+	clear: both;
+	width: 686px;
+}
+.shopList_Item_.noimg_ .name_ span {
+	padding: 6px 6px 6px 30px;
+	font-size: 14px;
+	background: url(http://www.famima.com/img/usr/h_shoplist_l.png) 3px 4px no-repeat;
+}
+/**/
+
+
+/* --------------------------------------------------------------------
+	ユーザー定義　Light Box
+--------------------------------------------------------------------- */
+#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(http://www.famima.com/img/usr/lightBox/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(http://www.famima.com/img/usr/lightBox/nextlabel.gif) right 15% no-repeat; }
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }

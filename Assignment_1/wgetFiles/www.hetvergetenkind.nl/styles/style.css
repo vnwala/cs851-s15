@@ -1,0 +1,1423 @@
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                     MAIN                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@font-face {
+    font-family: 'DINPro';
+    src: url('fonts/dinpro-regular-webfont.eot');
+    src: url('fonts/dinpro-regular-webfont.eot?') format('embedded-opentype'),
+         url('fonts/dinpro-regular-webfont.woff') format('woff'),
+         url('fonts/dinpro-regular-webfont.ttf') format('truetype'),
+         url('fonts/dinpro-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('fonts/dinpro-bold-webfont.eot');
+    src: url('fonts/dinpro-bold-webfont.eot?') format('embedded-opentype'),
+         url('fonts/dinpro-bold-webfont.woff') format('woff'),
+         url('fonts/dinpro-bold-webfont.ttf') format('truetype'),
+         url('fonts/dinpro-bold-webfont.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DINProMedium';
+    src: url('fonts/dinpro-medium-webfont.eot');
+    src: url('fonts/dinpro-medium-webfont.eot?') format('embedded-opentype'),
+         url('fonts/dinpro-medium-webfont.woff') format('woff'),
+         url('fonts/dinpro-medium-webfont.ttf') format('truetype'),
+         url('fonts/dinpro-medium-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: #F5E300;
+}
+
+h1 {
+	font-family: 'DINPro';
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.btn {
+	color: #FFFFFF;
+    display: inline-block;
+    font-family: 'DINPro';
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    padding: 0 12px;
+    text-transform: uppercase;
+}
+.btn a {
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+}
+
+.btn-blue {
+	background-color: #12ADDE;
+}
+
+.btn-black {
+	background-color: #000000;
+}
+
+.caption {
+    width: 829px;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                  INFOBAR                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#infobar {
+	background-color: #000000;
+    bottom: 0;
+    display: none;
+    opacity: 0.85;
+    position: fixed;
+    width: 100%;
+    z-index: 202;
+}
+#infobar .container {
+	height: 100%;
+	margin: 0 auto;
+    width: 1024px;
+}
+#infobar .container .left {
+	height: 100%;
+	position: relative;
+    width: 210px;
+}
+#infobar .container .left p {
+	font-family: 'DINProMedium';
+    font-size: 14px;
+}
+#infobar .container .right {
+	height: 100%;
+	margin: 0 25px 0 0;
+    width: 745px;
+}
+#infobar .container .right p {
+	font-family: 'DINPro';
+    font-size: 13px;
+}
+#infobar .container .close {
+    left: -20px;
+    position: absolute;
+    top: 17px;
+}
+#infobar .container span.green {
+	color: #B1C700
+}
+#infobar .container span.red {
+	color: #E7004D;
+}
+
+/* C O N T A I N E R */
+#container {
+	background-color: #000000;
+    margin: 0 auto;
+    width: 1300px;
+}
+
+#top {
+	background: url('../images/layout/top-bg.png') no-repeat scroll 0 0 transparent;
+	background-color: #E7004D;
+	height: 125px;
+    position:relative;
+}
+
+#top #logo {
+	height: 125px;
+	margin: 0 0 0 180px;
+	width: 220px;
+}
+
+#top #navigation {
+	height: 125px;
+	position: relative;
+	width: 900px;
+}
+
+#top-nav {
+	height: 18px;
+	position:absolute;
+    bottom:8px;
+    right:150px;
+}
+
+#top-nav ul#nav {
+	list-style: none outside none;
+	margin: 0;
+    padding:0;
+}
+
+#top-nav ul#nav > li {
+	float: left;
+	margin-left: 35px;
+}
+
+#top-nav ul#nav > li:first-child {
+    margin-left:0;
+}
+
+#top-nav ul > li > a {
+	color: #FFFFFF;
+	font-family: "DINProMedium";
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#top-nav ul#nav > li:hover > a {
+	color: #F3E106;
+}
+
+#top-nav ul#nav > li > ul {
+	display: none;
+	list-style: none outside none;
+	margin: -10px 0 0;
+    max-width: 392px;
+    padding: 29px 0 0;
+	position: absolute;
+    top: 100%;
+    z-index: 999;
+}
+
+#top-nav ul#nav > li:hover > ul {
+    display: block;
+}
+
+#top-nav ul#nav > li > ul > li {
+	float: left;
+	margin: 0 15px 0 0;
+	padding: 5px 0;
+	width: 166px;
+}
+
+#top-nav ul#nav > li > ul > li a:hover {
+	color: #F3E106;
+}
+
+#top-socialmedia {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	width: 28px;
+}
+
+#top-socialmedia a {
+	display: block;
+	height: 25px;
+	width: 28px;
+}
+
+#top-socialmedia a.twitter {
+	margin: 0 0 12px 0;
+}
+
+#top-socialmedia a.facebook {
+	margin: 0 0 18px 0;
+}
+
+#top-socialmedia a.youtube { }
+
+#topbar {
+	background-color: #FCB040;
+	height: 5px;
+	width: 100%;
+}
+
+#header-nav {
+    background: url('../images/layout/header-nav.png') repeat scroll 0 0 transparent;
+    display: none;
+    height: 51px;
+    position: absolute;
+    width: 1300px;
+    z-index: 203;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                   HEADER                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#header {
+	height: 397px;
+	overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#header-inner {
+	height: 397px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 1054px;
+}
+
+#header-shadow-left {
+	background: url('../images/layout/header-shadow-left.png') no-repeat scroll 0 0 transparent;
+	height: 397px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	/*width: 320px;*/
+	width: 220px;
+	z-index: 200;
+}
+
+#header-shadow-right {
+	background: url('../images/layout/header-shadow-right.png') no-repeat scroll 0 0 transparent;
+	height: 397px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 370px;
+	z-index: 200;
+}
+
+#header-downloadfields {
+	background: url('../images/downloaddevlag/header-downloadbg.png') no-repeat scroll 0 0 transparent;
+	height: 337px;
+    padding: 49px 14px 11px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 342px;
+	z-index: 200;
+}
+
+#header-infofields {
+	/*background-color: #000000;*/
+	height: 337px;
+    padding: 49px 14px 11px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 342px;
+	z-index: 200;
+}
+
+#header-downloadfields p,
+#header-infofields p {
+    font-family: 'DINPro';
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    margin: 12px 4px;
+}
+
+#header-downloadfields p.text-2 {
+    margin-top: 30px;
+    width: 238px;
+}
+
+#header-downloadfields p.text-3 {
+    margin-top: 16px;
+    width: 275px;
+}
+
+#header-downloadfields p.text-4 {
+    margin-top: 16px;
+}
+
+#header-downloadfields a.download,
+#header-infofields a.download {
+	background-color: #Ed145B;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'DINPro';
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 33px;
+    margin: 31px 0 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 343px;
+}
+
+#header-infofields .page-2 a.download  {
+	font-size: 19px;
+}
+
+#top-action {
+    position:absolute;
+    top:10px;
+    right:150px;
+}
+
+#top-action h1,
+#top-action h2 {
+    color: #FCB040;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 2px;
+}
+
+#top-action h2 {
+    color: #FFFFFF;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+#mailinglist_content form ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #000000;
+}
+#mailinglist_content form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000000;
+}
+#mailinglist_content form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000000;
+    opacity: 1;
+}
+#mailinglist_content form :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #000000;
+}
+
+#mailinglist_content input[type="text"] {
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 27px;
+    margin: 0;
+    padding: 1px 7px;
+    text-indent: 7px;
+    width: 174px;
+}
+
+#mailinglist_content input[type="button"] {
+    background-color: #ED145B;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 96px;
+}
+
+#top-action #mailinglist_content input[type="button"] {
+    background-color:#FCB040;
+}
+
+#mailinglist_succes > p,
+#mailinglist_error > p {
+    font-family: 'DINPro';
+    margin: 0;
+}
+
+#slideshow {
+	height: 397px;
+	position: relative;
+}
+
+#slideshow .cycle-slide {
+	height: 397px;
+	z-index: 100;
+}
+#slideshow.wvhvk .cycle-slide {
+	width: 655px;
+}
+
+#slideshow .slideshow-youtube .play {
+	background: url('../images/downloaddevlag/header-play.png') no-repeat scroll 0 0 transparent;
+	height: 101px;
+	position: absolute;
+	top: 153px;
+	left: 214px;
+	width: 218px;
+}
+#slideshow.wvhvk .slideshow-video .play {
+	background: url('../images/layout/video-play.png') no-repeat scroll 0 0 transparent;
+	height: 119px;
+	position: absolute;
+    left: 240px;
+    top: 166px;
+    width: 174px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+#slideshow-pager {
+	bottom: 21px;
+	display: block;
+	height: 20px;
+	left: 30px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 201; 
+}
+
+#slideshow-pager span {
+	background: url('../images/layout/header-bullets.png') no-repeat scroll -20px 0 transparent;
+	cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin: 0 12px 0 0;
+    width: 20px;
+}
+
+#slideshow-pager span.cycle-pager-active {
+	background: url('../images/layout/header-bullets.png') no-repeat scroll 0 0 transparent;
+}
+
+#slideshow-pager > * {
+	cursor: pointer;
+}
+
+#slideshow-caption {
+	bottom: 20px; /*60px*/
+	display: block;
+	right: 18px;
+	position: absolute;
+	width: 339px;
+	z-index: 201;
+}
+
+#slideshow-caption h1 {
+	font-size: 46px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#slideshow-caption h2 {
+	font-family: 'DINPro';
+	font-size: 32px;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#slideshow-caption p {
+	font-family: 'DINPro';
+	line-height: 17px;
+	margin: 10px 0 0 0;
+	text-align: justify;
+}
+
+#header #btn-about {
+	bottom: 15px;
+	position: absolute;
+	right: 223px;
+	z-index: 201;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                  CONTENT                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content {
+	background: url('../images/layout/content-bg.png') repeat-y scroll 0 0 transparent;
+    width: 100%;
+}
+
+#content-inner {
+	margin: 0 0 0 138px;
+	position: relative;
+	overflow: hidden;
+	width: 1162px;
+}
+
+#content-navbar {
+	margin: 28px 0 0 11px;
+	width: 322px;
+}
+
+#content-navbar ul {
+	list-style: none outside none;
+	margin: 23px 0;
+	padding: 0 18px;
+}
+
+#content-navbar ul > li {
+	line-height: 40px;
+}
+
+#content-navbar ul > li > a {
+	color: #FFFFFF;
+	display: block;
+	font-family: 'DINPro';
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#content-navbar ul > li:hover > a,
+#content-navbar ul > li.active > a {
+	color: #ED145B;
+}
+
+#content-navbar ul > li.lvl2 {
+	line-height: 19px;
+    margin-left: 14px;
+}
+
+#content-navbar ul > li.lvl2 a {
+	font-size: 15px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             CONTENT - TWITTER                                            //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content-twitter {
+	margin: 28px 0 0 11px;
+	width: 322px;
+}
+
+#content-twitter h1 {
+	background: url('../images/layout/h1-twitter.png') no-repeat scroll left center transparent;
+	color: #F3E106;
+	margin: 13px 0;
+	padding: 0 0 0 37px;
+}
+
+#content-twitter .tweet {
+    margin-top: 13px;
+    width: 300px;
+}
+#content-twitter .tweet-divider {
+	border-top: 1px solid white;
+	margin-left: 1px;
+	padding-bottom: 14px;
+	width: 50px;
+}
+#content-twitter .tweet .tweet-header a {
+	text-decoration: none;
+}
+#content-twitter .tweet .fullname {
+	color: #FFFFFF;
+	font-family: 'DINPro';
+	font-size: 12px;
+    font-weight: bold;
+}
+#content-twitter .tweet .username {
+	color: #FFFFFF;
+	font-family: 'DINPro';
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0 0 0 6px;
+}
+#content-twitter .tweet .username s {
+    text-decoration: none;
+}
+#content-twitter .tweet .account-group:hover .fullname, 
+#content-twitter .tweet .account-group:focus .fullname {
+    text-decoration: underline;
+}
+#content-twitter .tweet .tweet-text {
+	font-family: 'DINPro';
+	font-size: 12px;
+	font-weight: normal;
+}
+#content-twitter .tweet .tweet-time {
+	font-family: 'DINPro';
+	font-size: 11px;
+	font-weight: normal;
+}
+#content-twitter .tweet .tweet-time a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#content-twitter .tweet .tweet-time a:hover, 
+#content-twitter .tweet .tweet-time a:focus {
+	text-decoration: underline;
+}
+
+#content-twitter .tweet:first-of-type .tweet-divider {
+	display: none;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             CONTENT - CONTENT                                            //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content-content {
+	margin: 14px 0 11px 0;
+	width: 691px;
+}
+
+#content-content .btn {
+	margin: 0 0 0 26px;
+}
+
+#content-content .socialmedia {
+	height: 25px;
+	margin: 0 0 5px 0;
+	width: 100%;
+}
+
+#content-content .socialmedia .addthis_toolbox {
+	float: right;
+}
+
+#content-content .socialmedia a {
+	margin: 0 0 0 7px;
+	text-decoration: none;
+}
+
+#content-content h1 {
+	font-size: 44px;
+	margin: 0 0 17px;
+	padding: 0 0 0 26px;
+}
+
+
+#content-content h2 {
+    padding: 0 0 0 26px;
+}
+
+#content-content p {
+	font-family: 'DINPro';
+	font-size: 14px;
+	margin: 17px 0 12px 26px;
+}
+
+#content-content p.intro {
+	font-family: 'DINProMedium';
+}
+
+#content-content table {
+	padding: 0 0 0 26px;
+}
+
+#content-content ul {
+	font-family: 'DINPro';
+	list-style-position: outside;
+	margin: 0 0 0 20px;
+	overflow: hidden;
+	padding: 0 0 0 20px;
+}
+
+#content-content form {
+    padding: 0 0 0 26px;
+}
+
+#content-content .caption {
+    position: relative;
+}
+
+#content-content .caption p {
+	margin: 0;
+}
+
+#content-content .caption span {
+    background-color: #E7004D;
+    bottom: 14px;
+    color: #FFFFFF;
+    font-family: 'DINPro';
+    font-size: 15px;
+    font-weight: bold;
+    left: 26px;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#content-content .pagination .paging-inner {
+	float: right;
+	line-height: 15px;
+	margin: 5px 0 34px 0;
+}
+
+#content-content .pagination .paging-inner ul {
+	list-style: none outside none;
+}
+
+#content-content .pagination .paging-inner ul li {
+	float: left;
+}
+
+#content-content .pagination .paging-inner ul li {
+	color: #FFFFFF;
+	font-family: 'DINPro';
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 1px;
+	padding: 0 1px;
+}
+
+#content-content .pagination .paging-inner ul li a {
+	color: #FFFFFF;
+	font-family: 'DINPro';
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#content-content .pagination .paging-inner ul li.active {
+	background-color: #E7004D;
+    display: inline-block;
+    font-family: 'DINPro';
+    font-size: 12px;
+    padding: 0 1px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             CONTENT - NEWS                                               //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content-news .news {
+    margin: 0 0 35px;
+}
+
+#content-news .news .highlight-image {
+	position: relative;
+}
+
+#content-news .news .highlight-image h1 {
+	background-color: #E7004D;
+	bottom: 39px;
+	color: #FFFFFF;
+	font-size: 27px;
+	left: 26px;
+	margin: 0;
+	padding: 10px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#content-news .news .highlight-image a {
+	text-decoration: none;
+}
+
+#content-news .news .highlight-image span {
+	background-color: #000000;
+    bottom: 11px;
+    font-family: 'DINPro';
+    left: 26px;
+    padding: 5px;
+    position: absolute;
+}
+
+#content-news .news h1 {
+	background-color: #E7004D;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 15px;
+	margin: 0 0 0 26px;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+#content-news .news span {
+	background-color: #000000;
+	display: inline-block;
+	font-family: 'DINPro';
+	margin: 0 0 0 26px;
+	padding: 4px;
+}
+
+#content-news .highlighted .text,
+#content-news .news .text {
+    font-family: 'DINPro';
+    margin: 16px 0 0;
+    padding: 0 0 0 26px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             CONTENT - PHOTOTS                                            //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content-photos .album {
+    margin: 30px 0 0 26px;
+}
+
+#content-photos .album p {
+	margin: 17px 0 12px;
+}
+
+#content-photos .image-row {
+	margin: 0 0 7px;
+}
+
+#content-photos .image-row .image:first-child {
+	margin: 0;
+}
+
+#content-photos .image-row .image {
+    float: left;
+    height: 171px;
+    margin: 0 0 0 7px;
+    width: 217px;
+}
+
+#content-photos .image-row .image-text {
+	padding: 0 0 0 14px;
+	vertical-align: top;
+	float: right;
+	width: 431px;
+}
+
+#content-photos .image-row .image-text h1 {
+	color: #F3E106;
+	font-family: 'DINPro';
+	font-size: 24px;
+	font-weight: bold;
+	/*margin: 17px 0 0px;*/
+	margin: 0;
+	padding: 0;
+}
+
+#content-photos .image-row .image-text h1 a {
+	text-decoration: none;
+}
+
+#content-photos .image-row .image-text p {
+	margin: 6px 0 13px 0px;
+	line-height: 14px;
+}
+
+#content-photos .image-row .row-divider {
+	border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             CONTENT - VIDEOS                                             //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#content-videos .album {
+	margin: 40px 0 0 26px;
+}
+
+#content-videos .video-row {
+	border-bottom: 1px solid #FFFFFF;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+#content-videos .video-row .video {
+	position: relative;
+}
+
+#content-videos .video-row .overlay {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+#content-videos .video-row .video-text {
+	padding: 0 0 0 14px;
+	vertical-align: top;
+	float: right;
+	width: 431px;
+}
+
+#content-videos .video-row .video-text h1 {
+	color: #F3E106;
+	font-family: 'DINPro';
+	font-size: 24px;
+	font-weight: bold;
+	/*margin: 17px 0 0px;*/
+	margin: 0;
+	padding: 0;
+}
+
+#content-videos .video-row .video-text p {
+	margin: 6px 0 13px 0px;
+	line-height: 14px;
+}
+
+#content-videos .video-row .video-text span {
+	font-family: 'DINPro';
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                              LATEST NEWS                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#latestnews {
+	background-position: left center;
+    background-repeat: no-repeat;
+	height: 370px;
+	width: 100%;
+}
+
+#latest-inner {
+	height: 370px;
+    margin: 0 auto;
+    width: 1024px;
+}
+
+#latest-inner h1 {
+	margin-top: 0;
+	padding: 24px 0 0 24px;
+}
+
+#latest-inner #highlighted {
+	font-family: 'DINPro';
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 16px 0;
+	padding: 0 0 0 12px;
+    text-transform: uppercase;
+}
+
+#latest-inner #highlighted .text{
+	background-color: #ED145B;
+    color: #FFFFFF;
+    line-height: 27px;
+    max-width: 546px;
+    padding: 7px 0 7px 11px;
+}
+#latest-inner #highlighted a {
+	background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    width: 149px;
+}
+#latest-inner .news {
+	font-family: 'DINPro';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 0 0 0 12px;
+    text-transform: uppercase;
+}
+#latest-inner .news a {
+	background-color: #000000;
+	color: #FFFFFF;
+	display: inline-block;
+	line-height: 21px;
+	text-decoration: none;
+	padding: 0 2px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                 ABOUT US                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#about {
+	background: url('../images/layout/about-bg.jpg') no-repeat scroll 0 0 transparent;
+	height: 331px;
+	width: 100%;
+}
+
+#about-inner {
+	height: 331px;
+	margin: 0 auto;
+	width: 1024px;
+}
+
+#about-inner h1 {
+	color: #F3E106;
+	margin: 0 0 14px 0;
+	padding: 19px 0 0 10px;
+}
+
+#about-inner .column {
+	margin: 0 0 0 12px;
+	width: 242px;
+}
+
+#about-inner .column p {
+	font-family: 'DINPro';
+	font-size: 12px;
+	margin: 0;
+}
+
+#about-inner .column strong {
+	color: #F3E106;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#about-inner .column a {
+	color: #F3E106;
+	font-family: 'DINPro';
+	font-size: 12px;
+	text-decoration: none;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                                   FOOTER                                                 //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#footer {
+	padding:30px 150px 45px 150px;
+}
+
+#footer .left {
+    float:left;
+    margin-right:40px;
+}
+
+#footer .right {
+    float:right;
+    margin-left:60px;
+    margin-bottom:20px;
+}
+
+
+
+#footer-newsletter h1,
+#footer-newsletter h2 {
+	color: #FCB040;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 2px;
+}
+
+#footer-newsletter h2 {
+	color: #FFFFFF;
+	margin: 0 0 8px;
+	text-transform: uppercase;
+}
+
+#footer #footer-nav {
+    clear:both;
+}
+
+#footer-nav ul {
+	list-style: none;
+	margin: 14px 0 0 0;
+	padding: 0;
+}
+
+#footer-nav ul > li {
+	float: left;
+	margin: 0 17px;
+}
+
+#footer-nav ul > li.iban {
+	margin: 0 0 0 23px;
+}
+
+#footer-nav ul > li.copyright {
+	float: right;
+	margin: 0 10px 0 0;
+}
+
+#footer-nav ul > li:first-child {
+	margin-left: 0;
+}
+
+#footer-nav ul > li > a {
+	color: #FFFFFF;
+	font-family: "DINProMedium";
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#footer-nav ul > li.copyright > a {
+	color: #12ADDE;
+}
+
+.fancybox-skin .addthis {
+    background-color: #000000;
+    height: 32px;
+    padding: 6px 0 0;
+    position: absolute;
+    right: 52px;
+    top: -28px;
+}
+.addthis_button_facebook {
+    margin: 0 11px 0 8px;
+}
+.addthis_button_twitter {
+    margin: 0 28px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                             HOME SPECIFIC                                                //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#content.home {
+	background: url('../images/layout/content-bg-home.jpg') no-repeat scroll 0 0 transparent;
+}
+
+.home #content-inner {
+	height: 414px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 1024px;
+}
+
+.home #content-content h1 {
+	font-size: 41px;
+	margin: 0 0 19px;
+	letter-spacing: -0.03em;
+	line-height: 49px;
+}
+
+.home #content-content p {
+	font-family: 'DINPro';
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    margin: 18px 0 6px 26px;
+}
+
+.home #content-content img {
+    margin-left:26px;
+}
+
+#top_banner {
+    position:relative;
+}
+
+
+#top_banner img {
+    display:block;
+}
+
+#top_banner .banner_text {
+    position:absolute;
+    top:15px;
+    right:25px;
+    width:312px;;
+    height:206px;
+    padding:25px 40px 40px 25px;
+    color:#ffffff;
+    background-image:url(../images/layout/chalkboard.png);
+    overflow:hidden;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:14px;
+    box-sizing:border-box;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                          //
+//                                         OTHER PAGE SPECIFIC                                              //
+//                                                                                                          //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#subpage #content-content > h1 {
+	margin: 0 0 9px;
+	padding: 0 0 0 52px;
+}
+
+.search_input {
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 27px;
+    margin: 0;
+    padding: 1px 7px;
+    text-indent: 7px;
+    width: 174px;
+}
+
+.search_button {
+	background-color: #E7004D;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 96px;
+}
+
+a.download {
+	float: left;
+	background-color: #ED145B;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'DINPro';
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 4px 3px 4px 3px;
+}
+a.download.dark {
+	background-color: #000000;
+	padding: 4px 8px 4px 8px;
+}
+a.download.padding {
+	padding: 4px 8px 4px 8px;
+}
+
+a.nieuwsbrief {
+	float: right;
+	background-color: #ED145B;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'DINPro';
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 4px 3px 4px 3px;
+}
+a.nieuwsbrief.dark {
+	background-color: #000000;
+	padding: 4px 8px 4px 8px;
+}
+a.nieuwsbrief.padding {
+	padding: 4px 8px 4px 8px;
+}
+
+.slideshow-video a {
+	background-color: red;
+}
+.slideshow-video .play {
+	background: url('../images/layout/video-play.png') no-repeat scroll 0 0 transparent;
+	height: 119px;
+	position: absolute;
+    left: 240px;
+    top: 166px;
+    width: 174px;
+}
+
+/* EMAIL FORM PLUGIN STYLES */
+.emailForm .hideInput,
+.emailForm .empty  {
+	display: none;
+	visibility: hidden;
+}
+.emailForm .p0 {
+    padding: 0;
+}
+.emailForm .m0 {
+    margin: 0;
+}
+.emailForm.horizontal .empty {
+	display: inline-block;
+	visibility: hidden;
+}
+.emailForm .textRequired {
+	color: #808080;
+	font-size: 9.66667px;
+}
+.emailForm .signRequired {
+	color: #FF0000;
+}
+
+.emailForm dl,
+.emailForm.horizontal dl {
+	overflow:hidden;
+	width:100%;
+}
+.emailForm dl dt {
+    font-weight: bold;
+}
+.emailForm  dl dd {
+	margin: 2px 0;
+    padding: 0 0 1em;
+}
+
+.emailForm.horizontal dl dt {
+    clear: left;
+    float: left;
+    line-height: 23px;
+    width: 20%;
+}
+.emailForm .horizontal dl dd {
+	clear: right;
+    margin: 2px 0;
+    padding: 0 0 1em;
+}
+
+
+/**/
+
+#mailinglist_content_pagina form ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #000000;
+}
+#mailinglist_content_pagina form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000000;
+}
+#mailinglist_content_pagina form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000000;
+    opacity: 1;
+}
+#mailinglist_content_pagina form :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #000000;
+}
+
+#mailinglist_content_pagina input[type="text"] {
+    border: 0 none;
+    color: #000000;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 27px;
+    margin: 0;
+    padding: 1px 7px;
+    text-indent: 7px;
+    width: 174px;
+}
+
+#mailinglist_content_pagina input[type="button"] {
+    background-color: #ED145B;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: 'DINProMedium';
+    font-size: 14px;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 96px;
+}

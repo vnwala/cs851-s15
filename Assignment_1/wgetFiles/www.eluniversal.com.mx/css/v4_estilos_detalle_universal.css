@@ -1,0 +1,627 @@
+@import "v3_estilos_universal_v2.css";
+.noteGallery{
+height:auto;
+clear: both;
+}
+/*
+.clisttabs  {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+height:auto;
+overflow:visible;
+padding:5px 0;
+}
+*/
+
+
+/* estilos para cuando no hay frame1 en cabezal -> cesar 09:22 p.m. 07/05/2010 
+*/
+.trss  {
+background-position:-96px 0;
+background-repeat:repeat-x;
+display:block;
+float:right;
+height:19px;
+margin-left:5px;
+margin-top:2px;
+width:19px;
+}
+
+
+#topbanner {
+background-color:#336699;
+border-left:1px solid #D6DBE0;
+border-right:1px solid #D6DBE0;
+font-size:12px;
+height:auto;
+/* height:130px; */
+min-height:25px;
+margin:0 auto;
+width:982px;
+}
+
+.toptionsr {
+float:right;
+padding-bottom:3px;
+padding-top:1px;
+text-align:left;
+width:275px;
+}
+
+.ads300{
+text-align:center;
+}
+
+.ads300 *{ margin:auto; }
+
+.iconsTechnorati, .iconsFacebook, .iconsTwitter, .iconsYahoo, .iconsGoogle, .iconsNing {
+background-repeat:no-repeat;
+color:#666666;
+display:block;
+float:left;
+font-size:11px;
+height:32px;
+text-indent:-9999px;
+width:32px;
+}
+
+
+.iconsTechnorati {
+background-position: -353px -1431px;
+}
+.iconsFacebook {
+background-position: -225px -1431px;
+}
+.iconsTwitter {
+background-position: -321px -1431px;
+}
+.iconsYahoo {
+background-position: -385px -1431px;
+}
+.iconsGoogle {
+background-position: -257px -1431px;
+}
+.iconsNing {
+background-position: -289px -1431px;
+}
+.respContent {
+line-height:150%;
+padding:15px 100px;
+width: 530px;
+}
+
+		.optionsLists li{
+			width:85px;
+		}
+		
+ ul.optionsLists{
+			padding-left:40px;
+			height:40px;
+}
+
+.footerIcons a{
+display:block;
+height:30px;
+width:30px;
+}
+
+.extraRelated{
+padding-top:5px;
+}
+.noteIntro {
+color:#000000;
+font-size:15px;
+line-height:120%;
+}
+.noteText p {
+line-height:140% !important;
+margin:13px 0;
+color: #000000;
+}
+
+.noteExtras{
+    margin-left:10px;
+    margin-bottom:10px;
+    width:300px;
+    clear:both;
+}
+
+.optionMail a{
+margin:auto;
+}
+
+#lasmas h4{
+padding-top:0px;
+}
+
+#lasmas{
+padding-top:0px;
+padding-bottom:10px;
+}
+
+.comentario {
+/*	border-top: 1px solid #555;*/
+	border-top: none;
+	font-size:13px;
+	line-height:15.6px;
+        margin-bottom:35px;
+        }
+	.comentario a {
+		text-decoration:none;}
+	.comentario a:hover {
+		text-decoration:underline;}
+	.comentario_principal {
+		margin-top: 10px;
+		padding:5px;
+		clear:both;}
+	.comentario_asociado {
+		margin:5px 0 5px 50px;
+		padding:5px;
+		background-color:#eee;
+		clear:both;}
+		.avatar_usuario {
+			float:left;}
+		.detalles_comentario {
+			float:right;
+			width:90%;}
+		.comentario_asociado .detalles_comentario {width:89%;}
+			.nombre_y_fecha {}
+				.nombre_usuario {
+					float:left;}
+					.nombre_usuario a {
+						font-weight:bold;
+						color:black;}
+				.lugar_y_fecha {
+					float:right;
+					font-size:11px;}
+					.lugar_comentario {color:#000000;margin-right:5px;}
+					.fecha_comentario {color:#f27302;}
+					.hora_comentario {
+						padding-left:0.3em;
+						border-left:1px solid #7f7f7f;
+						color:#f27302;}
+			.texto_comentario {
+				clear:both;
+                                border-top: 1px solid #555;
+                         }
+			.herramientas_comentarios {text-align:right;}
+				.herramientas_comentarios li {
+					background-image: url("../img/v3/master_sprite.png");
+					background-repeat:no-repeat;
+					padding:2px 0.3em 2px 20px;
+					display:inline;
+					margin-right:0.4em;
+					border-right:1px solid #666;}
+				.herramientas_comentarios li.herramienta_reportar {margin-right:0; border-right:0;}
+				.herramienta_gusta {background-position: -400px -1326px;}
+				.herramienta_disgusta {background-position: -400px -1348px;}
+				.herramienta_responder {background-position: -400px -1372px;}
+				.herramienta_reportar {background-position: -398px -1397px;}
+
+/* para mostrar notas relacionadas correctamente cesar-> 05:05 p.m. 14/05/2010*/
+
+/* anti-css-resetter */
+#noteContent strong  {
+	font-weight:bold;}
+
+
+#noteContent .clisttabs  {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+height:auto;
+overflow:visible;
+padding:5px 0;
+line-height:120%;
+}
+
+#noteContent .clisttabs  span{
+display:inline;
+width:auto;
+float:none;
+margin-left:16px; /* para poner alineado a texto -> cesar 11:59 a.m. 24/06/2010*/
+
+}
+
+.fuenteSitioNota span{
+display:inline;
+width:auto;
+float:none;
+
+}
+
+.horaRelacionadasNota {
+color:#990000;
+}
+
+.footerMiddle {
+border-left:1px solid #D2D2D2;
+border-right:1px solid #D2D2D2;
+height:105px;
+width:540px;
+}
+
+ #footer p a {
+ color:black !important;
+ }
+#noteContent {
+border-right:1px solid #D6DBE0;
+float:left;
+padding-left:10px;
+padding-right:5px;
+width:624px;
+}
+.herramientas_comentarios li a {
+color:#336699;
+text-decoration:none;
+}
+.texto_comentario p
+{
+line-height:150%;
+}
+.reporteDura {
+float:none;
+}
+
+/*modifican barra de herramientas*/
+ul.optionsLists {
+padding-left:58px;
+}
+
+.optionsLists li {
+display:block;
+float:left;
+padding-top:0px;
+text-align:center;
+width:60px;
+}
+
+.optionMail {
+background-position:-137px -1311px;
+background-repeat:no-repeat;
+display:block;
+padding-top:35px;
+}
+
+.optionSize {
+background-position:10px -1305px;
+background-repeat:no-repeat;
+display:block;
+padding-top:35px;
+}
+
+.optionPrint {
+background-position:-66px -1311px;
+background-repeat:no-repeat;
+display:block;
+padding-top:35px;
+}
+
+
+/* para cuadro del valle de 10 -> cesar 06:39 p.m. 09/06/2010 */
+
+/* Colonia Del Valle */
+
+.del-valle{width:303px; background-color:#FFFFFF; padding:5px; border:1px solid #D9D9D9;}
+.del-valle h3{width:305px; display:block; height:45px; text-indent:-9999px; background-position:-112px -1829px;}
+.del-valle h3 a{width:100%; display:block; height:100%;}
+.del-valle h2{font-weight:normal; font-size:16px; border-bottom:1px dashed #D9D9D9; padding-bottom:10px; line-height:150%;}
+.valle-list{padding:10px 0; border-bottom:1px dashed #D9D9D9;}
+.valle-list a{color:#000000; text-decoration:none;}
+.linkBlueBigTimes a { color:#336699; display:block; font-weight:bold; text-decoration:none; }
+
+/* colonia del valle nuevo -> cesar 31082010 */ 
+
+.cuadro_delvalle{width:303px; background-color:#FFFFFF; padding:0px; border:1px solid #D9D9D9;}
+.cuadro_delvalle{width:303px; background-color:#FFFFFF; padding:5px; border:1px solid #D9D9D9;}
+
+.titulo_delvalle  h3 {
+	width:303px; 
+	display:block; 
+	height:59px;  
+	text-indent:-9999px;
+	background-image: url("../img/v3/delvalle/header.jpg");
+	
+	}
+
+.delvalle_principal {
+	background-color:#eaf2f4; 
+	position:relative;
+	height:110px;
+	width:303px;
+	}
+	
+ .delvalle_texto {
+	color:#44958f; 
+	background-color:#eaf2f4; 
+	position:relative;
+	float:left;
+	text-align:left;
+	font-size:18px;
+	padding-left:5px;  
+	font-weight:bold;	    
+	
+	}   	
+
+.delvalle_texto_principal {
+	position:relative;
+	/* padding:10px;*/
+	background-color:#ffffff;
+	color:#277879;
+	width:128px;
+	height:90px;
+
+}	
+	
+	
+ .delvalle_foto  {
+	width:155px; 
+	height:110px; 
+	float:right; 
+	position:relative;
+	
+	}   
+.delvalle_texto a {
+text-decoration:none;
+color:#277879; 
+}
+
+.valle_bullet {
+	background-image: url("../img/v3/delvalle/bullet.png"); 
+	background-repeat:no-repeat; 
+	background-position:left center;
+	display:block;
+	padding-left:17px;
+	font-size:14px;
+	font-weight:bold;
+}
+	
+.list_delvalle {
+border-bottom:1px solid #D2D2D2;
+clear:both;
+height:auto;
+line-height:120%;
+overflow:hidden;
+padding:5px 0;
+font-size:14px;
+font-weight:bold;
+
+
+
+
+}  
+ .valle-lista a {
+	color:#000000; 
+	text-decoration:none;	
+	
+	}
+    
+    
+.footer_delvalle h3   {
+	background-image: url("../img/v3/delvalle/footer.jpg"); 
+	background-repeat:no-repeat;   
+	height:17px;
+	width:303px;
+	display:block; 
+	text-indent:-9999px;
+	}   
+ 
+.par {
+	background-color:#eaf2f4;
+ }
+ 
+ .list_delvalle a {
+ color:#000000;
+ text-decoration:none;
+ text-align:left;
+ }
+ 
+ /* estilos para comentarios separados de detalle de nota -> cesar 03:05 p.m. 17/01/2011 */
+ .boxComment a {
+	color: #8B272D;
+	font-size: 18px;
+	font-weight: bold;
+}
+ /* para list en detalles -> cesar 07:24 p.m. 23/03/2011 */
+ 
+#contentNote ol, #contentNote ul {
+	list-style: disc outside none;
+	margin-left:10px;
+
+}
+#contentNote li {
+	padding-bottom:8px;
+	line-height:120%;
+}
+/* estilos para nuevos detalles de player de video -> cesar 10:30 a.m. 26/03/2012 */
+.background_video {
+	/*background-color: black !important;
+	padding-top: 20px;
+	padding-bottom: 20px;*/
+	padding-left:0px !important;
+	width: 302px !important;
+}
+/*INICIAN CAMBIOS NOV 2013*/
+#data-content {
+z-index: 57;
+width: 620px;
+min-height: 44px;
+border-style: solid;
+border-color: #D6DBE0;
+background-color: transparent;
+font-size: 12px;
+margin-top: 10px;
+position: relative;
+border-width: 0px 0px 1px;
+clear:both;
+}
+
+#authorNote {
+color: #8B272D;
+line-height: 1.4;
+font-size: 12px;
+}
+
+#dateNote {
+line-height: 1.6;
+color: #8B272D;
+float:left;
+}
+
+#dateHour {
+font-weight: bold;
+}
+
+#datePlace {
+color: #999999;
+margin-left: 5px;
+}
+
+#btnFace {
+float:right; 
+margin-left: 25px;
+}
+
+
+#btnTwwet {
+float:center; 
+}
+
+
+#btnUtilities {
+display: inline;
+float: left;
+margin-left: 10px;
+}
+
+#verMas {
+color: #666666;
+font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 1.3;
+padding: 0px;
+float: left;
+}
+
+.mas_ligafb {
+color: #8B272D;
+}
+
+.sprite_utilerias {
+background-image: url("../img/sprite_util_det.jpg");
+}
+
+.envia {
+background-position: 0px 0;
+background-repeat: repeat-x;
+height: 14px;
+width: 29px;
+float: left;
+}
+
+.imprime {
+background-position: 55px 0;
+background-repeat: repeat-x;
+height: 16px;
+width: 29px;
+float: left;
+}
+
+.comentarios {
+background-position: 29px 0;
+background-repeat: repeat-x;
+height: 16px;
+width: 29px;
+float: left;
+}
+
+.comentarios_fb {
+margin-left: 15px;
+float: left;
+}
+
+#txt_comentarios{
+margin-left: 15px;
+}
+
+.fb-comments-count{
+margin-top: -12px;
+margin-left: -5px;
+
+}
+.fb_comments_count{
+font-weight: bold;
+}
+
+.noteText {
+color: #666666;
+font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 1.3;
+padding: 0px;
+}
+
+.noteText  p {
+color: #666666;
+font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 1.3;
+padding: 0px;
+}
+
+.noteIntro{
+font-size: 18px;
+padding-bottom: 17px;
+color: #333333;
+font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+line-height: 1.2;
+}
+
+.noteFooter{
+margin-top: 50px;
+}
+
+.bloq_com_esq_redond{
+z-index: 84;
+width: 15px;
+height: 11px;
+border-color: #000000;
+background-color: #336699;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-khtml-border-radius: 2px;
+border-radius: 2px;
+position: relative;
+display: inline;
+float: left;
+clear: both;
+}
+.bloq_com_base {
+z-index: 85;
+width: 5px;
+height: 5px;
+border-color: #000000;
+background-color: #336699;
+-webkit-transform: rotate(315deg);
+margin-left: 5px;
+top: -3px;
+margin-bottom: -2px;
+position: relative;
+display: inline;
+float: left;
+clear: both;
+-ms-transform: rotate(315deg);
+}
+
+#logo_com {
+float: left;
+margin-left: 20px;
+}
+#tm_box {
+margin-left: -50px;
+}
+
+#bar_redes_soc{
+float: right;
+width: 220px;
+margin: 0 -18px 0 0;
+}

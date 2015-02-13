@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="" />
+<meta name="keywords" content="Jリーグ,サッカー,J1,J2,J3" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<title>7net Jリーグ fan - サッカー j-league J1 J2 J3 -</title>
+</head>
+<body>
+<div id="top">
+   <div id="wrapper">
+      <div id="header">
+         <h1><a href="http://j.gmobb.jp/j-league-fan/index.html"><img src="image/logo.png" alt="J-league fan ロゴ" /></a></h1>
+         <div id="pr">
+            <p>サッカー日本代表が真に世界で戦えるチームになるために、Jリーグをこそ、応援したい！</p>
+         </div>
+      </div><!-- /#header -->
+      <div id="menuWrapper">
+         <div id="menu">
+            <ul>
+            <li><a href="http://j.gmobb.jp/j-league-fan/index.html">ホーム</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/youtubesearch.html">YouTube</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/fc2search.html">FC2動画</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/niconicosearch.html">ニコニコ動画</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/googlenewssearch.html">Googleニュース</a></li>
+            </ul>
+         </div><!-- /#menu -->
+      </div><!-- /#menuWrapper -->
+      <div id="contents">
+         <div id="main">
+            <div class="section">
+               <h2>7net</h2>
+               <center><script type="text/javascript" src="7nettv.js"></script></center>
+            </div><!-- /#section -->
+            <div class="section">
+				<table cellpadding=5 width=100%><tr><td align=center>
+						【PR】<br>
+						<script type="text/javascript" src="affiliatecenter.js"></script>
+				</td></tr></table>
+            </div><!-- /#section -->
+         </div><!-- /#main -->
+         <div id="sub">
+            <div class="section">
+               <h2>Jリーグチーム 7net検索</h2>
+			   <table cellpadding=5 width=100%><tr><td>
+			   <script type="text/javascript" src="7netteamlist.js"></script>
+			   </td></tr></table>
+            </div><!-- /.section -->
+            <div class="section">
+               <h2>【PR】</h2>
+               <table cellpadding=5 width=100%><tr><td align=center><script type="text/javascript" src="affiliateright.js"></script></td></tr></table>
+            </div><!-- /.section -->
+         </div><!-- /#sub -->
+         <div id="pageTop">
+            <p><a href="7nettv.html?utdt=82350#top">ページのトップへ戻る</a></p>
+         </div><!-- /#pageTop -->
+         <div id="footMenu">
+         <ul>
+            <li><a href="http://j.gmobb.jp/j-league-fan/index.html">ホーム</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/youtubesearch.html">YouTube</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/fc2search.html">FC2動画</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/niconicosearch.html">ニコニコ動画</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/googlenewssearch.html">Googleニュース</a></li>
+            <li><a href="http://j.gmobb.jp/j-league-fan/twitter.html">twitter</a></li>
+         </ul>
+         </div><!-- /#footerMenu -->
+      </div><!-- /#contents -->
+      <div id="footer">
+         <div class="copyright">Copyright 2014 Jリーグ fan</div>
+      </div><!-- /#footer -->
+   </div><!-- /#wrapper -->
+</div><!-- /#top -->
+</body>
+</html>

@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+  <!--[if IEMobile 7]><html class="ie iem7" lang="en" dir="ltr"><![endif]-->
+  <!--[if lte IE 8]><html class="ie lt-ie9" lang="en" dir="ltr"><![endif]-->
+  <!--[if IE 9]><html class="ie ie-9 lt-ie10" lang="en" dir="ltr"><![endif]-->
+  <!--[if (gte IE 10)|(gt IEMobile 7)]><html class="ie ie-10" lang="en" dir="ltr" prefix="fb: http://ogp.me/ns/fb# og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile#"><![endif]-->
+  <!--[if !IE]><!--><html lang="en" dir="ltr" prefix="fb: http://ogp.me/ns/fb# og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile#"><!--<![endif]-->
+<head>
+  <script>var windowRenderStartTime = (new Date()).getTime();</script>
+  <title></title>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="fragment" content="!" />
+<script id="/sites/all/modules/custom/angularmods/modules/header_savedlocations/templates/user_locations_template.html" type="text/ng-template"><ul data-ng-cloak class="{{whatLocations()}}">
+
+    <li data-ng-repeat="location in userLocations track by $index" class="location {{location.noData}}"
+        data-from-str="hdr-location-{{$index}}"
+        data-ng-mouseover="hovered[$index] = true" data-ng-mouseout="hovered[$index] = false"
+            data-ng-class="{true: 'hovered'}[hovered[$index]]">
+        <a data-ng-href="{{location.url}}" target="{{hrefTarget}}">
+            <ul class="location-list">
+                <li class="loc-list-sky-icon">
+                    <span class="wx-iconfont-global {{location.skyCode}}"></span>
+                </li>
+                <li data-ng-if="location.temp === 0 || location.temp" class="loc-list-temp">
+                    <span class="wx-temp" data-ng-bind="location.temp"></span><sup><span
+                        data-ng-bind-template="{{location.temp === 'N/A' ? '&nbsp;' : '&deg;'}}"></span></sup>
+                </li>
+                <li class="loc-list-loc-name">
+                    <span class="" style="" data-ng-bind="location.label"></span>
+                </li>
+                <li class="loc-list-loc-alert" data-ng-if="location.totalB > 0">
+                    <span class="wx-alert-badge" title="{{location.totalB}}"
+                          data-ng-class="location.alertStyle" data-ng-bind="location.totalB"></span>
+                </li>
+            </ul>
+        </a>
+    </li>
+
+    <!-- only show if this is the visible locations chunk-->
+    <li data-other-locations-trigger class="wx-addlocs-action" data-ng-if="isVisibleLocations && hasOtherLocs() && showSettingButton"
+        data-ng-class="{noUserLocs:noUserLocations, 'otherLocs-active': otherLocsTriggerActive()}"
+        data-ng-click="hasOtherLocs() ? toggleShowOtherLocs($event) : clickThru('/life/profile')"
+        data-ng-mouseover="showOtherLocs($event); vars.otherLocsTriggerHovered = true;"
+        data-ng-mouseout="hideOtherLocs($event); vars.otherLocsTriggerHovered = false;">
+        <button>
+            <span class="wx-iconfont-global" data-ng-class="globalIconType"></span>
+            {{noUserLocationText}}
+        </button>
+    </li>
+
+    <!-- This one will show on the pagelet header.. -->
+    <li data-other-locations-trigger class="wx-addlocs-action" data-ng-if="isVisibleLocations && !hasOtherLocs() && !!showSettingButton"
+        data-ng-class="{noUserLocs:noUserLocations, 'otherLocs-active': otherLocsTriggerActive()}"
+        data-ng-mouseover="vars.otherLocsTriggerHovered = true;"
+        data-ng-mouseout="vars.otherLocsTriggerHovered = false;">
+        <a data-ng-href="/life/profile" target="{{hrefTarget}}">
+            <span class="wx-iconfont-global" data-ng-class="globalIconType"></span>
+            {{noUserLocationText}}
+        </a>
+    </li>
+
+    <!-- only show if this is the visible locations chunk-->
+    <li class="wx-loc-settings"
+        data-settings-tab-trigger
+        data-ng-class="settingsTabActive"
+        data-ng-if="isVisibleLocations"
+        data-ng-show="showSettingButton"
+        data-ng-mouseover="showSettingsTab($event)"
+        data-ng-mouseleave="hideSettingsTab($event)">
+
+        <a href="rare-blue-eyed-lemur-could-go-extinct-in-11-years?cm_ven=Twitter" data-ng-click="toggleShowSettingsTab($event)"
+           data-ng-keyup="toggleShowSettingsTab($event)"
+           data-ng-focus="showSettingsTab($event)">
+            <span class="wx-iconfont-global wx-icon-settings"></span>
+        </a>
+        <div class="settings-container"
+             data-ng-show="showSettings"
+             data-settings-tab-dropdown>
+            <div class="wx-settings-tab">
+                <ul>
+                    <li id="wx-lang" class="settings-drop-down-links" title="Select non-U.S. weather.com website">
+                        <a data-ng-href="/life/international">International Sites</a>
+                    </li>
+                    <li id="wx-manage-alerts" class="settings-drop-down-links">
+                        <a data-ng-href="https://profile.weather.com/#/profile/alerts">Manage Alerts</a>
+                    </li>
+                    <li id="wx-manage-locations" class="settings-drop-down-links">
+                       <a data-ng-href="/life/profile">Manage All Locations</a>
+                    </li>
+                    <li class="wx-temp-toggle">
+                        <span class="temp-label">Measurements:</span>
+                        <a href="rare-blue-eyed-lemur-could-go-extinct-in-11-years?cm_ven=Twitter" id="fahrButton" class="tempButton" title="{{setFahrenheitTitle()}}"
+                                data-ng-class="{'active':(getTempUnitFromPCO()==='F')}"
+                                data-ng-click="setTempUnit('F')"
+                                >°F</a>
+                        <a href="rare-blue-eyed-lemur-could-go-extinct-in-11-years?cm_ven=Twitter" id="celsButton" class="tempButton" title="{{setCelsiusTitle()}}"
+                                data-ng-class="{'active':(getTempUnitFromPCO()==='C')}"
+                                data-ng-click="setTempUnit('C')"
+                                >°C</a>
+                    </li>
+                </ul>
+                <span class="wx-iconfont-global wx-icon-arrow-up-2"></span>
+            </div>
+        </div>
+    </li>
+
+    <!-- only show if this is the NOT visible locations chunk-->
+    <li class="locations wx-manage-locations-action"
+        data-ng-class="otherLocsTabActive" data-ng-if="!isVisibleLocations">
+        <a data-ng-href="/life/profile/">
+            <hr>Manage All Locations
+        </a>
+        <span class="wx-iconfont-global wx-icon-arrow-right"></span>
+    </li>
+</ul>
+</script><meta name="google-site-verification" content="OL0_MNVhexxZbhCV49eYUaMO8fGOX-dqPg2URebnHhk" />
+<link rel="shortcut icon" href="../../../apple-touch-icon.png" type="image/png" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+<meta http-equiv="cleartype" content="on" />
+<script src="http://tags.crwdcntrl.net/c/2215/cc.js?ns=_cc2215" id="LOTCC_2215"></script><script id="/sites/all/modules/custom/angularmods/app/shared/twc_social_sharing/templates/social_media.html" type="text/ng-template"><li class="{{mediaClass}} social-button"
+	data-twc-popover
+	data-popover-position="{{tooltipPosition}}"
+    data-popover-class="social-tooltip"
+	data-popover-theme="{{theme}}"
+	data-popover-text="{{'twcSocialSharing.' + provider | translate}}">
+  <span class="wx-iconfont-global wx-icon-{{mediaClass}}"
+        data-title="{{title}}"
+        data-ng-click="doShare()"
+        data-provider="{{provider}}"
+        data-vidurl=""></span>
+</li>
+</script><script id="/sites/all/modules/custom/angularmods/app/shared/twc_typeahead/templates/global_twc_typeahead_basic.html" type="text/ng-template"><div class="{{containerClass}}">
+    <form class="{{formClass}}">
+        <input data-ng-disabled="disabled" data-ng-class="{inputActive : term.length > 0}"
+               data-twc-select-text data-ng-model="term" data-ng-change="goSearch()"
+               type="text" name="search"
+               autocomplete="off" autocorrect="off" spellcheck="false" copy="false" paste="false"
+               class="{{inputClass}}"
+               data-is-valid="true" data-twc-tooltip="{{tooltip}}" data-validate-class="{{validateClass}}"
+               data-ng-attr-placeholder="{{placeholderText}}"
+               data-ng-attr-title="{{placeholderText}}">
+    </form>
+    <div aria-hidden="true" data-ng-if="!hideSearchIcon" data-ng-class="{inputActive: term.length > 0}" class="wx-iconfont-global wx-icon-search icon--search {{iconClass}}"></div>
+    <div data-ng-transclude class="transclude"></div>
+</div></script><script id="/sites/all/modules/custom/angularmods/app/shared/twc_social_sharing/templates/social_bar.html" type="text/ng-template"><div class="wx-social-share-ls-wrapper">
+	<ul class="default twc-social-bar" 
+		data-ng-class="{'closed': !toggleExpand, 'expanded': toggleExpand, 'five': providers.length === 5}">
+	</ul>
+	<div class="wx-iconfont-global toggle horizToggle"
+     data-ng-click="expand()"
+		 data-ng-show="{{providers.length > 5}}">
+		<span data-ng-class="{'wx-icon-arrow-left-2': toggleExpand, 'wx-icon-arrow-right-2': !toggleExpand}"></span>
+	</div>
+	<div class="wx-iconfont-global toggle vertToggle"
+		 data-ng-click="expand()"
+		 data-ng-show="{{providers.length > 5}}">
+		<span data-ng-class="{'wx-icon-arrow-up-2': !toggleExpand, 'wx-icon-arrow-down-2': toggleExpand}"></span>
+	</div>
+</div></script><meta name="description" content="The blue-eyed lemur, a rare animal already, are on the critically endangered list and could be extinct in 11 years. Matt Sampson has the details." />
+<meta name="keywords" content="the weather channel video,weather video,lemur extinction video,blue eyed lemur video" />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="viewport" content="width=device-width" />
+<link rel="canonical" href="http://www.weather.com/series/crazimals/video/rare-blue-eyed-lemur-could-go-extinct-in-11-years" />
+<meta property="og:type" content="video" />
+<meta property="og:site_name" content="The Weather Channel" />
+<meta property="og:title" content="Rare Blue-Eyed Lemur Could Go Extinct In 11 Years" />
+<meta property="og:url" content="http://www.weather.com/series/crazimals/video/rare-blue-eyed-lemur-could-go-extinct-in-11-years?_escaped_fragment_" />
+<meta property="og:description" content="The blue-eyed lemur, a rare animal already, are on the critically endangered list and could be extinct in 11 years. Matt Sampson has the details." />
+<meta property="og:image" content="http://s.w-x.co/240x180_twc_default.png" />
+<meta property="og:image:secure_url" content="https://s.w-x.co/240x180_twc_default.png" />
+<meta name="twitter:card" content="player" />
+<meta name="twitter:site" content="@weatherchannel" />
+<meta name="twitter:url" content="http://www.weather.com/series/crazimals/video/rare-blue-eyed-lemur-could-go-extinct-in-11-years" />
+<meta name="twitter:title" content="Rare Blue-Eyed Lemur Could Go Extinct In 11 Years" />
+<meta name="twitter:description" content="The blue-eyed lemur, a rare animal already, are on the critically endangered list and could be extinct in 11 years. Matt Sampson has the details." />
+<meta name="twitter:image:src" content="http://v.w-x.co/D-1204721.jpg" />
+<meta property="og:video:width" content="485" />
+<meta property="og:video:height" content="273" />
+<meta property="og:video:type" content="application/x-shockwave-flash" />
+<meta name="pagecode" value="video-watch" />
+<meta name="date" content="2015-02-03T16:15:00-05:00" />
+<meta name="revised" content="2015-02-04T07:48:51-05:00" />
+<meta name="tb:canonical" content="http://www.weather.com/series/crazimals/video/rare-blue-eyed-lemur-could-go-extinct-in-11-years" />
+<meta name="tb:page-template" content="Video-Bigweb" />
+<meta name="tb:page-dashboard" content="Video-Bigweb" />
+<meta name="tb:audited-clicks" content="true" />
+<meta name="adsmetrics_zone" value="video/crazimals" />
+<meta name="metrics_levels" value="VIDEO/COLLECTION/CRAZIMALS/MAIN" />
+  <link type="text/css" rel="stylesheet" href="../../../sites/acquia-prod/files/advagg_css/css__b2ApNmzhoeYbI6tt4TiacrnsEo6pOjMsuaFYyqoAiks__s3gktIkVtCBJsEaDEWrnNkZ_o-e6dWqFjlwLsGgM-xQ__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../../sites/acquia-prod/files/advagg_css/css__jwKRUVxDe3Ca0Zk-nUgd9gwOX_sNyxyVX-mjgAjkutk__o3GK74O_iL29J6HxQsuu1cExlDIUnqYvcsFIgrAUOS8__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../../sites/acquia-prod/files/advagg_css/css__XpSlUMnTHo-OnbwOhjQQKzzM29k7lcoAYdcRQkchYGA__WVV2wErJu45HSFgJqsB1z_h0gF0UWiInmo6e_niwuv8__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../../../sites/acquia-prod/files/advagg_css/css__QKhE--0X_BehNYlPYAg7utgXwEIL0AcuMog5kJyQJWk__3yTOWhDl12aDhRZI5CuO0aNsN4pcFYiNDOGImamnku4__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.css" media="all" />
+  <script src="../../../sites/acquia-prod/files/advagg_js/js__9MbgYh_eU83wGTi6_3K11QEKiUPK1cMaZq_AJgRPc8w__EyHAh1hUCsNRzYMjZHT1L2rBCxPpAPAHT3UBJ191S-I__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__BqWvcHgbGhUILiCQNuPHXvJOwqaMlfVU6y0ftQ2caW8__8H8nV1oQC47HBy2xhwv1qHw8hY-5u9GpYPm92EOpPkQ__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="http://cdn.optimizely.com/js/177031030.js"></script>
+<script src="../../../foresee/foresee-trigger.js?v=1142014"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__EDiTHeZs70c6RSvteJs1sLpYCQRBBlN28J2mntrlq44__BYE15AWexvjbnXg2irR36QHICk6CZ-ZH3RRuWfd9n1Y__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="http://c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__KCdVe0OcAs2OtzYBvuvVO8dbn2FC7RzBn34f2_sWl1k__CkvitJEUKLQaNcs4g8chYs_4Kn7Zcyk-pJFzxaSqm8k__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__3hNWr-SnIKSHoSn2VnMz2JjjKcatfEtbKk2C-Z6SxBk__Vx_DMCjzSIf1VcNyt85UF49B1wuNrHBQjeWe7AOORMw__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script>window.googletag = window.googletag || {};googletag.cmd = googletag.cmd || [];</script>
+<script>
+      window.TWC = window.TWC || {};
+      window.TWC.Tealium={
+        'url'   : '//tags.tiqcdn.com/utag/weather/twc/prod/utag.js'
+      };
+      window.TWC.Configs={
+        'dsx' :{
+          'host':   '//dsx.weather.com/',
+          'apiKey': '7bb1c920-7027-4289-9c96-ae5e263980bc',
+          'locale': (TWC && TWC.Titan && TWC.Titan.locale) || 'en_US'
+        },
+        'debug' : 0
+      };
+      // Disable console.log/debug/info
+      if (!TWC.Configs.debug) {
+        window.console = window.console || {};
+        console.log = function(){};
+        console.debug = function(){};
+        console.info = function(){};
+      }
+      TWC.pco=TWC.initpco(
+        jQuery,
+        {page:{
+          'ampm':       'am',
+          'timezone':   'EST',
+          'serverdate': '02/10/2015',
+          'servertime': '02:24:13',
+          'locale':     'en_US',
+          'serverhrs':  '02',
+          'lang':       'en',
+          'serverday':  'Tue'
+        },ad:{}},
+        null,
+        null,
+        '{"error":"LOCATION_UNAVAILABLE"}'
+      );
+
+      (function($){
+        TWC.Events.getEvent('utag_dataReady').done(function(){
+          TWC.PcoUtils.setTiming('tealiumStart', (new Date()).getTime());
+          if (!window.callPhantom) {
+            $.getScript(TWC.Tealium.url);
+          }
+        });
+      })(jQuery);</script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__4cvVkGS-qKHMHKnfpdLc3bloMlLenOrgGk2xOZQF4ko__PW80PT4NujttunqiYhCTJg0ruZF3nwpwkQX5C_fCGps__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__RnFGPLzjyopdjvtSLWOeqfSqsN3L_0C8BkObZYQaJpc__qLl6I6z81yNsQrvA-3ZOyI1BXJXN6CQEfQN2ZHlLoV8__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","dice_wxnodes":{"dice_wx_nodes_get_slideshow":"http:\/\/dev.dice.psg.weather.com:8080\/slideshow","map_url":"http:\/\/i.imwx.com\/","dice_wx_nodes_get_map":"http:\/\/twc.dice:8080\/map","dice_wx_nodes_get_imgs":"http:\/\/dev.dice.psg.weather.com:8080\/images","dice_wx_nodes_get_img":"http:\/\/dev.dice.psg.weather.com:8080\/image","dice_wx_nodes_get_vid":"http:\/\/dev.dice.psg.weather.com:8080\/videos","dice_wx_nodes_get_vidcolls":"http:\/\/dev.dice.psg.weather.com:8080\/videocollections","dice_wx_nodes_get_vidcolls2":"\/dice_legacy_imports\/video\/videocollections2"},"dsxField":{"baseUrl":"https:\/\/dsx.weather.com","apikey":"7bb1c920-7027-4289-9c96-ae5e263980bc"},"wxnode_slideshow":{"endpoint":"\/wxnode\/ajax\/slideshows"},"wxnode_video":{"wxnode_video_get_vid":"\/wxnode\/ajax\/videos","wxnode_video_get_vidcolls":"\/wxnode\/ajax\/videocollections"},"twc":{"contexts":{"vid":{"id":"vid"},"node":{"title":"Rare Blue-Eyed Lemur Could Go Extinct In 11 Years","type":"video","uuid":"6540401d-c9c2-4c6d-bcd6-5e470c5fddc0","field_pcoll":"series\/crazimals"}},"variant":"big","instance":{"fce541cb-00da-45d8-811b-3fc90db36cd5":{"module_id":"header-menu","main_menu":{"menu_links_main":"f184e256-fbd3-43f2-aa40-002920ae66af"},"subnav1":{"display_1_1":1,"display_1_2":1,"menu_links_1_1":"de699c27-1a5d-45b2-b2a5-87a3de48128e","menu_links_1_2":"295604f3-db4b-4e6a-bbe3-55e02503848f"},"subnav2":{"display_2_1":1,"display_2_2":1,"menu_links_2_1":"c52673c4-0888-4c0b-9e4f-ae0fb4dd43f5","menu_links_2_2":"f2265ca6-0346-41bb-9212-d1f1c3a2af7b"},"subnav3":{"display_3_1":1,"display_3_2":1,"menu_links_3_1":"5def3dd7-efab-4c53-9419-f7cd4727c703","menu_links_3_2":"2c2bf8b2-bc16-472c-91c9-0cfc7c4b1a33"},"subnav4":{"display_4_1":1,"display_4_2":1,"menu_links_4_1":"9f09d3f5-8438-4ac0-af9f-03590e359a5d","menu_links_4_2":"11cd7800-aee1-464b-bc04-782f1c831ffb"},"subnav5":{"display_5_1":1,"display_5_2":1,"menu_links_5_1":"0bb44f21-54d2-42e5-bc68-5778611234b8","menu_links_5_2":"942e612f-2cf0-4dac-935e-aacdb2e5635d"},"subnav6":{"display_6_1":1,"display_6_2":1,"menu_links_6_1":"ca137b6f-4cbe-4831-b92d-04404c5dca2f","menu_links_6_2":"ee8aabe0-17fc-42a4-9a04-d4de3d902fcb"},"subnav7":{"display_7_1":1,"display_7_2":1,"menu_links_7_1":"70836231-7ffc-4c98-96de-b39a712d7522","menu_links_7_2":"e16625b8-3faf-499f-9474-26c9842d2c4b"},"module_version":"1.0.25"},"0e7cb267-efce-43f5-992d-ff2fc462cc9e":{"module_id":"header-saved-locations","module_version":"1.0.35"},"cc8941bf-7c89-467a-84fe-22422798b491":{"place_holder":"Search City, Zip, or Place (Disney World)","loc_type":{"1":"1","5":"5","9":"9","11":"11","13":"13","19":"19"},"module_id":"hdr","minChar":"3","suppress_recent_searches":"false","module_version":"1.0.20"},"52365935-be3c-4e2e-a165-ff6b3d4f32a2":{"module_id":"social_sharing","providers":{"facebook":"facebook","twitter":"twitter","googleplus":"googleplus","reddit":"reddit","pinterest":"pinterest","email":"email","qq":0,"sina":0},"position":"auto","theme":"auto","module_version":"1.4.17"},"9d011639-fe55-4969-b73d-a3108807ea33":{"image_override":"","include_ad":1,"link_override":"","module_id":"collection-title-video","selectedadpos":"WX_SpotLight","text_override":"","module_version":"1.1.105"},"8791052e-f684-461e-bfd4-1969139f1167":{"assetid":"","module_id":"video-player","selectedadpos":["WX_Video_Player"],"module_version":"1.0.31"},"5e339043-dc8f-48af-b325-02ed686b6b1f":{"module_id":"video-metadata","module_version":"1.0.62"},"c7e839fc-c4e6-47cc-9730-d8578613ba0a":{"ignore_processing":0,"limit":"1","module_id":"media","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Extreme Video Series","see_more_text":"","see_more_link":"","subtitle":""},"query_method":"cm_manual","content_media_queryset":"","query_count":"1","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"","sort_param":"sort_publishdate","use_teaser_title":1,"primary_collection":"series\/extreme","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"},"7ee93a26-a6be-4a37-b269-db6e18b50486":{"selectedadpos":"WX_VideoCompanion","adtype":"companion","module_version":"1.0.5"},"dfdc054b-9d3d-4735-b96d-401b125a2a56":{"module_id":"video-companion-text","module_version":"1.0.5"},"9737bd2c-5207-4a29-bdbb-56530e554e2f":{"video_node":"node","disableBrowseAllView":0,"disableCountView":0,"module_id":"video-filmstrip","overrideBrowseAllLink":"","playlistTitle":"","trigger_browse_override":0,"trigger_title_override":0,"trigger_teaser":1,"module_version":"1.3.68"},"18f15f7e-f181-41d1-97d5-3e19dd1e3c1d":{"ignore_processing":0,"limit":"5","module_id":"video-media-latest","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Latest Weather \u0026 News Videos","see_more_text":"All Weather Video","see_more_link":"weather\/news","subtitle":""},"query_method":"cm_manual","content_media_queryset":"","query_count":"2","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"news\/weather","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}},{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"news","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"},"5d76ec92-9635-45a7-8cc6-6dd606acea4a":{"ignore_processing":0,"limit":"5","module_id":"video-media-web-series","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Weather.com Original Web Series","see_more_text":"All Web Series","see_more_link":"\/series","subtitle":""},"query_method":"cm_manual","content_media_queryset":"121","query_count":"2","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"1","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"series\/extreme","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}},{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"series\/uncharted","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"},"cfb605ab-7931-4afb-9b71-68bf18ab0637":{"ignore_processing":0,"limit":"5","module_id":"video-media-tv-shows","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Weather Channel TV Show Clips","see_more_text":"All TV Shows","see_more_link":"\/tv","subtitle":""},"query_method":"cm_manual","content_media_queryset":"","query_count":"2","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"tv\/shows\/amhq","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}},{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"2","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"tv\/shows\/wake-up-with-al","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"},"ad0bd18b-b620-41d2-9bfd-71d01edbd1d4":{"title":"Recommended for You","paid_first":1,"placement_org":"Video Page Bottom Thumbnails Org","placement_paid":"Video Page Bottom Thumbnails Paid","module_version":"1.0.15"},"3c26e41c-97a8-411d-96d4-1ad9e0e15d52":{"module_id":"footer","imapsFooter":0,"locID":"","footer_social":"6c62d050-5307-4338-946a-1864f2db90a8","footer_company":"d91e49ea-0e6e-47f2-9d51-048d0cce2945","footer_explore":"39f75148-bcb2-4332-a218-264726e676b0","footer_legal":"d7807947-6dba-4175-b161-89c62294cc2a","module_version":"1.0.24"},"6e3ffb12-2dc3-4563-995e-4b2d41d49037":{"params":{"module_id":"video-nav","menuLinks":"488e5821-6a23-4133-8a7d-a181e41bcd06","currentLink":"\/tv\/","nav_breakPointSize":"900","video_MoreText":"All Video","video_MoreLink":"\/video"},"menuLinks":{"menu_header_title":null,"linklist_title":{"value":"Video - Watch Page Subnav","format":null,"safe_value":"Video - Watch Page Subnav"},"links":[{"link_title":"Editor\u0027s Picks","link_image":null,"link_tool_tip":null,"link_type":null,"link_url":"\/series\/forecast-matters\/video\/the-most-beautiful-stargazing-on-earth?pl=pl-editor-picks","link_visible_between":{"value":"2014-11-02 17:00:00","value2":"2014-11-02 17:00:00","timezone":"America\/New_York","timezone_db":"America\/New_York","date_type":"datetime"},"open_link_new_tab":false},{"link_title":"Web Series","link_image":null,"link_tool_tip":null,"link_type":"default","link_url":"\/series","link_visible_between":{"value":"2013-10-09 08:00:00","value2":"2013-10-09 08:00:00","timezone":"America\/New_York","timezone_db":"America\/New_York","date_type":"datetime"},"open_link_new_tab":false},{"link_title":"Weather Films","link_image":null,"link_tool_tip":null,"link_type":null,"link_url":"\/series\/weatherfilms","link_visible_between":{"value":"2014-11-03 18:30:00","value2":"2014-11-03 18:30:00","timezone":"America\/New_York","timezone_db":"America\/New_York","date_type":"datetime"},"open_link_new_tab":false},{"link_title":"TV Shows","link_image":null,"link_tool_tip":null,"link_type":null,"link_url":"\/tv","link_visible_between":{"value":"2014-10-30 13:00:00","value2":"2014-10-30 13:00:00","timezone":"America\/New_York","timezone_db":"America\/New_York","date_type":"datetime"},"open_link_new_tab":false}]},"module_version":"1.0.15"},"091d2a54-dce4-4c14-98dd-7bfc80c92c1a":{"selectedadpos":["WX_Hidden"],"refresh":0,"adtype":"default","overwriteadpos":"","module_version":"1.0.4"},"779d01cf-e2d5-4c32-8435-0af6ab7f281a":{"bg_type":"video","default_video_image":" http:\/\/s.w-x.co\/default-1600x854.dark.jpg","default_weather_image":"\/sites\/all\/themes\/radix\/images\/backgrounds\/default_32_gi.jpg","image_override":"","module_version":"1.0.4"},"b22b5a16-53f3-493d-a0b2-052633a022ae":{"module_id":"cobrand_headers","locID":"","module_version":"1.0.4"},"e396e991-1175-4ad3-8c74-9e3a18fbec7b":{"module_version":"1.0.8"},"91e35914-97cb-46d8-b869-bcdbc9594a13":{"module_id":"video-most-popular","module_title":"Most Popular Video","module_title_url":"","asset_list":"most-popular-videos","image_promotion":1,"total_results":"4","module_version":"1.0.17"},"a06be56d-06ec-4097-9bd7-d29ae8f0183b":{"ignore_processing":0,"limit":"3","module_id":"video-media-winter","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Winter Storm Central","see_more_text":"","see_more_link":"","subtitle":""},"query_method":"cm_manual","content_media_queryset":"","query_count":"1","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"","limit":"","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"storms\/winter","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"},"ef2c0684-b1f1-4599-ae6b-b0bf0d645288":{"ignore_processing":0,"limit":"3","module_id":"video-media-favorite","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config":{"header":"Our Favorite Things","see_more_text":"","see_more_link":"","subtitle":""},"query_method":"cm_queryset","content_media_queryset":"21","query_count":4,"queries":[{"options":{"query_type":"linker"},"linker":{"description":"","image_url":"http:\/\/s.w-x.co\/D-1208530.jpg","link_url":"http:\/\/www.weather.com\/tv\/shows\/amhq\/video\/police-commissioner-william-evans-winter-storms","title":"Another Winter Storm to Hit After Marcus? Boston\u0027s Police Commissioner Comments on Influx of Storms.  ","options":{"new_tab":0,"nofollow":0,"icon":"video","attribution":"","waitFlag":false}}},{"options":{"query_type":"linker"},"linker":{"description":"","image_url":"","link_url":"https:\/\/twitter.com\/weatherchannel","title":"Live Updates HERE ","options":{"new_tab":0,"nofollow":0,"icon":"image","attribution":"","waitFlag":false}}},{"options":{"query_type":"linker"},"linker":{"description":"","image_url":"","link_url":"http:\/\/www.epicurious.com\/","title":"What to Eat During Storm","options":{"new_tab":0,"nofollow":0,"icon":"image","attribution":"","waitFlag":false}}},{"options":{"query_type":"linker"},"linker":{"description":"","image_url":"","link_url":"http:\/\/www.weather.com\/tv\/shows\/amhq\/video\/more-snow-on-the-way-for-new-england","title":"Another Storm for New England? ","options":{"new_tab":0,"nofollow":0,"icon":"video","attribution":"","waitFlag":false}}}],"module_version":"2.1.56"},"68e0386f-41cc-43dd-aedc-f2ad1387af9d":{"ignore_processing":0,"limit":"2","module_id":"video-media-uncharted","include_ad":0,"selectedadpos":"WX_SponsoredStories","ad_index":"0","template_config_available":1,"template_config":{"header":"Uncharted Video Series","see_more_text":"","see_more_link":"","subtitle":""},"query_method":"cm_manual","content_media_queryset":"","query_count":"1","queries":[{"cms_query":{"type":{"video":"video"},"start_index":"4","limit":"3","sort_param":"sort_recent","use_teaser_title":1,"primary_collection":"series\/uncharted","keyword":"","dma":{"enabled":0,"source":"page","other":""},"region":{"enabled":0,"source":"page_4","other":""},"gpr":{"enabled":0,"source":"page","other":""},"state":{"enabled":0,"source":"page","other":""},"country":{"enabled":0,"source":"page","other":""}},"options":{"query_type":"cms_query"}}],"module_version":"2.1.56"}},"modules":{"header_main_menu":["fce541cb-00da-45d8-811b-3fc90db36cd5"],"header_savedlocations":["0e7cb267-efce-43f5-992d-ff2fc462cc9e"],"search":["cc8941bf-7c89-467a-84fe-22422798b491"],"social_sharing":["52365935-be3c-4e2e-a165-ff6b3d4f32a2"],"title_video_collection":["9d011639-fe55-4969-b73d-a3108807ea33"],"video_player":["8791052e-f684-461e-bfd4-1969139f1167"],"video_metadata":["5e339043-dc8f-48af-b325-02ed686b6b1f"],"content_media":["c7e839fc-c4e6-47cc-9730-d8578613ba0a","18f15f7e-f181-41d1-97d5-3e19dd1e3c1d","5d76ec92-9635-45a7-8cc6-6dd606acea4a","cfb605ab-7931-4afb-9b71-68bf18ab0637","a06be56d-06ec-4097-9bd7-d29ae8f0183b","ef2c0684-b1f1-4599-ae6b-b0bf0d645288","68e0386f-41cc-43dd-aedc-f2ad1387af9d"],"admodule_companion":["7ee93a26-a6be-4a37-b269-db6e18b50486"],"video_companion_text":["dfdc054b-9d3d-4735-b96d-401b125a2a56"],"video_playlist":["9737bd2c-5207-4a29-bdbb-56530e554e2f"],"taboola_module":["ad0bd18b-b620-41d2-9bfd-71d01edbd1d4"],"footer":["3c26e41c-97a8-411d-96d4-1ad9e0e15d52"],"video_page_nav":["6e3ffb12-2dc3-4563-995e-4b2d41d49037"],"admodule":["091d2a54-dce4-4c14-98dd-7bfc80c92c1a"],"background_wx_and_video":["779d01cf-e2d5-4c32-8435-0af6ab7f281a"],"cobrand_headers":["b22b5a16-53f3-493d-a0b2-052633a022ae"],"breaking_now":["e396e991-1175-4ad3-8c74-9e3a18fbec7b"],"most_popular":["91e35914-97cb-46d8-b869-bcdbc9594a13"]}},"angularmods":{"active":["header_main_menu","header_savedlocations","search","social_sharing","title_video_collection","video_player","video_metadata","content_media","video_companion_text","video_playlist","taboola_module","footer","video_page_nav","cobrand_headers","breaking_now","most_popular"]},"ajaxPageState":{"js":{"sites\/all\/themes\/radix\/js\/jquery.placeholder.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/angular\/angular.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/angular\/angular-touch.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/translate\/angular-translate.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/ng_sanitize\/..\/..\/..\/assets\/angular\/angular-sanitize.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/shared_module\/shared_module.app.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/config\/config.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/instance\/instance.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/model\/model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_init\/twc_init.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/q.loc.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/pco.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/metrics_control\/metrics_control.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_microdata\/twc_microdata.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/back_button_broadcast\/back_button_broadcast.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/alert_factory\/alert_factory.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/app_config\/app.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_logger\/twc_logger.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_logger\/twc_logger.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/xweb.webloc.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/base_search_controller\/base_search_controller.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_typeahead\/twc_typeahead.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_input_error_state\/twc_input_error_state.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_reference\/twc_reference.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_constant\/twc_constant.constant.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_sponsor\/twc_sponsor.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoamp\/lib\/amp.premier\/amp.premier.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/media_asset_factory\/media_asset.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/mouse\/mouse.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/ad_control\/ad_control.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/fast_button\/fast_button.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/fast_button\/fastbutton\/google.fastbutton.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/anim\/vendor\/anim_modified\/anim.modified.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_css_anim\/twc_css_anim.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_events\/twc_events.run.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_select_text\/twc_select_text.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_placeholder\/twc_placeholder.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/linker_factory\/linker_factory.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_popover\/twc_popover.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/track_str\/track_str_action_tracker.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/track_str\/track_str.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_tooltip\/twc_tooltip.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/class\/class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/collections\/collections.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/from_str\/from_str.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/remove_padding\/remove_padding.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_ellipsis\/twc_ellipsis.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_ellipsis\/vendor\/jquery.dotdotdot.min.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/filters\/module_filters.filter.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/pco.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/pco.run.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.user.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.device.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.twclog.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.performance.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.page.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.ad.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.savedLocation.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.profile.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pco\/models\/pco.metrics.model.class.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/util\/util.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/notify\/notify.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_social_sharing\/twc_social_sharing.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_social_sharing\/twc_social_sharing.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_social_sharing\/twc_social_sharing.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/mobile_header_display_ctr\/mobile_header_display_ctr.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/loc_util\/loc_util.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dom_event_origin_verifier\/dom_event_origin_verifier.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/mouse_broadcast\/mouse_broadcast.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/social_links\/social_links.directives.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/custom_event\/custom_event.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/page_metatags\/page_metatags.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.cache.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/pagecache\/pagecache.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/promise_pool\/promise_pool.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/throttled_events\/throttle.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/httpclient\/httpclient.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/drupal_settings\/drupal_settings.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.utils.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.promise.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.response.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsx_date\/dsx_date.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsx_date\/dsx_date.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/dsxclient.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/base.model.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.berecord.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.pollen.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.alertsarea.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.alertlocations.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/wxicon\/wxicon.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/wxicon\/wxicon.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/vendor\/idangerous.swiper.modified.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cms.collections.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.morecord.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cs.datetime.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/wxd.loc.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cms.breakingnow.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cms.assetlist.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsx_date\/dsx_date.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/preload\/preload.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cms.a.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/dsxclient\/models\/v2\/cms.affiliatevideos.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/error_handler\/error_handler.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/s.Media.config.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/videoplayer_amp.value.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_social_sharing\/translations\/twc_social_sharing.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/taboola_module\/vendor\/taboola_loader.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_main_menu\/header_main_menu.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_savedlocations\/header_savedlocations.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/search\/search.app.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_typeahead\/twc_alias.value.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/social_sharing\/social_sharing.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/title_video_collection\/title_video_collection.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_player\/video_player.app.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/video_player.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/videometrics.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/videoplayer.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/videoplayer_amp\/videopreroll.factory.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_metadata\/video_metadata.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_companion_text\/video_companion_text.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/video_playlist.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/taboola_module\/taboola_module.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/footer\/footer.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_page_nav\/video_page_nav.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/cobrand_headers\/cobrand_headers.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/breaking_now\/breaking_now.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/most_popular\/most_popular.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/content_media\/content_media.app.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_main_menu\/header_main_menu.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/search\/search.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_metadata\/video_metadata.value.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/footer\/footer.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/breaking_now\/mock\/responses.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_main_menu\/header_main_menu.directives.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/social_sharing\/social_sharing.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/title_video_collection\/title_video_collection.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_player\/video_player.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_metadata\/video_metadata.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_companion_text\/video_companion_text.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/video_playlist.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/video_playlist.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/video_playlist.title.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/taboola_module\/taboola_module.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_page_nav\/video_page_nav.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/cobrand_headers\/cobrand_headers.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/cobrand_headers\/cobrand_headers.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/breaking_now\/breaking_now.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/most_popular\/most_popular.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/content_media\/content_media.directive.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/content_media\/content_media.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_savedlocations\/header_savedlocations.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/title_video_collection\/translations\/title_video_collection.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_metadata\/translations\/video_metadata.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_companion_text\/translations\/video_companion_text.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/taboola_module\/translations\/taboola_module.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_page_nav\/translations\/video_page_nav.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/breaking_now\/breaking_now.controller.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/most_popular\/translations\/most_popular.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/error_handler\/translations\/error_handler.fr_fr.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/header_savedlocations\/header_savedlocations.directives.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/search\/translations\/search.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/title_video_collection\/translations\/title_video_collection.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_player\/translations\/video_player.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_metadata\/translations\/video_metadata.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_companion_text\/translations\/video_companion_text.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_playlist\/translations\/video_playlist.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/taboola_module\/translations\/taboola_module.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/footer\/translations\/footer.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/video_page_nav\/translations\/video_page_nav.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/twc_social_sharing\/translations\/twc_social_sharing.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/modules\/most_popular\/translations\/most_popular.en_us.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/error_handler\/translations\/error_handler.en_us.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/omega\/omega\/js\/no-js.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/jquery.cookie.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/jquery.jqplugin.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/jStorage.js":1,"sites\/all\/themes\/radix\/js\/domready.min.js":1,"sites\/all\/themes\/radix\/js\/twc.eq.js":1,"sites\/all\/themes\/radix\/js\/modernizr.js":1,"\/\/cdn.optimizely.com\/js\/177031030.js":1,"\/foresee\/foresee-trigger.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/core-utils.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/tealium_utag_data\/tealium_utag_data.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/amznslots\/twc_amznslots.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/criteo\/twc_criteo.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/wfxtg\/wfxtg.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/lotame\/twc_lotame.js":1,"\/\/c.amazon-adsystem.com\/aax2\/amzn_ads.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/node-rules.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/node.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/profile.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/page.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/product.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/user.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/device.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/wx.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/ad.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/metrics.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/twclog.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/nodes\/performance.js":1,"sites\/all\/themes\/radix\/plugins\/layouts\/vegas\/..\/..\/..\/js\/viewport-changes.js":1,"sites\/all\/modules\/custom\/angularmods\/assets\/pco\/pco.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/background_utils\/ad_background.util.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/shared\/background_utils\/weather_background.util.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/features\/tf_full_html\/tf_full_html.js":1,"sites\/all\/modules\/custom\/angularmods\/app\/twc.app.js":1,"sites\/all\/themes\/radix\/js\/webfont-loader.js":1}}});</script>
+    <script>
+    // drupalSettingsReady event is here to indicate that Drupal.settings is ready
+    window.TWC = window.TWC || {};
+    TWC.Events = TWC.Events || {};
+    TWC.Events.drupalSettingsReady = TWC.Events.drupalSettingsReady || jQuery.Deferred();
+    TWC.Events.drupalSettingsReady.resolve();
+    TWC.pageTitle = "Rare Blue-Eyed Lemur Could Go Extinct In 11 Years - weather.com" || "The Weather Channel";
+    TWC.pageDescription = jQuery('meta[name="description"]').attr('content') || "";
+  </script>
+</head>
+
+<body  class="html not-front not-logged-in page-node page-node- page-node-655391 node-type-video titan section-series">
+  <a href="rare-blue-eyed-lemur-could-go-extinct-in-11-years?cm_ven=Twitter#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <div class="l-page">
+
+  <div class="l-main l-content" role="main">
+            <ul class="breadcrumb"><li><a href="http://www.weather.com/">Home</a></li></ul>      <a id="main-content"></a>
+                              <div id="wx-wrapper"><!-- Wrapper in master JSP -->
+  <div class="panel-display vegas clearfix " >
+
+          <header id="wx-top-wrap" class="page-header container panel-panel clearfix">
+        <div class="page-header-inner container-inner panel-panel-inner">
+          <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div data-instance="091d2a54-dce4-4c14-98dd-7bfc80c92c1a" class="admodule"><div id="wrapper_WX_Hidden" class="wx-adWrapper"><div id="WX_Hidden" style="line-height:0;display:none;"><script>googletag.cmd.push(function() { googletag.display("WX_Hidden"); });</script></div></div></div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div data-instance="779d01cf-e2d5-4c32-8435-0af6ab7f281a" class="background_wx_and_video"><placeholder type='static'><!-- Array
+(
+    [bg_type] => video
+    [default_video_image] =>  http://s.w-x.co/default-1600x854.dark.jpg
+    [default_weather_image] => /sites/all/themes/radix/images/backgrounds/default_32_gi.jpg
+    [image_override] => 
+)
+ --></placeholder></div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="mayberry clearfix" id="mini-panel-breaking_now_and_cobrand_header_">
+      <div class="panel-pane content width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init cobrand_headers" data-twc-controller="twc_cobrand_headers_controller" instance="b22b5a16-53f3-493d-a0b2-052633a022ae">
+<!-- This module uses the directive mainly. So we just need to call the directive and the directive decides which cobrand template to load -->
+<div data-wx-co-brand-header></div>
+</div> </div>
+</div><div class="panel-pane content width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init breaking_now" data-twc-controller="twc_breaking_now_controller" instance="e396e991-1175-4ad3-8c74-9e3a18fbec7b"><script type="text/ng-template" id="templates/modules/breakingnow">
+    <div class="breaking-now-container ng-cloak" data-ng-if="breaking_now.display" data-ng-style="{'background-color' : breaking_now.model.getColor()}">
+        <div class="breaking-now-inner center-col">
+            <div class="breaking-now-items breaking-now-title">
+                <h3 class="title-container">
+                    <a data-tb-region-item-link data-from-str="title-link" data-module-id="{{moduleId}}" class="title-link" data-ng-href="{{breaking_now.model.getLinkUrl()}}" data-ng-bind="breaking_now.model.getTitle() | limitTo:20"></a>
+                </h3>
+            </div>
+            <div class="breaking-now-items breaking-now-headline">
+                <h3 class="headline-container">
+                    <a data-tb-region-item-link data-from-str="headline-link" title="{{breaking_now.model.getHeadLine()}}" data-module-id="breaking-news-banner" class="headline-link" data-ng-href="{{breaking_now.model.getLinkUrl()}}" data-ng-bind="breaking_now.model.getHeadLine()"></a>
+                </h3>
+            </div>
+            <div data-ng-if="breaking_now.model.getShareType() === 'social'" class="breaking-now-items breaking-now-social-share-container" data-ng-class="{mobile: isTouch, desktop: !isTouch}">
+                <span data-track-str="facebook-recommend" data-link-track-vars="eVar21,eVar22,eVar24,campaign,events" data-link-track-events="event53,event57"
+                      data-e-var21="Facebook" data-e-var22="{{breaking_now.pagename}}_breaknow" data-e-var24="breaknow" data-events="event53,event57" data-module-id="breaking-news-banner"
+                      data-twc-fb-share="{{breaking_now.model.getLinkUrl() + '?cm_ven=Facebook&cm_cat=fb_breaknow_rec&fb_ref=br_share'}}" data-social-track-action="true"
+                      data-fb-title="{{breaking_now.model.getTitle() + ' - ' + breaking_now.model.getHeadLine()}}" data-fb-cid="{{breaking_now.cid}}"
+                      class="wx-iconfont-global wx-icon-facebook"></span>
+                <span data-track-str="twitter-tweet" data-link-track-vars="eVar21,eVar22,eVar24,campaign,events" data-link-track-events="event53,event57"
+                      data-e-var21="Twitter" data-e-var22="{{breaking_now.pagename}}_breaknow" data-e-var24="breaknow" data-events="event53,event57" data-module-id="breaking-news-banner"
+                      data-twc-tw-share="{{breaking_now.model.getLinkUrl() + '?cm_ven=Twitter&cm_cat=tw_breaknow_tweet'}}" data-social-track-action="true"
+                      data-tw-title="{{breaking_now.model.getTitle() + ' - ' + breaking_now.model.getHeadLine()}}" data-tw-cid="{{breaking_now.cid}}"
+                      class="wx-iconfont-global wx-icon-twitter"></span>
+                <span data-track-str="google-plus" data-link-track-vars="eVar21,eVar22,eVar24,campaign,events" data-link-track-events="event53,event57"
+                      data-e-var21="GooglePlus" data-e-var22="{{breaking_now.pagename}}_breaknow" data-e-var24="breaknow" data-events="event53,event57" data-module-id="breaking-news-banner"
+                      data-twc-gplus-share="{{breaking_now.model.getLinkUrl()}}" data-social-track-action="true" data-twc-gplus-cid="{{breaking_now.cid}}"
+                      class="wx-iconfont-global wx-icon-google-plus"></span>
+            </div>
+        </div>
+    </div>
+</script>
+<div data-tb-region="breaking" data-tb-region-item>
+    <div data-breaking-now></div>
+</div></div> </div>
+</div></div>
+ </div>
+</div>        </div>
+      </header>
+        <div id="wx-local-wrap" class="container clearfix">
+      <div id="wx-local-bg"></div>
+              <header class="header container panel-panel content-header clearfix">
+          <div class="header-inner container-inner panel-panel-inner">
+            <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="panel-display panel-1col clearfix" id="mini-panel-main_menu_v0_1">
+  <div class="panel-panel panel-col">
+    <div><div class="panel-pane content width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init header_main_menu" data-twc-controller="twc_header_main_menu_controller" instance="fce541cb-00da-45d8-811b-3fc90db36cd5"><nav data-add-drop-down-images class="wx-nav-main center-col">
+  <ul data-document-click-listener class="header-main-menu-links">
+    <li><a data-twc-custom-click="showMegaMenu('0')" data-on-mouse-out="hideMegaMenu('0')" id="Forecasts" class="linklist-default" href="http://www.weather.com/weather/today/l/{{dynamicLocId}}" target="_self" data-from-str="main-menu_0">Forecasts</a><div class="wx-subnav-wrap wx-subNav1" data-ng-mouseover="showMegaMenu('0')" data-ng-mouseout="hideMegaMenu('0')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/weather/today/l/{{dynamicLocId}}" class="main-menu-drop-down-link_anchor" data-from-str="today's-forecast_1">Today's Forecast</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/forecast/news/national-forecast-20141009" class="main-menu-drop-down-link_anchor" data-from-str="national-forecast_1">National Forecast</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/alerts" class="main-menu-drop-down-link_anchor" data-from-str="alerts_1">Alerts</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/severe" class="main-menu-drop-down-link_anchor" data-from-str="severe-weather_1">Severe Weather</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/safety" class="main-menu-drop-down-link_anchor" data-from-str="safety-&-preparedness-_1">Safety & Preparedness </a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/safety/auto" class="main-menu-drop-down-link_anchor" data-from-str="weather-ready-auto_1">Weather Ready Auto</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/winter" class="main-menu-drop-down-link_anchor" data-from-str="winter-storm-central_1">Winter Storm Central</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/forecast/commuter?layers=driving" class="main-menu-drop-down-link_anchor" data-from-str="commuter-forecast_1">Commuter Forecast</a></li></ul><ul class="wx-subnav right" data-tb-region="header_Forecasts" data-total="4"><li class="main-menu-drop-down-link" data-from-str="winter-storm-marcus:-northeast-snowstorm_1"><a href="http://www.weather.com/storms/winter/news/winter-storm-marcus-northeast-great-lakes" data-mm-subnav-image="8eafaef1-8ce6-4cff-888d-858dcbc0c061" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Winter Storm Marcus: Northeast Snowstorm</h3></a></li><li class="main-menu-drop-down-link" data-from-str="marcus-snowfall-totals_1"><a href="http://www.weather.com/storms/winter/news/winter-storm-marcus-reports-how-much-snow" data-mm-subnav-image="127e7d08-5988-4057-bb83-714b620096b9" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Marcus Snowfall Totals</h3></a></li><li class="main-menu-drop-down-link" data-from-str="two-more-n.-england-snowmakers-ahead?_1"><a href="http://www.weather.com/storms/winter/news/more-northeast-snow-valentines-weekend" data-mm-subnav-image="1c34e694-7ec7-4f58-9797-2a25159a8c0e" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Two More N. England Snowmakers Ahead?</h3></a></li><li class="main-menu-drop-down-link" data-from-str="coldest-air-of-the-season-coming?_1"><a href="http://www.weather.com/storms/winter/news/arctic-coldest-this-winter-season-northeast" data-mm-subnav-image="56bee910-b4c6-4aa9-9fbf-06965bd6e1bc" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Coldest Air of the Season Coming?</h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('1')" data-on-mouse-out="hideMegaMenu('1')" id="Maps" class="linklist-default" href="http://www.weather.com/weather/map/interactive/l/{{dynamicLocId}}" target="_self" data-from-str="main-menu_1">Maps</a><div class="wx-subnav-wrap wx-subNav2" data-ng-mouseover="showMegaMenu('1')" data-ng-mouseout="hideMegaMenu('1')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/weather/map/interactive/l/{{dynamicLocId}}?animation=true" class="main-menu-drop-down-link_anchor" data-from-str="weather-in-motion®_1">Weather In Motion®</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/alerts" class="main-menu-drop-down-link_anchor" data-from-str="severe-alerts_1">Severe Alerts</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/weather/map/interactive/l/{{dynamicLocId}}?layers=0090,0120&amp;zoom=8" class="main-menu-drop-down-link_anchor" data-from-str="current-temps_1">Current Temps</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/weather/map/interactive/l/{{dynamicLocId}}?layers=ussat&amp;zoom=6" class="main-menu-drop-down-link_anchor" data-from-str="regional-satellite-_1">Regional Satellite </a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/weather/map/interactive/l/{{dynamicLocId}}?layers=sat&amp;zoom=1&amp;baseMap=h" class="main-menu-drop-down-link_anchor" data-from-str="world-satellite_1">World Satellite</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/forecast/commuter?layers=driving" class="main-menu-drop-down-link_anchor" data-from-str="commuter-forecast_1">Commuter Forecast</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/maps/forecast" class="main-menu-drop-down-link_anchor" data-from-str="forecast-maps_1">Forecast Maps</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/maps/current" class="main-menu-drop-down-link_anchor" data-from-str="classic-weather-maps_1">Classic Weather Maps</a></li></ul><ul class="wx-subnav right" data-tb-region="header_Maps" data-total="4"><li class="main-menu-drop-down-link" data-from-str="current-weather_1"><a href="http://www.weather.com/maps/current" data-mm-subnav-image="a263fcd2-224b-4968-8371-bd28e674e644" data-tb-region-item><h3 class="image-title">Current Weather</h3></a></li><li class="main-menu-drop-down-link" data-from-str="health-maps_1"><a href="http://www.weather.com/maps/health" data-mm-subnav-image="d222ac30-e592-45a2-8eac-24785796aff1" data-tb-region-item><h3 class="image-title">Health Maps</h3></a></li><li class="main-menu-drop-down-link" data-from-str="traffic-conditions_1"><a href="http://www.weather.com/forecast/commuter?layers=traffic,radar" data-mm-subnav-image="a3533f5f-9315-48d5-9c58-dd6b8e7cc872" data-tb-region-item><h3 class="image-title">Traffic Conditions</h3></a></li><li class="main-menu-drop-down-link" data-from-str="weekly-planner_1"><a href="http://www.weather.com/maps/planner" data-mm-subnav-image="c71f5f4b-4f5d-4110-8cb1-40a3f7d11e43" data-tb-region-item><h3 class="image-title">Weekly Planner</h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('2')" data-on-mouse-out="hideMegaMenu('2')" id="Video" class="linklist-default" href="http://www.weather.com/video" target="_self" data-from-str="main-menu_2">Video</a><div class="wx-subnav-wrap wx-subNav3" data-ng-mouseover="showMegaMenu('2')" data-ng-mouseout="hideMegaMenu('2')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/winter/video/train-plows-through-deep-snow-in-canada?pl=pl-editor-picks" class="main-menu-drop-down-link_anchor" data-from-str="editor's-picks_1">Editor's Picks</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/series" class="main-menu-drop-down-link_anchor" data-from-str="more-web-series_1">More Web Series</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/series/weatherfilms" class="main-menu-drop-down-link_anchor" data-from-str="weather-films_1">Weather Films</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv" class="main-menu-drop-down-link_anchor" data-from-str="tv-shows_1">TV Shows</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/series/extreme/video/munich-germany-waldseilgarten-camp" class="main-menu-drop-down-link_anchor" data-from-str="extreme_1">Extreme</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/series/uncharted/video/levitating-building-gobsmacks-londoners" class="main-menu-drop-down-link_anchor" data-from-str="uncharted_1">Uncharted</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/video" class="main-menu-drop-down-link_anchor" data-from-str="all-video_1">All Video</a></li></ul><ul class="wx-subnav right" data-tb-region="header_Video" data-total="4"><li class="main-menu-drop-down-link" data-from-str="what-are-your-nails-trying-to-tell-you?_1"><a href="http://www.weather.com/series/health-minute/video/what-are-your-nails-trying-to-tell-you" data-mm-subnav-image="329a0fc0-054f-4449-bfa2-a0ddbaa0d6e1" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">What Are Your Nails Trying To Tell You?</h3></a></li><li class="main-menu-drop-down-link" data-from-str="how-a-cooler-bedroom-helps-good-fat_1"><a href="http://www.weather.com/series/health-minute/video/how-a-cooler-bedroom-helps-good-fat" data-mm-subnav-image="61ab2ad3-76ea-4f6c-b698-f44b085ad8f9" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">How A Cooler Bedroom Helps GOOD Fat</h3></a></li><li class="main-menu-drop-down-link" data-from-str="see-these-walls-come-to-life..._1"><a href="http://www.weather.com/series/uncharted/video/see-these-walls-come-to-life" data-mm-subnav-image="258bd762-12cb-4fcb-820e-38cb8f4bec32" data-tb-region-item><h3 class="image-title">See These Walls Come To Life...</h3></a></li><li class="main-menu-drop-down-link" data-from-str="caribbean-ghost-island_1"><a href="http://www.weather.com/series/uncharted/video/the-caribbean-ghost-island-of-little-curacao" data-mm-subnav-image="5f4b5478-fb7c-4931-8b7c-235a194ec4b5" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Caribbean Ghost Island</h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('3')" data-on-mouse-out="hideMegaMenu('3')" id="Photos" class="linklist-default" href="http://www.weather.com/slideshows" target="_self" data-from-str="main-menu_3">Photos</a><div class="wx-subnav-wrap wx-subNav4" data-ng-mouseover="showMegaMenu('3')" data-ng-mouseout="hideMegaMenu('3')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/slideshows" class="main-menu-drop-down-link_anchor" data-from-str="all-photos_1">All Photos</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/photos" class="main-menu-drop-down-link_anchor" data-from-str="fan-photos_1">Fan Photos</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/photos/collection/ugc" class="main-menu-drop-down-link_anchor" data-from-str="upload-your-photos_1">Upload Your Photos</a></li></ul><ul class="wx-subnav right" data-tb-region="header_Photos" data-total="4"><li class="main-menu-drop-down-link" data-from-str="these-vibrant-lakes-are-stunning-_1"><a href="http://www.weather.com/travel/news/amazing-lakes-photos" data-mm-subnav-image="99cde1a0-a1a3-4816-9e0b-9ce10110750e" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">These Vibrant Lakes Are Stunning </h3></a></li><li class="main-menu-drop-down-link" data-from-str="will-these-gems-disappear-forever?_1"><a href="http://www.weather.com/travel/news/amazing-destinations-disappearing" data-mm-subnav-image="26c52d52-b2d5-4333-819a-561669051d9e" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Will These Gems Disappear Forever?</h3></a></li><li class="main-menu-drop-down-link" data-from-str="compared-to-these,-we-are-nothing-but-ants_1"><a href="http://www.weather.com/science/nature/news/swiss-alps-switzerland-france-photos" data-mm-subnav-image="ee98a573-186e-42d6-952c-8ba78ed3f284" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Compared to These, We Are Nothing but Ants</h3></a></li><li class="main-menu-drop-down-link" data-from-str="winter-storm-linus:-cross-county-menace_1"><a href="http://www.weather.com/news/news/winter-storm-linus-photos-midwest-northeast" data-mm-subnav-image="b14cfcf8-383f-49fb-8a50-95d80df558ef" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Winter Storm Linus: Cross County Menace</h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('4')" data-on-mouse-out="hideMegaMenu('4')" id="News" class="linklist-default" href="http://www.weather.com/news" target="_self" data-from-str="main-menu_4">News</a><div class="wx-subnav-wrap wx-subNav5" data-ng-mouseover="showMegaMenu('4')" data-ng-mouseout="hideMegaMenu('4')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/news" class="main-menu-drop-down-link_anchor" data-from-str="all-news_1">All News</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/travel" class="main-menu-drop-down-link_anchor" data-from-str="travel_1">Travel</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/health" class="main-menu-drop-down-link_anchor" data-from-str="health_1">Health</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/science" class="main-menu-drop-down-link_anchor" data-from-str="science_1">Science</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/science/environment" class="main-menu-drop-down-link_anchor" data-from-str="environment_1">Environment</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/sports-recreation" class="main-menu-drop-down-link_anchor" data-from-str="sports-&-recreation_1">Sports & Recreation</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/hurricane" class="main-menu-drop-down-link_anchor" data-from-str="hurricane-central_1">Hurricane Central</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/winter" class="main-menu-drop-down-link_anchor" data-from-str="winter-storm-central_1">Winter Storm Central</a></li></ul><ul class="wx-subnav right" data-tb-region="header_News" data-total="4"><li class="main-menu-drop-down-link" data-from-str="hundreds-of-schools-close-again_1"><a href="http://www.weather.com/storms/winter/news/winter-storm-marcus-new-england" data-mm-subnav-image="b1454285-b876-4869-8d8d-128a806861d1" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Hundreds of Schools Close Again</h3></a></li><li class="main-menu-drop-down-link" data-from-str="rough-commute-ahead-for-nyc_1"><a href="http://www.weather.com/storms/winter/news/winter-storm-marcus-new-york-city-impacts-ice-snow-commute" data-mm-subnav-image="aa3fd7c6-2ebd-4c6d-8415-5014057ef4bf" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Rough Commute Ahead For NYC</h3></a></li><li class="main-menu-drop-down-link" data-from-str="firefighters-work-to-contain-california-wildfire-_1"><a href="http://www.weather.com/safety/wildfires/news/california-wildfire-round-fire" data-mm-subnav-image="7e07b6ce-9430-41e7-8d4c-6e07e2b80f72" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Firefighters Work to Contain California Wildfire </h3></a></li><li class="main-menu-drop-down-link" data-from-str="state-of-emergency:-three-dead,-hundreds-evacuated_1"><a href="http://www.weather.com/news/news/europe-snowstorm-floods-spain-italy-croatia-slovenia-albania" data-mm-subnav-image="644b7594-a917-4111-9838-e9b9bae8cc42" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">State of Emergency: Three Dead, Hundreds Evacuated</h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('5')" data-on-mouse-out="hideMegaMenu('5')" id="TV" class="linklist-default" href="http://www.weather.com/tv" target="_self" data-from-str="main-menu_5">TV</a><div class="wx-subnav-wrap wx-subNav6" data-ng-mouseover="showMegaMenu('5')" data-ng-mouseout="hideMegaMenu('5')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv" class="main-menu-drop-down-link_anchor" data-from-str="all-tv_1">All TV</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv/personalities" class="main-menu-drop-down-link_anchor" data-from-str="personalities_1">Personalities</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv//personalities" class="main-menu-drop-down-link_anchor" data-from-str="experts_1">Experts</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv" class="main-menu-drop-down-link_anchor" data-from-str="shows_1">Shows</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/tv/the-weather-channel-live/news/tv-schedule" class="main-menu-drop-down-link_anchor" data-from-str="tv-schedule_1">TV Schedule</a></li></ul><ul class="wx-subnav right" data-tb-region="header_TV" data-total="4"><li class="main-menu-drop-down-link" data-from-str=""prospectors"-premieres-this-sunday-at-9p_1"><a href="http://www.weather.com/tv/shows/prospectors" data-mm-subnav-image="7b18f144-65b5-4253-8909-4fc835a9c367" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">"Prospectors" Premieres This Sunday at 9P</h3></a></li><li class="main-menu-drop-down-link" data-from-str="weekdays-7am-et-/-weekends-5am-et_1"><a href="http://www.weather.com/tv/shows/amhq" data-mm-subnav-image="e5be085a-e8b5-4b12-a0c8-75b2ab838403" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Weekdays 7AM ET / Weekends 5AM ET</h3></a></li><li class="main-menu-drop-down-link" data-from-str="wake-up-with-al-_1"><a href="http://www.weather.com/tv/shows/wake-up-with-al" data-mm-subnav-image="ac7eb463-80cb-44a6-8e59-f21b5339e55c" data-tb-region-item><span class="wx-iconfont-global  mainmenu-dp-icon"></span><h3 class="image-title">Wake Up With Al </h3></a></li><li class="main-menu-drop-down-link" data-from-str="weather-center-live-_1"><a href="http://www.weather.com/tv/shows/weather-center-live" data-mm-subnav-image="80afd8b8-0c71-4ede-a17d-097466375848" data-tb-region-item><h3 class="image-title">Weather Center Live </h3></a></li></ul></div></li><li><a data-twc-custom-click="showMegaMenu('6')" data-on-mouse-out="hideMegaMenu('6')" id="Hurricanes" class="linklist-" href="http://www.weather.com/storms/hurricane" target="_self" data-from-str="main-menu_6">Hurricanes</a><div class="wx-subnav-wrap wx-subNav7" data-ng-mouseover="showMegaMenu('6')" data-ng-mouseout="hideMegaMenu('6')"><ul class="wx-subnav left"><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/hurricane" class="main-menu-drop-down-link_anchor" data-from-str="hurricane-central_1">Hurricane Central</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/storms/hurricane/video/why-has-hurricane-season-been-so-quiet" class="main-menu-drop-down-link_anchor" data-from-str="hurricane-videos_1">Hurricane Videos</a></li><li class="main-menu-drop-down-link"><a href="http://www.weather.com/safety/hurricane" class="main-menu-drop-down-link_anchor" data-from-str="hurricane-safety_1">Hurricane Safety</a></li></ul><ul class="wx-subnav right" data-tb-region="header_Hurricanes" data-total="4"><li class="main-menu-drop-down-link" data-from-str="remembering-a-hurricane-pioneer_1"><a href="http://www.weather.com/news/weather/video/bob-simpson-weather-pioneer-dies" data-mm-subnav-image="cc598729-2ccb-49ee-b020-f6eb90e7cf71" data-tb-region-item><h3 class="image-title">Remembering a Hurricane Pioneer</h3></a></li><li class="main-menu-drop-down-link" data-from-str="2014-hurricane-season-in-review_1"><a href="http://www.weather.com/storms/hurricane/news/hurricane-season-2014-atlantic-pacific-recap" data-mm-subnav-image="09009f16-b2c6-499d-aa6b-d6cd6f3fd807" data-tb-region-item><h3 class="image-title">2014 Hurricane Season in Review</h3></a></li><li class="main-menu-drop-down-link" data-from-str="why-hurricanes-are-named_1"><a href="http://www.weather.com/storms/hurricane/news/tropical-storm-hurricane-names-20130626" data-mm-subnav-image="9c42dbad-4456-4b06-987e-9e6e0eee9255" data-tb-region-item><h3 class="image-title">Why Hurricanes Are Named</h3></a></li><li class="main-menu-drop-down-link" data-from-str="how-hurricanes-form_1"><a href="http://www.weather.com/storms/hurricane/news/how-hurricanes-form-20140821#/1" data-mm-subnav-image="4b00f511-345a-44b1-a84b-3cb380d9c451" data-tb-region-item><h3 class="image-title">How Hurricanes Form</h3></a></li></ul></div></li>  </ul>
+  <ul class="wx-header-tools" data-ng-cloak>
+    <li class="wx-sign-in"
+        data-ng-show="showHideMyProfileButton()"
+        data-ng-mouseover="showMyProfileLinks()"
+        data-ng-mouseleave="hideMyProfileLinks()"
+        data-ng-click="myProfileClickToggle()"
+      >
+
+      <span class="wx-iconfont-global wx-icon-profile"></span>
+      <span class="label">My Profile</span>
+      <span class="wx-iconfont-global wx-icon-arrow-down wx-icon-small"></span>
+      <ul class="wx-signedin" data-ng-show="myProfileLinksShown">
+        <li class="wx-signin-mnglocs"><a data-from-str="hdr_mnglocs"
+                                         href="http://www.weather.com/life/profile">Manage
+            Locations</a></li>
+        <li class="wx-signin-mngalerts"><a data-from-str="hdr_mngalerts"
+                                           href="https://profile.weather.com/#/profile/alerts">Manage
+            Alerts</a></li>
+        <li class="wx-signin-myprofile"><a data-from-str="hdr_myprofile"
+                                           href="https://profile.weather.com/#/profile/manage">Edit
+            Profile</a></li>
+        <li class="wx-signin-signout"><a data-from-str="hdr_signout"
+                                         href="https://profile.weather.com/signout.html">Sign
+            Out</a></li>
+      </ul>
+    </li>
+    <li class="wx-sign-in" data-ng-hide="hideSignInButton()"><a
+        data-from-str="hdr_signin" href="https://profile.weather.com"><span
+          class="wx-iconfont-global wx-icon-profile"></span> Sign In</a></li>
+  </ul>
+</nav>
+</div> </div>
+</div></div>
+  </div>
+</div>
+ </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div id="wx-header" class="mini-panel-display header-container container wx-masthead center-col">
+  <div class="header-container-inner container-inner clearfix">
+    <div class="header-content-wrap">
+
+      <div class="branding">
+        <div class="panel-pane content width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <a id="wx-twc-logo" href="http://www.weather.com/" title="The Weather Channel - weather.com" from="hdr_logo"><img id="wx-twc-logo-img" src="http://s.w-x.co/TWC_logo_100x100.gif" /></a> </div>
+</div>      </div>
+
+              <div class="wx-nav-utility column-content-region header-row-1 clearfix panel-panel">
+          <div class="column-content-region-inner panel-panel-inner">
+            <div class="panel-pane content width-75 float-left      column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init header_savedlocations" data-twc-controller="twc_header_savedlocations_controller" instance="0e7cb267-efce-43f5-992d-ff2fc462cc9e"><div class="wx-user-locs">
+    <div data-user-locations="visibleLocationsBlock.items"
+         data-other-locs-tab-open="showOtherLocsTab"
+         data-settings="settings" data-type="visible">
+    </div>
+    <div data-other-locations-dropdown class="wx-additional-user-locs"
+         data-ng-show="showOtherLocsTab"
+         data-ng-class="{open:showOtherLocsTab}"
+         data-ng-mouseover="showOtherLocs($event)"
+         data-ng-mouseout="hideOtherLocs($event)">
+
+        <div data-user-locations="otherLocationsBlock.items"
+             data-from-attrs="hiddenlocations"
+             data-other-locs-tab-open="showOtherLocsTab"
+             data-settings="settings" data-type="not_visible">
+        </div>
+    </div>
+</div>
+</div> </div>
+</div><div class="panel-pane content width-25 float-left      column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init search" data-twc-controller="twc_search_controller" instance="cc8941bf-7c89-467a-84fe-22422798b491"><section class="unified-search">
+    <span data-twc-typeahead data-items="results" data-term="term" data-search="search(term)"
+          data-select="selectItem(item, enter)" data-pattern=""
+          data-placeholder-text="{{'headerSearch.SEARCH_CITY_ZIP_PLACE' | translate}}"
+          data-validate-class="js-error-state"
+          data-input-class="input--search"
+          data-container-class="input-rebase">
+        <div data-ng-show="hasResults()">
+            <div class="menu" data-ng-cloak>
+                <div data-ng-switch="resultType()">
+                    <div class="animate-switch" data-ng-switch-when="Recent">
+                        <h3 class="heading--search" data-ng-bind-template="{{'headerSearch.RECENT_SEARCHES' | translate}}"></h3>
+                        <ul class="recent">
+                            <li data-twc-typeahead-item="item" data-ng-repeat="item in results | limitTo:10" class="results">
+                                <p class="name" data-ng-bind="getPresName($index)"></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="animate-switch" data-ng-switch-when="Search">
+                        <!-- <h3>Results</h3> -->
+                        <ul class="results">
+                            <li data-twc-typeahead-item="item" data-ng-repeat="item in results | limitTo:10" class="results">
+                                <p class="name" data-ng-bind="getPresName($index)"></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="animate-switch" data-ng-switch-when="NoResult">
+                      <p class="result-status" data-ng-bind-template="{{'headerSearch.NO_RESULT' | translate}}"></p>
+                    </div>
+                    <div class="animate-switch" data-ng-switch-when="Suppressed">
+                    </div>
+                    <div class="animate-switch" data-ng-switch-default>
+                      <p class="result-status" data-ng-bind-template="{{'headerSearch.SEARCHING' | translate}}.."></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+</section>
+</div> </div>
+</div>          </div>
+        </div>
+          </div> <!-- end header-content-wrap -->
+
+</div> 
+</div> <!-- end wx-header -->
+
+ </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init social_sharing" data-twc-controller="twc_social_sharing_controller" instance="52365935-be3c-4e2e-a165-ff6b3d4f32a2"><aside class="social-wrapper"
+       data-social-bar-position
+       data-ng-class="[socialSharing.getTheme(), socialSharing.getLayoutType()]"
+	   data-touch="{{isTouch}}">
+    <div data-twc-social-bar
+         data-providers="params.providers"
+         data-tooltip-position="socialSharing.getTooltipPosition()"
+         data-theme="socialSharing.getTheme()"
+         data-callback="openShare(media)"
+         data-twc-reference-scope="params.scope">
+    </div>
+</aside>
+
+</div> </div>
+</div>          </div>
+        </header>
+            <div class="local-wrap-inner center-col">
+                  <div class="content-row-1 panel-panel clearfix">
+            <div class="content-row-1-inner panel-panel-inner">
+              <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init title_video_collection" data-twc-controller="twc_title_video_collection_controller" instance="9d011639-fe55-4969-b73d-a3108807ea33"><section class="title-video-collection">
+  <h6 data-ng-if="!collImage" data-ng-click="trackTitleClick()">
+    <a href="http://www.weather.com/series/crazimals/video/{{collUrl}}">
+      <span data-ng-bind="collTitle"></span>
+    </a>
+  </h6>
+  <figure data-ng-if="collImage" data-ng-click="trackTitleClick()">
+    <a href="http://www.weather.com/series/crazimals/video/{{collUrl}}">
+      <img data-ng-if="collImage" data-ng-src="{{collImage}}" alt="{{collTitle}}" title="{{collTitle}}">
+    </a>
+  </figure>
+
+    <div class="adTitleContainer" data-ng-if="retrieveAd">
+  <div class="adTitleContainerItem wx-links-sponsored" data-twc-sponsor data-on="{{ sponsoredChange }}" id="{{selectedAdPos}}"></div>
+  </div>
+</section>
+</div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left     video-watch-page column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="hpdlsevere-container mini-panel-display mini-panel container" data-eq-pts="pane-tablet: 400, pane-desktop: 820">
+  <div class="hpdlsevere-container-inner container-inner">
+
+      <div class="column-content-region primary left left-row-1 panel-panel">
+      <div class="column-content-region-inner panel-panel-inner">
+        <div class="panel-pane content width-100 float-left     video-player-pane column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init video_player" data-twc-controller="twc_video_player_controller" instance="8791052e-f684-461e-bfd4-1969139f1167"><section class="videoWrapper">
+
+    <!--id is the div-id, should have the player id in it
+    data-video-amp is the angular directive
+    data-asset-id : (Overridden if a playlist module is present) the id of the video asset whose metadata will be used to play the media
+    data-ads-ad-position: Value of video player ad position to use to use in ad calls
+    data-ads-metrics-position: Value of video player metrics position to use in metrics calls
+    -->
+<div class="videoContainer"
+     id="videopage-videoplayer"
+     data-video-amp
+     data-asset-id="{{assetId}}"
+     data-player-ad-position="{{playerAdPosition}}"
+     data-module-id="{{moduleId}}"
+     ></div>
+</section>
+</div> </div>
+</div>      </div>
+    </div>
+        <div class="column-content-region secondary right right-row-1 panel-panel">
+      <div class="column-content-region-inner panel-panel-inner">
+        <div class="panel-pane content width-100 float-left     metadata-pane column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init video_metadata" data-twc-controller="twc_video_metadata_controller" instance="5e339043-dc8f-48af-b325-02ed686b6b1f"><section class="video-metadata">
+    <div data-ng-switch data-on="status" class="content-module-body">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error" error-handler="status"></div>
+        <div data-ng-switch-default>
+            <h1 ng-bind="videoData.getTitle();"></h1>
+                <cite class="byline" data-ng-bind="getFormattedAuthor(videoData.getAuthors(), videoData.getLastModifiedDate(), videoData.getProviderName());" data-ng-hide="showDescription"></cite>
+            <div class="more-info" data-ng-click="toggleDescription();" data-track-event="testing"><span class="wx-iconfont-global wx-icon-metadata-info"></span> <p data-translate="video_metadata.MORE_INFO_TEXT"></p></div>
+            <div class="description-container" data-ng-show="showDescription">
+            <div class="close" ng-click="toggleDescription();"><span class="wx-iconfont-global wx-icon-close"></span></div>
+                <h4 data-ng-bind="videoData.getTitle();"></h4>
+                <cite  data-ng-bind="getFormattedAuthor(videoData.getAuthors(), videoData.getLastModifiedDate(), videoData.getProviderName());"></cite>
+                <p data-ng-bind="videoData.getDescription();"></p>
+            </div>
+        </div>
+    </div>
+</section>
+</div> </div>
+</div><div class="panel-pane content width-100 float-left     companion-media-panel column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="c7e839fc-c4e6-47cc-9730-d8578613ba0a"><div class="wx-corsican-marketing-module content-module">
+    <header class="media-module-header">
+        <h2 class="header-text">
+            <span class="header-text-holder" data-ng-bind="content_media.settings.template_config.header"></span>
+        </h2>
+    </header>
+    <div data-ng-switch data-on="content_media.status" class="content-module-body" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error">
+            <div data-error-handler="content_media.status"></div>
+        </div>
+        <div data-ng-switch-default>
+        <div class="wx-content-holder" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-highlighted-content',false: 'wx-media-content'}[$first]" data-tb-region-item>
+            <div data-ng-if="$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                    </a>
+                </h4>
+            </div>
+            <div data-ng-if="$first" class="wx-image-wrapper">
+                <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="image_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                    <img class="wx-media-image" alt="{{corsican.getTitle(corsican.showTeaserTitle)}}" height="180" width="320" data-ng-src="{{corsican.getVariant('8')}}">
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                </a>
+            </div>
+            <div data-ng-if="!$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <a data-ng-if="content_media.settings.template_config.see_more_link" class="see-more-link" data-from-str="see-more" data-ng-href="{{content_media.settings.template_config.see_more_link}}">See More <span aria-hidden="true" class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span></a>
+        </div>
+    </div>
+</div></div> </div>
+</div><div class="panel-pane content width-100 float-left     video-companion-pane column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div data-instance="7ee93a26-a6be-4a37-b269-db6e18b50486" class="admodule_companion"><div id="wrapper_WX_VideoCompanion" class="wx-adWrapper"><div id="WX_VideoCompanion" class="wx-module wx-gptADS" style="display:none;"></div></div></div> </div>
+</div>      </div>
+    </div>
+  
+  </div>
+</div>
+ </div>
+</div><div class="panel-pane content module-padding width-100 float-left     video-companion-ad-text-pane column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content  ">
+   <div class="twc-init video_companion_text" data-twc-controller="twc_video_companion_text_controller" instance="dfdc054b-9d3d-4735-b96d-401b125a2a56"><div class="videoAdText" data-ng-show="showAdText" data-ng-bind="advertisementText"></div>
+</div> </div>
+</div>            </div>
+          </div>
+                          <div class="content-row-2 panel-panel clearfix">
+            <div class="content-row-2-inner panel-panel-inner">
+              <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init video_playlist" data-twc-controller="twc_video_playlist_controller" instance="9737bd2c-5207-4a29-bdbb-56530e554e2f"><section class="video-playlist">
+    <div data-ng-switch data-on="status">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error" error-handler="status"></div>
+        <div data-ng-switch-default>
+            <div data-twc-video-playlist-title
+                data-browse-all-text="{{ browseAllText }}"
+                data-collection-title="{{ collectionTitle }}"
+                data-collection-url="{{ collectionTitleUrl }}"
+                data-collection-count="{{ playlistData.length }}"
+                data-collection-playlist-addition=" {{ playlistVideoCollection }}"
+                data-enable-count="collectionTitleCountEnabled"
+                data-enable-browse-all="collectionTitleBrowseAllEnabled"
+            ></div>
+            <div class="playlistContainer">
+                    <ul data-vd-carousel>
+                        <li id="video-item-{{$index}}" data-vd-carousel-slide data-ng-repeat="item in playlistData" class="wx-list-container" data-ng-init="playlistDataIndex = $index">
+                            <section class="wx-inner">
+                            <figure class="thumbnailWrapper">
+                                <span class="wx-media intrinsic-16x9">
+                                    <a data-ng-href="{{ getVideoUrl(item); }}">
+                                    <img data-ng-src="{{ item.getVariant(8) }}" data-ng-attr-title="{{ item.getTitle(teaserOverride); }}" data-ng-attr-alt="{{item.getTitle(teaserOverride); }}">
+                                    </a>
+                                    <mark class="thumbnailBadge nowPlaying" data-ng-show="currentlyPlayingIndex === $index" data-translate="video_playlist.NOW_PLAYLING_TEXT"></mark>
+                                    <mark class="thumbnailBadge nextUp" data-ng-show="nextUpIndex === $index && playlistData.length > 1" data-translate="video_playlist.UP_NEXT_TEXT"></mark>
+                                </span>
+                                <figcaption class="wx-content">
+                                    <div class="wx-content-header">
+                                        <p class="wx-title-wrapper">
+                                            <a data-ng-href="{{ getVideoUrl(item); }}" class="wx-title" data-twc-ellipsis data-twc-ellipsis-text="{{item.getTitle(teaserOverride)}}"></a>
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                            </section>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</div> </div>
+</div>            </div>
+          </div>
+                      </div>
+    </div>
+
+          <div id="in-page-nav" class="in-page-nav container panel-panel center-col clearfix">
+        <div class="in-page-nav-inner container-inner panel-panel-inner">
+          <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init video_page_nav" data-twc-controller="twc_video_page_nav_controller" instance="6e3ffb12-2dc3-4563-995e-4b2d41d49037"><nav class="vid-page-nav light" ng-click="$event.stopPropagation();" ng-show="pageNav.locationResolved()" resize>
+
+    <ul class="page-primary-nav">
+        <li data-ng-repeat="link in pageNav.menuLinks.links"
+            class="primary-nav-links">
+            <a data-ng-class="{'wx-active' : pageNav.isLinkActive(link.link_url), touch : isTouch, default : !isTouch}"
+               class="linklist-{{link.link_type}}"
+               data-ng-href="{{link.link_url}}" data-from-str="{{pageNav.moduleId}}_{{link.link_title}}_{{$index+1}}" data-module-id="{{pageNav.moduleId}}"
+               target="{{link.open_link_new_tab ? '_blank' : ''}}">
+                <div class="img-wrapper" data-ng-if="link.link_image">
+                    <img class="wx-nav-content-img"
+                         alt="{{link.link_title}}"
+                         data-ng-src="{{link.link_image}}" />
+                </div>
+                <span data-ng-bind-template="{{link.link_title}}"></span>
+            </a>
+        </li>
+
+        <li class="twc-dropdown-wrapper"
+            data-ng-class="{touch : isTouch, default : !isTouch}"
+            data-ng-if="(pageNav.showDropDown && pageNav.dropdownLinks1) || pageNav.extraLinks.length>0">
+            <div class="twc-dropdown-option">
+                <a class="twc-dropdown-toggle"
+                   data-ng-href="{{link.link_url}}" data-from-str="{{pageNav.moduleId}}_{{link.link_title}}_{{$index+1}}" data-module-id="{{pageNav.moduleId}}"
+                   data-ng-class="{'wx-active': pageNav.getPageMenu() || pageNav.hiddenLinkActive}"
+                   target="{{link.open_link_new_tab ? '_blank' : ''}}">
+                    <span data-ng-bind-template="{{pageNav.moreForecastText}}" class="dropdown-button"></span>
+                </a>
+                <div twc-dropdown-button class="pagenav-dropdown-menu page-sub-nav" data-ng-show="pageNav.getPageMenu();">
+                    <!--<div class="spacing"></div>-->
+                    <!-- Dropdown 1 Links -->
+                    <div class="link-section">
+                        <h3 data-ng-if="pageNav.dropdownLinks1.menu_header_title"
+                            class="list-header"
+                            data-ng-bind-template="{{pageNav.dropdownLinks1.menu_header_title.value}}"></h3>
+                        <ul>
+                            <li data-ng-repeat="link in pageNav.extraLinks track by $index"
+                                data-ng-class="{touch : isTouch, default : !isTouch, 'wx-active' : pageNav.isLinkActive(link.link_url), '' : pageNav.isHiddenLinkActive(link.link_url)}"
+                                class="dropdown-nav-links">
+                                <a class="linklist-{{link.link_type}}"
+                                   data-ng-href="{{link.link_url}}" data-from-str="{{pageNav.moduleId}}_{{link.link_title}}_{{$index+1}}" data-module-id="{{pageNav.moduleId}}"
+                                   target="{{link.open_link_new_tab ? '_blank' : ''}}">
+                                    <img class="wx-dd-nav-content-img"
+                                         alt="{{link.link_title}}"
+                                         data-ng-if="link.link_image != null"
+                                         data-ng-src="{{link.link_image}}" />
+                                    <span data-ng-bind-template="{{link.link_title}}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div> <!-- End Dropdown Menu -->
+            </div> <!-- End Dropdown -->
+        </li>
+
+    </ul>
+
+    <div class="more-info" data-ng-if="pageNav.moreText"><a data-ng-href="{{pageNav.moreLink}}" data-from-str="{{ pageNav.moduleId }}-moreText-1"><span data-ng-bind-template="{{pageNav.moreText}}" class="more-text"></span> <span class='wx-iconfont-global wx-icon-arrow-right'></span></a> </div>
+</nav></div> </div>
+</div>        </div>
+      </div>
+    
+    <div id="wx-mid-wrap" class="container clearfix center-col">
+      <div id="wx-main" class="content-container grid-12 panel-panel clearfix">
+        <div class="content-container-inner">
+                      <div class="content-row-4 grid-12 panel-panel clearfix">
+              <div class="content-row-4-inner panel-panel-inner">
+                <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="18f15f7e-f181-41d1-97d5-3e19dd1e3c1d"><div class="video-header">
+    <div class="header-container">
+        <h3 class="video-small-header" data-ng-bind="content_media.settings.template_config.header"></h3>
+        <div data-ng-if="content_media.corsicans.length > 4" class="navigation-link-container">
+            <a class="navigation-link-wrapper" data-ng-href="{{content_media.settings.template_config.see_more_link}}" >
+                <h3 class="navigation-link">
+                    <span data-ng-bind="content_media.settings.template_config.see_more_text"></span>
+                </h3>
+                <span class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div data-remove-pane-padding class="wx-module wx-corsican-small-module" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+    <ul data-ng-if="content_media.status === content_media.status_codes.DEFAULT">
+        <li class="{{$even ? 'wx-module-odd' : 'wx-module-even'}}" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-module-four-mod'}[(($index + 1) % 4 === 0)]" data-tb-region-item>
+            <div class="wx-list-container">
+                <div class="wx-inner" style="" data-vr-contentbox="">
+                    <div class="wx-image-wrapper">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <img height="100" width="177" data-ng-src="{{corsican.getVariant('8')}}">
+                            <span class="wx-faded-bg">
+                                <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" class="wx-iconfont-global wx-icon-video"></span>
+                                <span class="wx-video-duration" data-twc-video-duration="corsican.getDuration()"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <h3 class="wx-content" data-ng-class="{true: 'new-tab-icon-hover'}[corsican.options.iconhover]">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-content-header" data-ng-class="{true : 'clipped'}[corsican.options && corsican.options.attribution.length > 0]" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <div class="wx-title-wrapper">
+                                <p class="wx-title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></p>
+                            </div>
+                        </a>
+                        <!-- Attribution should not be clickable -->
+                        <span data-ng-if="corsican.options && corsican.options.attribution" class="wx-attribution" data-ng-bind="corsican.options.attribution"></span>
+                        <a data-twc-rel="corsican" data-ng-mouseenter="corsican.options.iconhover = true" data-ng-mouseleave="corsican.options.iconhover = false" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}"  data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}">
+                            <span data-ng-if="corsican.options && corsican.options.new_tab" class="wx-iconfont-global wx-icon-new-window"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="5d76ec92-9635-45a7-8cc6-6dd606acea4a"><div class="video-header">
+    <div class="header-container">
+        <h3 class="video-small-header" data-ng-bind="content_media.settings.template_config.header"></h3>
+        <div data-ng-if="content_media.corsicans.length > 4" class="navigation-link-container">
+            <a class="navigation-link-wrapper" data-ng-href="{{content_media.settings.template_config.see_more_link}}" >
+                <h3 class="navigation-link">
+                    <span data-ng-bind="content_media.settings.template_config.see_more_text"></span>
+                </h3>
+                <span class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div data-remove-pane-padding class="wx-module wx-corsican-small-module" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+    <ul data-ng-if="content_media.status === content_media.status_codes.DEFAULT">
+        <li class="{{$even ? 'wx-module-odd' : 'wx-module-even'}}" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-module-four-mod'}[(($index + 1) % 4 === 0)]" data-tb-region-item>
+            <div class="wx-list-container">
+                <div class="wx-inner" style="" data-vr-contentbox="">
+                    <div class="wx-image-wrapper">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <img height="100" width="177" data-ng-src="{{corsican.getVariant('8')}}">
+                            <span class="wx-faded-bg">
+                                <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" class="wx-iconfont-global wx-icon-video"></span>
+                                <span class="wx-video-duration" data-twc-video-duration="corsican.getDuration()"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <h3 class="wx-content" data-ng-class="{true: 'new-tab-icon-hover'}[corsican.options.iconhover]">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-content-header" data-ng-class="{true : 'clipped'}[corsican.options && corsican.options.attribution.length > 0]" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <div class="wx-title-wrapper">
+                                <p class="wx-title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></p>
+                            </div>
+                        </a>
+                        <!-- Attribution should not be clickable -->
+                        <span data-ng-if="corsican.options && corsican.options.attribution" class="wx-attribution" data-ng-bind="corsican.options.attribution"></span>
+                        <a data-twc-rel="corsican" data-ng-mouseenter="corsican.options.iconhover = true" data-ng-mouseleave="corsican.options.iconhover = false" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}"  data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}">
+                            <span data-ng-if="corsican.options && corsican.options.new_tab" class="wx-iconfont-global wx-icon-new-window"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="cfb605ab-7931-4afb-9b71-68bf18ab0637"><div class="video-header">
+    <div class="header-container">
+        <h3 class="video-small-header" data-ng-bind="content_media.settings.template_config.header"></h3>
+        <div data-ng-if="content_media.corsicans.length > 4" class="navigation-link-container">
+            <a class="navigation-link-wrapper" data-ng-href="{{content_media.settings.template_config.see_more_link}}" >
+                <h3 class="navigation-link">
+                    <span data-ng-bind="content_media.settings.template_config.see_more_text"></span>
+                </h3>
+                <span class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div data-remove-pane-padding class="wx-module wx-corsican-small-module" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+    <ul data-ng-if="content_media.status === content_media.status_codes.DEFAULT">
+        <li class="{{$even ? 'wx-module-odd' : 'wx-module-even'}}" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-module-four-mod'}[(($index + 1) % 4 === 0)]" data-tb-region-item>
+            <div class="wx-list-container">
+                <div class="wx-inner" style="" data-vr-contentbox="">
+                    <div class="wx-image-wrapper">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <img height="100" width="177" data-ng-src="{{corsican.getVariant('8')}}">
+                            <span class="wx-faded-bg">
+                                <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" class="wx-iconfont-global wx-icon-video"></span>
+                                <span class="wx-video-duration" data-twc-video-duration="corsican.getDuration()"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <h3 class="wx-content" data-ng-class="{true: 'new-tab-icon-hover'}[corsican.options.iconhover]">
+                        <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-content-header" data-ng-class="{true : 'clipped'}[corsican.options && corsican.options.attribution.length > 0]" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                            <div class="wx-title-wrapper">
+                                <p class="wx-title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></p>
+                            </div>
+                        </a>
+                        <!-- Attribution should not be clickable -->
+                        <span data-ng-if="corsican.options && corsican.options.attribution" class="wx-attribution" data-ng-bind="corsican.options.attribution"></span>
+                        <a data-twc-rel="corsican" data-ng-mouseenter="corsican.options.iconhover = true" data-ng-mouseleave="corsican.options.iconhover = false" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}"  data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}_{{corsican.getPrimaryCollectionId()}}_{{corsican.getId()}}">
+                            <span data-ng-if="corsican.options && corsican.options.new_tab" class="wx-iconfont-global wx-icon-new-window"></span>
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init taboola_module" data-twc-controller="twc_taboola_module_controller" instance="ad0bd18b-b620-41d2-9bfd-71d01edbd1d4"><section class="content-module">
+    <header class="content-module-header">
+        <h2 data-ng-bind-html="title"></h2>
+    </header>
+    <div class="content-module-body" data-initFunction="{{eightStack()}}">
+        <div class="news-content">
+            <!-- Flipping the Paid / Organic modules based on module configuration -->
+
+            <div data-ng-if="paidFirst" id="taboola-below-article-thumbnails-1st"></div>
+            <div id="taboola-below-article-thumbnails-2nd"></div>
+            <div data-ng-if="!paidFirst" id="taboola-below-article-thumbnails-1st"></div>
+          
+        </div>
+    </div>
+</section>
+</div> </div>
+</div>              </div>
+            </div>
+                                                  
+        </div>
+      </div>
+      <!-- end #wx-main -->
+
+              <div id="wx-rail" class="right-rail sidebar container panel-panel  grid-12 clearfix">
+          <div class="right-rail-inner container-inner panel-panel-inner">
+            <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init most_popular" data-twc-controller="twc_most_popular_controller" instance="91e35914-97cb-46d8-b869-bcdbc9594a13"><!-- UI for Most Popular (Trending) -->
+<section class="content-module">
+  <header class="content-module-header">
+    <h2 data-ng-if="!mostPopular.moduleTitleUrl" data-ng-bind-template="{{mostPopular.moduleTitle | safeDisplay:'Most Popular'}}"></h2>
+    <h2 data-ng-if="mostPopular.moduleTitleUrl">
+      <a href="http://www.weather.com/series/crazimals/video/{{mostPopular.moduleTitleUrl}}" data-from-str="module-title" data-ng-bind-template="{{mostPopular.moduleTitle | safeDisplay:'Most Popular'}}"></a>
+    </h2>
+  </header>
+  <div data-ng-switch data-on="status" class="content-module-body">
+    <div data-ng-switch-when="loading" data-preload></div>
+    <div data-ng-switch-when="error" error-handler="status"></div>
+    <div data-ng-switch-default>
+
+      <!-- TEMPLATE WITH THUMBNAILS -->
+      <div data-ng-if="mostPopular.showThumbnails" class="has-thumbnails" data-tb-region="{{mostPopular.pageName}}_{{mostPopular.moduleId}}">
+        <h3 class="item-seo" ng-repeat="item in mostPopularItems" data-tb-region-item>
+          <a class="item-link" href="http://www.weather.com/series/crazimals/video/{{item.getUrl()}}" data-from-str="{{$index + 1}}">
+            <div class="item-thumbnail-wrap">
+              <img class="item-thumbnail" data-ng-src="{{item.getThumbnail()}}" />
+              <span ng-if="(item.getType() === 'video')" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+            </div>
+            <div class="item-text" data-twc-ellipsis data-twc-ellipsis-text="{{item.getTitle()}}"></div>
+          </a>
+        </h3>
+      </div>
+
+      <!-- TEMPLATE WITHOUT THUMBNAILS -->
+      <div data-ng-if="!mostPopular.showThumbnails" class="no-thumbnails" data-tb-region="{{mostPopular.pageName}}_{{mostPopular.moduleId}}">
+        <h3 class="item-seo" ng-repeat="item in mostPopularItems" data-tb-region-item>
+          <a class="item-link" href="http://www.weather.com/series/crazimals/video/{{item.getUrl()}}" data-from-str="{{$index + 1}}">
+            <div class="item-text" data-twc-ellipsis data-twc-ellipsis-text="{{item.getTitle()}}" data-twc-ellipsis-after="span.wx-icon-video"></div>
+            <span ng-if="(item.getType() === 'video')" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+          </a>
+        </h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="a06be56d-06ec-4097-9bd7-d29ae8f0183b"><div class="wx-corsican-marketing-thumbnails-module content-module">
+    <header class="media-module-header">
+        <h2 class="header-text">
+            <span class="header-text-holder" data-ng-bind="content_media.settings.template_config.header"></span>
+        </h2>
+    </header>
+    <div data-ng-switch data-on="content_media.status" class="content-module-body" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error">
+            <div data-error-handler="content_media.status"></div>
+        </div>
+        <div data-ng-switch-default>
+        <div class="wx-content-holder {{$last ? 'wx-last-content' : ''}}" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-highlighted-content',false: 'wx-media-content'}[$first]" data-tb-region-item>
+            <div data-ng-if="$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                    </a>
+                </h4>
+            </div>
+            <div class="wx-image-wrapper">
+                <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="img-{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                    <img class="wx-media-image" alt="{{corsican.getTitle(corsican.showTeaserTitle)}}" height="62" width="110" data-ng-src="{{corsican.getVariant('8')}}">
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                </a>
+            </div>
+            <div data-ng-if="!$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link-{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                    </a>
+                </h4>
+            </div>
+            <div data-ng-if="$first" class="content-module-subtitle">
+                <span class="wx-subtitle" data-ng-bind="content_media.settings.template_config.subtitle"></span>
+            </div>
+        </div>
+        <a data-ng-if="content_media.settings.template_config.see_more_link"  class="see-more-link" data-from-str="see-more" data-ng-href="{{content_media.settings.template_config.see_more_link}}">See More <span aria-hidden="true" class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span></a>
+        </div>
+    </div>
+</div></div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="ef2c0684-b1f1-4599-ae6b-b0bf0d645288"><div class="wx-corsican-marketing-module content-module">
+    <header class="media-module-header">
+        <h2 class="header-text">
+            <span class="header-text-holder" data-ng-bind="content_media.settings.template_config.header"></span>
+        </h2>
+    </header>
+    <div data-ng-switch data-on="content_media.status" class="content-module-body" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error">
+            <div data-error-handler="content_media.status"></div>
+        </div>
+        <div data-ng-switch-default>
+        <div class="wx-content-holder" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-highlighted-content',false: 'wx-media-content'}[$first]" data-tb-region-item>
+            <div data-ng-if="$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                    </a>
+                </h4>
+            </div>
+            <div data-ng-if="$first" class="wx-image-wrapper">
+                <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="image_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                    <img class="wx-media-image" alt="{{corsican.getTitle(corsican.showTeaserTitle)}}" height="180" width="320" data-ng-src="{{corsican.getVariant('8')}}">
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                </a>
+            </div>
+            <div data-ng-if="!$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <a data-ng-if="content_media.settings.template_config.see_more_link" class="see-more-link" data-from-str="see-more" data-ng-href="{{content_media.settings.template_config.see_more_link}}">See More <span aria-hidden="true" class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span></a>
+        </div>
+    </div>
+</div></div> </div>
+</div><div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init content_media" data-twc-controller="twc_content_media_controller" instance="68e0386f-41cc-43dd-aedc-f2ad1387af9d"><div class="wx-corsican-marketing-module content-module">
+    <header class="media-module-header">
+        <h2 class="header-text">
+            <span class="header-text-holder" data-ng-bind="content_media.settings.template_config.header"></span>
+        </h2>
+    </header>
+    <div data-ng-switch data-on="content_media.status" class="content-module-body" data-tb-region="{{content_media.pageName}}_{{content_media.moduleId}}">
+        <div data-ng-switch-when="loading" data-preload></div>
+        <div data-ng-switch-when="error">
+            <div data-error-handler="content_media.status"></div>
+        </div>
+        <div data-ng-switch-default>
+        <div class="wx-content-holder" data-ng-repeat="corsican in (content_media.corsicans | limitTo:4)" data-ng-class="{true: 'wx-highlighted-content',false: 'wx-media-content'}[$first]" data-tb-region-item>
+            <div data-ng-if="$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                    </a>
+                </h4>
+            </div>
+            <div data-ng-if="$first" class="wx-image-wrapper">
+                <a data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" class="wx-media intrinsic-16x9" data-ng-href="{{corsican.getUrl()}}" data-from-str="image_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                    <img class="wx-media-image" alt="{{corsican.getTitle(corsican.showTeaserTitle)}}" height="180" width="320" data-ng-src="{{corsican.getVariant('8')}}">
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                    <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                </a>
+            </div>
+            <div data-ng-if="!$first" class="wx-content">
+                <h4 class="wx-title">
+                    <a class="wx-title-link" data-twc-rel="corsican" target="{{corsican.options && corsican.options.new_tab ? '_blank' : '_self'}}" data-ng-href="{{corsican.getUrl()}}" data-from-str="link_{{$index + 1}}" title="{{corsican.getTitle(corsican.showTeaserTitle)}}">
+                        <span class="title" data-ng-bind="corsican.getTitle(corsican.showTeaserTitle)"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'video') || corsican.getType() === 'video'" aria-hidden="true" class="wx-iconfont-global wx-icon-video"></span>
+                        <span data-ng-if="(corsican.options && corsican.options.icon === 'image')" aria-hidden="true" class="ng-cloak wx-iconfont-global wx-icon-photo"></span>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <a data-ng-if="content_media.settings.template_config.see_more_link" class="see-more-link" data-from-str="see-more" data-ng-href="{{content_media.settings.template_config.see_more_link}}">See More <span aria-hidden="true" class="wx-iconfont-global wx-icon-arrow-right wx-icon-small"></span></a>
+        </div>
+    </div>
+</div></div> </div>
+</div>          </div>
+        </div>
+      
+    </div>
+    <!-- end wx-mid-wrap -->
+
+          <footer id="wx-bottom-wrap" class="footer container panel-panel clearfix">
+        <div class="footer-inner container-inner panel-panel-inner">
+          <div class="panel-pane content module-padding width-100 float-left    column"
+  data-eq-pts="pane: 1, pane-xs: 230, pane-sm: 300, pane-md: 465, pane-lg: 630px, pane-xl: 795">
+  <div class="pane-content ">
+   <div class="twc-init footer" data-twc-controller="twc_footer_controller" instance="3c26e41c-97a8-411d-96d4-1ad9e0e15d52">
+<div class="footer-wrapper">
+
+  <div class="footer-social-container center-col">
+    <ul>
+    <li class="link title">Connect With Us</li><li class="social-icons"><a href=https://www.facebook.com/TheWeatherChannel class="wx-iconfont-global wx-icon-facebook" title="Like Us" target="_blank" data-from-str="social_primary_1"></a></li><li class="social-icons"><a href=http://www.twitter.com/weatherchannel class="wx-iconfont-global wx-icon-twitter" title="Follow Us" target="_blank" data-from-str="social_primary_2"></a></li><li class="social-icons"><a href=https://plus.google.com/+TheWeatherChannel/posts class="wx-iconfont-global wx-icon-google-plus" title="Add Us" target="_blank" data-from-str="social_primary_3"></a></li><li class="social-icons"><a href=http://instagram.com/weatherchannel class="wx-iconfont-global wx-icon-instagram" title="Follow us on Instagram" target="_blank" data-from-str="social_primary_4"></a></li><li class="social-icons"><a href=http://www.youtube.com/user/TheWeatherChannel/ class="wx-iconfont-global wx-icon-youtube" title="Watch us on Youtube" target="_blank" data-from-str="social_primary_5"></a></li>      </ul>
+  </div>
+
+  <div class="footer-linklist-container center-col">
+    <ul class="footer-company-links">
+    <li class="link title"></li><li class="link"><a href=http://feedback.weather.com/knowledgebase  data-from-str="nav_sec_1">Support</a></li><li class="link"><a href=http://feedback.weather.com/  data-from-str="nav_sec_2">Feedback</a></li><li class="link"><a href=http://careers.weather.com/?utm_source=careersite&utm_campaign=Careersfooterlnk  data-from-str="nav_sec_3">Careers</a></li><li class="link"><a href=http://press.weather.com/  data-from-str="nav_sec_4">Press Room</a></li><li class="link"><a href=http://advertising.weather.com/contact/  data-from-str="nav_sec_5">Advertise With Us</a></li><li class="link"><a href="http://www.weather.com/life/local-advertise-self-serve"  data-from-str="nav_sec_6">Advertise- Self Service</a></li>    </ul>
+    <ul class="footer-explore-links">
+      <li class="link title">Explore</li><li class="link"><a href="http://www.weather.com/sitemap"  data-from-str="nav_sec_1">Sitemap</a></li>    </ul>
+  </div>
+    <div class="footer-copyright center-col">
+        <div class="footer-copyright-text">
+            &copy; 1995-<span data-ng-bind="currentYear"></span>. <span data-ng-bind="'search.COPYRIGHT' | translate"></span>
+        </div>
+        <ul class="footer-legal-links">
+        <li class="link"><a href="http://www.weather.com/legal" rel="nofollow"  data-from-str="links_footer_bottom_primary_1">Terms of Service</a></li><li class="link"><a href="http://www.weather.com/privacy-policy" rel="nofollow"  data-from-str="links_footer_bottom_primary_2">Privacy Policy</a></li><li class="link"><a href="http://www.controlyourtv.org/Intro.aspx" rel="nofollow"  data-from-str="links_footer_bottom_primary_3">Parental Controls</a></li><li class="link"><a href="http://www.weather.com/services/ad-choices.html" rel="nofollow"  data-from-str="links_footer_bottom_primary_4">Ad Choices</a></li><li class="link"><a href="http://www.cometourgeorgia.com/weather" rel="nofollow"  data-from-str="links_footer_bottom_primary_5">Georgia Org</a></li><li class="link"><a href="http://www.weather.com/accessibility" rel="nofollow"  data-from-str="links_footer_bottom_primary_6">Accessibility</a></li>        </ul>
+    </div>
+</div>
+</div> </div>
+</div>        </div>
+      </footer>
+    
+  </div>
+  <!-- /.vegas -->
+</div><!-- End Wrapper in master JSP -->
+          </div>
+
+</div>
+  <script src="../../../sites/acquia-prod/files/advagg_js/js__7hqlQPq8QebzjJ7QT0rEaqjEhij8qEev7-yGp3ytyoU__6qE86D87hkiz0MKkFOgmbSWyLBwOb2ydyZ3oZ6RFWNE__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__5SnyAhvy3JIsK6cGS5CG67wegYUdKPZDI2E00xyRr2U__8pqvSd6rdZ4_EkYbp8MstQjKO55JsRXTu9CTzgXM_7w__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__GBAfG5b4xItYcPJ6ZnPYATqeUpBP2l-a3kawjc7c62A__XFRtmVRgj9RU9OXejOyHLmWxX6Yp40rmWKL56HLOLzY__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script src="../../../sites/acquia-prod/files/advagg_js/js__PlvbuFyaUpF2u6SWXs2qQoy9o6VisNBOxMr2ITpUP7o__ed1gwMQRtonZz83LQBsoVSRn43_88-wCGmfyWDCVNdk__PZB1IfU4sb6SipDrbCSKW0ivtyz3wMQLlR9HRfudjrU.js"></script>
+<script>
+        if (Drupal.settings.angularmods && Drupal.settings.angularmods.active){
+          if (twc.shared && twc.shared.apps) {
+            Drupal.settings.angularmods.active.push("shared");
+          }
+          twc.app = angular.module("twc", Drupal.settings.angularmods.active);
+
+          twc.app.config(function ($translateProvider, twcMessageProvider) {
+            var locale = (TWC && TWC.Titan && TWC.Titan.locale) || TWC.pco.getNodeValue("user", "locale"), translations = twcMessageProvider.getAll();
+            if(locale in translations) {
+              $translateProvider.translations(locale, translations[locale]);
+            }
+            $translateProvider.preferredLanguage( locale );
+          });
+
+          twc.app.run([
+            "$rootScope", "$q", "PcoDevice", "twcPco", "$window", "$interpolate", function ($rootScope, $q, device, twcPco, $window, $interpolate) {
+              $rootScope.theme = angular.element("body").hasClass("redcell") ? "redcell" : "reboot";
+              $rootScope.isMobile = (Drupal.settings.twc.variant === "little");
+              // set touch from window attributes
+              $rootScope.isTouch  = ("ontouchstart" in window || (navigator && !!(navigator.msMaxTouchPoints)));
+              $q.all(twcPco.get("device").promises).then(function() {
+                // set tablet from our device node.
+                $rootScope.isTablet = (device.getOpenDDRTablet() === "true");
+              });
+
+              if(TWC.pageTitle) {
+                var interpolatedPageTitle = $interpolate(TWC.pageTitle);
+
+                $rootScope.$watch(function() {
+                  return interpolatedPageTitle($rootScope);
+                }, function(title) {
+                  $window.document.title = title;
+                  $rootScope.pageTitle=title;
+                })
+              }
+              else {
+                twclog.error("TWC.pageTitle does not exist");
+              }
+          }]);
+          if (!window.callPhantom) {
+            setTimeout(function(){
+              angular.bootstrap(document,["twc"]);
+            },5);
+          }
+          else {
+            // For phantomJS, we need to bootstrap on the browser queue to make the
+            // stupid phantom understand that bootstrap is part of the page.
+            angular.bootstrap(document,["twc"]);
+          }
+        }
+        window.page_bottom_reached = true;
+      </script>
+<script></script>
+</body>
+</html>

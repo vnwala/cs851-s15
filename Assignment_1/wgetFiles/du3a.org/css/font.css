@@ -1,0 +1,70 @@
+/* Font jozoor Regular */
+@font-face {
+    font-family: "JF Flat Regular";
+    src: url('fonts/JF-Flat-regular.eot');
+    src: url('fonts/JF-Flat-regular.eot?') format('embedded-opentype'),
+    url('fonts/JF-Flat-regular.svg') format('svg'),
+    url('fonts/JF-Flat-regular.woff') format('woff'),
+    url('fonts/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Icons */
+@font-face {
+	font-family: 'Iklaa';
+	src:url('fonts/Iklaa.eot?-yi4qfi');
+	src:url('fonts/Iklaa.eot?') format('embedded-opentype'),
+		url('fonts/Iklaa.woff?-yi4qfi') format('woff'),
+		url('fonts/Iklaa.ttf?-yi4qfi') format('truetype'),
+		url('fonts/Iklaa.svg?-yi4qfi') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'Iklaa';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rocket:before {
+	content: "\e600";
+}
+.icon-rocket2:before {
+	content: "\e601";
+}
+.icon-vimeo:before {
+	content: "\e602";
+}
+.icon-twitter:before {
+	content: "\e603";
+}
+.icon-facebook:before {
+	content: "\e604";
+}
+.icon-googleplus:before {
+	content: "\e605";
+}
+.icon-pinterest:before {
+	content: "\e606";
+}
+.icon-linkedin:before {
+	content: "\e607";
+}
+.icon-dribbble:before {
+	content: "\e608";
+}
+.icon-skype:before {
+	content: "\e609";
+}

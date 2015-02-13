@@ -1,0 +1,82 @@
+@charset "Shift_JIS";
+
+/*
+Title: kirishima no tennensui
+URI: http://famima.com/shop/pages/kirishima.aspx
+*/
+
+#kirishima-wrap{
+	margin:0; padding: 0;}
+
+#kirishima-wrap h1, #kirishima-wrap h2, #kirishima-wrap h3, #kirishima-wrap h4,
+#kirishima-wrap img, #kirishima-wrap p, #kirishima-wrap div, #kirishima-wrap ul, #kirishima-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+
+/* BasicLayout */
+#kirishima-wrap #sp_mainbase{width: 770px; text-align: left; margin:0; padding: 0; background-color:#e7fbf9;}
+#kirishima-wrap #sp_mainbase img{margin:0; padding:0;}
+#kirishima-wrap .sp_clear	{ clear: both; margin: 0; padding: 0; line-height:0px; font-size:0px;}
+
+/* Header */
+#kirishima-wrap #sp_mainbase h1{
+	width:770px; height:250px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/kirishima/header1.jpg) no-repeat;}
+#kirishima-wrap #sp_header2{
+	margin:0; padding:0; width:770px; height:135px; background:url(http://www.famima.com/images/p/kirishima/header2.jpg) no-repeat;}
+#kirishima-wrap #sp_header2 .sp_500mlBT{ margin:0; padding:90px 0 0 89px; float:left;}
+#kirishima-wrap #sp_header2 .sp_1000mlBT{ margin:0; padding:91px 0 0 150px; float:left;}
+
+#kirishima-wrap .sp_ctgryL{ margin:0; padding:0; width:377px; float:left;}
+#kirishima-wrap .sp_ctgryR{ margin:0; padding:0; width:393px; float:left;}
+#kirishima-wrap .sp_ctgryBORDER{ margin:0; padding:0; width:770px; background:url(http://www.famima.com/images/p/kirishima/cate_border.gif) repeat-y;}
+#kirishima-wrap .sp_ctgryBTM{ margin:0; padding:0; clear: both; width:770px; height:22px; background:url(http://www.famima.com/images/p/kirishima/cate_btm.gif) no-repeat;}
+
+/* Category01 */
+#kirishima-wrap #sp_cate01IMG1{ margin:0; padding:0; width:770px; height:102px; background:url(http://www.famima.com/images/p/kirishima/cate01_img1.jpg) no-repeat; text-indent:-9999px;}
+#kirishima-wrap #sp_cate01IMG2{ margin:0; padding:0; background:url(http://www.famima.com/images/p/kirishima/cate01_img2.jpg) no-repeat; width:377px; height:175px; text-indent:-9999px;}
+#kirishima-wrap #sp_cate01IMG3{ margin:0; padding:0; background:url(http://www.famima.com/images/p/kirishima/cate01_img3.jpg) no-repeat; width:393px; height:236px;}
+#kirishima-wrap .sp_cate01TXT{ margin:0; padding:0 0 0 35px; color:#333333; font-size:12px; line-height:160%;}
+
+/* Category02 */
+#kirishima-wrap #sp_cate02IMG1{ margin:0; padding:0; width:770px; height:110px; background:url(http://www.famima.com/images/p/kirishima/cate02_img1.jpg) no-repeat; text-indent:-9999px;}
+#kirishima-wrap #sp_cate02IMG2{ margin:0; padding:0; background:url(http://www.famima.com/images/p/kirishima/cate02_img2.jpg) no-repeat; width:377px; height:148px;}
+#kirishima-wrap #sp_cate02IMG3{ margin:0; padding:0; background:url(http://www.famima.com/images/p/kirishima/cate02_img3.jpg) no-repeat; width:393px; height:196px; text-indent:-9999px;}
+#kirishima-wrap .sp_cate02TXT{ margin:0; padding:0 0 0 40px; color:#333333; font-size:12px; line-height:160%;}
+
+/* Category03 */
+#kirishima-wrap #sp_cate03IMG1{ margin:0; padding:0; width:770px; height:115px; background:url(http://www.famima.com/images/p/kirishima/cate03_img1.jpg) no-repeat; text-indent:-9999px;}
+#kirishima-wrap #sp_cate03IMG2{ margin:0; padding:0; width:770px; height:178px; background:url(http://www.famima.com/images/p/kirishima/cate03_img2.jpg) no-repeat; text-indent:-9999px;}
+#kirishima-wrap .sp_cate03TXT{ margin:0; padding:5px 35px; color:#333333; font-size:12px; line-height:160%;}
+
+/* ItemBase */
+#kirishima-wrap #sp_itemBase{ margin:0; padding:0; width:770px; height:193px; background:url(http://www.famima.com/images/p/kirishima/itemlink_base.jpg) no-repeat;}
+#kirishima-wrap #sp_itemBase .sp_500mlBT{ margin:0; padding:139px 0 0 362px; float:left;}
+#kirishima-wrap #sp_itemBase .sp_1000mlBT{ margin:0; padding:140px 0 0 135px; float:left;}
+
+/* Banner */
+#kirishima-wrap .sp_bnBase{ margin:0; padding:10px 21px;}
+
+/* OHTER */
+#kirishima-wrap .sp_pagetop{ margin:0; padding:5px 15px 15px 0; text-align:right;}
+
+
+
+/* clearfix */
+#kirishima-wrap #bandukeitem_base .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+/* IE6 */
+* html #kirishima-wrap { 
+	height: 1%;}

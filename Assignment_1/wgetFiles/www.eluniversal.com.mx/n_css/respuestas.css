@@ -1,0 +1,115 @@
+.respfavorcontra {
+color:#6D6D6D;
+float:left;
+font-size:11px;
+padding:0 0 6px;
+}
+span.afavor, a.afavor:hover {
+background:transparent url(../img/approve_icon.png) no-repeat scroll 0 4px;
+color:#66CC00;
+display:block;
+float:left;
+font-weight:bold;
+padding:6px 6px 6px 22px;
+}
+
+span.responder, a.responder:hover {
+background:transparent url(../img/responder2.png) no-repeat scroll 0 -4px;
+color:#DE7A2E;
+display:block;
+float:left;
+font-weight:bold;
+padding:6px 6px 6px 32px;
+}
+
+span.encontra, a.encontra:hover {
+background:transparent url(../img/refuse_icon.png) no-repeat scroll 0 4px;
+color:#CC0000;
+display:block;
+float:left;
+font-weight:bold;
+padding:6px 6px 6px 22px;
+}
+
+span.denuncia, a.denuncia:hover {
+background:transparent url(../img/ico_inadecuado.png) no-repeat scroll 0 4px;
+color:#CC0000;
+display:block;
+float:left;
+font-weight:bold;
+padding:6px 6px 6px 20px;
+}
+
+
+a.afavor {
+background:transparent url(../img/approve_icon.png) no-repeat scroll 0 4px;
+color:#6D6D6D;
+display:block;
+float:left;
+padding:6px 6px 6px 22px;
+}
+
+a.responder {
+background:transparent url(../img/responder2.png) no-repeat scroll 0 -4px;
+color:#6D6D6D;
+display:block;
+float:left;
+padding:6px 6px 6px 32px;
+}
+
+
+
+a.encontra {
+background:transparent url(../img/refuse_icon.png) no-repeat scroll 0 4px;
+color:#6D6D6D;
+display:block;
+float:left;
+padding:6px 6px 6px 22px;
+}
+
+a.denuncia {
+background:transparent url(../img/ico_inadecuado.png) no-repeat scroll 0 4px;
+color:#6D6D6D;
+display:block;
+float:left;
+padding:6px 6px 6px 20px;
+}
+
+.respfavorcontra .mensaje {
+display:block;
+float:left;
+padding:6px;
+}
+
+div.boton {
+padding-bottom:8px;
+padding-top:8px;
+text-align:center;
+}
+div.boton a, a.boton {
+background:#FFFFFF url(../img/f_boton_contenido.jpg) repeat-x scroll center bottom;
+border:1px solid #CECECE;
+color:#636363;
+cursor:pointer;
+display:inline;
+font-size:11px;
+line-height:11px;
+padding:4px 18px;
+width:auto;
+}
+div.boton a:hover, div a.boton:hover, a.boton:hover {
+background:#FFFFFF none repeat scroll 0 0 !important;
+text-decoration:none;
+}
+input.boton {
+background:#FFFFFF url(../img/f_boton_contenido.jpg) repeat-x scroll center bottom;
+border:1px solid #CECECE;
+color:#636363;
+cursor:pointer;
+font-size:11px;
+padding:0;
+text-align:center;
+}
+.inadecuado a {
+padding:4px 6px;
+}

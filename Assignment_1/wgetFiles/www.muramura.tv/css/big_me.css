@@ -1,0 +1,54 @@
+@charset "euc-jp";
+@import url("http://www.muramura.tv/top_banner.css");
+
+
+/* サムネールバナーの設定 */
+
+	#promothums > div{
+		background-color:#021e31;
+	 /* background-color:rgba(255,255,255,0.1);*/
+	  display:inline-block;/* IE7以下のは使えないので下記のハックを適用して対応 */
+	  /display: inline;/* IE7以下のハック */
+	  /zoom: 1;/* IE7以下のハック */
+	  width:240px;
+	  text-align:left;
+	  margin-bottom: 5px;/* ブラウザーごとにマージンが異なる為、マージンを設定 */
+	  }
+	div#promothums font:nth-child(2){
+		margin:2px 2px 2px 5px;
+		padding:2px 2px 2px 2px;
+		font-size:12px;
+		color:black;
+		background-color:#FC0;
+	  } 
+	div#promothums .page{
+		margin:5px;
+		font-size:11px;
+		color:white;
+		text-decoration:underline;
+		cursor:pointer;
+	  }
+/* 無料サンプル動画の設定 */
+	#muryo-sdample > div{
+	}
+	  
+/* ムラムラチャットの設定 */
+	#muramura-chat > div{
+	}
+/* 今HOTなサイトの設定 */
+	#muramura-hot > div{
+	}
+
+/*その他のクラス */
+	p.promothums{
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+	margin:0 0 5px 0;
+	padding:0;
+	}
+	p.bookm{
+	margin:0;
+	text-align:center;
+	}
+		 

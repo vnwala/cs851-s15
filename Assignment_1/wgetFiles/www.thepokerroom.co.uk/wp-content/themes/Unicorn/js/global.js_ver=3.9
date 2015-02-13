@@ -1,0 +1,152 @@
+var $ =jQuery.noConflict();
+
+//alert(ptheme);
+$(function() {
+    
+    // Enable Lightbox
+    if ($('.viewport a').length) {
+        $('.viewport a')
+		    .fancybox({
+		        overlayColor: '#000',
+		        overlayOpacity: 0.7,
+		        titlePosition: 'over',
+		        padding: 1
+		    });
+    }
+    
+    function select_code_home(lang){
+       return select_code_pokerroom(lang);
+    }     
+
+    function select_code_gaming(lang){
+       var embededcode;
+       switch (lang){
+       case 'arabic':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954820?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'chinese':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954987?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'english':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954921?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'russian':
+           embededcode = '<iframe src="//player.vimeo.com/video/84955474?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;           
+       }
+       return embededcode;
+    }
+    
+    function select_code_restaurant(lang){
+       var embededcode;
+       switch (lang){
+       case 'arabic':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954822?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'chinese':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954988?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'english':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954923?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'russian':
+           embededcode = '<iframe src="//player.vimeo.com/video/84955723?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;           
+       }
+       return embededcode;
+    }    
+    
+    function select_code_pokerroom(lang){
+       var embededcode;
+       switch (lang){
+       case 'arabic':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954920?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'chinese':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954986?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'english':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954922?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'russian':
+           embededcode = '<iframe src="//player.vimeo.com/video/84955630?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;           
+       }
+       return embededcode;
+    } 
+    
+    function select_code_vip(lang){
+       var embededcode;
+       switch (lang){
+       case 'arabic':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954821?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'chinese':
+           embededcode = '<iframe src="//player.vimeo.com/video/84955628?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'english':
+           embededcode = '<iframe src="//player.vimeo.com/video/84954985?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;
+       case 'russian':
+           embededcode = '<iframe src="//player.vimeo.com/video/84955631?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="423" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+       break;           
+       }
+       return embededcode;
+    }    
+
+    function change_video(section,lang) {
+        var embededcode;
+        switch (section){
+        case 'gaming':
+            embededcode =select_code_gaming(lang);
+            break;
+        case 'restaurant-bar':
+            embededcode =select_code_restaurant(lang);
+            break;
+        case 'poker-room-2':
+            embededcode =select_code_pokerroom(lang);
+            break;
+        case 'function-facilities':
+            embededcode =select_code_vip(lang);
+            break; 
+        case '':
+            embededcode =select_code_home(lang);
+            break; 
+        case '#':
+            embededcode =select_code_home(lang);
+            break;             
+        }        
+        $("#load-video").html(embededcode);        
+    };    
+
+    // bind language select links
+    if ($(".language-select").length) {
+        $(".language-select").click(function(e) {
+            e.preventDefault();
+            var target = e.target,
+                $target = $(target);
+            var lang ;
+            var section = location.pathname.split("/");
+            
+            if (target.nodeName === "A") {
+                // pass language variable to existing flashvar
+                if ($target.hasClass("flag-arabic")) {
+                    lang = "arabic";
+                }
+                if ($target.hasClass("flag-chinese")) {
+                    lang = "chinese";
+                }
+                if ($target.hasClass("flag-english")) {
+                    lang = "english";
+                }
+                if ($target.hasClass("flag-russian")) {
+                    lang = "russian";
+                }
+                
+                change_video(section[1],lang);
+                
+                return false;
+            }
+        });
+    }
+});

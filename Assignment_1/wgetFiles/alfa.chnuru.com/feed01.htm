@@ -1,0 +1,110 @@
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<script src="http://www.google.com/jsapi"></script>
+<script>
+
+google.load("feeds", "1");
+//<![CDATA[
+
+var getRssFeeds = function (_id, _urls, _maxLength) {
+        if(!_id || !_urls || (!(_urls instanceof Array)))       return;
+        var entryNum = 1;//各RSSの読み込みエントリー数
+        var maxLength = (_maxLength)?   _maxLength : 50 ;
+        //総エントリー表示数（0はすべて表示)
+        //変数定義
+        var entriesArray = new Array();
+        var complete = 0;
+        
+        //初期化
+        var init = function () {
+                for(var i=0 ; i < _urls.length ; i++){
+                        //RSS読み込み
+                        var feed = new google.feeds.Feed(_urls[i]);
+                        feed.setNumEntries(entryNum);
+                        feed.load(function(result) {
+                                if (!result.error) {
+                                        for (var i = 0; i < result.feed.entries.length; i++) {
+                                                var entry = result.feed.entries[i];
+                                                entriesArray.push(entry);
+                                                var pdate = new Date(entry.publishedDate);
+                                                var arr = entriesArray[(entriesArray.length-1)];
+                                                arr.sortDate = pdate.getTime();
+                                                arr.siteTitle = result.feed.title;
+                                        }
+                                }
+                                complete++;
+                                if(_urls.length == complete)    echo();
+                        });
+                }
+        };
+        //表示
+        var echo = function () {
+                entriesArray.sort (function (b1, b2) { return b1.sortDate < b2.sortDate ? 1 : -1; } );//降順ソート
+                //this.entriesArray.sort (function (b1, b2) { return b1.sortDate > b2.sortDate ? 1 : -1; } );//昇順ソート
+                var feedLength = (_maxLength)? _maxLength : entriesArray.length;
+                var container = document.getElementById(_id);
+                var html='<div class="feeds">';
+                for (var i = 0; i < feedLength; i++) {
+                        var entry = entriesArray[i];
+                        var pdate = new Date(entry.publishedDate);
+                        
+                        html += '<div class="feed-li"><a href="http://alfa.chnuru.com/'&#32;+&#32;entry.link&#32;+&#32;'" target="_blank">' + entry.title + '</a></div>';
+                }
+                html += '</div>';
+                container.innerHTML += html;
+        };
+        
+        google.setOnLoadCallback(init);
+};
+
+getRssFeeds("feeds", [
+	"http://chnuru.readers.jp/rss1s.rss",
+	"http://matonet.info/rss/new/30/0_0.rdf",
+	"http://www.antennash.com/rss_10.rdf",
+	"http://media-shelf.net/gentleman/matome/rss.xml",
+	"http://anaguro.yanen.org/index.rss",
+	"http://www.j-antenna.com/feed/10m/feed.xml"
+]);
+
+//]]>
+
+</script>
+<style type="text/css">
+body{
+   line-height : 1.5 ;
+   margin : 0 ;
+   padding : 0 ;
+}
+
+a{
+   text-decoration : none ;
+   border-bottom : 1px solid ;
+}
+
+/***  feeds  ***/
+.feeds{
+   margin : 0 ;
+   padding : 0 ;
+   overflow : hidden ;
+}
+
+.feed-li{
+   font-size : 16px ;
+   font-weight : 600 ;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="feeds"></div>
+
+
+</body>
+</html>

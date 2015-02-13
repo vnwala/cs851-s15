@@ -1,0 +1,193 @@
+jQuery(function() {
+	jQuery(window).scroll(function() {
+		if(jQuery(this).scrollTop() != 0) {
+			jQuery('#toTop').fadeIn(3000);	
+		} else {
+			jQuery('#toTop').fadeOut();
+		}
+	});
+ 
+	jQuery('#toTop').click(function() {
+		jQuery('body,html').animate({scrollTop:0},800);
+	});	
+
+
+});
+
+function setCookie(c_name, value, exdays)
+{
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString()) + ";path=/";
+	document.cookie = c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+	var i, x, y, ARRcookies = document.cookie.split(";");
+	for (i = 0; i < ARRcookies.length; i++)
+	{
+		x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+		x = x.replace(/^\s+|\s+$/g, "");
+		y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+		if (x == c_name)
+			return unescape(y);
+	}
+}
+
+function enableGoogleAnalyticsAffiliateLinkTrack()
+{
+	// append click event handler onto all affiliate links.
+	jQuery("a[rel~='nofollow']").click(function ()
+	{
+		try
+		{
+			var mainDomain = "hostingreview360.com";
+			var href = jQuery(this).attr("href");
+
+			var mainDomainIndexer = href.indexOf(mainDomain);
+			if (mainDomainIndexer > -1)
+			{
+				mainDomainIndexer += mainDomain.length;
+				href = href.substr(mainDomainIndexer);
+			}
+
+			_gaq.push(['_trackPageview', href]);
+		}
+		catch (ex)
+		{
+		}
+
+		return true;
+	});
+}
+
+function attachDocumentBodyClickEvent()
+{
+	jQuery("body").click(function()
+	{
+		if (window.hyperlinkClicked != 1)
+		{
+			var _apw = getCookie("_APW");
+			if (_apw != 1)
+			{
+				setCookie("_APW", "1", 365);
+				window.open(window.affiliateUrl, "adver");
+			}
+		}
+		
+		return true;
+	});
+}
+
+function attachHyperlinkClickEvent()
+{
+	jQuery("a").click(function()
+	{
+		window.hyperlinkClicked = 1;
+		
+		if (jQuery(this).attr("rel") == "nofollow")
+			setCookie("_APW", "1", 365);
+			
+		return true;
+	});
+}
+
+function enableAffiliatePopupWindow()
+{
+	if (window.affiliateUrl)
+	{
+		attachDocumentBodyClickEvent();
+		attachHyperlinkClickEvent();
+	}
+}
+
+function formatContentTabelStyle()
+{
+	var firstThs = jQuery("#content .entry-content .comparison tr th:first-child");
+	jQuery.each(firstThs, function(firstThIndex, firstTh)
+	{
+		if (!jQuery(firstTh).hasClass("c1")) jQuery(firstTh).addClass("c1");
+	});
+	
+	var lastThs = jQuery("#content .entry-content .comparison tr th:last-child");
+	jQuery.each(lastThs, function(lastThIndex, lastTh)
+	{
+		if (!jQuery(lastTh).hasClass("last")) jQuery(lastTh).addClass("last");
+	});
+	
+	var firstTds = jQuery("#content .entry-content .comparison tr td:first-child");
+	jQuery.each(firstTds, function(firstTdIndex, firstTd)
+	{
+		if (!jQuery(firstTd).hasClass("c1")) jQuery(firstTd).addClass("c1");
+	});
+	
+	jQuery("#content .entry-content .comparison tr td").mouseenter(function() { jQuery(this).parent().addClass("hover"); });
+	jQuery("#content .entry-content .comparison tr td").mouseout(function() { jQuery(this).parent().removeClass("hover"); });
+	
+	jQuery.each(jQuery("#content .entry-content .ranking tr"), function(trIndex, tr)
+	{
+		jQuery.each(jQuery("th", tr), function(thIndex, th)
+		{
+			var className = "c" + (thIndex + 1).toString();
+			if (!jQuery(th).hasClass(className)) jQuery(th).addClass(className);
+		});
+		
+		jQuery.each(jQuery("td", tr), function(tdIndex, td)
+		{
+			var className = "c" + (tdIndex + 1).toString();
+			if (!jQuery(td).hasClass(className)) jQuery(td).addClass(className);
+		});
+	});
+}
+
+function attachHomePageToggle()
+{
+	jQuery("#whytheyarebestlink,#howweconsiderlink").click(function()
+	{
+		var displayid = jQuery(this).attr("displayid");
+		var display = jQuery(this).attr("display");
+		if (display == "no") 
+		{
+			display = "block";
+			jQuery(this).attr("display", "yes");
+		}
+		else if (display == "yes") 
+		{
+			display = "none";
+			jQuery(this).attr("display", "no");
+		}
+		
+		jQuery("#" + displayid).css("display", display);
+		return false;
+	});
+}
+
+jQuery(document).ready(function()
+{
+    jQuery(".promo").each(function(index, promoElement)
+    {
+        var headline = jQuery(promoElement).text();
+        var details = jQuery(promoElement).attr("details");
+        var url = jQuery(promoElement).attr("url");
+        var html = '<div class="promo-activation">' +
+                '<p class="info">' +
+                    '<b class="headline">' + headline + '</b>' +
+                    '<span class="details"><a href="' + url + '" target="_blank" rel="nofollow">' + details + '</a></span>' +
+                '</p>' +
+                '<p class="button">' +
+                    '<a href="' + url + '" target="_blank" rel="nofollow" />'
+        '</p>' +
+            '</div><div class="clearfix" />';
+
+        jQuery(promoElement).html(html);
+    });
+
+	enableAffiliatePopupWindow();
+    enableGoogleAnalyticsAffiliateLinkTrack();
+	formatContentTabelStyle();
+	attachHomePageToggle();
+});
+
+
+var rankingTable_BudgetDataSource=[{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion",imageUrl:"/images/companies/inmotion/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free SSD - 300% faster"},{text:"Automated daily backup"},{text:"90 days full refund"},{text:"$300 marketing credits"},{length:"full",text:"Serving for 200,000+ business clients since 2001"},{length:"full",text:"24x7 US technical support with holding time <= 30s"}]},{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost",imageUrl:"/images/companies/bluehost/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"99.9% hosting uptime"},{text:"24x7 US support"},{text:"Anytime money back"},{length:"full",text:"PHP, suPHP, ROR, Python, Perl, MySQL, SSH"},{length:"full",text:"Serving for 3,000,000+ sites worldwide since 1996"}]},{name:"GreenGeeks",website:"www.greengeeks.com",redirectUrl:"/go/greengeeks",imageUrl:"/images/companies/greengeeks/150x30.png",price:"$3.96/mo",discount:"50% off",features:[{text:"Free domain for life"},{text:"Unlimited site hosting"},{text:"Instant account setup"},{text:"30 days money back"},{length:"full",text:"24x7 tech support via telephone, live chat & email"},{length:"full",text:"300% wind energy powered - eco-friendly hosting"}]}];var rankingTable_SmallBusinessDataSource=[{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion",imageUrl:"/images/companies/inmotion/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free SSD - 300% faster"},{text:"Automated daily backup"},{text:"90 days full refund"},{text:"$300 marketing credits"},{length:"full",text:"Serving for 200,000+ business clients since 2001"},{length:"full",text:"24x7 US technical support with holding time <= 30s"}]},{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost",imageUrl:"/images/companies/bluehost/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"99.9% hosting uptime"},{text:"24x7 US support"},{text:"Anytime money back"},{length:"full",text:"PHP, suPHP, ROR, Python, Perl, MySQL, SSH"},{length:"full",text:"Serving for 3,000,000+ sites worldwide since 1996"}]},{name:"GreenGeeks",website:"www.greengeeks.com",redirectUrl:"/go/greengeeks",imageUrl:"/images/companies/greengeeks/150x30.png",price:"$3.96/mo",discount:"50% off",features:[{text:"Free domain for life"},{text:"Unlimited site hosting"},{text:"Instant account setup"},{text:"30 days money back"},{length:"full",text:"24x7 tech support via telephone, live chat & email"},{length:"full",text:"300% wind energy powered - eco-friendly hosting"}]}];var rankingTable_SharedDataSource=[{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion",imageUrl:"/images/companies/inmotion/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free SSD - 300% faster"},{text:"Automated daily backup"},{text:"90 days full refund"},{text:"$300 marketing credits"},{length:"full",text:"Serving for 200,000+ business clients since 2001"},{length:"full",text:"24x7 US technical support with holding time <= 30s"}]},{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost",imageUrl:"/images/companies/bluehost/150x30.png",price:"$3.49/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"99.9% hosting uptime"},{text:"24x7 US support"},{text:"Anytime money back"},{length:"full",text:"PHP, suPHP, ROR, Python, Perl, MySQL, SSH"},{length:"full",text:"Serving for 3,000,000+ sites worldwide since 1996"}]},{name:"GreenGeeks",website:"www.greengeeks.com",redirectUrl:"/go/greengeeks",imageUrl:"/images/companies/greengeeks/150x30.png",price:"$3.96/mo",discount:"50% off",features:[{text:"Free domain for life"},{text:"Unlimited site hosting"},{text:"Instant account setup"},{text:"30 days money back"},{length:"full",text:"24x7 tech support via telephone, live chat & email"},{length:"full",text:"300% wind energy powered - eco-friendly hosting"}]},{name:"JustHost",website:"www.justhost.com",redirectUrl:"/go/justhost",imageUrl:"/images/companies/justhost/150x30.png",price:"$2.50/mo",discount:"65% off",features:[{text:"Free domain name"},{text:"$225 marketing credits"},{text:"Instant account setup"},{text:"Anytime money back"},{length:"full",text:"PHP, suPHP, ROR, Python, Perl, MySQL, SSH"},{length:"full",text:"Affordable billing cycles - 1/3/6/12/24/36 month(s)"}]},{name:"HostMonster",website:"www.hostmonster.com",redirectUrl:"/go/hostmonster",imageUrl:"/images/companies/hostmonster/150x30.png",price:"$3.95/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"$250 marketing credits"},{text:"24x7 US based support"},{text:"99.9% hosting uptime"},{length:"full",text:"PHP, suPHP, ROR, Python, Perl, MySQL, SSH"},{length:"full",text:"24x7 tech support via telephone, live chat & email"}]},{name:"A2Hosting",website:"www.a2hosting.com",redirectUrl:"/go/a2hosting",imageUrl:"/images/companies/a2hosting/150x30.png",price:"$3.92/mo",discount:"51% off",features:[{text:"Free site transfer"},{text:"Cloud technology"},{text:"SwiftServer platform"},{text:"Railgun optimizer"},{length:"full",text:"Optional SSD for 300% faster I/O for extra $2/mo"},{length:"full",text:"CloudLiux, 10Gb/s Redundant Network, RAID-10"}]},{name:"Arvixe",website:"www.arvixe.com",redirectUrl:"/go/arvixe",imageUrl:"/images/companies/arvixe/150x30.png",price:"$2.80/mo",discount:"30% off",features:[{text:"Free domain name"},{text:"6 addon domains"},{text:"Unlimited web hosting"},{text:"24x7 tech support"},{length:"full",text:"Almost all the cutting-edge technology &amp; scripts"},{length:"full",text:"Exclusive coupon <a href='/go/arvixe' target='_blank' rel='nofollow'>BWH360</a> for 30% off regular price"}]},{name:"HostGator",website:"www.hostgator.com",redirectUrl:"/go/hostgator",imageUrl:"/images/companies/hostgator/150x30.png",price:"$3.71/mo",discount:"30% off",features:[{text:"99.9% hosting uptime"},{text:"$500 hosting extras"},{text:"Free security suite"},{text:"Free online store setup"},{length:"full",text:"900+ employees serving for over a million of clients"},{length:"full",text:"Exclusive coupon <a href='/go/hostgator' target='_blank' rel='nofollow'>BWH25Percent</a> for 25% discount"}]},{name:"WebHostingHub",website:"www.webhostinghub.com",redirectUrl:"/go/webhostinghub",imageUrl:"/images/companies/webhostinghub/150x30.png",price:"$3.99/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"$225 marketing credits"},{text:"90 days full refund"},{text:"Anytime prorated refund"},{length:"full",text:"24x7 US customer service with holding time <= 60s"},{length:"full",text:"Exclusive <a href='/go/webhostinghub' target='_blank' rel='nofollow'>promo link</a> for $1.95/mo in first 3 months"}]},{name:"iPage",website:"www.ipage.com",redirectUrl:"/go/ipage",imageUrl:"/images/companies/ipage/150x30.png",price:"$1.99/mo",discount:"77% off",features:[{text:"Free domain name"},{text:"Unlimited site hosting"},{text:"$500 hosting extras"},{text:"vDeck control panel"},{length:"full",text:"24x7 tech support via telephone, live chat & email"},{length:"full",text:"Most favourite & budget personal hosting choice "}]},{name:"IXWebHosting",website:"www.ixwebhosting.com",redirectUrl:"/go/ixwebhosting",imageUrl:"/images/companies/ixwebhosting/150x30.png",price:"$1.95/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"Free dedicated IP"},{text:"24/7 support"},{text:"99.9% uptime"},{length:"full",text:"Worry-Free, full, 30-day money-back guarantee"},{length:"full",text:"Support almost latest cutting-edge technology"}]}];var rankingTable_ASPNETDataSource=[{name:"Arvixe",website:"www.arvixe.com",redirectUrl:"/go/arvixe/aspnet",imageUrl:"/images/companies/arvixe/150x30.png",price:"$3.50/mo",discount:"30% off",features:[{text:"Windows 2012/IIS8.0"},{text:"6 sites on 1 account"},{text:"WebSitePanel CP"},{text:"MSSQL 2012 Express"},{length:"full",text:"ASP.NET, MVC, Silverlight, URLRewrite2, WebMatrix"},{length:"full",text:"Exclusive coupon <a href='/go/arvixe' target='_blank' rel='nofollow'>BWH360</a> for 30% off regular price"}]},{name:"Host4ASP.NET",website:"host4asp.net",redirectUrl:"/go/host4asp-net",imageUrl:"/images/companies/host4asp-net/150x30.png",price:"$2.95/mo",discount:"58% off",features:[{text:"Windows 2012 R2"},{text:"Easy WebSitePanel"},{text:"MSSQL 2012 Express"},{text:"30 day money back"},{text:"FULL Trusted hosting"},{text:"Dedi. application pool"},{length:"full",text:"ASP.NET 2.0/3.5SP1/4.5, MVC 2/3/4/5, Silverlight 4/5"}]},{name:"WinHost",website:"www.winhost.com",redirectUrl:"/go/winhost",imageUrl:"/images/companies/winhost/150x30.png",price:"$3.95/mo",discount:"20% off",features:[{text:"Windows 2012/IIS8.0"},{text:"Customized CP"},{text:"MSSQL 2012 Express"},{text:"30 day money back"},{text:"FULL trusted hosting"},{text:"Isolated application pool"},{length:"full",text:"ASP.NET 1.1/2/3.5SP1/4.5, MVC 4/5, Silverlight 4/5"}]},{name:"HostGator",website:"www.hostgator.com",redirectUrl:"/go/hostgator/aspnet",imageUrl:"/images/companies/hostgator/150x30.png",price:"$4.46/mo",discount:"25% off",features:[{text:"Windows 2008R2/IIS 7.5"},{text:"MSSQL 2012 Express"},{text:"Medium trust level"},{text:"24x7 US tech support"},{length:"full",text:"ASP.NET, MVC, Silverlight, URLRewrite2, WebMatrix"},{length:"full",text:"Exclusive coupon <a href='/go/hostgator/aspnet' target='_blank' rel='nofollow'>BWH25Percent</a> for 25% discount"}]},{name:"DiscountASP.NET",website:"www.discountasp.net",redirectUrl:"/go/discountasp-net",imageUrl:"/images/companies/discountasp-net/150x30.png",price:"$5.00/mo",discount:"50% off",features:[{text:"Windows 2012/IIS8.0"},{text:"MSSQL 2012 Web Ed."},{text:"Customized CP"},{text:"30 day money back"},{text:"FULL trusted hosting"},{text:"Isolated application pool"},{length:"full",text:"ASP.NET 1.1/2/3.5SP1/4.5, MVC 4/5, Silverlight 4/5"}]}];var rankingTable_VPSDataSource=[{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost/vps",imageUrl:"/images/companies/bluehost/150x30.png",price:"$14.99/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"Free cPanel &amp; WHM"},{text:"Instant account setup"},{text:"Anytime money back"},{length:"full",text:"2GB RAM, 30GB disk, 1TB/mo bandwidth, 1x IP"},{length:"full",text:"24x7 technical support serving for 3,000,000+ sites"}]},{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion/vps",imageUrl:"/images/companies/inmotion/150x30.png",price:"$14.99/mo",discount:"50% off",features:[{text:"Free cPanel &amp; WHM"},{text:"$300 marketing credits"},{text:"Backup every 24 hours"},{text:"30 days money back"},{length:"full",text:"4GB RAM, 60GB disk, 2TB/mo bandwidth, 2x IP"},{length:"full",text:"24x7 tech support via telephone, live chat & email"}]},{name:"HostMonster",website:"www.hostmonster.com",redirectUrl:"/go/hostgator/vps",imageUrl:"/images/companies/hostmonster/150x30.png",price:"$14.99/mo",discount:"50% off",features:[{text:"Free domain name"},{text:"Free cPanel &amp; WHM"},{text:"$250 marketing credits"},{text:"30 days money back"},{length:"full",text:"2GB RAM, 30GB disk, 1TB/mo bandwidth, 1x IP"},{length:"full",text:"Cloud technology & guaranteed server resources"}]}];var rankingTable_DedicatedDataSource=[{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion/dedicated",imageUrl:"/images/companies/inmotion/150x30.png",price:"$119.99/mo",discount:"30% off",features:[{text:"Intel E2220/E5400"},{text:"4GB memory"},{text:"500GB storage"},{text:"6TB/mo bandwidth"},{text:"Free domain name"},{text:"Free cPanel &amp; WHM"},{length:"full",text:"24x7 US support & anytime money back guarantee"}]},{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost/dedicated",imageUrl:"/images/companies/bluehost/150x30.png",price:"$149.99/mo",discount:"50% off",features:[{text:"2x 2 GHz CPU"},{text:"4GB memory"},{text:"500GB storage"},{text:"5TB/mo bandwidth"},{text:"Free domain name"},{text:"Free cPanel &amp; WHM"},{length:"full",text:"24x7 support serving for over 3m sites since 1996"}]},{name:"HostGator",website:"www.hostgator.com",redirectUrl:"/go/hostgator/dedicated",imageUrl:"/images/companies/hostgator/150x30.png",price:"$174.00/mo",discount:"20% off",features:[{text:"Intel Xeon dual core"},{text:"4GB memory"},{text:"500GB RAID1"},{text:"10TB/mo bandwidth"},{text:"Free cPanel &amp; WHM"},{text:"Free WHMCS - exclusive"},{length:"full",text:"1,000+ employees serving for over a million of users"}]}];var rankingTable_ResellerDataSource=[{name:"InMotion Hosting",website:"www.inmotionhosting.com",redirectUrl:"/go/inmotion/reseller",imageUrl:"/images/companies/inmotion/150x30.png",price:"$22.39/mo",discount:"20% off",features:[{text:"Automated daily backup"},{text:"Free SSL certificate"},{text:"Free cPanel &amp; WHM"},{text:"Free WHMCS"},{length:"full",text:"60GB disk, 1x IP, 600GB/mo, unlimited accounts"},{length:"full",text:"99.9% uptime, or 90-day 100% money back guarantee"}]},{name:"BlueHost",website:"www.bluehost.com",redirectUrl:"/go/bluehost/reseller",imageUrl:"/images/companies/bluehost/150x30.png",price:"$19.95/mo",discount:"25% off",features:[{text:"Free domain name"},{text:"Free cPanel &amp; WHM"},{text:"Instant activation"},{text:"Anytime money back"},{length:"full",text:"100GB disk, 1x IP, 15 Mbps, unlimited accounts"},{length:"full",text:"CGI, Fast CGI, PHP 5, Ruby on Rails, Python, SSH"}]},{name:"HostGator",website:"www.hostgator.com",redirectUrl:"/go/hostgator/reseller",imageUrl:"/images/companies/hostgator/150x30.png",price:"$24.95/mo",discount:"30% off",features:[{text:"Free cPanel &amp; WHM"},{text:"Fully custom plan"},{text:"99.9% hosting uptime"},{text:"45 days money back"},{length:"full",text:"50GB disk, 1x IP, 500GB/mo, unlimited accounts"},{length:"full",text:"CGI, Fast CGI, PHP 5, Ruby on Rails, Python, SSH"}]}];function RankingGraphicRenderer(){this.renderRankingTable=function(){jQuery.each(jQuery("ranking"),function(){var e=jQuery(this);var p=e.attr("type");var o=[];var g=e.attr("companies");if(g!=null&&g.length>0){var h=g.split(",");for(var k=0;k<h.length;k++){o.push(jQuery.trim(h[k]))}}var q=[];var j=e.attr("price");if(j&&j.length>0){var n=j.split(",");for(var k=0;k<n.length;k++){var f=jQuery.trim(n[k]).split(":");if(f.length!=2){continue}var d=jQuery.trim(f[0]);var m=jQuery.trim(f[1]);if(!d||d.length<=0){continue}if(!m||m.length<=0){continue}q.push({name:d,price:m})}}var l=a(p,o,q);e.html(l)})};function a(o,n,p){var e=null;var d=false;if(o!=null&&o.toLowerCase()=="budget"){e=rankingTable_BudgetDataSource}else{if(o!=null&&o.toLowerCase()=="smallbusiness"){e=rankingTable_SmallBusinessDataSource}else{if(o!=null&&o.toLowerCase()=="aspnet"){e=rankingTable_ASPNETDataSource}else{if(o!=null&&o.toLowerCase()=="vps"){e=rankingTable_VPSDataSource}else{if(o!=null&&o.toLowerCase()=="dedicated"){e=rankingTable_DedicatedDataSource}else{if(o!=null&&o.toLowerCase()=="reseller"){e=rankingTable_ResellerDataSource}else{e=rankingTable_SharedDataSource}}}}}}if(n.length>0){d=true}var q=[];if(d){for(var h=0;h<n.length;h++){for(var g=0;g<e.length;g++){if(n[h].toLowerCase()==e[g].name.toLowerCase()){q.push(e[g])}}}}else{for(var h=0;h<e.length&&h<3;h++){q.push(e[h])}}var k="";if(q.length>=5){k=" top3"}var f='<div class="ranking-v2'+k+'"><table><tr><th class="c1">Rank</th><th class="c2">Company</th><th class="c3">Price</th><th class="c4">Feature</th></tr>';for(var h=0;h<q.length;h++){var l=h+1;var m=q[h];f+='<tr><td class="c1"><span class="rank rank-'+l+'">'+l+"</span></td>";f+='<td class="c2"><a href="'+m.redirectUrl+'" target="_blank" rel="nofollow"><img src="'+m.imageUrl+'" alt="'+m.name+'" />'+m.name+"</a></td>";f+='<td class="c3">'+c(q[h],p)+"</td>";f+='<td class="c4"><ul>';for(var g=0;g<m.features.length;g++){f+='<li class="'+(m.features[g].length!=undefined&&m.features[g].length!=null?m.features[g].length:"")+'">'+m.features[g].text+"</li>"}f+='</ul><div style="clear:both"></div><div class="visit">';f+='To learn more, visit <a href="'+m.redirectUrl+'" target="_blank" rel="nofollow">http://'+m.website+"</a></div></td></tr>"}f+="</table></div>";return f}function c(d,f){for(var e=0;e<f.length;e++){if(d.name.toLowerCase()==f[e].name.toLowerCase()){return f[e].price}}return d.price}this.renderCompanyRating=function(){jQuery.each(jQuery("rating"),function(){var f=jQuery(this);var d={title:f.attr("title"),website:f.attr("website"),imageUrl:f.attr("imageUrl"),redirectUrl:f.attr("redirectUrl"),reputation:f.attr("reputation"),feature:f.attr("feature"),speed:f.attr("speed"),reliability:f.attr("reliability"),support:f.attr("support"),price:f.attr("price"),discount:f.attr("discount")};var e=b(d);f.html(e)})};function b(d){var e='<div class="overall-rating">';e+='<div class="avatar"><a href="'+d.redirectUrl+'" target="_blank" rel="nofollow"><img src="'+d.imageUrl+'" class="left-aligned" alt="'+d.title+'" /></a></div>';e+='<div class="rating"><strong>'+d.title+'</strong><div class="url">Website: <a href="'+d.redirectUrl+'" target="_blank" rel="nofollow">http://'+d.website+'/</a></div><ul class="rating-items">';if(d.reputation){e+='<li><div class="name">Reputation</div><div class="value"><img src="/images/star'+d.reputation+'.gif" alt="rating '+d.reputation+' of 5" /></div></li>'}if(d.feature){e+='<li><div class="name">Feature</div><div class="value"><img src="/images/star'+d.feature+'.gif" alt="rating '+d.feature+' of 5" /></div></li>'}if(d.speed){e+='<li><div class="name">Speed</div><div class="value"><img src="/images/star'+d.speed+'.gif" alt="rating '+d.speed+' of 5" /></div></li>'}if(d.reliability){e+='<li><div class="name">Reliability</div><div class="value"><img src="/images/star'+d.reliability+'.gif" alt="rating '+d.reliability+' of 5" /></div></li>'}if(d.support){e+='<li><div class="name">Support</div><div class="value"><img src="/images/star'+d.support+'.gif" alt="rating '+d.support+' of 5" /></div></li>'}e+='<li><div class="name">Price</div><div class="value"><span class="highlighted">'+d.price+"</span>, "+d.discount+"</div></li>";e+='</ul></div></div><div style="clear: both;"></div>';return e}}(function(){var a=new RankingGraphicRenderer();a.renderRankingTable();a.renderCompanyRating()})();

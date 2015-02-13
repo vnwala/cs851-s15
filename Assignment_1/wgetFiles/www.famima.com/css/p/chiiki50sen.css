@@ -1,0 +1,463 @@
+@charset "shift_jis";
+
+/*
+Title: 地域の名選50選
+URI: http://famima.com/shop/pages/chiiki50sen.aspx
+*/
+
+
+/* --------------------------------------------------------------------
+	共通
+-------------------------------------------------------------------- */
+#chiiki50sen-wrap h1, #chiiki50sen-wrap h2, #chiiki50sen-wrap h3, #chiiki50sen-wrap h4,
+#chiiki50sen-wrap img, #chiiki50sen-wrap p, #chiiki50sen-wrap div, #chiiki50sen-wrap ul, #chiiki50sen-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: none;
+	background: transparent;
+	}
+	
+#chiiki50sen-wrap .clear{
+	margin:0; padding:0; font-size:0; clear:both;}
+
+/* clearfix */
+#chiiki50sen-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#chiiki50sen-wrap .clearfix {
+  min-height: 1px;}
+
+* html #chiiki50sen-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #chiiki50sen-wrap { 
+	height: 1%;}
+
+/* --------------------------------------------------------------------
+	地域の名選50選
+-------------------------------------------------------------------- */
+#chiiki50sen-wrap{
+	margin:0; padding:0; width:960px;}
+	
+
+#chiiki50sen-wrap h1#header{
+	width:960px; height:207px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/header_1.jpg) no-repeat;}
+	
+#chiiki50sen-wrap #header_cmnt{
+	width:960px; height:200px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/header_2.jpg) no-repeat;}
+
+#chiiki50sen-wrap .border_1{
+	width:960px; height:11px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/border_1.jpg) repeat-x;}
+
+/* Recommend Items */
+#chiiki50sen-wrap .puitemBaseL{
+	width:463px; padding-left:9px; float:left;}
+	
+#chiiki50sen-wrap .puitemBaseR{
+	width:463px; padding-left:17px; float:left;}
+	
+#chiiki50sen-wrap .puitem01COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem01_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem01NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem01_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem01CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem01_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem01BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem01_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem01BTM .bt{
+	width:165px; height:27px; padding:0 0 0 7px; border:none;}
+	
+#chiiki50sen-wrap .puitem02COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem02_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem02NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem02_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem02CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem02_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem02BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem02_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem02BTM .bt{
+	width:165px; height:27px; padding:0 0 0 7px; border:none;}
+	
+#chiiki50sen-wrap .puitem03COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem03_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem03NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem03_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem03CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem03_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem03BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem03_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem03BTM .bt{
+	width:165px; height:27px; padding:0 0 0 7px; border:none;}
+	
+#chiiki50sen-wrap .puitem04COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem04_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem04NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem04_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem04CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem04_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem04BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem04_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem04BTM .bt{
+	width:165px; height:27px; padding:0 0 0 7px; border:none;}
+
+/* Item01-50common */
+#chiiki50sen-wrap .border_2{
+	width:960px; height:30px; clear:both;
+	background:url(http://www.famima.com/images/p/chiiki50sen/border_2.jpg) no-repeat;}
+
+#chiiki50sen-wrap .itemBase{
+	width:174px; padding-left:15px; float:left;
+	text-align:left;}
+	
+#chiiki50sen-wrap .madeby{
+	width:174px; height:24px; background-color:#333333; text-align:right; vertical-align:middle;}
+
+#chiiki50sen-wrap .madeby p{
+	color:#FFFFFF; font-size:12px; padding:4px 4px 0 0;}
+
+#chiiki50sen-wrap .itemBase .price{
+	color:#da3a09; font-size:90%; width:174px; padding:5px 0 3px 0;}
+
+#chiiki50sen-wrap .itemBase .txt{
+	color:#333333; font-size:90%; width:174px; line-height:120%;}
+
+#chiiki50sen-wrap .itemBase .txtlink{
+	color:#333333; font-size:12px; margin-top:5px;
+	padding-left:14px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/arrow.jpg) center left no-repeat;}
+
+#chiiki50sen-wrap .itemBase .txtlink a:link, 
+#chiiki50sen-wrap .itemBase .txtlink a:visited{
+	text-decoration:underline; color:#333333;}
+#chiiki50sen-wrap .itemBase .txtlink a:hover,
+#chiiki50sen-wrap .itemBase .txtlink a:active{
+	text-decoration:none; color:#333333;}
+
+#chiiki50sen-wrap a{
+	outline:0;}
+	
+/* Item01-10 */
+#chiiki50sen-wrap .item01IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item001.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item02IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item002.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item03IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item003.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item04IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item004.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item05IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item005.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item06IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item006.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item07IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item007.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item08IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item008.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item09IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item009.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item10IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item010.jpg) no-repeat;}
+	
+/* Item11-20 */
+#chiiki50sen-wrap .item11IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item011.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item12IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item012.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item13IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item013.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item14IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item014.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item15IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item015.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item16IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item016.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item17IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item017.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item18IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item018.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item19IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item019.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item20IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item020.jpg) no-repeat;}
+	
+/* Item21-30 */
+#chiiki50sen-wrap .item21IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item021.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item22IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item022.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item23IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item023.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item24IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item024.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item25IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item025.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item26IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item026.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item27IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item027.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item28IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item028.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item29IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item029.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item30IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item030.jpg) no-repeat;}
+	
+/* Item31-40 */
+#chiiki50sen-wrap .item31IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item031.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item32IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item032.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item33IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item033.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item34IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item034.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item35IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item035.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item36IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item036.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item37IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item037.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item38IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item038.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item39IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item039.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item40IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item040.jpg) no-repeat;}
+	
+/* Item41-50 */
+#chiiki50sen-wrap .item41IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item041.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item42IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item042.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item43IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item043.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item44IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item044.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item45IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item045.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item46IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item046.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item47IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item047.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item48IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item048.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item49IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item049.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item50IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item050.jpg) no-repeat;}
+	
+	
+/* 20110208UP */
+#chiiki50sen-wrap .puitem05COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem05_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem05NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem05_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem05CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem05_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem05BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem05_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem05BTM .bt{
+	width:165px; height:27px; padding:7px 0 0 7px; border:none;}
+
+#chiiki50sen-wrap .puitem06COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem06_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem06NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem06_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem06CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem06_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem06BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem06_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem06BTM .bt{
+	width:165px; height:27px; padding:7px 0 0 7px; border:none;}
+
+#chiiki50sen-wrap .puitem07COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem07_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem07NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem07_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem07CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem07_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem07BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem07_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem07BTM .bt{
+	width:165px; height:27px; padding:7px 0 0 7px; border:none;}
+
+#chiiki50sen-wrap .puitem08COPY{
+	width:463px; height:35px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem08_copy.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem08NAME{
+	width:463px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem08_name.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem08CMNT{
+	width:463px; height:93px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem08_cmnt.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem08BTM{
+	width:463px; height:47px; text-align:left;
+	background:url(http://www.famima.com/images/p/chiiki50sen/puitem08_btm.jpg) no-repeat;}
+#chiiki50sen-wrap .puitem08BTM .bt{
+	width:165px; height:27px; padding:7px 0 0 7px; border:none;}
+	
+
+#chiiki50sen-wrap .item51IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item051.jpg) no-repeat;}
+
+#chiiki50sen-wrap .item52IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item052.jpg) no-repeat;}
+	
+#chiiki50sen-wrap .item53IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item053.jpg) no-repeat;}
+
+#chiiki50sen-wrap .item54IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item054.jpg) no-repeat;}
+
+#chiiki50sen-wrap .item55IMG{
+	width:174px; height:185px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/chiiki50sen/item055.jpg) no-repeat;}
+
+
+
+
+
+
+

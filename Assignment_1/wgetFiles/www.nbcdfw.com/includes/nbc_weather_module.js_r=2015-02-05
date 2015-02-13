@@ -1,0 +1,299 @@
+nbcWeatherChangeLoc = {
+    submitZipCode : function(id) {
+        console.log('A', id);
+        var currentZip = jQuery(id + " .weather_by_zipcode").val();
+        if (nbc.omniture.pageType =="weather") {
+            document.location = "/weather/?zipCode=" + currentZip;
+        } else {
+            nbcWeatherChangeLoc.reprocessZip(currentZip, id)
+        }
+        
+    },
+    submitCity : function (locationZip, id) {
+        countryName = new Array();
+        jQuery(id + " .weatherMessageInfo").hide();
+        jQuery(id + " .processing_zip").show();
+        var dataString = "h=v3_city_lookup&loc=" + locationZip;
+        var requestUrl = "/i/dispatcher/";
+        var dataString1 = "";
+        jQuery.ajax({
+            type : "GET",
+            url : requestUrl,
+            data : dataString,
+            dataType : "text",
+            cache : false,
+            async : false,
+            success : function(data) {
+                countryName.length = 0;
+                var trimData = jQuery.trim(data);
+                var jsonFirstComms = eval("(" + trimData + ")");
+                try {
+                    if ((jsonFirstComms.Cities) && (jsonFirstComms.Cities.City.CountryName)) {
+                        countryName.push(jsonFirstComms.Cities.City.CountryName);
+                    } else if ((jsonFirstComms.Cities) && (jsonFirstComms.Cities.City)) {
+                        for ( i = 0; i < jsonFirstComms.Cities.City.length; i++) {
+                            countryName.push(jsonFirstComms.Cities.City[i].CountryName);
+                        }
+                    } else {
+                        console.log("nbc_v4_weather_location: invalid");
+                    }
+                    console.log("nbc_v4_weather_location: countryName - " + countryName);
+                } catch(e) {
+                    console.log("nbc_v4_weather_location: e - " + e);
+                }
+                if ((jsonFirstComms.Cities) && (jsonFirstComms.Cities.City) && countryName.indexOf("United States") > -1) {
+                    if (jQuery(id + " .weather_by_zipcode").attr("name") == "alphaWeatherZip") {
+                        if (jsonFirstComms.Cities.City.Id && jsonFirstComms.Cities.City.CountryName == "United States") {
+                            nbc.weather.validatedZip = jsonFirstComms.Cities.City.Id;
+                            allCitiesList = jsonFirstComms.Cities.City;
+                            jQuery(id + " .suggestedCities").hide();
+                            jQuery(id + " .suggestedCities").html("");
+                            if (nbc.omniture.pageType =="weather") {
+                                document.location = "/weather/?zipCode=" + jsonFirstComms.Cities.City.Id;
+                            } else {
+                                nbcWeatherChangeLoc.reprocessZip(jsonFirstComms.Cities.City.Id, id)
+                            }
+                            
+                        } else {
+                            nbc.weather.validatedZip = jsonFirstComms.Cities.City[0].Id;
+                            allCitiesList = jsonFirstComms.Cities.City;
+                            console.log("nbc_v4_weather_location: Populating city results");
+                            jQuery(id + " .suggestedCities").html("");
+                            jQuery(id + " .suggestedCities").append("<ul class='citiesList'></ul>");
+                            if (nbc.omniture.pageType =="weather") {
+                                for ( i = 0; i < jsonFirstComms.Cities.City.length; i++) {
+                                    if (jsonFirstComms.Cities.City[i].CountryName == "United States") {
+                                        jQuery(id + " .suggestedCities ul").append("<li><a href='/weather/?zipCode=" + jsonFirstComms.Cities.City[i].Id + "'>" + jsonFirstComms.Cities.City[i].Name + ", " + jsonFirstComms.Cities.City[i].StateAbbr + "</a></li>");
+                                    }
+                                }
+                            } else {
+                                for ( i = 0; i < jsonFirstComms.Cities.City.length; i++) {
+                                    if (jsonFirstComms.Cities.City[i].CountryName == "United States") {
+                                        jQuery(id + " .suggestedCities ul").append("<li><a data-cityID='" + jsonFirstComms.Cities.City[i].Id + "'>" + jsonFirstComms.Cities.City[i].Name + ", " + jsonFirstComms.Cities.City[i].StateAbbr + "</a></li>");
+                                    }
+                                }
+                                jQuery(id + " .suggestedCities ul a").click(function(){
+                                  nbcWeatherChangeLoc.reprocessZip(jQuery(this).data('cityid'), id)
+                                })
+                            }
+                        }
+                        jQuery(id + " .suggestedCities").show();
+                    } else {
+                        jQuery(id + " .suggestedCities").hide();
+                        nbcWeatherChangeLoc.submitZipCode(id);
+                    }
+                } else {
+                    console.log("nbc_v4_weather_location: Nothing found, display message");
+                    nbcWeatherChangeLoc.statusMsg(id + ' .weatherMessageInfo', "No match found. Please enter a valid zipcode or city.", true);
+                    jQuery(id + " .weatherMessageInfo").show();
+                    jQuery(id + " .weather_zip .errorText").hide();
+                    jQuery(id + " .suggestedCities").hide();
+                }
+                jQuery(id + " .processing_zip").hide();
+            },
+            error : function() {
+                console.log("nbc_v4_weather_location: Ajax call error");
+                nbcWeatherChangeLoc.statusMsg(id + ' .weatherMessageInfo', "No match found. Please enter a valid zipcode or city.", true);
+                jQuery(id + " .weatherMessageInfo").show();
+                jQuery(id + " .weather_zip .errorText").hide();
+                jQuery(id + " .suggestedCities").hide();
+                jQuery(id + " .processing_zip").hide();
+            }
+        });
+    },
+    zipCodeValidation : function(searchType, id) {
+        try {
+            clearStatusMsg();
+        } catch(e) {
+            //console.log(e);
+        }
+        var profileZip = "";
+        if ((jQuery(id + " .weather_by_zipcode").val() != null) && (jQuery(id + " .weather_by_zipcode").val() != "")) {
+            profileZip = jQuery(id + " .weather_by_zipcode").val();
+        }
+        // check if zip code exists
+        var loc = profileZip;
+        try {
+            nbcWeatherChangeLoc.submitCity(loc, id);
+        } catch(e) {
+            //console.log("There was an error: " + e);
+        }
+    },
+    statusMsg : function (id, text, isError) {
+        if (isError) {
+            jQuery(id).removeClass("valid").addClass("invalid").text(text);
+        } else {
+            jQuery(id).removeClass("invalid").addClass("valid").text(text);
+        }
+    },
+    displaySuccess : function(id, text) {
+        // U.log("in display success");
+        nbcWeatherChangeLoc.statusMsg(id + ' .weatherMessageInfo', text);
+    },
+    init : function(id) {
+        jQuery(id + ' a.city-name').click(function(evt) {
+            evt.preventDefault();
+            jQuery('.changeLocation').fadeIn("fast");
+            nbcu.linkTrackVars = "eVar7";
+            nbcu.eVar7 = "weather change location";
+            nbcu.tl(this, 'o', nbcu.eVar7, null);
+        });
+        jQuery(id + ' .changeLocationClose span').click(function() {
+            jQuery(id + ' .changeLocation').fadeOut("fast");
+        });
+
+        jQuery(id + " .weather_by_zipcode").click(function() {
+            jQuery(id + " .weather_by_zipcode").css("color", "#333333");
+            if (jQuery(this).val() == "Enter City or Zip") {
+                jQuery(this).val("");
+            }
+        });
+        jQuery(id + " .weather_zip_code_search").click(function() {
+            nbcu.linkTrackVars = "eVar7";
+            nbcu.eVar7 = "weather city zip submit";
+            nbcu.tl(this, 'o', nbcu.eVar7, null);
+        });
+        jQuery(id + " .weather_by_zipcode").removeAttr("disabled");
+        jQuery(id + " .weather_by_zipcode").keyup(function(e) {
+            var key = e.charCode || e.keyCode || 0;
+            if (key == 8 || key == 9 || key == 46 || (key >= 37 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105) || (key == 13)) {
+                jQuery(id + " .weather_by_zipcode").attr("name", "weatherZip");
+            } else {
+                jQuery(id + " .weather_by_zipcode").attr("name", "alphaWeatherZip");
+            }
+            var currValue = $(this).val();
+            if (currValue) {
+                charCodeOfFirstChar = currValue.charCodeAt(0);
+                // U.log(charCodeOfFirstChar);
+                if (charCodeOfFirstChar >= 48 && charCodeOfFirstChar <= 57) {
+                    jQuery(id + " .weather_by_zipcode").attr("name", "weatherZip");
+                    jQuery(id + " .suggestedCities").hide();
+                } else {
+                    jQuery(id + " .weather_by_zipcode").attr("name", "alphaWeatherZip");
+                    for ( i = 0; i++; i < currValue.length - 1) {
+                        if (currValue.charCodeAt(i) >= 48 && currValue.charCodeAt(i) <= 57) {
+                            jQuery(id + " .weather_by_zipcode").attr("name", "weatherZip");
+                            jQuery(id + " .suggestedCities").hide();
+                        } else {
+                            nbcWeatherChangeLoc.zipCodeValidation("city");
+                        }
+                    }
+                }
+            }
+            if (key == 13) {
+                jQuery(id + " .weatherMessageInfo").hide();
+            }
+            if ((key == 8) || (key == 46)) {
+                if (currValue == "") {
+                    $(id + " .suggestedCities").hide();
+                }
+            }
+        });
+
+        jQuery(id + " .weather_zip").validate({
+            submitHandler : function(form) {
+                nbcWeatherChangeLoc.zipCodeValidation("zipCode", id);
+            },
+            errorPlacement : function(error, element) {
+                jQuery(element).parent().removeClass("valid").addClass("invalid");
+                jQuery(element).parent().find(".errorText").text(error.text()).show();
+                jQuery(id + " .suggestedCities").hide();
+                jQuery(id + " .processing_zip").hide();
+            },
+            success : function(label) {
+                jQuery(id + " ." + label[0].htmlFor).parent().removeClass("invalid").addClass("valid");
+            },
+            errorClass : "invalid",
+            event : "submit",
+            rules : {
+                weatherZip : {
+                    required : true,
+                    digits : true,
+                    minlength : 5,
+                    maxlength : 5
+                }
+            },
+            messages : {
+                weatherZip : "Please enter a zip code or city name."
+            }
+        });
+    },
+    initFlyout : function(zipValue,textValue) {
+      if($("#wrapperFlyout .flyoutAnimation").hasClass("active")){
+        $("#wrapperFlyout .flyoutAnimation").removeClass("active");
+        $("#wrapperFlyout .regionFlyout").fadeOut();
+        if(textValue.length > 15){
+          var regionNameTxt = textValue.substr(0,15)+"...";
+        } else {
+          var regionNameTxt = textValue;
+        }
+        $("#wrapperFlyout .defaultSelect").text(regionNameTxt);
+        if (nbc.omniture.pageType =="weather") {
+            document.location.href="/weather/?zipCode="+zipValue;
+        } else {
+             nbcWeatherChangeLoc.reprocessZip(zipValue, storyQueue)
+        }
+      } else {
+        $("#wrapperFlyout .flyoutAnimation").addClass("active");
+        $("#wrapperFlyout .regionFlyout").fadeIn();
+      }
+    },
+    initRegionDropdown : function() {
+      $(document).bind("click",function(elem){
+        if($("#wrapperFlyout .flyoutAnimation").hasClass("active")){
+            $("#wrapperFlyout .flyoutAnimation").removeClass("active");
+            $("#wrapperFlyout .regionFlyout").fadeOut();
+          }
+      });
+      $("#wrapperFlyout .flyoutAnimation, #wrapperFlyout .regionFlyout ul li.regionName").bind("click",function(e){
+        e.stopPropagation();
+        if($(this).hasClass("regionName")){
+          //console.log($(this).attr("id"));
+          nbcWeatherChangeLoc.initFlyout($(this).attr("id"),$(this).text());
+        } else {
+          nbcWeatherChangeLoc.initFlyout();
+        }
+      });
+    },
+    trackLinks : function (e) {
+        e.preventDefault();
+        var omniTrack = jQuery(this).data('tracking');
+        nbcu.linkTrackVars="eVar7";
+        nbcu.eVar7 = 'weather-rightrail|' + omniTrack; 
+        nbcu.tl(this,'o',nbcu.eVar7,null,'navigate');
+    },
+    reprocessZip : function(zip, id) {
+      //jQuery("#processingWeatherLoading").show();
+      U.eraseCookie('zipCode');
+      U.createCookie('zipCode', zip, 365);
+      var dataString="h=weather_home_widget&zipCode="+zip + "&moduleType=JSON";
+        jQuery.ajax({
+          type: "GET",
+          url: "/i/dispatcher/?" + dataString,
+          cache:false,
+          success : function(data) {
+            console.log('SUCCESS')
+          },
+          complete: function(data) {
+                var trimArticleData = jQuery.trim(data.responseText);
+                var tidyResponse = JSON.parse(trimArticleData);
+                var weatherModUpdate = tidyResponse[0];
+                if(weatherModUpdate.hasOwnProperty('error')) {
+                    jQuery(id).html('<div class="weatherError">Apologies for the inconvenience, but we\'re currently experiencing technical difficulties. We should be up and running again soon, so please check back</div>');
+                } else {
+                    jQuery('.weatherCityState').html(weatherModUpdate.cityState);
+                    jQuery('.weather-module-wrapper .icon-temp-wrapper .temperature a').html(weatherModUpdate.currentTemp + '<sup>&deg;</sup>');
+                    jQuery('.weather-module-wrapper .icon-temp-wrapper img').attr('src', nbc.mediaDomain + '/designimages/new_wx_' + weatherModUpdate.iconCode + '.png');
+                    jQuery('.weather-module-wrapper .icon-temp-wrapper .conditon-feelslike-wrapper .condition').html(weatherModUpdate.todaysConditions);
+                    jQuery('.weather-module-wrapper .icon-temp-wrapper .conditon-feelslike-wrapper .feels-like').html('Feels Like ' + weatherModUpdate.feelsLike + '<sup>&deg;</sup>');
+                    if(jQuery('#currentWrap').length > 0 ) {
+                        jQuery('#currentIcon img').attr('src', nbc.mediaDomain + '/designimages/new_wx_' + weatherModUpdate.iconCode + '.png');
+                        jQuery('#currentTemp').html(weatherModUpdate.currentTemp + '<sup>&deg;</sup>');
+                    };
+                }
+                jQuery('.changeLocation').hide();
+          }
+
+        }); // END AJAX call
+    }
+}

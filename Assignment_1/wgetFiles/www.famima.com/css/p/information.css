@@ -1,0 +1,352 @@
+@charset "shift_jis";
+
+/*-------------------------------------------------------
+	Information
+	www.famima.com
+-------------------------------------------------------*/
+
+#information h1,h2,h3,ul,img,dl,dt,dd, {
+	margin:0;
+	padding:0;	
+}
+
+#information {
+	width: 800px;
+	margin:50px auto 30px;
+	text-align:left;
+	border-bottom:1px dashed #ccc;
+	padding-bottom:20px;
+	line-height:1.5;
+	font-size:116%;
+}
+
+
+#information a.other_window {
+	background:url(http://www.famima.com/images/p/common/fdc_other_window.png) right no-repeat;
+	/* height:12px; */
+	padding-right:17px;
+	}
+
+
+#information h2 {
+	font-size:139%;
+	font-weight:bold;
+	text-align:center;
+	border-bottom:1px dashed #ccc;
+	margin-bottom:5px;
+	padding-bottom:10px;
+	
+	
+}
+
+
+#information h3 {
+	font-weight:bold;
+	margin-bottom:5px;
+	font-size:116%;
+	}
+
+#information .b {
+	font-weight:bold;
+	}
+
+
+#information .normalfont {
+	font-weight:normal;
+	font-size:12px;
+	}
+
+#information .left {
+	float:left;
+}
+
+#information .right {
+	float:right;
+}
+
+#information br.clear {
+	clear:both;
+}
+
+#information .mt5 {
+	margin-top:5px;
+	}
+
+#information .mt20 {
+	margin-top:20px;
+	}
+
+#information .mt40 {
+	margin-top:40px;
+	}
+
+#information .mt50 {
+	margin-top:60px;
+	}
+
+#information .mt60 {
+	margin-top:60px;
+	}
+
+#information .ml20 {
+	margin-left:20px;
+	}
+
+#information .ml40 {
+	margin-left:40px;
+	}
+
+#information .mb5 {
+	margin-bottom:5px;
+	}
+
+
+#information .mb10 {
+	margin-bottom:10px;
+	}
+	
+#information .mb20 {
+	margin-bottom:20px;
+	}
+
+#information .mb30 {
+	margin-bottom:30px;
+	}
+
+#information .mb50 {
+	margin-bottom:50px;
+	}
+
+
+/* 表：行4 */
+
+#information table.hyo {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo th {
+	width:16%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo td {
+	width:28%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+/**/
+
+#information .fs80p {
+	font-size:80%;
+	}
+
+#information .fs90p {
+	font-size:90%;
+	}
+
+
+/* 表：行2 */
+
+#information table.hyo2 {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo2 th {
+	width:50%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo2 td {
+	width:50%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+/**/
+
+
+/* 表：行4 */
+
+#information table.hyo3 {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo3 th {
+	width:25%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo3 td {
+	width:25%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+/* 表：行4、その２ */
+
+#information table.hyo32 {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo32 th {
+	width:33%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo32 td {
+	width:33%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo32 th.s {
+	width:16%;
+	}
+
+#information table.hyo32 td.s {
+	width:16%;
+	}
+
+
+/* 表：行6 */
+
+#information table.hyo4 {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo4 th {
+	width:18%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	font-size:12px;
+	}
+
+#information table.hyo4 td {
+	width:18%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+#information table.hyo4 th.s {
+	width:10%;
+	}
+
+#information table.hyo4 td.s {
+	width:10%;
+	}
+
+/* 表：行3 */
+
+#information table.hyo5 {
+	width:100%;
+	border:1px solid 999;
+	background:#fff;
+	}
+
+#information table.hyo5 th {
+	width:33%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	font-size:12px;
+	}
+
+#information table.hyo5 td {
+	width:33%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	}
+
+/**/
+
+
+/* 表：行2、その2 */
+
+#information table.hyo6 {
+	width:80%;
+	border:1px solid 999;
+	background:#fff;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+#information table.hyo6 th {
+	width:30%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	background:#99CCFF;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	}
+
+#information table.hyo6 td {
+	width:70%;
+	border:1px solid #999;
+	border-collapse: collapse;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	}
+
+/**/
+
+
+#information ul li {
+	margin-bottom:3px;
+	font-size:96%;
+	}
+
+#information ul li.cau {
+	margin-bottom:3px;
+	font-size:96%;
+	padding-left:10px;
+	}
+
+#information p.left80 {
+	margin-left:80px;
+	}

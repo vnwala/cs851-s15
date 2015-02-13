@@ -1,0 +1,111 @@
+		
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>B&ouml;rse</title>
+    <script type="text/javascript">
+    	function changeChart(iChartId) {
+    
+    		oImgs = document.getElementById('chartimgs');
+    		oLinks = document.getElementById('chartlinks');
+    		aImg = oImgs.getElementsByTagName('img');
+    		aTds = oLinks.getElementsByTagName('td');
+    
+    		for (x=0;x<aImg.length;x++) {
+    			aImg[x].style.display='none';
+    			aTds[x].className='passiv';
+    		}
+    
+    		document.getElementById(iChartId).style.display='inline';
+    		document.getElementById('t'+iChartId).className='aktiv';
+    
+    	}
+    </script>
+
+    <link href="http://files.newsnetz.ch/css/BZ_boersenbox_V3.css" rel="stylesheet" type="text/css" media="all">
+        
+    </head>
+    <body leftmargin="0" topmargin="0">
+    <div class="boerse_box">
+    
+    	<h4><a href="../../../index.html" target="_top" class="title">B&ouml;rse</a></h4>
+    	
+    	<table cellpadding="0" cellspacing="0" class="chart-ueb-reiter">
+    		<tr id="chartlinks">
+    		    			<td id='t1555183' class="aktiv"><a href="boersenbox.tmpl#" id="l1555183"  onClick="javascript:changeChart(1555183); return false">SMI</a></td>
+                			<td id='t193736' ><a href="boersenbox.tmpl#" id="l193736" class="passiv" onClick="javascript:changeChart(193736); return false">Stoxx50</a></td>
+                			<td id='t324977' ><a href="boersenbox.tmpl#" id="l324977" class="passiv" onClick="javascript:changeChart(324977); return false">Dow</a></td>
+                		</tr>
+    
+    	</table>
+    	
+        <div class="chart" id="chartimgs"> 
+                <img width="300" height="100" id="1555183" style='display:inline' src="http://chart.tamedia.is-teledata.com/small.chart?LANG=de&STYLE=BERNER&TYPE_CHART=MOUNTAIN&ID_NOTATION=1555183&TIME_SPAN=1D" border="0" alt="" onclick="parent.window.location.href='http://boerse.bernerzeitung.ch/indizes/uebersicht/SMI?ID_NOTATION=1555183';" style="cursor: pointer">
+                <img width="300" height="100" id="193736" style='display:none' src="http://chart.tamedia.is-teledata.com/small.chart?LANG=de&STYLE=BERNER&TYPE_CHART=MOUNTAIN&ID_NOTATION=193736&TIME_SPAN=1D" border="0" alt="" onclick="parent.window.location.href='http://boerse.bernerzeitung.ch/indizes/uebersicht/E.Stoxx50?ID_NOTATION=193736';" style="cursor: pointer">
+                <img width="300" height="100" id="324977" style='display:none' src="http://chart.tamedia.is-teledata.com/small.chart?LANG=de&STYLE=BERNER&TYPE_CHART=MOUNTAIN&ID_NOTATION=324977&TIME_SPAN=1D" border="0" alt="" onclick="parent.window.location.href='http://boerse.bernerzeitung.ch/indizes/uebersicht/DJIA?ID_NOTATION=324977';" style="cursor: pointer">
+        		</div>
+		
+        <div class="leftColumn">
+        <ul>
+                    <li>
+                <ul>
+                    <li class="notation"><a href="http://boerse.bernerzeitung.ch/indizes/uebersicht/SMI?ID_NOTATION=1555183" target="_top">SMI</a></li>
+                    <li class="quote" style="white-space: nowrap;">8'599.1<span class="red">-0.38</span>%</li>
+                </ul>
+            </li>
+                    <li>
+                <ul>
+                    <li class="notation"><a href="http://boerse.bernerzeitung.ch/indizes/uebersicht/E.Stoxx50?ID_NOTATION=193736" target="_top">E.Stoxx50</a></li>
+                    <li class="quote" style="white-space: nowrap;">3'351.9<span class="green">+0.12</span>%</li>
+                </ul>
+            </li>
+                    <li>
+                <ul>
+                    <li class="notation"><a href="http://boerse.bernerzeitung.ch/indizes/uebersicht/DJIA?ID_NOTATION=324977" target="_top">DJIA</a></li>
+                    <li class="quote" style="white-space: nowrap;">17'729.2<span class="red">-0.53</span>%</li>
+                </ul>
+            </li>
+                    <li>
+                <ul>
+                    <li class="notation"><a href="http://boerse.bernerzeitung.ch/indizes/uebersicht/Nikkei?ID_NOTATION=324913" target="_top">Nikkei</a></li>
+                    <li class="quote" style="white-space: nowrap;">17'652.7<span class="red">-0.33</span>%</li>
+                </ul>
+            </li>
+                </ul>
+        </div> 
+        <div class="rightColumn">
+                <ul>
+                                        <li>
+                        <ul>
+                            <li class="notation"><a href="http://boerse.bernerzeitung.ch/devisen/wechselkurs/Euro-CHF?ID_CURRENCY_FROM=EUR&ID_CURRENCY_TO=CHF&ID_NOTATION=1619898" target="_top">Euro</a></li>
+                            <li class="quote">1.0462<span class="red">-0.12</span>%</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="notation"><a href="http://boerse.bernerzeitung.ch/devisen/wechselkurs/USD-CHF?ID_CURRENCY_FROM=USD&ID_CURRENCY_TO=CHF&ID_NOTATION=831843" target="_top">USD</a></li>
+                            <li class="quote">0.9235<span class="red">-0.16</span>%</li>
+                        </ul>
+                    </li>
+                                                    <li>
+                        <ul>
+                            <li class="notation"><a href="http://boerse.bernerzeitung.ch/rohstoffe/details/-Ouml%3Bl-B.C.?ID_NOTATION=16102115" target="_top">&Ouml;l B.C.</a></li>
+                            <li class="quote">57.60<span class="red">-1.59</span>%</li>
+                        </ul>
+                    </li>
+                                    <li>
+                        <ul>
+                            <li class="notation"><a href="http://boerse.bernerzeitung.ch/rohstoffe/details/Gold?ID_NOTATION=1326189" target="_top">Gold</a></li>
+                            <li class="quote">1'243.44<span class="green">+0.38</span>%</li>
+                        </ul>
+                    </li>
+                                </ul>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+

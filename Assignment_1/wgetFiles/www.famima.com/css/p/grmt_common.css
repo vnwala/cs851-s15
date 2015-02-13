@@ -1,0 +1,926 @@
+@charset "shift_jis";
+
+/*
+Title: おうちdeグルメ
+URI: http://famima.com/shop/c/cgourmet/
+*/
+
+
+/* --------------------------------------------------------------------
+	おうちdeグルメ共通
+-------------------------------------------------------------------- */
+#gourmet-common{
+	margin:0; padding:0; width:700px;}
+
+#gourmet-common h1, #gourmet-common h2, #gourmet-common h3, #gourmet-common h4,
+#gourmet-common img, #gourmet-common p, #gourmet-common div, #gourmet-common ul, #gourmet-common li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#gourmet-common .header{
+	margin:0; padding:0; width:700px; height:200px;}
+
+#gourmet-common .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#gourmet-common .base{
+	margin:0; padding:0;}
+
+#gourmet-common .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+
+
+/* clearfix */
+#gourmet-common .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#gourmet-common .clearfix {
+  min-height: 1px;}
+
+* html #gourmet-common .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #gourmet-common { 
+	height: 1%;}
+	
+/* --------------------------------------------------------------------
+	専門店TOP
+-------------------------------------------------------------------- */
+#gourmet-common .mainbanner{
+	margin:0; padding:0; width:700px; height:245px;}
+#gourmet-common .mainbanner img{
+	border:none; outline:none;}
+
+/* shoplogo */
+#gourmet-common .top-guidettl1{
+	width:700px; height:38px; margin-top:10px;
+	text-indent:-9999px; background:url(http://www.famima.com/images/p/gourmet/guide_1.jpg) no-repeat;}
+	
+#gourmet-common .top-guidettl2{
+	width:700px; height:38px;
+	text-indent:-9999px; background:url(http://www.famima.com/images/p/gourmet/guide_2.jpg) no-repeat;}
+	
+#gourmet-common .top-guideBase{
+	width:700px; background-color:#f7edd2; margin:0; padding:0;}
+	
+#gourmet-common .top-guideBaseBTM{
+	margin:0; padding:0; background:url(http://www.famima.com/images/p/gourmet/guidebg_bottom.jpg) no-repeat; width:700px; height:25px;}
+
+#gourmet-common .top-logo{
+	width:164px; padding-left:7px; float:left;}
+
+#gourmet-common .top-logo .cmnt{
+	width:164px; background-color:#FFFFFF;}
+
+#gourmet-common .top-logo p{
+	padding:0px 5px 7px 8px; font-size:90%; line-height:120%; color:#444444;}
+	
+#gourmet-common .top-logo .comingsoon{
+	width:164px; height:100px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/comingsoon.jpg) no-repeat;}
+
+
+/* --- SHOP LOGO ---- */
+#gourmet-common .top-logo h2#YOSHINOYA a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_yoshinoya.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#YOSHINOYA a:hover{
+	background-position:0 -70px;}
+
+#gourmet-common .top-logo h2#MATSUYA a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_matsuya.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#MATSUYA a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#SUKIYA a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_sukiya.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#SUKIYA a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#NAKAU a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_nakau.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#NAKAU a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#OSAKAOHSHO a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_osakaohsho.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#OSAKAOHSHO a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#COCOICHI a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_cocoichi.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#COCOICHI a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#HOURAI a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_hourai.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#HOURAI a:hover{
+	background-position:0 -70px;}
+
+#gourmet-common .top-logo h2#CTOMATO a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_ctmt.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#CTOMATO a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#HARENOHI a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_harenohi.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#HARENOHI a:hover{
+	background-position:0 -70px;}
+
+#gourmet-common .top-logo h2#FRUTA a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_fruta.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#FRUTA a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#YPUMPKIN a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_ypumpkin.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#YPUMPKIN a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#TAIYOU a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_taiyou.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#TAIYOU a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#GREENBURG a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_gburg.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#GREENBURG a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#CIAP a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_ciap.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#CIAP a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#KASHUEN a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_kashuen.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#KASHUEN a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#SHINKINEDO a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_shinkinedo.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#SHINKINEDO a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#CRIE a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_crie.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#CRIE a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#TK a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_tk.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#TK a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#TSF a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_tsf.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#TSF a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#MORINO a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_morino.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#MORINO a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#BROTHERS a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_brothers.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#BROTHERS a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#GINDACO a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_gindaco.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#GINDACO a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#BLUESEAL a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_blueseal.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#BLUESEAL a:hover{
+	background-position:0 -70px;}
+	
+#gourmet-common .top-logo h2#HISAYA a{
+	width:164px; height:70px; overflow:hidden; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gourmet/logo_hisaya.jpg) no-repeat;
+	display:block;}	
+#gourmet-common .top-logo h2#HISAYA a:hover{
+	background-position:0 -70px;}
+
+
+/* --- SHOP LOGO//END  ---- */
+
+
+/* buyer no osusume */
+#gourmet-common .top-ItemBase165{
+	width:165px; padding-right:8px; float:left;}
+
+#gourmet-common .top-ItemBase165 .imgbg{
+	width:165px; height:165px;
+	background:url(http://www.famima.com/images/p/gourmet/shop_itembase.jpg) no-repeat;}
+
+#gourmet-common .top-ItemBase165 .imgbg .shopname{
+	font-size:80%; color:#FFFFFF; padding:3px 0 0 4px;}
+
+#gourmet-common .top-ItemBase165 .imgbg a:link,
+#gourmet-common .top-ItemBase165 .imgbg a:visited,{
+	color:#FFFFFF; text-decoration:none; outline:0;}
+	
+#gourmet-common .top-ItemBase165 .imgbg a:hover,
+#gourmet-common .top-ItemBase165 .imgbg a:active,{
+	color:#FFFFFF; text-decoration:underline; outline:0;}
+
+/* 20110323- //start */
+#gourmet-common .top-ItemBase165 .imgbg2{
+	width:165px; height:187px;
+	background:url(http://www.famima.com/images/p/gourmet/shop_itembase.jpg) no-repeat;}
+
+#gourmet-common .top-ItemBase165 .imgbg2 .shopname{
+	font-size:80%; color:#FFFFFF; padding:3px 0 0 4px;}
+
+#gourmet-common .top-ItemBase165 .imgbg2 a:link,
+#gourmet-common .top-ItemBase165 .imgbg2 a:visited,{
+	color:#FFFFFF; text-decoration:none; outline:0;}
+	
+#gourmet-common .top-ItemBase165 .imgbg2 a:hover,
+#gourmet-common .top-ItemBase165 .imgbg2 a:active,{
+	color:#FFFFFF; text-decoration:underline; outline:0;}
+/* 20110323- //end */
+	
+#gourmet-common .top-ItemBase165 p{
+	text-align:left; font-size:90%; line-height:120%;}
+
+#gourmet-common h4.name{
+	padding:4px 0; font-weight:bold; line-height:120%;}
+#gourmet-common h4.name a:link, 
+#gourmet-common h4.name a:visited{
+	text-decoration:underline; color:#333333;}
+#gourmet-common h4.name a:hover,
+#gourmet-common h4.name a:active{
+	text-decoration:none; color:#333333;}
+	
+/* banner */
+#gourmet-common #grmt-bannerBase{
+	text-align:center; margin-bottom:15px; display:block;}
+
+#gourmet-common .grmt-bannerBase233{
+	width:233px; float:left; display:block;}
+	
+#gourmet-common .grmt-bannerBase233 p{
+	padding:4px; text-align:left; font-size:90%; line-height:120%;}
+
+/* pr_banner */
+#gourmet-common #prbanner_wrap {
+	width:698px; margin:5px 0 0 0; padding:0;
+	border:1px #cc3333 solid;}
+
+#gourmet-common #pr_wrapper {
+	position: relative; width: 698px; height:258px;
+	border-bottom:1px #cc3333 dotted;}
+		
+#gourmet-common .pr_section {
+	width: 680px; height: 238px; position: absolute; padding:8px;
+	top: 0px; left: 0px;}
+
+#gourmet-common #prbanner_wrap #index_txt{
+	float:left; margin:5px 0 5px 0; padding:0 0 0 10px; width:104px;}
+#gourmet-common #prbanner_wrap ul{
+	list-style:none; margin:5px 0; padding:0; float:left;}
+#gourmet-common #prbanner_wrap li.pr_list_current {
+	border: 0; display:inline;}
+#gourmet-common #prbanner_wrap li.pr_list_enabled {
+	border: 0; display:inline;}
+		
+
+/* --------------------------------------------------------------------
+	セレブデトマト
+-------------------------------------------------------------------- */
+/* ---　プロフィール -- */
+#gourmet-common .ctmt-prfBase{
+	border-bottom:3px solid #330000; margin-bottom:20px;}
+#gourmet-common .ctmt-prfBase p{
+	padding:5px 17px; color:#442525;}
+
+/* ---　カテゴリバナー -- */
+#gourmet-common ul .ctmt-ctgrybnL{
+	width:345px; height:90px; float:left; display:inline; padding:0 10px 10px 0;}
+#gourmet-common ul .ctmt-ctgrybnR{
+	width:345px; height:90px; float:left; display:inline;}
+
+
+/* ---　テキスト -- */
+#gourmet-common .ctmt-itemname{
+	padding:5px 0; font-weight:bold; line-height:120%;}
+#gourmet-common .ctmt-itemname a:link, 
+#gourmet-common .ctmt-itemname a:visited{
+	text-decoration:underline; color:#333333;}
+#gourmet-common .ctmt-itemname a:hover,
+#gourmet-common .ctmt-itemname a:active{
+	text-decoration:none; color:#333333;}
+#gourmet-common .ctmt-itemtxt{
+	padding:5px 10px 5px 0;}
+#gourmet-common .ctmt-itemtxtS{
+	padding:0 0 5px 0; font-size:90%; line-height:120%;}
+
+
+/* --- おすすめ商品01 -- */
+#gourmet-common .ctmt-rcmndBaseA{
+	width:700px; 
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembaseborder1.jpg) repeat-y;}
+#gourmet-common .ctmt-rcmndBasetop1{
+	width:700px; height:19px; 
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembasetop1.jpg) no-repeat;}
+#gourmet-common .ctmt-rcmndBasebtm1{
+	width:700px; height:24px; font-size:0; line-height:0; 
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembasebtm1.jpg) no-repeat;}
+#gourmet-common  .ctmt-rcmndItemIMG01{
+	width:216px; height:276px; float:left; padding-left:32px;}
+#gourmet-common  .ctmt-rcmndItemCNT01{
+	width:420px; float:left; padding-left:15px;}
+
+/* --- おすすめ商品02-04 -- */
+#gourmet-common .ctmt-rcmndBaseB{
+	width:700px; 
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembaseborder3.jpg) repeat-y;}
+#gourmet-common .ctmt-rcmndBasetop3{
+	width:700px; height:19px; 
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembasetop3.jpg) no-repeat;}
+#gourmet-common .ctmt-rcmndBasebtm3{
+	width:700px; height:28px;
+	margin-bottom:20px;
+	background:url(http://www.famima.com/images/p/ctmt/title2_itembasebtm3.jpg) no-repeat;}
+#gourmet-common .ctmt-rcmndItemBase210{
+	width:210px;
+	padding-left:18px;
+	float:left;}
+#gourmet-common .ctmt-rcmndItemBase130{
+	width:130px; padding-right:10px;
+	float:left;}
+#gourmet-common .ctmt-rcmndItemBase130 .rkg_img{
+	width:130px; height:130px;
+	border:1px solid #cccccc;}
+
+
+/* --------------------------------------------------------------------
+	ハレノヒ
+-------------------------------------------------------------------- */
+#gourmet-common .hanohi-bkimage1{
+	width:690px; height:260px;
+	background:url(http://www.famima.com/images/p/harenohi/mainimage2.jpg) no-repeat;}
+#gourmet-common .hanohi-bkimage1 h3{
+	width:207px; padding-top:70px; font-weight:normal;
+	color:#FFFFFF; text-align:left; line-height:130%;}
+#gourmet-common .hanohi-bkimage2{
+	width:690px; height:323px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/harenohi/mainimage3.jpg) no-repeat;}
+	
+/* --------------------------------------------------------------------
+	イエローパンプキン
+-------------------------------------------------------------------- */
+#gourmet-common .ypumpkin-itemBase{
+	width:350px; float:left;}
+	
+#gourmet-common .ypumpkin-item01copy{
+	width:350px; height:75px; display:block;
+	background:url(http://www.famima.com/images/p/ypumpkin/item01copy.jpg) no-repeat;}
+	
+#gourmet-common .ypumpkin-item02copy{
+	width:350px; height:75px; display:block;
+	background:url(http://www.famima.com/images/p/ypumpkin/item02copy.jpg) no-repeat;}
+
+#gourmet-common .ypumpkin-item01copy p,
+#gourmet-common .ypumpkin-item02copy p{
+	text-indent:-9999px;}
+	
+/* --------------------------------------------------------------------
+	フルッタフルッタ
+-------------------------------------------------------------------- */
+#gourmet-common .fruta-Base{
+	width:700px; margin:0; padding:0 0 20px 0;
+	background:url(http://www.famima.com/images/p/fruta/bg.jpg) repeat;}
+
+#gourmet-common .fruta-aboutBase{
+	width:700px; margin-top:20px;
+	background:url(http://www.famima.com/images/p/fruta/about_baseborder.jpg) repeat-y;}
+
+#gourmet-common .fruta-aboutBase .photo{
+	width:272px; float:left;}
+
+#gourmet-common .fruta-aboutBase .aboutcont{
+	width:428px; float:left;}
+	
+#gourmet-common .fruta-aboutBase .aboutcont p{
+	padding:10px 24px 10px 3px; text-align:left;}
+	
+#gourmet-common .fruta-mainBase{
+	width:700px;
+	background:url(http://www.famima.com/images/p/fruta/mainbase_border.jpg) repeat-y;}
+	
+#gourmet-common .fruta-mainBase p{
+	padding:12px 30px; text-align:left;}
+	
+#gourmet-common .fruta-mainBase .itemPHTO1{
+	width:214px; height:260px; float:left;}
+	
+#gourmet-common .fruta-mainBase .itemPHTO2{
+	width:295px; height:280px; float:left;}
+	
+#gourmet-common .fruta-mainBase .item01Base{
+	width:211px; float:left;}
+
+#gourmet-common .fruta-mainBase .item01IMG{
+	width:211px; height:203px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/fruta/item01.jpg) no-repeat;}
+	
+#gourmet-common .fruta-mainBase .item02Base{
+	width:235px; float:left;}
+
+#gourmet-common .fruta-mainBase .item02IMG{
+	width:250px; height:203px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/fruta/item02.jpg) no-repeat;}
+	
+#gourmet-common .fruta-mainBase .item03Base{
+	width:405px; float:left;}
+	
+#gourmet-common .fruta-mainBase .item03IMG{
+	width:405px; height:215px; text-indent:-9999px; background:url(http://www.famima.com/images/p/fruta/item03.jpg) no-repeat;}
+
+#gourmet-common .fruta-mainBase .bt{
+	text-align:left;}
+	
+#gourmet-common .fruta-mainBase .item03Base .btbase{
+	width:405px; height:46px; text-align:left; background:url(http://www.famima.com/images/p/fruta/item03_btbase.jpg) no-repeat;}
+	
+#gourmet-common .fruta-mainBase .item03Base .btbase img{
+	padding:5px 0 0 44px; display:block;}
+	
+#gourmet-common #fruta-infoBase{
+	width:700px;
+	background:url(http://www.famima.com/images/p/fruta/infobase_border.jpg) repeat-y;}
+	
+#gourmet-common #fruta-infoBase .pointBase{
+	width:350px; float:left;}
+	
+#gourmet-common #fruta-infoBase p{
+	padding-bottom:8px;}
+
+#gourmet-common #fruta-infoBase .pointBase .txtbase1{
+	padding:4px 18px 10px 27px; text-align:left;}
+#gourmet-common #fruta-infoBase .pointBase .txtbase2{
+	padding:4px 28px 10px 17px; text-align:left;}
+	
+/* --Add 20110413 --*/
+#gourmet-common #fruta-drink01Base{
+	width:231px; float:left;}
+#gourmet-common #fruta-drink02Base{
+	width:234px; float:left;}
+#gourmet-common #fruta-drink03Base{
+	width:235px; float:left;}
+
+#gourmet-common #fruta-drink01Base a#drink01BT{
+     display: block; text-indent:-9999px;
+     width: 231px;
+     height: 128px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/drink01_bt.jpg) no-repeat;}
+#gourmet-common #fruta-drink01Base a#drink01BT:hover,
+#gourmet-common #fruta-drink01Base a#drink01BT:active {
+     background-position:0px -128px;}
+	 
+#gourmet-common #fruta-drink02Base a#drink02BT{
+     display: block; text-indent:-9999px;
+     width: 234px;
+     height: 128px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/drink02_bt.jpg) no-repeat;}
+#gourmet-common #fruta-drink02Base a#drink02BT:hover,
+#gourmet-common #fruta-drink02Base a#drink02BT:active {
+     background-position:0px -128px;}
+
+#gourmet-common #fruta-drink03Base a#drink03BT{
+     display: block; text-indent:-9999px;
+     width: 235px;
+     height: 128px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/drink03_bt.jpg) no-repeat;}
+#gourmet-common #fruta-drink03Base a#drink03BT:hover,
+#gourmet-common #fruta-drink03Base a#drink03BT:active {
+     background-position:0px -128px;}
+
+#gourmet-common .fruta-Base{
+	width:700px; background:url(http://www.famima.com/images/p/fruta/bg2.jpg) repeat;
+	padding:20px 0;}
+
+#gourmet-common .fruta-Base #drinkset01IMG{
+	width:700px; height:239px; background:url(http://www.famima.com/images/p/fruta/drinkset01_img.jpg) no-repeat;}
+#gourmet-common .fruta-Base #drinkset02IMG{
+	width:700px; height:257px; background:url(http://www.famima.com/images/p/fruta/drinkset02_img.jpg) no-repeat;}
+#gourmet-common .fruta-Base #puree01IMG{
+	width:700px; height:225px; background:url(http://www.famima.com/images/p/fruta/puree01_img.jpg) no-repeat;}
+	
+#gourmet-common .fruta-Base .btBase1{
+	width:133px; height: 36px; padding:183px 0 0 550px;}
+#gourmet-common .fruta-Base .btBase2{
+	width:133px; height: 36px; padding:165px 0 0 18px;}
+#gourmet-common .fruta-Base .btBase3{
+	width:133px; height: 36px; padding:205px 0 0 18px;}
+	
+#gourmet-common .fruta-Base .btBase1 a#bt{
+     display: block; text-indent:-9999px;
+     width: 133px;
+     height: 36px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/item_bt.jpg) no-repeat;}
+#gourmet-common .fruta-Base .btBase1 a#bt:hover,
+#gourmet-common .fruta-Base .btBase1 a#bt:active {
+     background-position:0px -36px;}
+	 
+#gourmet-common .fruta-Base .btBase2 a#bt{
+     display: block; text-indent:-9999px;
+     width: 133px;
+     height: 36px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/item_bt.jpg) no-repeat;}
+#gourmet-common .fruta-Base .btBase2 a#bt:hover,
+#gourmet-common .fruta-Base .btBase2 a#bt:active {
+     background-position:0px -36px;}
+	 
+#gourmet-common .fruta-Base .btBase3 a#bt{
+     display: block; text-indent:-9999px;
+     width: 133px;
+     height: 36px;
+     margin-left: 0px; background:url(http://www.famima.com/images/p/fruta/item_bt.jpg) no-repeat;}
+#gourmet-common .fruta-Base .btBase3 a#bt:hover,
+#gourmet-common .fruta-Base .btBase3 a#bt:active {
+     background-position:0px -36px;}
+
+#gourmet-common #fruta-about01{
+	width:700px; height:202px; background:url(http://www.famima.com/images/p/fruta/about_acai01.jpg) no-repeat;
+	margin-top:20px; text-indent:-9999px;}
+#gourmet-common #fruta-about02{
+	width:700px; height:160px; background:url(http://www.famima.com/images/p/fruta/about_acai02.jpg) no-repeat;
+	margin-bottom:20px; text-indent:-9999px;}
+	
+#gourmet-common #fruta-about{
+	width:700px; height:530px; background:url(http://www.famima.com/images/p/fruta/about_acai.jpg) no-repeat;
+	text-indent:-9999px;}
+	
+#gourmet-common dl#fruta-mediainfo{
+	width:670px;
+	margin:0; padding:0 0 0 17px;}
+	
+#gourmet-common #fruta-mediainfo dt{
+	color: #cc3333; font-size:85%;
+	margin:0; padding:5px 0 0 0;}
+      
+#gourmet-common #fruta-mediainfo dd{
+	padding: 5px; margin:2px 0 0px 0;  font-size:85%; color:#333333; line-height:130%;
+	width:660px;
+	border-radius: 5px;         /* CSS3 */
+	-moz-border-radius: 5px;    /* Firefox */
+	-webkit-border-radius: 5px; /* Safari,Chrome */}
+	
+#gourmet-common #fruta-mediainfo{
+	width:670px;
+	margin:0 0 15px 0; padding:0 0 0 15px;}
+	
+#gourmet-common #fruta-mediainfo dt{
+	color: #cc3333; font-size:85%;
+	margin:0; padding:5px 0 0 0;}
+	
+#gourmet-common #fruta-mediainfo dd{
+	padding:2px 0 5px 0; margin:0; font-size:90%; color:#333333; line-height:130%;
+	width:660px; border-bottom:dotted 1px #999999;}
+	
+/* --Add 20110614 --*/
+#gourmet-common .fruta-Base #drinkpack01IMG{
+	width:700px; height:253px; background:url(http://www.famima.com/images/p/fruta/drinkpack01_img.jpg) no-repeat;}
+
+
+/* --------------------------------------------------------------------
+    GREENBURG
+-------------------------------------------------------------------- */
+#gourmet-common{
+	margin:0; padding:0; width:700px;}
+
+#gourmet-common .gburg-bgpink{
+	width:700px; background:url(http://www.famima.com/images/p/greenburg/pink_border.gif) repeat-y;}
+	
+#gourmet-common .gburg-bgpink p.cmnt{
+	width:395px; padding:4px 0 5px 4px;}
+
+#gourmet-common .gburg-img288{
+	width:288px; float:left;}
+	
+#gourmet-common .gburg-base412{
+	width:412px; float:left;}
+	
+#gourmet-common .gburg-item177{
+	width:177px; float:left;}
+#gourmet-common .gburg-item172{
+	width:172px; float:left;}
+#gourmet-common .gburg-item179{
+	width:179px; float:left;}
+
+#gourmet-common .gburg-size{
+	width:700px; height:75px; background:url(http://www.famima.com/images/p/greenburg/image3.jpg) no-repeat; text-indent:-9999px;
+	clear:both;}
+
+#gourmet-common .gburg-itempkgBG{
+	widows:700px; background:url(http://www.famima.com/images/p/greenburg/itempkg_bg.gif) repeat;}
+
+#gourmet-common .gburg-item01{
+	width:238px; float:left;}
+#gourmet-common .gburg-item02{
+	width:230px; float:left;}
+#gourmet-common .gburg-item03{
+	width:232px; float:left;}
+
+#gourmet-common .gburg-itempkgBG h4.name{
+	padding:3px 0 5px 13px; font-weight:bold; width:205px;}
+
+#gourmet-common .gburg-itempkgBG p.price{
+	padding:0 0 0 13px; color:#ff6633; width:205px;}
+	
+#gourmet-common .gburg-itempkgBG p.itmtxt{
+	padding:5px 0 0 13px; color:#333333; line-height:100%; width:205px;}
+#gourmet-common .gburg-itempkgBG p.soryo{
+	margin:5px 0 0 13px; padding:2px; color:#333333; background-color:#eeeeee; line-height:100%; width:118px;}
+	
+#gourmet-common .gburg-itempkgBG .bt{
+	padding:5px 0 15px 13px;}
+	
+#gourmet-common .gburg-cpbnr{
+	margin:10px 0; padding:0;}
+	
+#gourmet-common #gburg-pointback{
+	width:700px; margin:15px 0 0 0; padding:0 0 15px 0; background:url(http://www.famima.com/images/p/greenburg/ptcp_border.gif) repeat-y;}
+#gourmet-common .gburg-pointback_bgbtm{
+	width:700px; height:12px; background:url(http://www.famima.com/images/p/greenburg/ptcp_borderbtm.gif) no-repeat;}
+
+#gourmet-common #gburg-pointbackTTL{
+	width:700px; height:75px; background:url(http://www.famima.com/images/p/greenburg/ptcp_img1.jpg) no-repeat; text-indent:-9999px;}
+#gourmet-common #gburg-pointback p.cptxt1{
+	color:#333333; font-size:120%; line-height:120%; font-weight:bold;
+	padding:10px 15px;}
+#gourmet-common #gburg-pointback p.cptxt2{
+	color:#fd6799; font-size:100%; line-height:120%; font-weight:bold;
+	padding:0 15px 15px 15px;}
+#gourmet-common #gburg-pointback p.cptxt3{
+	color:#333333; font-size:100%; line-height:120%;
+	padding:0 15px 15px 15px;}
+#gourmet-common #gburg-pointback p.cptxt4{
+	color:#333333; font-size:90%; line-height:120%;
+	padding:0 15px 4px 15px;}
+	
+#gourmet-common table#gburg-table-01 {
+    width: 593px;
+    border: 1px #333333 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin:0px 15px 15px 20px;}
+
+#gourmet-common table#gburg-table-01 th#chumon{
+    padding:4px 10px;
+	border-right: 1px #999999 solid;
+    background: #333333;
+	font-size:90%;
+	color:#FFFFFF;
+    text-align:left;}
+	
+#gourmet-common table#gburg-table-01 th#taisho{
+    padding:4px 10px;
+	border-right: 1px #333333 solid;
+    background: #333333;
+	font-size:90%;
+	color:#FFFFFF;
+    text-align:left;}
+	
+#gourmet-common table#gburg-table-01 td#chumon{
+    padding:4px 10px;
+    border-bottom: 1px #333333 solid;
+	border-right: 1px #999999 solid;
+	font-size:90%;
+    text-align:left;}
+
+#gourmet-common table#gburg-table-01 td#taisho{
+    padding:4px 10px;
+    border-bottom: 1px #333333 solid;
+	border-right: 1px #333333 solid;
+	font-size:90%;
+    text-align:center;}
+	
+#gourmet-common .gburg-itempkgBG h4.name a:link, 
+#gourmet-common .gburg-itempkgBG h4.name a:visited{
+	text-decoration:underline; color:#0066ff;}
+#gourmet-common .gburg-itempkgBG h4.name a:hover,
+#gourmet-common .gburg-itempkgBG h4.name a:active{
+	text-decoration:none; color:#0066ff;}
+
+
+#gourmet-common #gburgfaq{
+	width:680px;}
+
+#gourmet-common #gburgfaq p.txtQ{
+　　color:#0066ff;}
+#gourmet-common #gburgfaq p.txtA{
+　　color:#333333;}
+
+
+/* --------------------------------------------------------------------
+    TATSUYA KAWAGOE
+-------------------------------------------------------------------- */
+#gourmet-common .TK-BG{
+	width:700px; background:url(http://www.famima.com/images/p/tkawagoe/bg.jpg) repeat;}
+
+#gourmet-common .TK-infoBG428{
+	width:428px; float:left;}
+
+#gourmet-common .TK-infoBG272{
+	width:272x; float:left;}
+	
+#gourmet-common .profile{
+	width:428x; height:121px; background:url(http://www.famima.com/images/p/tkawagoe/profile.jpg) no-repeat;
+	text-indent:-9999px;}
+	
+#gourmet-common .TK-infoBG428 p.txt{
+	padding:5px 0 10px 20px; width:400px; color:#333333; line-height:140%;}
+
+#gourmet-common #TK-item01{
+	width:670px; height:333px; margin:0 0 15px 15px;
+	background:url(http://www.famima.com/images/p/tkawagoe/item01img.jpg) no-repeat;}
+	
+#gourmet-common #TK-item02{
+	width:670px; height:333px; margin:0 0 15px 15px;
+	background:url(http://www.famima.com/images/p/tkawagoe/item02img.jpg) no-repeat;}
+	
+#gourmet-common #TK-item03{
+	width:670px; height:333px; margin:0 0 25px 15px;
+	background:url(http://www.famima.com/images/p/tkawagoe/item03img.jpg) no-repeat;}
+	
+#gourmet-common .TK-itemDetail{
+	padding:208px 0 0 406px;}
+	
+#gourmet-common .TK-itemDetail .bt{
+	padding-bottom:10px;}
+	
+#gourmet-common .TK-price{
+	color:#FF0000; font-size:90%; line-height:140%;}
+	
+#gourmet-common .TK-itemDetail .size{
+	color:#333333; font-size:90%; line-height:140%;}
+	
+#gourmet-common #TK-item04Base{
+	width:330px; float:left; padding:5px 0 0 15px;}
+	
+#gourmet-common #TK-item05Base{
+	width:330px; float:left; padding:5px 0 0 10px;}
+	
+#gourmet-common #TK-item04Base .dtlBG,
+#gourmet-common #TK-item05Base .dtlBG{
+	width:330px; background-color:#FFFFFF;}
+
+#gourmet-common #TK-item04Base .dtlBG p.txt,
+#gourmet-common #TK-item05Base .dtlBG p.txt{
+	padding:5px 10px 13px 10px; color:#333333; line-height:140%;}
+	
+#gourmet-common #TK-item04Base .dtlBG .pkg,
+#gourmet-common #TK-item05Base .dtlBG .pkg{
+	width:96px; float:left;}
+	
+#gourmet-common #TK-item04Base .dtlBG .detail,
+#gourmet-common #TK-item05Base .dtlBG .detail{
+	width:234px; float:left;}
+	
+#gourmet-common #TK-item04Base .dtlBG .bt,
+#gourmet-common #TK-item05Base .dtlBG .bt{
+	padding:5px 0 13px 0;}
+	
+#gourmet-common .TK-name{
+	padding:0 0 5px 0; color:#333333; line-height:130%; font-weight:bold;}
+
+
+/* --------------------------------------------------------------------
+    TOKYO SWEETS FACTORY
+-------------------------------------------------------------------- */
+#gourmet-common .TSF-BG{
+	width:700px; background:url(http://www.famima.com/images/p/tsf/bg.jpg) repeat; padding:15px 0;}
+	
+#gourmet-common .TSF-BG #aboutBase{
+	width:670px; border:1px #614d10 solid; background-color:#FFFFFF; margin:0 0 15px 15px;}
+
+#gourmet-common .TSF-BG #aboutBase .CONT{
+	width:488px; float:left; padding-left:15px;}
+	
+#gourmet-common .TSF-BG #aboutBase .CONT p.txt{
+	padding:5px 10px 13px 0; color:#333333; line-height:140%;}
+	
+#gourmet-common .TSF-BG #aboutBase .IMG{
+	width:162px; float:left; background-color:#FFFFFF; padding:10px 0;}
+	
+#gourmet-common .TSF-BG .itemBase{
+	width:670px; background-color:#FFFFFF; margin:20px 0 20px 15px;}
+	
+#gourmet-common .TSF-BG .itemBase .IMG{
+	width:328px; float:left;}
+	
+#gourmet-common .TSF-BG .itemBase .CONT{
+	width:342px; float:left;}
+
+#gourmet-common .TSF-BG .itemBase .CONT p.txt{
+	padding:0 15px 13px 10px; color:#333333; line-height:140%;}
+	
+#gourmet-common .TSF-BG .itemBase .detail01{
+	width:332px; height:102px; background:url(http://www.famima.com/images/p/tsf/item01img3.jpg) top right no-repeat;}
+#gourmet-common .TSF-BG .itemBase .detail02{
+	width:332px; height:102px; background:url(http://www.famima.com/images/p/tsf/item02img3.jpg) top right no-repeat;}
+#gourmet-common .TSF-BG .itemBase .detail03{
+	width:332px; height:102px; background:url(http://www.famima.com/images/p/tsf/item03img3.jpg) top right no-repeat;}
+	
+#gourmet-common .TSF-BG .itemBase .bt{
+	width:92px; padding:0 0 0 10px;}
+	
+#gourmet-common .TSF-BG .itemBase .price{
+	color:#FF0000; font-size:90%; line-height:140%; padding:10px 0 0 10px;}
+	
+#gourmet-common .TSF-BG .itemBase .size{
+	color:#333333; font-size:90%; line-height:140%; padding:0 0 0 10px;}
+
+
+/* --------------------------------------------------------------------
+    hisaya
+-------------------------------------------------------------------- */
+#gourmet-common .hisaya .mr-t10{
+	margin:10px 0 0 0;}
+	
+#gourmet-common .hisaya #mediaBG{
+	background-color:#3b2802; width:700px; margin-bottom:20px;}
+	
+#gourmet-common .hisaya #mediaBG .copyIMG{
+	width:140px; float:left;}
+	
+#gourmet-common .hisaya #mediaBG .txtBase{
+	width:560px; float:left;}
+	
+#gourmet-common .hisaya #mediaBG .txtBase p{
+	color:#FFFFFF; padding:5px 0 0 0; margin:10px 10px; line-height:140%;
+	border-top:1px dotted #FFFFFF;}
+
+
+
+
+
+
+

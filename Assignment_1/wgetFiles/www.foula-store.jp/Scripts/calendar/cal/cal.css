@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/*body
+{
+	width: 170px;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}*/
+
+ul,
+li
+{
+	margin: 0;
+	padding:0;
+}
+
+/*span.Today 当日の表示
+{
+	display: block;
+}*/
+
+/*.deli 配送予定日
+{
+	background-color: #009900;
+	color: #FFFFFF;
+}*/
+
+/*li.openingsale 特定のイベント開催日
+{
+	color: #FFFFFF;
+	font-weight: bolder;
+	background-color: #FF0000;
+}*/
+
+li.holyday /*休業日*/
+{
+	color: #F00;
+	background: #FCC;
+}
+
+li.Sun /*日曜日*/
+{
+	color: #F00;
+	background: #FCC;
+}
+
+li.Sat /*土曜日*/
+{
+	color: #00F;
+	background: #FCC;
+}
+
+li.undefined
+{
+	cursor: pointer;
+}
+
+/*ui*/
+
+div.cal_wrapper /**/
+{
+	position: relative;
+	width: 100%;
+	/*height: 160px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-image: url(background.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-color: #EEEEEE;*/
+}
+
+ul.cal_ui
+{
+	float: right;
+	/*width: 60px;*/
+	margin: 0;
+	padding: 0;
+}
+
+ul.cal_ui li
+{
+	float: left;
+	width: 20px;
+	height: 15px;
+	margin: 4px 3px 0 0;
+	font-size: 10px;
+	list-style: none;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+li.cal_prev
+{
+	background-image: url(cal_01.gif);
+}
+
+li.cal_to
+{
+	background-image: url(cal_02.gif);
+}
+
+li.cal_next
+{
+	background-image: url(cal_03.gif);
+}
+
+div.cal_base
+{
+}
+
+div.cal_base p
+{
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #FFF;
+	border-bottom: solid 1px #CCC;
+}
+
+ul.cal_main
+{
+	clear: both;
+	margin: 0 auto 0 3px;
+	padding: 0;
+}
+
+ul.cal_main li
+{
+	float: left;
+	overflow: hidden;
+	width: 14%;
+	/*padding: 3px 0 3px 0;*/
+	padding: 0.5em 0;
+	font-size: 10px;
+	text-align: center;
+	list-style: none;
+	border-bottom: solid 1px #CCCCCC;
+}
+
+ul.cal_main li span
+{
+	display: block;
+	/*padding: 3px;*/
+}
+
+li.cal_headline
+{
+}

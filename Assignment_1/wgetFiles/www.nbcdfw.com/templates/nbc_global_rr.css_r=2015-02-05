@@ -1,0 +1,243 @@
+/* Last edited by: Toby Spinks
+ * Date modified: 01-15-2014
+ * CMS Version: 16
+ * Global Right Rail Stylesheet
+ * Ticket No.: error with spacing on most popular (was wrapping)
+ */
+
+
+/* Global Styles */
+#globalRightRail {position:relative;margin:0;padding:0;float:left;overflow:visible;width:300px;border:none;vertical-align:top;text-align:left;}
+#globalRightRail .clearFix {display:block;clear:both;margin:0;padding:0;line-height:0;}
+#globalRightRail .module {position:relative;margin:0 auto 30px;padding:0;float:none;clear:both;overflow:hidden;width:300px;height:auto;font-family:'Roboto',Helvetica,sans-serif;font-size:14px;background:none;color:#666666;}
+#globalRightRail .module h4 {font-family:'Roboto',Helvetica,sans-serif;font-weight:normal;font-size:20px;line-height:1em;border-bottom:1px solid #BBBBBB;text-transform:uppercase;text-align:left;color:#333;padding:0 0 5px 12px;margin:0 0 18px;position:relative;width:auto;display:block;}
+#globalRightRail .module h4 a {color:#333333;display:block;}
+#globalRightRail .module h4.module-headline-image {padding:0;border:none;}
+#globalRightRail .module p {font-size:14px;line-height:1.3em;margin:0 0 10px;padding:0 12px;font-family:'Arimo',Helvetica,sans-serif;font-weight:normal;color:#333333;}
+#globalRightRail .module a {font-family:'Roboto',Helvetica,sans-serif;color:#333333;}
+#globalRightRail .module .moduleContainer {width:276px;height:auto;overflow:hidden;margin:0 auto;padding:0;}
+
+/* Custom HTML */
+#globalRightRail .module.custom-html .moduleContainer {width:300px;}
+#globalRightRail .module.custom-html p {padding:0;}
+
+/* Page Specific Tweaks */
+#section #globalRightRail, #article #globalRightRail {margin:22px 0 0 22px;}
+#searchPage #globalRightRail {margin:22px 0 0 36px;}
+#subsection #globalRightRail, #section.entertainment #globalRightRail {margin:0 0 0 22px;}
+#section.news #globalRightRail {margin:15px 0 0 8px;}
+#traffic #globalRightRail .module {border:none;}
+body#weather #globalRightRail, body#weather_map #globalRightRail, body#weather_school #globalRightRail, body#weather_severe #globalRightRail {margin:0 0 0 16px;}
+#feature #globalRightRail, #blog #globalRightRail {margin:50px 0 0 22px;}
+#investigations #globalRightRail {margin:15px 0 0 28px;}
+
+/* Promo Module */
+#globalRightRail .module.ad {background:none;border:none;}
+
+/* Authors & Link List Module */
+#globalRightRail .module.authors ul, #globalRightRail .module.authors ul li, #globalRightRail .module.link-list ul, #globalRightRail .module.link-list ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.authors ul li, #globalRightRail .module.link-list ul li {float:none;overflow:hidden;border-top:1px solid #DDDDDD;padding:18px 0;margin:0 12px;}
+#globalRightRail .module.authors ul li:first-child, #globalRightRail .module.link-list ul li:first-child {border:none;padding-top:0;}
+#globalRightRail .module.authors ul li .imgContainer, #globalRightRail .module.link-list ul li .imgContainer {float:left;width:116px;height:62px;background-position:center;background-repeat:no-repeat;background-color:#FFFFFF;border:1px solid #DDDDDD;margin:0 15px 6px 0;}
+#globalRightRail .module.link-list ul li .imgContainer {width:50px;height:50px;background-size:cover;}
+#globalRightRail .module.authors ul li .imgContainer a, #globalRightRail .module.link-list ul li .imgContainer a {display:block;width:100%;height:100%;text-decoration:none;}
+#globalRightRail .module.authors ul li .contentContainer, #globalRightRail .module.link-list ul li .contentContainer {float:none;margin:0;padding:0;}
+#globalRightRail .module.authors ul li .contentContainer h5, #globalRightRail .module.link-list ul li .contentContainer h5 {font-size:16px;margin:0 0 6px;padding:0;font-weight:normal;color:#333333;font-family:"Roboto",Arial,sans-serif;}
+#globalRightRail .module.link-list ul li .contentContainer h5 {font-size:15px;}
+#globalRightRail .module.authors ul li .contentContainer p, #globalRightRail .module.link-list ul li .contentContainer p {margin:0;padding:0;}
+#globalRightRail .module.authors ul li .contentContainer span {background:url("http://media.nbcdfw.com/designimages/social-sprite_2014.png") -30px -4px no-repeat;display:block;position:relative;float:left;width:28px;height:28px;text-indent:-99em;margin:12px 8px 0 0;}
+#globalRightRail .module.authors ul li .contentContainer span.twitter {background-position:-30px -36px;}
+#globalRightRail .module.authors ul li .contentContainer span a {display:block;width:100%;height:100%;}
+#globalRightRail .module.link-list .tentPole {background-repeat:no-repeat;background-size:300px auto;padding:60px 10px 22px;margin:0;height:370px;}
+#globalRightRail .module.link-list .tentPole ul li {padding:10px 0;margin:0 12px;}
+
+/* Blog Partner Module */
+#globalRightRail .module.blog-partner ul, #globalRightRail .module.blog-partner ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.blog-partner ul li {float:none;overflow:hidden;padding:11px 0;margin:0 12px;}
+#globalRightRail .module.blog-partner ul li:first-child {padding-top:0;}
+#globalRightRail .module.blog-partner ul li a {display:block;padding:0;margin:0;width:100%;height:100%;overflow:hidden;font-size:15px;font-weight:normal;font-family:"Roboto",Arial,sans-serif;}
+#globalRightRail .module.blog-partner ul li a img {float:left;width:110px;height:62px;border:1px solid #DDDDDD;margin:0 15px 0 0;}
+
+/* Blog Roll Module & RSS Feed Module */
+#globalRightRail .module.blog-roll ul, #globalRightRail .module.blog-roll ul li, #globalRightRail .module.rss-feed ul, #globalRightRail .module.rss-feed ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.blog-roll ul li, #globalRightRail .module.rss-feed ul li {float:none;overflow:hidden;padding:0;margin:0 12px;border-top:1px solid #DDDDDD;}
+#globalRightRail .module.blog-roll ul li:first-child, #globalRightRail .module.rss-feed ul li:first-child {border:none;padding-top:0;}
+#globalRightRail .module.blog-roll ul li a, #globalRightRail .module.rss-feed ul li a {display:block;padding:18px 0;font-size:15px;font-weight:normal;}
+#globalRightRail .module.blog-roll ul li:first-child a, #globalRightRail .module.rss-feed ul li:first-child a {padding-top:0;}
+
+/* Follow Us Module */
+#globalRightRail .module.follow-us ul, #globalRightRail .module.follow-us ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.follow-us ul li {float:none;overflow:hidden;padding:4px 0;margin:0 12px;}
+#globalRightRail .module.follow-us ul li.rss a {overflow:hidden;display:block;font-size:12px;line-height:1.9em;color:#26518E;}
+#globalRightRail .module.follow-us ul li.rss a span {float:left;width:58px;height:20px;background:url("http://media.nbcdfw.com/designimages/rssSprite.png") no-repeat 0 0;padding:0;margin:0 8px 0 0;}
+#globalRightRail .module.follow-us ul li.rss a:hover span {background-position:-58px 0;}
+
+/* Document Bin Module */
+#globalRightRail .module.document-bin ul, #globalRightRail .module.document-bin ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.document-bin ul li {float:none;overflow:hidden;padding:18px 0;margin:0 12px;border-top:1px solid #EEEEEE;min-height:40px;}
+#globalRightRail .module.document-bin ul li a {display:block;position:relative;padding:0 0 0 45px;border-top:1px solid #FFFFFF;font-size:15px;font-weight:normal;}
+#globalRightRail .module.document-bin ul li.firstItem, #globalRightRail .module.document-bin ul li.firstItem a {border:none;padding-top:0;}
+#globalRightRail .module.document-bin ul li a span {position:absolute;left:0;top:0;width:40px;height:36px;background:url('http://media.nbcdfw.com/designimages/investigations_sprite.png') no-repeat -248px -132px transparent;}
+#globalRightRail .module.document-bin ul li a.infographic span, #globalRightRail .module.document-bin ul li a.embedCode span {background-position:-288px -132px;}
+
+/* Meet The Team Module */
+#globalRightRail .module.meet-the-team .videoContainer {width:270px;height:170px;overflow:hidden;border:1px solid #DDDDDD;position:relative;margin:0 auto 10px;}
+#globalRightRail .module.meet-the-team .videoContainer img {width:300px;height:auto;border:none;margin:0;padding:0;}
+#globalRightRail .module.meet-the-team .videoContainer .smallPlayButton {position:absolute;z-index:1;left:108px;top:64px;background:url("http://media.nbcdfw.com/designimages/solo_sprite_hp_play_video.png") 0 0 no-repeat transparent;width:54px;height:42px;cursor:pointer;}
+#globalRightRail .module.meet-the-team a {display:block;}
+#globalRightRail .module.meet-the-team h5 {margin:0 12px;padding:0;font-size:16px;font-family:'Roboto',Helvetica,sans-serif;font-weight:300;color:#666666;}
+#globalRightRail .module.meet-the-team img {width:270px;height:auto;margin:0 auto;position:relative;display:block;}
+
+/* Partner Links Module */
+#globalRightRail .module.partner-links ul, #globalRightRail .module.partner-links ul li {position:relative;margin:0;padding:0;list-style:none;display:block;float:none;overflow:hidden;}
+#globalRightRail .module.partner-links ul li {margin:0 12px;}
+#globalRightRail .module.partner-links ul li a {display:block;padding:8px 0;overflow:hidden;font-weight:normal;font-size:14px;line-height:1.8em;}
+#globalRightRail .module.partner-links ul li:first-child a {padding-top:0;}
+#globalRightRail .module.partner-links ul li a img {float:left;width:20px;height:20px;margin:3px 8px 0 0;}
+
+/* Countdown Module */
+#globalRightRail .module.countdown, #traffic #globalRightRail .module.countdown {border:1px solid #CDCDCD;background:#FFFFFF;}
+#globalRightRail .module.countdown h4 {display:block;background:#122E5D;color:#FFFFFF;font-size:16px;padding:10px 5px;margin:0;}
+#globalRightRail .module.countdown h4 img {position:relative;top:2px;margin:0 4px 0 0;}
+#globalRightRail .module.countdown .vpmCountdownHeader {text-align:center;padding:8px;margin:0;font-size:16px;font-weight:400;color:#333333;}
+#globalRightRail .module.countdown .vpmCountdownHeader a {text-decoration:none;}
+#globalRightRail .module.countdown .vpmCountdownHeader a .vpmCountdownHeaderRed {color:#960100;}
+#globalRightRail .module.countdown .vpmSubHeader {text-align:center;font-size:10px;font-weight:bold;margin:0 0 10px;padding:0 8px;}
+#globalRightRail .module.countdown .vpmSubHeader img {vertical-align:middle;}
+#globalRightRail .module.countdown .vpmVideo {border:1px solid #D1D1D1;height:150px;width:290px;margin:0 auto;padding:1px;background-color:#FFFFFF;}
+#globalRightRail .module.countdown .vpmVideo #promoVideo {width:290px;height:150px;}
+#globalRightRail .module.countdown .vpmAd {overflow:hidden;padding:5px 18px;vertical-align:middle;margin:0;}
+#globalRightRail .module.countdown .vpmPresentedAd {float:left;width:190px;height:40px;margin:0;}
+#globalRightRail .module.countdown .vpmSeeMore {float:right;font-weight:400;font-size:14px;width:74px;height:20px;padding:10px 0 0;}
+#globalRightRail .module.countdown .vpmSeeMore a {color:#26518E;position:relative;display:block;}
+#globalRightRail .module.countdown .vpmSeeMore a span {float:none!important;margin:0;position:absolute;top:5px;right:0;}
+
+/* Most Popular */
+#globalRightRail .module.most-popular ul, #globalRightRail .module.most-popular ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.most-popular ul.selector {overflow:hidden;width:270px;margin:0 auto;}
+#globalRightRail .module.most-popular ul.selector li {float:left;padding:6px;text-transform:uppercase;color:#26518E;font-size:11px;border-top:1px solid #26518E;border-right:1px solid #26518E;border-bottom:1px solid #26518E;background:#FFFFFF;cursor:pointer;}
+#globalRightRail .module.most-popular ul.selector li:first-child {border-left:1px solid #26518E;}
+#globalRightRail .module.most-popular ul.selector li.selected {background:#26518E;color:#FFFFFF;}
+#globalRightRail .module.most-popular ul.list {margin:18px 0 0;padding:0;display:none;overflow:hidden;}
+#globalRightRail .module.most-popular ul.list.selected {display:block;}
+#globalRightRail .module.most-popular ul.list li {padding:0;margin:0 12px;border-top:1px solid #DDDDDD;}
+#globalRightRail .module.most-popular ul.list li.nothing {text-align:center;font-size:12px;font-weight:300;}
+#globalRightRail .module.most-popular ul.list li a {display:block;font-weight:normal;font-size:15px;height:auto;padding:18px 0;margin:0;}
+#globalRightRail .module.most-popular ul.list li:first-child {border-top:none;}
+#globalRightRail .module.most-popular ul.list li:first-child a {padding-top:0;}
+
+/* Story List */
+#globalRightRail .module.story-list-module ul, #globalRightRail .module.story-list-module ul li {position:relative;margin:0;padding:0;list-style:none;display:block;}
+#globalRightRail .module.story-list-module ul li {float:none;overflow:hidden;border-top:1px solid #DDDDDD;padding:18px 0;margin:0 12px;}
+#globalRightRail .module.story-list-module ul li:first-child {border:none;padding-top:0;}
+#globalRightRail .module.story-list-module ul li .imgContainer {float:left;width:116px;height:62px;background-position:center;background-repeat:no-repeat;background-color:#FFFFFF;border:1px solid #DDDDDD;margin:0 12px 6px 0;overflow:hidden;}
+#globalRightRail .module.story-list-module ul li .imgContainer a {display:block;width:100%;height:100%;text-decoration:none;}
+#globalRightRail .module.story-list-module ul li .contentContainer {float:none;margin:0;padding:0;}
+#globalRightRail .module.story-list-module ul li .contentContainer h5 {font-size:16px;line-height:18px;margin:0 0 6px;font-weight:normal;}
+#globalRightRail .module.story-list-module ul li .contentContainer p {margin:0;padding:0;}
+#globalRightRail .module.story-list-module p.linkOut, #globalRightRail .module.link-list p.linkOut {border-top:1px solid #DDDDDD;margin:0 12px;text-align:right;padding:12px 0 0;text-transform:uppercase;font-size:12px;}
+#globalRightRail .module.story-list-module p.linkOut a, #globalRightRail .module.link-list p.linkOut a {color:#26518E;}
+
+/* Story List Bottom */
+#globalRightRail .module.story-list-bottom ul li {padding:0;}
+#globalRightRail .module.story-list-bottom ul li .imgContainer {width:116px;height:62px;}
+#globalRightRail .module.story-list-bottom ul li h5 {float:none;font-size:15px;margin:0;font-weight:normal;}
+#globalRightRail .module.story-list-bottom ul li h5 a {display:block;padding:18px 0;}
+#globalRightRail .module.story-list-bottom ul li.lead {padding:0 0 18px;}
+#globalRightRail .module.story-list-bottom ul li.lead a {padding:0;}
+
+/* Story List With Lead Image */
+#globalRightRail .module.story-list-with-lead-image ul li {padding:0;margin:0 12px;}
+#globalRightRail .module.story-list-with-lead-image ul li a {font-weight:normal;font-size:15px;padding:18px 0;display:block;text-decoration:none;}
+#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag {padding:2px 4px;margin:0 4px 0 0;position:relative;top:-2px;text-transform:uppercase;width:50px;height:12px;color:#fff;font-family:'Arimo',Arial,sans-serif;font-size:10px;
+background:#DF4037;
+background:-moz-linear-gradient(top,  #df4037 0%, #bd0d00 100%);
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#df4037), color-stop(100%,#bd0d00));
+background:-webkit-linear-gradient(top,  #df4037 0%,#bd0d00 100%);
+background:-o-linear-gradient(top,  #df4037 0%,#bd0d00 100%);
+background:-ms-linear-gradient(top,  #df4037 0%,#bd0d00 100%);
+background:linear-gradient(to bottom,  #df4037 0%,#bd0d00 100%);}
+#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.photos,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.Quiz,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.Infographic,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.Interactive ,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.Map,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.Timeline,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.quiz,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.infographic,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.interactive,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.map,#globalRightRail .module.story-list-with-lead-image ul li h5 a span.typeflag.timeline {
+background:#648CB9;
+background:-moz-linear-gradient(top,  #df4037 0%, #bd0d00 100%);
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#648cb9), color-stop(100%,#305c8e));
+background:-webkit-linear-gradient(top,  #648cb9 0%,#305c8e 100%);
+background:-o-linear-gradient(top,  #648cb9 0%,#305c8e 100%);
+background:-ms-linear-gradient(top,  #648cb9 0%,#305c8e 100%);
+background:linear-gradient(to bottom,  #648cb9 0%,#305c8e 100%);}
+#globalRightRail .module.story-list-with-lead-image ul li.lead {padding:0;}
+#globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer {float:none;width:276px;height:170px;position:relative;border:none;margin:0;}
+#globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer a {display:block;padding:0;}
+#globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer .doubledeck, #globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer .singledeck {position:absolute;top:auto;bottom:0;left:0;width:276px;overflow:hidden;}
+#globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer .doubledeck span, #globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer .singledeck span {display:table;padding:4px 6px;width:auto;background:url("http://media.nbcdfw.com/designimages/header_transparent.png");color:#FFFFFF;}
+#globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer span.typeflag, #globalRightRail .module.story-list-with-lead-image ul li.lead .imgContainer span.sponsored {text-transform:uppercase;font-size:10px;padding:2px 6px;}
+
+/* Photos & Videos */
+#globalRightRail .module.photos-videos p {text-align:right;text-transform:uppercase;font-size:12px;}
+#globalRightRail .module.photos-videos ul {overflow:hidden;width:276px;height:220px;margin:0 12px;}
+#globalRightRail .module.photos-videos ul li {float:left;width:276px;height:220px;position:relative;}
+#globalRightRail .module.photos-videos ul li a {display:block;font-family:"Roboto",Helvetica,sans-serif;font-weight:normal;font-size:15px;padding:0 8px;}
+#globalRightRail .module.photos-videos ul li.video_release a.imageLink {width:244px;height:145px;overflow:hidden;margin:12px 16px 14px;padding:0;}
+#globalRightRail .module.photos-videos ul li a span.playBtn {position:absolute;left:111px;top:64px;background:url("http://media.nbcdfw.com/designimages/solo_sprite_hp_play_video.png") 0 0 no-repeat transparent;width:54px;height:42px;}
+#globalRightRail .module.photos-videos span.arrows {position:absolute;width:20px;height:25px;background:url("http://media.nbcdfw.com/images/weather-hp-sprite.png") no-repeat -42px 0 transparent;top:115px;left:0;cursor:pointer;z-index:10;}
+#globalRightRail .module.photos-videos span.arrows.arrowLeft:hover {background-position:-21px 0;}
+#globalRightRail .module.photos-videos span.arrows.arrowLeft:active {background-position:0 0;}
+#globalRightRail .module.photos-videos span.arrows.arrowRight {right:0;left:auto;background-position:-105px 0;}
+#globalRightRail .module.photos-videos span.arrows.arrowRight:hover {background-position:-126px 0;}
+#globalRightRail .module.photos-videos span.arrows.arrowRight:active {background-position:-147px 0;}
+#globalRightRail .module.photos-videos ul li.gallery {background:url("http://media.nbcdfw.com/designimages/bg_photoframe.png") no-repeat 0 0;}
+#globalRightRail .module.photos-videos ul li.gallery a {position:absolute;top:175px;padding:0 8px;}
+#globalRightRail .module.photos-videos ul li.gallery a.imageLink {width:228px;height:125px;overflow:hidden;top:18px;left:27px;padding:0;}
+#globalRightRail .module.photos-videos p a {color:#26518E;}
+
+/* Newsletter Signup */
+#globalRightRail .module.newsletter-signup-module h4 {background:url('http://media.nbcdfw.com/designimages/desktop-newsletter-icon.jpg') no-repeat 260px -4px;}
+#globalRightRail .module.newsletter-signup-module p {color:#26518E;font-size:13px;}
+#globalRightRail .module.newsletter-signup-module form {padding:0;margin:0 12px;border:none;}
+#globalRightRail .module.newsletter-signup-module form input {border:1px solid #CCCCCC;background-color:#EEEEEE;width:192px;height:14px;padding:4px;font-family:'Roboto',Arial,sans-serif;font-size:12px;font-weight:normal;color:#000000;vertical-align:top;}
+#globalRightRail .module.newsletter-signup-module form input[type="submit"] {padding:0;background-color:#FFFFFF;width:61px;height:22px;color:#26518E;cursor:pointer;font-size:14px;border:none;font-weight:normal;letter-spacing:-.5px;}
+#globalRightRail .module.newsletter-signup-module form span.nsConfirm {font-size:14px;font-weight:normal;color:#333333;}
+#globalRightRail .module.newsletter-signup-module span.nsFooter {margin:10px auto;font-size:12px;color:#AAAAAA;display:block;text-align:center;font-weight:normal;}
+#globalRightRail .module.newsletter-signup-module span.nsFooter a {color:#AAAAAA;}
+#globalRightRail .module.newsletter-signup-module span.nsAjaxLoader {position:absolute;z-index:1;display:none;width:300px;height:130px;background:#000000;top:30px;background:url("http://media.nbcdfw.com/designimages/nsuLoader.gif") center center no-repeat #FFFFFF;opacity:.8;}
+
+
+/* Quotes */
+#globalRightRail .module.quotes img {position:absolute;top:38px;left:5px;margin:0;width:auto;z-index:1;width:70px;height:auto;}
+#globalRightRail .module.quotes img.rightQuote {right:5px;left:auto;top:80px;}
+#globalRightRail .module.quotes p {padding:0 12px;font-size:24px;position:relative;z-index:2;text-align:center;color:#26518E;font-family:"Roboto",Arial,sans-serif;font-weight:300;}
+#globalRightRail .module.quotes p a {color:#26518E;}
+#globalRightRail .module.quotes p.quoteSource, #globalRightRail .module.quotes p.quoteAtt {font-size:14px;text-align:right;margin:0;color:#363636;font-style:italic;}
+#globalRightRail .module.quotes p.quoteSource a, #globalRightRail .module.quotes p.quoteAtt a {color:#363636;}
+
+/* More Investigations */
+#globalRightRail .module.more-investigations ul li {float:none;overflow:hidden;border-top:1px solid #DDDDDD;padding:18px 0;margin:0 12px;}
+#globalRightRail .module.more-investigations ul li.lead {border:none;padding-top:0;}
+#globalRightRail .module.more-investigations ul li p {padding:0;margin:4px 0 0;font-size:13px;}
+#globalRightRail .module.more-investigations ul li a {display:block;padding:0;margin:0;font-size:15px;font-weight:normal;}
+#globalRightRail .module.more-investigations ul li a.imageLink {margin:0 0 12px;width:276px;height:148px;overflow:hidden;}
+#globalRightRail .module.more-investigations ul li p a {display:inline;font-size:13px;font-family:"Arimo",Arial,sans-serif;color:#26518E;}
+
+/* Election Results */
+#globalRightRail .module.election-local-results .race-one {position:relative;border-bottom:#eee 1px solid;padding-bottom:4px;margin:0 12px 12px;}
+#globalRightRail .module.election-local-results .race-two {position:relative;border-bottom:#eee 1px solid;padding-bottom:4px;}
+#globalRightRail .module.election-local-results .race-stats {position:relative;width:auto;height:23px;}
+#globalRightRail .module.election-local-results .related {position:relative;}
+#globalRightRail .module.election-local-results .extLink {color:#26518E;font-family:'Roboto',Arial,sans-serif;font-size:12px;position:relative;display:block;text-align:right;padding:0 12px;text-transform:uppercase;}
+#globalRightRail .module.election-local-results .candidate {position:relative;height:50px;clear:left;margin-bottom:0px;}
+#globalRightRail .module.election-local-results .candidate.last {position:relative;height:50px;clear:left;margin-bottom:8px;}
+#globalRightRail .module.election-local-results .candidate-data {float:left;}
+#globalRightRail .module.election-local-results .candidate-name {font-family:'Arimo';font-weight:700;font-size:.86em;display:block;margin-bottom:0;}
+#globalRightRail .module.election-local-results .vote-percentage {position:absolute;right:0px;top:0px;font-family:'Arimo';font-weight:700;font-size:.86em;}
+#globalRightRail .module.election-local-results .winner {width:35px;height:35px;float:left;background-color:#fff;}
+#globalRightRail .module.election-local-results .winner.yes {background-image:url('http://media.nbcdfw.com/designimages/winner-checkmark.png');background-repeat:no-repeat;background-position:0 2px;}
+#globalRightRail .module.election-local-results .candidate-count {font-family:'Arimo';font-size:.8em;color:#777;margin:2px 0 0;padding:0;position:absolute;right:78%;}
+#globalRightRail .module.election-local-results h3.election-name {font-family:'Roboto';font-weight:400;font-size:1.1em;color:#333;border-bottom:1px solid #000;padding-left:22px;text-transform:uppercase;}
+#globalRightRail .module.election-local-results h2.race-name {font-family:'Arimo';font-weight:700;font-size:1.3em;color:#333;letter-spacing:-1px;margin-top:0;margin-bottom:6px;text-transform:uppercase;}
+#globalRightRail .module.election-local-results span.reporting {font-family:'Arimo';font-size:.7em;color:#3f3f3f;position:absolute;left:0px;}
+#globalRightRail .module.election-local-results span.timestamp {font-family:'Arimo';font-size:.7em;color:#aaa;position:absolute;right:4px;text-transform:uppercase;}
+#globalRightRail .module.election-local-results .meter {background-color:#ededed;width:210px;margin-top:4px;position:absolute;right:0;}
+#globalRightRail .module.election-local-results .race-one.half, #globalRightRail .module.election-local-results .race-two.half {width:290px;float:left;}
+#globalRightRail .module.election-local-results .meter .fill.red {height:11px;background-color:#dd4056;}
+#globalRightRail .module.election-local-results .meter .fill.grey {height:11px;background-color:#777;}
+#globalRightRail .module.election-local-results .meter .fill.blue {height:11px;background-color:#2b7ab4;}

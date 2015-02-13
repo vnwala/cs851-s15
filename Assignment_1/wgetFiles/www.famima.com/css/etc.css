@@ -1,0 +1,317 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	カート画面
+-------------------------------------------------------------------- */
+
+div.cartlist_ {
+}
+div.order_flow_ {
+	/* margin: 15px 0; */
+	margin: 20px 0;
+	text-align: center;
+	/* margin-bottom: 10px; */
+	/* border-bottom: 1px solid #CCC; */
+}
+table.cartlist_ {
+	margin: 0 auto;
+	width: 640px;
+	border-left: none;
+	border-right: none;
+}
+table.cartlist_ td.img_ {
+	width: 50px;
+}
+table.cartlist_ td.img_ img {
+	width: 50px;
+}
+table.cartlist_ td.money_ {
+	width:80px;
+	white-space:nowrap;
+	text-align:right;
+}
+table.cartlist_ td.qty_ {
+	width:80px;
+	white-space:nowrap;
+	text-align:right;
+}
+table.cartlist_ td.button_ {
+	text-align: center;
+	width: 60px;
+}
+table.cartlist_ td.total_ {
+	text-align:right;
+}
+table.cartlist_ .qty_ input {
+}
+input.calc_ {
+	width:0px;
+	height:0px;
+}
+
+
+
+/* --------------------------------------------------------------------
+	メールニュース
+-------------------------------------------------------------------- */
+div.mail_ {
+}
+div.mail_ .agreebody_ {
+	margin: 10px 0 20px 0;
+	width: 100%;
+}
+div.mail_ table {
+	width: 100%;
+}
+div.mail_ table th {
+	width: 25%;
+}
+div.mail_ div.mailnewstitle_ {
+}
+
+/* --------------------------------------------------------------------
+	お友達に紹介
+-------------------------------------------------------------------- */
+div.intro_ {
+	padding: 0 60px;
+}
+div.intro_ .mail_ {
+	padding: 0;
+}
+div.intro_ table {
+	width: 100%;
+}
+div.intro_ table.intro_address_ th {
+	width: 8em;
+	vertical-align: top;
+}
+div.intro_ .name_ input{
+	margin: 0 5px 0 5px;
+}
+div.intro_ span.mail_ {
+	padding-left: 20px;
+}
+div.intro_ .mail_ input{
+	margin: 0 0 0 5px;
+}
+
+div.intro_box_ {
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+div.intro_ div.intro_box_ div.name_ {
+	margin-right: 20px;
+	float: left;
+}
+div.intro_ div.intro_box_ div.mail_ {
+	float: left;
+}
+/* --------------------------------------------------------------------
+	トピックス
+-------------------------------------------------------------------- */
+/* トピック詳細 */
+div.topic_ {
+}
+.topic_title_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_topics.png) left bottom no-repeat;
+}
+div.topic_ div.comment_ {
+}
+div.topic_ div.contents_ {
+}
+/* トピック一覧 */
+div.topiclist_ {
+	/*margin: 20px 0 20px 0;*/ /* still 2012.6.4, margin:0 0 20px 0; */
+	margin:12px 0;
+}
+
+div.topiclist_ ul {
+    border:1px solid #ccc;
+    padding:5px 10px;
+} /* from 2012.6.5, */
+
+div.topiclist_ li {
+    line-height:1.5;
+    width:678px;
+    padding-left:13px;
+    background: url(../common_images/arrow_link.png) left center no-repeat;
+} /* from 2012.6.5, */
+
+div.topiclist_ a {
+    font-size:96%;
+} /* from 2012.6.5, */
+
+div.topiclist_ .topiclist_head_ {
+	margin-bottom: 5px; /* still 2012.6.4, margin-bottom:15px; */
+	padding-bottom: 6px;
+	width: 700px;
+	overflow: hidden;
+	background: url(http://www.famima.com/img/usr/topiclist_head_back.png) left bottom no-repeat;
+}
+div.topiclist_ .topiclist_head_ h2 {
+	float: left;
+	display: inline;
+}
+
+div.topiclist_ .topiclist_head_ .rss_ {
+	padding-left: 5px;
+	float: right;
+	display: inline;
+	text-align: right;
+	border-left: 1px solid #CCC;
+}
+div.topiclist_ .topiclist_head_ .rss_ p {
+	float: left;
+	display: inline;
+}
+div.topiclist_ .topiclist_head_ .rss_ p.about_rss_ {
+	padding: 2px 0 0 10px;
+	font-size: 10px;
+	background: url(http://www.famima.com/img/usr/arrow_s.png) 4px 8px no-repeat;
+}
+div.topiclist_ .topiclist_body_ {
+	clear: both;
+	background: url(http://www.famima.com/img/usr/dotline1.png) left bottom repeat-x;
+}
+div.topiclist_ div.topicline_ {
+	width:700px;
+	overflow: hidden;
+}
+div.topiclist_ div.topicline_ div.topicitem_ {
+	padding: 0 10px 20px 10px;
+	float: left;
+	display: inline;
+	width: 330px;
+	height: 50px;
+	overflow: hidden;
+}
+div.topiclist_ div.topicline_ div.topicitem_ .img_ {
+	margin-right: 20px;
+	float: left;
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+div.topiclist_ div.topicline_ div.topicitem_ .img_ img {
+	height: 48px;
+}
+div.topiclist_ div.topicline_ div.topicitem_ .desc_ {
+	float: left;
+	font-size: 10px;
+	width: 260px;
+	height: 50px;
+	overflow: hidden;
+}
+div.topiclist_ div.topicline_ div.topicitem_ .desc_.noimg_ {
+	float: none;
+	width: 330px;
+	height: 50px;
+	overflow: hidden;
+}
+div.topiclist_ div.topicline_ div.topicitem_ .desc_ h3 {
+	margin-bottom: 3px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* --------------------------------------------------------------------
+	アンケート
+-------------------------------------------------------------------- */
+
+/* 入力画面 */
+div.questionnaire_ {
+}
+div.questionnaire_box_ {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #CCC;
+}
+div.questionnaire_box_ div.desc_ {
+	margin-bottom: 10px;
+	padding: 0 0 10px 10px;
+	border-bottom: 1px dotted #CCC;
+}
+div.questionnaire_box_ table {
+	width: 100%;
+}
+div.questionnaire_box_ table.formdetail_ th {
+	width: 16em;
+}
+div.questionnaire_box_ div.questionnaire_box_content_ {
+	padding: 0 10px;
+}
+/**/
+
+/* 確認画面 */
+table.questionnaire_confirm_ {
+	width: 100%;
+}
+table.questionnaire_confirm_ th {
+	width: 16em;
+}
+/**/
+
+/* --------------------------------------------------------------------
+	カタログ
+-------------------------------------------------------------------- */
+/* カタログ一覧 */
+.catalog_cart_ {
+	margin-bottom: 10px;
+	text-align: center;
+}
+.catalog_frame_ {
+	width: 100%;
+}
+.catalog_frame_ td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: top;
+	border-bottom: 1px dotted #CCC;
+}
+.catalog_frame_ td.img_ {
+	padding-right: 10px;
+}
+.catalog_frame_ td.desc_ div.name_ {
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #F0F0F0;
+}
+.catalog_frame_ td.desc_ div.name_ .name1_ {
+	font-size: 14px;
+	font-weight: bold;
+}
+.catalog_frame_ td.desc_ div.comment_ {
+	margin: 0 0 10px 10px;
+}
+.catalog_frame_ td.desc_ div.limit_ {
+	margin: 0 0 10px 10px;
+}
+
+/* カタログ利用規約 */
+div.customer_ .catalog_agreebody_ {
+	margin: 0 0 10px 0;
+	width: 100%;
+}
+/**/
+
+/* カタログ請求確認 */
+dl.catalogconfirm_ {
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+dl.catalogconfirm_ dt {
+	padding: 5px;
+	float: left;
+	font-weight: bold;
+}
+dl.catalogconfirm_ dd {
+	padding: 5px 5px 5px 8em;
+	border-bottom: 1px dotted #CCC;
+}

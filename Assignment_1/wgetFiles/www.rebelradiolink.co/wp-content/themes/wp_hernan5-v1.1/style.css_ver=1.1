@@ -1,0 +1,1442 @@
+/*
+Theme Name: Hernán
+Theme URI: http://www.cssigniter.com/ignite/themes/hernan
+Description: Music theme for WordPress
+Author: the CSSIgniter team
+Author URI: http://www.cssigniter.com/
+Version: 1.1
+License: GNU General Public License
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden] {
+	display: none;
+}
+
+html {
+	background: #fff; /* 1 */
+	color: #000; /* 2 */
+	font-family: sans-serif; /* 3 */
+	-ms-text-size-adjust: 100%; /* 4 */
+	-webkit-text-size-adjust: 100%; /* 4 */
+}
+
+body {
+	margin: 0;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+hr {
+	height: 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0; /* 1 */
+	padding: 0; /* 2 */
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 2 */
+	margin: 0; /* 3 */
+}
+
+button,
+input {
+	line-height: normal;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* -----------------------------------------
+   WordPress Specific Styles
+----------------------------------------- */
+
+.alignleft {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 10px 20px;
+}
+
+/* -----------------------------------------
+   General Typography
+----------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Courier New", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+h1 { font-size: 22px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+a, a:visited { color: #FFC600; text-decoration: none; line-height: inherit;
+	-moz-transition: 0.2s all linear;
+	-webkit-transition: 0.2s all linear;
+	transition: 0.2s all linear;
+}
+a:hover { }
+a:focus { }
+
+/* -----------------------------------------
+   General Shared Styles
+----------------------------------------- */
+
+body {
+	background: #242628;
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 2;
+	color: #FFF;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+#main {
+	background: rgba(0,0,0,0.40);
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+.section-title, .widget-title {
+	font-size: 16px;
+	color: #fff;
+	padding: 12px 15px;
+	background: rgba(0,0,0,0.40);
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+/* -----------------------------------------
+   Header Area
+----------------------------------------- */
+#header {
+	padding: 35px 0 30px;
+}
+
+.header-widget {
+	position: relative;
+}
+
+.header-widget .widget {
+	position: absolute;
+	right: 10px;
+	margin-top: 5px;
+}
+
+#logo a,
+#logo a:visited {
+	color: #FFF;
+}
+
+#logo a:hover {
+	color: #ccc;
+}
+
+#logo h1 {
+	margin-bottom: 5px;
+	font-size: 26px;
+	line-height: 1;
+}
+
+#logo h2 {
+	font-size: 14px;
+	margin: 0;
+}
+
+/* -----------------------------------------
+   Main Site Navigation
+----------------------------------------- */
+.alt-nav { display: none; }
+#nav { background: #0C0D0E; font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#nav ul { margin: 0; padding: 0; list-style: none; }
+#navigation li { position: relative; z-index: 100;}
+#navigation > li { float: left; }
+#navigation ul { position: absolute; z-index: 300; top: -999em; }
+#navigation ul ul { }
+#navigation li:hover > ul,
+#navigation .sfHover > ul { top: auto; }
+#navigation li li:hover > ul,
+#navigation li .sfHover > ul { top: 0; left: 100%; }
+#navigation li li li:hover > ul,
+#navigation li li .sfHover > ul{ top: 0; left: 100%; }
+#navigation a, #navigation a:visited { display: block; white-space: nowrap; }
+
+#navigation a, #navigation a:visited { color: #FFF; text-transform: uppercase; } /* Global Menu Link Styles */
+
+#navigation a:hover,
+#navigation .sfHover > a,
+#navigation .sfHover > a:visited { background: #444; color: #F3F3F3; } /* First Level & Global Menu Link Hover Styles */
+
+#navigation > li > a,
+#navigation > li > a:visited { padding: 8px 20px; } /* First Level Menu Link Styles */
+
+#navigation > li ul a,
+#navigation > li ul a:visited{ padding: 5px 20px;  } /* All Other Menu Level Link Styles */
+
+#navigation > li ul a:hover,
+#navigation > li ul .sfHover > a,
+#navigation > li ul .sfHover > a:visited { } /* All Other Level Menu Link Hover Styles */
+
+#navigation > li.current_page_item > a,
+#navigation > li.current_page_item > a:visited,
+#navigation > li.current-menu-item > a,
+#navigation > li.current-menu-item > a:visited {  color: #212121; } /* WordPress Styles for Current Page */
+
+#navigation ul { background: #171717; padding: 10px 0; } /* All Lower Level Menu Styles */
+
+/* Mobile Menu Styles
+========================================= */
+#mobile-bar {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	background: #242628;
+	background-image: linear-gradient(bottom, rgb(20,22,23) 1%, rgb(34,36,38) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(20,22,23) 1%, rgb(34,36,38) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(20,22,23) 1%, rgb(34,36,38) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(20,22,23) 1%, rgb(34,36,38) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(20,22,23) 1%, rgb(34,36,38) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(20,22,23)),
+		color-stop(1, rgb(34,36,38))
+	);
+	padding: 15px 10px 0 10px;
+	height: 48px;
+	border-bottom: 1px solid rgba(0,0,0,0.8);
+	box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+}
+
+.menu-trigger,
+.menu-trigger:focus {
+	width: 24px;
+	height: 21px;
+	background: url(images/menu_trigger.png) no-repeat;
+	cursor: pointer;
+	opacity: 0.85;
+	margin: 0;
+	outline: none;
+	position: absolute;
+	left: 10px;
+	top: 12px;
+}
+.menu-trigger:hover { opacity: 0.95; }
+.menu-trigger:active { opacity: 1; }
+
+.mob-title {
+	color: #eeeeee;
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 1px 1px 0 rgba(0,0,0,1);
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+.jPanelMenu-panel { background: none !important; padding-top: 48px; }
+#jPanelMenu-menu { background: #2b2e30; border-right: 1px solid rgba(0,0,0,0.3); }
+#jPanelMenu-menu ul { list-style: none; margin: 0; padding: 0; display: block !important; visibility: visible !important; }
+#jPanelMenu-menu li { display: block; float: none; padding: 0; margin: 0; border: none; }
+#jPanelMenu-menu > li:last-child {  border-bottom: 1px solid rgba(255,255,255,0.1); }
+#jPanelMenu-menu a, #jPanelMenu-menu a:visited { padding: 12px 20px; display: block; border-bottom: 1px solid rgba(0,0,0,0.7); border-top: 1px solid rgba(255,255,255,0.1); color: #eeeeee; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: bold; font-size: 14px; text-shadow: 1px 1px 0 rgba(0,0,0,1); }
+#jPanelMenu-menu a:hover {
+	background-image: linear-gradient(bottom, rgb(43,46,48) 1%, rgb(50,54,56) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(50,54,56) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(50,54,56) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(50,54,56) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(50,54,56) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(43,46,48)),
+		color-stop(1, rgb(50,54,56))
+	);
+}
+#jPanelMenu-menu a:active {
+	background-image: linear-gradient(bottom, rgb(43,46,48) 1%, rgb(34,36,38) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(34,36,38) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(34,36,38) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(34,36,38) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(43,46,48) 1%, rgb(34,36,38) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(43,46,48)),
+		color-stop(1, rgb(34,36,38))
+	);
+}
+#jPanelMenu-menu a:focus { outline: none; }
+#jPanelMenu-menu li ul li a { padding: 9px 0 9px 30px; font-size: 12px; }
+#jPanelMenu-menu li ul li ul li a { padding: 9px 0 9px 40px; font-size: 11px; }
+#jPanelMenu-menu .sf-sub-indicator { display: none; }
+#jPanelMenu-menu li.current-menu-item > a,
+#jPanelMenu-menu li.current_page_item > a,
+#jPanelMenu-menu li.current-menu-item > a:visited,
+#jPanelMenu-menu li.current_page_item > a:visited { }
+
+/* -----------------------------------------
+   Homepage Slider
+----------------------------------------- */
+
+#home-slider.flexslider {
+	margin-bottom: 40px !important;
+}
+
+.slide-title {
+	position: absolute;
+	right: 112px;
+	bottom: 20px;
+	text-align: right;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.slider-control {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+.slide-title a,
+.slide-title a:visited,
+.slider-control a,
+.slider-control a:visited,
+.slide-title b {
+	padding: 13px 17px 11px;
+	color: #fff;
+	text-transform: uppercase;
+	background: #515151;
+	background: rgba(0,0,0,0.50);
+	display: inline-block;
+	font-size: 18px;
+	font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.slide-title a:hover,
+.slider-control a:hover {
+	color: #222;
+}
+
+.slider-control a.slider-prev { left: 2px; position: relative;}
+
+/* -----------------------------------------
+   Homepage Specific & General Styles
+----------------------------------------- */
+
+.item-thumb, .entry-thumb a {
+	display: block;
+	line-height: 0;
+	margin-bottom: 10px;
+	padding: 4px;
+	background: #000;
+}
+
+.entry .entry-thumb a {
+	margin-bottom: 0;
+}
+
+.item-thumb img,
+.entry-thumb img {
+	line-height: 0;
+	display: block;
+}
+
+.item-title {
+	font-size: 13px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 4px;
+	font-family: "Courier New", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.latest-item {
+	margin-bottom: 30px;
+}
+
+.latest-item:last-of-type {
+	margin-bottom: 0;
+}
+
+/* -----------------------------------------
+   Blog Listing
+----------------------------------------- */
+
+.inner {
+	padding-top: 20px;
+}
+
+#latest-news .entry {
+	margin-bottom: 25px;
+	padding-bottom: 9px;
+}
+
+#latest-news .entry:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.entry-title {
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.entry-meta {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 1;
+}
+
+.single-post .entry-thumb,
+.page .entry-thumb { margin-bottom: 20px; }
+
+.entry blockquote {
+	padding: 0 0 0 20px;
+}
+
+.entry blockquote p {
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.entry-content ul {
+	margin-left: 17px;
+}
+
+.entry-content iframe {
+	margin-bottom: 20px;
+}
+
+
+/* -----------------------------------------
+   Pagination
+----------------------------------------- */
+#paging {
+	margin-top: 25px;
+}
+
+#paging a,
+#paging span {
+	margin-right: 5px;
+	background: #0b0b0b;
+	padding: 6px 14px;
+	display: inline-block;
+}
+
+/* -----------------------------------------
+   Buttons
+----------------------------------------- */
+a.action-btn,
+a.action-btn:visited,
+.action-btn {
+	border-radius: 1px 1px 1px 1px;
+	display: inline-block !important;
+	font-size: 10px;
+	height: 23px;
+	padding: 6px 12px 6px;
+	position: relative;
+	text-transform: uppercase;
+	color: #161718;
+	border: none;
+	line-height: 1;
+
+	-moz-transition: 0.2s all linear;
+	-webkit-transition: 0.2s all linear;
+	transition: 0.2s all linear;
+}
+
+a.action-btn:active,
+.action-btn:active {
+	top: 1px;
+}
+
+a.action-btn.buy,
+a.action-btn.buy:visited,
+.action-btn { }
+
+a.action-btn.buy:hover,
+.action-btn:hover {
+	color: #222222;
+}
+
+/* -----------------------------------------
+   Discography Page
+----------------------------------------- */
+
+.album-meta {
+	margin: 0 0 20px 0 !important;
+	padding: 15px;
+	list-style: none;
+	border-top: 1px solid #676767;
+	border-bottom: 1px solid #676767;
+}
+
+.album-meta span {
+	display: inline-block;
+	margin-right: 5px;
+	text-align: right;
+	width: 100px;
+	font-weight: bold;
+}
+
+.album-meta li {
+	margin-bottom: 10px;
+}
+
+.album-meta li:last-child {
+	margin-bottom: 0;
+}
+
+.tracklisting {
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+
+.track-lyrics-hold { display: none; }
+
+.widget_ci_tracklisting_widget .track .btns {
+	display: none;
+}
+
+.widget_ci_tracklisting_widget .track-info {
+	max-width: 130px;
+	font-size: 11px;
+}
+
+li.track {
+	display: block;
+	padding: 5px 10px 5px 5px;
+	background: #141414;
+	background: rgba(0,0,0,0.5);
+	border-bottom: 1px solid #2f2f2f;
+}
+
+.track-info {
+	float: left;
+	margin: 5px 0 0 0;
+}
+
+.track > a {
+	float: left;
+	margin-right: 10px;
+}
+
+.track .sub-head,
+.track .main-head {
+	display: block;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.track .btns {
+	float: right;
+	position: relative;
+	top: 13px;
+}
+
+.sm2-360ui {
+	float: left;
+	margin-right: 15px;
+	background: rgba(255,255,255,0.05);
+}
+
+.track .buy-track { margin-left: 10px; }
+
+/* -----------------------------------------
+   Events Listing Page
+----------------------------------------- */
+
+.events .tour-dates {
+	margin-bottom:45px;
+	list-style: none;
+}
+
+.events .tour-thumb {
+	float: left;
+	line-height: 0;
+}
+
+.events .tour-thumb img {
+	max-height: 64px;
+}
+
+.events .tour-date { }
+
+.events .tour-dates li {
+	position:relative;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid #2F2F2F;
+	margin: 0;
+}
+
+.events .tour-dates .tour-place {
+	padding: 11px 0 0 15px;
+	width: auto;
+}
+
+.events .tour-dates .sub-head {
+	font-size:14px;
+	text-transform: none;
+	display: block;
+	margin-bottom: 0;
+	padding-left: 4px;
+}
+
+.events .tour-dates .sub-head a,
+.events .tour-dates .sub-head a:visited {
+	color: #bebebe;
+}
+
+.events .tour-dates .main-head {
+	font-size:12px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: none;
+	padding-left: 4px;
+}
+
+.events .tour-dates .action-btn {
+	position: absolute;
+	top:23px;
+	right:24px;
+}
+
+.events .tour-date {
+	float:left;
+	width:60px;
+	text-align: center;
+	margin:0;
+	padding: 17px 0 11px;
+	color: #222;
+}
+
+.events .tour-date .day {
+	font-size:24px;
+	font-weight:bold;
+	display:block;
+	color: #222;
+	line-height: 0.6;
+}
+
+.events .tour-date .month {
+	font-size:12px;
+	text-transform: uppercase;
+	color: #222;
+}
+
+.events .tour-date .date {
+	display: block;
+	font-size: 20px;
+	line-height: 0.6;
+}
+
+.events .tour-date.recurrent {
+	padding: 4px 0;
+}
+
+.events .tour-place {
+	float:left;
+	width:138px;
+	padding:10px;
+}
+
+action-btn.sold,
+.action-btn.canceled {
+	background-color: #a5a5a5;
+}
+
+.events .past-dates { margin-bottom: 0; }
+
+/* map */
+#map {
+	color: #000;
+	margin-bottom:40px;
+	width:auto;
+	height:400px;
+}
+#map h3 { line-height: 1; font-size:18px; margin-bottom:5px; }
+#map h4 { line-height: 1; font-size:14px; margin-bottom:8px; }
+#map p { line-height:1; font-size:12px; }
+#map img {
+	max-width: none !important;
+}
+#map div,
+#map div:after {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.fancybox-video {
+	display: block;
+	line-height: 0;
+	position: relative;
+}
+
+.fancybox-video img {
+	min-width: 100%;
+}
+
+.play-icon {
+	position: absolute;
+	background: url("images/btn_play.png") no-repeat;
+	width: 53px;
+	height: 53px;
+	display: none;
+}
+
+/* -----------------------------------------
+   Comments
+----------------------------------------- */
+.post-comments { margin:40px 0 0 0; }
+.post-comments h2 {  }
+.post-comments ol, .post-comments ul { list-style: none; font-size:inherit;  }
+.post-comments > ol { margin-left:0; margin-bottom:0; }
+.post-comments li { margin:0 !important; padding:0 !important; background: none !important; position:relative; }
+.post-comments .avatar { position:absolute; top:0; left:0; margin: 0 15px 5px 0; text-align: center; }
+.post-comments .comment-text { margin-bottom:10px; }
+.post-comments > .comment-text:last-child { margin-bottom:0; }
+.post-comments .comment-copy { margin-left:60px;  padding: 15px; font-size: 13px; background: none repeat scroll 0 0 #252525; }
+.post-comments .comment-copy p { margin-bottom:10px; }
+.post-comments .comment-meta { font-weight: bold; margin-bottom:5px !important; }
+.comment-reply-link, .btn-reply { display:inline-block; height:15px; padding:5px 5px 0 5px; position:relative; top:5px; font-weight:bold; font-size:10px; text-transform: uppercase; text-shadow: 0 -1px 0 rgba(0,0,0,0.3); line-height: 1; }
+.comment-reply-link:hover, .btn-reply:hover { color:#fff; }
+.comment-reply-link { font-size:10px; font-weight:bold; display:inline-block; border-radius:2px; margin-bottom:5px; }
+#cancel-comment-reply-link { display:block; font-size:12px; margin-top: 5px; }
+#cancel-comment-reply-link:hover { border:none; }
+
+
+/* -----------------------------------------
+   Comment Form
+----------------------------------------- */
+#form-wrapper {
+	margin:40px 0 0 0;  }
+#form-wrapper h2 { }
+#form-wrapper form { margin-bottom:0; }
+.post-form label { display:block; font-weight:bold; padding-bottom:5px; }
+.post-form input[type=text] { width:80%; }
+.post-form input[type=submit] { margin-bottom:0; }
+.post-form textarea { width:90%; height:200px; }
+#post-action { margin-bottom:0; }
+
+/* -----------------------------------------
+   Footer Area
+----------------------------------------- */
+#footer .widget-title {
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.footer-credits {
+	padding: 20px 0;
+	border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+/* -----------------------------------------
+   General Form Styling
+----------------------------------------- */
+form { margin: 0; }
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	width: auto;
+	background: #000;
+	color: #fff;
+	font-size: 13px;
+	padding: 9px 15px;
+	height: auto;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+	background: #222;
+	outline: none;
+}
+
+/* -----------------------------------------
+   Widgets - General
+----------------------------------------- */
+.widget {
+	margin-bottom: 25px;
+}
+
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.widget ul li {
+	margin-bottom: 10px;
+}
+
+.widget ul li:last-of-type {
+	margin-bottom: 0;
+}
+
+/* WIDGET: #Ads125
+========================================= */
+#ads125, .ads125 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#ads125 li,
+.ads125 li {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	float: left;
+	margin: 0 15px 10px 0;
+	padding: 0;
+	width: 100px;
+}
+
+#ads125 li:last-child,
+.ads125 li:last-child {
+	margin-right: 0;
+}
+
+/* WIDGET: #Search
+========================================= */
+.searchform { line-height: 1; position: relative; }
+.searchform > div { position: relative; }
+.searchform .screen-reader-text { display: none; }
+.searchform input[type=text] { border: none; border-radius: 0; margin: 0; }
+.searchsubmit {
+	font-size: 14px;
+	font-weight: bold;
+	height: 31px;
+	line-height: 0;
+	padding: 3px 11px 0;
+	position: absolute;
+	right: 0;
+	top: 2px;
+}
+.searchsubmit:active {
+	top: 2px;
+}
+
+.searchform input[type=text] {
+	border: 1px solid #1a1b1d;
+	width: 100%;
+}
+
+/* WIDGET: #Twitter
+========================================= */
+.twitter-time {
+	display: block;
+	font-size: 0.85em;
+}
+
+/* WIDGET: #About
+========================================= */
+
+.widget_about .alignleft {
+	margin: 0 10px 6px 0;
+}
+
+.widget_about .alignright {
+	margin: 0 0 6px 10px;
+}
+
+/* WIDGET: #Flickr
+========================================= */
+.flickr_badge_image {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.flickr_badge_image a {
+	display: block;
+	line-height: 0;
+	padding: 2px;
+	background: #000;
+}
+
+.flickr_badge_image a:hover { }
+
+/* WIDGET: #Calendar
+================================================== */
+#wp-calendar {
+	width: 100%;
+}
+
+#wp-calendar caption {
+	text-align: left;
+	margin-top: 10px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.03);
+	padding: 9px;
+}
+
+#wp-calendar thead {
+	font-size: 10px;
+}
+
+#wp-calendar thead th {
+	background: rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+	padding: 8px;
+}
+
+#wp-calendar tbody { }
+#wp-calendar tbody td { background: none; border: 1px solid rgba(0, 0, 0, 0.1); text-align: center; padding: 3px;}
+#wp-calendar tbody td:hover { background: rgba(0, 0, 0, 0.1); }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+#wp-calendar a { font-weight: bold; font-style: italic; }
+
+
+
+/* WIDGET: #Upcoming Events
+========================================= */
+.widget_ci_events_widget li {
+	padding-bottom: 18px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #2E2F30;
+}
+
+.widget_ci_events_widget .action-btn {
+	margin-left: 4px;
+}
+
+.tour-date { margin: 0; font-size: 14px; font-weight: bold; padding-left: 4px; }
+.sub-head { margin-bottom: 10px; font-weight: bold; padding-left: 4px; }
+
+/* WIDGET: #Social Links
+========================================= */
+
+.icn { text-align:left; width: 24px; height: 24px; background-image: url(http://www.rebelradiolink.co/wp-content/themes/wp_hernan5-v1.1/images/social-icons.png); background-repeat: no-repeat; display:inline-block; margin-right: 3px; text-indent: -999em; cursor: pointer; }
+.icn:hover { border:none; }
+.icn:focus,
+.icn:active { outline: none }
+.icn.twitter { background-position: -31px -1px }
+.icn.twitter:hover { background-position: -31px -31px }
+.icn.facebook { background-position: 0 -1px }
+.icn.facebook:hover { background-position: 0 -31px }
+.icn.flickr { background-position: -62px -1px }
+.icn.flickr:hover { background-position: -62px -31px }
+.icn.picasa { background-position: -94px 0 }
+.icn.picasa:hover { background-position: -94px -30px }
+.icn.lnkdin { background-position: -125px 0 }
+.icn.lnkdin:hover { background-position: -125px -30px }
+.icn.gplus { background-position: -156px -1px }
+.icn.gplus:hover { background-position: -156px -31px }
+.icn.rss { background-position: -187px -1px }
+.icn.rss:hover { background-position: -187px -31px }
+.icn.youtube { background-position: -218px -1px }
+.icn.youtube:hover { background-position: -218px -31px }
+.icn.wordpress { background-position: -250px -1px }
+.icn.wordpress:hover { background-position: -250px -31px }
+.icn.dribbble { background-position: -282px -1px }
+.icn.dribbble:hover { background-position: -282px -31px }
+.icn.pinterest { background-position: -313px -1px }
+.icn.pinterest:hover { background-position: -313px -31px }
+.icn.stumble { background-position: -345px -1px }
+.icn.stumble:hover { background-position: -345px -30px }
+.icn.digg { background-position: -380px -1px }
+.icn.digg:hover { background-position: -380px -30px }
+.icn.myspace { background-position: -440px -1px }
+.icn.myspace:hover { background-position: -440px -31px }
+.icn.soundcloud { background-position: -410px -1px }
+.icn.soundcloud:hover { background-position: -410px -31px }
+
+
+/* -----------------------------------------
+   SoundManager2 Plugin Specific Styles - 360player
+----------------------------------------- */
+#sm2-container {
+	left: -9999em;
+	position: fixed;
+	top: -9999em;
+}
+
+.ui360, /* entire UI */
+.sm2-360ui { /* canvas container */
+	position:relative;
+}
+
+.ui360,
+.sm2-360ui {
+	min-width:50px; /* should always be at least this. */
+	min-height:50px;
+}
+
+.sm2-360ui {
+	width:50px;
+	height:50px;
+}
+
+.ui360,
+.ui360 * {
+	vertical-align:middle;
+}
+
+.sm2-360ui {
+	position:relative;
+	display:inline-block; /* firefox 3 et al */
+	float:left; /* IE 6+7, firefox 2 needs this, inline-block would work with fx3 and others */
+	*display:inline;
+	/*
+	 clear:left;
+	*/
+}
+
+.sm2-360ui.sm2_playing,
+.sm2-360ui.sm2_paused {
+	/* bump on top when active */
+	z-index:10;
+}
+
+.ui360 > a { /* .sm2_link class added to playable links by SM2 */
+	float:left;
+	display:inline;
+	position:relative;
+	color:#000;
+	text-decoration:none;
+	left:3px; /* slight spacing on left UI */
+	top:18px; /* vertical align */
+	text-indent:50px; /* make room for UI at left */
+}
+
+.ui360 a.sm2_link { /* SM2 has now started */
+	text-indent: -9999em; /* UI now in place. */
+	display: none;
+}
+
+.ui360 > a,
+.ui360 > a:hover,
+.ui360 > a:focus {
+	padding:2px;
+	margin-left:-2px;
+	margin-top:-2px;
+}
+
+.ui360 > a:hover,
+.ui360 > a:focus {
+	background:#eee;
+	border-radius:3px;
+	outline:none;
+}
+
+.ui360 .sm2-canvas {
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+.ui360 .sm2-timing {
+	position:absolute;
+	display:block;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	margin:0px;
+	font:11px "helvetica neue",helvetica,monaco,lucida,terminal,monospace;
+	color:#666;
+	text-align:center;
+	line-height:50px;
+}
+
+.ui360 .sm2-timing.alignTweak {
+	text-indent:1px; /* devious center-alignment tweak for Safari (might break things for others.) */
+}
+
+.ui360 .sm2-cover {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:2;
+	display:none;
+	background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==); /* old-skool bug: IE 9 won't catch mouse events otherwise. /smash */
+}
+
+.ui360 .sm2-360btn {
+	position:absolute;
+	display:block;
+	top:50%;
+	left:50%;
+	/*
+	 width:22px;
+	 height:22px;
+	 margin-left:-11px;
+	 margin-top:-11px;
+	*/
+	/* by default, cover whole space. make smaller when playing. */
+	width:50px;
+	height:50px;
+	margin-left:-25px;
+	margin-top:-25px;
+	border-radius: 25px;
+	cursor:pointer;
+	z-index:3;
+}
+
+.ui360 .sm2-360data {
+	display:inline-block;
+	font-family:helvetica;
+}
+
+.sm2-inline-block .ui360 .sm2-360btn,
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+	/* smaller clickable button, in center */
+	width:22px;
+	height:22px;
+	margin-left:-11px;
+	margin-top:-11px;
+}
+
+.ui360 .sm2-360ui.sm2_playing .sm2-cover,
+.ui360 .sm2-360ui.sm2_paused .sm2-cover {
+	display:block;
+}
+
+/* this could be optimized a fair bit. */
+
+.ui360,
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+	background:transparent url(js/soundmanager2/images/360-button-play.png) no-repeat;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABoUlEQVR42sWVu2oCQRhGU/s8gpVYJeQJNkZSbiH4QNuLlQZS21sJayGYaOEFVFDxNiremj9zig2uzk5YQpKFg8PMd75ZZle9E5Ff4e+Ll8tlQuNoPI2vUcCYOdbIxCmm9F5T0YgNMmS/LebSwWdNa7VayXq9ls1mI9vtVna7nQBj5lgjQxYHN7KY3QkiUbDf7+V4PMrpdArBHGtkyOJc3/n1mVaUUl+F5/PZSrABDi4dpmKH3QkixQEHlw5TsccZmsRCoSD1et1ajkuHqdg/HA5GKZPJCOTzeanVasYMLh2mYsXDIGAoDuG6rlSr1WCdBxrcsTIWazgrQiHS6bSRYJ3XDzeq2O/3+9Ltdm9IpVIhstmslEqlUAY36ii8ZrMpjUbjhmQyKeA4jhSLRWMGN+rhOZ1Oh8ANuVxOyuUy40hwo163RK/XeyPQbrdjgYNr/ILAYDB41Gf1wZnFAQfX+iM0HA5fxuPx+2g0Ej22QoYsDq61mGsymTxMp9NX/Sk2yJDFsRZfXpzXbDZ7WiwW3nw+9zUKGDPHGpkL5V//mn7OJyJZApyzeUS5AAAAAElFTkSuQmCC);
+	*background-image: url(js/soundmanager2/images/360-button-play.png);
+	background-repeat: no-repeat;
+}
+
+.ui360 {
+	/*
+		"fake" button shown before SM2 has started, non-JS/non-SM2 case etc.
+		background image will be removed via JS, in threeSixyPlayer.init()
+	 */
+	background-position: 14px 50%;
+	_background:transparent url(js/soundmanager2/images/360-button-play.gif) no-repeat 14px 50%; /* IE 6-only: special crap GIF */
+}
+
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+	background-position:50% 50%;
+	_background:transparent url(js/soundmanager2/images/360-button-play.gif) no-repeat 50% 50%; /* IE 6-only: special crap GIF */
+}
+
+.ui360 .sm2-360btn-default,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn {
+	cursor:pointer;
+}
+
+.ui360 .sm2-360btn-default:hover,
+.ui360 .sm2-360ui.sm2_paused .sm2-360btn:hover {
+	background:transparent url(js/soundmanager2/images/360-button-play-light.png) no-repeat 50% 50%;
+	_background:transparent url(js/soundmanager2/images/360-button-play.gif) no-repeat 50% 50%;
+	cursor:pointer;
+}
+
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn:hover,
+.ui360 .sm2-360btn-playing:hover {
+	background:transparent url(js/soundmanager2/images/360-button-pause-light.png) no-repeat 50% 50%;
+	_background:transparent url(js/soundmanager2/images/360-button-pause-light.gif) no-repeat 50% 50%;
+	cursor:pointer;
+}
+
+.ui360 .sm2-360ui.sm2_playing .sm2-timing {
+	visibility:visible;
+}
+
+.ui360 .sm2-360ui.sm2_buffering .sm2-timing {
+	visibility:hidden;
+}
+
+.ui360 .sm2-360ui .sm2-timing,
+.ui360 .sm2-360ui .sm2-360btn:hover + .sm2-timing,
+.ui360 .sm2-360ui.sm2_paused .sm2-timing {
+	visibility:hidden;
+}
+
+.ui360 .sm2-360ui.sm2_dragging .sm2-timing,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover + .sm2-timing {
+	/* paused + dragging */
+	visibility:visible;
+}
+
+.ui360 .sm2-360ui.sm2_playing .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn:hover,
+.ui360 .sm2-360ui.sm2_dragging .sm2-360btn-playing:hover {
+	/* don't let pause button show on hover when dragging (or paused and dragging) */
+	background:transparent;
+	cursor:auto;
+}
+
+.ui360 .sm2-360ui.sm2_buffering .sm2-360btn,
+.ui360 .sm2-360ui.sm2_buffering .sm2-360btn:hover {
+	background:transparent url(js/soundmanager2/images/icon_loading_spinner.gif) no-repeat 50% 50%;
+	opacity:0.5;
+	visibility:visible;
+}
+
+/* inline list style */
+
+.sm2-inline-list .ui360,
+.sm2-inline-block .ui360 {
+	position:relative;
+	display:inline-block;
+	float:left;
+	_display:inline;
+	margin-bottom:-15px;
+}
+
+.sm2-inline-list .ui360 {
+	/* inline player: minor tweak, tighten spacing */
+	margin-right:-2px;
+}
+
+.sm2-inline-block .ui360 {
+	margin-right:8px;
+}
+
+.sm2-inline-list .ui360 a {
+	display:none;
+}
+
+/* annotations */
+
+ul.ui360playlist {
+	list-style-type:none;
+	list-style-type:none;
+}
+
+ul.ui360playlist,
+ul.ui360playlist li {
+	margin:0px;
+	padding:0px;
+}
+
+div.ui360 div.metadata {
+	display:none;
+}
+
+div.ui360 a span.metadata,
+div.ui360 a span.metadata * {
+	/* name of track, note etc. */
+	vertical-align:baseline;
+}
+
+#fancybox-overlay {
+	opacity: 0.4 !important;
+}
+
+.fancybox-outer {
+	background: #000;
+	color: #ccc;
+	border-radius: 0;
+}
+
+.track-lyrics-hold {
+	max-width: 400px;
+}
+
+/* Contact Plugins */
+
+.gform_wrapper textarea, .wpcf7 textarea {
+	max-width: 100% !important;
+}
+
+.wpcf7-not-valid-tip { background: #000 !important; color: #fff !important; }

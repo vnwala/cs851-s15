@@ -1,0 +1,259 @@
+
+/***********************************************************************************
+ イベント登録
+***********************************************************************************/
+
+if (window.addEventListener){
+	window.addEventListener('load', init, false);
+}else if (window.attachEvent){
+	window.attachEvent('onload', init);
+}else{
+	init();
+}
+
+/***********************************************************************************
+ 初期処理
+***********************************************************************************/
+
+function init (){
+	var mobile_flg = is_mobile ();
+	if (!mobile_flg){
+		if (document.getElementById('main')){
+			var height_side;
+			var height_total  = 40;
+			var height_main   = document.getElementById('main').offsetHeight;
+			var height_window = document.documentElement.clientHeight || document.body.clientHeight || window.innerHeight;
+			var change_flg    = false;
+			if (document.getElementById('header')){
+				height_total += document.getElementById('header').offsetHeight;
+			}
+			if (document.getElementById('footer')){
+				height_total += document.getElementById('footer').offsetHeight;
+			}
+			if (document.getElementById('left')){
+				height_side = document.getElementById('left').offsetHeight;
+				if (height_side > height_main){
+					height_main = height_side;
+					change_flg  = true;
+				}
+			}
+			if (document.getElementById('right')){
+				height_side = document.getElementById('right').offsetHeight;
+				if (height_side > height_main){
+					height_main = height_side;
+					change_flg  = true;
+				}
+			}
+			if (height_main < (height_window - height_total)){
+				height_main = height_window - height_total;
+				change_flg  = true;
+			}
+			if (change_flg){
+				document.getElementById('main').style.minHeight = height_main + 'px';
+			}
+		}
+	}
+	window.focus();
+}
+
+/***********************************************************************************
+ モバイル判定
+***********************************************************************************/
+
+function is_mobile (){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if (((ua.indexOf('mobile') != -1)&&(ua.indexOf('android') != -1))||(ua.indexOf('iphone') != -1)||(ua.indexOf('ipod') != -1)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+/***********************************************************************************
+ スクロール
+***********************************************************************************/
+
+function scroll (){
+	var x = document.documentElement.scrollLeft || document.body.scrollLeft || window.pageXOffset;
+	var y = document.documentElement.scrollTop  || document.body.scrollTop  || window.pageYOffset;
+	if (y > 0){
+		y -= Math.ceil (y / 2);
+		window.scrollTo (x, y);
+		setTimeout ('scroll()', 10);
+	}
+}
+
+/***********************************************************************************
+ カテゴリー変更
+***********************************************************************************/
+
+function category_change (obj){
+	location.href = obj.options[obj.selectedIndex].value;
+}
+
+/***********************************************************************************
+ サブカテゴリー切替
+***********************************************************************************/
+
+function switch_sc (category, flg, obj){
+	if (document.getElementById('sc_' + category)){
+		var sc = document.getElementById('sc_' + category);
+		if (flg){
+			if (obj){
+				sc.style.top  = (obj.offsetTop + obj.offsetHeight) + 'px';
+				sc.style.left = (obj.offsetLeft - 2) + 'px';
+			}
+			sc.style.display = 'block';
+		}else{
+			sc.style.display = 'none';
+		}
+	}
+}
+
+/***********************************************************************************
+ 投票ボタン切替
+***********************************************************************************/
+
+function switch_vote (pid, flg){
+	if (document.getElementById('vote_' + pid)){
+		var vote = document.getElementById('vote_' + pid);
+		var span = vote.getElementsByTagName('span');
+		var a    = vote.getElementsByTagName('a');
+		for (var i = 0; i < 2; i++){
+			if (flg){
+				span[i].style.display = 'none';
+				a[i].style.display = 'block';
+			}else{
+				a[i].style.display = 'none';
+				span[i].style.display = 'block';
+			}
+		}
+	}
+}
+
+/***********************************************************************************
+ 投票
+***********************************************************************************/
+
+function vote (pid, flg){
+	var req = create_request();
+	if (req){
+		req.open ('POST', '/ajax/vote.php', true);
+		req.setRequestHeader ('Content-Type', 'application/x-www-form-urlencoded');
+		req.setRequestHeader ('Pragma', 'no-cache');
+		req.setRequestHeader ('Cache-Control', 'no-cache');
+		req.setRequestHeader ('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT');
+		req.send ('p=' + pid + '&vote=' + flg);
+		req.onreadystatechange = function (){
+			if ((req.readyState == 4)&&(req.status == 200)){
+				if (req.responseText){
+					set_message (req.responseText, 'normal');
+				}
+			}
+		}
+	}
+	switch_vote (pid, false);
+}
+
+/***********************************************************************************
+ マイリスト操作
+***********************************************************************************/
+
+function mylist (fid, flg){
+	var req = create_request();
+	if (req){
+		req.open ('POST', '/ajax/mylist.php', true);
+		req.setRequestHeader ('Content-Type', 'application/x-www-form-urlencoded');
+		req.setRequestHeader ('Pragma', 'no-cache');
+		req.setRequestHeader ('Cache-Control', 'no-cache');
+		req.setRequestHeader ('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT');
+		req.send ('f=' + fid + '&flg=' + flg);
+		req.onreadystatechange = function (){
+			if ((req.readyState == 4)&&(req.status == 200)){
+				if (req.responseText){
+					set_message (req.responseText, 'reload');
+				}
+			}
+		}
+	}
+}
+
+/***********************************************************************************
+ メッセージセット
+***********************************************************************************/
+
+function set_message (message, type){
+	var message_id;
+	if (type == 'reload'){
+		message_id = 'message_reload';
+	}else{
+		message_id = 'message';
+	}
+	if (document.getElementById(message_id)){
+		document.getElementById(message_id).innerHTML = '<div>' + message + '</div>';
+		switch_message (true, type);
+	}
+}
+
+/***********************************************************************************
+ メッセージ切替
+***********************************************************************************/
+
+function switch_message (flg, type){
+	var screen_id, message_id;
+	if (type == 'reload'){
+		screen_id  = 'screen_reload';
+		message_id = 'message_reload';
+	}else{
+		screen_id  = 'screen';
+		message_id = 'message';
+	}
+	if (document.getElementById(screen_id)){
+		if (flg){
+			document.getElementById(screen_id).style.display = 'block';
+		}else{
+			document.getElementById(screen_id).style.display = 'none';
+		}
+	}
+	if (document.getElementById(message_id)){
+		var message = document.getElementById(message_id);
+		if (flg){
+			message.style.top  = '0px';
+			message.style.left = '0px';
+			message.style.marginTop  = '0px';
+			message.style.marginLeft = '0px';
+			message.style.opacity = 0;
+			message.style.display = 'block';
+			message.style.marginTop  = (0 - Math.ceil(message.offsetHeight / 2)) + 'px';
+			message.style.marginLeft = (0 - Math.ceil(message.offsetWidth / 2)) + 'px';
+			message.style.top  = '50%';
+			message.style.left = '50%';
+			message.style.opacity = 1;
+		}else{
+			message.style.display = 'none';
+		}
+	}
+}
+
+/***********************************************************************************
+ サーバー通信
+***********************************************************************************/
+
+function create_request (){
+	if (window.ActiveXObject){
+		try {
+			return new ActiveXObject("Msxml2.XMLHTTP");
+		}catch (e1){
+			try {
+				return new ActiveXObject("Microsoft.XMLHTTP");
+			}catch (e2){
+				return null;
+			}
+		}
+	}else if (window.XMLHttpRequest){
+		return new XMLHttpRequest();
+	}else{
+		return null;
+	}
+}
+

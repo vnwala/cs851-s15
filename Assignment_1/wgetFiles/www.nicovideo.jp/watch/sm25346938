@@ -1,0 +1,850 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja-jp" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="copyright" content="&copy; niwango, Inc.">
+<meta property="fb:app_id" content="378853695459932">
+<meta name="keywords" content="エンターテイメント,将棋,王将戦,木村一基,渡辺明,郷田真隆,安食総子,早食い王（将）">
+<meta name="description" content="「解説名人」こと木村八段が、渡辺王将の指し手だけでなく気持ちまで解説してみせます。（※漫画「将...">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<meta property="og:title" content="渡辺王将の気持ちまで解説する木村八段">
+<meta property="og:description" content="「解説名人」こと木村八段が、渡辺王将の指し手だけでなく気持ちまで解説してみせます。（※漫画「将...">
+<meta property="og:type" content="video">
+<meta property="og:video" content="http://ext.nicovideo.jp/thumb_watch/sm25346938?thumb_mode=swf&amp;ap=1&amp;c=1">
+<meta property="og:video:width" content="485">
+<meta property="og:video:height" content="385">
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="og:site_name" content="ニコニコ動画">
+<meta property="og:url" content="http://www.nicovideo.jp/watch/sm25346938">
+<meta property="og:image" content="http://tn-skr3.smilevideo.jp/smile?i=25346938.L">
+	<meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="zh_TW"><meta property="og:locale:alternate" content="en_US">
+<meta property="video:duration" content="386">
+<meta property="video:release_date" content="2015-01-14T20:30+0900">
+<meta property="mixi:device-mobile" content="http://m.nicovideo.jp/watch/sm25346938?cp_webto=mixi_check_pc">
+<meta property="mixi:device-docomo" content="http://m.nicovideo.jp/watch/sm25346938?uid=NULLGWDOCOMO&guid=ON&cp_webto=mixi_check_pc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nico_nico_info">
+<meta name="twitter:title" content="渡辺王将の気持ちまで解説する木村八段">
+<meta name="twitter:description" content="「解説名人」こと木村八段が、渡辺王将の指し手だけでなく気持ちまで解説してみせます。（※漫画「将棋の...">
+<meta name="twitter:image" content="http://tn-skr3.smilevideo.jp/smile?i=25346938">
+<meta name="twitter:app:country" content="jp"/>
+<meta name="twitter:app:name:iphone" content="ニコニコ動画"/>
+<meta name="twitter:app:id:iphone" content="307764057"/>
+<meta name="twitter:app:url:iphone" content="nicovideo://sm25346938"/>
+<meta name="twitter:app:name:googleplay" content="niconico"/>
+<meta name="twitter:app:id:googleplay" content="jp.nicovideo.android"/>
+<meta name="twitter:app:url:googleplay" content="nico://watch/sm25346938" />
+<link rel="alternate" media="handheld" href="http://nicomoba.jp/watch/sm25346938" />
+<link rel="canonical" href="sm25346938">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://sp.nicovideo.jp/watch/sm25346938" />
+    <title>渡辺王将の気持ちまで解説する木村八段 ‐ ニコニコ動画:GINZA</title>
+
+<base href="">
+<link rel="shortcut icon" href="http://res.nimg.jp/img/favicon.ico">
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/css/base.css?130809">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/css/common.css?131126">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/js/nicolib/SuggestSearch/nicolib-SuggestSearch.css?131204">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/css/watch/logout.css?120627">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/css/watch/ichiba_2.css?131217">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/css/multilanguage.css?121227">
+
+<script type="text/javascript">
+
+if (typeof Nico === 'undefined') Nico = {};
+if (typeof Nico.messages === 'undefined') Nico.messages = {};
+
+
+
+Nico.messages.exist         = 'この動画はすでに「とりあえずマイリスト」に登録されています。',
+Nico.messages.noauth        = 'ログインしてください。',
+Nico.messages.maintenance   = 'メンテナンス中です。',
+Nico.messages.expiretoken   = '画面の有効期限が切れました。お手数ですが画面を再読込してください。',
+Nico.messages.invalidvideo  = 'この動画は登録できません',
+Nico.messages.internalerror = '登録中にエラーが発生しました'
+
+</script><script type="text/javascript" src="http://res.nimg.jp/js/lib/prototype.js?1.5.1.1_2"></script>
+<script type="text/javascript" src="http://res.nimg.jp/js/common.js?090905"></script>
+<script type="text/javascript" src="http://res.nimg.jp/js/swfobject.js?4"></script>
+<script type="text/javascript" src="http://res.nimg.jp/js/nicolib.js?150128"></script>
+<script type="text/javascript" src="http://res.nimg.jp/js/ads.js?111213"></script>
+	<script type="text/javascript" charset="utf-8" src="http://res.nimg.jp/js/lib/ads-2.11.0.min.js?141119"></script>
+
+
+<script type="text/javascript" src="http://res.nimg.jp/js/__utm.js?110928"></script><script type="text/javascript" src="http://res.nimg.jp/js/watch.js?121017" chatset="utf-8"></script>
+<script type="text/javascript" src="http://res.nimg.jp/js/swfwheel_pepper_fix.min.js?120814" chatset="utf-8"></script>
+	
+<script type="text/javascript"><!--
+
+var User = { id: false, age: false, isPremium: false, isOver18: !!document.cookie.match(/nicoadult\s*=\s*1/), isMan: null };
+var q = "";
+var country = "";
+
+
+
+
+--></script>
+
+
+
+
+<script type="text/javascript" charset="utf-8"><!--
+
+Ads.get_segment_object = function(){
+	var segment = {};
+
+	return segment;
+
+};
+
+// -->
+</script>
+    <script type="text/javascript" src="http://res.nimg.jp/js/lib/jquery/jquery-1.7.min.js"></script>
+    <script type="text/javascript">$j=jQuery.noConflict();</script>
+
+<script type="text/javascript" src="http://res.nimg.jp/js/nicolib/SuggestSearch/nicolib-SuggestSearch.js?150205"></script>
+<script type="text/javascript">Nico.SuggestSearch.IS_ENABLED = true;Nico.SuggestSearch.IS_LOGIN = false;</script>
+
+</head>
+
+<body id="PAGETOP" class="ja-jp">
+<!---->
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/js/nicoheader/resources/siteHeader.css?131031">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="http://res.nimg.jp/js/nicoheader/resources/nicolib-CommonNotificationHeader.css?141023">
+<script type="text/javascript" charset="utf-8" src="http://res.nimg.jp/js/nicoheader/siteHeader.js?131031"></script>
+<script type="text/javascript" charset="utf-8" src="http://res.nimg.jp/js/nicoheader/nicolib-CommonNotificationHeader.js?131031"></script>
+<div id="siteHeader">
+	<div id="siteHeaderInner">
+		<ul class="siteHeaderGlovalNavigation">
+			<li><a href="http://www.nicovideo.jp/?header"><span>niconico</span></a></li>
+			<li><a href="http://www.nicovideo.jp/video_top?header"><span>動画</span></a></li>
+			<li><a href="http://seiga.nicovideo.jp/?header"><span>静画</span></a></li>
+			<li><a href="http://live.nicovideo.jp/?header"><span>生放送</span></a></li>
+			<li><a href="http://ch.nicovideo.jp/?header"><span>チャンネル</span></a></li>
+			<li><a href="http://ch.nicovideo.jp/portal/blomaga?header"><span>ブロマガ</span></a></li>
+			<li class="siteHeaderOther" id="siteHeaderLeftMenu">
+				<a href="javascript:void(0);"><span>その他▼</span></a>
+				<ul id="siteHeaderLeftMenuContainer" style="display: none;">
+					<li><a href="http://app.nicovideo.jp/?header">アプリ</a></li>
+					<li><a href="http://dic.nicovideo.jp/?header">大百科</a></li>
+					<li><a href="http://ichiba.nicovideo.jp/?header">市場</a></li>
+					<li><a href="http://uad.nicovideo.jp/?header">ニコニ広告</a></li>
+					<li><a href="http://3d.nicovideo.jp/?header">ニコニ立体</a></li>
+					<li><a href="http://commons.nicovideo.jp/?header">コモンズ</a></li>
+					<li><a href="http://jk.nicovideo.jp/?header">実況</a></li>
+					<li><a href="http://com.nicovideo.jp/?header">コミュニティ</a></li>
+					<li><a href="http://nicoseiga.charagoods.jp/?header">静画の印刷工房</a></li>
+					<li><a href="http://info.nicovideo.jp/pr_nicom/iphone.html?header">スマートフォン</a></li>
+					<li><a href="http://news.nicovideo.jp/?header">ニュース</a></li>
+					<li class="menuServiceList"><a href="http://www.nicovideo.jp/top_service?header">サービス一覧</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="siteHeaderMenuList">
+			<li id="siteHeaderNotification" class="siteHeaderLogin">
+				<a href="http://www.nicovideo.jp/login"><span>ログイン</span></a>
+			</li>
+			<li class="siteHeaderHorizon">
+				<a href="https://account.nicovideo.jp/register?sec=common_header&mode=landing" style="color:#F1B700;"><span>ニコニコ会員登録</span></a>
+			</li>
+<!-- end notification header -->
+			<li class="siteHeaderHorizon"><a href="http://www.nicovideo.jp/recommendations"><span>オススメ</span></a></li>
+			<li><a href="http://www.upload.nicovideo.jp/upload"><span>動画を投稿</span></a></li>
+			<li><a href="http://www.nicovideo.jp/ranking" id="menu-ranking"><span>ランキング</span></a></li>
+			<li class="siteHeaderOther" id="siteHeaderRightMenu">
+				<a href="javascript:void(0);"><span>メニュー▼</span></a>
+				<ul style="display: none;" id="siteHeaderRightMenuContainer">
+					<li><a href="http://www.nicovideo.jp/my/mylist">マイリスト</a></li>
+					<li><a href="http://www.nicovideo.jp/my/watchlist">お気に入り</a></li>
+					<li><a href="http://www.nicovideo.jp/my/video">投稿動画</a></li>
+					<li><a href="http://www.nicovideo.jp/my/history">視聴履歴</a></li>
+					<li><a href="https://account.nicovideo.jp/my/account">アカウント設定</a></li>
+					<li><a href="http://point.nicovideo.jp/index/bank/?from_notification=2">ポイント購入</a></li>					<li id="siteHeaderRightMenuUnfix"><a href="javascript:void(0);">ヘッダー:<span class="siteHeaderScroll">追従</span></a></li>
+					<li id="siteHeaderRightMenuFix"><a href="javascript:void(0);">ヘッダー:<span class="siteHeaderFix">固定</span></a></li>
+					<li><a href="http://faq.nicovideo.jp/">ヘルプ</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div><!---->
+ 
+
+
+<div id="PAGECONTAINER">
+	<div id="PAGEMAIN" class="body_984">
+		<div id="PAGEHEADER">
+		<div class="clearfix">
+<div id="head_logo" class="zero">
+	<p id="hidariue"><a href="http://www.nicovideo.jp/hidariue"><script type="text/javascript" src="http://res.nimg.jp/js/head_icon.js?110513"></script></a></p>
+	<p id="nicodou"><a href="http://www.nicovideo.jp/video_top" target="_top"><img src="http://res.nimg.jp/img/base/head/logo/ginza.png" alt="ニコニコ動画:GINZA"></a></p>
+</div>
+
+<div id="head_search">
+<form id="head_search_form" action="http://www.nicovideo.jp/search" method="get" onsubmit="submitSearch(this.action, false); return false;"><input type="hidden" name="ref"><p id="search_tab"><a href="http://www.nicovideo.jp/#" class="head_ssw_1" id="target_s" title="動画をキーワードで検索" onclick="submitSearch('/search', this, Nico.SuggestSearch.TARGET_PAGE_KEYWORD_SEARCH); return false;">キーワード</a><a href="http://www.nicovideo.jp/#" class="head_ssw_0" id="target_t" title="動画をタグで検索"       onclick="submitSearch('/tag', this, Nico.SuggestSearch.TARGET_PAGE_TAG_SEARCH); return false;">タグ</a><a href="http://www.nicovideo.jp/#" class="head_ssw_0" id="target_m" title="マイリストを検索"       onclick="submitSearch('/mylist_search', this, Nico.SuggestSearch.TARGET_PAGE_MYLIST_SEARCH); return false;">マイリスト</a></p><div id="search_input" class="zero"><p class="typeText"><input id="bar_search" type="text" name="s" value=""></p><p class="typeSubmit"><input name="submit" type="submit" alt="検索"></p></div></form>
+</div>
+<script type="text/javascript"><!--
+var _suggestSearchInstance = null;
+if(typeof jQuery !== 'undefined') _suggestSearchInstance = new Nico.SuggestSearch({targetInput: '#bar_search'});
+
+function submitSearch(p, e, q) {
+    if (_suggestSearchInstance) _suggestSearchInstance.setTargetPage(q);
+	var f = $('head_search_form'), s = String.interpret(f.s.value).strip().replace(/%20/g, '+');
+	if (s != '') location.href = p + "/" + encodeURIComponent(s) + (f.track ? "?track=" + f.track.value : "");
+	else if (e) { f.down('a.head_ssw_1').className = 'head_ssw_0'; e.className = 'head_ssw_1'; f.action = p; f.s.focus(); }
+}
+--></script>
+
+
+<div id="head_ads">
+	<div class="ads_468"><!--↓表示してもよい↓-->
+
+<div id="web_pc_top"></div>
+<script type="text/javascript"><!--
+
+
+	(function(){
+		var segment = Ads.get_segment_object();
+		new Ads.Advertisement({zone: 38, segments: segment, impression: 2}).set('web_pc_top');
+	})();
+
+
+
+--></script>
+
+<!--↑表示してもよい↑-->
+
+
+</div>
+</div>
+
+</div>		</div>
+		<div id="PAGEBODY">
+		
+
+
+
+<div style="padding-top:8px;" itemscope itemtype="http://schema.org/VideoObject">
+<meta itemprop="url" content="http://www.nicovideo.jp/watch/sm25346938">
+<meta itemprop="image" content="http://tn-skr3.smilevideo.jp/smile?i=25346938">
+<meta itemprop="duration" content="PT386S">
+<meta itemprop="interactionCount" content="10046 UserPlays, 204 UserComments">
+<meta itemprop="datePublished" content="2015-01-14T20:30+0900">
+
+<div class="content_672 wAdjust">
+<!--↓左列↓-->
+
+<!--↓↓-->
+<div style="width:144px; float:left; overflow:hidden;">
+<p class="hLine"><img src="http://res.nimg.jp/img/watch/logout/icon_vinfo.png" alt="動画情報">動画情報</p>
+	<!--↓thumbnail↓-->
+	<div style="width:132px; border:solid 2px #C9CFCF; margin:4px;">
+	<p><img alt="" src="http://tn-skr3.smilevideo.jp/smile?i=25346938" class="img_std128"></p>
+	<p class="vinfo_length"><span>6:26</span></p>
+	</div>
+	<!--↑thumbnail↑-->
+</div>
+<div style="width:510px; float:left; overflow:hidden;">
+	<div style="padding:4px;">
+	<p class="font12" style="color:#696F6F; margin:0 0 4px;">
+		<strong>2015年01月14日 20:30</strong> 投稿
+				</p>
+	<!-- google_ad_section_start -->
+	<h1 itemprop="name">渡辺王将の気持ちまで解説する木村八段</h1>
+	<!-- google_ad_section_end -->
+	</div>
+	<table cellpadding="0" cellspacing="4" class="font12" style="clear:both;">
+	<tr>
+	<td><img src="http://res.nimg.jp/img/x.gif" alt="再生数" class="icon_view"></td>
+	<td>再生数：<strong>10,046</strong></td>
+	</tr>
+	<tr>
+	<td><img src="http://res.nimg.jp/img/x.gif" alt="コメント数" class="icon_comment"></td>
+	<td>コメント数：<strong>204</strong></td>
+	</tr>
+
+			<tr>
+		<td><img src="http://res.nimg.jp/img/x.gif" alt="投稿者" class="icon_owner"></td>
+		<td itemprop="author" itemscope itemtype="http://schema.org/Person">
+		投稿者：<strong itemprop="name">手放したRoadster</strong> さん
+	</td>
+	</tr>
+		</table>
+</div>
+
+
+
+<!--↑↑-->
+
+
+<!--↓動画説明文↓-->
+<div style="clear:both;">
+		<div id="des_short">
+	<p class="font12" style="color:#494F4F; margin:0 0 4px;"><strong>動画の説明文：</strong><a href="http://www.nicovideo.jp/#" onclick="hideOBJ('des_short'); showOBJ('des_full'); return false;" style="color:#069;">全文を表示</a></p>
+	<p class="font12">「解説名人」こと木村八段が、渡辺王将の指し手だけでなく気持ちまで解説してみせます。（※漫画「将棋の渡辺くん」の１話目に同じようなシーンがあったので、公式サイトのＵＲＬを掲載します。　http://www.shone...</p>
+	</div>
+		<div id="des_full" style="display:none;">
+	<p class="font12" style="color:#494F4F; margin:0 0 4px;"><strong>動画の説明文：</strong><a href="http://www.nicovideo.jp/#" onclick="showOBJ('des_short'); hideOBJ('des_full'); return false;" style="color:#069;">説明文を閉じる</a></p>
+	<!-- google_ad_section_start -->
+	<p class="font12" itemprop="description">「解説名人」こと木村八段が、渡辺王将の指し手だけでなく気持ちまで解説してみせます。（※漫画「将棋の渡辺くん」の１話目に同じようなシーンがあったので、公式サイトのＵＲＬを掲載します。　http://www.shonenmagazine.com/bmaga/shoginowatanabekun　別に講談社の回し者ではありません（笑）〔将棋関連投稿動画<a href="http://www.nicovideo.jp/mylist/43800559" target="_blank">mylist/43800559</a>〕</p>
+	<!-- google_ad_section_end -->
+	</div>
+</div>
+<!--↑動画説明文↑-->
+
+<!--↓↓-->
+<div class="mb8p4">
+<p class="font12" style="color:#494F4F; margin:0 0 4px;"><strong>登録されているタグ：</strong></p>
+<p class="font12" style="margin-left:16px;"><!-- google_ad_section_start --><nobr><a href="http://www.nicovideo.jp/tag/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%86%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88" rel="tag" itemprop="keywords">エンターテイメント</a><a href="http://dic.nicovideo.jp/a/エンターテイメント" target="_blank" title="大百科 エンターテイメント の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E5%B0%86%E6%A3%8B" rel="tag" itemprop="keywords">将棋</a><a href="http://dic.nicovideo.jp/a/将棋" target="_blank" title="大百科 将棋 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E7%8E%8B%E5%B0%86%E6%88%A6" rel="tag" itemprop="keywords">王将戦</a><a href="http://dic.nicovideo.jp/a/王将戦" target="_blank" title="大百科 王将戦 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E6%9C%A8%E6%9D%91%E4%B8%80%E5%9F%BA" rel="tag" itemprop="keywords">木村一基</a><a href="http://dic.nicovideo.jp/a/木村一基" target="_blank" title="大百科 木村一基 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E6%B8%A1%E8%BE%BA%E6%98%8E" rel="tag" itemprop="keywords">渡辺明</a><a href="http://dic.nicovideo.jp/a/渡辺明" target="_blank" title="大百科 渡辺明 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E9%83%B7%E7%94%B0%E7%9C%9F%E9%9A%86" rel="tag" itemprop="keywords">郷田真隆</a><a href="http://dic.nicovideo.jp/a/郷田真隆" target="_blank" title="大百科 郷田真隆 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E5%AE%89%E9%A3%9F%E7%B7%8F%E5%AD%90" rel="tag" itemprop="keywords">安食総子</a><a href="http://dic.nicovideo.jp/a/安食総子" target="_blank" title="大百科 安食総子 の記事を読む"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_on.png"></a>&nbsp;&nbsp;</nobr><wbr><nobr><a href="http://www.nicovideo.jp/tag/%E6%97%A9%E9%A3%9F%E3%81%84%E7%8E%8B%EF%BC%88%E5%B0%86%EF%BC%89" rel="tag" itemprop="keywords">早食い王（将）</a><a href="http://dic.nicovideo.jp/a/早食い王（将）" target="_blank" title="大百科 早食い王（将） の記事を書く" rel="nofollow"><img alt="" class="txticon" src="http://res.nimg.jp/img/common/icon/dic_off.png"></a></nobr><wbr><!-- google_ad_section_end --></p>
+</div>
+<div style="clear:both; margin:8px 0;"><p class="dotline_2"></p></div>
+<p class="font12" style="padding:4px;">この動画をご覧いただくには <strong>niconicoアカウント</strong>  でログインしてください。</p>
+<div id="suggest_login" class="clearfix"><a href="https://account.nicovideo.jp/register?from=watch&mode=landing&sec=not_login_watch_d" class="registerButton button">ニコニコ会員登録</a><a href="https://account.nicovideo.jp/login?site=niconico&time=1423558516&hash_key=4afcc615&next_url=%2Fwatch%2Fsm25346938" class="loginButton button">ログイン画面へ</a></div><div class="ext_login_box clearfix"><div class="ext_login clearfix"><a href="https://account.nicovideo.jp/login/linkages/twitter/authorize?site=niconico&next_url=%2Fwatch%2Fsm25346938" class="sns_login" id="Login_twitter" title="Twitterでログイン"><img src="http://res.nimg.jp/img/watch/logout/icon_twitter.png"><span>Twitterでログイン</span></a></div><div class="ext_login clearfix"><a href="https://account.nicovideo.jp/login/linkages/facebook/authorize?site=niconico&next_url=%2Fwatch%2Fsm25346938" class="sns_login" id="Login_fb" title="facebookでログイン"><img src="http://res.nimg.jp/img/watch/logout/icon_facebook.png"><span>facebookでログイン</span></a></div></div>
+<!--↑↑-->
+
+<!--↓↓-->
+
+<div style="clear:both; margin:8px 0;"><p class="dotline_2"></p></div>
+		<p class="font12" style="color:#999F9F;">マイリストコメントはありません</p>
+	<!--↑マイリストコメント↑-->
+	<div style="clear:both; margin:8px 0;"><p class="dotline_2"></p></div>
+<!--↓市場↓-->
+<!--表示する-->
+<p class="font12" style="padding:4px 0;"><strong>この動画に関連した商品(by ニコニコ市場) …</strong></p>
+<div id="ichiba_placeholder"><div id="showMainVal" style="display:none;">a11b1292b0b7052f1f74b2bae57ff5b5</div>
+<div id="ichibaArea">
+<div id="ichiba_itemC">
+  <!--↓何も貼付されていない↓-->
+<!--↑何も貼付されていない↑-->
+</div>
+<span id="ichiba_editC"></span>
+<span id="ichiba_edit_buttonC"></span>
+<div id="ichiba_itemA">
+  <!--↓何も貼付されていない↓-->
+<p style="font-size:14px; line-height:1.2; color:#696F6F; margin-bottom:4px;" class="ichiba_textbox">着うた・着メロなどの登録はありません</p>
+<!--↑何も貼付されていない↑-->
+
+</div>
+<div id="ichiba_editA"></div>
+<div id="ichiba_itemB">
+  <div id="ichiba_adults" style="display:none;"></div>
+    <table id="bpn_display_big">
+        <tr valign="top">
+                                                                            <td id="ichibaitem_az4048850407">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4048850407/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4048850407&linkCode=asn&ascsubtag=7_vi_4048850407_sm25346938_u!OBx1[[HcA]_1423558516_614449" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4048850407_img" src="http://ecx.images-amazon.com/images/I/51Q0x6lO3jL._AA168_.jpg" width="168" height="168" title="うわのそら" alt="うわのそら" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4048850407/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4048850407&linkCode=asn&ascsubtag=7_vi_4048850407_sm25346938_u!OBx1[[HcA]_1423558516_614449" class="ichiba_item" target="_blank">うわのそら</a><span class="col_item_lock">★</span><br>
+        <span style="color:#696F6F;">坂崎 千春</span><br>        <nobr class="bpn_price">￥1,080</nobr><br>
+        <strong>1人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4048850407?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4925006266">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4925006266/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4925006266&linkCode=asn&ascsubtag=7_vi_4925006266_sm25346938_u!OBx1[[HcA]_1423558516_f24620" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4925006266_img" src="http://ecx.images-amazon.com/images/I/415VWSN1KYL._AA168_.jpg" width="168" height="168" title="甘いのがお好き―これ以上おいしいケーキなんてない! (おいしい読みもの)" alt="甘いのがお好き―これ以上おいしいケーキなんてない! (おいしい読みもの)" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4925006266/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4925006266&linkCode=asn&ascsubtag=7_vi_4925006266_sm25346938_u!OBx1[[HcA]_1423558516_f24620" class="ichiba_item" target="_blank">甘いのがお好き―これ以上おいしいケーキなんてない! (おいしい読みもの)</a><span class="col_item_lock">★</span><br>
+        <span style="color:#696F6F;">村山 なおこ</span><br>        <nobr class="bpn_price">￥ --</nobr><br>
+        <strong>26人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4925006266?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4569696260">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4569696260/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4569696260&linkCode=asn&ascsubtag=7_vi_4569696260_sm25346938_u!OBx1[[HcA]_1423558516_d856e1" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4569696260_img" src="http://ecx.images-amazon.com/images/I/41vpwqrN4SL._AA168_.jpg" width="168" height="168" title="空腹力 (PHP新書)" alt="空腹力 (PHP新書)" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4569696260/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4569696260&linkCode=asn&ascsubtag=7_vi_4569696260_sm25346938_u!OBx1[[HcA]_1423558516_d856e1" class="ichiba_item" target="_blank">空腹力 (PHP新書)</a><span class="col_item_lock">★</span><br>
+        <span style="color:#696F6F;">石原 結實</span><br>        <nobr class="bpn_price">￥778</nobr><br>
+        <strong style="color:#C00;">9人</strong>が購入        、<strong>32人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4569696260?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                    </tr>
+        <tr valign="top">
+                                <td id="ichibaitem_az4763132024">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4763132024/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4763132024&linkCode=asn&ascsubtag=7_vi_4763132024_sm25346938_u!OBx1[[HcA]_1423558516_41c8df" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4763132024_img" src="http://ecx.images-amazon.com/images/I/410s1vKA3mL._AA168_.jpg" width="168" height="168" title="「空腹」が人を健康にする" alt="「空腹」が人を健康にする" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4763132024/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4763132024&linkCode=asn&ascsubtag=7_vi_4763132024_sm25346938_u!OBx1[[HcA]_1423558516_41c8df" class="ichiba_item" target="_blank">「空腹」が人を健康にする</a><span class="col_item_lock">★</span><br>
+        <span style="color:#696F6F;">南雲吉則</span><br>        <nobr class="bpn_price">￥1,512</nobr><br>
+        <strong style="color:#C00;">17人</strong>が購入        、<strong>27人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4763132024?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4834758974">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4834758974/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4834758974&linkCode=asn&ascsubtag=7_vi_4834758974_sm25346938_u!OBx1[[HcA]_1423558516_a862e4" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4834758974_img" src="http://ecx.images-amazon.com/images/I/51KWD3YnAVL._AA168_.jpg" width="168" height="168" title="みんな大好き!チーズケーキ―かんたん・かわいい・おいしい!レシピがいっぱい (ブティック・ムック No. 897)" alt="みんな大好き!チーズケーキ―かんたん・かわいい・おいしい!レシピがいっぱい (ブティック・ムック No. 897)" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4834758974/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4834758974&linkCode=asn&ascsubtag=7_vi_4834758974_sm25346938_u!OBx1[[HcA]_1423558516_a862e4" class="ichiba_item" target="_blank">みんな大好き!チーズケーキ―かんたん・かわいい・おいしい!レシピがいっぱい (ブティック・ムック No. 897)</a><span class="col_item_lock">★</span><br>
+        <span style="color:#696F6F;">信太 康代</span><br>        <nobr class="bpn_price">￥ --</nobr><br>
+            </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4834758974?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4140162309">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4140162309/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4140162309&linkCode=asn&ascsubtag=7_vi_4140162309_sm25346938_u!OBx1[[HcA]_1423558516_1f2c1e" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4140162309_img" src="http://ecx.images-amazon.com/images/I/51SOdakpPTL._AA168_.jpg" width="168" height="168" title="木村一基の初級者でもわかる受けの基本 (NHK将棋シリーズ )" alt="木村一基の初級者でもわかる受けの基本 (NHK将棋シリーズ )" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4140162309/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4140162309&linkCode=asn&ascsubtag=7_vi_4140162309_sm25346938_u!OBx1[[HcA]_1423558516_1f2c1e" class="ichiba_item" target="_blank">木村一基の初級者でもわかる受けの基本 (NHK将棋シリーズ )</a><br>
+        <span style="color:#696F6F;">木村 一基</span><br>        <nobr class="bpn_price">￥1,296</nobr><br>
+        <strong style="color:#C00;">2人</strong>が購入        、<strong>30人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4140162309?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                    </tr>
+        <tr valign="top">
+                                <td id="ichibaitem_azB003JIMTWM">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/B003JIMTWM/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=B003JIMTWM&linkCode=asn&ascsubtag=7_vi_B003JIMTWM_sm25346938_u!OBx1[[HcA]_1423558516_4e01b1" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="azB003JIMTWM_img" src="http://ecx.images-amazon.com/images/I/51l-bMkJk6L._AA168_.jpg" width="168" height="168" title="NHK 将棋講座 2010年 06月号 [雑誌]" alt="NHK 将棋講座 2010年 06月号 [雑誌]" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/B003JIMTWM/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=B003JIMTWM&linkCode=asn&ascsubtag=7_vi_B003JIMTWM_sm25346938_u!OBx1[[HcA]_1423558516_4e01b1" class="ichiba_item" target="_blank">NHK 将棋講座 2010年 06月号 [雑誌]</a><br>
+        <span style="color:#696F6F;">日本放送出版協会</span><br>        <nobr class="bpn_price">￥ --</nobr><br>
+        <strong>12人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/azB003JIMTWM?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4819703625">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4819703625/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4819703625&linkCode=asn&ascsubtag=7_vi_4819703625_sm25346938_u!OBx1[[HcA]_1423558516_f4171f" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4819703625_img" src="http://ecx.images-amazon.com/images/I/41ZZ6KMH4AL._AA168_.jpg" width="168" height="168" title="実戦の振り飛車破り" alt="実戦の振り飛車破り" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4819703625/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4819703625&linkCode=asn&ascsubtag=7_vi_4819703625_sm25346938_u!OBx1[[HcA]_1423558516_f4171f" class="ichiba_item" target="_blank">実戦の振り飛車破り</a><br>
+        <span style="color:#696F6F;">郷田 真隆</span><br>        <nobr class="bpn_price">￥ --</nobr><br>
+        <strong style="color:#C00;">1人</strong>が購入        、<strong>98人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4819703625?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4309275265">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4309275265/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4309275265&linkCode=asn&ascsubtag=7_vi_4309275265_sm25346938_u!OBx1[[HcA]_1423558516_9e8ddb" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4309275265_img" src="http://ecx.images-amazon.com/images/I/51Whwvc0IrL._AA168_.jpg" width="168" height="168" title="渡辺明の思考: 盤上盤外問答" alt="渡辺明の思考: 盤上盤外問答" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4309275265/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4309275265&linkCode=asn&ascsubtag=7_vi_4309275265_sm25346938_u!OBx1[[HcA]_1423558516_9e8ddb" class="ichiba_item" target="_blank">渡辺明の思考: 盤上盤外問答</a><br>
+        <span style="color:#696F6F;">渡辺 明</span><br>        <nobr class="bpn_price">￥1,674</nobr><br>
+        <strong style="color:#C00;">2人</strong>が購入        、<strong>66人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4309275265?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                    </tr>
+        <tr valign="top">
+                                <td id="ichibaitem_az4166609505">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4166609505/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4166609505&linkCode=asn&ascsubtag=7_vi_4166609505_sm25346938_u!OBx1[[HcA]_1423558516_6c5d4e" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4166609505_img" src="http://ecx.images-amazon.com/images/I/31KbVOn8O5L._AA168_.jpg" width="168" height="168" title="勝負心 (文春新書 950)" alt="勝負心 (文春新書 950)" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4166609505/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4166609505&linkCode=asn&ascsubtag=7_vi_4166609505_sm25346938_u!OBx1[[HcA]_1423558516_6c5d4e" class="ichiba_item" target="_blank">勝負心 (文春新書 950)</a><br>
+        <span style="color:#696F6F;">渡辺 明</span><br>        <nobr class="bpn_price">￥810</nobr><br>
+        <strong style="color:#C00;">12人</strong>が購入        、<strong>56人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4166609505?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_az4309266088">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://www.amazon.co.jp/dp/4309266088/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4309266088&linkCode=asn&ascsubtag=7_vi_4309266088_sm25346938_u!OBx1[[HcA]_1423558516_27634f" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="az4309266088_img" src="http://ecx.images-amazon.com/images/I/518STZF34NL._AA168_.jpg" width="168" height="168" title="ケーキ大好きすてきなパティシエの店42―東京・横浜・鎌倉" alt="ケーキ大好きすてきなパティシエの店42―東京・横浜・鎌倉" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://www.amazon.co.jp/dp/4309266088/ref=nosim/?tag=nicovideo07_st1-22&creative=380333&creativeASIN=4309266088&linkCode=asn&ascsubtag=7_vi_4309266088_sm25346938_u!OBx1[[HcA]_1423558516_27634f" class="ichiba_item" target="_blank">ケーキ大好きすてきなパティシエの店42―東京・横浜・鎌倉</a><br>
+        <span style="color:#696F6F;">河出書房新社編集部</span><br>        <nobr class="bpn_price">￥ --</nobr><br>
+        <strong>9人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/az4309266088?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                                                                    <td id="ichibaitem_ysshinobiya_GZ134">
+    <div class="slot">
+    <!--吹出-->
+    <div class="bpn_fkd_big"></div>
+            <a style="cursor:pointer;" href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2466861&pid=876879864&vc_url=http%3A%2F%2Frd.store.yahoo.co.jp%2Fshinobiya%2Fgz134.html&vcptn=ysshinobiya_GZ134" class="ichiba_item" target="_blank">
+        <p style="text-align:center;">
+                <img id="ysshinobiya_GZ134_img" src="http://item.shopping.c.yimg.jp/i/g/shinobiya_gz134" width="168" height="168" title="日本刀箸「伊達政宗」（箸置き付）腹が減っては戦はできぬ！" alt="日本刀箸「伊達政宗」（箸置き付）腹が減っては戦はできぬ！" class="bpn_big_pho">
+                </p>
+        </a>
+            <p class="ichiba_font12"><a href="http://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2466861&pid=876879864&vc_url=http%3A%2F%2Frd.store.yahoo.co.jp%2Fshinobiya%2Fgz134.html&vcptn=ysshinobiya_GZ134" class="ichiba_item" target="_blank">日本刀箸「伊達政宗」（箸置き付）腹が減っては戦はできぬ！</a><br>
+            <span style="color:#696F6F;">しのびや Yahoo!ショップ</span><br>    <nobr class="bpn_price">￥1,080</nobr><br>
+        <strong>1人</strong>がクリック    </p>
+        <p class="ichiba_font10"><a href="http://ichiba.nicovideo.jp/item/ysshinobiya_GZ134?utm_campaign=sm25346938&utm_medium=video&utm_source=nicovideo.jp&utm_content=textL" target="_blank" style="color:#693;">ニコニコ市場へ</a></p>
+    
+        </div></td>
+                                </tr>
+    </table>
+
+</div>
+<div id="ichiba_editB"></div>
+<table width="100%" cellpadding="4" cellspacing="0" style="margin:0 0 8px; font-size:10px; line-height:1.25;">
+<tr>
+<td width="100%" style="text-align:left;">
+<a href="http://ichiba.nicovideo.jp/" target="_blank" style="color:#292F2F; text-decoration:underline;">ニコニコ市場</a> は動画に関連した商品を動画に登録できるサービスです。 ニコニコ市場の不適切な利用につきましては、<a href="http://faq.nicovideo.jp/EokpControl?&tid=11055&event=FE0006" target="_brank">こちら</a>をご確認ください。
+… <a href="http://ichiba.nicovideo.jp/ranking" target="_blank" style="color:#292F2F; text-decoration:underline;">ランキング</a>
+</td>
+<td nowrap><a href="https://affiliate.amazon.co.jp/" target="_blank" style="text-decoration:none; color:#292F2F;">Amazon.co.jp アソシエイト</a></td>
+</tr>
+</table>
+</div>
+</div>
+<!--↑表示する↑-->
+<!--↑市場↑-->
+<!--↑↑-->
+
+<!--↑左列↑-->
+</div>
+
+<div class="content_312">
+<!--↓右列↓-->
+
+
+
+<!--↓関連動画↓-->
+<div style="padding:4px;">
+<p class="font12" style="border-bottom:solid 2px #696F6F; padding:0 0 2px;"><strong>この動画に関連した動画</strong></p>
+</div>
+<table width="312" cellpadding="4" cellspacing="0" style="margin:0 0 8px;">
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/1421499761"><img alt="" src="http://tn-skr1.smilevideo.jp/smile?i=25368548" class="img_std96"></a></p>
+<p class="vinfo_length"><span>8:22</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月17日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/1421499761" class="watch">将棋番組に寄せられたメールに答える木村八段と安食女流</a></p>
+<p class="font10">
+<nobr>再生：<strong>3348</strong><nobr><br>
+<nobr>コメ：<strong>97</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/1421409257"><img alt="" src="http://tn-skr2.smilevideo.jp/smile?i=25360281" class="img_std96"></a></p>
+<p class="vinfo_length"><span>9:44</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月16日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/1421409257" class="watch">【将棋】糸谷哲郎竜王 vs 豊島将之七段 はじめ【朝日杯】</a></p>
+<p class="font10">
+<nobr>再生：<strong>1732</strong><nobr><br>
+<nobr>コメ：<strong>32</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/1421409430"><img alt="" src="http://tn-skr3.smilevideo.jp/smile?i=25360314" class="img_std96"></a></p>
+<p class="vinfo_length"><span>9:35</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月16日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/1421409430" class="watch">【将棋】糸谷哲郎竜王 vs 豊島将之七段 おわり【朝日杯】</a></p>
+<p class="font10">
+<nobr>再生：<strong>2280</strong><nobr><br>
+<nobr>コメ：<strong>17</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/1421448724"><img alt="" src="http://tn-skr2.smilevideo.jp/smile?i=25363853" class="img_std96"></a></p>
+<p class="vinfo_length"><span>5:58</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月17日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/1421448724" class="watch">【電王戦FINALへの道】#20 斎藤慎太郎 vs Apery 1分将棋①</a></p>
+<p class="font10">
+<nobr>再生：<strong>15164</strong><nobr><br>
+<nobr>コメ：<strong>273</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+</table>
+<!--↑関連動画↑-->
+
+<!--↓投稿者のその他動画↓-->
+<div style="padding:4px;">
+	<p class="font12" style="border-bottom:solid 2px #696F6F; padding:0 0 2px;"><strong>手放したRoadsterさんの投稿動画</strong></p>
+</div>
+<table width="312" cellpadding="4" cellspacing="0" style="margin:0 0 8px;">
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/sm25535399"><img alt="" src="http://tn-skr4.smilevideo.jp/smile?i=25535399" class="img_std96"></a></p>
+<p class="vinfo_length"><span>3:22</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年02月09日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/sm25535399" class="watch">華麗に宣伝する木村八段、香川女流王将と 頭をかかえる谷川会長</a></p>
+<p class="font10">
+<nobr>再生：<strong>1509</strong><nobr><br>
+<nobr>コメ：<strong>64</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/sm25461193"><img alt="" src="http://tn-skr2.smilevideo.jp/smile?i=25461193" class="img_std96"></a></p>
+<p class="vinfo_length"><span>5:33</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月30日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/sm25461193" class="watch">指導対局について語る神谷八段と山口女流</a></p>
+<p class="font10">
+<nobr>再生：<strong>1618</strong><nobr><br>
+<nobr>コメ：<strong>42</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/sm25460676"><img alt="" src="http://tn-skr1.smilevideo.jp/smile?i=25460676" class="img_std96"></a></p>
+<p class="vinfo_length"><span>7:50</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月30日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/sm25460676" class="watch">ゲームについて熱く語る竹部女流と 意外なところに食いつく畠山鎮七段</a></p>
+<p class="font10">
+<nobr>再生：<strong>7733</strong><nobr><br>
+<nobr>コメ：<strong>265</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr valign="top">
+<td>
+<p><a href="http://www.nicovideo.jp/watch/sm25452860"><img alt="" src="http://tn-skr1.smilevideo.jp/smile?i=25452860" class="img_std96"></a></p>
+<p class="vinfo_length"><span>5:55</span></p>
+</td>
+<td width="100%">
+<p class="font10"><strong>2015年01月29日</strong> 投稿</p>
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/watch/sm25452860" class="watch">自分の字をきらい過ぎる神谷八段</a></p>
+<p class="font10">
+<nobr>再生：<strong>4872</strong><nobr><br>
+<nobr>コメ：<strong>169</strong><nobr>
+</p>
+</td>
+</tr>
+<tr><td colspan="2"><p class="dotline_1"></p></td></tr>
+<tr><td colspan="2" align="right" class="font12"><a href="http://www.nicovideo.jp/user/4690560/video">→全ての動画を見る</a></td></tr>
+</table>
+<!--↑投稿者のその他動画↑-->
+
+<!--↓投稿者のマイリスト↓-->
+<div style="padding:4px;">
+	<p class="font12" style="border-bottom:solid 2px #696F6F; padding:0 0 2px;"><strong>手放したRoadsterさんのマイリスト一覧</strong></p>
+</div>
+<table width="312" cellpadding="4" cellspacing="0" style="margin:0 0 8px;">
+<tr valign="top">
+<td width="100%">
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/mylist/45092055" class="watch">癒しの王位戦シリーズ</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100%">
+<p class="font12" style="margin:2px 0;"><a href="http://www.nicovideo.jp/mylist/43800559" class="watch">将棋関連投稿動画</a></p>
+</td>
+</tr>
+</table>
+<!--↑投稿者のマイリスト↑-->
+
+<!--↓他サービスのタグ検索結果↓-->
+<div style="padding:4px;">
+<p class="font12" style="border-bottom:solid 2px #696F6F; padding:0 0 2px;"><strong>関連コンテンツを検索</strong></p>
+</div>
+<div class="tagBox">
+	<p class="tagTitle">生放送タグ検索</p>
+<a href="http://live.nicovideo.jp/search/エンターテイメント?kind=tags">エンターテイメント</a>
+<a href="http://live.nicovideo.jp/search/将棋?kind=tags">将棋</a>
+<a href="http://live.nicovideo.jp/search/王将戦?kind=tags">王将戦</a>
+<a href="http://live.nicovideo.jp/search/木村一基?kind=tags">木村一基</a>
+<a href="http://live.nicovideo.jp/search/渡辺明?kind=tags">渡辺明</a>
+<a href="http://live.nicovideo.jp/search/郷田真隆?kind=tags">郷田真隆</a>
+<a href="http://live.nicovideo.jp/search/安食総子?kind=tags">安食総子</a>
+<a href="http://live.nicovideo.jp/search/早食い王（将）?kind=tags">早食い王（将）</a>
+</div>
+<div class="tagBox">
+	<p class="tagTitle">静画タグ検索</p>
+<a href="http://seiga.nicovideo.jp/tag/エンターテイメント?target=illust">エンターテイメント</a>
+<a href="http://seiga.nicovideo.jp/tag/将棋?target=illust">将棋</a>
+<a href="http://seiga.nicovideo.jp/tag/王将戦?target=illust">王将戦</a>
+<a href="http://seiga.nicovideo.jp/tag/木村一基?target=illust">木村一基</a>
+<a href="http://seiga.nicovideo.jp/tag/渡辺明?target=illust">渡辺明</a>
+<a href="http://seiga.nicovideo.jp/tag/郷田真隆?target=illust">郷田真隆</a>
+<a href="http://seiga.nicovideo.jp/tag/安食総子?target=illust">安食総子</a>
+<a href="http://seiga.nicovideo.jp/tag/早食い王（将）?target=illust">早食い王（将）</a>
+</div>
+<!--↑他サービスのタグ検索結果↑-->
+
+
+<!--↓↓-->
+
+<!---->
+
+
+<div id="web_pc_360"></div>
+
+<script type="text/javascript"><!--
+
+(function(){
+	var segment = Ads.get_segment_object();
+	new Ads.Advertisement({
+
+		zone: 153,
+
+		segments: segment,
+		impression: 2}).set('web_pc_360', function () {
+			return [ '<p style="margin:0 0 2px;">', this.getTag(), '</p>', '<p class="font12">', this.link(this.getBannertext().replace(/\r?\n/g, '<br>')), '</p>'].join("\n");
+		});
+})();
+
+--></script>
+
+
+
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<div class="mb8p4 twitter">
+<script type="text/javascript"><!--
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#sm25346938',
+  interval: 6000,
+  title: 'この動画に関するツイート',
+  subject: '渡辺王将の気持ちまで解説する木村八段',
+  rpp: 10,
+  width: 304,
+  height: 800,
+  theme: {
+    shell: {
+      background: '#999F9F',
+      color: '#FFF'
+    },
+    tweets: {
+      background: '#FFFFFF',
+      color: '#393F3F',
+      links: '#289'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+--></script>
+</div>
+
+
+<!--↑↑-->
+
+<!--↑右列↑-->
+</div>
+
+</div>
+		</div>
+		<div id="PAGEFOOTER">
+		<noscript>
+<p class="mb8p4 font12" style="color:#C00;">Javascriptが無効になっていると、サイト内の一部機能がご利用いただけません</p>
+</noscript>
+
+<div id="pagetopContainer">
+<p class="mb8p4 font12"><a href="JavaScript:ANCHOR('PAGETOP')">ページトップ</a></p>
+	</div>
+<p class="font12" style="padding:4px; color:#999F9F;">
+
+<a target="_blank" href="http://bbs.nicovideo.jp/">掲示板</a> -
+<a target="_blank" href="http://faq.nicovideo.jp/">ヘルプ</a>-
+<a target="_blank" href="http://faq.nicovideo.jp/EokpControl?&tid=10434&event=FE0006">推奨環境</a>-
+<a target="_blank" href="https://secure.nicovideo.jp/secure/rule">利用規約</a>
+
+<p class="font12" style="padding:4px; color:#999F9F;">-
+	<a target="_blank" href="http://ex.nicovideo.jp/smile/guideline/">権利侵害に関する動画投稿ガイドライン</a> -
+	<a target="_blank" href="http://license-search.nicovideo.jp/">動画に使用できる音源の検索</a> -
+	<a target="_blank" href="http://info.nicovideo.jp/base/phishing.html">フィッシング詐欺にご注意ください</a> -	<a href="http://sales.ads.nicovideo.jp/">広告出稿に関するお問い合わせ</a> -
+	</p>
+<p style="padding:4px;"><img src="http://res.nimg.jp/img/base/foot/line.png" alt=""></p>
+
+<p class="mb8p4 font12">
+総動画数：<strong style="color:#393F3F;">11,833,144</strong>
+&nbsp;&nbsp;／
+総再生数：<strong style="color:#393F3F;">57,433,876,671</strong> ／
+総コメント数：<strong style="color:#393F3F;">4,630,899,731</strong>
+</p>
+
+
+<p class="mb8p4"><a href="http://niwango.jp/" target="_blank"><img src="http://res.nimg.jp/img/base/foot/incorporated.gif" alt="&amp;copy; niwango, Inc."></a></p>
+
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" charset="utf-8" src="http://notification.nicovideo.jp/res/notify.js?140901" async defer></script>
+<script type="text/javascript" charset="utf-8" src="http://enquete.nicovideo.jp/static/js/enquete.js?141028" async defer></script>
+
+</body>
+</html>

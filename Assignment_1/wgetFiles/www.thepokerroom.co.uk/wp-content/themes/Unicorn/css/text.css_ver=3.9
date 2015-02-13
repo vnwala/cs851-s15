@@ -1,0 +1,133 @@
+/*
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------- BODY
+---------------------------------------------------------------------------------------------
+*/
+
+body{
+	background:#fff;
+	color:#555;
+	font: 12px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	margin:0;
+}
+a { 
+	color:#555; 
+	-webkit-transition: all 0.3s ease;  /* Saf3.2+, Chrome */
+	-moz-transition: all 0.3s ease;  /* FF4+ */
+	-ms-transition: all 0.3s ease;  /* IE10 */
+	-o-transition: all 0.3s ease;  /* Opera 10.5+ */
+	transition: all 0.3s ease; 
+}
+a:hover {
+    color:#F96E5B;
+}
+p {
+    padding: 5px 0;
+    margin: 0 0 5px;
+    text-align: left;
+	color:#555;
+}
+pre,
+code {
+  font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}
+
+a:focus {
+    outline: none;
+}
+hr {
+    border: 0 #ebebeb solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+body.hevetica_text{ font-family:"Helvetica Neue", "Helvetica", Arial, sans-serif !important; }
+body.lucida_text{ font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif !important; }
+body.georgia_text{ font-family:Georgia, "Times New Roman", Times, serif !important; }
+body.times_text{ font-family:"Times New Roman", Times, Georgia, serif !important; }
+body.arial_text{ font-family:Arial, Helvetica, sans-serif !important; }
+body.geneva_text{ font-family:Geneva, Tahoma, sans-serif !important; }
+body.tahoma_text{ font-family:Tahoma, Geneva, sans-serif !important; }
+
+/*
+---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------ HEADINGS
+---------------------------------------------------------------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "OswaldBook";
+	line-height:normal;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+
+h1 {font-size: 1.833em;}
+h2 {font-size: 1.667em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.333em;}
+h5 {font-size: 1.25em;}
+h6 {font-size: 1.083em;}
+
+
+
+/* `Spacing
+----------------------------------------------------------------------------------------------------*/
+
+ol {list-style: decimal;}
+
+ul {list-style: disc;}
+dl,
+hr,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.single-content h1,
+.single-content h2,
+.single-content h3,
+.single-content h4,
+.single-content h5,
+.single-content h6 {
+    font-weight: normal;
+    margin: 15px 0 5px;
+    padding-bottom: 2px;
+}
+
+ul ul,
+ul ul ul,
+ul ul ul ul,
+ul ul ul ul ul,
+ol ol,
+ol ol ol,
+ol ol ol ol,
+ol ol ol ol ol {
+    margin-bottom: 0;
+}
+	.single-content ul, .single-content ol  { padding-left:17px; margin-bottom:10px; margin-top:0; }
+	.single-content ul ul{ margin-left:10px; }
+	.single-content ul li{ padding-left:8px; }
+	.single-content ol ol { margin-left:10px; }
+	.single-content ol li { list-style-type: decimal; padding-left:8px; }
+	.single-content blockquote { overflow:hidden; background:#f8f8f8; padding:7px 10px; margin-bottom:10px; border-left:2px solid #F96E5B; margin-left:25px; font-style:italic; }
+	.single-content blockquote p { padding:0; margin:0; }
+/***** Clean up on isle 6 *****/
+
+	.container:after 					{ content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; } 
+	
+	.clearfix:before,
+	.clearfix:after,
+	.row:before,
+	.row:after						{ content:'\0020'; display:block; overflow:hidden; visibility:hidden; width:0; height:0; }
+	
+	.row:after,	.clearfix:after 		{ clear:both; }
+	.row, 
+	.clearfix 							{ zoom:1; }
+	.clear 								{ clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0;	}

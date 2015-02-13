@@ -1,0 +1,124 @@
+
+
+#toppanel, #toppanel a,.lowerfooter,#wrapper, .tweets h3 a {
+	color: #ffffff;
+}	
+
+.sidebar-content li a, #footer a, #panel a  {
+	color: #ff575f;
+}
+
+.sidebar-content li a:hover, #toppanel a:hover {
+	color: #cccccc;
+
+}
+
+a {
+	color: #ff575f;
+  	text-decoration: none;
+	outline: none; /* firefox fix  */
+}
+
+
+
+a:hover,#sub-tabs ul li.current_page_item {
+	color: #cccccc;
+}
+
+ul.paging li.pagebutton { 
+	background-color: #ff575f;
+}
+
+ul.paging li.pagebutton.active, ul.paging a li.pagebutton { 
+	background-color: #cccccc;
+}
+
+#sub-tabs ul li a {
+	color:#b4b4b4;
+}
+
+acronym, abbr {
+	border-bottom: 1px dashed #ff575f;
+}
+
+
+
+
+.slidernav-left a {
+	background:#ff575f url(stylesheets/images/gallery-nav-dark.png) top left no-repeat;
+}
+
+.slidernav-right a {
+	background:#ff575f url(stylesheets/images/gallery-nav-dark.png) top right no-repeat;
+}
+
+.slidernav-left a:hover {
+	background:#cccccc url(stylesheets/images/gallery-nav-dark.png) top left no-repeat;
+}
+
+.slidernav-right a:hover {
+	background:#cccccc url(stylesheets/images/gallery-nav-dark.png) top right no-repeat;
+}
+
+
+
+
+
+#content .textresize ul li {
+	background-color:#ff575f;
+}
+
+#content .textresize ul li:hover {
+	background-color:#cccccc;
+}
+
+
+#content ul li.socialinit, #content ul li.socialhide:hover, #content .socialicons ul li, #content .postmetadata .comments.yes, .twitterfollow a {
+	background-color:#ff575f;
+}
+
+#content ul li.socialinit:hover,#content ul li.socialhide, #content .socialicons ul li:hover, #content .postmetadata .comments.yes:hover, .twitterfollow a:hover  {
+	background-color:#cccccc;
+}
+
+
+
+#wp-calendar td a {
+	background-color:#ff575f;
+}
+
+#wp-calendar td a:hover {
+	background-color:#cccccc;
+}
+
+.tab a.open {
+background-color:#ff575f;
+}
+
+.tab a.close {
+background-color:#ff575f;
+}
+
+.tab a:hover.open {
+background-color:#cccccc;
+}
+
+.tab a:hover.close {
+background-color:#cccccc;
+}
+
+.panelcontent h2 a, .panelcontent h2 {
+	color:#ffffff;
+}
+
+/** Hightlights *********************************/ 
+span.highlight.one {background:#ff575f;}
+/** / Hightlights *********************************/ 
+
+/** Shortcodes *********************************/ 
+.accordion .ui-icon,.revealbox .ui-icon { background-color:#ff575f; }
+.accordion .ui-state-active .ui-icon {background-color:#cccccc;  }
+/** / Shortcodes *********************************/ 
+
+.stage-control #stage-prev,.stage-control #stage-next,.stage-control #stage-pause,.stage-control #stage-resume, .stage-control .poststage-prev,.stage-control .poststage-next,.stage-control .poststage-pause,.stage-control .poststage-resume  {background-color:#ff575f;} 
+.stage-control #stage-prev:hover,.stage-control #stage-next:hover,.stage-control #stage-pause:hover,.stage-control #stage-resume:hover, .stage-control .poststage-prev:hover,.stage-control .poststage-next:hover,.stage-control .poststage-pause:hover,.stage-control .poststage-resume:hover  {background-color:#cccccc;}  

@@ -1,0 +1,494 @@
+@charset "Shift_JIS";
+
+div#subcategoryAll_ h1, div#subcategoryAll_ h2, div#subcategoryAll_ h3, div#subcategoryAll_ h4,
+div#subcategoryAll_ img, div#subcategoryAll_ p, div#subcategoryAll_ div, div#subcategoryAll_ ul, div#subcategoryAll_ li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight:normal;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;}
+
+
+/* clearfix */
+div#subcategoryAll_ .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+div#subcategoryAll_ .clearfix {
+  min-height: 1px;}
+
+* html div#subcategoryAll_ .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html div#subcategoryAll_ { 
+	height: 1%;}
+	
+div#subcategoryAll_ a:hover img,
+div#leftmenu01_fs_ a:hover img{
+	filter:alpha(opacity=80);
+	-moz-opacity: 0.80;
+	opacity: 0.80;}	
+
+/* --------------------------------------------------------------------
+　　サブカテゴリ一覧
+-------------------------------------------------------------------- */
+div#subcategoryAll_{
+	width:698px;
+	margin:20px 0 0 0;
+	padding:0;
+	border:1px #e6e6e6 solid;
+	text-align:left;
+	}
+
+/* list_category */
+div#subcategoryAll_ ul#list-subcategory{
+	margin: 0 0 0 15px;
+	-margin: 0 0 0 10px;
+	padding: 0;
+	}
+	
+div#subcategoryAll_ ul#list-subcategory li {
+	margin: 0 0 5px 0;
+	padding: 0 0 0 13px;
+	font-weight:bold;
+	float: left;
+	display: inline;
+	font-size: 12px;
+	white-space: normal;
+	width: 155px;
+	overflow: hidden;
+	background: url(../common_images/arrow_link.png) left top no-repeat;
+	}
+	
+div#subcategoryAll_ ul#list-subcategory li a:link,
+div#subcategoryAll_ ul#list-subcategory li a:visited{
+	color:#1886b8; text-decoration:none; }
+
+div#subcategoryAll_ ul#list-subcategory li a:hover,
+div#subcategoryAll_ ul#list-subcategory li a:active{
+	color:#1886b8; text-decoration:underline;}
+
+
+
+/* Gourmet-color */
+div#subcategoryAll_ .h_ttl01_OR {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl01_or.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_OR {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_or.png) left center no-repeat;
+}
+
+/* Entame-color */
+div#subcategoryAll_ .h_ttl01_RD {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl01_rd.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_RD {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_rd.png) left center no-repeat;
+}
+
+/* Chara＆Game-color */
+div#subcategoryAll_ .h_ttl01_BL {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl01_bl.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_BL {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_bl.png) left center no-repeat;
+}
+
+
+/* Lifestyle-color */
+div#subcategoryAll_ .h_ttl01_GR {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl01_gr.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_GR {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_gr.png) left center no-repeat;
+}
+
+/* SSTV */
+div#subcategoryAll_ .h_ttl01_sstv {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#ffffff;
+	background: url(http://www.famima.com/images/p/sstvstore/ttl_bg.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_sstv {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_sstv.png) left center no-repeat;
+}
+
+/* Familymart collection-color */
+div#subcategoryAll_ .h_ttl01_famicolle {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:698px;
+	-width:678px;
+	height:30px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl01_famicolle.png) left top no-repeat;
+}
+
+div#subcategoryAll_ .h_ttl04_RD {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 15px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:653px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_famicolle.png) left center no-repeat;
+}
+
+/* --------------------------------------------------------------------
+　　カテゴリTOPタイトル
+-------------------------------------------------------------------- */
+div#category_top_header_{
+	margin:0;
+	padding:0;
+	width:700px;
+	text-align:left;
+	}
+
+div#category_top_header_ .h_ttlTOP_OR{
+	background: url(http://www.famima.com/common_images/top_ttl_or.png) left top no-repeat;}
+div#category_top_header_ .h_ttlTOP_BL{
+	background: url(http://www.famima.com/common_images/top_ttl_bl.png) left top no-repeat;}
+div#category_top_header_ .h_ttlTOP_RD{
+	background: url(http://www.famima.com/common_images/top_ttl_rd.png) left top no-repeat;}
+div#category_top_header_ .h_ttlTOP_GR{
+	background: url(http://www.famima.com/common_images/top_ttl_gr.png) left top no-repeat;}
+div#category_top_header_ .h_ttlTOP_BK{
+	background: url(http://www.famima.com/common_images/top_ttl_bk.png) left top no-repeat;}
+div#category_top_header_ .h_ttlTOP_BL_GR{
+	background: url(http://www.famima.com/common_images/top_ttl_bl_gr.png) left top no-repeat;}
+
+div#category_top_header_ .h_ttlTOP_OR,
+div#category_top_header_ .h_ttlTOP_BL,
+div#category_top_header_ .h_ttlTOP_RD,
+div#category_top_header_ .h_ttlTOP_GR,
+div#category_top_header_ .h_ttlTOP_BK,
+div#category_top_header_ .h_ttlTOP_BL_GR {
+	margin:0 0 10px 0;
+	padding:0;
+	width:700px;
+	height:46px;
+	position:relative;}
+
+div#category_top_header_ h1{
+	width:200px;
+	height:45px;
+	position:absolute;
+	top:0;
+	left:0;}
+	
+div#category_top_header_ h2.categoryImg{
+	width:700px;
+	margin-bottom:10px;
+	-padding-bottom:1px;
+	}
+	
+div#category_top_header_ .h_ttlTOP_OR p,
+div#category_top_header_ .h_ttlTOP_BL p,
+div#category_top_header_ .h_ttlTOP_RD p,
+div#category_top_header_ .h_ttlTOP_GR p{
+	position:absolute;
+	bottom:12px;
+	right:16px;
+	text-align:right;
+	font-size:14px;
+	color:#666666;}
+	
+div#category_top_header_ p a:link,
+div#category_top_header_ p a:visited{
+	color:#666666;
+	text-decoration:underline;}
+
+div#category_top_header_ p a:hover,
+div#category_top_header_ p a:active{
+	color:#666666;
+	text-decoration:none;}
+	
+div#category_top_header_ .base{
+	width:700px;
+	height:45px;
+	margin-bottom:20px;
+	position:relative;
+	background:url(http://www.famima.com/common_images/dot_border.png) repeat-x;
+	}
+
+div#category_top_header_ h3.categoryName{	
+	font-size:24px;
+	color:#505050;
+	line-height:130%;
+	position:absolute;
+	top:5px;
+	left:15px;
+	}
+
+/* -----
+div#category_top_header_ .base div#sb{
+	position:absolute;
+	left:420px;
+	top:5px;
+	}-- */
+	
+
+
+/* --------------------------------------------------------------------
+　　左ナビ「カテゴリ内で検索」
+-------------------------------------------------------------------- */
+
+div#leftmenu01_fs_{
+	width:238px;
+	margin:20px 0;
+	padding:0;
+	border:1px #e6e6e6 solid;
+	text-align:left;
+	}
+	
+/* list_leftmenu */
+div#leftmenu01_fs_ ul#list{
+	margin: 0 15px;
+	-margin: 0 10px;
+	padding: 0;
+	}
+	
+div#leftmenu01_fs_ ul#list li {
+	margin: 0 0 8px 0;
+	padding: 0 0 0 13px;
+	font-size: 12px;
+	white-space: normal;
+	overflow: hidden;
+	background: url(../common_images/arrow_link.png) left top no-repeat;
+	}
+	
+div#leftmenu01_fs_ ul#list li a:link,
+div#leftmenu01_fs_ ul#list li a:visited{
+	color:#1886b8; text-decoration:none; }
+
+div#leftmenu01_fs_ ul#list li a:hover,
+div#leftmenu01_fs_ ul#list li a:active{
+	color:#1886b8; text-decoration:underline;}
+
+
+/* Gourmet-color */
+div#leftmenu01_fs_ .h_ttl03_OR {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:238px;
+	-width:218px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl03_or.png) left top no-repeat;
+}
+
+div#leftmenu01_fs_ .h_ttl04_OR {
+	margin: 5px 15px 10px 15px;
+	-margin: 5px 10px 10px 10px;
+	padding: 6px 0 4px 16px;
+	width:194px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_or.png) left center no-repeat;
+}
+
+/* Entame-color */
+div#leftmenu01_fs_ .h_ttl03_RD {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:238px;
+	-width:218px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl03_rd.png) left top no-repeat;
+}
+
+div#leftmenu01_fs_ .h_ttl04_RD {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 10px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:194px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_rd.png) left center no-repeat;
+}
+
+
+/* Chara＆Game-color */
+div#leftmenu01_fs_ .h_ttl03_BL {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:238px;
+	-width:218px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	/* background: url(../common_images/common_ttl03_bl.png) left top no-repeat; */
+	background: url(http://www.famima.com/common_images/common_ttl03_cl.png) left top no-repeat;
+}
+
+div#leftmenu01_fs_ .h_ttl04_BL {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 10px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:194px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_bl.png) left center no-repeat;
+}
+
+
+/* Lifestyle-color */
+div#leftmenu01_fs_ .h_ttl03_GR {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:238px;
+	-width:218px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	background: url(http://www.famima.com/common_images/common_ttl03_gr.png) left top no-repeat;
+}
+
+div#leftmenu01_fs_ .h_ttl04_GR {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 10px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:194px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_gr.png) left center no-repeat;
+}
+
+/* SSTV-color */
+div#leftmenu01_fs_ .h_ttl03_SSTV {
+	margin:0;
+	padding: 8px 0 0 20px;
+	width:238px;
+	-width:218px;
+	height:30px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#ffffff;
+	background: url(http://www.famima.com/common_images/common_ttl03_sstv.png) left top no-repeat;
+}
+
+div#leftmenu01_fs_ .h_ttl04_SSTV {
+	margin: 5px 15px 15px 15px;
+	-margin: 5px 10px 15px 10px;
+	padding: 6px 0 4px 16px;
+	width:194px;
+	font-size: 12px;
+	font-weight: bold;
+	color:#505050;
+	border-bottom:1px #e6e6e6 solid;
+	background: url(http://www.famima.com/common_images/icon_circle_sstv.png) left center no-repeat;
+}
+

@@ -1,0 +1,123 @@
+@charset "shift_jis";
+/* CSS Document */
+
+#firstguide-inner div,
+#firstguide-inner dl,
+#firstguide-inner dt,
+#firstguide-inner dd,
+#firstguide-inner ul,
+#firstguide-inner ol,
+#firstguide-inner li,
+#firstguide-inner h1,
+#firstguide-inner h2,
+#firstguide-inner h3,
+#firstguide-inner h4,
+#firstguide-inner h5,
+#firstguide-inner h6,
+#firstguide-inner pre,
+#firstguide-inner code,
+#firstguide-inner p,
+#firstguide-inner th,
+#firstguide-inner td {
+	margin:0;
+	padding:0;
+}
+
+#firstguide-inner ol li {
+	margin-left: 2em;
+	list-style: decimal;
+}
+#firstguide-inner img {
+	border: none;
+	vertical-align: middle;
+}
+#firstguide-inner a:link {
+	color:#003780;
+	text-decoration: none;
+}
+#firstguide-inner a:visited {
+	color:#003780;
+	text-decoration: none;
+}
+#firstguide-inner a:active {
+	color:#0068b6;
+	text-decoration: underline;
+}
+#firstguide-inner a:hover {
+	color:#0068b6;
+	text-decoration: underline;
+}
+
+
+
+
+/**/
+#firstguide-inner {
+	width:890px;
+	margin: 0 auto;
+	font-size:12px;
+	line-height:1.8;
+	text-align:left;
+	color:#404040;
+	font-family: "ƒƒCƒŠƒI", Meiryo, "ƒqƒ‰ƒMƒmŠpƒS Pro W6", "Hiragino Kaku Gothic Pro", Osaka, "‚l‚r ‚oƒSƒVƒbƒN", "MS PGothic", sans-serif;
+	background: #FFF;
+}
+
+#firstguide-inner h2 {
+	margin-top:25px;
+}
+#firstguide-inner .toptxt {
+	margin:8px 0 20px 25px;
+}
+#firstguide-inner .line-wrap {
+	margin:0 20px 25px;
+}
+#firstguide-inner .line-wrap.bottom {
+	margin:0 20px 40px;
+}
+#firstguide-inner .line-wrap .mbox {
+	float:left;
+	width:415px;
+}
+#firstguide-inner .line-wrap .mbox.right {
+	float:right;
+}
+#firstguide-inner .line-wrap .mbox dl {
+	margin-top:10px;
+}
+#firstguide-inner .line-wrap .mbox dl dd {
+	float:left;
+	width:250px;
+	padding-left:8px;
+}
+#firstguide-inner .line-wrap .mbox dl dt {
+	float:right;
+	width:145px;
+}
+#firstguide-inner .line-wrap .mbox dl dd .btn {
+	margin-top:10px;
+}
+
+/* clearfix */
+#firstguide-inner .clfix:after {
+  	content: "."; 
+  	display: block; 
+  	height: 0; 
+  	clear: both; 
+  	visibility: hidden;
+}
+
+#firstguide-inner .clfix {
+	display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html #firstguide-inner .clfix {
+	height: 1%;
+}
+#firstguide-inner .clfix {
+	display: block;
+}
+/* End hide from IE-mac */
+
+

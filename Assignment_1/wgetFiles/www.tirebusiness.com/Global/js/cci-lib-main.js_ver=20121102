@@ -1,0 +1,1463 @@
+var CCI = CCI || {};
+
+CCI.LIB_VERSION = {
+    Version: "0.7",
+    Updated: "June 13, 2012",
+    Author: "Crain Communications Inc"
+}
+
+CCI.dev = {
+    "notes": function (bag) {
+        //console.info("running CCILIB ver. " + CCI.LIB_VERSION);
+        //console.dir(CCI);
+        if (document.getElementById(bag.notesContainer)) {
+            var devNotes = document.getElementById(bag.notesContainer);
+            //	console.info("Development notes for " + location.href);
+            //	console.log(devNotes.innerHTML);
+        } else {
+            //	console.log("No development notes for this page");
+        }
+    }
+};
+
+CCI.util = {
+    "safeLoad": function () {
+        // safely execute a function after the DOM is ready
+        // Listens for when the scrollbar is ready to be used
+
+        //store this in a closure, in case we do asynchronous operation
+        var This = this;
+        this.timeoutLength = 200; //millis
+
+        // the first argument must be the function to call; 
+        // any remaining arguments get passed to that function
+        if (typeof arguments[0] != "function") {
+            throw ("First parameter to CCI.util.safeLoad is required and must be a function");
+        } else {
+            this.functionToCall = arguments[0];
+            //console.dir(this);
+        }
+
+        this.execute = function () {
+            //on the first call, we need to cache the arguments
+            if (typeof This.arguments == "undefined") {
+                This.arguments = arguments;
+            }
+            if (typeof document.all == "object" && (document.readyState != "loaded" && document.readyState != "complete")) {
+                try {
+                    document.documentElement.doScroll("left");
+                    This.functionToCall.apply(This.functionToCall, This.arguments);
+                } catch (error) {
+                    setTimeout(This.execute, This.timeoutLength);
+                }
+            } else {
+                This.functionToCall.apply(This.functionToCall, This.arguments);
+            }
+        };
+    },
+
+    "truncateString": function (str, limit) {
+        var bits, i;
+        bits = str.split('');
+        if (bits.length > limit) {
+            for (i = bits.length - 1; i > -1; --i) {
+                if (i > limit) {
+                    bits.length = i;
+                } else if (' ' === bits[i]) {
+                    bits.length = i;
+                    break;
+                }
+            }
+            bits.push('...');
+        }
+        return bits.join('');
+    },
+
+    "replaceTags": function (bag) {
+        bag = bag || {};
+        var tagValSource = bag.tagValSource || {};
+        var sourceEl = bag.sourceEl || 0;
+
+        // if (console) { console.dir(tagValSource); }
+        if (sourceEl) {
+            html = document.getElementById(sourceEl).innerHTML;
+            if (tagValSource != null) {
+                var tag = /({|%7B).+(}|%7D)/g
+                var braces = /([{}]|%7B|%7D)/g
+                var varsTemp = html.match(tag);
+                var vars = [];
+                for (i = 0; i < varsTemp.length; i++) {
+                    tagName = varsTemp[i].replace(braces, "");
+                    var tagVal = tagValSource[tagName] || 0;
+                    if (tagVal) {
+                        vars[tagName] = tagVal;
+                    }
+                    if (vars[tagName] == undefined) {
+                        vars[tagName] = "";
+                    }
+                    html = html.replace(tagName, vars[tagName]).replace(braces, "");
+                }
+                document.getElementById(sourceEl).innerHTML = html;
+                document.getElementById(sourceEl).style.display = "block";
+            }
+        }
+    },
+
+    "getParam": function (name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.href);
+        if (results == null) return "";
+        else return results[1];
+    },
+
+    "removeFromArray": function (arr, el) {
+        //	console.dir(arr);
+        for (i = 0; i < arr.length; i++) {
+            if (el == arr[i]) arr.splice(i, 1);
+        }
+        //	console.dir(arr);
+    },
+
+    "UUID": (function () {
+        /*
+		Thanks http://www.broofa.com/Tools/Math.uuid.js
+		*
+	  	Copyright (c) 2008, Robert Kieffer
+		All rights reserved.
+	
+		Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+	
+	    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+	    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+	    * Neither the name of Robert Kieffer nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+	
+		THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+		*/
+        var CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+        return function (len, radix) {
+            var chars = CHARS,
+                uuid = [],
+                rnd = Math.random;
+            radix = radix || chars.length;
+
+            if (len) {
+                // Compact form
+                for (var i = 0; i < len; i++) {
+                    uuid[i] = chars[0 | rnd() * radix];
+                }
+            } else {
+                // rfc4122, version 4 form
+                var r;
+
+                // rfc4122 requires these characters
+                uuid[8] = uuid[13] = uuid[18] = uuid[23] = '-';
+                uuid[14] = '4';
+
+                // Fill in random data.  At i==19 set the high bits of clock sequence as
+                // per rfc4122, sec. 4.1.5
+                for (var j = 0; j < 36; j++) {
+                    if (!uuid[j]) {
+                        r = 0 | rnd() * 16;
+                        uuid[j] = chars[(j == 19) ? (r & 0x3) | 0x8 : r & 0xf];
+                    }
+                }
+            }
+
+            return uuid.join('');
+        };
+    })(),
+
+    "getElementsByClassName": function (bag) {
+        bag = bag || {};
+        if (bag.container === undefined) {
+            bag.container = document;
+        }
+        var theContainer = bag.container;
+        if (theContainer.getElementsByClassName) {
+            // newer browsers have native support for getElementsByClassName
+            return theContainer.getElementsByClassName(bag.classname);
+        } else {
+            var classElements = [];
+            var els = theContainer.getElementsByTagName("*");
+            var elsLen = els.length;
+            var pattern = new RegExp("(^|\\s)" + bag.classname + "(\\s|$)");
+            for (i = 0, j = 0; i < elsLen; i++) {
+                if (pattern.test(els[i].className)) {
+                    classElements[j] = els[i];
+                    j++;
+                }
+            }
+            return classElements;
+        }
+    },
+
+    "toggleByTagName": function (tagName, toggleAction) {
+        var objectArray = document.getElementsByTagName(tagName);
+        for (i = 0; i < objectArray.length; i++) {
+            if (toggleAction == "hide") {
+                objectArray[i].style.visibility = "hidden";
+            } else if (toggleAction == "show") {
+                objectArray[i].style.visibility = "visible";
+            }
+        }
+    },
+
+    "inArray": function (arr, value, caseSensitive) {
+        var i;
+        for (i = 0; i < arr.length; i++) {
+            // use === to check for Matches. ie., identical (===),
+            if (caseSensitive) { //performs match even the string is case sensitive
+                if (arr[i].toLowerCase() == value.toLowerCase()) {
+                    return true;
+                }
+            } else {
+                if (arr[i] == value) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    },
+
+    "clearInnerHTML": function (a) {
+        b = a.cloneNode(false);
+        a.parentNode.insertBefore(b, a);
+        a.parentNode.removeChild(a);
+    },
+
+    "copyPasteElement": function (bag) {
+        // copy the innerHTML of a specified element
+        // into other elements
+        bag = bag || {};
+
+        var insertArr = new CCI.util.getElementsByClassName({
+            classname: bag.insertClass
+        });
+        for (i = 0; i < insertArr.length; i++) {
+            //alert(insertArr[i].innerHTML);
+            //console.dir(document.getElementById(insertArr[i].attributes["rel"].value));
+            newContent = document.getElementById(insertArr[i].attributes["rel"].value).firstChild.cloneNode(true);
+            CCI.util.clearInnerHTML(insertArr[i]);
+            //alert(insertArr[i].innerHTML);
+            insertArr[i].appendChild(newContent);
+            //alert(insertArr[i].innerHTML);
+        }
+    },
+
+    "doSort": function (bag) {
+        bag = bag || {};
+        var tags = bag.tagsArr,
+            tagsParent = bag.tagsParent,
+            tagAlphaArr = [],
+            sorted = 0,
+            sortOrder = bag.sortOrder,
+            sortBy = bag.sortBy,
+            hideDuringSort = bag.hideDuringSort,
+            loaderMessageID = bag.loaderMessageID,
+            altClass = bag.altClass || 0;
+
+
+
+        for (j = 0; j < tags.length; j++) {
+            if (tags[j].childNodes.length > 0 && tags[j].value !== undefined) {
+                tagAlphaArr.push(tags[j]);
+            }
+        }
+
+        //	console.dir(tagAlphaArr);
+        if (sortBy == "id") {
+            sorted = 1;
+            tagAlphaArr.sort(function (c, d) {
+
+                return c.id == d.id ? 0 : (c.id > d.id ? 1 : -1);
+            });
+            if (sortOrder == "desc") {
+                tagAlphaArr.reverse(function (c, d) {
+
+                    return c.id == d.id ? 0 : (c.id > d.id ? 1 : -1);
+                });
+            }
+        } else {
+
+
+            if (tagAlphaArr[0].childNodes[0].data) {
+                sorted = 1;
+                tagAlphaArr.sort(function (c, d) {
+                    //	console.log(c.childNodes[0].data + " | " + d.childNodes[0].data);z
+                    return c.childNodes[0].data == d.childNodes[0].data ? 0 : (c.childNodes[0].data > d.childNodes[0].data ? 1 : -1);
+                });
+                if (sortOrder == "desc") {
+                    tagAlphaArr.reverse(function (c, d) {
+                        //	console.log(c.childNodes[0].data + " | " + d.childNodes[0].data);
+                        return c.childNodes[0].data == d.childNodes[0].data ? 0 : (c.childNodes[0].data > d.childNodes[0].data ? 1 : -1);
+                    });
+                }
+            } else if (tagAlphaArr[0].childNodes[0].innerHTML) {
+                sorted = 1;
+                tagAlphaArr.sort(function (c, d) {
+                    //	console.log(c.childNodes[0].innerHTML + " | " + d.childNodes[0].innerHTML);
+                    return c.childNodes[0].innerHTML == d.childNodes[0].innerHTML ? 0 : (c.childNodes[0].innerHTML > d.childNodes[0].innerHTML ? 1 : -1);
+                });
+                if (sortOrder == "desc") {
+                    tagAlphaArr.reverse(function (c, d) {
+                        //	console.log(c.childNodes[0].innerHTML + " | " + d.childNodes[0].innerHTML);
+                        return c.childNodes[0].innerHTML == d.childNodes[0].innerHTML ? 0 : (c.childNodes[0].innerHTML > d.childNodes[0].innerHTML ? 1 : -1);
+                    });
+                }
+            }
+        }
+
+        if (sorted) {
+            for (x = 0; x < tagAlphaArr.length; ++x) {
+
+                if (x % 2 && altClass) {
+                    tagAlphaArr[x].setAttribute("class", altClass);
+                }
+
+                tagsParent.appendChild(tagAlphaArr[x]);
+            }
+            if (hideDuringSort) {
+                document.getElementById(loaderMessageID).style.display = "none";
+                tagsParent.style.visibility = "visible";
+            }
+        } else {
+            if (hideDuringSort) {
+                document.getElementById(loaderMessageID).style.display = "none";
+                tagsParent.style.visibility = "visible";
+            }
+            return false;
+        }
+
+    },
+
+    "sortLiTags": function (bag) {
+        bag = bag || {}, tags = bag.tagsArr, tagsParent = bag.tagsParent, tagAlphaArr = [];
+
+        for (j = 0; j < tags.length; j++) {
+            if (tags[j].childNodes.length > 0) {
+                tagAlphaArr.push(tags[j]);
+            }
+        }
+
+        tagAlphaArr.sort(function (a, b) {
+            return a.childNodes[0].innerHTML == b.childNodes[0].innerHTML ? 0 : (a.childNodes[0].innerHTML > b.childNodes[0].innerHTML ? 1 : -1);
+        });
+
+        for (x = 0; x < tagAlphaArr.length; ++x) {
+            tagsParent.appendChild(tagAlphaArr[x]);
+        }
+
+    },
+
+    "relativeDates": function (bag) {
+        /*
+         ** Transform dates in YYYYMMDDHHNNSS format to relative "x ago"
+         */
+        bag = bag || {};
+        classname = bag.classname;
+
+        transformDate = function (longDate) {
+            var d = Date.parse(longDate);
+            var now = new Date();
+            var timeSince = now.getTime() - d;
+            var inSeconds = timeSince / 1000;
+            var inMinutes = timeSince / 1000 / 60;
+            var inHours = timeSince / 1000 / 60 / 60;
+            var inDays = timeSince / 1000 / 60 / 60 / 24;
+            var inWeeks = timeSince / 1000 / 60 / 60 / 24 / 7;
+            var inMonths = timeSince / 1000 / 60 / 60 / 24 / 7 / 4;
+            var inYears = timeSince / 1000 / 60 / 60 / 24 / 365;
+            var relativeDate = 0;
+            if (Math.round(inMinutes) < 1) {
+                relativeDate = "less than 1 minute ago";
+            }
+
+            // in minutes
+            else if (Math.round(inMinutes) == 1) {
+                relativeDate = "1 minute ago";
+            } else if (inHours < 1.01) {
+                relativeDate = Math.round(inMinutes) + " minutes ago";
+            }
+
+            // in hours
+            else if (Math.round(inHours) == 1) {
+                relativeDate = "1 hour ago";
+            } else if (inDays < 1.01 && Math.round(inHours) !== 24) {
+                relativeDate = Math.round(inHours) + " hours ago";
+            }
+
+            // in days
+            else if (Math.round(inDays) == 1 || Math.round(inHours) == 24) {
+                relativeDate = "1 day ago";
+            } else if (inYears < 1.01 && Math.round(inDays) < 61) {
+                relativeDate = Math.round(inDays) + " days ago";
+            }
+
+            // output the relative date
+            return relativeDate;
+        };
+
+        // get the datetime in YYYYMMDDHHNNSS format from elements
+        var dateArr = CCI.util.getElementsByClassName({
+            classname: classname
+        });
+        //console.dir(dateArr);
+        for (i = 0; i < dateArr.length; i++) {
+            var postDate = dateArr[i].attributes["rel"].value;
+            postDate = transformDate(postDate);
+            if (postDate) {
+                dateArr[i].innerHTML = postDate;
+            }
+        }
+
+    },
+
+    "removeAllElements": function (oEle) {
+        if (oEle.hasChildNodes()) {
+            while (oEle.childNodes.length >= 1) {
+                oEle.removeChild(oEle.firstChild);
+            }
+        }
+    },
+
+    "doTextSizer": function (bag) {
+        // get elements on a page and change the font size
+        // used by createTextSizerControls
+        bag = bag || {};
+        var min = bag.min,
+            max = bag.max,
+            tag = bag.tag,
+            direction = bag.direction,
+            defaultSize = bag.defaultSize;
+        var tagArr = document.getElementsByTagName(tag);
+        for (i = 0; i < tagArr.length; i++) {
+            if (tagArr[i].style.fontSize) {
+                var s = parseInt(tagArr[i].style.fontSize.replace("px", ""));
+            } else {
+                s = defaultSize;
+            }
+            if (direction == "up" && s != max) {
+                s += 1;
+            } else if (direction == "down" && s != min) {
+                s -= 1;
+            }
+            tagArr[i].style.fontSize = s + "px";
+        }
+    },
+
+    "doPopUps": function (bag) {
+        bag = bag || {};
+        var popupClass = bag.popupClass;
+        var popupArr = CCI.util.getElementsByClassName({
+            classname: popupClass
+        });
+        for (i = 0; i < popupArr.length; i++) {
+            popupArr[i].onclick = function () {
+                if (this.href !== undefined) {
+                    dimRegEx = /(\d+)x(\d+)/;
+                    popupHref = this.href;
+                    if (this.attributes["rel"] !== undefined) {
+                        popupWidth = this.attributes["rel"].value.replace(dimRegEx, "$1");
+                        popupHeight = this.attributes["rel"].value.replace(dimRegEx, "$2");
+                        popupDimensions = "width=" + popupWidth + ",height=" + popupHeight;
+                    } else {
+                        popupDimensions = "width=600,height=400";
+                    }
+                    if (this.attributes["title"] !== undefined) {
+                        popupTitle = this.attributes["title"].value;
+                    } else {
+                        popupTitle = "Business Insurance";
+                    }
+
+                    window.open(popupHref, popupTitle, popupDimensions);
+                }
+                return false;
+            };
+        }
+    },
+
+    "createTextSizerControls": function (bag) {
+        // create textSizer links and insert them into container element(s)
+        bag = bag || {};
+        bag.defaultSize = bag.defaultSize || 12;
+        bag.tag = bag.tag || "p";
+        bag.smallerText = bag.smallerText || "[&nbsp;-&nbsp;]";
+        bag.largerText = bag.largerText || "[&nbsp;+&nbsp;]";
+        bag.tag = bag.tag || "p";
+        bag.label = bag.label || "Text size: ";
+        var containerClassName = bag.containerClassName,
+            tag = bag.tag,
+            min = bag.min,
+            max = bag.max,
+            largerText = bag.largerText,
+            smallerText = bag.smallerText,
+            label = bag.label,
+            defaultSize = bag.defaultSize;
+        var elArr = CCI.util.getElementsByClassName({
+            classname: containerClassName
+        });
+        var sizerUp = document.createElement("a");
+        sizerUp.setAttribute("class", containerClassName + "Up");
+        sizerUp.href = "#";
+        sizerUp.onclick = function () {
+            CCI.util.doTextSizer({
+                direction: "up",
+                max: max,
+                tag: tag,
+                defaultSize: defaultSize
+            });
+            return false;
+        };
+        sizerUp.innerHTML = largerText;
+        var sizerDown = document.createElement("a");
+        sizerDown.setAttribute("class", containerClassName + "Down");
+        sizerDown.href = "#";
+        sizerDown.onclick = function () {
+            CCI.util.doTextSizer({
+                direction: "down",
+                min: min,
+                tag: tag,
+                defaultSize: defaultSize
+            });
+            return false;
+        };
+        sizerDown.innerHTML = smallerText;
+        for (i = 0; i < elArr.length; i++) {
+            elArr[i].innerHTML = '<span class="' + containerClassName + 'Label">' + label + "</span>";
+            elArr[i].appendChild(sizerDown);
+            elArr[i].appendChild(sizerUp);
+        }
+    },
+
+    "clearOnFocus": function (bag) {
+        // clear any value or innerHTML of an element onFocus
+        bag = bag || {};
+        var clearThisClass = bag.classname,
+            oriVal = 0,
+            oriInnerHTML = 0;
+        elementArr = CCI.util.getElementsByClassName({
+            classname: clearThisClass
+        });
+
+        for (i = 0; i < elementArr.length; i++) {
+            var theEl = elementArr[i];
+            if (theEl.value) {
+                oriVal = theEl.value;
+            }
+            if (theEl.innerHTML) {
+                oriInnerHTML = theEl.innerHTML;
+            }
+            theEl.onfocus = function () {
+                This = this;
+                if (oriVal) {
+                    This.value = "";
+                }
+                if (oriInnerHTML) {
+                    This.innerHTML = "";
+                }
+            };
+        }
+    },
+
+    "addElement": function (a) {
+        // a.newElementInnerHTML = new element's innerHTML
+        // a.parentNode = parent node to add the new element to
+        // a.newElementTag = new element tag to create
+        // a.newAttributes = element attributes to be applied to new element
+        // a.elementBefore = element to insert new element before under parentNode
+        // a.newAttributes[ATTRIBUTES] = array of attributes for new element
+        // a.newAttributes[className] = workaround for setting class(reserved word)
+        var newHTML = 0,
+            parentNode = 0,
+            newElement = 0,
+            elementBefore = 0;
+        newElement = document.createElement(a.newElementTag);
+
+        if (typeof a.elementBefore == "object") {
+            elementBefore = a.elementBefore;
+        } else if (typeof a.elementBefore == "string") {
+            elementBefore = document.getElementById(a.elementBefore);
+        }
+
+        if (typeof a.parentNode == "object") {
+            parentNode = a.parentNode;
+        } else if (typeof a.parentNode == "string") {
+            parentNode = document.getElementById(a.parentNode);
+        }
+
+
+        if (a.newAttributes) {
+            for (var ATTRIBUTE in a.newAttributes) {
+                if (ATTRIBUTE == "className") {
+                    newElement.setAttribute("class", a.newAttributes[ATTRIBUTE]);
+                }
+                newElement.setAttribute(ATTRIBUTE, a.newAttributes[ATTRIBUTE]);
+            }
+        }
+
+        newElement.innerHTML = a.newElementInnerHTML;
+        parentNode.style.clear = "both";
+
+        if (elementBefore) {
+            parentNode.insertBefore(newElement, elementBefore);
+        } else {
+            parentNode.insertBefore(newElement);
+        }
+
+        return newElement;
+    },
+
+    "createCookie": function (bag) {
+
+        bag = bag || {};
+        var date, expires;
+        if (bag.days) {
+            date = new Date();
+            date.setTime(date.getTime() + (bag.days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else if (bag.hours) {
+            date = new Date();
+            date.setTime(date.getTime() + (bag.hours * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else {
+            expires = "";
+        }
+
+        document.cookie = bag.name + "=" + escape(bag.value) + ((expires) ? ";expires=" + expires : "") + ((bag.path) ? ";path=" + bag.path : ";path=/") + ((bag.domain) ? ";domain=" + bag.domain : "") + ((bag.secure) ? ";secure" : "");
+    },
+
+    "readCookie": function (bag) {
+        bag = bag || {};
+        var nameEQ, ca, c;
+        nameEQ = bag.name + "=";
+        ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1, c.length);
+            }
+            if (c.indexOf(nameEQ) === 0) {
+                return c.substring(nameEQ.length, c.length);
+            }
+        }
+        return null;
+    },
+
+    "testForCookies": function () {
+        var tmpcookie = new Date();
+        chkcookie = (tmpcookie.getTime() + '');
+        document.cookie = "chkcookie=" + chkcookie + "; path=/";
+        if (document.cookie.indexOf(chkcookie, 0) < 0) {
+            return false;
+        } else {
+            return true;
+        }
+    },
+
+    "removeDuplicateCookies": function (bag) {
+        var cookiesOn = CCI.util.testForCookies();
+        var currHost = location.host.split(".");
+        var topLevel = currHost.pop();
+        var domainName = currHost.pop();
+        var subdomain = currHost.pop() || 0;
+        if (cookiesOn && subdomain !== "edit") {
+            //	console.log(document.cookie);
+            bag = bag || {};
+            var mainDomainName = domainName + "." + topLevel;
+            var dupeCookieName = bag.cookieName || 0;
+            var cookString = document.cookie;
+            var cookArr = cookString.split("; ");
+            //      console.dir(cookArr);
+            var cookObj = {};
+            for (i = 0; i < cookArr.length; i++) {
+                var thisCook = cookArr[i].split("=");
+                var cookName = thisCook[0];
+                var cookVal = thisCook[1];
+                if (cookObj[cookName]) {
+                    // cookie already exists, nuke cookies with this name
+                    CCI.util.createCookie({
+                        "name": cookName,
+                        "expires": -1,
+                        "value": ""
+                    });
+                    // CCI.util.createCookie({"name":cookName,"expires":-1,"value":"","domain":mainDomainName});
+                    //	console.log("remove " + cookName);
+                } else {
+                    cookObj[cookName] = cookVal;
+                }
+            };
+            //  console.dir(cookObj);
+            //	console.log(document.cookie);
+        }
+    },
+
+    "countSessionViews": function (bag) {
+        bag = bag || {};
+        var counterCookieName = bag.counterCookieName || "cciCounter";
+        var counterOffset = bag.counterOffset || 1;
+        var counterReset = bag.counterReset || 0;
+        cookiesOn = CCI.util.testForCookies();
+        if (cookiesOn) {
+            var counter = CCI.util.readCookie({
+                name: counterCookieName
+            });
+            if (counter) {
+                counterval = (Math.abs(counter) + counterOffset);
+            } else if (counterReset) {
+                counterval = 0;
+            } else {
+                counterval = 1;
+            }
+            CCI.util.createCookie({
+                name: counterCookieName,
+                value: counterval,
+                days: 0
+            });
+        }
+    },
+    "getCSCookie": function (bag) {
+        bag = bag || {};
+        demos = bag.demos || null;
+        cookieName = bag.cookieName || "CSDemos";
+        this.Cookie = null;
+        this.cookiesOn = CCI.util.testForCookies();
+        if (this.cookiesOn) {
+            csDemosCookie = CCI.util.readCookie({
+                name: cookieName
+            }) || 0;
+            if (csDemosCookie) {
+                csDemosCookie = csDemosCookie.replace(/\"/g, "");
+                csDemosSplit = csDemosCookie.split("|");
+                this.Cookie = {};
+
+                for (i = 0; i < csDemosSplit.length; i++) {
+                    demo = csDemosSplit[i].split(":");
+                    demoName = demo[0];
+                    demoVal = demo[1];
+                    if (demos) {
+                        if (CCI.util.inArray(demos, demoName)) {
+                            this.Cookie[demoName] = demoVal;
+                        }
+                    } else {
+                        this.Cookie[demoName] = demoVal;
+                    }
+                }
+            }
+        }
+        return this;
+    },
+    "insertImage": function (b) {
+        b = b || {};
+        var url = b.url || 0;
+        var el = b.el || 0;
+        var requestType = b.requestType || "HEAD";
+        var contentLengthThreshold = b.contentLengthThreshold || -1;
+        if (url) {
+            $.ajax({
+                url: url,
+                type: requestType,
+                error: function () {
+                    // do nothing
+                },
+                success: function (data, status, jqXHR) {
+                    var contentLength = jqXHR.getResponseHeader("Content-Length");
+                    if ((contentLength > contentLengthThreshold) && el) {
+                        $(el).html('<img src="' + url + '" />');
+                    }
+                }
+            })
+        }
+    }
+};
+
+CCI.util.ajax = {
+
+    "callback": function (a) {
+        a.handler = a.handler || 0;
+        if (a.handler) {
+            a.handler.apply(a.handler, [a.text]);
+        }
+    },
+
+    "post": function (bag) {
+        bag = bag || {};
+        bag.url = bag.url || "";
+        bag.params = bag.params || "";
+        bag.handler = bag.handler || 0;
+        var request = 0;
+
+
+
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari,...
+            request = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // IE
+            try {
+                request = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {}
+            }
+        }
+        if (!request) {
+            //console.log('Cannot create XMLHTTP instance');
+            return false;
+        }
+
+
+
+        request.onreadystatechange = function () {
+
+
+            if (request.readyState == 4 && request.status == 200) {
+                CCI.util.ajax.callback({
+                    handler: bag.handler,
+                    text: request.responseText
+                });
+            }
+        };
+
+        request.open('POST', bag.url, true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.setRequestHeader("Content-length", bag.params.length);
+        request.setRequestHeader("Connection", "close");
+        request.send(bag.params);
+    },
+
+    "get": function (bag) {
+        bag = bag || {};
+        bag.url = bag.url || "";
+        bag.params = bag.params || "";
+        bag.handler = bag.handler || 0;
+        var request = 0;
+
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari,...
+            request = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // IE
+            try {
+                request = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    request = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {}
+            }
+        }
+        if (!request) {
+            //console.log('Cannot create XMLHTTP instance');
+            return false;
+        }
+
+
+
+        request.onreadystatechange = function () {
+
+
+            if (request.readyState == 4 && request.status == 200) {
+                CCI.util.ajax.callback({
+                    handler: bag.handler,
+                    text: request.responseText
+                });
+            }
+        };
+
+        request.open('GET', bag.url + bag.params, true);
+        request.send(null);
+    }
+};
+
+CCI.reg = {
+    "checkRegCookie": function (name, param) {
+
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ')
+            c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) var cookieString = c.substring(nameEQ.length, c.length);
+        }
+        if (cookieString && param == "nameFirst") {
+            myfirst = cookieString.replace(/(.*)(nameFirst:(\w*))(.*)/, "$3");
+            return myfirst;
+        } else if (cookieString && param == "userId") {
+            myuserid = cookieString.replace(/(.*)(userId:(\d*))(.*)/, "$3");
+            return myuserid;
+        } else {
+            return false;
+        }
+    },
+
+    "loginMsg": function (bag) {
+        bag = bag || {};
+        msgType = bag.msgType || "";
+        //console.dir(bag);
+        var csFirstName = CCI.reg.checkRegCookie("CSDemos", "nameFirst");
+        if (csFirstName) {
+            loginMsgHtml = "Welcome, <a href='" + CCI.siteConfig.clickshareBaseUrl + "/myhome.do?CSTargetURL=" + location.href + "'>" + csFirstName + "</a>";
+            if (msgType == "long") {
+                loginMsgHtml += "<br>";
+            } else {
+                loginMsgHtml += " | ";
+            }
+            loginMsgHtml += "<a href='" + CCI.siteConfig.clickshareBaseUrl + "/logout.do?CSTargetURL=" + location.href + "'>Log out</a>";
+        } else {
+            return false;
+        }
+        if (document.getElementById("cci-login-msg")) {
+            document.getElementById("cci-login-msg").innerHTML = loginMsgHtml;
+        }
+    }
+};
+
+CCI.articles = {
+
+    "hideNext": function (bag) {
+        bag = bag || {};
+        var navNextCheck = bag.navNextCheck;
+        var navNext = bag.navNext;
+        var navNextArr = CCI.util.getElementsByClassName({
+            classname: navNext
+        });
+        var removeArr = function (arr) {
+                for (j = 0; j < arr.length; j++) {
+                    CCI.util.removeAllElements(arr[j]);
+                }
+            };
+        if (document.getElementById(navNextCheck)) {
+            var navNextLinkArr = document.getElementById(navNextCheck).getElementsByTagName("a");
+            //console.dir(navNextLinkArr);
+            if (navNextLinkArr.length > 0) {
+                //console.log(navNextLinkArr.length);
+                for (i = 0; i < navNextLinkArr.length; i++) {
+                    if (navNextLinkArr[i].href.indexOf("/article/") > -1) {
+                        return false;
+                    }
+                }
+            } else {
+                removeArr(navNextArr);
+            }
+        } else {
+            return false;
+        }
+    },
+
+    "nav": function (a) {
+        // takes a group of elements and creates
+        // next/previous navigation
+        // console.dir(a)
+        var url = 0,
+            currentItem = 0,
+            prevLink = 0,
+            nextLink = 0;
+        var parentDiv = document.getElementById(a.listDiv);
+        var tags = parentDiv.getElementsByTagName(a.tagName);
+        for (var i = 0; i < tags.length; i++) {
+            if (tags[i].className == a.currentClass) {
+                currentItem = i;
+                break;
+            }
+        }
+
+        //console.log(currentItem);
+        if (currentItem > 0) {
+            prevLink = tags[currentItem - 1].childNodes[0].href;
+        }
+        if (currentItem < tags.length - 1) {
+            nextLink = tags[currentItem + 1].childNodes[0].href;
+        }
+
+        // write out the nav HTML 
+        navHtml = "<ul>";
+        navHtml += "<li>";
+        if (prevLink) {
+            navHtml += "<a href='" + prevLink + "'>";
+        }
+        navHtml += "&laquo; Previous";
+        if (prevLink) {
+            navHtml += "</a>";
+        }
+        navHtml += "</li><li>";
+        if (nextLink) {
+            navHtml += "<a href='" + nextLink + "'>";
+        }
+        navHtml += "Next &raquo;";
+        if (nextLink) {
+            navHtml += "</a>";
+        }
+        navHtml += "</li>";
+        navHtml += "</ul>";
+
+        // create a new element and insert it before the
+        // list. Need to abstract this into helper function
+        // inside CCI.utils
+        var navDiv = document.createElement("div");
+        if (navDiv.setAttribute("id", "navDiv")) {
+            navDiv.setAttribute("id", "navDiv");
+        } else {
+            navDiv.id = "navDiv";
+        }
+        navDiv.innerHTML = navHtml;
+        parentDiv.style.clear = "both";
+        parentDiv.parentNode.insertBefore(navDiv, parentDiv);
+    },
+    "addSort": function (bag) {
+        bag = bag || {};
+        var tagListClass = bag.tagListClass;
+        var blogTagsArr = CCI.util.getElementsByClassName({
+            classname: tagListClass
+        });
+        var hideDuringSort = bag.hideDuringSort || 0;
+        var loaderMessageID = bag.loaderMessageID || 0;
+        var sortOrder = bag.sortOrder || "asc";
+        var sortBy = bag.sortBy || "content";
+        var altClass = bag.altClass || "cci-sort-alt";
+
+        //	console.dir(blogTagsArr);
+        for (i = 0; i < blogTagsArr.length; i++) {
+            var blogTags = blogTagsArr[i];
+            if (blogTags.childNodes.length > 0) {
+                var tags = blogTags.childNodes;
+                CCI.util.doSort({
+                    tagsArr: tags,
+                    tagsParent: blogTags,
+                    sortOrder: sortOrder,
+                    sortBy: sortBy,
+                    hideDuringSort: hideDuringSort,
+                    loaderMessageID: loaderMessageID,
+                    altClass: altClass
+                });
+            }
+        }
+    },
+
+    "sortList": function (bag) {
+        bag = bag || {};
+        var tagListClass = bag.tagListClass;
+        var blogTagsArr = CCI.util.getElementsByClassName({
+            classname: tagListClass
+        });
+        var tagAlphaArr = [];
+        //console.dir(blogTagsArr);
+        for (i = 0; i < blogTagsArr.length; i++) {
+            var blogTags = blogTagsArr[i];
+            if (blogTags.childNodes.length > 0) {
+                var tags = blogTags.childNodes;
+                CCI.util.sortLiTags({
+                    tagsArr: tags,
+                    tagsParent: blogTags
+                });
+            }
+        }
+    }
+};
+
+CCI.interstitial = {
+
+    "InitializeTimer": function (bag) {
+        bag = bag || {};
+        var secs;
+        var timerID = null;
+        var timerRunning = false;
+        var delay = 1000;
+
+        secs = bag.s;
+
+        timerRunning = CCI.interstitial.StopTheClock({
+            timerRunning: timerRunning
+        });
+        timerRunning = CCI.interstitial.StartTheTimer({
+            secs: secs,
+            timerRunning: timerRunning,
+            delay: delay
+        });
+    },
+
+    "StopTheClock": function (bag) {
+        bag = bag || {};
+        if (bag.timerRunning) {
+            clearTimeout(timerID);
+        }
+        return (timerRunning = false);
+    },
+
+    "StartTheTimer": function (bag) {
+        bag = bag || {};
+        secs = bag.secs;
+        delay = bag.delay;
+
+        timerRunning = bag.timerRunning;
+
+        if (secs == 1) {
+            CCI.interstitial.StopTheClock({
+                timerRunning: timerRunning
+            });
+            CCI.interstitial.hideIt({
+                e: "inter"
+            });
+        } else {
+            self.status = secs;
+            secs = secs - 1;
+            timerRunning = true;
+            if (secs == 1) {
+                document.getElementById('secondHolder').innerHTML = secs + " second";
+            } else {
+                document.getElementById('secondHolder').innerHTML = secs + " seconds";
+            }
+            timerID = self.setTimeout("CCI.interstitial.StartTheTimer({secs: secs, timerRunning: timerRunning, delay: delay})", delay);
+        }
+        return timerRunning;
+    },
+
+    "hideIt": function (bag) {
+        bag = bag || {};
+
+        CCI.util.toggleByTagName("object", "show");
+        CCI.util.toggleByTagName("embed", "show");
+        if (jQuery) {
+            $(window).unbind("scroll");
+        }
+        if (window.XMLHttpRequest) {
+            document.body.style.overflow = "auto";
+        }
+        if (!document.getElementById) {
+            return false;
+        }
+        if (!document.getElementById(bag.e)) {
+            return false;
+        }
+        var mask = document.getElementById(bag.e);
+        if (mask.style.display != 'none') {
+            mask.style.display = 'none';
+        }
+    },
+
+    "showIt": function (bag) {
+        bag = bag || {};
+        floaterName = bag.floaterName || 0;
+        if (!floaterName) {
+            return false;
+        }
+        floater = CCI.siteConfig.floaters[floaterName];
+        var hideInter = floater.hideInter;
+        var interTimeout = floater.interTimeout;
+        var interDays = floater.interDays || 0;
+        var interHours = floater.interHours || 24;
+        var interCookieName = floater.interCookieName;
+        var interURL = floater.interURL;
+        var showInterOnView = floater.showInterOnView || 0;
+        var useGroupIds = floater.useGroupIds || 0;
+        var currentGid = false; // assume unknown group id for this user
+        var gidMatch = true; // assume OK to show ad for this user
+        if (useGroupIds) {
+            // work through a truth table to determine if the user should not see the ad based on gid
+            var showToGroupId = floater.showToGroupId || 0;
+            var getGidFromCookie = new CCI.util.getCSDemos({
+                demos: ["gid"]
+            });
+            if (getGidFromCookie.gid != undefined) {
+                var currentGid = getGidFromCookie.gid;
+            } else {
+                var currentGid = -1;
+            }
+
+            if (currentGid && showToGroupId) {
+                if (CCI.util.inArray(showToGroupId, currentGid)) {
+                    var gidMatch = true;
+                } else {
+                    var gidMatch = false;
+                }
+            }
+        }
+
+        //Add onclick event to skip advertisement  
+        var elements = CCI.util.getElementsByClassName({
+            classname: "inter_hide"
+        });
+        elements[0].onclick = function () {
+            CCI.interstitial.hideIt({
+                e: 'inter'
+            });
+        };
+
+        var cookiesOn = CCI.util.testForCookies();
+        var cookedInter = CCI.util.readCookie({
+            name: interCookieName
+        });
+        var counter = CCI.util.readCookie({
+            name: "cciCounter"
+        });
+        if (!showInterOnView) {
+            counter = 0;
+        }
+        if (cookiesOn && gidMatch && cookedInter === null && hideInter === 0 && showInterOnView == counter) {
+            CCI.util.toggleByTagName("object", "hide");
+            CCI.util.toggleByTagName("embed", "hide");
+
+            function ajaxCallback(results) {
+                //console.log(results);
+                document.getElementById(bag.container).innerHTML = results;
+            }
+            CCI.util.ajax.get({
+                url: interURL,
+                handler: ajaxCallback
+            });
+            if (interDays) {
+                CCI.util.createCookie({
+                    name: interCookieName,
+                    value: "1",
+                    days: interDays
+                });
+            } else {
+                CCI.util.createCookie({
+                    name: interCookieName,
+                    value: "1",
+                    hours: interHours
+                });
+            }
+            var s = interTimeout * 1000;
+            var e = "inter";
+
+            //          location.href = "#";
+            window.scrollTo(0, 0);
+            if (jQuery) {
+                $(window).bind("scroll", function () {
+                    window.scrollTo(0, 0);
+                });
+            }
+
+            if (window.XMLHttpRequest) {
+                document.body.style.overflow = "hidden";
+            }
+            //console.info("showIt running...");
+            if (!document.getElementById) {
+                return false;
+            }
+            //console.log("document.getElementById is true");
+            //if (!document.getElementById(e)) return false;
+            //console.log("id " + bag.e + " on page");
+            var mask = document.getElementById(e);
+            //console.log("mask = " + mask);
+            if (mask.style.display != 'block') {
+                mask.style.display = 'block';
+                //console.log("mask visibile");
+            }
+            //if the seconds arent passed set it to 10
+            if (s === null || s === "" || s === undefined) {
+                s = 15000;
+            }
+            //if the element is inter update the div with the seconds
+            if (e == "inter") {
+                CCI.interstitial.InitializeTimer({
+                    s: interTimeout
+                });
+            }
+            if (s != "neverHide") {
+                enoughalready = setTimeout("CCI.interstitial.hideIt({ e: '" + e + "'});", s);
+            }
+        }
+    }
+};
+
+
+CCI.forms = {
+    "actions": {
+        cce: "/apps/pbcs.dll/submitcceobject",
+        sendmail: "/apps/xsendmail.dll",
+        search: "/search"
+    },
+
+    "messages": {
+        badForm: "Sorry, we need a little more information from you:",
+        emptyField: "One or more required fields are missing.",
+        badEmail: "You must enter a valid e-mail address.",
+        badText: "Text fields must contain alphanueric characters.",
+        overLimit: "One or more answers are too long."
+    },
+
+    "styles": {
+        errorMessage: "errorMessage",
+        // id of DIV that will contain error msgs
+        formTop: "formTop",
+        // id of anchor to create at top of form
+        defaultInput: "defaultInput",
+        // class of default input
+        invalidInput: "invalidInput" // class of invalid input
+    },
+
+    "doCheck": function (bag) {
+        bag = bag || {};
+        theForm = bag.formElement;
+        // create an anchor so we can go back to the top if needed
+        var formTop = document.createElement("span");
+        formTop.setAttribute("id", this.styles["formTop"]);
+        theForm.parentNode.insertBefore(formTop, theForm);
+
+        // validate the form
+        formType = bag.formType;
+        formAction = this.actions[formType];
+
+        var formElements = theForm.elements,
+            requiredFields = [],
+            emailFields = [],
+            limitFields = [],
+            emptyErr = "",
+            emailErr = "",
+            textErr = "",
+            limitErr = "",
+            requiredClass = bag.requiredClass,
+            emailClass = bag.emailClass,
+            limitClass = bag.limitClass;
+
+
+        if (formType == "search") {
+            // special search actions
+        }
+
+
+        for (i = 0; i < formElements.length; i++) {
+            if (formElements[i].className.indexOf(requiredClass) > -1 || formElements[i].className.indexOf(emailClass) > -1 || formElements[i].className.indexOf(limitClass) > -1) {
+                if (formElements[i].className.indexOf(requiredClass) > -1) {
+                    requiredFields.push(formElements[i].name);
+                }
+                if (formElements[i].className.indexOf(emailClass) > -1) {
+                    emailFields.push(formElements[i].name);
+                }
+                if (formElements[i].className.indexOf(limitClass) > -1) {
+                    limitFields.push(formElements[i].name);
+                }
+                formElements[i].onfocus = function () {
+                    if (this.className.indexOf("invalidInput") > -1) {
+                        this.className = this.className.replace(/invalidInput/g, "");
+                    }
+                };
+            }
+        }
+        for (j = 0; j < requiredFields.length; j++) {
+
+            thisRequiredField = formElements[requiredFields[j]];
+            if (thisRequiredField.className.indexOf("defaultInput") == -1) {
+                thisRequiredField.className += " defaultInput";
+            }
+            var checkLength = thisRequiredField.value.length;
+            var checkText = thisRequiredField.value.match(/.*[a-z0-9]+.*/i);
+            if (!checkLength) {
+                emptyErr = this.messages["emptyField"];
+                thisRequiredField.className = thisRequiredField.className.replace(/defaultInput/, "invalidInput");
+            } else if (!checkText) {
+                textErr = this.messages["badText"];
+                thisRequiredField.className = thisRequiredField.className.replace(/defaultInput/, "invalidInput");
+            }
+        }
+
+        for (e = 0; e < emailFields.length; e++) {
+            thisEmailField = formElements[emailFields[e]];
+            if (thisEmailField.className.indexOf("defaultInput") == -1) {
+                thisEmailField.className += " defaultInput";
+            }
+            var checkEmail = thisEmailField.value.match(/.+@.+\.[a-z]+/i);
+            if (!checkEmail) {
+                emailErr = this.messages["badEmail"];
+                thisEmailField.className = thisEmailField.className.replace(/defaultInput/, "invalidInput");
+            }
+        }
+
+        for (l = 0; l < limitFields.length; l++) {
+            thisLimitField = formElements[limitFields[l]];
+            if (thisLimitField.className.indexOf("defaultInput") == -1) {
+                thisLimitField.className += " defaultInput";
+            }
+            var charLimit = thisLimitField.className.replace(/[a-zA-z]/ig, "");
+            //	console.log(thisLimitField.textLength);
+            //	console.log(charLimit);
+            if (thisLimitField.textLength > charLimit) {
+                limitErr = this.messages["overLimit"];
+                thisLimitField.className = thisLimitField.className.replace(/defaultInput/, "invalidInput");
+            }
+        }
+
+        if ((emptyErr.length + emailErr.length + textErr.length + limitErr.length) > 0) {
+            document.location = "#" + this.styles["formTop"];
+            errorMessageHTML = this.messages["badForm"] + "<ul>";
+            if (emptyErr.length > 0) {
+                errorMessageHTML += "<li>" + emptyErr + "</li>";
+            }
+            if (emailErr.length > 0) {
+                errorMessageHTML += "<li>" + emailErr + "</li>";
+            }
+            if (textErr.length > 0) {
+                errorMessageHTML += "<li>" + textErr + "</li>";
+            }
+            if (limitErr.length > 0) {
+                errorMessageHTML += "<li>" + limitErr + "</li>";
+            }
+            errorMessageHTML += "</ul>";
+
+            var errorMessageDiv = document.getElementById(this.styles["errorMessage"]);
+            if (!errorMessageDiv) {
+                errorMessageDiv = document.createElement("div");
+                errorMessageDiv.setAttribute("id", "errorMessage");
+            }
+
+            errorMessageDiv.innerHTML = errorMessageHTML;
+            var parentDiv = theForm.parentNode;
+            parentDiv.insertBefore(errorMessageDiv, theForm);
+            return false;
+        } else {
+            if (formType == "cce") {
+                theForm.elements["type"].value = theForm.elements["cci"].value;
+                if (document.getElementById("finalTextTemplate")) {
+                    var finalTextTemplate = document.getElementById("finalTextTemplate").innerHTML;
+                    theForm.elements["field_final_text"].value = finalTextTemplate;
+                }
+
+
+                var makeTempUUID = CCI.util.UUID();
+                var tempUUID = document.createElement("input");
+                tempUUID.setAttribute("type", "hidden");
+                tempUUID.setAttribute("name", "field_tempUUID");
+                tempUUID.setAttribute("value", makeTempUUID);
+                theForm.appendChild(tempUUID);
+            } else if (formType == "sendmail") {
+                theForm.action = CCI.forms.actions[formType];
+            }
+            theForm.submit();
+        }
+    },
+
+    "addCheck": function (a, b) {
+        // after the page loads, identify a form to be validated
+        var thisForm = document.forms[a];
+        for (i = 0; i < thisForm.elements.length; i++) {
+            var el = thisForm.elements[i];
+            if (el.className.indexOf("limit") > -1) {
+                el.onkeyup = function () {
+                    var charLimit = this.className.replace(/[a-zA-z]/ig, "");
+                    //	console.clear();
+                    //	console.log(this.textLength);
+                    if (this.textLength > charLimit) {
+                        this.onkeypress = function () {
+                            //console.clear();
+                            //console.log("keyCode: " + event.keyCode);
+                        }
+                    }
+                }
+            }
+        }
+        var onSubmitVal = function () {
+                CCI.forms.doCheck({
+                    formElement: thisForm,
+                    formType: b,
+                    requiredClass: "required",
+                    emailClass: "email",
+                    limitClass: "limit"
+                });
+                return false;
+            };
+        thisForm.onsubmit = onSubmitVal;
+    }
+
+};

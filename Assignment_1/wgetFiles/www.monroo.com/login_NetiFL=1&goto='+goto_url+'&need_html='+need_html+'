@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D2Pass ログインページ</title>
+<script type="text/javascript" src="https://images.d2pass.com/images/js/cookie.js"></script>
+<script type="text/javascript" src="https://images.d2pass.com/images/js/common.js"></script>
+<script type="text/javascript" src="https://images.d2pass.com/images/js/jquery.js"></script>
+<style type="text/css">
+<!--
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hide;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #333;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+a {
+  outline: none;
+  color: #3198bd;
+  text-decoration: none;
+}
+a:hover {
+  color: #aaa;
+}
+.greyBtn {
+  padding:10px 25px;
+  margin:15px auto;
+  background: #c8c8c8;
+  background: -moz-linear-gradient(top, #d9d9d9, #b8b8b8);
+  background: -webkit-gradient(linear, center top, center bottom, from(#d9d9d9), to(#b8b8b8));
+  background: linear-gradient(to bottom, #d9d9d9, #b8b8b8);
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d9d9d9, EndColorStr=#b8b8b8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#d9d9d9, EndColorStr=#b8b8b8)";
+  border-radius: 5px;
+  color: #333;
+  font-size:1.2em;
+  text-align: center;
+}
+.greyBtn:hover {
+  background: rgb(49,152,189);
+  color: #fff;
+}
+input[type="submit"] {
+  border: 0;
+}
+.inputbox {
+  width:94%;
+  height:38px;
+  margin-bottom:10px;
+  padding:0 5px;
+  border:rgb(204,204,204) 1px solid;
+  color:#454545;
+}
+checkbox {
+  border:rgb(204,204,204) 1px solid;
+}
+#signIn p{
+  margin:0 0 5px 0;
+}
+.small {
+  font-size:0.9em;
+  line-height:1.1em;
+}
+.note {
+  color:#959595;
+  font-size:0.9em;
+  line-height:1.1em;
+}
+#signIn #footer{
+  color:#959595;
+  font-size:0.85em;
+}
+-->
+</style>
+</head>
+<body>
+<section id="signIn">
+
+<form id="form1" action="https://login.d2pass.com/n15/" method="post" name="login_form">
+<input id="username" class="inputbox" name="FORM_USER" placeholder="アカウント名" />
+<input id="passwd" class="inputbox" type="password" name="FORM_PASSWD" placeholder="パスワード" />
+<p class="small"><input name="remember_login" align="absmiddle" type="checkbox" value="y"/> 次回からIDの入力を省略</p>
+<p class="small" id="uss_check2"><input name="NETI_SUS" type="checkbox" value="1" onClick="javascript:neti_found2();" /> 次回からIDとパスワードを省略</p>
+<p class="small" id="uss_check"><input name="NETI_USS" type="checkbox" value="1" onClick="javascript:clear_me();" /> 次回からIDとパスワードを省略</p>
+
+<input type="hidden" name="V" value="1">
+<input type="hidden" name="l" value="Y-Y-WlV4J954JZ36JjcyIMUyWji4xjsvI6FKI6BsOH2KOj5A.6B6265lOqhD26hH.61KOMUK.6h-OMe0">
+<input type="hidden" name="EQS" value="YL5TQki4xjsv5lY4Yrtg5ZN9J-B4L-mZJXT95l3sxkBzGuBNJMc98j3sxkBzGuBNJXT9">
+
+<p class="small"><a href="https://pw.allbrightinformation.com" target="_blank">パスワードを忘れた方</a></p>
+<div align="center">
+<input type="submit" name="login_btn" value="ログイン" onclick="javascript:remember_me();" class="greyBtn" />
+</div>
+<p class="note">D2Pass会員の方は、D2Passのアカウントでログインできます。</p>
+<p class="note">Caps Lockがオンになっているとパスワードが正しく認識されません。オフになっているかご確認の上、ご入力ください。</p>
+
+<div id="footer">
+  Copyright ©  
+    <script language="JavaScript">
+var Myd =new Date(); var year=Myd.getFullYear(); document.write(year); document.close;
+</script>
+  D2Pass.com
+</div>
+
+</form>
+</section>
+</body>
+</html>
+
+<script  language="JavaScript">
+var NETI_SSU = '';
+var NETI_SSC = 0;
+
+var CheckFold = document.getElementById( "uss_check" );
+var CheckFold2 = document.getElementById( "uss_check2" );
+var neti_found = 0;
+
+var dateObj    = new Date();
+dateObj.setFullYear(dateObj.getFullYear() + 1);
+var cookieDobj = new hmsCookie('r_login_monroo',dateObj.toUTCString());
+cookieDobj.get();
+if (cookieDobj.args.u) 
+{
+  document.login_form.FORM_USER.value = cookieDobj.args.u;
+  if ( NETI_SSU && document.login_form.FORM_USER.value == NETI_SSU) 
+  {
+  	document.login_form.NETI_USS.checked = true;
+  } 
+  else 
+  {
+    document.login_form.remember_login.checked = true;
+  }
+}
+
+function neti_found2()
+{
+  neti_found = 1;	
+}
+
+function remember_me() {
+ if ( document.login_form.remember_login.checked || neti_found )  
+ {
+   var dateObj    = new Date();
+   dateObj.setFullYear(dateObj.getFullYear() + 1);
+   var cookieDobj = new hmsCookie('r_login_monroo',dateObj.toUTCString());
+   cookieDobj.add('u',document.login_form.FORM_USER.value);
+   cookieDobj.set();
+ } 
+ else 
+ {
+   var dateObj    = new Date();
+   dateObj.setFullYear(dateObj.getFullYear() - 1);
+   var cobj= new hmsCookie('r_login_monroo',dateObj.toUTCString());
+   cobj.add('u','');
+   cobj.set();
+ }
+ if (neti_found == 0) 
+ {
+   document.cookie = 'NetiUSS=something; expires=Thu, 2 Aug 2006 20:47:11 UTC; domain=.login.d2pass.com; path=/ ';
+ }
+}
+
+ if ( NETI_SSC > 19 && document.login_form.FORM_USER.value == NETI_SSU ) 
+ {
+	CheckFold2.innerHTML = "";
+	document.login_form.FORM_PASSWD.value = '**************';
+	neti_found = 1;
+ } 
+ else 
+ {
+    CheckFold.innerHTML = "";
+ }
+
+function clear_me()
+{  
+	if (document.login_form.NETI_USS.checked)
+	{
+		document.login_form.FORM_PASSWD.value = '**************';
+  		neti_found = 1;
+	}
+	else
+	{
+		document.login_form.FORM_PASSWD.value = '';
+  		neti_found = 0;
+  	}
+}
+
+</script>
+

@@ -1,0 +1,276 @@
+@charset "shift_jis";
+
+/*
+Title: おうちdeグルメ
+URI: http://famima.com/shop/c/cgourmet/
+*/
+
+
+/* --------------------------------------------------------------------
+	全国いいものうまいもの共通
+-------------------------------------------------------------------- */
+#gotochi-common{
+	margin:0; padding:0; width:700px;}
+
+#gotochi-common h1, #gotochi-common h2, #gotochi-common h3, #gotochi-common h4,
+#gotochi-common img, #gotochi-common p, #gotochi-common div, #gotochi-common ul, #gotochi-common li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#gotochi-common .header{
+	margin:0; padding:0; width:700px; height:245px;}
+
+#gotochi-common .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#gotochi-common .base{
+	margin:0; padding:0;}
+
+#gotochi-common .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+
+
+/* clearfix */
+#gotochi-common .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#gotochi-common .clearfix {
+  min-height: 1px;}
+
+* html #gotochi-common .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #gotochi-common { 
+	height: 1%;}
+
+/* --------------------------------------------------------------------
+	gotochi_top
+-------------------------------------------------------------------- */
+#gotochi-common h2{
+	margin:10px 0 3px 0;}
+
+/* gotochi_MAP */
+#gotochi-common .mapBGbase{
+	width:700px;
+	background:url(http://www.famima.com/images/p/gotochi/map_bg.jpg) top left repeat-y;
+	}
+
+#gotochi-common .mapBGtop{
+	width:700px; height:18px;
+	background:url(http://www.famima.com/images/p/gotochi/map_bgtop.jpg) top left no-repeat;
+	}
+	
+#gotochi-common .mapBGbtm{
+	width:700px; height:18px; clear:both;
+	background:url(http://www.famima.com/images/p/gotochi/map_bgbtm.jpg) top left no-repeat;
+	}
+
+#gotochi-common .mapimgBase{
+	width:368px; padding-left:7px; float:left;}
+
+/* gotochi_MAPNAVI */
+#gotochi-common .mapimgBase #area01{
+	padding:128px 0 0 253px;}
+#gotochi-common .mapimgBase #area02{
+	padding:128px 0 0 253px;}
+
+#gotochi-common .maptxtBase{
+	width:300px; padding:0 0 0 15px; float:left;}
+
+#gotochi-common .maptxtBase p.area{
+	color:#333333; padding:10px 0 0 0;}
+
+#gotochi-common .maptxtBase p.areaname{
+	padding:5px 4px 0 0; font-size:100%; line-height:130%; display:inline;}
+	
+#gotochi-common .maptxtBase p.areaname a:link, 
+#gotochi-common .maptxtBase p.areaname a:visited{
+	text-decoration:underline; color:#0066CC;}
+	
+#gotochi-common .maptxtBase p.areaname a:hover,
+#gotochi-common .maptxtBase p.areaname a:active{
+	text-decoration:none; color:#0066CC;}
+
+
+/* itemBase130 */
+#gotochi-common .gtch_itemBase130{
+	width:130px; padding-right:8px;
+	float:left;}
+#gotochi-common .gtch_itemBase130 .itemimg{
+	width:130px; height:130px;
+	border:1px solid #cccccc;}
+
+#gotochi-common .gtch_itemBase130 .newitemimg{
+	width:130px; height:130px;
+	border:1px solid #cccccc;
+	background:url(http://www.famima.com/images/p/gotochi/newmark.gif) top left no-repeat;}
+
+#gotochi-common .gtch_itemname{
+	padding:5px 0; font-weight:bold; line-height:120%;}
+	
+#gotochi-common .gtch-itemtxtS{
+	padding:0 0 5px 0; font-size:95%; line-height:120%;}
+
+#gotochi-common .gtch_itemname a:link, 
+#gotochi-common .gtch_itemname a:visited{
+	text-decoration:underline; color:#333333;}
+#gotochi-common .gtch_itemname a:hover,
+#gotochi-common .gtch_itemname a:active{
+	text-decoration:none; color:#333333;}
+
+/* banner */
+#gotochi-common #gtch-bannerBase{
+	text-align:center; margin-bottom:15px; display:block;}
+
+#gotochi-common .gtch-bannerBase233{
+	width:233px; float:left; display:block;}
+	
+#gotochi-common .gtch-bannerBase233 p{
+	padding:4px; text-align:left; font-size:85%; line-height:120%;}
+	
+/* Maker Item */
+#gotochi-common #gtch-makerBase{
+	margin-bottom:15px;}
+	
+#gotochi-common .gtch-makerBase345L{
+	width:345px; float:left; padding-right:5px;}
+#gotochi-common .gtch-makerBase345R{
+	width:345px; float:left;}
+
+#gotochi-common .gtch-makerBaseWrap{
+	width:343px; border:1px #999999 solid;
+	background-image:url(http://www.famima.com/images/p/gotochi/mrkr_basebg.gif);
+	background-position:1px 1px;
+	background-repeat:no-repeat;}
+
+#gotochi-common .gtch-makerBaseWrap img{
+	width:143px; height:150px; float:left;
+	padding:8px 0 4px 2px;}
+
+#gotochi-common .gtch-makerBaseWrap .txtbase{
+	width:190px; float:left;
+	padding:10px 0 0 5px;}
+	
+#gotochi-common .gtch-makerBaseWrap .copy{
+	font-weight:bold; padding-bottom:5px;}
+	
+#gotochi-common .gtch-makerBaseWrap p{
+	padding-bottom:5px;}
+	
+/* Maker Item 20110729UP */
+#gotochi-common .gtch-makerBaseBDR{
+	width:345px; border-top:1px #999999 dotted;}
+
+#gotochi-common .gtch-makerBaseBDR img{
+	width:90px; float:left; padding:5px;}
+	
+#gotochi-common .gtch-makerBaseBDR .txtbase{
+	width:230px; float:left; padding-top:5px;}
+
+#gotochi-common .gtch-makerBaseBDR .copy{
+	font-weight:bold; padding-bottom:3px;}
+
+	
+/* --------------------------------------------------------------------
+	SAKE
+-------------------------------------------------------------------- */
+#gotochi-common ul.sakeBase{
+	margin:0; padding:0; width:700px;
+	display:inline; list-style:none;}
+
+#gotochi-common li.sake{
+	margin:0; padding:0; width:220px; float:left;
+	display:inline; list-style:none;}
+
+/* --------------------------------------------------------------------
+    pr_banner
+-------------------------------------------------------------------- */
+
+#gotochi-common #prbanner_wrap {
+	width:700px; height:307px; margin:0; padding:0;
+	background:url(http://www.famima.com/images/p/gotochi/banner_area.jpg) no-repeat;}
+
+#gotochi-common #pr_wrapper {
+	position: relative; width: 698px; height:258px;}
+		
+#gotochi-common .pr_section {
+	width: 680px; height: 238px; position: absolute; padding:8px;
+	top: 15px; left: 0px;}
+
+#gotochi-common #prbanner_wrap #index_txt{
+	float:left; margin:15px 0 5px 0; padding:0 0 0 10px; width:104px;}
+#gotochi-common #prbanner_wrap ul{
+	list-style:none; margin:15px 0; padding:0; float:left; width:576px;}
+#gotochi-common #prbanner_wrap li.pr_list_current {
+	border: 0; display:inline;}
+#gotochi-common #prbanner_wrap li.pr_list_enabled {
+	border: 0; display:inline;}
+	
+
+/* --------------------------------------------------------------------
+    ssng_navi
+-------------------------------------------------------------------- */
+
+#gotochi-common #navi_ssng{
+	width:698px; border:1px solid #333333; margin-bottom:15px;}
+
+#gotochi-common #navi_ssng #list{
+	padding:10px 0 10px 0;}
+
+#gotochi-common #navi_ssng .listimg{
+	width:45px; height:45px; float:left; padding:0 0 0 10px;}
+	
+#gotochi-common #navi_ssng .listimg-pad30{
+	width:45px; height:45px; float:left; padding:0 0 0 30px;}
+	
+#gotochi-common #navi_ssng p{
+	float:left; font-weight:bold; padding:30px 0 0 5px;}
+
+#gotochi-common #navi_ssng a:link, 
+#gotochi-common #navi_ssng a:visited{
+	text-decoration:underline; color:#333333;}
+#gotochi-common #navi_ssng a:hover,
+#gotochi-common #navi_ssng a:active{
+	text-decoration:none; color:#333333;}
+
+	
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

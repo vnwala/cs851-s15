@@ -1,0 +1,149 @@
+.mb30 {
+	margin-bottom: 30px;
+}
+
+table.supporters {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#respond {display: none;}
+
+table.supporters th {
+	background: #DF2D2D !important;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+table.supporters td {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+article.structure-item h2 {
+	margin-top: 0;
+}
+
+article.structure-item i {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border: 6px solid #2789cb;
+	border-radius: 50%;
+	text-align: center;
+	color: #2789cb;
+	font-size: 80px;
+	line-height: 135px;
+}
+
+article.party-item .party-icon {
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+article.party-item .party-icon span {
+	display: block;
+	color: #FFF;
+	font-size: 16px;
+	margin-top: -23px;
+}
+
+article.party-item .party-icon.primary {
+	background: #004d99;
+}
+
+article.party-item .party-icon.secondary {
+	background: #df2d2d;	
+}
+
+article.party-item .party-icon i {
+	color: #FFF;
+	font-size: 60px;
+	line-height: 100px;
+}
+
+article.party-item ul.double {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+article.party-item ul.double li {
+	float: left;
+	width: 50%;
+	margin-right: 5%;
+	border-bottom: 1px solid #DDD;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+article.party-item ul.double li i {
+	color: #df2d2d;
+}
+
+.small-text {
+	font-size: 12px;
+	font-style: italic;
+	line-height: 16px;
+	color: #033b73;
+}
+
+.wiki-box {
+	background: #eeeeee;
+}
+
+.engage { 
+background: #F9F9F9;
+border: 1px solid #EFEFEF;
+text-align: center;
+	margin-bottom: 30px;}
+
+.engage h3 {
+	font-size: 20px;
+	text-align: center;
+
+}
+
+
+@media (min-width: 767px) and (max-width: 979px) {
+
+	article.structure-item i,
+	article.party-item .party-icon {
+		width: 110px;
+		height: 110px;
+		line-height: 95px;
+		font-size: 50px;
+	}
+
+	article.party-item .party-icon i {
+		line-height: 95px;
+		font-size: 50px;	
+	}
+
+	article.party-item .party-icon span {
+		font-size: 13px;
+		margin-top: -63px;
+	}
+
+}
+
+@media (max-width: 767px) {
+	
+	article.structure-item i {
+		margin: 20px auto;
+	}
+
+	article.party-item {
+		text-align: center;
+	}
+
+	article.party-item .party-icon {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}

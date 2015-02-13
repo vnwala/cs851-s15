@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=euc-jp">
+<title>ムラムラってくる素人のサイトを作りました   </title>
+<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/jquery.lightbox-0.5.css" />
+<META content=all name=robots>
+<script type="text/JavaScript" src="js/common.js"></script>
+<script language="Javascript" src="d2p/d2p.js"></script>
+</head>
+<body>
+<textarea id="bm_lists" style="display:none;">
+<p>ブックマーク</p>
+<p>動画</p>
+{if typeof r.bm_lists != 'undefined' && r.bm_lists != null && r.bm_lists.length > 0}
+{for bm_list in r.bm_lists}
+<dl>
+<dt>
+<a class="l_nav_pink" target="_parent" href="http://www.muramura.tv/moviepages/${bm_list.movie_id}/index.html">
+<img height="80" width="80" border="0" src="http://www.muramura.tv/moviepages/${bm_list.movie_id}/images/s.jpg"></a></dt>
+<dd>${bm_list.title}</dd>
+<dd>
+<a class="l_nav_pink" target="_parent" href="http://www.muramura.tv/moviepages/${bm_list.movie_id}/index.html">${bm_list.act}</a>
+</dd>
+</dl>
+{/for}
+{else}
+登録動画はありません 
+{/if}
+</textarea>
+
+<script>
+function bm_read( r )
+{
+
+    style = document.getElementById( 'mylist-cont' ).style;
+    
+    if( r.bm_lists && r.bm_lists.length > 0 && style.display == 'none' )
+    {
+        style.display = 'block';
+    }
+
+    document.getElementById( r.settings.div_id ).innerHTML = TrimPath.processDOMTemplate(r.settings.tpl, {r : r} );
+    return;
+}
+
+</script>
+
+<div id="container" style="width:620px;height:700px">
+<div id="mylist-cont">
+  <div class="m1" id="mylist-m1"></div>
+  <div class="m2" id="mylist-m2"></div>
+  <div class="m3" id="mylist-m3"></div>
+<span class="clear"></span>
+
+<span class="clear"></span>
+<p><a href="https://sns.d2pass.com/mylist/bookmark/" target="_blank">あなたのブックマークを全てチェック！</a></p>
+</div>
+
+<script>
+if( getCookie('NetiA') )
+{
+    settings =
+    {
+        div_id : 'mylist-m1',
+        tpl    : 'bm_lists',
+        site_id : 20001117,
+        bm_list_varname : 'bm_list2300'
+    }
+
+    d2p_bookmark.get( bm_read, settings );
+
+}
+</script>
+
+</div>
+</body>
+</html>

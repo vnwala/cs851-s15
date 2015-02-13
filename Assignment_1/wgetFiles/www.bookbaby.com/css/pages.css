@@ -1,0 +1,6001 @@
+﻿/*	================================================================================================
+	TOC
+
+	Homepage - Default.aspx
+	Contact Page
+	FAQ Page
+	How To Make An eBook Page
+	Perparing For Conversion Page
+	Volume Pricing Page
+	Pricing Page
+	Book Pricing Page
+	Book Editing Page
+	BookShop
+	Book Scanning Page
+	Cover Design Page
+	Websites for Authors Page
+	eBook Services Page
+	eBook Distribution Page
+	eBook Conversion Page
+	eBook Graphics Page
+	Agencies Page
+	Government Page
+	About Page
+	Press Page
+	Brand Guidelines Page
+	Privacy Page
+	Terms of Service Page
+	Guarantee Page
+	Friends of BookBaby Page
+	Reviews Page
+	Sitemap Page
+	Bookbaby Affiliate Program Page
+	eBook Accounting Page
+	BookPromo Page
+	free ebook publishing
+
+	================================================================================================ */
+
+
+/*	================================================================================================
+	Homepage ORIGINAL - Default.aspx
+	================================================================================================ */
+
+#default-page
+{
+	display: block;
+}
+#default-page hr
+{
+    display: block;
+    height: 8px;
+    background: transparent URL('../images/home/suboffer-bg-dot.png') 0px -2px;
+    border: 0px;
+}
+#default-page section#offers
+{
+	background-color:#F3F3F2;
+	height:250px;
+	width: 100%;
+}
+#default-page #offers .third-column
+{
+	float: left;
+    height: 250px;
+    margin-top: 30px;
+    padding: 10px 0 0 25px;
+    text-align: center;
+}
+#default-page #free_guides {
+	background: transparent URL('../images/home/free-guides-bg.png');
+	height: 145px;
+	position: relative;
+	margin-top: 44px;
+	padding: 14px 10px 0px 145px;
+	text-align: left;
+	width: 163px;
+	margin-left: 50px;
+}
+#default-page #freeguides-overlay {
+	position: absolute;
+	top: -55px;
+	left: -50px;
+	display: block;
+	width: 176px;
+	height:217px;
+	background: URL('../images/home/home-sprite.png') 0 -78px no-repeat;
+}
+#default-page #offers .right h2
+{
+    font-size: 28px;
+    line-height: 36px;
+    margin: 5px 0 0 25px;
+    width: 230px;
+}
+#default-page #offers .right p
+{
+	font-size: 14px;
+    margin: 5px 0 0 25px;
+    width: 236px;
+}
+#default-page #offers .right p a
+{
+	font-size: 14px;
+}
+#default-page #offers .third-column.left
+{
+	background: transparent url('../images/home/suboffer-bg-dot.png') 99% 5px repeat-y;
+	height: 160px;
+	padding: 10px 0px;
+	margin-top: 30px;
+	width: 336px;
+	text-align: center;
+}
+#default-page #offers .third-column.left h2 {
+	width: 236px;
+	font-size: 28px;
+	line-height: 36px;
+	margin: 5px auto 0px auto;
+    border-bottom: 1px solid #DDDDDD;
+    display: block;
+    padding-bottom: 5px;
+}
+#default-page #offers .third-column.left p {
+	width: 220px;
+	margin: 7px auto;
+	font-size: 14px;
+}
+#default-page #offers .third-column.center
+{
+	background: transparent url('../images/home/suboffer-bg-dot.png') 99% 5px repeat-y;
+	height: 160px;
+	padding: 10px 0px;
+	margin-top: 30px;
+	width: 325px;
+	text-align: center;
+}
+#default-page #offers .third-column.center h2 {
+	width: 236px;
+	margin: 5px 0px 0px 32px;
+	font-size: 28px;
+	line-height: 36px;
+	border-bottom: 1px solid #DDDDDD;
+    display: block;
+    padding-bottom: 5px;
+}
+#default-page #offers .third-column.center p {
+	width: 236px;
+	margin: 7px 28px;
+	font-size:14px;
+}
+#default-page #offers .third-column.right h2 {
+	width: 236px;
+	margin: 5px auto 0px auto;
+	font-size: 28px;
+	line-height: 36px;
+	border-bottom: 1px solid #DDDDDD;
+    display: block;
+    padding-bottom: 5px;
+}
+#book-promo-logo {
+    margin: -2px 0 -12px;
+}
+#default-page #partner-left
+{
+	float: left;
+	width: 460px;
+	text-align: left;
+}
+    	
+#default-page #partner-left h2
+{
+	font-size: 40px;
+	margin-top: 35px;
+}
+    	
+#default-page #partner-left p
+{
+	font-size: 20px;
+	width: 419px;
+}
+
+#default-page #partner-right
+{
+	float: left;
+	background-color: #FFF;
+	padding: 26px;
+/*	margin-top: 30px;
+*/}
+	
+#default-page #partner-info
+{
+	height: 495px;
+	width: 100%;
+	background: #F3F3F2 URL('../images/home/sandpaper.jpg');
+}
+    	
+#default-page #testimonials
+{
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height:500px;
+    position:relative;
+}
+    	
+#default-page #testimonials .quadrant
+{
+	float: left;
+	width: 489px;
+	height: 250px;
+	position:relative;
+}
+    	
+#default-page #testimonials .quadrant.leather
+{
+	background: #333333 URL('../images/home/black-pebble-leather.jpg');
+}
+
+#default-page #testimonials .quadrant
+{
+	color: #FFF;
+	font-size: 14px;
+}
+
+#default-page #bookbaby-guarantee
+{
+    position: absolute;
+    top: 169px;
+    left: 408px;
+	z-index: 999;
+	display: block;
+	width: 164px;
+	height: 161px;
+	background: URL('../images/home/home-sprite.png') 0px -300px no-repeat;
+}
+
+#default-page #testimonials .quadrant.top-left .open-quote
+{
+	background: transparent URL('../images/home/open-quote.png');
+	height: 17px;
+	width: 19px;
+	display: block;
+	position: absolute;
+	left: 75px;
+	top: 30px;
+}
+    	
+		
+#default-page #testimonials .quadrant.top-left .closed-quote
+{
+	background: transparent URL('../images/home/closed-quote.png');
+	height: 16px;
+	width: 19px;
+	display: block;
+	position: absolute;
+	left: 410px;
+	top: 132px;
+}
+    	
+#default-page #testimonials .quadrant.top-left p {
+	width: 319px;
+	position: absolute;
+	top: 30px;
+	left: 84px;
+	text-align: right;
+	color: #FFF;
+	font-size: 14px !important;
+	line-height: 24px;
+}
+    	
+#default-page #testimonials .quadrant.top-left p.author
+{
+	width: 310px;
+	position: absolute;
+	top: 155px;
+	left: 93px;
+	text-align: right;
+	font-weight: bold;
+}
+    	
+#default-page #testimonials .quadrant.top-left p.author-info
+{
+	width: 310px;
+	position: absolute;
+	top: 180px;
+	left: 93px;
+	text-align: right;
+	line-height: normal;
+}
+		
+		
+#default-page #testimonials .quadrant.bottom-right .open-quote {
+	background: transparent URL('../images/home/open-quote.png');
+	height: 17px;
+	width: 19px;
+	display: block;
+	position: absolute;
+	left: 87px;
+	top: 59px;
+}
+    	
+		
+#default-page #testimonials .quadrant.bottom-right .closed-quote {
+	background: transparent URL('../images/home/closed-quote.png');
+	height: 16px;
+	width: 19px;
+	display: block;
+	position: absolute;
+	left: 307px;
+	top: 137px;
+}
+    	
+#default-page #testimonials .quadrant.bottom-right p {
+	width: 287px;
+	position: absolute;
+	top: 58px;
+	left: 113px;
+	text-align: left;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 24px;
+}
+    	
+#default-page #testimonials .quadrant.bottom-right p.author
+{
+	width: 310px;
+	position: absolute;
+	top: 163px;
+	left: -106px;
+	text-align: right;
+	font-weight: bold;
+}
+    	
+#default-page #testimonials .quadrant.bottom-right p.author-info
+{
+	width: 130px;
+	position: absolute;
+	top: 185px;
+	left: 106px;
+	text-align: right;
+}
+#default-page #how-easy
+{
+	
+	width: 100%;
+	display:block;
+	overflow:hidden;
+}
+#default-page #how-easy .inner-wrap
+{
+	text-align: center;
+	height:610px;
+}
+#default-page #how-easy h2
+{
+	font-size: 40px;
+	font-weight: bold;
+	margin: 30px auto 40px auto;
+	display: block;
+}
+		
+#default-page #how-easy h3
+{
+	color: #9E1807;
+	font-weight:bold;
+	font-size: 25px;
+}
+		
+#default-page #how-easy #how-easy-left {
+	width:800px;
+	float:none;
+	margin-left:90px;
+}
+		
+
+
+#default-page #how-easy #how-easy-left h3
+{
+	margin-bottom: 5px;
+}
+    	
+#default-page #how-easy #how-easy-left p
+{
+	line-height: 22px;
+	width:700px;
+}
+
+#default-page #how-easy .how-easy-section {
+	margin:20px auto;
+
+	position: relative;
+	padding-left: 80px;
+	text-align: left;
+}
+
+#default-page #how-easy  hr
+{
+	margin:30px 0;
+	width:800px;
+}
+		
+#default-page #how-easy .how-easy-section.one .image
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display:block;
+	width: 67px;
+	height:54px;
+	background:URL('../images/home/home-sprite.png') 0px -464px no-repeat;
+}
+
+#default-page #how-easy .how-easy-section.two .image
+{	
+	position: absolute;
+	top: 0px;
+	left: 0px;			
+	display:block;
+	width: 67px;
+	height: 55px;
+	background: URL('../images/home/home-sprite.png') 0px -519px no-repeat;
+}
+
+#default-page #how-easy .how-easy-section.three .image
+{	
+	position: absolute;
+	top: 0px;
+	left: 0px;			
+	display:block;
+	width: 67px;
+	height: 55px;
+	background: URL('../images/home/home-sprite.png') 0px -576px no-repeat;
+}
+
+#default-page #how-easy p
+{
+	width: 600px;
+}
+
+
+#default-page #how-easy #how-easy-left .button {
+	margin-top: 0px;
+}
+
+
+
+#default-page #catalog {
+	height: 300px;
+	width: 100%;
+	background: #000;
+}
+#default-page #catalog .inner-wrap {
+	position: relative;
+	background: transparent URL('../images/home/wood-bg.jpg');
+	height: 300px;
+	overflow: visible;
+}
+
+#default-page #catalog .catalog-img {
+	position: absolute;
+	top: -88px;
+	left: 0px;
+}
+
+#default-page #catalog .catalog-patch {
+	position: absolute;
+	left: 313px;
+	top: 64px;
+	display:block;
+	width:169px;
+	height:168px;
+	background: URL('../images/home/home-sprite.png') 0 -901px no-repeat;
+}
+
+#default-page #catalog #catalog-content
+{
+	position: absolute;
+	left: 491px;
+	text-align: left;
+	width: 490px;
+	margin-top:75px;
+}
+
+#default-page #catalog #catalog-content h2 {
+	font-size: 38px;
+	color: #FFF;
+}
+
+#default-page #catalog #catalog-content p {
+	font-size: 20px;
+	color: #F8F2E4;
+}
+
+#default-page #catalog #catalog-content p a
+{
+	color: #F89E3F;
+}
+		
+#default-page #your-readers {
+	height: 640px;
+	width: 100%;
+	background: #F3F3F2 URL('../images/home/grain.jpg');
+}
+		
+#default-page #your-readers-content
+{
+	width: 360px;
+	float: left;
+	margin-right: 80px;
+	margin-top: 78px;
+	text-align: left;
+}
+
+#default-page #your-readers-content p
+{
+	font-size: 20px;
+	width: 392px;
+	color: #333;
+	margin-bottom: 35px;
+}
+
+#default-page #your-readers-content h2
+{
+	font-size: 40px;
+	line-height: 45px;
+	margin-bottom: 15px;
+}
+
+#default-page #your-readers-image
+{
+	width: 530px;
+	float: left;
+	margin-top: 88px;
+	position: relative;
+}
+
+#default-page #your-readers-image .frame-img
+{
+	position: absolute;
+	top: 56px;
+	left: 69px;
+}
+
+#default-page #cover-design
+{
+	background-color: #D8EBE9;
+	height: 386px;
+	width: 100%;
+}
+    	
+#default-page #cover-design .inner-wrap
+{
+	position:relative;
+	overflow:visible !important;
+}
+		
+#default-page #cover-design-left
+{
+	width: 560px;
+	float: left;
+	padding-top:40px;
+}
+
+#default-page #cover-design-right
+{
+	width: 300px;
+	float: left;
+	margin-left: 60px;
+	text-align: left;
+	margin-top: 60px;
+}
+#default-page #cover-design-right h2
+{
+	width: 310px;
+	font-size: 40px;
+	margin-bottom: 10px;
+	line-height: 45px;
+}
+#default-page #cover-design-right p
+{
+	width: 290px;
+	font-size: 20px;
+	margin: 10px 0px 20px;
+}
+#default-page #cover-design .cover-design-patch
+{
+	position:absolute;
+	top: -35px;
+	left: 300px;
+
+}
+#default-page #cover-design .cover-design-patch 
+{
+	position: absolute;
+	top: -82px;
+	left: 477px;
+}
+
+#default-page #printed-books
+{
+	width: 100%;
+	background-color:#F8F7F6;
+	height:512px;
+}
+#default-page #printed-books-left {
+	float: left;
+	width: 410px;
+	margin-top: 100px;
+	text-align: left;
+	margin-right: 110px;
+}
+#default-page #printed-books-left h2 {
+	font-size: 40px;	
+}
+#default-page #printed-books-left h3 {
+	font-size: 30px;
+}
+#default-page #printed-books-left p {
+	font-size: 20px;
+	width: 444px;
+	margin: 10px 0px 20px;
+}
+#default-page #printed-books-right {
+	width: 448px;
+	float: left;
+}
+#default-page #printed-books-right img {
+	margin-top: 50px;
+}
+#default-page #printed-books .float-container
+{
+	overflow:visible !important;
+}
+#default-page #printed-books .printed-books-patch
+{
+	position: absolute;
+	top: -37px;
+	left: 826px;
+	width:173px;
+	height:140px;
+	display:block;
+	background: URL('../images/home/home-sprite.png') 0px -632px no-repeat;
+}
+
+#default-page #why
+{
+	width: 100%;
+	height: 462px;
+	background-color:#000;
+	text-align:left;
+}
+#default-page #why .inner-wrap {
+	position: relative;
+	background: transparent URL('../images/home/why-bg.jpg') 0px 0px no-repeat;
+		
+	height: 462px;
+}
+#default-page #why #you-will {
+	font-size: 40px;
+	position: absolute;
+	color: #FFF;
+	top: 100px;
+	left: 41px;	
+}
+#default-page #why #bookbaby {
+	font-size: 40px;
+	position: absolute;
+	color: #FFF;
+	top: 100px;
+	left: 377px;
+}
+#default-page #why #blur {
+	position: absolute;
+	top: -40px;
+	left: -20px;
+	opacity: 0.7;
+}
+#default-page #why #heart {
+	position: absolute;
+	top: 38px;
+	left: 233px;
+	display:block;
+	width: 165px;
+	height: 132px;
+	background: URL('../images/home/home-sprite.png') 0px -773px no-repeat;
+}
+#default-page #why #why-content em
+{
+	color: #A6C6DD;
+	font-weight: bold;
+}
+#default-page #why #why-content {
+	position: absolute;
+	top: 170px;
+	left: 40px;
+	font-size: 18px;
+	color: #FFF;
+	line-height: 30px;
+}
+#default-page #why-content ul li {
+	list-style: disc;
+	margin-left: 19px;
+	margin-bottom:5px;
+}
+
+#default-page #blog
+{
+	height: 602px;
+	width: 100%;
+	background: #F8F7F6;
+}
+    
+#default-page #blog .float-container {
+	position: relative;
+	overflow: visible;
+	display: inline-block;
+}
+          
+#default-page #blog .subhead
+{	
+	margin-top: 125px;
+	display: block;
+	margin-bottom: 50px;
+}
+          
+#default-page #blog .subhead h2
+{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+        
+#default-page #blog .quadrant
+{
+	width: 475px;
+	float: left;
+	height: 135px;
+	text-align: left;
+	margin-bottom: 45px;
+	position: relative;
+	margin-right: 30px;
+}
+            
+#default-page #blog .quadrant.end
+{
+	margin-right:0px;
+}
+
+#default-page #blog .quadrant hr {
+	margin-top: 50px;
+}
+
+#default-page #blog .quadrant img
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#default-page #blog .quadrant .blog-title {
+	font-weight: bold;
+	color: #333;
+	font-size: 18px;
+	margin-top: 20px;
+	display: block;
+	width: 320px;
+	margin-left: 150px;
+}
+#default-page #blog .quadrant .read-more
+{
+	margin-left: 150px;
+}
+#default-page #blog .blog-patch
+{
+	position: absolute;
+	top: -96px;
+	left: 384px;
+	display:block;
+	width: 250px;
+	height: 193px;
+	background: URL('../images/home/home-sprite.png') 0px -1080px no-repeat;
+}
+
+#default-page #the-end
+{
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height:201px;
+	position:relative;
+}
+
+#default-page #the-end .inner-wrap
+{
+	position: relative;
+}
+                
+#default-page #the-end img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#default-page #the-end .the-end-container {
+	display: block;
+	margin-left: 357px;
+	text-align: left;
+	width: 650px;
+	padding-top: 31px;
+}
+
+#default-page #the-end .the-end-container h2 {
+	color: #FFF;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+#default-page #the-end .the-end-container p
+{
+	float: left;
+	font-size: 20px;
+	color: #FFF;
+	width: 350px;
+	margin-left: 20px;
+	line-height: 35px;
+	margin-right: 15px;
+}
+
+#default-page #the-end .the-end-container .button.hero {
+	margin-top: 10px;
+	padding: 12px 25px !important;
+}
+
+#default-page #apple-approved
+{
+	position: absolute;
+	right: 22px;
+	bottom: 70px;
+	width:96px;
+	height:78px;
+	display:block;
+	background: URL('../images/home/home-sprite.png') 0 0 no-repeat;
+}
+
+#default-page #overlay h2
+{
+	font-size:21px;
+}
+#default-page #overlay h3
+{
+	font-size:34px;
+}
+
+/*	================================================================================================
+	Contact Page
+	================================================================================================ */
+
+#contact-page { display: block; }
+
+#contact-page #content-wrapper h1{
+	margin-bottom:20px;	
+}
+#contact-page #content-wrapper { padding-bottom:100px; }
+#contact-page #content-wrapper dt
+{
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+#contact-page #content-wrapper dd
+{
+    margin-bottom:20px;
+    padding-bottom:20px;
+    line-height:20px;
+	color:#666;
+}
+#contact-page .faq-note{
+	background-color:#EDF4F9;	
+	border:1px solid #CCC;
+	padding:8px 12px;
+	margin:10px 0;
+	width:480px;
+}
+#contact-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+}
+#contact-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+#contact-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+}
+#contact-page #content-hero .inner-wrap #hero-content {
+	position: absolute;
+	top: 42px;
+	left: 60px;
+}
+
+/*	================================================================================================
+	FAQ Page
+	================================================================================================ */
+
+#faq-page
+{
+	display:block;
+}
+
+#faq-page #content-wrapper
+{
+	margin-top:150px;
+}
+
+#faq-page #content-wrapper h1 
+{
+	padding-bottom:0;
+}
+
+#faq-page #content-wrapper dl
+{
+	margin-bottom:45px;	
+}
+
+#faq-page #content-wrapper dt,
+#faq-page #content-wrapper dt a
+{
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+	text-decoration:none;
+	color:#000;
+	font-family:'Open Sans';
+}
+#faq-page #content-wrapper dd
+{
+	margin-bottom:20px;
+	padding-bottom:20px;
+	line-height:20px;
+	border-bottom:1px dashed #ddd;
+	color:#666;
+	font-size: 13px;
+}
+#faq-page .answer-list
+{
+	margin:5px 25px 15px;
+}
+#faq-page .answer-list li{
+	list-style-type:disc;
+}
+#faq-page .abc-list
+{
+	margin:5px 25px 15px;
+}
+#faq-page .abc-list li{
+	list-style-type: upper-alpha; 
+}
+#faq-page .number-list
+{
+	margin:5px 25px -10px;
+}
+#faq-page .number-list li{
+	list-style-type:decimal;
+}
+#faq-page #categories-box, #search-box{
+	width:445px;
+	height:255px;
+	float:right;
+	background-color:#FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+#faq-page #content-wrapper ol li{
+	list-style-type:decimal;
+}
+#faq-page #search-box{
+	left:0px;	
+	position:absolute;
+}
+#faq-page #search-box label,
+#faq-page #search-box p,
+#faq-page #search-box input
+{
+	position:absolute;
+}
+#faq-page #search-box label,
+#faq-page #search-box input
+{
+	position:absolute;
+	left:33px;
+	top:125px;
+}
+
+#faq-page #search-box label
+{
+	top: 100px;
+	text-align: center;
+	width: 380px;
+}
+#faq-page #search-box p
+{
+	right: 44px;
+	top: 133px;
+	color:#aaa;
+	display:none;
+}
+#faq-page ul.guide-list
+{
+	float: left;
+	margin: 13px;
+}
+#faq-page ul.guide-list li, ul.guide-list-red li{
+	margin:0 0 8px 12px;	
+	list-style-type:disc;
+	color:#333;
+}
+#faq-page ul.guide-list li a{
+	font-size:13px;
+	text-decoration:underline;
+}
+
+#faq-page .header-bar{
+	background-color:#333;
+	padding: 8px 11px;
+	font-size:14px;
+	color:#FFF;	
+	font-weight:bold;
+}
+#faq-page #content-wrapper h2
+	{
+		margin-bottom: 15px;
+}
+#faq-page q { 
+	background-color:#f5adaf; 
+}
+#faq-page #no-results 
+{ 
+	display:none;
+	text-align:center;
+	height:150px;
+	color:#888;
+	font-size:14px;
+}
+#faq-page #no-results h4
+{ 
+	font-size:18px;
+	font-weight:bold;
+	color:#111;
+	padding:40px 0 10px 0;
+}
+#faq-page #content-wrapper li
+{
+	font-size:13px;
+}
+
+#faq-page .package-details-table { 
+	display: block;
+	overflow: hidden;
+}
+
+#faq-page .details-header {
+	background-color: #848178;
+	padding: 30px 0px 15px;
+	text-align: center;
+	display:block;
+	overflow:hidden;
+}
+
+#faq-page .details-header .bigger { 
+	font-size: 36px;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+
+#faq-page .details-header .big { 
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+#faq-page .details-header .crossout { 
+	display: inline-block;
+	color: #8fd2c9;
+	position: relative;
+}
+
+#faq-page .details-header .crossout:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: -3px;
+	width: 90px;
+	height: 3px;
+	background-color: #8fd2c9;
+	transform: rotate(-15deg);
+}
+
+#faq-page .details-title { 
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+#faq-page .details-row {
+	padding: 20px 0px;
+	background-color: #e8f4f2;
+	padding-left: 50px;
+	background: #e8f4f2 url('../Images/ebook-publishing-check.png') no-repeat left 15px center;
+	font-size: 1.1em;
+}
+
+#faq-page .details-row + .details-row {
+	border-top: 1px solid #ccc;
+}
+
+/*	================================================================================================
+	How To Make An eBook Page
+	================================================================================================ */
+#how-to-page
+{
+	display: block;
+}
+
+#how-to-page #content-left {
+	width:620px;
+	margin-bottom:20px;	
+	margin-top:30px;
+}
+#how-to-page #content-right {
+	width:310px;
+	float:left;
+	margin-top:30px;
+}
+#how-to-page #faq-callout, #guides-callout{
+	width:309px;
+	height:240px;
+	float:left;
+	background-image:url("../images/faq-callout.png");
+	background-position:top;
+	background-repeat:no-repeat;
+	margin-bottom:30px;
+}
+#how-to-page #guides-callout{
+	height:555px;
+	background-image:url("../images/faq-freeguidescallout.png");
+}
+#bookpromo-callout{
+	width:309px;
+	height:280px;
+	float:left;
+	background-image:url("../images/faq-bookpromo-callout.png");
+	background-position:top;
+	background-repeat:no-repeat;
+	margin-bottom:30px;
+}
+
+#how-to-page section#content-hero{
+	background-color: #000;
+	width:100%;
+	height:135px
+}
+
+#how-to-page section#content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height:135px;
+	display:inline-block;
+	position:relative;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#how-to-page section#content-hero #how-to-hero-content {
+	margin-top: 35px;
+	margin-left: 50px;
+}
+
+#how-to-page section#content-hero h1 {
+	font-size: 48px;
+	color: #FFF;
+	margin-bottom: 15px;
+}
+
+#how-to-page #content-wrapper h2 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 35px;
+    margin-bottom: 5px;
+}
+
+#how-to-page .ebook-row {
+    border-top: 1px solid #DDDDDD;
+    clear: left;
+    display: block;
+	margin-top: 30px;
+    padding-top: 30px;
+}
+
+#how-to-page .ebook-row img {
+	float:left;
+	margin-right:25px;	
+	border:1px solid #DDD;
+}
+
+#how-to-page .ebook-row div{
+	float:left;	
+	width:383px;
+	margin-bottom:10px;
+}
+
+#how-to-page #social-icons {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+
+/*	================================================================================================
+	Perparing For Conversion Page
+	================================================================================================ */
+
+#conversion-tips-page
+{
+	display: block;
+}
+
+#conversion-tips-page #content-wrapper ol{
+	color: #333;
+	font-size: 13px;
+	line-height:20px;
+	margin: 20px 0 0 40px;
+}
+#conversion-tips-page #content-wrapper ul{
+	color: #333;
+	font-size: 13px;
+	line-height:20px;
+	margin: 0 0 30px 40px;
+}
+#conversion-tips-page #content-wrapper ul li{
+	margin-bottom: 5px;
+	list-style-type:disc;
+	color: #666;
+	font-size: 12px;
+	line-height:18px;
+}
+#conversion-tips-page #content-wrapper ol li {
+	margin-bottom: 20px;
+	padding-bottom: 35px;
+	list-style-type: decimal;
+	background: rgba(0, 0, 0, 0) URL('../images/home/suboffer-bg-dot.png') repeat-x 95% 95%;
+	font-size: 14px;
+	line-height:21px;
+}
+#conversion-tips-page #content-wrapper ol li ul{
+	margin: 15px 0 0 40px;
+	color:#666;
+}
+#conversion-tips-page #content-wrapper ol li ul li{
+	list-style-type:disc;
+	border-bottom: none;
+	margin-bottom:0;
+	padding-bottom:10px;
+	background: transparent;
+}
+#conversion-tips-page section#content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:205px
+}
+
+#conversion-tips-page section#content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height:205px;
+	display:inline-block;
+	position:relative;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+#conversion-tips-page section#content-hero #preparing-hero-content {
+	margin-top: 55px;
+	margin-left: 50px;
+}
+
+#conversion-tips-page section#content-hero h1 {
+	font-size: 48px;
+	color: #FFF;
+	margin-bottom: 5px;
+}
+
+#conversion-tips-page section#content-hero p {
+	font-size: 20px;
+	color: #FFF;
+	width: 640px;
+	margin-bottom: 0px;
+	color: #A6D1CE;
+}	
+
+#conversion-tips-page #content-top
+{
+	text-align: center;
+	overflow:hidden;
+}
+
+#conversion-tips-page #content-top h2
+{
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 18px;
+	text-align: left;
+	color: #000;
+	margin: 35px 0px 10px 0px;
+}
+
+
+/*	================================================================================================
+	Volume Pricing Page
+	================================================================================================ */
+
+#volume-pricing-page
+{
+	display: block;
+}
+
+#volume-pricing-page .pricing-table, #volume-pricing-page .pricing-table { width:100%; }
+	
+#volume-pricing-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px;
+	margin-bottom: 20px;
+}
+
+#volume-pricing-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 220px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+#volume-pricing-page #content-hero img {
+	position: absolute;
+	top: 30px;
+	right: 150px;
+}
+#volume-pricing-page #hero-content
+{
+	display: block;
+	margin-top: 25px;
+	margin-left: 60px;
+	color:#FFFFFF;
+}
+#volume-pricing-page #content-wrapper h2
+{
+	margin-bottom:15px;
+}
+#volume-pricing-page #content-wrapper ul
+{
+	margin-bottom: 15px;
+}
+#volume-pricing-page #content-wrapper ul li
+{
+	list-style: initial;
+	margin-left: 19px;
+	line-height: 1.7em;
+}
+#volume-pricing-page #hero-content h1
+{
+	font-size:50px;
+	color:#FFF;
+}
+#volume-pricing-page #offer-info
+{
+	font-size:17px;
+}
+#volume-pricing-page .package-column
+{
+	width: 313px;
+	float: left;
+	margin-right:20px;
+}
+#volume-pricing-page .column-header {
+	overflow: hidden;
+	width: 313px;
+	height: 100px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+}
+#volume-pricing-page #content-wrapper .column-header h2
+{
+	color:#FFF;	
+	font-weight:normal;
+	margin-top: 11px;
+	margin-bottom: 6px;
+}
+
+#volume-pricing-page #content-wrapper .column-header h2.blue
+{
+	color:#58ABBD;
+}
+#volume-pricing-page #content-wrapper .column-header h2.green
+{
+	color:#A5BA47;
+}
+#volume-pricing-page #content-wrapper .column-header h2.orange
+{
+	color:#DF7000;
+}
+#volume-pricing-page #content-wrapper .column-header hr
+{
+	background: transparent url('../images/suboffer-bg-dot-white.png');
+	margin: 0px 18px;
+}
+#volume-pricing-page .pub-credits
+{
+	color: #FFF;
+	margin-top: 10px;
+}
+#volume-pricing-page .package-table {
+	width: 311px;
+	margin-bottom:20px;
+}
+#volume-pricing-page .package-table td,
+#volume-pricing-page .package-table th{
+	border: 1px solid #CCC;
+	padding: 10px;
+	text-align: center;
+}
+#volume-pricing-page .package-table th
+{
+	font-weight:bold;
+	background-color:#EEEEEE;
+}
+
+#volume-pricing-page .package-table td {
+	background-color: #fff;
+}
+
+#volume-pricing-page .package-table td.label { 
+	background-color: #eeeeee;
+}
+
+#volume-pricing-page #package-wrapper {
+	margin-bottom: 25px;
+}
+	
+#volume-pricing-page #all-in-one {
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height: 135px;
+	position: relative;
+}
+
+#volume-pricing-page #all-in-one h1
+{
+	font-size: 36px;
+	color: #FFF;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+#volume-pricing-page testimonial
+{
+	height: 350px;
+	overflow:hidden;
+}
+
+#volume-pricing-page #testimonial-wrapper
+{
+	display: block;
+	background: rgba(0, 0, 0, 0) URL('../images/volume-pricing-testimonial.png') no-repeat 0px 0px;
+	height: 259px;
+	width: 989px;
+	margin-top: 37px;
+	margin-bottom: 37px;
+	position:relative;
+	overflow:hidden;
+}
+
+#volume-pricing-page #testimonial-content
+{
+	margin-top: 40px;
+	margin-left: 300px;
+	position: relative;
+	width: 620px;
+}
+
+#volume-pricing-page #testimonial-content #oquote
+{
+	position: absolute;
+	top: 2px;
+	left: -23px;
+}
+
+#volume-pricing-page #testimonial-content #equote
+{
+	position: absolute;
+	top: 118px;
+	left: 589px;
+}
+
+#volume-pricing-page p.author {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 0px;
+	margin-left: 495px;
+}
+
+#volume-pricing-page .author-info
+{
+	margin-left: 495px;
+	font-style: italic;
+}
+
+#volume-pricing-page p.subhead
+{
+	font-size: 20px;
+	width: 640px;
+	margin-bottom: 15px;
+	color: #A6D1CE;
+}
+
+
+/*	================================================================================================
+	Pricing Page
+	================================================================================================ */
+
+#pricing-page
+{
+	display: block;
+}
+
+#pricing-page #content-wrapper p{
+	color:#666;
+	margin:8px 0 0;
+}
+#pricing-page .pricing-table { width:100%; }
+#pricing-page .price{
+	font-size:20px;
+	color:#333;
+	font-weight:bold;
+	line-height:26px;	
+	display:block;	
+}
+#pricing-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px;
+}
+#pricing-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 220px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+#pricing-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+}
+#pricing-page #content-hero .inner-wrap #hero-content {
+	position: absolute;
+	top: 70px;
+	left: 60px;
+}
+#pricing-page #content-hero .inner-wrap img
+{
+	position: absolute;
+	top: 27px;
+	left: 810px;
+}
+#pricing-page .pricing-table
+{
+	border-bottom: 1px solid #CCC;
+	margin-bottom:40px;
+}
+#pricing-page .pricing-table-header
+{
+	overflow: hidden;
+	width: 100%;
+}
+#pricing-page .pricing-table-title
+{
+	display:inline-block;
+	padding: 8px 12px;
+	background-color:#333;
+	color:#FFF;
+	font-family: Bitter;
+	font-size: 20px;
+}
+#pricing-page .pricing-table-row
+{
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	overflow:hidden;
+	/*height: 139px;*/
+}
+#pricing-page .row-innerwrap
+{
+	width:980px;
+	padding:30px;
+}
+#pricing-page .pricing-table-row.grey
+{
+	background-color: #EEEEEE; 
+}
+#pricing-page .pricing-table-row.fixed-layout,
+.pricing-table-row.fixed-layout .pricing-item
+{
+	height:155px;
+}
+#pricing-page .price.fixed-layout {
+	margin-top: 16px;
+}
+#pricing-page .pricing-item
+{
+	display: block;
+	width: 600px;
+	height:115px;
+	border-right: 1px solid #CCC;
+	float: left;
+	padding: 15px;
+}
+#pricing-page #content-wrapper .pricing-item h2 a
+{
+	font-weight: normal;
+	color:#153268;
+}
+#pricing-page #content-wrapper .pricing-item h2 a:hover{
+	color:#50658E;
+}
+#pricing-page #content-wrapper .pricing-item.other-services h2
+{
+	text-decoration:none;
+}
+#pricing-page .pricing-price
+{
+	display: block;
+	width: 316px;
+	height:115px;
+	float: left;
+	padding: 15px;
+	text-align:center;
+}
+#pricing-page .pricing-price a
+{
+	font-size:16px;
+	line-height:108px;
+}
+#pricing-page .pricing-table p { line-height:18px; }
+#pricing-page .price
+{
+	font-family:Bitter;
+	font-size:70px;
+	font-weight:normal;
+	line-height:1em;
+	text-align:center;
+	margin-top:7px;
+}
+#pricing-page .price.note
+{
+	font-size:12px;
+	font-style:italic;
+	line-height:15px;
+	font-family:"Open Sans",Arial, sans-serif;
+}
+#pricing-page .meta-changes .price.note
+{
+	font-size:12px;
+	font-style:italic;
+	line-height:10px;
+	margin-top:0;
+	font-family:"Open Sans",Arial, sans-serif;
+}
+#pricing-page .images
+{
+	line-height: 1em;
+	font-size: 16px;
+	font-weight: bold;
+}
+#pricing-page .price.dkblue{
+	color:#153268;
+}
+#pricing-page .price.blue,
+#pricing-page .images.blue
+{
+	color:#58ABBD;
+}
+#pricing-page .price.green
+{
+	color:#A5BA47;
+}
+#pricing-page .price.orange,
+#pricing-page .images.orange
+{
+	color:#DF7000;
+}
+#pricing-page .price.orange.premium
+{
+	margin-top: 21px;
+}
+#pricing-page .price.cover {
+	font-size: 55px;
+}
+#pricing-page .price-info {
+	font-size: 16px;
+	margin-top: 15px;
+	line-height: 1.7em;
+}
+#pricing-page .price-promo {
+	font-size: 16px;
+	margin-top: 15px;
+	line-height: 2.7em;
+}
+#pricing-book-promo-logo {
+	margin: 1px 0px 0px 90px !important;
+}
+#pricing-page .pricing-right
+{
+	background: rgba(0, 0, 0, 0) url('../images/home/suboffer-bg-dot.png') repeat-y -1% 0px;
+}
+#pricing-page .pricing-left{
+	width:50%;
+	float:left;
+	height: 100%;
+}
+#pricing-page .pricing-right
+{
+	width:45%;
+	float:left;
+	height: 100%;
+	padding-left:15px;
+}
+#pricing-page .pricing-left h4, .pricing-right h4 {
+	color: #666;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	margin-bottom: 6px;
+	font-size: 19px;
+}
+#pricing-page .pricing-price img {
+	float: left;
+	margin-top: 28px;
+}
+#pricing-page .meta-changes .price-info 
+{
+	margin-top:0;
+}
+#pricing-page .isbn .price {
+	margin-top: 19px;
+}
+#pricing-page .content-changes .price-info {
+	margin-top: 3px;
+}
+#pricing-page #earnings {
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height: 201px;
+	position: relative;
+	margin-top: 30px;
+}
+#pricing-page #earnings img {
+	margin-top: 20px;
+}
+#pricing-page #earnings-content {
+	position: absolute;
+	top: 20px;
+	left: 230px;
+	color: #FFF;
+}
+#pricing-page #earnings h1 {
+	font-size: 36px;
+	color: #FFF;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+}
+
+#pricing-page-b
+{
+	display: block;
+}
+
+#pricing-page-b .pricing-table, #pricing-page-b .pricing-table { width:100%; }
+	
+#pricing-page-b #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px;
+	margin-bottom: 20px;
+}
+
+#pricing-page-b #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 220px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+#pricing-page-b #content-hero img {
+	position: absolute;
+	top: 30px;
+	right: 150px;
+}
+#pricing-page-b #hero-content
+{
+	display: block;
+	margin-top: 25px;
+	margin-left: 60px;
+	color:#FFFFFF;
+}
+#pricing-page-b #content-wrapper h2
+{
+	margin-bottom:15px;
+	color:#000;
+}
+#pricing-page-b #content-wrapper ul
+{
+	margin-bottom: 15px;
+}
+#pricing-page-b #content-wrapper ul li
+{
+	list-style: initial;
+	margin-left: 19px;
+	line-height: 1.7em;
+}
+#pricing-page-b #hero-content h1
+{
+	font-size:50px;
+	color:#FFF;
+}
+#pricing-page-b #offer-info
+{
+	font-size:17px;
+}
+#pricing-page-b .package-column
+{
+	width: 429px;
+	float: left;
+	margin:20px 60px 20px 0;
+}
+#pricing-page-b .column-header {
+	overflow: hidden;
+	width: 429px;
+	height: 100px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+}
+#pricing-page-b #content-wrapper .column-header h2
+{
+	color:#FFF;	
+	font-weight:700;
+	margin-top: 11px;
+	margin-bottom: 0;
+	letter-spacing:1px;
+}
+
+#pricing-page-b #content-wrapper .column-header h2.blue
+{
+	color:#58ABBD;
+}
+#pricing-page-b #content-wrapper .column-header h2.green
+{
+	color:#A5BA47;
+}
+#pricing-page-b #content-wrapper .column-header h2.orange
+{
+	color:#DF7000;
+}
+#pricing-page-b #content-wrapper .column-header hr
+{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #666;
+	width:90%;
+	margin: 0 auto 10px;
+}
+#pricing-page-b .pub-credits
+{
+	color: #FFF;
+	margin-top: 10px;
+}
+#pricing-page-b .package-table {
+	width: 429px;
+}
+#pricing-page-b .package-table td,
+#pricing-page-b .package-table th{
+	border: 1px solid #CCC;
+	padding: 10px;
+	text-align: center;
+}
+#pricing-page-b .package-table th
+{
+	font-weight:bold;
+	background-color:#f2efe4;
+}
+
+#pricing-page-b .package-table td {
+	background-color: #fff;
+}
+
+#pricing-page-b .package-table td.label { 
+	background-color: #eeeeee;
+}
+
+#pricing-page-b #package-wrapper {
+	margin-bottom: 25px;
+}
+	
+#pricing-page-b #all-in-one {
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height: 135px;
+	position: relative;
+}
+#pricing-page-b .volumepricing-box {
+    border: 1px solid #ccc;
+    float: left;
+    padding: 30px;
+    width: 918px;
+	margin-bottom:40px;
+}
+#pricing-page-b #agencies-container {
+    width: 838px;
+	padding:10px 40px 20px 40px;
+	background-color:#f2efe4;
+	float: left;
+    margin:40px 0 20px 0;
+}
+#pricing-page-b #agencies-container h2 {
+    color: #000;
+    font-size: 24px;
+	font-weight: normal;
+    line-height: 1.5em;
+    margin: 15px 0;
+	text-align:center;
+}
+
+#pricing-page-b #all-in-one h1
+{
+	font-size: 36px;
+	color: #FFF;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+#pricing-page-b testimonial
+{
+	height: 350px;
+	overflow:hidden;
+}
+
+#pricing-page-b #testimonial-wrapper
+{
+	display: block;
+	background: rgba(0, 0, 0, 0) URL('../images/volume-pricing-testimonial.png') no-repeat 0px 0px;
+	height: 259px;
+	width: 989px;
+	margin-top: 37px;
+	margin-bottom: 37px;
+	position:relative;
+	overflow:hidden;
+}
+
+#pricing-page-b #testimonial-content
+{
+	margin-top: 40px;
+	margin-left: 300px;
+	position: relative;
+	width: 620px;
+}
+
+#pricing-page-b #testimonial-content #oquote
+{
+	position: absolute;
+	top: 2px;
+	left: -23px;
+}
+
+#pricing-page-b #testimonial-content #equote
+{
+	position: absolute;
+	top: 118px;
+	left: 589px;
+}
+
+#pricing-page-b p.author {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 0px;
+	margin-left: 495px;
+}
+
+#pricing-page-b .author-info
+{
+	margin-left: 495px;
+	font-style: italic;
+}
+
+#pricing-page-b p.subhead
+{
+	font-size: 20px;
+	margin-bottom: 15px;
+	color: #A6D1CE;
+}
+#pricing-page-b .pub-credits {
+    color: #fff;
+    margin-top: 10px;
+	font-size:16px;
+	line-height:18px;
+	letter-spacing:1px;
+}
+
+/*	================================================================================================
+	Book Printing Page
+	================================================================================================ */
+
+#book-printing-page
+{
+	display:block;
+}
+#book-printing-page #content-left{
+	width:620px;
+	float:left;
+	margin-right:45px;
+	position:relative;
+	margin-top:5px;
+}
+
+#book-printing-page #content-right {
+	width: 310px;
+	float: right;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	height: 290px;
+}
+
+#book-printing-page #content-hero #hero-content {
+	margin-top: 30px;
+	margin-left: 105px;
+	color: #FFF;
+	width: 470px;
+}
+
+#book-printing-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/bookprinting-hero.png") no-repeat center center;
+	height: 426px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#book-printing-page #content-hero {
+	width: 100%;
+	height: 425px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+#book-printing-page #content-hero p.subhead {
+	font-size: 21px;
+	font-weight: 600;
+	color: #FFF;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-style:normal;
+}
+
+#book-printing-page #hero-content h1 {
+	margin: 0px auto 5px auto;
+	font-size: 44px;
+	color: #FFF;
+	line-height: 1.2em;
+}
+
+#book-printing-page #hero-content p {
+	color:#A5D1CC;
+	font-style: italic;
+}
+
+#book-printing-page #hero-content p.deal
+{
+	font-size: 20px;
+	font-style: normal;
+	margin-bottom: 5px;
+}
+	
+#book-printing-page #content-wrapper h2 { 
+	font-size: 25px;
+	color: #153268;
+	margin-bottom: 20px;
+}
+
+#book-printing-page #content-wrapper p {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 22px;
+}
+
+#book-printing-page #sidebar-offer {
+	background: transparent URL('../images/bookprinting-sidebar.png');
+	height: 514px;
+	padding: 25px 30px;
+	text-align: center;
+}
+
+#book-printing-page #sidebar-offer h1
+{
+	margin-bottom: 15px;
+}
+
+#book-printing-page #special-offers
+{
+	width: 100%;
+	height: 420px;
+	background-color: #F0F6DE;
+}
+
+#book-printing-page #special-offers h1
+{
+	padding: 12px 0px 15px 0px;
+	text-align:center;
+	display: block;
+	width: 100%;
+	background-color:#A5BC49;
+}
+	
+#book-printing-page #packages
+{
+	width: 100%;
+	height: 450px;
+	margin-bottom:-25px;
+	background-color: #E7F4F1;
+}
+
+#book-printing-page #packages h1
+{
+	padding: 12px 0px 15px 0px;
+	text-align:center;
+	display: block;
+	width: 100%;
+	background-color:#A6D1CE;
+}
+
+#book-printing-page #offers-container {
+	margin-top: 45px;
+}
+
+#book-printing-page .offer {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	display: block;
+	width: 265px;
+	height: 260px;
+	float: left;
+	margin-right: 35px;
+	text-align: center;
+	padding: 14px 20px 0px 16px;
+}
+
+#book-printing-page .offer h4 {
+	font-size: 18px;
+}
+
+#book-printing-page .package { 
+	height: 311px;
+	width: 266px;
+	float: left;
+	padding: 10px 35px 0px 25px;
+	text-align: center;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-y 99% 10px;
+	margin-top: 25px;
+}
+
+#book-printing-page .package h2
+{
+	color:#333;
+	margin-bottom:10px;
+}
+
+
+/*	================================================================================================
+	Book Editing Page
+	================================================================================================ */
+#book-editing-page
+{
+	display:block;
+}
+#book-editing-page #content-left li
+{
+	font-size: inherit;
+}
+
+#book-editing-page #content-wrapper h2 { 
+	width:650px;
+}
+
+#book-editing-page #content-left{
+	width:630px;
+	float:left;
+	margin-right:45px;
+	position:relative;
+	margin-top:5px;
+}
+
+#book-editing-page #social-icons{
+	margin-top:5px;	
+}
+
+#book-editing-page section#content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px
+}
+
+#book-editing-page section#content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height:220px;
+	display:inline-block;
+	position:relative;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#book-editing-page section#content-hero #try_free
+{
+	position:absolute;
+	top: 40px;
+	left: 830px;
+}
+
+#book-editing-page section#content-hero #scanning-hero-content {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+#book-editing-page section#content-hero h1 {
+	font-size: 48px;
+	color: #FFF;
+	margin-bottom: 15px;
+}
+
+#book-editing-page section#content-hero p {
+	font-size: 21px;
+	color: #FFF;
+	width: 520px;
+	font-weight: 600;
+	margin-bottom: 0px;
+}
+
+#book-editing-page #content-right {
+	width: 300px;
+	float: right;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	height: 290px;
+}
+	
+#book-editing-page #testimonial-wrapper {
+	background: transparent URL('../images/ebook-editing-siderbar.png');
+	height: 466px;
+	width: 207px;
+	margin-bottom: 40px;
+	display: inline-block;
+	position: relative;
+	padding: 35px 30px;
+	color: #133266;
+}
+
+#book-editing-page #end_quote {
+	position: absolute;
+	top: 98px;
+	left: 195px;
+}
+
+#book-editing-page #content-wrapper #content-right p
+{
+	color: #133266;
+}
+
+#book-editing-page #content-wrapper p.testimonial
+{
+	margin-left: 25px;
+	margin-top: -25px;
+}
+
+#book-editing-page #content-wrapper p.author {
+	text-align: right;
+	font-weight: bold;
+	font-size: 16px;
+	color: #133266;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+#book-editing-page #content-wrapper p.info {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 16px;
+	text-align: right;
+}
+
+#book-editing-page #content-wrapper p.subhead {
+	font-size: 21px;
+line-height: 1.5em;
+}
+
+#book-editing-page .firstediting {
+	padding-right: 230px;
+	position: relative;
+}
+
+#book-editing-page .firstediting img {
+	position: absolute;
+	top: 30px;
+	right: 0px;
+}
+
+#book-editing-page .first-editing-list {
+	width: 210px;
+	float: left;
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px !important;
+}
+
+#book-editing-page #offer-wrapper
+{
+	background: transparent URL('../images/ebook-editing-offer.png');
+	height: 260px;
+	width: 260px;
+	text-align: center;
+}
+
+#book-editing-page #offer-wrapper .button
+{
+	margin: 180px auto 0px auto;
+}
+
+#book-editing-page #social-icons
+{
+	margin-top:25px;
+}
+/*	================================================================================================
+	BookShop Page
+	================================================================================================ */
+#bookshop{
+	display:block;
+}
+#bookshop #content-left li{
+	font-size: inherit;
+}
+
+#bookshop #content-wrapper h2 {
+	font-size:36px;
+	margin:30px 0;
+	text-align:center;
+	background: url("../images/home/suboffer-bg-dot.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    display: block;
+    overflow: hidden;
+	padding-bottom:30px;
+}
+.clear-content20{
+	clear:both;
+	height:20px;}
+#bookshop section#content-hero{
+	background-color: #000;
+	width:100%;
+	height:350px
+}
+
+#bookshop section#content-hero .inner-wrap{
+	background: #000 URL("../images/redesign-wood-hero-300.png") no-repeat center center;
+	height:350px;
+	display:inline-block;
+	position:relative;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#bookshop #content-hero p.subhead {
+    color: #FFFFFF;
+    font-size: 20px;
+	line-height:30px;
+    margin-bottom: 0;
+    width:550px;
+}
+	
+
+#bookshop #content-hero p.subhead.green {
+    color: #A6D1CE;
+	margin-bottom:10px;
+}
+
+
+#bookshop section#content-hero #bookshop-hero-content {
+	margin-top: 40px;
+	margin-left: 50px;
+}
+#bookshop section#content-hero #bookshop-hero-content img {
+	float:right;
+	margin-right:50px;
+}
+
+#bookshop #content-wrapper p.info {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 16px;
+	text-align: right;
+}
+#bookshop #content-wrapper .features { 
+	width:980px;
+	float:left;
+	background: url("../images/home/suboffer-bg-dot.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    display: block;
+    margin-bottom: 45px;
+    overflow: hidden;
+	padding-bottom:60px;
+}
+#bookshop #content-wrapper .samples { 
+	width:980px;
+	float:left;
+	background: url("../images/home/suboffer-bg-dot.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    display: block;
+    margin-bottom: 25px;
+    overflow: hidden;
+	padding-bottom:60px;
+}
+#bookshop #content-wrapper .samples img{ 
+	float:left;
+    display: block;
+	margin-top: 20px;
+   
+}
+#bookshop #content-wrapper .samples .text {
+	  font-family: "Bitter";
+	   color: #153268;
+    font-weight: bold;
+	font-size:36px;
+
+	text-align:center;
+    display: block;
+    overflow: hidden;
+}
+#bookshop #content-wrapper .feature-text {
+	font-size: 22px;
+	line-height: 39px;
+	text-align: left;
+	color:#797468;
+	width:420px;
+}
+#bookshop #content-hero h1 {
+    color: #FFFFFF;
+    font-size: 48px;
+	line-height:56px;
+    margin-bottom: 10px;
+	width:530px;
+}	
+
+
+#bookshop .first-editing-list {
+	width: 410px;
+	float: left;
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px !important;
+}
+
+
+#bookshop #social-icons{
+	margin-top:25px;
+}
+
+/*	================================================================================================
+	Book Scanning Page
+	================================================================================================ */
+
+#book-scanning-page
+{
+	display: block;
+}
+
+#book-scanning-page #content-wrapper h2 { 
+	font-size: 25px;
+	color: #153268;
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+
+#book-scanning-page #content-wrapper p {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+
+#book-scanning-page #content-left{
+	width:630px;
+	float:left;
+	margin-right:45px;
+	position:relative;
+	margin-top:5px;
+}
+
+#book-scanning-page .book-scanning-mainimage{
+	margin-left:5px;
+}
+
+#book-scanning-page section#content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px
+}
+
+#book-scanning-page section#content-hero .inner-wrap
+{
+	background: #000 URL("../images/ebook-scanning-hero.png") no-repeat center center;
+	height:220px;
+	display:inline-block;
+	position:relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#book-scanning-page section#content-hero #scanning-hero-content {
+	margin-top: 45px;
+	margin-left: 50px;
+}
+
+#book-scanning-page section#content-hero h1 {
+	font-size: 48px;
+	color: #FFF;
+}
+
+#book-scanning-page section#content-hero p {
+	font-size: 20px;
+	color: #A6D1CE;
+	width: 520px;
+}
+
+#book-scanning-page #bound-book-wrapper {
+	background-color: #D8EBE9;
+	position: relative;
+	height: 275px;
+}
+
+#book-scanning-page #bound-book-wrapper h1 {
+	padding: 20px 25px 0px 25px;
+	width: 200px;
+	font-size: 30px;
+}
+
+#book-scanning-page #bound-book-wrapper p {
+	padding:0px 23px;
+}
+
+#book-scanning-page #content-right {
+	width: 300px;
+	float: right;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	height: 290px;
+}
+
+#book-scanning-page #special-offer {
+	position: absolute;
+	top: -40px;
+	right: 0px;
+}
+
+/*	================================================================================================
+	Cover Design Page
+	================================================================================================ */
+#cover-design-page
+{
+	display: block;
+}
+
+#cover-design-page #content-wrapper h2 {
+	font-size:27px;
+}
+
+#cover-design-page h4{
+	font-size:20px;
+	line-height:26px;
+	color:#333;
+	margin-bottom:10px;
+}
+
+#cover-design-page #content-hero
+{
+	width: 100%;
+	height: 486px;
+	overflow:hidden;
+	background-color: #D8EBE9;
+}
+#cover-design-page #content-hero p.subhead {
+	font-size: 21px;
+	font-weight: 600;
+	color: #153268;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+#cover-design-page #hero-content h1 {
+	margin: 0px auto 30px auto;
+	font-size: 44px;
+}
+#cover-design-page #slider-prev
+{
+	position:absolute;
+		
+	top: 120px;
+	left: 0px;
+}
+
+#cover-design-page #slider-next
+{
+	position:absolute;
+		
+	top: 125px;
+	right: 0px;
+}
+#cover-design-page #slider-prev .bx-prev {
+	background: transparent URL('../images/hostbaby-slider-left.png');
+	height: 40px;
+	display: block;
+	width: 40px;
+}
+#cover-design-page #slider-next .bx-next {
+	background:transparent URL('../images/hostbaby-slider-right.png');
+	height: 40px;
+	display: block;
+	width: 40px;
+}
+	
+#cover-design-page #slider-wrap
+{
+	position: relative;
+} 
+#cover-design-page .bx-wrapper img {
+	float: left;
+	margin-right:25px;
+}
+#cover-design-page .bx-wrapper img.right
+{
+	margin-right: 0px;
+}
+	
+#cover-design-page #content-top
+{
+	text-align: center;
+	overflow:hidden;
+}
+#cover-design-page #content-top h2
+{
+	font-family: 'Open Sans';
+	font-weight:300;
+	font-size:25px;
+	text-align: center;
+	color:#000;
+	margin-top: 35px;
+}
+
+#cover-design-page #content-top .button
+{
+	margin: 10px auto 20px auto;
+}
+
+#cover-design-page #sell{
+	padding-left: 170px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom:50px;
+}
+#cover-design-page #offer {
+	padding-left: 170px;
+	overflow: hidden;
+	position: relative;
+	margin:30px 0 20px 0;
+	height:135px;
+}
+
+#cover-design-page #sell img {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+#cover-design-page #offer img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#cover-design-page #packages {
+	width: 100%;
+	position: relative;
+	margin-bottom:25px;
+}
+
+#cover-design-page .package {
+	overflow: hidden;
+	width: 380px;
+	height: 220px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+	float:left;
+}
+
+#cover-design-page #packages-deluxe
+{
+	margin-left: 219px;
+	border-right:1px solid #FFF;
+}
+
+#cover-design-page #content-wrapper .package h3 {
+	color: #FFF;
+	font-weight: normal;
+	font-size: 25px;
+	margin: 13px 0px 13px 0px;
+}
+
+#cover-design-page #content-wrapper .package .price {
+	font-weight: normal;
+	font-size: 80px;
+	color: #FFA500;
+	font-family: Bitter;
+	padding-bottom: 10px;
+	display: block;
+	width: 170px;
+	margin: 10px auto 0px auto;
+	overflow: hidden;
+	line-height: 1em;
+}
+	
+#cover-design-page #content-wrapper #packages-basic.package .price 
+{
+	color:#A5D1CD;
+}
+
+#cover-design-page .currency {
+	font-size: 50px;
+	display: block;
+	width: 26px;
+	float: left;
+	margin-top: -10px;
+}
+
+#cover-design-page #content-wrapper .package hr
+{
+	background: transparent url('../images/suboffer-bg-dot-white.png');
+	margin: 0px 18px;
+}
+
+#cover-design-page .packages-head
+{
+	overflow:hidden;
+}
+
+#cover-design-page .packages-item-row
+{
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+}
+
+#cover-design-page .packages-item
+{
+	width: 190px;
+	background-color: #DDD;
+	padding: 10px 15px;
+	float: left;
+}
+
+#cover-design-page .packages-item-deluxe {
+	width: 349px;
+	float: left;
+	padding: 10px 15px;
+	border-right: 1px solid #CCC;
+	text-align: center;
+	min-height:100%;
+	height:100%;
+}
+
+#cover-design-page .packages-item-basic {
+	width: 349px;
+	float: left;
+	padding: 10px 15px;
+	text-align: center;
+	min-height:100%;
+	height:100%;
+}
+
+#cover-design-page #packages img {
+	position: absolute;
+	top: -40px;
+	left: 170px;
+}
+	
+#cover-design-page #offers img
+{
+	float:left;
+}
+
+#cover-design-page #masterpiece
+{
+	margin: 25px 0px;
+}
+#cover-design-page #masterpiece p
+{
+	line-height:1.7em;
+}
+#cover-design-page #how-it-works
+{
+	background-color: #A6D1CE;
+	width:100%;
+	padding:16px 0px;
+}
+
+#cover-design-page #how-it-works h2
+{
+	font-size: 30px;
+	text-align: center;
+}
+#cover-design-page #how-it-works-steps
+{
+	background-color: #D8EBE9;
+	overflow:hidden;
+	margin-bottom:-20px;
+	height:330px;
+}
+#cover-design-page #steps-container
+{
+	margin:25px 0px;
+}
+#cover-design-page .step {
+	height: 201px;
+	width: 195px;
+	float: left;
+	padding: 0px 25px 0px 25px;
+	text-align: center;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-y 99% 10px;
+}
+#cover-design-page #how-it-works-steps .inner-wrap
+{
+	text-align:center;
+}
+#cover-design-page .step p
+{
+	font-size: 15px;
+} 
+#cover-design-page .step img
+{
+	margin-bottom: 10px;
+}
+#cover-design-page #sell h2 {
+	margin: 20px 0px 5px 0px;
+}
+#cover-design-page .tracker-individual-container,
+#cover-design-page .tracker-summation-container
+{
+	display:none !important;
+}
+
+/*	================================================================================================
+	Websites for Authors Page
+	================================================================================================ */
+
+#author-websites-page 
+{
+	display: block;
+}
+#author-websites-page #slider-wrap
+{
+	position: relative;
+}
+#author-websites-page .bx-wrapper img {
+	float: left;
+}
+#author-websites-page .bx-wrapper img.left
+{
+	margin-right: 25px;
+}
+#author-websites-page #content-hero
+{
+	width: 100%;
+	height: 486px;
+	overflow:hidden;
+	background-color: #D8EBE9;
+}
+#author-websites-page #content-hero p.subhead {
+	font-size: 21px;
+	font-weight: 600;
+	color: #153268;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+#author-websites-page #content-right h2
+{
+	background-color:#333;
+}
+#author-websites-page #hero-content h1 {
+	margin: 0px auto 30px auto;
+	font-size: 50px;
+}
+#author-websites-page #content-top
+{
+	text-align: center;
+	overflow:hidden;
+	padding-top:20px;
+}
+#author-websites-page #slider-prev .bx-prev {
+	background: transparent URL('../images/hostbaby-slider-left.png');
+	height: 40px;
+	display: block;
+	width: 40px;
+	position: absolute;
+	top: 120px;
+	left: 7px;
+}
+#author-websites-page #slider-next .bx-next {
+	background: transparent URL('../images/hostbaby-slider-right.png');
+	height: 40px;
+	display: block;
+	width: 40px;
+	position: absolute;
+	top: 125px;
+	right: 7px;
+}
+
+#author-websites-page #try_free {
+	position: absolute;
+	top: 100px;
+	right: 0px;
+}
+
+#author-websites-page #content-top .button
+{
+	margin: 15px auto 10px auto;
+}
+
+#author-websites-page #content-wrapper hr
+{
+	margin: 30px 0px 5px 0px;
+}
+
+/*	================================================================================================
+	eBook Services Page
+	================================================================================================ */
+
+#ebook-services-page 
+{
+	display:block;
+	background-color:#FFF;
+}
+
+#ebook-services-page #content-hero
+{
+	background: #BBDCDA;
+	width: 100%;
+	height:645px;
+}
+
+#ebook-services-page p {
+	color: #333;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+
+#ebook-services-page #pub-credits-callout:hover{
+	background-position:bottom;
+}
+
+#ebook-services-page #content-hero
+{
+	width: 100%;
+	font-size: 20px;
+	height: 535px;
+	overflow:hidden;
+	background: #D8EBE9 URL('../images/ebook-pub-sandpaper-bg.png') repeat center center;
+}
+
+#ebook-services-page #content-hero .big {
+	font-size: 18px;
+	margin-bottom: 3px;
+	margin-top: 15px;
+}
+
+
+#ebook-services-page #content-hero .price {
+	color: #0C194B;
+	font-size: 56px;
+	font-weight: bold;
+	line-height: 1em;
+	margin: 7px 12px 0 0;
+}
+
+#ebook-services-page #content-hero .oldprice {
+	color: #5A7A92;
+	font-size: 48px;
+	font-weight: normal;
+	line-height: 1em;
+	margin-top: 12px;
+
+}
+
+.strikethrough {
+	position: relative;
+}
+.strikethrough:before {
+position: absolute;
+content: "";
+left: 0;
+top: 50%;
+right: 0;
+border-top: 3px solid;
+border-color: inherit;
+-webkit-transform: rotate(-5deg);
+-moz-transform: rotate(-5deg);
+-ms-transform: rotate(-5deg);
+-o-transform: rotate(-5deg);
+transform: rotate(-5deg);
+}
+#ebook-services-page #content-hero p.subhead {
+	font-size: 21px;
+	font-weight: 600;
+	color: #7F7F7F;
+	margin-top: 45px;
+	margin-bottom: 0px;
+}
+
+#ebook-services-page #hero-content h1 {
+	margin: 10px auto 10px auto;
+	font-size: 40px;
+	font-family: "Open Sans";
+	color: #333;
+
+}
+#ebook-services-page #hero-content h2 {
+	margin: 10px auto 10px auto;
+	font-size: 20px;
+	font-family: "Open Sans";
+	color: #333;
+	font-weight:400;
+
+}
+
+#ebook-services-page #hero-content {
+	width: 450px;
+	
+}
+#ebook-services-page #hero-content p {
+	line-height: 1.3em;
+}
+
+#ebook-services-page #hero-content .small{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#ebook-services-page #hero-content .button{
+	width: 200px;
+	text-align: center;
+}
+
+
+
+#ebook-services-page #content-hero img {
+	position: absolute;
+	top: 0px;
+	left: 510px;
+}
+
+
+
+#ebook-services-page .package-details-table { 
+	display: block;
+	overflow: hidden;
+}
+
+
+#ebook-services-page .details-title { 
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	padding: 15px 0px;
+	display: block;
+	float: left;
+	width: 100%;
+	letter-spacing:1px;
+	
+}
+
+#ebook-services-page  .details-row {
+	background-color: #e8f4f2;
+	float: left;
+	border-top: 1px solid #ccc;
+}
+
+#ebook-services-page .details-rowleft {
+	padding: 20px 0px;
+	padding-right: 20px;
+	
+	font-size: 1.4em;
+	font-weight: bold;
+	float: left;
+	text-align: right;
+	min-height: 20px;
+	width: 340px;
+	display: block;
+	
+}
+
+#ebook-services-page .details-rowright {
+	padding: 20px 50px;
+	vertical-align: middle;
+	
+	background: #e8f4f2;
+	font-size: 1.1em;
+	line-height: 1.4em;
+	display: block;
+	float: left;
+	border-left: 1px solid #ccc;
+	
+	width: 519px;
+	min-height: 26px;
+}
+
+
+
+
+#ebook-services-page .publish-button {
+	text-align: center;
+	margin: 50px auto;
+}
+
+
+#ebook-services-page #published-now
+{
+	display:block;
+	text-align:center;
+}
+
+#ebook-services-page #published-now p
+{
+	font-size:21px;
+}
+
+#ebook-services-page #includes
+{
+	display:block;
+	width:100%;
+	overflow:hidden;
+	background-color:#E7F4F1;
+}
+
+#ebook-services-page #includes .header
+{
+	font-size: 40px;
+	font-family: Bitter;
+	padding: 10px 0px 15px 0px;
+	text-align: center;
+	margin-bottom: 35px;
+	color: #133266;
+	background-color: #A6D1CE;
+	display: block;
+	font-weight: bold;
+}
+
+#ebook-services-page #includes #conversion-content img {
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+#ebook-services-page #includes .include-row {
+	display: block;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-x bottom center;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+#ebook-services-page #includes .include-row.last
+{
+	background:transparent;
+}
+
+#ebook-services-page #includes .include-row img {
+	float: left;
+	margin: 0px 35px 35px 0px;
+}
+
+#ebook-services-page #includes .include-row h2
+{
+	margin-bottom:7px;
+}
+#ebook-services-page #includes .include-row.bookpromo h2 {
+	margin-top: 0px;
+}
+
+#ebook-services-page #includes .include-row.worldwide h2 {
+	margin-top: 60px;
+}
+
+#ebook-services-page #includes .include-row.sales h2 {
+	margin-top: 15px;
+}
+
+#ebook-services-page #includes .include-row.conversion h2 {
+	margin-top: 15px;
+}
+
+
+#ebook-services-page #includes .include-row.support h2
+{
+	margin-top:5px;
+}
+
+#ebook-services-page #includes .include-row.support p {
+	width: 630px;
+}
+
+#ebook-services-page #includes .include-row .subhead
+{
+	font-weight: bold;
+	color:#000;
+	margin-bottom:5px;
+}
+
+#ebook-services-page #heading-block{
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 30px;
+	font-weight: 600;
+}
+#ebook-services-page #heading-block h1 {
+	font-size: 36px;
+	font-weight:600;
+	font-family: "Open Sans","Arial", sans-serif;
+	color: #333;
+}
+#ebook-services-page #special-offers
+{
+	display:block;
+	width:100%;
+	overflow:hidden;
+	background-color:#FFF;
+	margin-top: 30px;
+	padding:60px 0;
+}
+
+#ebook-services-page #special-offers .header
+{
+	font-size: 40px;
+	font-family: Bitter;
+	padding: 10px 0px 15px 0px;
+	text-align: center;
+	margin-bottom: 35px;
+	color: #133266;
+	background-color: #A5BC49;
+	display: block;
+	font-weight: bold;
+}
+
+#ebook-services-page #special-offers .offer-row .subhead {
+	font-family: 'Open Sans';
+	font-size: 18px;
+	margin-bottom: 5px;
+	font-weight:600;
+}
+
+#ebook-services-page #special-offers .offer-row {
+	display: block;
+	overflow: hidden;
+	min-height: 125px;
+}
+
+#ebook-services-page #special-offers .offer-row h2
+{
+	margin-bottom:7px;
+}
+	
+#ebook-services-page #special-offers .offer-row.isbn img {
+	margin-top: 25px;
+	margin-bottom: 55px;
+}
+#ebook-services-page #special-offers .offer-row.isbn p {
+	width:800px;
+}
+#ebook-services-page #special-offers .offer-row.graphics h2
+{
+	margin-top:25px;
+}
+#ebook-services-page #special-offers .offer-row.design h2
+{
+	margin-top:10px;
+}
+#ebook-services-page #special-offers .offer-row.hosting h2
+{
+	margin-top:30px;
+}
+#ebook-services-page #special-offers .offer-row.print h2
+{
+	margin-top:50px;
+}
+#ebook-services-page #special-offers .offer-row.hosting h2,
+#ebook-services-page #special-offers .offer-row.design h2,
+#ebook-services-page #special-offers .offer-row.print h2
+#ebook-services-page #special-offers .offer-row.isbn h2
+{
+	margin-bottom:0px;
+	color:#000;
+	font-size:30px;
+	font-family: 'Open Sans';
+	font-weight:700;
+}
+
+#ebook-services-page #special-offers .offer-row.last
+{
+	background:transparent;
+}
+
+#ebook-services-page #special-offers .offer-row img {
+	float: right;
+	margin: 0 0 0 35px;
+}
+
+#ebook-services-page #testimonial {
+	background: #4D5E3B URL('../images/home/floral-green.png');
+	width: 100%;
+	height: 196px;
+	position: relative;
+	margin-bottom: -20px;
+}
+
+#ebook-services-page #testimonial img {
+	float: right;
+}
+
+#ebook-services-page #testimonial-content {
+	float: left;
+	color: #FFF;
+	width: 650px;
+	margin: 40px 0px 0px 20px;
+	position: relative;
+}
+
+#ebook-services-page #testimonial #oquote {
+	position: absolute;
+	left: -25px;
+	top: 7px;
+}
+#ebook-services-page #testimonial #equote
+{
+	position: absolute;
+	top: 7px;
+	left: 650px;
+}
+#ebook-services-page #testimonial-content p {
+	font-family: 'Bitter';
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+#ebook-services-page #testimonial-content p.author {
+	font-family: 'Open Sans';
+	font-size: 13px;
+	font-weight:normal;
+}
+#ebook-services-page-bookpromo-logo {
+    margin: 46px 40px 90px 0 !important;
+}
+
+#ebook-services-page .dark-blue{
+	background-color: #212733;
+	height: 185px;
+}
+#ebook-services-page .dark-blue h1{
+	color: #fff;
+	font-weight: normal;
+	font-family: "Open Sans","Arial", sans-serif;
+	padding-top: 25px;
+
+}
+#ebook-services-page  .dark-blue .publish-button {
+	margin-top: 20px;
+}
+.greyline{
+	width:100%;
+	margin:40px 0;
+	border-bottom:1px solid #CCC;
+}
+
+/*	================================================================================================
+	eBook Distribution Page
+	================================================================================================ */
+
+#ebook-distribution-page 
+{
+	display: block;
+}
+
+#ebook-distribution-page #content-hero
+{
+	width: 100%;
+	height: 340px;
+	overflow: hidden;
+	background-color: #212121;
+}
+
+#ebook-distribution-page #content-hero .inner-wrap
+{
+	background: #212121 URL('../images/ebook-distribution-hero.png') no-repeat center center;
+	height: 340px;
+	overflow:hidden;
+}
+
+#ebook-distribution-page #content-hero p.subhead {
+	font-size: 21px;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	margin-top:30px;
+}
+
+#ebook-distribution-page #content-hero p.subhead.green
+{
+	margin-top:10px;
+	margin-bottom:15px;
+	color: #A6D1CE;
+}
+
+#ebook-distribution-page #hero-content
+{
+	width: 620px;
+	margin-left: 55px;
+}
+#ebook-distribution-page #hero-content h1 {
+	margin: 0px;
+	font-size: 44px;
+	color:#FFF;
+}
+#ebook-distribution-page #retailer-wrapper h2{	
+color:  #153268;
+ font-family: "Bitter";
+    font-weight: bold;
+	line-height:25px;
+    font-size: 25px;
+    margin-bottom: 4px;
+	text-decoration:none !important;
+}
+
+#ebook-distribution-page #retailer-wrapper h2 a{	
+	color:  #153268;
+  	text-decoration:none !important;
+}
+	
+#ebook-distribution-page #retailer-wrapper h2 a:hover{	
+color:  #153268;
+text-decoration:none !important;
+	 cursor: pointer;
+}
+
+
+#ebook-distribution-page #hero-content p
+{
+	color:#fff;
+}
+
+#ebook-distribution-page #retailer-wrapper
+{
+	margin-top:30px;
+	margin-bottom:30px;
+	overflow:hidden;
+	padding-bottom:1px;
+}
+#ebook-distribution-page  .include-row {
+	display: block;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-x bottom center;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+#ebook-distribution-page  .include-row.last
+{
+	background:transparent;
+}
+
+#ebook-distribution-page  .include-row img {
+	float: left;
+	margin: 0px 35px 20px 0px;
+}
+
+
+/*	================================================================================================
+	eBook Conversion Page
+	================================================================================================ */
+
+#ebook-conversion-page 
+{
+	display:block;
+}
+
+#ebook-conversion-page #content-hero
+{
+	width: 100%;
+	height: 290px;
+	overflow: hidden;
+	background-color: #000000;
+}
+
+#ebook-conversion-page #content-hero .inner-wrap
+{
+	background: #000000 URL('../images/ebook-conversion-hero.png') no-repeat center center;
+	height: 290px;
+	overflow:hidden;
+}
+
+#ebook-conversion-page #content-hero p.subhead {
+	font-size: 21px;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	margin-top:30px;
+}
+
+#ebook-conversion-page #content-hero p.subhead.green
+{
+	margin-top:10px;
+	margin-bottom:15px;
+	color: #A6D1CE;
+}
+
+#ebook-conversion-page #hero-content {
+	margin-left: 60px;
+}
+
+#ebook-conversion-page #hero-content h1 {
+	margin: 0px;
+	font-size: 44px;
+	color:#FFF;
+}
+
+#ebook-conversion-page #ebook-conversion-page #hero-content p
+{
+	color:#fff;
+}
+
+#ebook-conversion-page #content-wrapper h2 {
+	margin: 15px;
+	font-size: 35px;
+	text-align: center;
+}
+
+#ebook-conversion-page #content-wrapper #content-left h2
+{
+	font-size:24px;
+	margin-bottom:14px;
+	text-align:left;
+	margin:0px 0px 7px 0px;
+}	
+
+#ebook-conversion-page .step-item {
+	float: left;
+	width: 240px;
+	margin-right: 5px;
+	text-align: center;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-y 233px 0px;
+}
+
+#ebook-conversion-page .step-item.last
+{
+	background:transparent;
+}
+
+#ebook-conversion-page .step-item p.step {
+	font-family: 'Bitter';
+	font-size: 20px !important;
+	font-weight: bold;
+	color: #000;
+}
+
+#ebook-conversion-page .step-item img
+{
+	margin-bottom: 5px;
+}
+
+#ebook-conversion-page .step-item p {
+	width: 190px;
+	margin: 0px auto 10px;
+}
+
+#ebook-conversion-page #content-wrapper hr {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#ebook-conversion-page #social-icons
+{
+	margin-top:15px;
+}
+
+#ebook-conversion-page #graphics-container img
+{
+	float: left;
+	margin-right: 25px;
+}
+
+#ebook-conversion-page #content-wrapper #content-right .right-sidebar-box h2 {
+	background-color: #333;
+	margin: 0px;
+	font-size: 16px;
+	text-align: left;
+	line-height:21px;
+	padding-left: 15px;
+}
+
+#ebook-conversion-page #content-wrapper #content-right .right-sidebar-box ul
+{
+	float:none;
+}
+
+#ebook-conversion-page #content-wrapper #content-right .right-sidebar-box p
+{
+	margin:0px 10px 10px 15px
+}
+
+#ebook-conversion-page #ready-to-go {
+	font-size: 24px;
+	margin-bottom: 14px;
+	text-align: left;
+	margin: 0px 0px 25px 0px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+	background-color:#E7F4F1;
+}
+
+#ebook-conversion-page #ready-to-go img {
+	float: left;
+	margin: 15px 0px 15px 3px;
+}
+
+#ebook-conversion-page #ready-to-go h2 {
+	font-size: 19px;
+	margin-bottom: 14px;
+	text-align: left;
+	margin: 17px 0px 0px 0px;
+	color: #153268;
+	display: inline-block;
+	padding: 0px;
+}
+
+
+/*	================================================================================================
+	eBook Graphics Page
+	================================================================================================ */
+#ebook-graphics-page 
+{
+	display: block;
+}
+
+#ebook-graphics-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+	margin-bottom: 40px;
+}
+
+#ebook-graphics-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#ebook-graphics-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+#ebook-graphics-page #content-wrapper h2 {
+	margin-bottom: 5px;
+}
+
+#ebook-graphics-page #content-wrapper hr {
+	margin: 30px 0px;
+}
+
+#ebook-graphics-page strong
+{
+	color: #000;
+}
+
+#ebook-graphics-page #content-wrapper ul
+{
+	margin-bottom: 20px;
+}
+
+#ebook-graphics-page #content-wrapper li
+{
+	list-style: disc;
+	margin-left:25px;
+	margin-bottom:10px;
+}
+
+/*	================================================================================================
+	Fixed Layout eBooks
+	================================================================================================ */
+
+#fixed-layout-page 
+{
+	display:block;
+}
+
+#fixed-layout-page #content-hero
+{
+	background-color: #D8EBE9;
+	width:100%;
+	height:280px;
+}
+#fixed-layout-page #content-hero .inner-wrap
+{
+	height: 290px;
+	overflow: hidden;		
+}
+
+#fixed-layout-page #pr-hero {
+	position: absolute;
+	right: 60px;
+	top: 20px;
+}
+#fixed-layout-page ul
+{
+	margin-bottom:20px;
+}
+#fixed-layout-page li{
+	list-style-type:disc;
+	margin-left:30px;
+	margin-bottom:5px;
+}
+
+#fixed-layout-page #content-hero #preparing-hero-content {
+	margin-top: 45px;
+	margin-left: 50px;
+}
+
+#fixed-layout-page #content-hero h1 {
+	font-size: 44px;
+	margin-bottom:10px;
+	width:560px;
+}
+
+#fixed-layout-page  #content-hero p {
+	font-size: 20px;
+	width: 640px;
+	margin-bottom: 0px;
+	color:#153268;
+}
+#fixed-layout-page #content-wrapper h2 {
+    font-size: 25px;
+    font-weight: bold;
+	margin-bottom:20px;
+}
+
+
+
+/*	================================================================================================
+	Agencies Page
+	================================================================================================ */
+
+#agencies-page
+{
+	display: block;
+}
+#agencies-page #content-hero
+{
+	width: 100%;
+	height: 290px;
+	overflow: hidden;
+	background-color: #000000;
+}
+#agencies-page #content-hero .inner-wrap
+{
+	background: #000000 URL('../images/ebook-conversion-hero.png') no-repeat center center;
+	height: 290px;
+	overflow:hidden;
+}
+
+#agencies-page #hero-content {
+	margin-left: 55px;
+	margin-top:35px;
+}
+
+#agencies-page #hero-content h1 {
+	margin: 0px;
+	font-size: 44px;
+	color: #FFF;
+	line-height: 50px;
+}
+
+#agencies-page #content-hero p {
+	font-size: 20px;
+	color: #FFF;
+	margin-bottom: 0px;
+	color:#FFF;
+}
+
+#agencies-page #content-hero p.subhead.green
+{
+	color: #A6D1CE;
+	margin-top:15px;
+}
+
+#agencies-page #content-wrapper hr
+{
+	margin: 30px 0px 30px 0px;
+}
+
+
+#agencies-page #content-wrapper h2
+{
+	margin-bottom: 7px;
+}
+
+#agencies-page #content-wrapper p.last
+{
+	margin-bottom: 20px;
+}
+
+#agencies-page #content-wrapper p.subhead
+{
+	font-size: 18px;
+	line-height: 28px;
+	margin-bottom:0px;
+	margin-top:40px;
+}
+
+#agencies-page .service-item
+{
+    float: left;
+    width: 490px;
+}
+
+#agencies-page .service-item img
+{
+	margin-right:25px;
+	float:left;
+}
+
+#agencies-page .service-item .service-info {
+	float: left;
+	width: 310px;
+}
+
+#agencies-page .service-row {
+	margin-bottom:20px;
+}
+
+#agencies-page .package-column
+{
+	width: 313px;
+	float: left;
+	margin-right:20px;
+}
+#agencies-page .column-header {
+	overflow: hidden;
+	width: 311px;
+	height: 84px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+}
+#agencies-page #content-wrapper .column-header h2
+{
+	color:#FFF;	
+	font-weight:normal;
+	margin-top: 11px;
+	margin-bottom: 6px;
+}
+
+#agencies-page #content-wrapper .column-header h2.blue
+{
+	color:#58ABBD;
+}
+#agencies-page #content-wrapper .column-header h2.green
+{
+	color:#A5BA47;
+}
+#agencies-page #content-wrapper .column-header h2.orange
+{
+	color:#DF7000;
+}
+#agencies-page #content-wrapper .column-header hr
+{
+	background: transparent url('../images/suboffer-bg-dot-white.png');
+	margin: 0px 18px;
+}
+
+#agencies-page .pub-credits
+{
+	color: #FFF;
+	margin-top: 10px;
+}
+#agencies-page .package-table {
+	width: 311px;
+}
+#agencies-page .package-table td,
+#agencies-page .package-table th{
+	border: 1px solid #CCC;
+	padding: 10px;
+	text-align: center;
+}
+#agencies-page .package-table th
+{
+	font-weight:bold;
+	background-color:#EEEEEE;
+}
+
+
+#agencies-page .package-table td {
+	background-color: #fff;
+}
+
+#agencies-page .package-table td.label { 
+	background-color: #eeeeee;
+}
+
+
+#agencies-page #package-wrapper {
+	margin-bottom: 25px;
+}
+#agencies-page .clear30 {
+	clear:both;
+	height:30px;
+}
+#agencies-page #how-it-works ul
+{
+	line-height:20px;
+	margin-bottom: 5px;
+}
+#agencies-page #how-it-works li{
+	list-style-type:disc;
+	margin-left:25px;
+	margin-bottom:15px;
+}
+#agencies-page #partner-program
+{
+	background-color: #A6D1CE;
+	width:100%;
+	padding:16px 0px;
+}
+
+#agencies-page #partner-program h2
+{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom:7px;
+}
+#agencies-page #how-it-works
+{
+	background-color: #D8EBE9;
+	overflow:hidden;
+}
+#agencies-page #how-it-works-container
+{
+	margin:25px;
+	text-align:left;
+}
+#agencies-page #how-it-works-container h2
+{
+	font-size: 25px;
+	margin-bottom:7px;
+}
+
+
+/*	================================================================================================
+	Government Page
+	================================================================================================ */
+
+#government-page
+{
+	display:block;
+}
+
+#government-page #content-hero
+{
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+	background-color: #000000;
+}
+
+#government-page #content-hero .inner-wrap
+{
+	background: #000000 URL('../images/ebook-conversion-hero.png') no-repeat center center;
+	height: 180px;
+	overflow:hidden;
+}
+	
+#government-page #hero-content {
+	margin-left: 55px;
+	margin-top:55px;
+}
+
+#government-page #hero-content h1 {
+	margin: 0px;
+	font-size: 44px;
+	color: #FFF;
+	line-height: 50px;
+}
+
+#government-page #content-wrapper hr
+{
+	margin: 30px 0px;
+}
+
+#government-page #content-wrapper h2
+{
+	margin-bottom: 7px;
+}
+
+#government-page #content-wrapper p.subhead
+{
+	font-size: 18px;
+	line-height: 28px;
+	margin-top:40px;
+}
+
+#government-page .service-item
+{
+    float: left;
+    width: 490px;
+}
+
+#government-page .service-item img
+{
+	margin-right:25px;
+	float:left;
+}
+
+#government-page .service-item .service-info {
+	float: left;
+	width: 310px;
+}
+
+#government-page .service-row {
+	margin-bottom:20px;
+}
+
+#government-page #social-icons
+{
+	margin-top:10px;
+	margin-bottom:0px;
+}
+
+/*	================================================================================================
+	About Page
+	================================================================================================ */
+
+#about-page
+{
+	display: block;
+}
+
+#about-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px;
+}
+	
+#about-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 220px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+	
+#about-page #content-hero img
+{
+	position:absolute;
+	top:0px; right: 65px;
+}
+
+#about-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 23px;
+		
+}
+	
+#about-page #about-box {
+	float: left;
+	width: 250px;
+	height: 290px;
+	font-size: 22px;
+	font-family: "Bitter";
+	line-height: 28px;
+	background: transparent URL('../images/about-graybox.png') no-repeat;
+	margin-right: 30px;
+	padding: 80px 30px 30px 30px;
+	font-weight: bold;
+	color:#153268;
+	line-height: 40px;
+}
+	
+#about-page #about-head {
+	padding-bottom: 40px;
+	background: rgba(0, 0, 0, 0) URL('../images/home/suboffer-bg-dot.png') repeat-x bottom center;
+}
+	
+#about-page #content-wrapper p.subhead
+{
+	font-weight: 300;
+	font-size: 21px;
+	color: #000;
+	margin-top: 35px;
+	padding-bottom: 15px;
+	display: block;
+	line-height:30px;
+}
+	
+#about-page .about-banner.worldwide {
+	margin-right: 56px;
+}
+	
+#about-page .about-banner {
+	display: block;
+	width: 440px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	padding: 10px 10px;
+	float: left;
+	height: 85px;
+}
+	
+#about-page .about-banner img {
+	float: left;
+	margin-right: 15px;
+}
+	
+#about-page #content-wrapper p.title {
+	font-family: "Bitter";
+	font-weight: bold;
+	color:#153268;
+	font-size: 21px;
+	line-height: 28px;
+	margin-bottom: 5px;
+}
+	
+#about-page #about-banners {
+	margin: 40px 0px 20px 0px;
+}
+
+
+/*	================================================================================================
+	Press Page
+	================================================================================================ */
+
+#press-page 
+{
+	display: block;
+}
+
+#press-page #content-wrapper h2
+{
+    font-size:16px;
+	color:#000;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+#press-page #content-wrapper h3
+{
+    font-size:13px;
+	line-height:20px;
+	color:#000;
+	margin-bottom:10px;
+	font-weight:normal;
+	font-style:italic;
+}
+
+#press-page #content-wrapper .date
+{
+    font-size:12px;
+	color:#666;
+	margin-bottom:8px;
+	margin-top:15px;
+}
+	
+
+#press-page #content-wrapper p, #press-page #content-wrapper ul
+{
+	color:#333;
+	line-height:20px;
+	margin-bottom: 15px;
+}
+
+#press-page #content-wrapper ul{
+	margin-left:25px;
+}
+
+#press-page #content-wrapper li{
+	list-style-type:disc;	
+}
+
+#press-page .article-divider{
+	border-bottom:1px solid #CCC;
+	padding-bottom:10px;
+	margin-bottom:20px;	
+}
+
+#press-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+}
+
+#press-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#press-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+/*	================================================================================================
+	Error 404 Page
+	================================================================================================ */
+#error-page {
+    margin: 130px auto 0;
+    position: relative;
+    width: 100%;
+}
+#error-page #error-container{
+	clear: both;
+	height: 500px;
+	margin: 0 auto;
+	width: 100%;
+	background-image:url(../images/404-bkgd.jpg);
+}
+#error-page #error-wrapper{
+	width:980px;
+	height:480px;
+	margin-top:20px;
+}
+#error-page #error-wrapper h1 {
+	font-family: 'Libre Baskerville', serif;
+	color: #333;
+	font-size: 36px;
+	line-height: 45px;
+	margin:0 auto 10px auto;	
+}
+#error-page #error-wrapper h2{
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	color: #555;
+	font-size: 22px;
+	font-weight:normal;
+	line-height: 34px;
+}
+#error-page #error-wrapper p{ 
+	margin-top:30px;
+}
+#error-page .error-hero {
+	position:absolute;
+	top:0px;
+	left:100px;
+}
+#error-page #error-hero-content {
+	position:absolute;
+	top: 40px;
+	left:655px;
+	width:380px;
+	text-align:left;
+}
+
+/*	================================================================================================
+	Brand Guidelines Page
+	================================================================================================ */
+
+#brand-guidelines-page 
+{
+	display:block;
+}
+
+#brand-guidelines-page .bannerbox{
+	width:980px;
+	margin-top:20px;
+}
+
+#brand-guidelines-page #content-wrapper .logo p,
+#brand-guidelines-page #content-wrapper .logo-tall
+ p
+{
+	font-size:12px;
+}
+
+#brand-guidelines-page .download {
+	font-size: 11px;
+	font-weight: bold;
+	margin-right: 20px;
+	display: block;
+	float: left;
+	background: rgba(0, 0, 0, 0) URL('../images/brandGuidelines-download.png') no-repeat 0px 2px;
+	padding-left: 16px;
+}
+
+#brand-guidelines-page .download:hover{
+	color:#F0A04F;
+}
+
+#brand-guidelines-page #palettebox {
+	position: relative;
+	width: 355px;
+	float: right;
+}
+
+#brand-guidelines-page #palettebox p {
+	color: #666666;
+	display: block;
+	float: left;
+}
+
+#brand-guidelines-page .bannerbox textarea{
+	float:left;
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	color: #666666;
+	display: block;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 17px;
+	padding: 4px 1px 1px 6px;
+}
+
+#brand-guidelines-page .bannerbox img {
+	float:left;
+	margin-right:20px;
+	margin-bottom:5px;
+	clear:both;
+}
+
+#brand-guidelines-page #left-half {
+	float:left;
+	width:50%;	
+}
+
+#brand-guidelines-page #right-half {
+	float:right;
+	width:50%;	
+}
+
+#brand-guidelines-page #left-half textarea {
+	width: 150px !important;
+	height:240px !important;
+}
+
+#brand-guidelines-page #left-half p {
+	clear:both;
+}
+
+#brand-guidelines-page #right-half p {
+	float:left;
+	width:150px;
+}
+
+#brand-guidelines-page #logobox
+{
+	width: 590px;
+	float: left;
+}
+
+#brand-guidelines-page #content-wrapper .subheader-wrap {
+	margin-bottom: 0px;
+}
+
+#brand-guidelines-page .white-box {
+	background-color: #FFF;
+	padding: 20px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+
+#brand-guidelines-page .color {
+	float: left;
+	width: 92px;
+	overflow: hidden;
+	margin-right: 18px;
+	margin-bottom: 10px;
+}
+
+#brand-guidelines-page .color .label,
+#brand-guidelines-page .logo .label,
+#brand-guidelines-page .logo-tall .label
+{
+	margin-bottom:7px;
+}
+
+#brand-guidelines-page .logo {
+	float: left;
+	width: 274px;
+	height: 125px;
+	margin-bottom: 20px;
+	overflow:hidden;
+}
+#brand-guidelines-page .logo-tall {
+	float: left;
+	width: 274px;
+	height: 280px;
+	margin-bottom: 20px;
+	overflow:hidden;
+}
+#brand-guidelines-page .example {
+	width: 90px;
+	height: 90px;
+	margin-bottom: 7px;
+}
+
+#brand-guidelines-page #palettebox .white-box,
+#brand-guidelines-page #logobox .white-box {
+	height: 296px;
+}
+
+#brand-guidelines-page #logobox .white-box {
+	height: 526px;
+}
+
+#brand-guidelines-page #content-wrapper
+{
+	margin-top:150px;
+}
+
+
+/*	================================================================================================
+	Privacy Page
+	================================================================================================ */
+
+#privacy-page 
+{
+	display: block;
+}
+
+#privacy-page #content-wrapper h3
+{
+    font-size:14px;
+	color:#333;
+	margin-top:10px;
+	margin-bottom:7px;
+	font-weight:bold;
+}
+#privacy-page #contract-text li {
+	list-style: disc;
+	margin-left: 20px;
+}
+#privacy-page #contract-text ul
+{
+	margin-bottom: 15px;
+}
+#privacy-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+	margin-bottom: 40px;
+}
+#privacy-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+#privacy-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+#privacy-page #content-wrapper p.subhead
+{
+	font-weight: 300;
+	font-size: 21px;
+	color: #000;
+	margin:0px;
+	margin-bottom:10px;
+	display: block;
+}
+
+
+/*	================================================================================================
+	Terms of Service Page
+	================================================================================================ */
+
+#tos-page 
+{
+	display:block;
+}
+
+#tos-page #contract p
+{
+	line-height:20px;
+	margin-bottom:15px;	
+	font-size:13px;
+}
+
+#tos-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+	margin-bottom: 25px;
+}
+
+#tos-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+	
+#tos-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+#tos-page #content-wrapper p.subhead
+{
+	font-weight: bold;
+	margin-bottom: 15px;
+	color:#000;
+	font-size: 18px;
+}
+
+/*	================================================================================================
+	Guarantee Page
+	================================================================================================ */
+
+#guarantee-page 
+{
+	display: block;
+}
+
+#guarantee-page #content-wrapper h2
+{
+	margin-bottom: 20px;
+}
+
+#guarantee-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:220px;
+}
+
+#guarantee-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 220px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#guarantee-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+}
+
+#guarantee-page #content-hero .inner-wrap #hero-content {
+	position: absolute;
+	top: 70px;
+	left: 60px;
+}
+
+#guarantee-page #content-hero .inner-wrap img
+{
+	position: absolute;
+	top: 27px;
+	left: 810px;
+}
+
+#guarantee-page #testimonial
+{
+	height: 272px;
+	background: transparent URL('../images/guarantee-testimonial.png') no-repeat center center;
+	margin-top: 20px;
+	position:relative;
+	width:988px;
+}
+
+#guarantee-page #testimonial p.testimonial
+{
+	margin-top: 65px;
+	margin-left: 300px;
+	line-height: 26px;
+	margin-right: 60px;
+	margin-bottom: 10px;
+}
+
+#guarantee-page #testimonial p.author
+{
+	margin-left: 800px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+#guarantee-page #testimonial p.author-info
+{
+	margin-left: 720px;
+}
+
+#guarantee-page #testimonial #oquote
+{
+	position:absolute;
+	top: 68px;
+	left: 275px
+}
+
+#guarantee-page #testimonial #equote
+{
+	position: absolute;
+	top: 171px;
+	left: 800px;
+}
+
+
+/*	================================================================================================
+	Press Release Page
+	================================================================================================ */
+
+#press-release-page 
+{
+	display:block;
+}
+
+#press-release-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:290px
+}
+
+#press-release-page #content-hero .inner-wrap
+{
+	background: #000 URL('../images/ebook-conversion-hero.png') no-repeat center center;
+	height: 290px;
+	overflow: hidden;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#press-release-page #pr-hero {
+	position: absolute;
+	right: 60px;
+	top: 70px;
+}
+
+#press-release-page #content-hero #preparing-hero-content {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+#press-release-page #content-hero h1 {
+	font-size: 48px;
+	color: #FFF;
+	margin-bottom:10px;
+}
+
+#press-release-page #content-hero p {
+	font-size: 20px;
+	color: #FFF;
+	width: 640px;
+	margin-bottom: 0px;
+	color:#FFF;
+}
+
+#press-release-page #content-hero p.subhead.green
+{
+	color: #A6D1CE;
+}
+
+#press-release-page #content-wrapper p.extra-extra
+{
+	margin-bottom:30px;
+}
+
+#press-release-page #pr-bottom {
+	padding-top: 35px;
+	margin-bottom:30px;
+}
+
+#press-release-page #pr-bottom-left {
+	float: left;
+	width: 676px;
+	margin-right: 20px;
+}
+
+#press-release-page #pr-10 {
+	background-color: #D8EBE9;
+	padding: 15px 20px;
+	width: 243px;
+	float: left;
+	position: relative;
+}
+
+#press-release-page #pr-10 h2
+{
+	margin-bottom:7px;
+}
+
+#press-release-page #pr-10 p
+{
+	margin-bottom:0px;
+}
+
+#press-release-page #pr-10 #special-offer {
+	position: absolute;
+	top: -32px;
+	right: 8px;
+}
+
+#press-release-page #content-wrapper h2 a
+{
+	color: #153268;
+	text-decoration:none;
+}
+		
+#press-release-page #package-comparison .package-column
+{
+	width: 313px;
+	float: left;
+	margin-right:20px;
+}
+
+#press-release-page #package-comparison .package-wrapper
+{
+	display:inline-block;
+}
+
+#press-release-page #package-comparison .column-header {
+	width: 313px;
+	height: 155px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+	display:inline-block;
+}
+
+#press-release-page #package-comparison  .column-header h2
+{
+	color:#FFF;	
+	font-weight:normal;
+	margin-top: 11px;
+	margin-bottom: 6px;
+	text-transform:uppercase;
+}
+
+#press-release-page #package-comparison  p.price {
+	font-size: 80px;
+	font-family: 'Bitter';
+	margin: 2px 0px 12px 0px;
+	line-height: 80px;
+}
+
+#press-release-page #package-comparison .column-header .price.blue
+{
+	color:#58ABBD;
+}
+#press-release-page #package-comparison .column-header .price.ltblue
+{
+	color:#DEEFF1;
+}
+#press-release-page #package-comparison .column-header .price.green
+{
+	color:#A5BA47;
+}
+
+#press-release-page #package-comparison .column-header .price.orange {
+	color:#E77604;
+}
+
+#press-release-page #package-comparison .column-header hr
+{
+	background: transparent url('../images/suboffer-bg-dot-white.png');
+	margin: 0px 18px;
+}
+
+#press-release-page #package-comparison {
+	position: relative;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+}
+
+#press-release-page .white-box {
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	padding: 15px 20px;
+	min-height: 205px;
+}
+
+
+/*	================================================================================================
+	Friends of BookBaby Page
+	================================================================================================ */
+
+#friends-of-bookbaby-page
+{
+	display:block;
+}
+
+#friends-of-bookbaby-page #content-wrapper p{
+	color:#333;
+	line-height:20px;
+	margin:0 0 15px 0;
+}
+
+#friends-of-bookbaby-page .image-friends{
+	width:142px;
+	float:left;
+	margin-right:30px;
+}
+
+#friends-of-bookbaby-page .friends-description{
+	width:788px;
+	float:left;
+}
+
+#friends-of-bookbaby-page .friend {
+	overflow: hidden;
+	margin-bottom: 35px;
+	padding-bottom: 35px;
+	background: rgba(0, 0, 0, 0) URL('../images/home/suboffer-bg-dot.png') repeat-x bottom center;
+}
+
+#friends-of-bookbaby-page #content-wrapper .friends-description a
+{
+	text-decoration:none;
+}
+
+#friends-of-bookbaby-page #content-wrapper .friends-description h3
+{
+	margin-bottom: 7px;
+}
+
+#friends-of-bookbaby-page #content-wrapper p.subhead
+{
+	font-weight: 300;
+	font-size: 21px;
+	color: #000;
+	margin-top: 35px;
+	padding-bottom: 15px;
+	display: block;
+	line-height:30px;
+	margin-bottom:0px;
+}
+
+#friends-of-bookbaby-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:150px;
+}
+
+#friends-of-bookbaby-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+	
+#friends-of-bookbaby-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+/*	================================================================================================
+	Reviews Page
+	================================================================================================ */
+
+#reviews-page 
+{
+	display:block;
+}
+
+#reviews-page #content-wrapper { padding-bottom:100px; }
+
+#reviews-page #content-wrapper dl
+{
+	width: 465px;
+	float: left;
+	margin-right:30px;
+}
+
+#reviews-page #content-wrapper dl.right
+{
+	margin-right:0px;
+}
+
+#reviews-page #content-wrapper dl img{
+	display:block;
+	float:left;
+	margin-right:20px;
+	margin-top:5px;
+}
+	
+#reviews-page #content-wrapper p
+{
+	margin-bottom:0px;
+}
+
+#reviews-page #content-wrapper p.callout
+{
+	font-size: 19px;
+	line-height: 29px;
+	margin-bottom: 15px;
+}
+
+#reviews-page #content-hero
+{
+	background-color: #000;
+	width:100%;
+	height:180px;
+	margin-bottom:38px;
+}
+
+#reviews-page #content-hero .inner-wrap
+{
+	background: #000 URL("../images/redesign-wood-hero.png") no-repeat center center;
+	height: 180px;
+	display: inline-block;
+	position: relative;
+	box-shadow: inset 0px 5px 10px #000;
+}
+
+#reviews-page #content-hero h1 {
+	color: #FFF;
+	font-size: 45px;
+	margin-bottom:10px;
+}
+
+#reviews-page #content-hero p.subhead
+{
+	font-size:21px;
+	color:#FFF;
+}
+
+#reviews-page #content-hero .inner-wrap #hero-content {
+	margin-top: 45px;
+	margin-left: 60px;
+}
+
+#reviews-page .review-row {
+	padding-bottom: 40px;
+	margin-bottom: 25px;
+	background: transparent URL('../images/home/suboffer-bg-dot.png') repeat-x center bottom;
+}
+
+/*	================================================================================================
+	Sitemap Page
+	================================================================================================ */
+
+#sitemap-page 
+{
+	display:block;
+}
+
+#sitemap-page .column-left{
+	width:225px;
+	position:relative;
+	padding-left:10px;
+	margin-bottom:10px;
+	margin-right:20px;
+	float:left;
+}
+
+#sitemap-page .column{
+	width:225px;
+	position:relative;
+	margin-bottom:10px;
+	margin-right:20px;
+	float:left;
+}
+
+#sitemap-page .column-right{
+	width:210px;
+	position:relative;
+	margin-bottom:10px;
+	float:left;
+}
+
+#sitemap-page .links{
+	color:#333;
+	line-height:21px;	
+}
+
+#sitemap-page .links li{
+	margin-bottom: 10px;
+	list-style:none;
+	text-align:left;
+}	
+
+#sitemap-page #content-wrapper .subheader-wrap
+{
+	margin-bottom: 0px;
+}
+
+#sitemap-page .sitemap-row
+{
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	padding: 15px 10px 5px 10px;
+	margin-bottom: 40px;
+}
+
+#sitemap-page #content-wrapper
+{
+	margin-top:135px;
+}
+
+
+/*	================================================================================================
+	Bookbaby Affiliate Program Page
+	================================================================================================ */
+
+#bookbaby-affiliate-page 
+{
+	display:block;
+}
+
+#affiliate-offer-info {
+	margin-right: 30px;
+    width: 680px;
+	float:left;	
+}
+
+#affiliate-offer-info h3{
+	color: #000000;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+#bookbaby-affiliate-page .examples{
+	color: #666666;
+	font-size:11px;
+	font-style:italic;
+	margin:0;
+}
+
+#bookbaby-affiliate-page .pepperjam {
+	width:204px;
+	height:75px;
+	float:left;
+	margin-right:20px;	
+}
+
+#bookbaby-affiliate-page .ebayenterprise {
+	width:375px;
+	height:75px;
+	float:left;
+	margin-right:20px;	
+}
+
+
+
+#bookbaby-affiliate-page #btn-joinnow
+{
+	margin-top:20px;
+}
+
+
+#bookbaby-affiliate-page #content-hero {
+    background-color: #000000;
+    height: 350px;
+    margin-bottom: 20px;
+    width: 100%;
+	overflow:hidden;
+	}
+
+
+#affiliate-hero-content {
+	background:url('../images/affiliates-mainimage.jpg') no-repeat scroll center center #000000;;
+	background-repeat:no-repeat;
+	width:1095px;
+	height: 350px;
+	float:left;
+	display: inline-block;
+	margin:0 auto;
+    position: relative;
+}
+#affiliate-hero-content h1{
+	font-size: 45px;
+    font-weight: bold;
+    margin:45px 0 0 55px;
+	color:#FFFFFF;
+	
+}
+#affiliate-hero-content p{
+	font-weight:normal;
+	margin: 5px 0 0 55px;
+	color: #A5D1CC;
+    font-size: 20px;
+}
+
+#bookbaby-affiliate-page #btn-joinnow-top
+{
+	margin:20px 0 10px 55px;
+	
+}
+
+#affiliate-sidebar-box { 
+	display:block;
+	margin:0 0 25px;
+	position:relative;
+	background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+	width:250px;
+	float:left;
+	}
+
+#affiliate-sidebar-box .affiliate-banners {
+	width:210px;
+	height:176px;
+	float:left;
+	margin:0 0 20px 20px;	
+}
+
+#affiliate-sidebar-box h2{
+    font-family: "Bitter";
+    font-weight: bold;
+    line-height: 1.3em;
+	background-color: #333333;
+    font-size: 16px;
+    text-align: center;
+	color: #FFFFFF;
+    margin-bottom: 0;
+    padding: 8px 10px;
+}
+
+#affiliate-offer-info h2
+{margin-bottom: 20px;}
+
+
+
+/*	================================================================================================
+	eBook Accounting Page
+	================================================================================================ */
+
+#accounting-page
+{
+	display:block;
+}
+	
+#accounting-page #content-wrapper h2
+{
+	margin-bottom:10px;
+}
+		
+#accounting-page #content-wrapper h4
+{
+	font-size:15px;
+	font-weight:bold;
+	margin-bottom:10px;
+	margin-top:30px;
+}
+		
+#accounting-page #content-wrapper li
+{
+	list-style-type:disc;
+	margin:0 0 8px 25px;
+}
+		
+#accounting-page #gallery
+{
+	width:535px;
+	height:342px;
+	float:right;
+	margin-left:50px;	
+}
+		
+#accounting-page .carousel-left 
+{
+	left:20px;
+}
+		
+#accounting-page .carousel-right 
+{
+	right:20px;
+}
+		
+#accounting-page #social-icons-accounting{
+	margin-top:30px;	
+}
+		
+#accounting-page #content-wrapper
+{
+	margin-top:150px;
+}	
+
+
+/*	================================================================================================
+	Mailing List Page
+	================================================================================================ */
+
+#mailing-list-page 
+{
+	display: block;
+}
+
+#mailing-list-page #content-wrapper h1{
+	font-size:36px;
+	line-height:46px;
+	text-align:center;
+}
+
+#mailing-list-page #content-wrapper h2{
+	font-size:18px;
+	line-height:28px;
+	color:#424242;
+	text-align:center;
+	margin-bottom:50px !important;
+}
+
+#mailing-list-page #content-wrapper
+{
+	text-align:center;
+}
+
+#mailing-list-page #content-wrapper p
+{
+	margin-bottom: 20px;
+}
+
+#mailing-list-page #content-wrapper a
+{
+	margin-bottom:150px;
+}
+
+#mailing-list-page #content-wrapper
+{
+	margin-top:225px;
+}
+
+
+/*	================================================================================================
+	Acccount Pages
+	================================================================================================ */
+
+#accepted-languages-info .column.left {
+    margin-right: 25px;
+}
+#accepted-languages-info .column {
+    float: left;
+    width: 285px;
+}
+
+#accepted-languages-info .column .data-table {
+    margin-bottom: 20px;
+}
+
+#accepted-languages-info .column .data-table li {
+    float: left;
+    width: 42%;
+    list-style: disc;
+    margin-bottom: 9px;
+    padding-left: 17px;
+    list-style-position: inside;
+    font-size: 12px;
+}
+
+#accepted-languages-info .column .data-table li.two-thirds {
+    width: 100px;
+}
+
+#accepted-languages-info .column .data-table li.full {
+    float: left;
+    width: 240px;
+}
+
+#accepted-languages-info h3 {
+    margin-bottom: 20px;
+}
+
+/*	================================================================================================
+	BookPromo Page
+	================================================================================================ */
+#hero-bookpromo
+{
+	height: 500px;
+	background-color:#FFF;
+	position:relative;
+	margin-top:135px;
+}
+#bookpromo-services-page #hero-bookpromo h1 {
+    color: #153268 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    left: 0;
+    line-height: 55px;
+    position: absolute;
+    text-align: left;
+    top: 60px;
+    width: 520px;
+}
+#bookpromo-services-page #hero-bookpromo h2 {
+    color: #333 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    top: 240px;
+    width: 480px;
+}
+#bookpromo-services-page #hero-bookpromo p.subhead {
+	color: #153268;
+    font-family: "Open Sans";
+    font-size: 21px;
+    font-weight: 600;
+    left: 0;
+    position: absolute;
+    top: 23px;
+}
+#bookpromo-services-page #hero-bookpromo .logo {
+    left: 0;
+    position: absolute;
+    top: 295px;
+}
+#bookpromo-services-page #hero_button-bookpromo {
+    left: 0;
+    position: absolute;
+    top: 400px;
+}
+#bookpromo-services-page #subhead-section{
+	background:#E9E5D4;
+	width:100%;
+	height:220px;
+	padding:20px 0 90px;
+}
+#bookpromo-services-page .section-headline{
+	color: #333 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 30px;
+	line-height:40px;
+    font-weight: 700;
+    text-align: left;
+	margin-bottom:10px;
+}
+#bookpromo-services-page .section-subheadline{
+	color: #333 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 16px;
+	line-height:26px;
+    font-weight: 700;
+    text-align: left;
+	margin-bottom:10px;
+}
+#bookpromo-services-page p{
+	color: #333 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+	line-height:24px;
+    font-weight: 400;
+    text-align: left;
+}
+#bookpromo-services-page .section-divider{
+	width:100%;
+	position:relative;
+	text-align:center;
+	background:#F00;
+}
+#bookpromo-services-page .section-divider-brownstrip{
+	height:50px;
+	width:100%;
+	background:url(../Images/home/home-b-brownpattern.png) repeat-x #3E3B32;
+}
+#bookpromo-services-page .section-divider-titlewrapfullwidth{
+	position:absolute;
+	top:-11px;
+	left:0;
+	width:100%;
+	height:74px;
+	text-align:center;
+}
+#bookpromo-services-page .section-divider-titlebox{
+	width:672px;
+	height:73px;
+	margin: 0 auto;
+	background:url(../Images/book-promo-sectiontitlebox.png) no-repeat;
+	padding:1px 0;
+}
+#bookpromo-services-page .section-divider-titletext{
+	font-family: 'Yanone Kaffeesatz', sans-serif;	
+	font-weight:400;
+	font-size: 40px;
+	line-height:40px;
+	margin:14px 0;
+	text-align:center;
+	color:white;
+	letter-spacing: 0.05em;
+}
+#bookpromo-services-page #services{
+	background:#F8F7F6;
+	width:100%;
+	padding:20px 0 40px 0;
+}
+#bookpromo-services-page .services-row {
+    margin: 40px auto;
+    position: relative;
+    text-align: left;
+    width: 980px;
+	border-bottom:#CCC 1px solid;
+	padding:20px 0 60px 0;
+}
+#bookpromo-services-page .services-textcontainer{
+	float:left;
+	width:680px;
+	margin:0;
+}
+#bookpromo-services-page .services-row img{
+	float: left; 
+	margin-right: 60px;
+}
+#bookpromo-services-page .services-row:last-child {
+   	margin: 40px auto 0;
+	border-bottom:none;
+}
+#bookpromo-services-page .liststyle {
+	color: #333 !important;
+    font-family:'Open Sans',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+	line-height:24px;
+    font-weight: 400;
+    text-align: left;
+	margin:20px 0 20px 15px;
+}
+#bookpromo-services-page .liststyle li{
+	list-style-type:disc;
+	margin-bottom:5px;
+}
+.clear-content{
+	clear:both;
+}
+.italic{
+	font-style:italic;
+}
+/*	================================================================================================
+	whiteglove Page
+	================================================================================================ */
+
+/*	================================================================================================
+	free ebook publishing
+	================================================================================================ */
+	
+#free-ebook-publishing-page .first-editing-list {
+	float: left;
+	display: block;
+	margin-bottom: 20px;
+	font-size: 14px !important;
+}
+
+#free-ebook-publishing-page  li{
+	font-size: inherit;
+	list-style-type:disc;
+	margin:0 0 8px 25px;}
+	
+#free-ebook-publishing-page #content-wrapper p {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 20px;}
+	
+#free-ebook-publishing-page #social-icons{margin-top:25px;}
+
+
+#free-ebook-publishing-page section#content-hero{
+	background-color: #000;
+	width:100%;
+	height:300px}
+
+#free-ebook-publishing-page section#content-hero .inner-wrap{
+	background: #000 URL("../images/redesign-wood-hero-300.png") no-repeat center center;
+	height:300px;
+	display:inline-block;
+	position:relative;		
+	box-shadow: inset 0px 5px 10px #000;
+}
+	
+#free-ebook-publishing-page #content-hero img {
+	position: absolute;
+	top: 30px;
+	left: 670px;}
+
+#free-ebook-publishing-page #content-hero{
+	background: #000;
+	width: 100%;
+	height:300px;}
+
+#free-ebook-publishing-page #content-hero p.subhead {
+	font-size: 21px;
+	font-weight: 600;
+	color: #FFF;
+	margin-top: 40px;
+	margin-bottom: 0px;}
+
+#free-ebook-publishing-page #hero-content h1 {
+	margin: 0px 0 15px 0px;
+	font-size: 42px;
+	color:#FFF;}
+
+#free-ebook-publishing-page #hero-content {width: 650px;}
+
+	
+#free-ebook-publishing-page #package-comparison .package-column{
+	width: 313px;
+	float:right;
+	margin-left:40px;}
+	
+#free-ebook-publishing-page #content-wrapper #package-comparison  .column-header h2{
+	color:#FFF;	
+	font-weight:normal;
+	margin-top: 11px;
+	margin-bottom: 6px;
+	text-transform:uppercase;}
+	
+#free-ebook-publishing-page #package-comparison .package-wrapper{
+	float:right;
+	width:313px;}
+
+	
+#free-ebook-publishing-page #package-comparison .column-header {
+	width: 313px;
+	height: 230px;
+	background: #3E3B32 URL('../images/dark-crosshatch.png');
+	text-align: center;
+	display:inline-block;}
+
+#free-ebook-publishing-page #content-wrapper #package-comparison .column-header .price.blue {color:#58ABBD;}
+
+#free-ebook-publishing-page #content-wrapper #package-comparison .column-header p.price-info{
+	font-size: 14px;
+	color:#FFF;
+	line-height:21px;
+	text-align:center;
+	margin:5px;}
+
+#free-ebook-publishing-page .include-row img {
+	float: left;
+	margin-right: 35px;
+	margin-left:20px;}
+
+#free-ebook-publishing-page  .include-row .subhead{
+	font-weight: bold;
+	color:#000;
+	margin-bottom:5px;
+	margin-top:5px;}
+	
+#free-ebook-publishing-page{display:block;}
+
+
+#free-ebook-publishing-page #content-wrapper #package-comparison  p.price {
+	font-size: 80px;
+	font-family: 'Bitter';
+	font-weight:normal;
+	margin: 2px 0px 12px 0px;
+	line-height: 80px;}
+
+#free-ebook-publishing-page #content-wrapper #package-comparison .column-header hr{
+	background: transparent url('../images/suboffer-bg-dot-white.png');
+	margin: 0px 18px;}
+
+
+	
+#free-ebook-publishing-page .include-row {
+	width:930px;
+	padding:25px;
+	background-color:#E7F4F1;
+	border:1px solid #A6D1CE;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto 25px;}
+
+
+#free-ebook-publishing-page .include-row h2{
+	font-size: 30px;
+	line-height:36px;
+	text-align:left;
+	margin-bottom:5px;}
+	
+#free-ebook-publishing-page .include-row p{
+	font-size: 16px;
+	color:#333;
+	font-weight:normal;
+	line-height:28px;
+	text-align:left;
+	margin-bottom:25px;}
+	
+#free-ebook-publishing-page .include-row .worldwide-text{
+	float:right; 
+	width:670px;
+	text-align:left;}
+/*	================================================================================================
+	Homepage 2014 - Default.aspx
+	================================================================================================ */
+	#default-page p{
+	font-size:15px;
+	line-height:28px;
+}
+	#default-page #guarantee p{
+	font-size:15px;
+	line-height:28px;
+}
+	.customer-service-subheadline{
+		margin: 0 auto;
+    	width: 1000px;
+}
+#default-page #home-hero{
+	background:url(../Images/home/home-b-hero.jpg) no-repeat scroll center center / cover #000;
+	width:100%;
+	height:500px;
+	margin-top: 130px;
+	
+}
+#default-page #home-hero .inner-wrap{
+	width: 950px;
+}
+#default-page .home-hero-text{
+	float: left;
+	text-align: center;
+	margin-top:100px;
+	-moz-text-shadow: 2px 2px 3px #000;
+	-webkit-text-shadow: 2px 2px 3px#000;
+	text-shadow: 2px 2px 3px #000;
+}
+
+#default-page .b-page{
+	margin-top: 35px;
+	
+}
+
+#default-page .b-page p{
+	font-size: 30px;
+	line-height: 40px;
+	margin-top: 20px;
+	margin-bottom: 0;
+
+}
+
+#default-page #home-hero .pricing-price {
+	font-size: 37px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#default-page #home-hero h1 {	
+	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-size: 70px;
+	line-height:80px;
+	color:#FFF;
+	
+}
+}	
+#default-page .headline-large{
+	font-family: 'Yanone Kaffeesatz', sans-serif;	
+	font-weight:400;
+	font-size: 90px !important;
+	line-height:90px;
+	}
+#default-page #hero_button-2 {
+    left: 50px;
+    position: absolute;
+    top: 300px;
+}
+#default-page .half-column{
+	width:480px;
+	float:left;
+	margin-right:40px;
+}
+
+#default-page #product-selections{
+	width: 100%;
+	height: 245px;
+	background-color: #E9E5D2;
+	padding: 70px 0;
+}
+#default-page .third-column{
+	width:33%;
+	float:left;
+	text-align: center;
+	font-size: 25px;
+	
+}
+
+
+
+#default-page .third-column p {
+	margin: 0 6px;
+	font-size: 15px;
+	line-height: 25px;
+}
+#default-page .third-column h3{
+	font-family: "Open Sans","Arial", sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	color: inherit;
+	margin: 10px 15px;
+}
+#default-page  h3.pod {
+	background:  URL("../images/home/new-icon.png") no-repeat;
+	background-position: 0 7px;
+	padding-left: 10px;
+}
+#default-page .column460{
+	width:460px;
+	float:left;
+	margin-bottom:20px;
+}
+#default-page .column710{
+	width:710px;
+	float:left;
+}
+#default-page .column460 img{
+	margin-bottom:20px;
+}
+#default-page .column60{
+	width:60px;
+	float:left;
+}
+#default-page .margin-right0{
+	margin-right:0;
+}
+#default-page .float-left{
+	float:left;
+}
+#default-page .clear-both{
+	clear:both;
+}
+#default-page .clear-content10{
+	clear:both;
+	height:10px;
+}
+#default-page .text-align-center{
+	text-align:center;
+}
+#default-page .section-divider{
+	width:100%;
+	position:relative;
+	text-align:center;
+	background:#F00;
+}
+#default-page .section-divider-brownstrip{
+	height:50px;
+	width:100%;
+	background:url(../Images/home/home-b-brownpattern.png) repeat-x #3E3B32;
+}
+#default-page .section-divider-titlewrapfullwidth{
+	position:absolute;
+	top:-11px;
+	left:0;
+	width:100%;
+	height:74px;
+	text-align:center;
+}
+#default-page .section-divider-titlebox{
+	width:260px;
+	height:73px;
+	margin: 0 auto;
+	background:url(../Images/home/home-b-sectiontitlebox.png) no-repeat;
+	padding:1px 0;
+}
+#default-page .section-divider-titletext{
+	font-family: 'Yanone Kaffeesatz', sans-serif;	
+	font-weight:400;
+	font-size: 40px;
+	line-height:40px;
+	margin:14px 0;
+	text-align:center;
+	color:white;
+	letter-spacing: 0.05em;
+}
+#default-page #getpublished{
+	background:#E9E5D4;
+	width:100%;
+	height:210px;
+	padding:70px 0 90px;
+}
+
+#default-page .section-headline{
+	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-size:36px;
+	line-height:44px;
+	margin-bottom:10px;
+	color:#333;
+	font-weight:600;
+}
+#default-page #getpublishedlogos, #default-page #self-publishing{
+	background:#F6F4E7;
+	width:100%;
+	height:235px;
+	padding:45px 0;
+	
+}
+
+#default-page #getpublishedlogos{
+	border-top: 4px #AAA69C solid;
+	height: 335px;
+}
+
+#default-page #self-publishing {
+	height:1000px;
+	background: url(../images/home/self-publishing-bg.jpg) no-repeat scroll center 64% /cover #fff;
+	width: 100%;
+
+}
+
+#default-page #self-publishing .footnote {
+	color: #eee;
+	float: right;
+	margin-top: 780px;
+	width: 205px;
+	text-align: center;
+	font-style:italic;
+}
+#default-page #getpublishedlogos .inner-wrap, #default-page #self-publishing .inner-wrap{
+	text-align: center;
+}
+
+#default-page #getpublishedlogos .keep-100-sales {
+	margin-top: -130px;
+	margin-bottom: 50px;
+}
+
+#default-page #feeling-great-book {
+	height:489px;
+	background: url(../images/home/great-book-background.jpg) no-repeat scroll center center /cover #fff;
+	width: 100%;
+	/*-moz-text-shadow: 2px 2px 3px #000;
+	-webkit-text-shadow: 2px 2px 3px#000;
+	text-shadow: 2px 2px 3px #000;*/
+}
+
+#default-page #feeling-great-book h2 {
+	margin-top: 100px;
+	color: #FFF;
+
+}
+
+
+
+#default-page #publish{
+	background:#C9E2E4;
+	width:100%;
+	height:590px;
+	padding:70px 0;
+}
+#default-page .orcircle{
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	width: 60px;
+	height: 36px;
+	background-color:#BAD1D3;
+	margin-top:140px;
+	padding:12px 0;
+	/* width and height can be anything, as long as they're equal */
+}
+#default-page .orcircle-text{
+	font-family: 'Yanone Kaffeesatz', sans-serif;	
+	font-weight:400;
+	font-size: 30px;
+	line-height:30px;
+	margin:0px;
+	text-align:center;
+	color:#666;
+	
+}
+#default-page #promotion{
+	/*background:url(/Images/home/home-b-promotehero.jpg) no-repeat center #FFF;*/
+	background:url(../Images/home/home-b-promotehero.jpg) no-repeat scroll center center / cover #FFF;
+	width:100%;
+	height:546px;
+}
+#default-page #sell, 
+#default-page #bookshop{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 24%, #efeeed 97%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(24%,#ffffff), color-stop(97%,#efeeed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 24%,#efeeed 97%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 24%,#efeeed 97%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 24%,#efeeed 97%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 24%,#efeeed 97%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efeeed',GradientType=0 ); /* IE6-9 */
+	width:100%;
+	height:433px;
+	padding:70px 0 0 0;
+}
+#default-page #bookshop{
+	height:420px;
+	padding:70px 0 0 0;
+}
+#default-page #paid{
+	background:#FAFAFA;
+	width:100%;
+	height:270px;
+	padding:40px 0;
+}
+#default-page #print-ebooks{
+	background:url(../Images/home/home-b-print-ebooks.jpg) no-repeat  center #EBE4D4;
+	width:100%;
+	height:357px;
+	padding:0;
+}
+#default-page #guarantee{
+	background: #4D5E3B;
+	width:100%;
+	height:270px;
+}
+#default-page #guarantee h2{
+	font-weight: 400;
+	font-size: 30px;
+	line-height:1.3em;
+	padding-top: 40px;
+	float: left;
+	width: 545px;
+}
+
+#default-page #guarantee p{
+	width: 525px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+#default-page #guarantee .signature{
+	font-size: 15px;
+}
+
+#default-page #guarantee h2 em{
+	font-style:italic;
+}
+#default-page #guarantee h2 .bolditalic{
+	font-weight:700;
+}
+
+#default-page #guarantee .left-img{
+	float: left;
+	margin-right: 40px;
+	
+}
+#default-page #guarantee .right-img{
+	float: right;
+	margin-left: 40px;
+	margin-top: -170px;
+}
+
+#default-page .white{
+	color:#FFF;
+}
+#default-page .white a{
+	color:#FFF;
+}
+#default-page .white a:hover{
+	color:#DDD;
+}

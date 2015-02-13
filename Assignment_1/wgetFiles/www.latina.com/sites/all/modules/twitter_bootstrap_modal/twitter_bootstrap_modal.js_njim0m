@@ -1,0 +1,30 @@
+/**
+* @file
+* Javascript support files.
+*
+*/
+
+jQuery(document).ready(function() {
+  // Actions to make link Twitter Bootstrap Modal
+  var TBtrigger = Drupal.settings.jquery_ajax_load.TBtrigger;
+  var i = 0;
+  // Puede ser más de un valor, hay que usar foreach()
+  jQuery(TBtrigger).each(function() {
+    var html_string = jQuery(this).attr( 'href' );
+    // Hay que validar si la ruta trae la URL del sitio
+    jQuery(this).attr( 'href' , '/jquery_ajax_load/get' + html_string );
+    jQuery(this).attr( 'data-target' , '#jquery_ajax_load' + i );
+    twitter_bootstrap_modal_create_modal(i++);
+  });
+  jQuery(TBtrigger).attr({
+    'data-toggle': 'modal',
+  });
+  jQuery(TBtrigger).removeClass(TBtrigger);
+});  
+
+function twitter_bootstrap_modal_create_modal(i) {
+  var modal_string = Drupal.settings.jquery_ajax_load.TBmodal;
+  var modal_html = modal_string.replace("%s", i); 
+  
+  jQuery('body').append(modal_html);
+}

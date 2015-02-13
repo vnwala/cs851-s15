@@ -1,0 +1,44 @@
+@charset "Shift_JIS";
+
+#macross html, #macross body, #macross div, #macross span, #macross applet, #macross object, #macross iframe, #macross h1, #macross h2, #macross h3, #macross h4, #macross h5, #macross h6, #macross p, #macross blockquote, #macross pre, #macross a, #macross abbr, #macross acronym, #macross address, #macross big, #macross cite, #macross code, #macross del, #macross dfn, #macross em, #macross font, #macross img, #macross ins, #macross kbd, #macross q, #macross s, #macross samp, #macross small, #macross strike, #macross strong, #macross sub, #macross sup, #macross tt, #macross var, #macross b, #macross u, #macross i, #macross center, #macross dl, #macross dt, #macross dd, #macross ol, #macross ul, #macross li, #macross fieldset, #macross form, #macross label, #macross legend, #macross table, #macross caption, #macross tbody, #macross tfoot, #macross thead, #macross tr, #macross th, #macross td {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+
+
+#macross {
+	position:absolute;
+	background:#000;
+	line-height:1.25;
+	color:#fff;
+	font-size:0.75em;
+	display:block;
+}
+
+#macross #container {
+	background:#000;
+	width:960px;
+	margin:0 auto;
+	vertical-align:top;
+}
+
+
+#macross #container .bnr {
+	float:left;
+	width:175px;
+
+}
+
+#macross #container .kokuchi {
+	float:right;
+	width:765px;
+}
+
+
+#macross .

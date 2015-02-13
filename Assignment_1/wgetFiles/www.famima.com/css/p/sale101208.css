@@ -1,0 +1,75 @@
+@charset "Shift_JIS";
+
+/*
+Title: fukubukuro and sale
+URI: http://famima.com/shop/pages/sale101208.aspx
+*/
+
+#sale101208-wrap h1, #sale101208-wrap h2, #sale101208-wrap h3, #sale101208-wrap h4,
+#sale101208-wrap img, #sale101208-wrap p, #sale101208-wrap div, #sale101208-wrap ul, #sale101208-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#sale101208-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#sale101208-wrap{
+	width:880px; background-color:#f9f6ef;}
+
+#sale101208-wrap .banner_1{
+	width:717px; padding:0 0 30px 16px;}
+
+#sale101208-wrap .banner_2{
+	width:673px; padding:0 0 30px 192px;}
+
+
+#sale101208-wrap .saleitem165{
+	width:165px; float:left; padding-right:5px;}
+
+#sale101208-wrap .saleitemBorder{
+	width:165px; border:1px solid #cc0015;
+	background-color:#ffffff;}
+
+#sale101208-wrap .saleitemBorder .saleDate{
+	width:165px; padding:3px 0; background-color:#cc0015; color:#FFFFFF; font-size:12px;}
+
+#sale101208-wrap .saleitemBorder .saleItemIMG{
+	width:161px; padding:0 1px;}
+	
+#sale101208-wrap .saleitemBorder p.name{
+	color:#333333; line-height:120%; font-weight:bold;}
+	
+#sale101208-wrap .saleitemBorder p.price{
+	color:#333333; font-size:90%; padding:4px 0;}
+	
+#sale101208-wrap .saleitemBorder p.saleprice{
+	color:#FF0000; font-size:90%; padding:4px 0;}
+	
+#sale101208-wrap .saleitemBorder p.name a:link, 
+#sale101208-wrap .saleitemBorder p.name a:visited{
+	text-decoration:underline; color:#333333;}
+#sale101208-wrap .saleitemBorder p.name a:hover,
+#sale101208-wrap .saleitemBorder p.name a:active{
+	text-decoration:none; color:#333333;}
+
+
+
+	
+
+/* clearfix */
+#sale101208-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+/* IE6 */
+* html #sale101208-wrap { 
+	height: 1%;}

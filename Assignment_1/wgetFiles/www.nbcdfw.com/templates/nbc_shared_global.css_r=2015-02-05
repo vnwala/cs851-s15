@@ -1,0 +1,904 @@
+/*************************************************** 
+* Title: nbc_shared_global.css
+* Last edited by: atarampi
+* Date modified: 01-29-2015
+* CMS Version: 134
+* Ticket No.: updated styles for global right rail for weather module
+****************************************************/
+@charset "utf-8";
+/* CSS Document */
+/*footer background color*/
+ /*link colors for header and footer*/
+
+
+html, body, div, span, applet, object,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+em {font-style:italic;}
+
+/****** FOOTER ************************************/
+.checkout-ad {margin-top: 20px;}
+#partners {width:990px; height:118px; background-color:#eeb524;}
+#footer{background-color:#0E3870 !important;}
+#footer #footerDiv {background-color:#0E3870 !important;margin: 0 auto;width: 990px;font: normal 11px 'Arimo',Arial,sans-serif;color: #ffffff;}
+#footer #footerDiv #footerLogo{background-color:#0E3870 !important;float: left;margin-top:0;width:100%;padding:20px 0 0 10px;}
+#footer #footerDiv #footerLogo .right{background-color:#0E3870 !important;float:right;margin-right:5px;}
+#footer #footerDiv #footerLogo .left{background-color:#0E3870 !important;float:left;width:650px;}
+#footer #footerDiv #footerLinks {background-color:#0E3870 !important;float: left;padding-left: 10px;width: 100%;}
+#footer #footerDiv #footerLogo #leftLogo {margin:30px 0 0;}
+#footer #footerDiv #footerLogo #leftCopy {float:left;clear:both;padding-top:15px;width:575px;color:#B6D4EE;}
+#footer #footerDiv #footerLogo .leftTerms {float:left;clear:both;margin:0;width:350px;}
+#footer #footerDiv #footerLogo .leftTerms.about {background-color:#0E3870 !important;float:right;clear:both;margin:0;text-align:right;}
+#footer #footerDiv #footerLogo .leftTerms .btm{margin: 0;}
+#footer #footerDiv #footerLogo .leftTerms a{color: #B6D4EE;font: 11px 'Arimo',Arial,sans-serif;margin: 0 12px 0 0;text-decoration: none;}
+#footer #footerDiv #footerLogo .leftTerms a:hover{text-decoration: underline;}
+#footer #footerDiv #footerLogo #leftShare {background-color:#0E3870 !important;float:right;clear:both;}
+#footer #footerDiv #footerLogo #leftShare ul{background-color:#0E3870 !important;float:left;margin:10px 0;width: 100%;}
+#footer #footerDiv #footerLogo #leftShare ul li{background-color:#0E3870 !important;border-right: 1px solid #b8e4df;float: left;height: 12px;margin: 9px 5px;width: 20px;}
+#footer #footerDiv #footerLinks .footCol {background-color:#0E3870 !important;float:left;width:228px;}
+#footer #footerDiv #footerLinks .last{float:left;width:75px;}
+#footer #footerDiv #footerLinks .footCol ul {background-color:#0E3870 !important;float: left;margin:25px 0 0;width: 135px;}
+#footer #footerDiv #footerLinks .footCol ul li {background-color:#0E3870 !important;width: 130px;}
+#footer #footerDiv #footerLinks .last ul,#footer #footerDiv #footerLinks .last ul li{width:75px;}
+#footer #footerDiv #footerLinks .footCol ul li a {font: 14px/16px 'Arimo',Arial,sans-serif;color: #B6D4EE;text-decoration: none;}
+#footer #footerDiv #footerLinks .footCol ul li a:hover {text-decoration: underline;}
+#footer #footerDiv #footerLinks .footCol ul li.header {margin: 0 0 10px 0;}
+#footer #footerDiv #footerLinks .footCol ul li.header a {font: 14px 'Arimo',Arial,sans-serif;color: #ffffff;text-transform: uppercase;text-decoration: none;}
+#footer #footerDiv #footerLinks .footCol ul li.header a:hover {text-decoration: underline;}
+#footer #footerDiv #footerLogo #leftShare a#fb_footer{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -22px 0 transparent;display: block;height: 18px;margin-left: 2px;position:  static;margin-top: -4px;width: 7px;}
+#footer #footerDiv #footerLogo #leftShare a#fb_footer:hover{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -22px -16px transparent;}
+#footer #footerDiv #footerLogo #leftShare a#ph_footer{ background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -80px 0 transparent;display: block;height: 18px;margin-left: 1px;margin-left: 1px;position:  static;margin-top: -4px;width: 9px;}
+#footer #footerDiv #footerLogo #leftShare a#ph_footer:hover{ background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -80px -16px transparent;}
+#footer #footerDiv #footerLogo #leftShare a#rss_footer{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -40px 0 transparent;display: block;height: 18px;margin-left: -1px;position:  static;margin-top: -4px;width: 12px;}
+#footer #footerDiv #footerLogo #leftShare a#rss_footer:hover{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -40px -16px transparent;}
+#footer #footerDiv #footerLogo #leftShare a#em_footer {background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -64px 0 transparent;display:block;height:18px;margin-left:-1px;position: static;margin-top:-5px;width:16px;}
+#footer #footerDiv #footerLogo #leftShare a#em_footer:hover {background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -64px -16px transparent;}
+
+
+#partners {width:990px; height:118px; background-color:#eeb524;}
+#footer {width:100%; height:auto; float:left; margin:0 auto; padding-bottom:25px;}
+#footer #footerDiv #footerLogo .right{width:325px;}
+#footer #footerDiv #footerLogo .leftTerms.about {width:340px;}
+#footer #footerDiv #footerLogo #leftShare a#tw_footer{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -30px 1px transparent;display: block;height: 16px;position: static;margin-top: -4px;width: 9px;}
+#footer #footerDiv #footerLogo #leftShare a#tw_footer:hover{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -30px -15px transparent;}
+#footer #footerDiv #footerLogo #leftShare a#gp_footer{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -88px 1px transparent;display: block;height: 18px;position: static;margin-top: -4px;width:15px;}
+#footer #footerDiv #footerLogo #leftShare a#gp_footer:hover{background: url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -88px -16px transparent;}
+
+
+/****** PARTNER FOOTER ************************************/
+#partner_footer{background:none;}
+#partner_footer #footer.partner {width:100%;height:auto;float:left;margin:0 auto;padding-bottom:25px;background-color:#0E3870;}
+#partner_footer #footer.partner #footerDiv {background-color:#0E3870;margin: 0 auto;width: 990px;font:normal 11px 'Arimo',Arial,sans-serif,sans-serif;color:#fff;}
+#partner_footer #footer.partner #footerDiv #footerLinks {background-color:#0E3870;float:left;}
+#partner_footer #footer.partner #footerDiv #footerLinks .footCol{background-color:#0E3870;float:left;}
+#partner_footer #footer.partner #footerDiv #footerLinks .footCol ul{background-color:#0E3870;float:left;}
+#partner_footer #footer.partner #footerDiv #footerLinks .footCol ul li.header{background-color:#0E3870;margin:0 0 10px;}
+#partner_footer #footer.partner #footerDiv #footerLinks .footCol ul li.header a {font:14px 'Arimo',Arial,sans-serif,sans-serif;color:#fff;text-transform:uppercase;text-decoration:none;}
+#partner_footer #footer.partner #footerDiv #footerLogo{background-color:#0E3870;float:left;margin-top:0;}
+#partner_footer #footer.partner #footerDiv #footerLogo .left{background-color:#0E3870;float:left;}
+#partner_footer #footer.partner #footerDiv #footerLogo .leftTerms {float:left;clear:both;margin:0;}
+#partner_footer #footer.partner #footerDiv #footerLogo .leftTerms a{color:#b6d4ee;font:11px arial,sans-serif;margin:0 12px 0 0;text-decoration:none;}
+#partner_footer #footer.partner #footerDiv #footerLogo #leftCopy{float:left;clear:both;padding-top:15px;color:#b6d4ee;}
+
+
+/****** STICKY NAV ************************************/
+#parallax #stickyNav{background-color:#0D3162;}
+#stickyNav {position:fixed; height:58px;  width:100%; display:none; z-index: 999999999; top: 0; }
+#stickyNav #pHeader { position:relative; margin: 0 auto; width: 1010px;height: 58px;background-color:#0D3162;}
+#stickyNav ul { list-style:none; margin:31px 10px 0; float:right; }
+#stickyNav ul li { float:left; list-style:none;}
+#stickyNav ul li.searchButton { margin:0px 0px 0px 22px; position:relative; top: -5px; }
+#stickyNav ul li.searchButton:hover, #stickyNav .stickySearchCancel:hover { cursor:pointer; }
+#stickyNav ul li.searchButton img { display: inline; }
+#stickyNav ul li a { color:#fff; font-family:arial,sans-serif; font-size:15px; text-decoration:none; }
+#stickyNav .search-field { position: absolute; left: 772px; top: 23px; }
+#stickyNav .search-field input { outline: none; -webkit-appearance: none; background-color: #18467f; border: 0px; border-bottom: 1px solid #A5A5A5; border-radius: 0px; height: 21px; width: 193px; font-size: 19px; font-family: arial; color: #fff; }
+#stickyNav .search-icon { position: absolute; left: 979px; top: 23px; z-index: 3; }
+#stickyNav .search-icon:hover { cursor: pointer; }
+#stickyNav .stickySearchCancel { left: 747px; position: absolute; top: 29px; display:none; }
+#stickyNav .pLogo { height:100%; margin:0 auto; width:1008px; }
+#stickyNav .pLogo .img { float:left; margin:0 10px 0 0; }
+#stickyNav .mag-grey { display: none; }
+#stickyNav .search-field-bg { width: 0px; display:none; position: absolute; background-color: #fff; height: 32px; /*width: 239px;*/ z-index: 1; right: 0px; top: 18px; }
+#stickyNav .searchField { width: 188px; height: 11px; border: 0px; padding: 10px; font-family: arial; display: none; outline: none; display: inline; }
+#searchSubmitSticky { position: absolute; right: 9px; top: 5px; width: 21px; }
+
+#stickyNav .pLogo .img img {margin:24px 0 0;width:165px;}
+#stickyNav ul li{margin:0 14px;}
+
+
+/********* HEADLINE TAGS ****************************************/
+
+span.Breaking, span.Live, span.Video, span.Gallery, span.DallasNews, span.Updated, span.Exclusive, span.Opinion, span.Sponsored, span.Developing, span.First, span.Investigative, span.Alert, span.Coming, span.Only,span.Photos, span.transit, .left_rail_sponsor .Sponsored, span.Quiz, span.Infographic, span.Interactive, span.Map, span.Timeline {color:#fff;float:left;text-transform:uppercase;padding:2px 4px;font-family:'Arimo',Arial,sans-serif;color:#fff; float:left;width:auto;height:9px;font-size:9px;font-weight:bold;line-height:1em;margin:2px 5px 0 0;}
+
+#elections .stories .Live, #elections .stories .Breaking,#elections .stories .Alert, #elections .stories .Coming {padding:0 2px;margin-top:1px;border:1px solid #AF1111;border-bottom:none;font-family:'Arimo',Arial,sans-serif;font-weight:normal;}
+.news .Breaking, .news .Live, .news .Video, .news .Gallery, .news .DallasNews, .news .Updated, .news .Exclusive, .news .Opinion, .news .Sponsored, .news .Developing, .news .First, .news .Investigative,.news .Alert,.news .Coming,.news .Only, .news .Quiz, .news .Infographic, .news .Interactive, .news .Map, .news .Timeline {margin:11px 5px 0 0;}
+.articleText .Breaking, .articleText .Live, .articleText .Video, .articleText .Gallery, .articleText .DallasNews, .articleText .Updated, .articleText .Exclusive, .articleText .Opinion, .articleText .Sponsored, .articleText .Developing, .articleText .First, .articleText .Investigative, .articleText .Alert, .articleText .Coming, .articleText .Only, .articleText .Quiz, .articleText .Infographic, .articleText .Interactive, .articleText .Map, .articleText .Timeline {margin:6px 5px 0 0;}
+.news span.Sponsored.hero {position: absolute; top: 0px; left: 530px; z-index: 1; font-size: 14px; height: 14px; margin: 0; background: #648cb9; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0OGNiOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMDVjOGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #648cb9 0%, #305c8e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#648cb9), color-stop(100%,#305c8e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* IE10+ */
+background: linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#648cb9', endColorstr='#305c8e',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+
+span.Breaking, span.Live, span.Video, span.First, span.Alert, span.Coming, span.Only, span.transit,.topTwo .Breaking,.topTwo .Alert,.topTwo .Coming,.topTwo .Live {
+border:1px solid #af1111;
+border-bottom:none;
+background: #df4037; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RmNDAzNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZDBkMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #df4037 0%, #bd0d00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#df4037), color-stop(100%,#bd0d00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* IE10+ */
+background: linear-gradient(top,  #df4037 0%,#bd0d00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df4037', endColorstr='#bd0d00',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+span.Updated, span.Exclusive, span.Opinion, span.Gallery, span.DallasNews, span.Developing, span.Investigative, span.Photos,.topTwo .Exclusive,.topTwo .Opinion,.topTwo .Updated, .topTwo .Photos,.topTwo .Developing,.left_rail_sponsor .Sponsored, span.Quiz, span.Infographic, span.Interactive, span.Map, span.Timeline, .topTwo .Quiz, .topTwo .Infographic, .topTwo .Interactive, .topTwo .Map, .topTwo .Timeline {
+border:1px solid #1259a6;
+border-bottom:none;
+background: #648cb9; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0OGNiOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMDVjOGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #648cb9 0%, #305c8e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#648cb9), color-stop(100%,#305c8e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* IE10+ */
+background: linear-gradient(top,  #648cb9 0%,#305c8e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#648cb9', endColorstr='#305c8e',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+
+/* labels */
+li .Breaking, li .Updated, li .Live, li .Exclusive, li .Opinion, li .Video, li .Photos, li .Alert, li .Coming {padding:1px 2px;}
+li .Photos {background-color:#305c8e;}
+
+span.Sponsored {
+background: #8f8f8f; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhmOGY4ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhYWFhYWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #8f8f8f 0%, #aaaaaa 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8f8f8f), color-stop(100%,#aaaaaa)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #8f8f8f 0%,#aaaaaa 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #8f8f8f 0%,#aaaaaa 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #8f8f8f 0%,#aaaaaa 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #8f8f8f 0%,#aaaaaa 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#aaaaaa',GradientType=0 ); /* IE6-8 */
+<!--[if gte IE 9]>filter: none;<![endif]-->
+}
+
+ul.carousel-stories li h2 .Breaking,ul.carousel-stories li h2 .Live,ul.carousel-stories li h2 .Video,ul.carousel-stories li h2 .Gallery, ul.carousel-stories li h2 .DallasNews,ul.carousel-stories li h2 .Updated,ul.carousel-stories li h2 .Exclusive,ul.carousel-stories li h2 .Opinion, ul.carousel-stories li h2 .Sponsored,ul.carousel-stories li h2 .Developing,ul.carousel-stories li h2 .Alert,ul.carousel-stories li h2 .Coming, ul.carousel-stories li h2 .Quiz, ul.carousel-stories li h2 .Infographic, ul.carousel-stories li h2 .Interactive, ul.carousel-stories li h2 .Map, ul.carousel-stories li h2 .Timeline {margin-top:4px;}
+ul.carousel-stories li h2 .Sponsored{color:#FFFFFF;float:left;width:auto;height:9px;font-family:'Arimo',Arial,sans-serif;font-size:9px;font-weight:bold;line-height:1em;margin:2px 5px 0 0;padding:2px 4px;text-transform:uppercase;}
+ul.carousel-stories li h2 .Sponsored {background: #666666;}
+#carousel-hero-region div .Sponsored{background:#666666;color:#fff;padding:3px;position:absolute;left:0;text-transform:uppercase;top:0;z-index:100;}
+
+#searchPage #searchResults .story{background:none;border:none;height:auto;}
+#searchPage #searchResults .story .category .Live #searchPage #searchResults .story .category .Live, #searchPage #searchResults .story .category .Video, #searchPage #searchResults .story .category .Gallery, #searchPage #searchResults .story .category .DallasNews, #searchPage #searchResults .story .category .Updated, #searchPage #searchResults .story .category .Exclusive, #searchPage #searchResults .story .category .Opinion, #searchPage #searchResults .story .category .Sponsored, #searchPage #searchResults .story .category .Developing, #searchPage #searchResults .story .category .First, #searchPage #searchResults .story .category .Investigative, #searchPage #searchResults .story .category .Alert, #searchPage #searchResults .story .category .Coming, #searchPage #searchResults .story .category .Only, #searchPage #searchResults .story .category .Photos, #searchPage #searchResults .story .category .transit, #searchPage #searchResults .story .category .Quiz, #searchPage #searchResults .story .category .Infographic, #searchPage #searchResults .story .category .Interactive, #searchPage #searchResults .story .category .Map, #searchPage #searchResults .story .category .Timeline{
+  color:#fff;font-weight:normal;
+}
+
+/****** SOCIAL MODULE ************************************/
+.social_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.social_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.social_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.social_module .module-title span{background-color:#fff;padding:0 5px;width:auto;}
+.social_module .links{margin:0 auto;overflow:hidden;zoom:1;}
+.social_module .links div{color:#666666;float:left;font-size:12px;margin:5px 4px 13px 0;text-align:center;}
+.social_module .links div span a{color:#666666;}
+.social_module .links div a.logo {display:block;width:89px;height:75px;margin-bottom:23px;background:url('http://media.nbcdfw.com/designimages/social-sprite_2014.png?a=1') no-repeat;}
+.social_module .links .google-social,.social_module .links .instagram-social{margin:5px 0 13px;}
+.social_module .links .facebook-social a.logo{background-position:0 -64px;}
+.social_module .links .twitter-social a.logo{background-position:0 -136px;}
+.social_module .links .google-social a.logo{background-position:0 -208px;}
+.social_module .links .instagram-social a.logo{background-position:0 -281px;}
+.rightrail_item .social_module{width:296px;}
+.rightrail_item .social_module .titleWrapper{width:296px;}
+.rightrail_item .social_module .module-title{width:290px;}
+.rightrail_item .social_module .links div{margin:5px 9px 22px 0;}
+.social_module p{font-size:10px;font-weight:bold;float:right;margin:0;text-transform:uppercase;}
+.social_module p a{color:#1259a6;}
+
+
+/****** MOBILE MODULE ************************************/
+.mobile_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.mobile_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.mobile_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.mobile_module .module-title span{background-color:#fff;padding:0 5px;width:auto;}
+.mobile_module .module-title a{color:#26518e;}
+.mobile_module img{float:left;margin:0 5px 0 0;}
+.mobile_module ul{float:left;margin-top:20px;}
+.mobile_module ul li{color:#222;font-size:18px;list-style:disc;margin-left:25px;padding:0 0 10px 5px;}
+.mobile_module ul li a{color:#222;}
+.mobile_module p{font-size:10px;font-weight:bold;float:right;margin:20px 0 0;text-transform:uppercase;}
+.mobile_module p a{color:#1259a6;}
+.rightrail_item .mobile_module{width:296px;}
+.rightrail_item .mobile_module .titleWrapper{width:296px;}
+.rightrail_item .mobile_module .module-title{width:290px;}
+
+/****** ABOUT MODULE ************************************/
+.about_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.about_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.about_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.about_module .module-title span{background-color:#fff;padding:0 5px;width:auto;}
+.about_module .address{background:url('http://media.nbcdfw.com/designimages/icons-contact-us-vert.png') no-repeat -15px 0px;color:#222;font-size:15px;margin:0;padding:0 10px 18px 32px;}
+.about_module .address span{font-weight:bold;}
+.about_module .phone{background:url('http://media.nbcdfw.com/designimages/icons-contact-us-vert.png') no-repeat -15px -88px;height:49px;margin:0;padding:0 10px 0 32px;}
+.dfw .about_module .phone{background:url('http://media.nbcdfw.com/designimages/icons-contact-us-vert.png') no-repeat -15px -88px;height:60px;margin:0;padding:0 10px 0 32px;}
+.about_module .phone span{color:#222;display:inline-block;font-size:14px;}
+.about_module .phone .number{float:right;font-weight:bold;}
+.about_module .email{background:url('http://media.nbcdfw.com/designimages/icons-contact-us-vert.png') no-repeat -15px -163px;margin:0;padding:0 10px 7px 32px;}
+.about_module .email p{color:#222;font-size:15px;font-weight:bold;}
+.about_module .email p a{color:#1259a6;}
+.rightrail_item .about_module{width:296px;}
+.rightrail_item .about_module .titleWrapper{width:296px;}
+.rightrail_item .about_module .module-title{width:290px;}
+
+/****** TEAM MODULE ************************************/
+.team_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.team_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.team_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.team_module .module-title span{background-color:#fff;padding:0 5px;width:auto;}
+.team_module ul{float:left;}
+.team_module ul li{border-bottom:1px solid #e5e5e5;float:left;padding:11px 0;width:100%;}
+.team_module ul li:last-child{border-bottom:none;} 
+.team_module ul li .pic{border:1px solid #e5e5e5;float:left;margin:0 15px 0 0;}
+.team_module ul li h3{color:#222;font-size:14px;margin:0 0 5px;}
+.team_module ul li h3 a{color:#222;}
+.team_module ul li .follow{float:left;}
+.team_module ul li .follow p{color:#222;float:left;font-size:9px;margin:15px 8px 0 0;}
+.team_module ul li .follow a{display:block;float:left;margin-right:10px;width:30px;}
+.team_module ul li .follow a.facebook{background:url('http://media.nbcdfw.com/designimages/social-sprite_2014.png') no-repeat -28px 0;height:34px;}
+.team_module ul li .follow a.twitter{background:url('http://media.nbcdfw.com/designimages/social-sprite_2014.png') no-repeat -28px -35px;height:32px;margin:3px 0;}
+.team_module p{font-size:10px;font-weight:bold;float:right;margin-top:13px;text-transform:uppercase;}
+.team_module p a{color:#1259A6;}
+.rightrail_item .team_module{width:296px;}
+.rightrail_item .team_module .titleWrapper{width:296px;}
+.rightrail_item .team_module .module-title{width:290px;}
+
+
+/****** LISTINGS MODULE ************************************/
+.listings_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.listings_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.listings_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.listings_module .module-title a{background:#fff;padding:0 5px;width:auto;}
+.listings_module .tvlistingshdrfont{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;color:#222;display:block;font-size:14px;font-weight:bold;padding:12px 0 10px 10px;width:266px;}
+.listings_module #homepage-onair-module-tvlistings div{display:none;}
+.listings_module #homepage-onair-module-tvlistings ul{background:#f6f6f6;}
+.listings_module #homepage-onair-module-tvlistings ul li span{display:inline-block;padding:10px 0 11px;}
+.listings_module #homepage-onair-module-tvlistings ul li .listTime{color:#868686;font-size:14px;line-height:16px;text-align:right;vertical-align:top;width:72px;}
+.listings_module #homepage-onair-module-tvlistings ul li .listTitle{color:#333;font-size:14px;line-height:16px;margin:0 7px 0 25px;width:167px;}
+.listings_module #homepage-onair-module-tvlistings ul li div{border-bottom:none !important;border-top:1px solid #e5e5e5 !important;margin:0 !important;display:block;width:276px !important;}
+.listings_module #homepage-onair-module-tvlistings ul li .listDesc{display:none;}
+.listings_module p{font-size:10px;font-weight:bold;float:right;margin-top:15px;text-transform:uppercase;}
+.listings_module p a{color:#1259A6;}
+.rightrail_item .listings_module{width:296px;}
+.rightrail_item .listings_module .titleWrapper{width:296px;}
+.rightrail_item .listings_module .module-title{width:290px;}
+.rightrail_item .listings_module .tvlistingshdrfont{width:288px;}
+.rightrail_item .listings_module #homepage-onair-module-tvlistings ul li .listTitle{width:185px;}
+.rightrail_item .listings_module #homepage-onair-module-tvlistings ul li div{width:296px !important;}
+
+
+/****** PHOTOS - VID MODULE ************************************/
+.photos-videos_module{background:#fff;float:left;padding:12px;position:relative;width:276px;}
+.photos-videos_module .titleWrapper{border-top:1px solid #CDCDCD;float:none;left:12px;margin:0;padding:0;position:absolute;top:26px;width:276px;z-index:0;}
+.photos-videos_module .module-title{background-color:transparent !important;display:inline-block;left:0 !important;margin:0 0 16px;position:relative;text-align:center;top:1px;width:260px;z-index:1;}
+.photos-videos_module .module-title span{background-color:#fff;display:inline-block;padding:0 5px;width:auto;}
+.photos-videos_module .module-title a{color:#26518e;}
+.photos-videos_module a.img{display:block;text-align:center;}
+.photos-videos_module p{color:#222;font-size:16px;margin:0;}
+.photos-videos_module p.upload{font-size:10px;font-weight:bold;float:right;margin:10px 0 0;text-transform:uppercase;}
+.photos-videos_module p.upload a{color:#1259A6;}
+.rightrail_item .photos-videos_module{width:296px;}
+.rightrail_item .photos-videos_module .titleWrapper{width:296px;}
+.rightrail_item .photos-videos_module .module-title{width:290px;}
+
+/****** NAV - WATCH TV LINK ************************************/
+#nav > ul {position:relative;}
+#nav li.watchTV, #nav li.watchTV:hover {background:url('http://media.nbcdfw.com/designimages/btn_watch_tve_nav.png') 0 0 no-repeat;}
+#nav li.watchTV {float:none;position:absolute;top:8px;right:98px;border:none;padding:0;margin:0;width:144px;height:26px;}
+#nav li.watchTV a {display:block;text-indent:-9999em;padding:0!important;line-height:1em;height:26px;}
+
+/****HIDE IFRAME*****/
+[name*="google_conversion_frame"] {display:none;}
+
+
+/*********MASTHEAD*******/
+#mastheadLinks #mastheadRightLinks a.mh_follow {float: left;color: #7da9dc;font-family: 'Arimo',Arial,sans-serif;font-size: 11px;margin: 0 0 0 0;padding: 0 8px;text-decoration: none;text-transform: uppercase;}
+#mastheadLinks #mastheadRightLinks a.mh_follow{margin: 0;padding: 0 !important;}
+#mastheadLinks #mastheadRightLinks a.bl {border-left: 1px solid;}
+#mastheadLinks #mastheadRightLinks #userMsg { color:#b8e4df;font-family:'Arimo',Arial,sans-serif;font-size:11px;padding-right:5px;padding-left:8px;}
+#mastheadRightLinks #loginRegLinks a#editAccount, #mastheadRightLinks #loginRegLinks a#logOut {padding-left:8px;padding-right:5px;}
+#mastheadLinks #mastheadRightLinks #userMsg a {color:#b8e4df;text-decoration:none;text-transform:uppercase;padding:0px;margin:0;}
+#mastheadLinks #mastheadRightLinks .brLast {border-right: none;border-left:none;color:#7DA9DC;float:left;font-family:'Arimo',Arial,sans-serif;font-size:11px;margin:0;padding:0 8px;text-decoration:none;text-transform:uppercase;}
+#mastheadRightLinks #followLinks, #mastheadRightLinks #loginRegLinks {float:right !important;clear:both;color:#b8e4df;}
+#mastheadRightLinks #followLinks { margin-top:0px !important; }
+#mastheadRightLinks .follow-us {background:none!important;font-family:'Roboto',Helvetica,sans-serif;font-size:16px;color:#fafafa;display:block;height:12px;margin-top:6px;text-transform:uppercase;padding:0 5px!important;width:100px!important;}
+#mastheadLinks #mastheadRightLinks #loginRegLinks  {padding-top:3px !important;}
+#mastheadRightLinks #followLinks a:hover, #mastheadRightLinks #loginRegLinks a:hover  {text-decoration:underline;}
+#mastheadRightLinks #loginRegLinks a:hover  {  text-decoration:none;}
+#mastheadRightLinks #loginRegLinks a:hover  {  text-decoration:none;  color:#fff;}
+#mastheadRightLinks #loginRegLinks a.divider:hover  {  text-decoration:none;  color:#b8e4df;}
+#mastheadLinks #mastheadRightLinks #followLinks .br {border-right: 1px solid;color:#fafafa;}
+#mastheadLinks #mastheadRightLinks div#tipsLink {padding-top:6px; margin-top:0px;clear:none !important;float:left !important;}
+#mastheadRightLinks #tipsLink a#tips {padding-left:4px;}
+#mastheadRightLinks #tipsLink a#tips span.tipsImg { background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -52px -5px transparent;display:block;height:12px;left:0px;top:0px;width:12px;float:left;margin-top:-2px;}
+#mastheadRightLinks #ugcLink a span.ugcIcon {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -70px -44px transparent; display:block; float:left; width:12px; height:11px;}
+#mastheadRightLinks #ugcLink a:hover span.ugcIcon {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -70px -54px transparent; display:block; float:left; width:12px; height:11px;}
+#mastheadRightLinks #tipsLink a#tips span.tipsText {float:left;padding-left:4px;}
+#mastheadRightLinks #tipsLink a#tips span.tipsImg:hover { background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -52px -21px transparent;display:block;float:left;height:12px;left:0;top:0;width:12px;margin-top:-2px;}
+#mastheadRightLinks #tipsLink a#tips:hover span.tipsImg { background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -52px -21px transparent;display:block;float:left;height:12px;left:0;top:0;width:12px;margin-top:-2px;}
+#mastheadRightLinks #followLinks a.divider, #mastheadRightLinks #loginRegLinks a.divider {border-right:none;font-size:11px;padding:0px 0px 0px 3px;}
+#mastheadRightLinks #loginRegLinks #loggedIn a#tips span.tipsImg {background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -52px -7px transparent;margin-top:0px;} 
+#mastheadRightLinks #loginRegLinks #loggedIn a#tips span.tipsImg:hover {background:url("http://media.nbcdfw.com/designimages/nbc_v3_footer_share_sprite.png") no-repeat scroll -52px -23px transparent;margin-top:0px;}
+#mastheadLinks #mastheadRightLinks div#loggedInTips {padding-top:1px;margin-top:23px;}
+#mastheadRightLinks #tipsText a#tips span.tipsText {}
+#mastheadRightLinks #followLinks a#fbLink, #mastheadRightLinks #followLinks a#twitterLink {font-size:16px;}
+#mastheadRightLinks #followLinks a#fbLink img, #mastheadRightLinks #followLinks a#twitterLink img {margin-bottom:-2px;}
+
+#masthead #mastheadRightLinks #mastheadWeatherModule #forcast,#masthead #mastheadRightLinks #mastheadWeatherModule #city,#masthead #mastheadRightLinks #mastheadWeatherModule #currentTemp ul,#masthead #mastheadRightLinks #mastheadWeatherModule #currentConditions{display:none;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #currentWrap{border:none;margin:0;padding:0;width:auto;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #currentIcon{float:left;margin:0 5px 0 0;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #currentIcon img{width:40px !important;height:40px !important;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #currentTemp{float:left;text-align:left;font-size:21px;color:#fff;padding:0;margin-top:8px;}
+
+
+#masthead #mastheadRightLinks {position:absolute;top:0;left:694px;width:300px;height:78px;overflow:hidden;font-size:12px;font-family:'Arimo',Arial,sans-serif;color:#FFFFFF;}
+#masthead #mastheadRightLinks #mastheadWeatherModule {position:absolute;top:30px;left:18px;width:92px;height:60px;padding:0;/*background:url('http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png') 0 -660px no-repeat transparent*/background:none;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 {display:block;overflow:hidden;padding:0;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp #mastheadWeatherTempNow {font-weight:bold;font-size:21px;margin:8px 0 4px;padding:0;line-height:1em;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp #mastheadWeatherTempNow a span.scale {font-size:10px;font-weight:normal;left:-7px;position:relative;top:1px;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp #mastheadWeatherHiLo {/*padding:0;line-height:1em;*/display:none;}
+#masthead #mastheadRightLinks #socializeLoggedinState {position:relative;}
+#masthead #mastheadRightLinks #socializeLoggedinState ul {position:absolute;top:12px;left:auto;right:4px;width:130px;z-index:1;color:#2B4F86;border:1px solid #DFDFDF;border-top:none;background-color:#FFFFFF;}
+#masthead #mastheadRightLinks #socializeLoggedinState li {display:block;padding:0;margin:0;}
+#masthead #mastheadRightLinks #socializeLoggedinState li a {display:block;padding:8px 4px;margin:0;font-weight:bold;text-transform:capitalize;font-size:12px;color:#2B4F86!important;}
+#masthead #mastheadRightLinks #socializeLoggedinState li a:hover {background-color:#EFEFEF;}
+#masthead #mastheadRightLinks #ugcBox {float:right;margin:0;text-align:center;padding:8px 4px 0;height:17px;width:230px;font-size:11px;/*background:url('http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png') 0 -725px no-repeat transparent;*/background:none #2B4F86;line-height:1em;-webkit-border-bottom-right-radius: 10px;-webkit-border-bottom-left-radius: 10px;-moz-border-radius-bottomright: 10px;-moz-border-radius-bottomleft: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;}
+#masthead #mastheadRightLinks #ugcBox a {position:relative;margin:0 4px;}
+#masthead #mastheadRightLinks #ugcBox span#socializeLoggedinState a#myAccount span {background:url('http://media.nbcdfw.com/designimages/profileDDArrows.png') no-repeat scroll 0 0 transparent;float:none;height:13px;width:15px;position:relative;left:0;top:-1px;padding:0 8px 0 7px;margin:0 0 0 2px;}
+#masthead #mastheadRightLinks #ugcBox span#socializeLoggedinState a#myAccount span.active {background-position:-15px 0;}
+#masthead #mastheadRightLinks form#searchForm {float:right;width:188px;margin:10px 0 0 0;position:relative;border:2px solid #648bb7;}
+#home #masthead #mastheadRightLinks form#searchForm {width:275px;}
+#masthead #mastheadRightLinks form#searchForm #searchText {width:148px;height:15px;position:relative;border:1px solid #FFFFFF;color:#999999;padding:2px 30px 2px 8px;}
+#home #masthead #mastheadRightLinks form#searchForm #searchText {width:235px;}
+#masthead #mastheadRightLinks form#searchForm #searchSubmit {position:absolute;top:2px;left:165px;width:20px;}
+#home #masthead #mastheadRightLinks form#searchForm #searchSubmit {left:254px;}
+
+#masthead #mastheadRightLinks a {color:#FFFFFF;text-transform:uppercase;}
+.la #masthead #mastheadRightLinks a {color:#4D7DA2;}
+.bay #masthead #mastheadRightLinks #mastheadWeatherModule,
+.har #masthead #mastheadRightLinks #mastheadWeatherModule,
+.dfw #masthead #mastheadRightLinks #mastheadWeatherModule,
+.ny #masthead #mastheadRightLinks #mastheadWeatherModule {background-position:-110px -660px;}
+.dgo #masthead #mastheadRightLinks #mastheadWeatherModule {background-position:-220px -660px;}
+.la #masthead #mastheadRightLinks #mastheadWeatherModule {background-position:-330px -660px;color:#4D7DA2;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherIcon {float:left;margin:0 2px 0 0;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp {float:left;text-align:left;font-style:normal;}
+.la #masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp {color:#4D7DA2;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp a {color:#FFF;}
+.la #masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp a {color:#4D7DA2;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp #mastheadWeatherTempHiLo {}
+.bay #masthead #mastheadRightLinks #ugcBox,
+.har #masthead #mastheadRightLinks #ugcBox,
+.dfw #masthead #mastheadRightLinks #ugcBox,
+.ny #masthead #mastheadRightLinks #ugcBox {background-position:-180px -725px;}
+.dgo #masthead #mastheadRightLinks #ugcBox {background-position:0 -750px;}
+.la #masthead #mastheadRightLinks #ugcBox {background-position:-180px -750px;color:#4D7DA2;}
+#masthead #mastheadRightLinks #ugcBox a span {float:left;width:12px;position:absolute;top:0;left:0;background:url('http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png') no-repeat transparent;}
+#masthead #mastheadRightLinks #ugcBox a.ugcLink span {height:11px;background-position:-70px -54px;}
+#masthead #mastheadRightLinks #ugcBox a.tipsLink span {height:8px;background-position:-52px -24px;top:2px;}
+.la #masthead #mastheadRightLinks #ugcBox a.ugcLink span {background-position:-52px -54px}
+.la #masthead #mastheadRightLinks #ugcBox a.tipsLink span {background-position:-52px -46px;}
+.bay #masthead #mastheadRightLinks form#searchForm,
+.har #masthead #mastheadRightLinks form#searchForm,
+.dfw #masthead #mastheadRightLinks form#searchForm,
+.ny #masthead #mastheadRightLinks form#searchForm {border:2px solid #204177;}
+.dgo #masthead #mastheadRightLinks form#searchForm {border:2px solid #3891c4;}
+.la #masthead #mastheadRightLinks form#searchForm {border:2px solid #d2dbe3;}   
+#followLinks ul { float:left; padding-right:5px; padding-top:3px;}
+#followLinks ul li {float:left;color:#fafafa;padding:0 1px 0px 0px;}
+#followLinks ul li.br {padding:0 8px 0px 5px;}
+#mastheadRightLinks #followLinks a#fbLink {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -104px 0px transparent; display:block; height:25px; left:2px; padding:0; top:0; width:25px;}
+#mastheadRightLinks #followLinks a#fbLink:hover {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -104px 0px transparent; display:block; height:25px; left:2px; padding:0; top:0; width:25px;}
+#mastheadRightLinks #followLinks a#twitterLink {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -128px 0px transparent; display:block; height:25px; padding:0; position:relative; top:0; width:25px;}
+#mastheadRightLinks #followLinks a#twitterLink:hover {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -128px 0px transparent; display:block; height:25px; padding:0; position:relative; top:0; width:25px;}
+#mastheadRightLinks #followLinks a#gplusLink {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-021413.png") no-repeat scroll -155px 0px transparent; display:block; height:25px; padding:0; position:relative; top:0; width:25px;}
+#mastheadRightLinks #followLinks #followHeader {margin-bottom:-4px;margin-top: 1px;}
+#mastheadLinks #mastheadRightLinks #loggedIn {padding-left:10px;padding-top:4px;color:#b8e4df;}
+.la #masthead #mastheadRightLinks #ugcBox {background-color:#E5ECF2;color:#4D7DA2;}
+
+.la #masthead #mastheadRightLinks #ugcBox span#socializeLoggedinState a#myAccount span {background:url("http://media.nbcdfw.com/designimages/profileDDArrows_la.png") no-repeat transparent;}
+.necn #masthead #mastheadRightLinks #ugcBox span#socializeLoggedinState a#myAccount span {background:url("http://media.nbcdfw.com/designimages/profileDDArrows_la.png") no-repeat transparent;}
+.necn #masthead #mastheadRightLinks #mastheadWeatherModule {background-position:-330px -660px;color:#4D7DA2;}
+.necn #masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp {color:#4D7DA2;}
+.necn #masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp a {color:#4D7DA2;}
+#masthead #mastheadRightLinks #mastheadWeatherModule #mastheadWeatherModule1 #mastheadWeatherTemp #mastheadWeatherHiLo {padding:0;line-height:1em;}
+.necn #masthead #mastheadRightLinks #ugcBox a.ugcLink span {background-position:-52px -54px}
+.necn #masthead #mastheadRightLinks #ugcBox a.tipsLink span {background-position:-52px -46px;}
+.necn #masthead #mastheadRightLinks form#searchForm {border:2px solid #d2dbe3;}   
+
+.la #masthead #mastheadRightLinks {left:701px;}
+.necn #masthead #mastheadRightLinks {left:701px;}
+
+
+#masthead {width:1010px; height:80px; margin:0 auto; background-color:#0D3162; background-image:url('http://media.nbcdfw.com/designimages/citysite_tv_radial_grad.png'); background-repeat:no-repeat; background-position: 50% 0;}
+
+
+  #mastheadLinks #mastheadLeftLinks {margin-top:10px;}
+#mastheadLinks {width:1010px;margin: 0 auto;padding-top:6px !important;}
+#mastheadLinks #mastheadLeftLinks{float:left;}
+#mastheadLinks #mastheadLeftLinks a#logo{float:left; text-decoration: none;}
+#mastheadLeftLinks .homepageTitle h1 {position:absolute;white-space:nowrap;padding-left:5px;visibility:hidden;}
+
+.la #masthead {width:1010px;height:100px;margin:0 auto; background-color:#fafafa; background-image:none !important;}
+.necn #masthead {width:1010px;margin:0 auto;  background-image:none !important;}
+
+
+#logocont {height: 52px;left:13px; position: absolute;text-shadow: none;}
+.la #logocont {height:90px !important;}
+.dgo #logocont {left:0px !important;}
+a#logo {color:#ffffff;}
+#logo img {position:absolute;left:0;}
+
+
+/* NAVGIATION */
+
+#nav {width:1010px;height:39px;margin:0 auto; background-color:#0E3870;}
+
+.dd_div ul li{border-bottom: 1px dotted #DEDEDE;color: #333333;font-size: 14px;letter-spacing: -0.25px;line-height: 30px;margin: 0 auto;text-align: left;width: 150px;}
+.dd_div ul li a{color: #000000;text-decoration: none;}
+div.dd_entertainment .dd_div {width:170px;}
+div.dd_entertainment .dd_div ul li {width:150px;}
+
+/*small 1px black line fix */
+#nav li#navItem_0 {border-left:none;}
+#nav li:hover{background-image:url('http://media.nbcdfw.com/designimages/citysite_navigation_hover_grad.gif');}
+#nav .linkText {position:relative;top:10px;}
+.on_air .contests #nav li.navItem_on-air a {color:#fff!important;}
+.on_air .contests #nav li.navItem_on-air {background:url('http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif') 0 0;}
+.on_air .contests #nav li.navItem_on-air:hover {background:url('http://media.nbcdfw.com/designimages/citysite_navigation_hover_grad.gif');}
+#nav li.navItem_video.video {display:none;}
+
+
+#nav ul{margin:0 auto;padding:0;width:1010px;background:url('http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif') 0 0 repeat-x;overflow:hidden;}
+#nav li {float:left; height:39px; background-image: url('http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif'); margin-left:0px; border-left: 1px solid #335C87; /* Someday... :( 
+   background-image: linear-gradient(center bottom , #062954 1%, #346393 85%); background-image: -o-linear-gradient(center bottom , #062954 1%, #346393 85%); background-image: -moz-linear-gradient(center bottom , #062954 1%, #346393 85%); background-image: -webkit-linear-gradient(center bottom , #062954 1%, #346393 85%); background-image: -ms-linear-gradient(center bottom , #062954 1%, #346393 85%); background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.01, #062954),color-stop(0.85, #346393)); */}
+#nav li:hover{background-image:url('http://media.nbcdfw.com/designimages/citysite_navigation_hover_grad.gif');}
+#nav li.rightSearch:hover {background-image: url('http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif');}
+#nav li.navItem_video.video {display:none;}
+#nav li, #nav li a, .dd_div ul li a {font-family:'Arimo',Arial,sans-serif;display:block;}
+#nav li a, #nav li.navItem_home a {padding:11px 10px 0!important;}
+#nav li a {font-size:13px;line-height:20px;}
+.dd_div ul li a:hover {color:#1259A6;}
+#nav li.last {border-right:1px solid #335C87;}
+
+#nav .linkText { position:relative;top:10px;}
+#nav li.rightSearch {border-right:0px !important;width:158px;margin: 0px !important;}
+#nav li.rightSearch input{border:0 none;color:#858590;font-size:11px;font-weight:bold;height:17px;margin:2px 8px 0 0;width:127px;padding-left:5px;float:left;}
+#nav li.rightSearch #searchSubmit{background: white url('http://media.nbcnewyork.com/designimages/nbc_v3_search_mag.gif') no-repeat scroll 99% 2px;display: block;float: left !important;height: 14px !important;margin: 4px 0px 0px !important;width: 18px !important;padding-left:0px !important;}
+.home #nav li.navItem_home, .home #nav li.navItem_home:hover,
+.news #nav li.navItem_news, .news #nav li.navItem_news:hover,
+.entertainment #nav li.navItem_entertainment, .entertainment #nav li.navItem_entertainment:hover,
+.the_scene #nav li.navItem_the-scene, .the_scene #nav li.navItem_the-scene:hover,
+.on_air #nav li.navItem_on-air, .on_air #nav li.navItem_on-air:hover,
+.traffic #nav li.navItem_traffic, .traffic #nav li.navItem_traffic:hover,
+.weather #nav li.navItem_weather, .weather #nav li.navItem_weather:hover,
+.video #nav li.navItem_video, .video #nav li.navItem_video:hover,
+.contests #nav li.navItem_contests, .contests #nav li.navItem_contests:hover,
+.investigations #nav li.navItem_investigations, .investigations #nav li.navItem_investigations:hover, .sports #nav li.navItem_sports, .sports #nav li.navItem_sports:hover,.contact_us #nav li.navItem_contact, .contact_us #nav li.navItem_contact:hover,.traffic #nav li.navItem_aca, .traffic #nav li.navItem_aca:hover,.politics #nav li.navItem_politics,.business #nav li.navItem_business { background-image:url('http://media.nbcdfw.com/designimages/citysite_navigation_selected_grad.gif');}
+.on_air .contests #nav li.navItem_on-air a {color:#FFFFFF;}
+.on_air .contests #nav li.navItem_on-air {background:url("http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif") 0 0 repeat;}
+.on_air .contests #nav li.navItem_on-air:hover {background:url("http://media.nbcdfw.com/designimages/citysite_navigation_hover_grad.gif") 0 0 repeat;color:#fff;}
+
+.news .politics #nav li.navItem_news,.news .business #nav li.navItem_news{background-image:url('http://media.nbcdfw.com/designimages/citysite_navigation_off_grad.gif');}
+.news .politics #nav li.navItem_news a,.news .business #nav li.navItem_news a{color:#fff;text-shadow:1px 1px 0 rgba(0, 0, 0, 0.294)}
+
+
+.home #nav li.navItem_home a, .news #nav li.navItem_news a, .entertainment #nav li.navItem_entertainment a, .the_scene #nav li.navItem_the-scene a, .on_air #nav li.navItem_on-air a, .traffic #nav li.navItem_traffic a,.traffic #nav li.navItem_aca a, .weather #nav li.navItem_weather a, .video #nav li.navItem_video a, .contests #nav li.navItem_contests a, .investigations #nav li.navItem_investigations a, .sports #nav li.navItem_sports a,.contact_us #nav li.navItem_contact a,.politics #nav li.navItem_politics a,.business #nav li.navItem_business a { color:#000; text-shadow: rgba(0, 0, 0, 0.292969) 0px 0px 0px;}
+#nav li.socialNavButtons {background:none;border-left:1px solid #19416D;float:right;overflow:hidden;position:relative;width:auto;padding:0;margin:0;text-align:center;}
+#nav li.socialNavButtons:hover {background:none;}
+
+#nav li.socialNavButtons #followLinks {float:left;position:relative;width:auto;height:40px;margin:0;padding: 0px 0px;border-left:1px solid #335C87;}
+#nav li.socialNavButtons #followLinks ul {background:none;border:none;height:auto;padding:0;margin:6px auto 0;overflow:hidden;width:auto;float:none;}
+#nav li.socialNavButtons #followLinks ul li {width:25px;height:25px;float:left;margin:0px 0px;padding:0;background:none;border: none;padding: 0px 3px 0px 0px;}
+#nav li.socialNavButtons #followLinks ul li:hover {background:none;}
+#nav li.socialNavButtons #followLinks ul li a {background:url("http://media.nbcdfw.com/designimages/nbc-ots-sprite-102313.png") no-repeat -104px -29px transparent;display:block;width:25px;height:25px;padding:0;margin:0;line-height:1em;}
+#nav li.socialNavButtons #followLinks ul li a#twitterLink {background-position:-129px -29px;}
+#nav li.socialNavButtons #followLinks ul li a#gplusLink {background-position:-180px -29px;}
+
+
+
+#nav .navItem_video {position:relative;}
+#nav .navItem_video .new-badge {left: 40px;position: absolute;right: 3px;top: -10px;}
+
+#nav li a {color: #FFFFFF;display: block;height: 30px;padding: 10px 11px 0px; text-shadow: rgba(0, 0, 0, 0.292969) 1px 1px 0px; text-align: center;text-decoration: none;text-transform: uppercase;}
+#nav li.navItem_news a {padding-left:11px;padding-right:11px;}
+
+/* #nav li.navItem_on-air a, #nav li.navItem_entertainment a, #nav li.navItem_video a {padding-top:9px;} */
+#sales #nav li a {height: 26px;*height: 34px;}
+#nav li.rightSearch input {*margin: 2px 8px 0px 10px;}
+.the_scene .navItem_the-scene, .on_air .navItem_on-air {background: $section-nav-bg;}
+
+/* SUBNAV SELECT STATES */
+.local #sectionNav a.local,.politics #sectionNav a.politics,.sports #sectionNav a.sports,.tech #sectionNav a.tech,.weird #sectionNav a.weird, .weather #sectionNav a.weather,.popcornbiz #sectionNav a.popcornbiz, .open-house #sectionNav a.open-house, .go-healthy-ny #sectionNav a.go-healthy-ny, .want-this #sectionNav a.want-this, .prop-zero #sectionNav a.prop-zero, .sounddiego #sectionNav a.sounddiego, .the-cove #sectionNav a.the-cove,.philthy-stuff #sectionNav a.philthy-stuff, .capital-games #sectionNav a.capital-games, .red-fever #sectionNav a.red-fever, .madhouse-enforcer #sectionNav a.madhouse-enforcer,.press-here #sectionNav a.press-here, .worth-the-drive #sectionNav a.worth-the-drive,.ward-room #sectionNav a.ward-room,.inc-well #sectionNav a.inc-well,.inc-well #sectionNav a.inc-well,.press-here #sectionNav a.press-here,.grizzly-detail #sectionNav a.grizzly-detail,.threadny #sectionNav a.threadny,.nonstop-sound #sectionNav a.nonstop-sound,.niteside #sectionNav a.niteside,.celebrity #sectionNav a.celebrity,.movies #sectionNav a.movies,.television #sectionNav a.television,.music #sectionNav a.music, .as_seen_on #sectionNav a.as-seen-on,.shows #sectionNav a.shows,.contests #sectionNav a.contests,.community #sectionNav a.community,.about_us #sectionNav a.about-us, .food_drink #sectionNav a.food-drink, .fashion #sectionNav a.fashion, .shopping #sectionNav a.shopping, .events #sectionNav a.events,.real-estate #sectionNav a.real-estate, .cars #sectionNav a.cars, .landing #sectionNav a.forecast, .maps #sectionNav a.maps_radar, .severe_weather_alerts #sectionNav a.severe_weather_alerts, .school_closings #sectionNav a.school_closing_alerts, .stories #sectionNav a.weather_stories,.feature-necn .weather #sectionNav a.weather_ne, .health #sectionNav a.health {font-size:12px;font-weight:bold;font-family:Arial,sans-serif; height: 20px;}
+
+/* hack to turn off on air if on contests tab */
+.contests li.navItem_on-air {background-color:${nav-bar};}
+.home-dfw #sectionNav{display:none;}
+#sectionNav ul{width:990px;margin:0 auto;padding:0;}
+#sectionNav li.rightSearch{float:right;margin:6px 0 0;width:162px;}
+#sectionNav .linkText { position:relative;top:6px;}
+#nav #searchForm {background-color: white;float: left !important;height: 22px !important;margin: 8px 0 0 10px !important;padding: 0;right: 12px;width: 127px !important;}
+#nav #searchText {float: left;margin: 0;width: 100px;}
+* html #nav #searchForm {margin-right:5px;} 
+* html #sectionNav {margin:0 auto;}
+#sales #nav li a { *height:34px;}
+#nav li.rightSearch input{ *margin:2px 8px 0px 10px;}
+.the_scene .navItem_the-scene, .on_air .navItem_on-air{background:$section-nav-bg;}
+
+
+#sectionNav {background-color: #e8e8e8;display: block;/* float: left; */height: 28px;margin: 0 auto;width: 1010px;z-index: -5;}
+#sectionNav li {float: left;margin-left: 0;width: auto;}
+#sectionNav li a {color: #34455c;display: block;float: left;font-family:Arial,sans-serif;font-size: 12px;margin: 8px 8px 0px 8px;*margin: 10px 11px 0;text-align: center;text-transform: uppercase;}
+#sectionNav li.front a { color:#9a9a9a; margin: 8px 0px 0; *margin: 10px 0px 0; }
+#sectionNav li.front { margin: 0; }
+#sectionNav li.blog-list-right a { color: #34455C; display: block; float: left; font-size: 12px;margin: 8px 6px 0; text-align: center; text-transform: uppercase;}
+* html #sectionNav { margin: 0 auto;}
+
+
+#homeAd {background-color:#fff;width:1008px;margin: 0 auto;padding-top:5px;text-align:center;}  
+#homeAd div div{margin:0 auto !important;}
+#homeAd #small1 iframe {width:270px; height: 41px; float: right;}
+#homeAd .adMicro {height:41px; width:auto;}
+
+/********Feature Header Landing / Article Feature*********/
+
+/* BLOG TOP HEADLINE */
+#body #bodyContainer {position:relative;}
+#body #bodyContainer #feature_header {float:none;height:auto;width:100%;overflow:visible;text-align:center;margin-bottom:0px;}
+
+
+/* ARTICLE TOP HEADLINE */
+.feature-header-container {width:1008px;margin:20px auto 0 auto;background-color:#FFFFFF;padding-top:0;clear: both;position:relative;z-index:100;}
+.feature_header {float:none;height:inherit;width:100%;overflow:hidden;text-align:center;margin-bottom:0px;}
+.feature_header #featureTopRight {float:right;}
+
+
+/* FLUSH IMAGE LANDING */
+#body #bodyContainer #feature_header #featureIdGraphic {float:left;padding:0;text-align:left;}
+#body #bodyContainer #feature_header #featureIdGraphic img{float:left;}
+#body #bodyContainer #feature_header #featureIdGraphic h1{padding:10px 0 10px 10px;}
+/* FLUSH IMAGE ARTICLE */
+.feature_header .featureIdGraphic {float:left; /*padding:0 10px;*/ text-align:left;}
+.feature_header .featureIdGraphic img {float:left;}
+
+#body #bodyContainer #feature_header #logo_text {color:#828282;float:left;font-size:24px;padding:32px 20px 20px 0;}
+#body #bodyContainer #feature_header #logo_tune_in {font-family:ahMed;font-weight:normal;float:left;margin:0px 10px 0;text-align:left;font-size:16px;padding:10px 0px ;background:none transparent;}
+
+/**NO CSS**/
+.nocss {display:none !important;}
+
+
+#body #bodyContainer #logo_ad {float:right;height:auto;margin:10px;margin-top:20px;width:auto;position:relative;}
+#body #bodyContainer #logo_ad iframe {width:200px; height:57px;}
+#body #bodyContainer #logo_ad .fbLikeBox {right:0px!important;left:auto;}
+#body #bodyContainer #logo_ad .fbLikeBox.hover {top:38px!important;}
+
+
+/* feature landing banner container */
+#headerBannerContainer {float: left; position: relative; clear:both; height: 30px}
+#body #headerBanner {height: 25px; color:#FFFFFF; position: absolute; width: 1008px !important; left: 0 !important; z-index: 1; text-align: left; margin: 0; padding: 1px 0; line-height: 1em; background-color: #013060; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.25, #00294e), color-stop(0.75, #123a72));}
+#body #headerBanner span, #body #headerBanner h2 {padding: 4px 30px 5px 20px; height: 16px; display: block; margin: 0; position: relative; text-transform: uppercase; font-family:Helvetica, Arial, San-Serif;font-size:15px;line-height:18px;font-weight:normal;border-bottom:1px solid #414b36;border-top:1px solid #2d4122;}
+
+/* feature article banner container */
+.headerBannerContainer {float:left;position:relative; clear:both;width:1008px;height:30px;z-index:998;margin-top:0px;margin-bottom:10px;}
+.headerBanner {font-family:Helvetica,arial,sans-serif;height:25px;color:#FFFFFF;position:absolute;width:1008px !important;left:0 !important;z-index:998;text-align:left;margin:0;padding:1px 0;line-height:1em;background-color:#666666;background-image: linear-gradient(bottom, #555f54 25%, #777078 75%);background-image: -o-linear-gradient(bottom, #00294e 25%, #123a72 75%);background-image: -moz-linear-gradient(bottom, #555f54 25%, #777078 75%);background-image: -webkit-linear-gradient(bottom, #555f54 25%, #777078 75%);background-image: -ms-linear-gradient(bottom, #555f54 25%, #777078 75%);background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.25, #00294e),color-stop(0.75, #123a72));}
+.headerBanner span, .headerBanner h2 {padding:4px 30px 5px;height:16px;display:block;margin:0;line-height:1em;position:relative;text-transform:uppercase;font-family:Helvetica, Arial, San-Serif;font-size:15px;font-weight:normal;border-bottom:1px solid #414b36;border-top:1px solid #2d4122;}
+body #canvas .headerBannerContainer {clear:both;float:left;height:30px;}
+
+
+/* pageSkin changes */
+
+#weather #adBackgroundContainer, #subsection #adBackgroundContainer, #section #adBackgroundContainer, #feature #adBackgroundContainer, #blog #adBackgroundContainer, #weather_map #adBackgroundContainer, #weather_severe #adBackgroundContainer, #weather_school #adBackgroundContainer {width:100%;height:100%;position:absolute;z-index:0;display:block;}
+#weather #canvas, #subsection #canvas, #section #canvas, #feature #canvas, #blog #canvas, #weather_map #canvas, #weather_severe #canvas, #weather_school #canvas {position:relative;}
+body#weather, body#subsection, body#section, body#feature, body#blog {position:relative;}
+#weather #header #ad_hdr_2, #subsection #header #ad_hdr_2, #section #header #ad_hdr_2, #feature #header #ad_hdr_2, #blog #header #ad_hdr_2, #weather_map #header #ad_hdr_2, #weather_severe #header #ad_hdr_2, #weather_school #header #ad_hdr_2 {z-index:1;position:relative;}
+#weather #header #ad_hdr_2 div.adSlot, #subsection #header #ad_hdr_2 div.adSlot, #section #header #ad_hdr_2 div.adSlot, #feature #header #ad_hdr_2 div.adSlot, #blog #header #ad_hdr_2 div.adSlot, #weather_map #header #ad_hdr_2 div.adSlot, #weather_severe #header #ad_hdr_2 div.adSlot, #weather_school #header #ad_hdr_2 div.adSlot {z-index:2}
+
+.weather-module {  background-repeat:repeat-x;font-family:'Roboto',Helvetica,sans-serif;padding-top:0px;overflow:hidden;} 
+#home .weather-module {margin:0 0 0 10px;width:260px;*width:260px;}
+.weather-module-wrapper {
+
+}
+#processingWeatherLoading {display:none;float:left;height:100%;text-align:center;width:100%;z-index:1000;}
+.weatherError {font-family:'Arimo',Arial,sans-serif;font-size:13px;padding-top:100px;text-align:center;}
+.weather-module-wrapper .module-title {
+    padding: 0 8px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #26518E;
+    background-color: #fff;
+    font-size: 23px;
+    text-align: center;
+    position:static
+}
+
+.weather-module-wrapper a.city-name {
+    text-decoration: none;
+    color: #222;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+
+.weather-module-wrapper a.city-name:hover {
+    color: #1259A6;
+    cursor:pointer;
+}
+
+.weather-module-wrapper a.city-name:hover .changeLocIcon {
+    background: url("http://media.nbcnewyork.com/images/weather-hp-sprite.png") no-repeat scroll -12px -30px transparent;
+}
+
+.weather-module-wrapper a.city-name .changeLocIcon {
+    background: url("http://media.nbcnewyork.com/images/weather-hp-sprite.png") no-repeat scroll 0 -30px transparent;
+    display: inline-block;
+    height: 18px;
+    width: 13px;
+    margin-left: 7px;
+    top: 2px;
+    position: relative;
+}
+
+.weather-module-wrapper .icon-temp-wrapper {
+    text-align: center;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    border-bottom: 1px solid #ededed;
+    margin-top: 10px;
+}
+
+.weather-module-wrapper .icon-temp-wrapper .weatherIcon {
+    display: inline-block;
+}
+
+.weather-module-wrapper .icon-temp-wrapper .temperature {
+    font-weight: 300;
+    color: #444;
+    font-size: 64px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.weather-module-wrapper .icon-temp-wrapper .temperature a {color: #444;}
+#body .weather-module-wrapper .icon-temp-wrapper .temperature a:hover {text-decoration:none;}
+
+.weather-module-wrapper .icon-temp-wrapper .temperature sup {
+    font-size: 45px;
+    position: relative;
+    top: -18px;
+    left: -3px;
+}
+
+.weather-module-wrapper .icon-temp-wrapper .conditon-feelslike-wrapper {
+    display: inline-block;
+    width: 75px;
+    text-align: left;
+}
+
+.weather-module-wrapper .icon-temp-wrapper .conditon-feelslike-wrapper .condition {
+    color: #111;
+    font-size: 14px;
+    margin-bottom: 3px;
+    line-height: 16px;
+}
+
+.weather-module-wrapper .icon-temp-wrapper .conditon-feelslike-wrapper .feels-like {
+
+    color: #545454;
+    font-size: 12px;
+}
+
+.weather-module-wrapper  ul.weather-cta-ad {
+    list-style-type: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: inline-block;
+    width:400px;
+}
+
+#article .weather-module-wrapper  ul.weather-cta-ad {padding-left: 8px;}
+#article .weather-module-wrapper ul.weather-cta-ad li {padding-left:8px;width: 85px;}
+
+#globalRightRail .weather-module-wrapper  ul.weather-cta-ad {padding-left: 8px;}
+#globalRightRail .weather-module-wrapper ul.weather-cta-ad li {padding-left:8px;width: 85px;}
+
+.weather-module-wrapper ul.weather-cta-ad li {
+    width: 81px;
+    float: left;
+}
+.weather-module-wrapper ul.weather-cta-ad li.sponsorLI {
+    width: 96px !important;
+}
+
+.weather-module-wrapper .ulContainer {
+    width:258px;overflow:hidden;height:77px;padding-left:5px;
+}
+
+#article .weather-module-wrapper .ulContainer {
+    width:300px;overflow:hidden;height:77px;
+}
+
+#globalRightRail .weather-module-wrapper .ulContainer {
+    width:300px;overflow:hidden;height:77px;
+}
+
+.weather-module-wrapper ul.weather-cta-ad li a {
+    font-family: 'arimo';
+    font-size: 12px;
+    color: #26518c;
+    text-decoration: none;
+}
+
+.weather-module-wrapper .sponsor .presented {
+    display: block;
+    color: #666;
+    font-family: arial, sans, serif;
+    font-size: 9px;
+    padding: 0px 4px 5px 2px;
+    display: block;
+    float: left;
+}
+
+/*Begin Styles for Severe Weather*/
+
+.weather-module-wrapper .alert-bar {
+    height: 28px;
+    border: 1px solid #d42f25;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 8px;
+}
+
+.weather-module-wrapper .alert-bar > a {
+    float: left;
+    text-decoration: none;
+    color: #333;
+    margin-top: 2px;
+}
+
+.weather-module-wrapper .alert-bar > a:hover {
+    color: #26518c;
+}
+
+.weather-module-wrapper .alert-bar > a.view-all {
+    font-family: 'arimo';
+    font-weight: 100;
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+    color: #227cc4;
+}
+
+.weather-module-wrapper .alert-bar > a:first-child {
+    margin-right: 10px;
+}
+
+.weather-module-wrapper .alert-bar .weather-alerts:before {
+    content: url("http://media.nbcnewyork.com/images/lightning-icon.png");
+    width: 14px;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.weather-module-wrapper .alert-bar .school-closings:before {
+    content: url("http://media.nbcnewyork.com/images/schoolbus-icon.png");
+    width: 15px;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.weather-module .sponsor iframe {
+    height:57px;
+    position:relative;
+    top: -11px;
+}
+.weather_by_zipcode {border: 1px solid #DBDBDB;border-right: none;color: #999999;height:25px;width:161px;font-size: 13px;line-height: 19px;float: left; padding-left:10px;font-family:'Roboto',Helvetica,sans-serif;}
+.weather_zip_code_search {width:33px;height:29px;display:block;float:left;font-family:'Roboto',Helvetica,sans-serif;border:1px solid #DBDBDB;background-color:#f0f3f6;cursor:pointer;}
+.weather_zip_code_search:hover {cursor:hand;display:block;}
+.weather_zip_code_search:active,.weather_zip_code_search:focus {background:url("http://media.nbcdfw.com/designimages/nbc_v3_zip_btn.jpg") no-repeat scroll 0px -29px transparent;width:33px;height:29px;display:block;border:none;text-indent:-99em;}
+.weather_zip .weather_zipcode invalid {position:relative}
+.weather_zip .errorText, .weather_zip .weatherMessageInfo {display:block;position:absolute;top:113px;width:210px;}
+.change_weather_location {clear:both}
+.changeLocationClose {
+  font-family:'Roboto',Helvetica,sans-serif;
+  font-size: 21px;
+  padding: 10px 15px 10px 0;
+  text-align: right;
+  color: #516489;
+}
+.changeLocationClose span:hover {cursor:pointer}
+.changeLocation {
+    width:300px;
+    height: 205px;
+    background-color:rgba(255,255,255,0.9);
+    font-family:'Roboto',Helvetica,sans-serif;
+    position:absolute;
+    z-index:10;
+}
+#weather .changeLocation {
+    width: 235px;
+    height:260px;
+}
+#home .changeLocation {
+    width:260px;
+}
+#article .changeLocation {
+    width:300px;
+}
+.change_weather_location h2 {
+  font-family:'Roboto',Helvetica,sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #516489;
+}
+#weather .weather_zip_Container{margin: 0 0 10px 13px;}
+#home .weather_zip_Container {
+    margin: 0 0 10px 23px;
+}
+.weather_zip_Container {
+    margin: 0 0 10px 47px;
+}
+.unit_or_weather {
+    color: #516489;
+    display: block;
+    padding-top: 12px;
+    text-align: center;
+    font-family:'Roboto',Helvetica,sans-serif;
+    font-size: 16px;
+    clear: both;
+}
+.processing_zip {display:none;height:32px;position:absolute;text-align:right;width:32px;top:120px;left:102px;}
+.suggestedCities {top:105px;position:absolute;width:208px;z-index:1000;}
+.suggestedCities ul {float:left;font-family:'Arimo',Arial,sans-serif;font-size:12px;padding:10px;border:1px solid #ccc;background:none repeat scroll 0 0 #FFFFFF;width:184px;height:auto;max-height:145px;overflow-x:hidden;overflow-y:scroll;}
+.suggestedCities li {padding:3px 5px;}
+.suggestedCities li a:hover {cursor:pointer}

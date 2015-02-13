@@ -1,0 +1,1185 @@
+/*! 
+	nbcu-omniture 2015-01-20 16:20:52 
+	PDK Version:  PDK_5_3_9_331838
+*/
+
+var PDKTrackingEvents = PDKTrackingEvents || { };
+
+PDKTrackingEvents.dispatcher = (function() {
+    var _listeners = {};
+
+    var _addEventListener = function(type, callback, scope)
+    {
+        var args = [];
+        var numOfArgs = arguments.length;
+
+        for(var i=0; i<numOfArgs; i++)
+        {
+            args.push(arguments[i]);
+        }
+
+        args = args.length > 3 ? args.splice(3, args.length-1) : [];
+        if(typeof _listeners[type] != "undefined")
+        {
+            _listeners[type].push({scope:scope, callback:callback, args:args});
+        }
+        else
+        {
+            _listeners[type] = [{scope:scope, callback:callback, args:args}];
+        }
+    };
+
+    var _removeEventListener = function(type, callback, scope)
+    {
+        if(typeof _listeners[type] != "undefined")
+        {
+            var numOfCallbacks = _listeners[type].length;
+            var newArray = [];
+
+            for(var i=0; i<numOfCallbacks; i++)
+            {
+                var listener = _listeners[type][i];
+                if(listener.scope == scope && listener.callback == callback)
+                {
+
+                }
+                else
+                {
+                    newArray.push(listener);
+                }
+            }
+            _listeners[type] = newArray;
+        }
+    };
+
+    var _hasEventListener = function(type, callback, scope)
+    {
+        if(typeof _listeners[type] != "undefined")
+        {
+            var numOfCallbacks = _listeners[type].length;
+
+            if(callback === undefined && scope === undefined)
+            {
+                return numOfCallbacks > 0;
+            }
+
+            for(var i=0; i<numOfCallbacks; i++)
+            {
+                var listener = _listeners[type][i];
+                if((scope ? listener.scope == scope : true) && listener.callback == callback)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
+
+    var _dispatch = function(type, data, target)
+    {
+        var numOfListeners = 0;
+        var event = {
+            type:type,
+            data:data,
+            target:target
+        };
+        var args = [];
+        var numOfArgs = arguments.length;
+
+        for(var i=0; i<numOfArgs; i++)
+        {
+            args.push(arguments[i]);
+        };
+
+        args = args.length > 2 ? args.splice(2, args.length-1) : [];
+        args = [event].concat(args);
+
+        if(typeof _listeners[type] != "undefined")
+        {
+            var numOfCallbacks = _listeners[type].length;
+
+            for(var i=0; i<numOfCallbacks; i++)
+            {
+                var listener = _listeners[type][i];
+                if(listener && listener.callback)
+                {
+                    var concatArgs = args.concat(listener.args);
+                    listener.callback.apply(listener.scope, concatArgs);
+                    numOfListeners += 1;
+                }
+            }
+        }
+    };
+
+    var _getEvents = function()
+    {
+        var str = "";
+        for(var type in _listeners)
+        {
+            var numOfCallbacks = _listeners[type].length;
+
+            for(var i=0; i<numOfCallbacks; i++)
+            {
+                var listener = _listeners[type][i];
+                str += listener.scope && listener.scope.className ? listener.scope.className : "anonymous";
+                str += " listen for '" + type + "'\n";
+            }
+        }
+        return str;
+    }
+
+    return {
+        destroy : function() {
+            _listeners = {};
+        },
+        addEventListener : function(type, callback, scope) {
+            _addEventListener(type, callback, scope);
+        },
+        removeEventListener : function(type, callback, scope) {
+            _removeEventListener(type, callback, scope)
+        },
+        hasEventListener : function(type, callback, scope) {
+            return _hasEventListener(type, callback, scope)
+        },
+        dispatch : function(type, data, target) {
+            _dispatch(type, data, target)
+        }
+
+    }
+})();
+
+
+PDKTrackingEvents.VIDEO_OPEN = "videoOpen";
+PDKTrackingEvents.VIDEO_START = "videoStart";
+PDKTrackingEvents.VIDEO_SEEK = "videoSeek";
+PDKTrackingEvents.VIDEO_PAUSED = "videoPaused";
+PDKTrackingEvents.VIDEO_UNPAUSED = "videoUnpaused";
+PDKTrackingEvents.VIDEO_REWIND = "videoRewind";
+
+PDKTrackingEvents.VIDEO_25_PERCENT = "video25Percent";
+PDKTrackingEvents.VIDEO_50_PERCENT = "video50Percent";
+PDKTrackingEvents.VIDEO_75_PERCENT = "video75Percent";
+PDKTrackingEvents.VIDEO_98_PERCENT = "video98Percent";
+PDKTrackingEvents.VIDEO_CHAPTER_START = "videoChapterStart";
+
+PDKTrackingEvents.AD_START = "adStart";
+PDKTrackingEvents.AD_PAUSED = "adPaused";
+PDKTrackingEvents.AD_END = "adEnd";
+PDKTrackingEvents.AD_DISPLAY = "adDisplay"; // ?
+
+PDKTrackingEvents.bus = (function (dispatcher) {
+	var _teb = dispatcher,
+        _controller = false,
+        _state,
+        _previousState,
+        _timer,
+        _isLiveOverride = false,
+        _reportingInterval = 10;
+
+    // TODO: Make PDK Controller settable after init.
+    // TODO: Datestamp Event delta
+    // TODO: Implement bitrate and fullscreen
+
+	// public
+	_teb.initialize = function (c)
+	{
+		_controller = c;
+        _resetState();
+        if(_controller)
+            _removeListeners();
+		_addListeners();
+	};
+
+    _teb.destroy = function ()
+    {
+        if(_controller)
+            _removeListeners();
+        _state = _previousState = _controller = undefined;
+    };
+
+    _teb.isLive = function(bool) {
+        _isLiveOverride = bool;
+    };
+
+    // private
+
+    var _resetState = function() {
+        _state = {
+            playlist : null,
+            clip : null,
+            milestones : [25,50,75,98],
+            milestone : 0,
+            fullscreen : false,
+            bitrate : undefined,
+            paused : true,
+            live : _isLiveOverride,
+            time : {
+                ad : 0,
+                content : 0
+            }
+        }
+    };
+
+    var _startTimer = function() {
+      if(_timer) {
+          _stopTimer();
+      }
+      _timer = setInterval(function(){
+          if(_state.paused == true)
+            return;
+          if(_state.isAd) {
+              _state.time.ad++;
+          } else {
+              _state.time.content++;
+              // send data every N seconds for livestream
+              if(_state.isLive  &&
+                  (_state.time.content%_reportingInterval) == 0) {
+                      _sendLiveStreamEvent();
+              }
+          }
+      },1000);
+    };
+
+    var _sendLiveStreamEvent = function() {
+        var d = _getEventData();
+        _teb.dispatch(PDKTrackingEvents.VIDEO_25_PERCENT, d);
+        _state.time.content = 0;
+    };
+
+    var _stopTimer = function() {
+        if(_timer) {
+            clearInterval(_timer);
+            _timer = undefined;
+        }
+    };
+
+    var _getEventData = function()
+    {
+        var data =  {
+            timestamp : new Date().getTime(),
+            playlist : _state.playlist,
+            clip : _state.clip,
+            fullscreen : _state.fullscreen,
+            bitrate : _state.bitrate,
+            time : (_state.isAd) ? _state.time.ad : _state.time.content
+        };
+        return data;
+    };
+
+	// _private 
+	function _addListeners(s)
+	{
+        var scope = s || "*";
+
+        _controller.addEventListener("OnMediaEnd", _handleOnMediaEnd, scope);
+        _controller.addEventListener("OnMediaLoadStart", _handlePdkEvents, scope);
+        _controller.addEventListener("OnMediaPause", _handleOnMediaPause, scope);
+        _controller.addEventListener("OnMediaPlaying", _handleOnMediaPlaying, scope);
+        _controller.addEventListener("OnMediaSeek", _handleOnMediaSeek, scope);
+        _controller.addEventListener("OnMediaStart", _handleOnMediaStart, scope);
+        _controller.addEventListener("OnMediaUnpause", _handleOnMediaUnPause, scope);
+        _controller.addEventListener("OnReleaseStart", _handleOnReleaseStart, scope);
+        _controller.addEventListener("OnShowFullScreen", _handleOnShowFullScreen, scope);
+        _controller.addEventListener("OnStreamSwitched", _handlePdkEvents, scope);
+	}
+
+	function _removeListeners(s)
+	{
+        var scope = s || "*";
+        _controller.removeEventListener("OnMediaEnd", _handleOnMediaEnd, scope);
+        _controller.removeEventListener("OnMediaLoadStart", _handlePdkEvents, scope);
+        _controller.removeEventListener("OnMediaPause", _handleOnMediaPause, scope);
+        _controller.removeEventListener("OnMediaPlaying", _handleOnMediaPlaying, scope);
+        _controller.removeEventListener("OnMediaSeek", _handleOnMediaSeek, scope);
+        _controller.removeEventListener("OnMediaStart", _handleOnMediaStart, scope);
+        _controller.removeEventListener("OnMediaUnpause", _handleOnMediaUnPause, scope);
+        _controller.removeEventListener("OnReleaseStart", _handleOnReleaseStart, scope);
+        _controller.removeEventListener("OnShowFullScreen", _handleOnShowFullScreen, scope);
+        _controller.removeEventListener("OnStreamSwitched", _handlePdkEvents, scope);
+	}
+
+    function _handleOnMediaPause(e) {
+        if(!_state.isLive)
+            _teb.dispatch(PDKTrackingEvents.VIDEO_PAUSED, _getEventData());
+        _state.paused = true;
+    }
+
+    function _handleOnMediaUnPause(e) {
+        _state.paused = false;
+    }
+
+    var _handleOnShowFullScreen = function(e) {
+        _state.fullscreen = e.data;
+    };
+
+    var _handleOnMediaSeek = function(e) {
+        if(!_state.isLive)
+            _teb.dispatch(PDKTrackingEvents.VIDEO_SEEK, _getEventData());
+    };
+
+	var _handlePdkEvents = function(event)
+	{
+	};
+
+	var _handleOnReleaseStart = function(event)
+	{
+		function getFirstNonAdClip(p)
+		{
+	        if(!p.baseClips)
+	            return null;
+
+	        for (var i = 0, j = p.clips.length; i < j; i++)
+	            if(p.clips[i].baseClip && !p.clips[i].baseClip.isAd)
+	                return p.clips[i];
+
+	        return null;
+	    }
+
+		if(event.data)
+		{
+            _startTimer();
+            _resetState();
+			_state.playlist = event.data;
+            var c = getFirstNonAdClip(_state.playlist);
+            if(c.baseClip && c.baseClip.bitrate) {
+                _state.bitrate = c.baseClip.bitrate;
+            }
+
+            _state.firstClipId = c.id;
+            _state.clip = c;
+            _teb.dispatch(PDKTrackingEvents.VIDEO_OPEN, _getEventData());
+		}
+
+	};
+	var _handleOnMediaStart = function(event)
+	{
+		if (event.data) {
+            _state.clip = event.data;
+            _state.paused = false;
+            if(_state.clip && _state.clip.baseClip)
+                _state.isAd = _state.clip.baseClip.isAd;
+
+            _startTimer();
+            if (_state.isAd)
+                _teb.dispatch(PDKTrackingEvents.AD_START, _getEventData());
+            else {
+                // avoids sending of VideoStart at beginning of chapters
+                if(_state.firstClipId == _state.clip.id)
+                    _teb.dispatch(PDKTrackingEvents.VIDEO_START, _getEventData());
+            }
+        }
+	};
+
+	var _handleOnMediaPlaying = function(event)
+	{
+		if (_state.isAd)
+			return;
+        // lets use override for live data testing
+        _state.isLive = _isLiveOverride || event.data.isLive;
+        // if it is live then we don't track milestones
+        if(_state.isLive)
+            return;
+		var percent = Math.floor((event.data.isAggregate ? event.data.percentCompleteAggregate : event.data.percentComplete));
+        // a side note if we don't want to track milestones via playing event
+        // then we can just update percent and use same mechanism as liveStreaming timer
+        // e.g. each tick get the current percent and track on that instead of 3 times a second
+        var nextMileStone = _state.milestones[0];
+        if(percent > nextMileStone) {
+            _state.milestones = _trimMileStones(percent);
+            var evt = "video"+_state.milestones.shift()+"Percent";
+            _teb.dispatch(evt, _getEventData());
+        }
+	};
+
+    var _trimMileStones = function(percent) {
+        var prct;
+        for(var i=0, len=_state.milestones.length; i < len; i++) {
+            prct = _state.milestones[i];
+            if(prct > percent) {
+                return _state.milestones.slice(i-1);
+            }
+        }
+        return _state.milestones;
+    };
+	// AD_END
+	var _handleOnMediaEnd = function(event)
+	{
+		if (_state.isAd)
+            _teb.dispatch(PDKTrackingEvents.AD_END, _getEventData());
+        _stopTimer();
+	};
+
+	return _teb;
+}(PDKTrackingEvents.dispatcher));
+
+var NBCUPDKOmniture = NBCUPDKOmniture || { };
+/*
+    Data structure for tracking event object with priority on values
+
+    example value object
+
+    valueObj = {
+         key : "eVar37",
+         name : "pageName", A Descriptive Name for Debugging
+         value : "A Page Name",
+         priority : 0 // 0 = default value, a value must be higher than the one set to be used
+    }
+
+ */
+var OmnitureTrackingEvent = function() {
+    this.vars = [];
+    this.props = [];
+    this.events = "";
+    this.pageName = undefined;
+    this.products = "";
+
+    this.getValueObj = function(keyOrName, ary) {
+        for(var i=0; i < ary.length; i++) {
+            var valObj = ary[i];
+            if(valObj.name === keyOrName || valObj.key === keyOrName )
+                return valObj;
+        }
+        return null;
+    };
+    this.setValueObj = function(list, key, value, priority, name) {
+        var valueObj, keyOrName;
+        if(key)
+            keyOrName = key;
+        valueObj = this.getValueObj(keyOrName, list);
+        // didn't find it in the list make a new one
+        if(!valueObj) {
+            valueObj = {"key":key, "value": value, "priority" : priority};
+            // name is optional
+            if(name)
+                valueObj['name'] = name;
+            list.push(valueObj);
+        } else {
+            if(valueObj.priority <= priority) {
+                valueObj.value = value;
+            }
+        }
+
+    };
+    this.setEventData = function(key, value, name) {
+        this.setData(key, value, 50, name);
+        return this;
+    }
+    this.setData = function(key, value, priority, name) {
+        // TODO: throw error if prefix is not prop or eVar
+        var list, keys = (key instanceof Array)? key : [key], k, i=0;
+        for(i; i < keys.length; i++) {
+            k = keys[i];
+            if(k instanceof Array) {
+                debugger;
+            }
+            list = (k.search(/^prop/) != -1) ? this.props : this.vars;
+            this.setValueObj(list, k, value, priority, name);
+        }
+        return this;
+    };
+    this.setEvents = function(events) {
+        this.events = events;
+        return this;
+    };
+    this.setProducts = function(products) {
+        this.products = products;
+        return this;
+    };
+
+};
+/*
+    Allows setting of defaults and overrides on the events.
+
+    Creates tracking events and applys default values
+
+    Applys override values to the tracking event
+ */
+NBCUPDKOmniture.trackingEventFactory = (function(TrackingEventClass) {
+
+    var _overrides = [];
+    var _defaults = [];
+    var _base = [];
+
+    var _setValue = function(key, value, name, ary) {
+        var obj;
+        obj = _getValue(key, ary);
+        if(!obj) {
+            obj = {"key" : key, "value": value};
+            ary.push(obj);
+        } else {
+            obj.value = value;
+        }
+        if(name)
+            obj['name'] = name;
+
+    };
+
+    var _getValue = function(key, ary) {
+        for(var i=0; i < ary.length; i++) {
+            var obj = ary[i];
+            if(obj.key === key)
+                return obj;
+        }
+        return undefined;
+    };
+
+    var _setValues = function(trackingEvent, priority, vals) {
+        var d, val;
+        for(var i=0; i < vals.length; i++) {
+            d = vals[i];
+            val = (typeof d.value == "function")? d.value() : d.value;
+            if(d.key instanceof Array) {
+                for(var j= 0; j<d.key.length; j++) {
+                    trackingEvent.setData(d.key[j], val, priority, d.name ? d.name : undefined);
+                }
+            } else {
+                trackingEvent.setData(d.key, val, priority, d.name ? d.name : undefined);
+            }
+        }
+    };
+
+    return {
+        setDefault : function(key, value, name) {
+            _setValue(key, value, name, _defaults);
+        },
+        setOverride : function(key, value, name) {
+            _setValue(key, value, name, _overrides);
+        },
+        setBaseEventValue : function(key, value, name) {
+            _setValue(key, value, name, _base);
+        },
+        createEvent : function() {
+            var trackingEvent = new TrackingEventClass();
+            _setValues(trackingEvent, 0, _defaults);
+            if(_base && _base.length > 0) {
+                _setValues(trackingEvent, 10, _base);
+            }
+            return trackingEvent;
+        },
+        clearBaseEventData : function() {
+          _base = [];
+        },
+        setOverrides : function(trackingEvent) {
+            _setValues(trackingEvent, 100, _overrides);
+
+        }
+    }
+})(OmnitureTrackingEvent);
+/**
+ * Created by paul.rangel on 12/31/13.
+ */
+/**
+ * Parses the playlist and first non-ad baseclip to determine the video duration type
+ * and returns longform
+ *
+ * @type {Function}
+ * @returns boolean;
+ */
+NBCUOmnitureLongformParser = (function(){
+    return {
+        parse : function(firstNonAdBaseClip) {
+            var mediaLength = Math.floor((firstNonAdBaseClip.trueLength > 0 ? firstNonAdBaseClip.trueLength : firstNonAdBaseClip.releaseLength) / 1000),
+                longFormLength = 22 * 60 * 60; // 22 minutes expressed in  seconds
+            // if no mediaLength we assume shortform
+            if(!mediaLength)
+                return false;
+            return (mediaLength > longFormLength);
+        }
+    }
+})();
+/**
+ *
+ * Parses playlist and baseclip and sets playlist base event data that will
+ * be included on all events.
+ *
+ * Parses the data into an object with names to be attached to the tracking event
+ *
+ * @trackingEvents is the decorator which sets this common data on all omniture
+ * events during this release
+ *
+ * @clip is the current clip
+ *
+ * @longform is determined by the above parser
+ *
+ */
+NBCUOmnitureBaseEventParser = (function(){
+
+    var _getBaseEventData = function(trackingEvents, clip, isLongForm) {
+        /**
+         * This should only be done once per release start
+         * bc is first non-ad baseclip
+         */
+        var bc;
+        if(clip.baseClip)
+            bc = clip.baseClip;
+        if(!bc) {
+            tpDebug("Error no baseclip!");
+            return null;
+        }
+        // first clear out old data
+        trackingEvents.clearBaseEventData();
+        var title = clip.title || bc.title;
+        if(title) {
+            // also setting eVar37 (subtitle) as title (eVar40) since we don't have subtitle logic
+            trackingEvents.setBaseEventValue(["eVar40","eVar37", "prop50"],title,'title');
+        }
+        if(bc.contentID) {
+            trackingEvents.setBaseEventValue(["eVar50", "prop43"],bc.contentID,'clipid');
+        }
+        if(bc.guid) {
+            trackingEvents.setBaseEventValue(["prop42" ,"eVar42"],bc.guid,'guid');
+        }
+    };
+
+    return {
+        parse : function(trackingEvents, firstNonAdBaseClip, isLongForm) {
+            return _getBaseEventData(trackingEvents, firstNonAdBaseClip, isLongForm);
+        }
+    }
+})();
+
+var NBCUPDKOmniture = NBCUPDKOmniture || { };
+
+NBCUPDKOmniture.date = (function() {
+    var _date,
+        _weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    var _getDate = function(forceUpdate) {
+        if(!_date || forceUpdate) {
+            _date = new Date();
+        }
+        return _date;
+    };
+
+    var _getHour = function() {
+        var hour = _getDate().getHours().toString();
+        return _format(hour);
+    };
+    /*
+     Add preceding zeros
+     */
+    var _format = function(dateVal) {
+        return (dateVal.length < 2)? 0+dateVal : dateVal;
+    };
+
+    return {
+        getHour : function() {
+            // returns "HH:00"
+            return _getHour()+":00";
+        },
+        getTime : function() {
+            // returns "HH:MM"
+            var minutes = _getDate().getMinutes().toString();
+            return _getHour()+":"+_format(minutes);
+        },
+        getDayOfWeek : function() {
+            // returns name of day of week "Monday"
+            return _weekday[_getDate().getDay()];
+        },
+        getDate : function() {
+            // return formatted string "MM/DD/YYYY"
+            var today = _getDate();
+            var formatted = _format((today.getMonth() + 1).toString());
+            formatted += "/";
+            formatted += _format(today.getDate().toString());
+            formatted += "/";
+            formatted += _format(today.getFullYear().toString());
+            return formatted;
+        },
+        updateTime: function() {
+            _getDate(true);
+        }
+    }
+
+})();
+var NBCUPDKOmniture = NBCUPDKOmniture || { };
+
+/*
+    SiteCatalyst wraps the client siteCatalyst code and adds the ability to override
+    any parameter.
+
+    It  checks for the existence of of the client s object and if it does not exist
+    attempts to load site catalys js code from a url.
+
+    Finally it parses the tracking event object from the Event Factory
+ */
+NBCUPDKOmniture.siteCatalyst = (function(window) {
+    var _url = "/js/nbcu/ots_omniture_code.js ", _s;
+
+    var _loadSiteCatalyst = function(customName, callback, urlOverride) {
+        if(_s) {
+            tpDebug("ERROR site catalyst already loaded");
+        }
+
+        var _this = this;
+        if(urlOverride)
+            _url = urlOverride;
+
+        if(callback)
+            _this['callback'] = callback;
+
+        _this['customName'] = customName;
+        tpLoadJScript(_url, function() {
+
+            _s = eval(_this['customName']);
+
+
+            if(this.hasOwnProperty(("callback"))) {
+                _this.callback(_s);
+            }
+        });
+    };
+    /*
+     this separates the vars object from the event factory and sends the track link event
+      */
+    var _track = function(trackingEvent) {
+
+        if(typeof trackingEvent == "undefined")
+            return;
+
+        var varsStr = "linkName",i = 0, eventName = "--no-title--";
+
+        for(i; i<trackingEvent.vars.length; i++) {
+            var eVar = trackingEvent.vars[i];
+            _s[eVar.key] = eVar.value;
+            _log(eVar.key+" : "+eVar.value);
+
+            if(eVar.key == "eVar37") { // changed to use title ws using eVar46
+                console.log(eVar.value);
+                eventName = eVar.value;
+            }
+
+            varsStr += ","+eVar.key;
+        }
+
+        for(i=0; i<trackingEvent.props.length; i++) {
+            var prop = trackingEvent.props[i];
+            _log(prop.key+" : "+prop.value);
+            _s[prop.key] = prop.value;
+            varsStr += ","+prop.key;
+        }
+
+        if(trackingEvent.hasOwnProperty("events")) {
+            _s.events = _s.linkTrackEvents = trackingEvent.events;
+        }
+
+        if(trackingEvent.products.length > 0) {
+            _s.products = trackingEvent.products;
+            varsStr += ",products";
+        }
+        _log(varsStr);
+        _s.linkTrackVars = varsStr;
+        _s.tl(this, "o", [eventName]);
+        _reset();
+    };
+
+    var _log = function(str) {
+        // console.log(str);
+    };
+
+    var _reset = function() {
+        // clear out everything
+        _s.linkTrackVars = "";
+        _s.events = "";
+        _s.linkTrackEvents = "";
+        _s.products = "";
+        for(v in _s) {
+            if(v.match(/prop([0-9]+)/)) {
+                _s[v] = "";
+            }
+        }
+    };
+
+    return {
+        load : function(customName, callback, urlOverride) {
+            _loadSiteCatalyst(customName, callback, urlOverride);
+        },
+        set : function(s) {
+               s.useForcedLinkTracking = false;
+               s.trackClickMap = false;
+               _s = s;
+        },
+        track : function(eventData) {
+            _track(eventData);
+        }
+    }
+})(window);
+
+if(typeof nbcu == "undefined")
+    NBCUPDKOmniture.siteCatalyst.load("nbcu");
+else
+    NBCUPDKOmniture.siteCatalyst.set(nbcu);
+
+/*
+
+ - a tracking event will result in all of the following events from the player,
+ - data with events will be as follows:
+
+ {
+     bitrate : 0,
+     sourcePDKEvent : {},
+     playlist : null,
+     clip : null, <- must be first non ad clip on release start
+     fullscreen : false,
+     timestamp : null,
+ }
+
+ */
+
+/*
+ Events expected by NBCU
+ adEnd_shortform
+ adStart_shortform
+ video25Percent_shortform
+ video50Percent_shortform
+ video75Percent_shortform
+ videoEnd_shortform
+ videoStart_shortform
+ */
+NBCUPDKOmniture.trackingEvents = (function(){
+    var _siteCatalystCallback,
+         _longFormParser, // determines if content is longform or short form
+        _baseEventParser, // parses playlist and first non-ad clip into base set of data
+        _eventFactory, // Creates and configures events
+        _bus, // PDK Event Bus
+        _events,
+        _isLongForm;
+
+    var _omniturePDKHandler = {
+        // corresponds to release start which does
+        // not send a tracking event sets up the base event data
+        videoOpen : function(e) {
+            if(_longFormParser)
+                _isLongForm = _longFormParser.parse(e.data.clip);
+            if(_baseEventParser)
+                _baseEventParser.parse(_eventFactory, e.data.clip, _isLongForm);
+        },
+        videoStart : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "videoStart_longform" : "videoStart_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        video25Percent : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "video25Percent_longform" : "video25Percent_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        video50Percent : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "video50Percent_longform" : "video50Percent_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        video75Percent : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "video75Percent_longform" : "video75Percent_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        video98Percent : function(e){
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "videoEnd_longform" : "videoEnd_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        adStart : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "adStart_longform" : "adStart_shortform";
+            _setEventData(eventName, trackingEvent, e.data, true);
+            _sendEvent(trackingEvent);
+        },
+        adEnd : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "adEnd_longform" : "adEnd_shortform";
+            _setEventData(eventName, trackingEvent, e.data, true);
+            _sendEvent(trackingEvent);
+        },
+        videoSeek : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "videoSeek_longform" : "videoSeek_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        },
+        videoPaused : function(e) {
+            var trackingEvent = _eventFactory.createEvent();
+            var eventName = (_isLongForm)? "videoPaused_longform" : "videoPaused_shortform";
+            _setEventData(eventName, trackingEvent, e.data);
+            _sendEvent(trackingEvent);
+        }
+    };
+
+    var _setEventData = function(eventName, trackingEvent, state, isAd) {
+        var eventDataSetter;
+        if(_events.hasOwnProperty(eventName)) {
+            eventDataSetter = _events[eventName];
+        }
+        // first set the common state data so we don't have to do this in all setters
+        _setStateData(trackingEvent, state, isAd);
+        // set the data using the registered setter if we have one
+        if(eventDataSetter) {
+            eventDataSetter(eventName, trackingEvent, state);
+        } else {
+            // TODO: throw error or warning that we do not have the event data for this event
+            // console.log("WARN: no event data setter for: "+eventName);
+        }
+        return trackingEvent;
+    };
+
+    var _setStateData = function(trackingEvent, state, isAd) {
+        trackingEvent.setEventData(["eVar38","prop44"],(state.fullscreen)?"fullscreen":"normal","screen");
+        trackingEvent.setEventData("prop45",state.bitrate,"bitrate");
+        if(isAd) {
+            trackingEvent.setEventData("eVar47", (state.clip.length > 15000)? "extended" : "normal" );
+        }
+    };
+
+    var _sendEvent = function(trackingEvent) {
+        // first set the overrides
+        _eventFactory.setOverrides(trackingEvent);
+        // tell our site catalyst wrapper to send the event
+        _siteCatalystCallback(trackingEvent);
+    };
+
+    var _addEventListeners = function(scopes) {
+        if(!scopes) {
+            scopes = "*";
+        }
+        for(var k in _omniturePDKHandler) {
+            if(_omniturePDKHandler.hasOwnProperty(k)) {
+                _bus.addEventListener(k.toString(), _omniturePDKHandler[k], scopes );
+            }
+        }
+    };
+
+    return {
+        setTrackingEventFactory : function(trackingEventFactory) {
+            _eventFactory = trackingEventFactory;
+        },
+        setPDKBus : function(pdkEventBus) {
+           _bus = pdkEventBus;
+           _addEventListeners();
+        },
+        addCallback : function(callback) {
+            
+            _siteCatalystCallback = callback;
+        },
+        setBaseEventParser : function(beParser) {
+            _baseEventParser = beParser;
+        },
+        setLongFormParser : function(lfParser) {
+            _longFormParser = lfParser;
+        },
+        registerEvent : function(eventName, eventDataSetter) {
+            if(!_events) {
+                _events = [];
+            }
+            _events[eventName] = eventDataSetter;
+        }
+    }
+
+})();
+// keeps the tracking data creates event objects and decorates
+NBCUPDKOmniture.trackingEvents.setTrackingEventFactory(NBCUPDKOmniture.trackingEventFactory);
+// determines longform or shortform axis
+NBCUPDKOmniture.trackingEvents.setLongFormParser(NBCUOmnitureLongformParser);
+// parses the onrelease start event and fills out the base tracking event data
+NBCUPDKOmniture.trackingEvents.setBaseEventParser(NBCUOmnitureBaseEventParser);
+// binds the track callback to the
+NBCUPDKOmniture.trackingEvents.addCallback(NBCUPDKOmniture.siteCatalyst.track);
+// binds to the tracking event bus
+NBCUPDKOmniture.trackingEvents.setPDKBus(PDKTrackingEvents.bus);
+
+/*
+    This is where we can configure the data that is set per event
+ */
+/*
+SHORTFORM
+ */
+NBCUPDKOmniture.trackingEvents.registerEvent("adStart_shortform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title").setEvents("event70,event72").setProducts(";;;;event72=0");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("adEnd_shortform", function(eventName, trackingEvent, state) {
+    var adDuration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop50",null,"title")
+        .setEventData("prop45",null,"bitrate")
+        .setEvents("event71,event72").setProducts(";;;;event72="+adDuration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoStart_shortform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent").setEvents("event73,event74").setProducts("event73=0");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video25Percent_shortform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event73,event75").setProducts("event73="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video50Percent_shortform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event73,event76").setProducts("event73="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video75Percent_shortform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event73, event77").setProducts("event73="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoEnd_shortform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event73, event78").setProducts("event73="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoSeek_shortform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event79");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoPaused_shortform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event82");
+});
+/*
+LONGFORM
+ */
+NBCUPDKOmniture.trackingEvents.registerEvent("adStart_longform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event20,event22").setProducts(";;;;event22=0");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("adEnd_longform", function(eventName, trackingEvent, state) {
+    var adDuration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event21,event22").setProducts(";;;;event22="+adDuration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoStart_longform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent").setEvents("event23,event24").setProducts("event23=0");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video25Percent_longform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event23,event25").setProducts("event23="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video50Percent_longform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event23,event26").setProducts("event23="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("video75Percent_longform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event23, event27").setProducts("event23="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoEnd_longform", function(eventName, trackingEvent, state) {
+    var duration = state.time;
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event23, event28").setProducts("event23="+duration);
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoSeek_longform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event81");
+});
+NBCUPDKOmniture.trackingEvents.registerEvent("videoPaused_longform", function(eventName, trackingEvent, state) {
+    trackingEvent.setEventData("prop46",eventName,"contentEvent")
+        .setEventData("eVar42",null,"guid")
+        .setEventData("prop20",null,"rsid")
+        .setEventData("prop42",null,"guid")
+        .setEventData("prop43",null,"clipid")
+        .setEventData("prop44",null,"screen")
+        .setEventData("prop45",null,"bitrate")
+        .setEventData("prop50",null,"title")
+        .setEvents("event80");
+});

@@ -1,0 +1,95 @@
+@charset "Shift_JIS";
+
+/*
+Title: chomiryo-banduke
+URI: http://famima.com/shop/pages/banduke.aspx
+*/
+
+#otafuku-wrap h1, #otafuku-wrap h2, #otafuku-wrap h3, #otafuku-wrap h4,
+#otafuku-wrap img, #otafuku-wrap p, #otafuku-wrap div, #otafuku-wrap ul, #otafuku-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#otafuku-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#otafuku-wrap{
+	width:700px;
+	background:url(http://www.famima.com/images/p/otafuku/bg.jpg) repeat;}
+
+#otafuku-wrap h1#header{
+	width:700px; height:250px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/otafuku/header.jpg) no-repeat;}
+
+#otafuku-wrap h2#lineup{
+	width:700px; height:68px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/otafuku/lineup_ttl.jpg) no-repeat;}
+	
+#otafuku-wrap #item01Base{
+	width:700px; height:295px;
+	background:url(http://www.famima.com/images/p/otafuku/item01_image.jpg) no-repeat;}
+
+#otafuku-wrap #item02Base{
+	width:700px; height:295px;
+	background:url(http://www.famima.com/images/p/otafuku/item02_image.jpg) no-repeat;}
+
+#otafuku-wrap #item03Base{
+	width:700px; height:295px;
+	background:url(http://www.famima.com/images/p/otafuku/item03_image.jpg) no-repeat;}
+	
+#otafuku-wrap #item04Base{
+	width:700px; height:340px;
+	background:url(http://www.famima.com/images/p/otafuku/item04_image.jpg) no-repeat;}
+
+#otafuku-wrap .itemTXTBase{
+	width:250px; padding:117px 0 0 162px;}
+
+#otafuku-wrap .itemTXTBase h3.name{
+	font-weight:bold; color:#333333; line-height:120%;}
+#otafuku-wrap .itemTXTBase .price{
+	color:#ff6600; line-height:120%; padding:4px 0;}
+#otafuku-wrap .itemTXTBase .cmnt{
+	color:#333333; line-height:120%;}
+	
+#otafuku-wrap .itemTXTBase h3.name a:link, 
+#otafuku-wrap .itemTXTBase h3.name a:visited{
+	text-decoration:underline; color:#333333;}
+#otafuku-wrap .itemTXTBase h3.name a:hover,
+#otafuku-wrap .itemTXTBase h3.name a:active{
+	text-decoration:none; color:#333333;}
+
+#otafuku-wrap .itemTXTBase .bt{
+	width:110px; border:none; padding:10px 0;}
+
+#otafuku-wrap .banner{
+	width:660px; padding:10px; padding:10px;}
+	
+#otafuku-wrap .present_imgbg{
+	width:700px; height:212px;
+	background:url(http://www.famima.com/images/p/otafuku/present_img2.jpg) no-repeat;
+	}
+	
+#otafuku-wrap .present_imgbg p.txtttl{
+	padding:5px 0 0 42px; color:#009900; font-size:85%; line-height:120%;}
+	
+#otafuku-wrap .present_imgbg p.txt{
+	padding:0 0 0 42px; color:#555555; font-size:85%; line-height:120%;}
+
+
+/* clearfix */
+#otafuku-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+/* IE6 */
+* html #otafuku-wrap { 
+	height: 1%;}

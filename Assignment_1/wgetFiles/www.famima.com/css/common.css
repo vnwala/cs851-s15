@@ -1,0 +1,775 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	common　共通エレメント
+-------------------------------------------------------------------- */
+body {
+	margin: 0;
+	/* color:#000; */ 	/*color: #656464; */
+	color: #333333;
+	text-align:center;
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:12px;
+	line-height: 140%;
+	/* background: #FFF url(../img/usr/category_header_back.png) 0 65px repeat-x; */
+}
+body#index {
+	 /* background: #FFF url(../img/usr/graydot.png) 0 65px repeat-x; */ 
+}
+ol li {
+	margin-left: 2em;
+	list-style: decimal;
+}
+img {
+	border: none;
+	vertical-align: middle;
+}
+strong {
+	font-weight: bold;
+}
+input {
+	vertical-align: middle;
+}
+input {
+	font-family: Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 1em;
+}
+textarea {
+	font-family: Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 1em;
+}
+
+select {
+	font-family: Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 1em;
+}
+
+label {
+	margin: 0 20px 0 5px;
+}
+a:link {
+	color:#1886B8;
+	text-decoration: underline;
+}
+a:visited {
+	color:#1886B8;
+	text-decoration: underline;
+}
+a:active {
+	color:#57BAEA;
+	text-decoration: underline;
+}
+a:hover {
+	color:#00a041; /* color:#57BAEA; color:#5bb430;*/
+	text-decoration: underline;
+}
+.guide_headline_ a {
+	color:#000;
+	text-decoration: none;
+}
+.guide_headline_ a:hover {
+	color:#000;
+	text-decoration: none;
+}
+pre {
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/* Mozilla */
+	white-space: -moz-pre-wrap;
+	/* Opera 4-6 */
+	white-space: -pre-wrap;
+	/* Opera 7 */
+	white-space: -o-pre-wrap;
+	/* CSS3 */
+	white-space: pre-wrap;
+	/* IE 5.5+ */
+	word-wrap: break-word;
+}
+/* --------------------------------------------------------------------
+	common　汎用クラス
+-------------------------------------------------------------------- */
+/* 文字サイズ */
+.large_ {
+	font-size: 120%;
+}
+.xlarge_ {
+	font-size: 144%;
+}
+.small_ {
+	font-size: 80%;
+}
+.xsmall_ {
+	font-size: 64%;
+}
+.s_90_ {
+	font-size: 90%;
+}
+/**/
+
+/* 文字の太さ */
+.normal_ {
+	font-weight: normal;
+}
+
+/**/
+
+/* フロート */
+.leftfloat_ {
+	float: left;
+	display: inline;
+}
+.rightfloat_ {
+	float: right;
+	display: inline;
+}
+img.leftfloat_ {
+	margin: 0 10px 10px 0;
+}
+img.rightfloat_ {
+	margin: 0 0 10px 10px;
+}
+/**/
+
+/* 文整列 */
+.lefttext_ {
+	text-align: left;
+}
+.righttext_ {
+	text-align: right;
+}
+.centertext_ {
+	text-align: center;
+}
+/**/
+
+/* 特定メッセージ（インライン） */
+.error_ {
+	color:#CC0000;
+	font-weight:bold;
+}
+.notice_ {
+	color:#993300;
+	font-weight:bold;
+}
+.info_ {
+	font-weight:bold;
+}
+/**/
+
+/* 特定メッセージ（ブロック） */
+div.error_, table.error_ {
+	background-color:#efefef;
+	border:solid 1px #FF0099;
+	padding:8px;
+	margin:4px auto;
+	text-align:left;
+	width: 580px;
+}
+div.notice_, table.notice_ {
+	background-color:#efefef;
+	border:solid 1px #996666;
+	padding:8px;
+	margin:4px auto;
+	text-align:left;
+	width: 680px;
+}
+div.info_, table.info_ {
+	background-color:#efefef;
+	border:solid 1px #666666;
+	padding:8px;
+	margin:4px auto;
+	text-align:left;
+	width: 560px;
+}
+ul.error_ {
+	margin-left: 16px;
+}
+/**/
+
+/* 共通クラス(ブロック) */
+.top_comment_ {
+	margin-bottom: 15px;
+}
+.submit_ {
+	margin: 20px auto;
+	text-align: center;
+}
+.submit_ input, .submit_ img {
+	margin: 0px 16px;
+	vertical-align: middle;
+}
+.message_ {
+}
+p.message_ {
+	margin-bottom: 10px;
+}
+/* 共通クラス(その他) */
+.hidden_ {
+	visibility: hidden;
+}
+.nocell_ {
+	border:none!important;
+	background-color:transparent!important;
+}
+.hiddenEnter_ {
+	width:0;
+	height:0;
+}
+/* 価格表示 */
+.price_pop_ {
+	font-size:10px;
+}
+.price_ {
+	font-size:14px;
+	font-weight:bold;
+}
+/* コピーライト */
+/* body#index p.copy, body#centame p.copy, body#cchara p.copy { */
+body#index p.copy, body#cchara p.copy {
+	font-size:10px;
+	color:#999;
+	}
+/* --------------------------------------------------------------------
+	common　ヘッドライン
+-------------------------------------------------------------------- */
+h1.goods_name_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_goods.png) left bottom no-repeat;
+}
+h1.category_name_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_category.png) left bottom no-repeat;
+}
+h1.category_name_img_ { /* タイトルを画像にした場合 */
+	margin-bottom: 10px;
+}
+h1.event_name_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_event.png) left bottom no-repeat;
+}
+h1.event_name_img_ { /* タイトルを画像にした場合 */
+	margin-bottom: 10px;
+}
+h1.genre_name_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_genre.png) left bottom no-repeat;
+}
+h1.genre_name_img_ { /* タイトルを画像にした場合 */
+	margin-bottom: 15px;
+}
+h1.tag_name_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1.png) left bottom no-repeat;
+}
+h1.topic_head_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_topics.png) left bottom no-repeat;
+}
+
+/* 汎用ヘッドライン */
+.common_headline1_ { /* h1相当 */
+	margin-bottom: 15px;
+	padding: 2px 0 11px 10px; /*padding: 2px 0 11px 20px;*/
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1.png) left bottom no-repeat;
+}
+.col1_ .common_headline1_ { /* .col1_ 1カラムの場合 */
+}
+.mainframe_ .common_headline1_ { /* .mainframe_ 2カラムの場合 */
+}
+.contents_ .mainframe_ .common_headline1_ { /* .contents_ .mainframe_ 3カラムの場合 */
+}
+.common_headline2_ { /* h2相当 */
+	margin-bottom: 10px;
+	padding: 7px 0 0 20px;
+	font-size: 14px;
+	font-weight: bold;
+	height: 23px;
+	background: url(http://www.famima.com/img/usr/common_h2_700.png) left top no-repeat;
+}
+
+.col1_ .common_headline2_ { /* 1カラムページの場合 */
+	background: url(http://www.famima.com/img/usr/common_h2_960.png) left top no-repeat;
+}
+.loginform_ .common_headline2_ { /* ログインフォームでの場合 */
+	background: url(http://www.famima.com/img/usr/common_h2_600.png) left top no-repeat;
+}
+.common_headline3_ { /* h3相当 */
+	margin: 0 0 5px 0;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/back_ami.png);
+}
+.common_headline3_v2 { /* h3相当 */
+	margin: 0 0 5px 0;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #009944;
+}
+
+.common_headline4_ { /* h4相当 */
+	margin: 0 0 5px 0;
+	padding: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+}
+.img_headline_ { /* 画像ヘッドラインの場合 */
+	margin-bottom: 10px;
+}
+/* --------------------------------------------------------------------
+	common　イベント
+-------------------------------------------------------------------- */
+/* イベントへのリンク */
+.event_ {
+	width: 100%;
+	overflow: hidden;
+}
+.mainframe_ .event_ {
+	width: 710px;
+}
+.event_banner_ {
+	margin: 0 10px 10px 0;
+	float: left;
+	display: inline;
+}
+.event_banner_ .comment_ {
+	font-size: 10px;
+}
+.event_title_ {
+	margin-bottom: 15px;
+	padding: 2px 0 11px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/common_h1_event.png) left bottom no-repeat;
+	clear: both!important;
+}
+.event_title_ a:link,
+.event_title_ a:visited {
+	color: #000;
+}
+.event_title_ a:hover,
+.event_title_ a:active {
+	color: #7f7f7f;
+}
+
+/* --------------------------------------------------------------------
+	common　タグ一覧
+-------------------------------------------------------------------- */
+.side_tag_cloud_ {
+}
+.side_tag_cloud_ span {
+	line-height: 140%;
+}
+.tag_lowest_ {
+	font-size:80%;
+}
+.tag_low_ {
+	font-size:100%;
+}
+.tag_medium_ {
+	font-size:120%;
+}
+.tag_high_ {
+	font-size:144%;
+	font-weight:bold;
+}
+.tag_highest_ {
+	font-size: 173%;
+	font-weight:bold;
+}
+/* --------------------------------------------------------------------
+	common　タグ詳細
+-------------------------------------------------------------------- */
+.tag_cloud_ {
+}
+.tag_cloud_ span {
+	line-height: 140%;
+}
+.tag_cloud_more_ {
+	margin: 10px 0 0 0;
+	font-weight: bold;
+}
+.tag_add_shaping_ {
+	margin-bottom: 10px;
+	padding: 9px;
+	width: 680px;
+	overflow: hidden;
+	background: #F8F8F8;
+	border: 1px solid #CCC;
+}
+.tag_add_shaping_ h2 {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+}
+.tag_add_shaping_ span {
+	margin-right: 10px;
+	padding-left:15px;
+	float: left;
+	white-space: nowrap;
+	background: url(http://www.famima.com/img/usr/icon_tag.gif) 0 center no-repeat;
+}
+.tag_other_ {
+	margin-bottom: 10px;
+	padding: 9px;
+	width: 680px;
+	overflow: hidden;
+	background: #F8F8F8;
+	border: 1px solid #CCC;
+}
+.tag_other_ h2 {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+}
+.tag_other_ span {
+	margin-right: 10px;
+	padding-left:15px;
+	float: left;
+	white-space: nowrap;
+	background: url(http://www.famima.com/img/usr/icon_tag.gif) 0 center no-repeat;
+}
+.tag_tree_ {
+	margin-bottom: 10px;
+	padding: 9px;
+	width: 680px;
+	overflow: hidden;
+	background: #F8F8F8;
+	border: 1px solid #CCC;
+}
+.tag_tree_ h2 {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+}
+.tag_tree_ span {
+	margin-right: 10px;
+	padding-left:15px;
+	float: left;
+	white-space: nowrap;
+	background: url(http://www.famima.com/img/usr/icon_tag.gif) 0 center no-repeat;
+}
+.tag_info_ {
+	margin-bottom: 10px;
+}
+.tag_info_ p.name_ {
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 15px;
+	background: url(http://www.famima.com/img/usr/icon_tag.gif) 0 center no-repeat;
+	border-bottom: 1px dotted #CCC;
+}
+
+/* --------------------------------------------------------------------
+	common　ナビゲーション
+-------------------------------------------------------------------- */
+/* パンくず */
+.navitopicpath_ {
+	margin: 0 0 10px 0;
+	font-size: 10px;
+}
+.navitopicpath_ a {
+	margin: 0 0.5em;
+}
+.navitopicpath_ span.current_ {
+	margin: 0 0.5em;
+	font-weight: bold;
+}
+/* ページジャンプ */
+.navipage_ {
+	text-align:right;
+	padding: 5px 0;
+}
+.navipage_.top_ {		/* ページジャンプ上部 */
+	margin-bottom: 10px;
+}
+.navipage_.bottom_ {	/* ページジャンプ下部 */
+	margin-bottom: 10px;
+}
+.navipage_ .navipage_sum_ {
+}
+.navipage_ .navipage_first_ a {
+	padding-left: 18px;
+	background: url(http://www.famima.com/img/sys/navifirst.gif) left center no-repeat;
+}
+.navipage_ .navipage_prev_ a {
+	padding-left: 12px;
+	background: url(http://www.famima.com/img/sys/naviprev.gif) left center no-repeat;
+}
+.navipage_ .navipage_next_ a {
+	padding-right: 12px;
+	background: url(http://www.famima.com/img/sys/navinext.gif) right center no-repeat;
+}
+.navipage_ .navipage_last_ a {
+	padding-right: 18px;
+	background: url(http://www.famima.com/img/sys/navilast.gif) right center no-repeat;
+}
+.navipage_now_ {
+	margin:0 1px;
+	padding: 2px 7px;
+	color:#C00;
+	font-weight:bold;
+	text-decoration:none;
+	background: #FEE;
+	border: 1px solid #F99;
+}
+.navipage_ .navipage_reverse_ {
+	margin-right: 5px;
+}
+.navipage_ .navipage_forward_ {
+	margin-left: 5px;
+}
+.navipage_ a {
+	margin: 0 1px;
+	padding: 2px 7px;
+	background-color: #FFF;
+	border: 1px solid #BFCDDF;
+}
+.navipage_ a:hover {
+	text-decoration: none;
+	background-color: #E5F0F8;
+	border: 1px solid #7FB3DA;
+}
+/* 並び替え */
+.navisort_ {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	font-size: 10px;
+	width: 100%;
+	overflow: hidden;
+	background: url(http://www.famima.com/img/usr/dotline1.png) left bottom repeat-x;
+}
+.navisort_ dt {
+	float: left;
+	text-align: left;
+	text-indent: -9999px;
+	font-weight: bold;
+	width: 45px;
+	background: url(http://www.famima.com/img/usr/sort_change.png) center center no-repeat;
+}
+.navisort_ dd {
+	margin-left: 50px;
+}
+.navisort_now_ {
+	font-weight: bold;
+	text-decoration:none;
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+.navisort_ a {
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+/* 表示切替 */
+.navistyle_ {
+	padding-bottom: 5px;
+	font-size: 10px;
+	width: 100%;
+	overflow: hidden;
+}
+.navistyle_ dt {
+	float: left;
+	text-align: left;
+	text-indent: -9999px;
+	font-weight: bold;
+	width: 45px;
+	background: url(http://www.famima.com/img/usr/sort_display.png) center center no-repeat;
+}
+.navistyle_ dt#style_maker {
+	background: url(http://www.famima.com/img/usr/sort_maker.png) center center no-repeat;
+}
+.navistyle_ dt#style_brand {
+	background: url(http://www.famima.com/img/usr/sort_maker.png) center center no-repeat;
+}
+.navistyle_ dd {
+	margin-left: 50px;
+}
+.navistyle_now_ {
+	font-weight: bold;
+	text-decoration:none;
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+.navistyle_ a {
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+/* ブランド絞込 */
+.brand_name_ {
+	width: 100%;
+	overflow: hidden;
+}
+.brand_name_now_ {
+	font-weight: bold;
+	text-decoration:none;
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+.brand_name_ a {
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+/* メーカー絞込 */
+.maker_name_ {
+	width: 100%;
+	overflow: hidden;
+}
+.maker_name_now_ {
+	font-weight: bold;
+	text-decoration:none;
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+.maker_name_ a {
+	margin:2px 0;
+	padding: 0 5px;
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+}
+
+/* --------------------------------------------------------------------
+	common　フォーム
+-------------------------------------------------------------------- */
+.formlist_ {
+	margin: 0 auto;
+	border:1px dotted #CCC;
+	border-collapse: collapse;
+}
+.formlist_ th {
+	padding:10px;
+	font-weight:bold;
+	white-space: nowrap;
+	background-color:#FCFCFC;
+	border:1px dotted #CCC;
+}
+.formlist_ td {
+	padding:10px;
+	font-weight:normal;
+	background-color:#FFF;
+	border-bottom:1px dotted #CCC;
+}
+.formlist_ .line0_ {
+	background-color:#F8F8F8;
+}
+.formlist_ .line1_ {
+	background-color:#FCFCFC;
+}
+.formdetail_ {
+	border-collapse:collapse;
+	margin:0 auto;
+}
+.formdetail_ th {
+	padding:8px;
+	text-align: left;
+	font-weight:bold;
+	vertical-align: top;
+	background-color:#F8F8F8;
+	border-top:1px dotted #CCC;
+	border-bottom:1px dotted #CCC;
+}
+.formdetail_ td {
+	padding:8px;
+	font-weight:normal;
+	vertical-align: top;
+	background-color:#FFF;
+	border-top:1px dotted #CCC;
+	border-bottom:1px dotted #CCC;
+}
+.formdetailcard_ {
+	margin:0 auto;
+	margin-left:0px;
+	float:none;
+	border-collapse:collapse;
+}
+.formdetailcard_ th {
+	border-top:1px dotted #CCC;
+	border-bottom:1px dotted #CCC;
+	font-weight:bold;
+	line-height:15px;
+	padding:8px;
+	background-color:#F8F8F8;
+	white-space:nowrap;
+	text-align: left;
+}
+.formdetailcard_ td {
+	border-top:1px dotted #CCC;
+	border-bottom:1px dotted #CCC;
+	font-weight:normal;
+	line-height:15px;
+	padding:8px;
+	background-color:#FFF;
+}
+.formsublist_ {
+	border-collapse: collapse;
+}
+.formsublist_ th {
+	border:1px dotted #CCC;
+	background-color:#FFF;
+	font-weight:bold;
+	white-space: nowrap;
+}
+.formsublist_ td {
+	border:1px dotted #CCC;
+	background-color:#FFF;
+	font-weight:normal;
+}
+.must_ {
+	margin-left: 10px;
+	float: right;
+	display: inline;
+}
+/* --------------------------------------------------------------------
+	common　Trace
+-------------------------------------------------------------------- */
+/* for Trace */
+.tracecontent {
+	text-align:left;
+	background-color:#FFCCFF;
+}
+#__asptrace {
+	text-align:left;
+	background-color:#FFF;
+}
+span.tracecontent tr.subhead {
+	background-color:#CCC;
+}
+span.tracecontent tr.alt {
+	background-color:#eeeeee
+}

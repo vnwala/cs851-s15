@@ -1,0 +1,712 @@
+/**
+ * Autocomplete plugin
+ *
+ * @example $([field]).autocomplete([params]);
+ * @desc Generate a list of Autocomplete suggestions
+ *
+ * @param Object of parameters for the autocomplete
+ *		minlen			integer		minimum string length to reach before returning suggestions
+ *		maxResults		integer		maximum suggestions to return
+ *		processUrl			string		path to the processing file
+ *		dropdownAlign	string		alignment of dropdown in relation to the field
+ *										Pass left ("l"), right ("r"), or center ("c")
+ * @return jQuery element object
+ *
+ * @name Autocomplete
+ * @cat Plugins/Search
+ * @author Greg Wardwell
+ */
+(function($) {
+
+var acNameSpace = '.AutoC',
+	methods = {
+	/**
+	 * init function.
+	 * Initialize the Autocomplete plugin.
+	 * @param options {object} is the object of optional parameters that will be cached on the passed field(s).
+	 * @return object this is the input field(s) (for chaining)
+	 */
+	init: function( options )
+	{
+		$.AutoC = {
+			minlen: 2,
+			maxResults: 20,
+			processUrl: '/include/search/autocomplete.php',
+			resultLink: '/store/search.php?s=',
+			dropdownalign: 'l',
+			disableOnHttps: true
+		};
+		
+		// Extend the default parameters
+		$.extend( $.AutoC, options );
+		
+		// Disable the plugin on secure pages (unless otherwise noted)
+		if ( $.AutoC.disableOnHttps === true && location.href.match(/^(https)/i) ) {
+			return false;
+		}
+		
+		// Attach an event listenr to the HTML tag to detect field blurring
+		
+		// Check if the HTML element already has our event listener
+		var html = $('html'),
+			eventExists = false,
+			checkEvent = html.click,
+			nameSpace = acNameSpace.replace('.', '');
+		jQuery.each(checkEvent, function(key, handlerObj) {
+		    if (handlerObj.namespace === nameSpace) {
+		    	eventExists = true;
+		    }
+		});
+		
+		if (!eventExists) {
+			html.bind('click' + acNameSpace, methods.htmlClick);
+		}
+		
+		// Loop over the elements, returning each one for chaining
+		return this.each(function() {
+			// Cache variables
+			var $this = $(this),
+				data = $this.data(),
+				dropDown;
+									
+			// If we haven't already initialized on this object...
+			if ( methods.isEmpty(data) ) {
+				// Define some parameters
+				var maxlen = ( $this.attr('maxlength') != undefined && parseInt($this.attr('maxlength'), 10) > 0 ? parseInt($this.attr('maxlength'), 10) : 30 ),
+					lastTerm = ( $this.val() != undefined ? jQuery.trim($this.val()) : '' ),
+					lastTermLc = lastTerm.toLowerCase();
+
+				// Create and insert the dropdown
+				dropDown = $(jQuery('<ul class="autocomplete"></ul>')).data('field', $this).delegate('a', 'click', function(e)
+				{
+					var thisa = $(this),
+						field;
+					if (!thisa.closest('li').hasClass('ac_view_all'))
+					{
+						field = $(arguments[0].delegateTarget).data('field').val(thisa.text());
+						methods.removeDropdown.apply(field[0]);
+						e.stopPropagation();
+					}
+				});
+				$('body').append(dropDown);
+
+				// Add events
+				$this
+					.bind('keyup input' + acNameSpace, methods.fieldKeyup)
+					.bind('keydown' + acNameSpace, methods.fieldKeydown)
+					.bind('focus' + acNameSpace, methods.fieldFocus)
+					.bind('click' + acNameSpace, methods.fieldClick);
+				
+				// Cache the parameters for this field
+				$this.data({
+					target: $this,
+					dropDown: dropDown,
+					empty: true,
+					maxlen: maxlen,
+					cache: [],
+					cacheCount: 0,
+					active: -1,
+					dbResultsLength: false,
+					dbMaxResults: $.AutoC.maxResults,
+					lastTerm: lastTerm,
+					lastTermLc: lastTermLc,
+					redirecting: false,
+					opts: $.AutoC
+				});
+				$this = data = dropDown = null;
+			}
+		});
+	},
+	
+	/**
+	 * destroy function.
+	 * Destroy an instance of the autocomplete jQuery plugin.
+	 * @param object this is the input(s)
+	 */
+	destroy: function()
+	{
+		return this.each(function() {
+			var $this = $(this),
+				data = $this.data();
+			data.dropDown.remove();
+			$this
+				// Remove the Autocomplete data
+				.removeData()
+				// Add dropdown's li children
+				.add($('li', data.dropDown))
+				// Unbind Autocomplete events
+				.unbind(acNameSpace);
+			$this = data = null;
+		});
+	},
+	
+	/**
+	 * constructAc function.
+	 * construct the autocomplete HTML.
+	 * @param results {object} is the results used to populate the dropdown
+	 * @return object this
+	 */
+	constructAc: function(results)
+	{
+		// Cache variables
+		var $this = $(this),
+			data = $this.data(),
+			allText = '',
+			thispos = $this.offset(),
+			pos = { top: 0, left: 0 },
+			lis = '';
+		
+		data.active = -1;
+		
+		// Remove the dropdown
+		methods.removeDropdown.apply($this[0]);
+
+		// Define the "All Results" button text
+		allText = 'View results for <em>'+ data.lastTerm +'</em>.';
+		data.empty = false;
+
+		// If we have results...
+		if (results.length > 0)
+		{
+			// Bold the typed term
+			var testingTerm = results[0].substr( 0, data.lastTermLc.length ),
+				i,
+				li;
+			
+			// Remove the "empty" styling from the dropdown
+			data.dropDown.removeClass('empty');
+			
+			// loop through the results, building our list
+			for (i in results) {
+				if (i > data.opts.maxResults - 1 || i > 200) {
+					break;
+				}
+				// Add the li
+				li = ( testingTerm.toLowerCase() === data.lastTermLc ? '<span>' + results[i].substring( 0, data.lastTermLc.length) + '</span>' + results[i].substring(data.lastTermLc.length) : results[i]);
+				if (data.opts.resultLink != '')
+				{
+					li = '<a href="'+ data.opts.resultLink + encodeURIComponent(results[i]).replace(/%20/g, '+') +'">'+ li +'</a>';
+				}
+				lis += '<li class="acNavLi acSuggestion'+ (i === 0 ? ' first' : '') +'">' + li + '</li>';
+			}
+			testingTerm = i = li = null;
+		}
+		else
+		{
+			// Add the "empty" styling to the dropdown.
+			data.dropDown.addClass('empty');
+		}
+		
+		// Add in the "All Results" button
+		if (data.opts.resultLink != '')
+		{
+			allText = '<a href="'+ data.opts.resultLink + encodeURIComponent(data.lastTerm).replace(/%20/g, '+') +'">'+ allText +'</a>';
+		}
+		data.dropDown.css('display', 'none').append(lis + '<li class="ac_view_all acNavLi">'+ allText +'</li>');
+		
+		// Set the display properties for the dropdown
+		if (data.opts.dropdownalign === 'r') {
+			pos.left = thispos.left + $this.outerWidth() - data.dropDown.outerWidth();
+		} else if (data.opts.dropdownalign === 'c') {
+			pos.left = thispos.left + ( ($this.outerWidth() - data.dropDown.outerWidth) / 2 );
+		} else {
+			pos.left = thispos.left;
+		}
+		pos.left = parseInt(pos.left, 10);
+		pos.top = parseInt(thispos.top + $(this).outerHeight(), 10);
+		data.dropDown.css({
+			display: 'block',
+			top: pos.top + 'px',
+			left: pos.left + 'px',
+			position: 'absolute'
+		});
+		
+		// Set up hover events on dropdown list
+		lis = $('li', data.dropDown)
+			.data('target', $this)
+			.bind('mouseover' + acNameSpace, methods.mouseoverSuggestion)
+			.bind('mouseout' + acNameSpace, methods.mouseoutSuggestion);
+		
+		// Return  this
+		$this = data = allText = lis = thispos = pos = null;
+		return this;
+	},
+
+	hide: function()
+	{
+		var $this = $(this),
+			data = $this.data();
+		data.dropDown.css('display','none');
+		$this = data = null;
+		return this;
+	},
+
+	show: function()
+	{
+		var $this = $(this),
+			data = $this.data();
+		if ($this.val() != '' && data.empty === false) {
+			data.dropDown.css('display','block');
+		}
+		$this = data = null;
+		return this;
+	},
+
+	/**
+	 * fieldClick function.
+	 * Intercept the click event on an autocomplete field and stop event propagation.
+	 * @param e {object} is the event object.
+	 */
+	fieldClick: function(e)
+	{
+		e.stopPropagation();
+	},
+	
+	/**
+	 * fieldFocus function.
+	 * Intercept the focus event on an autocomplete field and mark the field as focused.
+	 * @param e {object} is the event object.
+	 */
+	fieldFocus: function(e)
+	{
+		var $this = $(this).addClass('focus');
+		$this = null;
+	},
+	
+	/**
+	 * fieldBlur event.
+	 * Release focus of an autocomplete field.
+	 * @param e {object} is the event object.
+	 */
+	fieldBlur: function(e)
+	{
+		var $this = $(this).removeClass('focus'),
+			data = $this.data();
+		if (!$this.hasClass('submitting')) {
+			$this.val(data.lastTerm);
+		}
+		methods.removeDropdown.apply($this[0]);
+		$this = data = null;
+		return;
+	},
+	
+	/**
+	 * fieldKeydown function.
+	 * Perform actions when a key is pressed while an autocomplete field is in focus.
+	 * @param e {object} the event
+	 * @return mixed
+	 */
+	fieldKeydown: function(e)
+	{
+		if (e == undefined || e == null) {
+			return;
+		}
+		
+		var $this = $(this),
+			data = $this.data(),
+			keyCode = e.keyCode,
+			returnType;
+
+		// "Enter"
+		if (keyCode === 13) {
+			if (data.active < 0)
+			{
+				$this.addClass('submitting');
+				return;
+			}
+			else if (data.redirecting !== true) {
+				$this.data('redirecting', true);
+				methods.selectSuggestion.apply($this[0]);
+				returnType = false;
+			}
+		}
+		// "Up" arrow
+		else if (keyCode === 38) {
+			methods.highlightLi.apply($this[0], [e]);
+			returnType = false;
+		}
+		// "Down" arrow
+		else if (keyCode === 40) {
+			methods.highlightLi.apply($this[0], [e]);
+			returnType = false;
+		}
+		// "Escape"
+		else if (keyCode === 27) {
+			$this.val(data.lastTerm);
+			methods.removeDropdown.apply($this[0]);
+			returnType = false;
+		}
+		// "Tab"
+		else if (keyCode === 9) {
+			methods.fieldBlur.apply($this[0], [e]);
+		}
+		// Return
+		$this = data = keyCode = null;
+		if (returnType === false) {
+			return false;
+		}
+		return;
+	},
+	
+	/**
+	 * fieldKeyup function.
+	 * Perform actions on completion of a keypress while an autocomplete field is in focus.
+	 * @param e {object} is the event
+	 * @return mixed
+	 */
+	fieldKeyup: function(e)
+	{
+		var $this = $(this),
+			data = $this.data(),
+			newTerm = ( $this.val() != undefined ? jQuery.trim($this.val()) : '' ),
+			newTermLc = newTerm.toLowerCase(),
+			lastTerm = data.lastTerm,
+			// 38: up arrow, 40: down arrow, 13: enter, 27: escape, 9: return
+			killCodes = /^(38|40|13|27|9)$/;
+		
+		// Escape if newTerm is the same as the last term or if the key pressed is in our kill list
+		if ( newTerm === data.lastTerm || $this.hasClass('scrolling') || (e.keyCode + '').match(killCodes) != null) {
+			$this.removeClass('scrolling');
+			$this = data = newTerm = killCodes = null;
+			return;
+		}
+		killCodes = null;
+		
+		// Store the new term
+		$this.data('lastTerm', newTerm);
+		$this.data('lastTermLc', newTerm.toLowerCase());
+
+		// Escape if:
+		//		- newterm is shorter than our minlen
+		//		- newterm is greater than our maxlen
+		//		- we're already searching
+		//		- we're submitting
+		var newLen = newTerm.length;
+		if ( newLen < data.opts.minlen || newLen > data.maxlen || $this.hasClass('searching') || $this.hasClass('submitting') ) {
+			if (newLen < data.opts.minlen) {
+				methods.removeDropdown.apply($this[0]);
+			}
+			$this = data = newTerm = null;
+			return;
+		}
+		newLen = null;
+		
+		// Mark that we're searching
+		$this.addClass('searching');
+		
+		// Check the cache for this exact term
+		if (data.cache[newTerm] != undefined) {
+			// Construct the dropdown
+			methods.constructAc.apply($this[0], [data.cache[newTerm]]);
+			$this.data(data).removeClass('searching');
+			$this = data = newTerm = null;
+			return;
+		}
+		
+		// Check the cache for the first two characters of the term
+		var trimTerm = jQuery.trim(newTerm.substr(0, newTerm.length - 1)),
+			testingTerm;
+		
+		// If our trimmed term exists, then try to build our list from that approx. match
+		if (data.cache[trimTerm] != undefined) {
+				var results = [],
+					i;
+			// Check for the term in our approx. match
+			for ( i in data.cache[trimTerm] ) {
+				testingTerm = data.cache[trimTerm][i].substr(0, newTerm.length);
+				// Use matching results
+				if (testingTerm.toLowerCase() === newTerm.toLowerCase()) {
+					results[results.length] = data.cache[trimTerm][i];
+				}
+			}
+			// The logic is...
+			//		- If we have more results than the maximum we'll display
+			//		- Or the DB returned less than the max that it's set to return
+			//		- Or the DB returned less than the maximum we'll display
+			if (results.length >= data.opts.maxResults || data.dbResultsLength < data.dbMaxResults || data.dbResultsLength < data.opts.maxResults)
+			{
+				// Cache the results for this term
+				data.cache[newTerm] = results;
+				
+				// Construct the dropdown
+				methods.constructAc.apply($this[0], [results]);
+				$this.data(data).removeClass('searching');
+				$this = data = newTerm = testingTerm = results = i = null;
+				return;	
+			}
+			testingTerm = results = i = null;
+		}
+		
+		// If:
+		//		- the last term was gte our minlen
+		//		- AND the DB query returned nothing, quit
+		if (lastTerm.length >= data.opts.minlen && data.dbResultsLength === 0) {
+			methods.constructAc.apply($this[0], [[]]);
+			$this.data(data).removeClass('searching');
+			$this = data = newTerm = testingTerm = results = i = null;
+			return;
+		}
+		
+		// Query for the term
+		$.ajax({
+			type: "GET",
+			dataType: 'json',
+			url: data.opts.processUrl,
+			data: "term=" + newTerm,
+			cache: false,
+			success: function(returnedData)
+			{				
+				// If we didn't get back any results, remove the dropdown
+				if (returnedData.length === 0) {
+					methods.removeDropdown.apply($this[0]);
+					$this.data(data).removeClass('searching');
+					return;
+				}
+				
+				var results = returnedData,
+					dbResultsLength = returnedData.length,
+					dbMaxResults = dbResultsLength;
+				
+				// Did we get back a single result object, or a multidimensional object?
+				if (returnedData.results != undefined) {
+					results = returnedData.results;
+					dbResultsLength = results.length;
+				}
+				if (returnedData.maxresults != undefined) {
+					dbMaxResults = returnedData.maxresults;
+				}
+				
+				// Cache DB result info
+				data.dbResultsLength = dbResultsLength;
+				data.dbMaxResults = dbMaxResults;
+				
+				// If we didn't get back any results, remove the dropdown
+				if (results.length === 0) {
+					methods.removeDropdown.apply($this[0]);
+					$this.data(data).removeClass('searching');
+					return;
+				}
+				
+				// Trim the cache
+				var trimTo = 50,
+					trimAfter = 100;
+				if (data.cacheCount >= trimAfter) {
+					data.cacheCount = trimTo;
+					var i = 0,
+						temp = [],
+						key;
+					for (key in data.cache) {
+						if (i >= trimAfter - trimTo) {
+							temp[key] = data.cache[key];
+						}
+						i++;
+					}
+					data.cache = temp;
+					i = temp = key = null;
+				}
+				
+				// Cache results and current active term
+				data.cache[newTerm] = results;
+				data.cacheCount++;
+				data.active = -1;
+				
+				// Build the dropdown
+				methods.constructAc.apply($this[0], [results]);
+				
+				// Remove searching marker
+				$this.data(data).removeClass('searching');
+				$this = data = newTerm = results = trimTo = trimAfter = null;
+			}
+		});
+	},
+
+	/**
+	 * highlightLi function.
+	 * Highlight an LI, marking it as active.
+	 * @param e {object} is the event
+	 * @return object this
+	 */
+	highlightLi: function(e)
+	{
+		// Cache variables
+		var $this = $(this),
+			data = $this.data();
+		
+		// Reset the active field if there are no results
+		if ($('li.active', data.dropdown).length === 0) {
+			data.active = -1;
+		}
+		
+		// Cache more variables
+		var keyCode = e.keyCode,
+			indexOffset = 1 + $('.ac_view_all', data.dropDown).length,
+			lis = $('li', data.dropDown),
+			lisLength = lis.length - indexOffset;
+		
+		// Going up
+		if (keyCode === 38) {
+			if (data.active > 0) {
+				data.active--;
+			} else if (data.active === 0) {
+				data.active = -1;
+			} else {
+				data.active = lisLength;
+			}
+		}
+		// Going down
+		else if (keyCode === 40) {
+			if (data.active < lisLength) {
+				data.active++;
+			} else if (data.active === lisLength) {
+				data.active = -1;
+			} else {
+				data.active = 0;
+			}
+		}
+		
+		// Update the field data
+		$this.data(data);
+		
+		// Set the active suggestion
+		methods.setActive.apply($this[0], [true]);
+		
+		$this = data = keyCode = indexOffset = lis = lisLength = null;
+		return this;
+	},
+	
+	/**
+	 * htmlClick function.
+	 * Intercept a click event on the HTML tag so we can trigger the input blur event.
+	 * @param e {object} is the event object.
+	 */
+	htmlClick: function(e)
+	{
+		var $this = $('input.focus');
+		if ($this.length > 0) {
+			methods.fieldBlur.apply($this[0], [e]);
+		}
+	},
+	
+	/**
+	 * hoverSuggestion function.
+	 * Prep the autocomplete data and set an LI as active.
+	 */
+	mouseoverSuggestion: function(e)
+	{
+		var li = $(this),
+			$this = li.data('target'),
+			data = $this.data();
+		$this.data('active', $('li', data.dropDown).index(li));
+		methods.setActive.apply($this[0], [false]);
+		li = $this = data = null;
+		return;
+	},
+	
+	mouseoutSuggestion: function(e)
+	{
+		var li = $(this).removeClass('active'),
+			$this = li.data('target').data('active', -1);
+		li = $this = null;
+		return;
+	},
+	
+	/**
+	 * isEmpty function.
+	 * Check if an object is empty.
+	 * @param obj {object} is the object we're checking.
+	 * @return bool
+	 */
+	isEmpty: function(obj)
+	{
+		for (var prop in obj) {
+			if (obj.hasOwnProperty(prop)) {
+				return false;
+			}
+		}
+		return true;
+	},
+	
+	/**
+	 * removeDropdown function.
+	 * Hide the dropdown of the provided input and remove its contents.
+	 * @return object this
+	 */
+	removeDropdown: function()
+	{
+		var $this = $(this),
+			data = $this.data();
+		data.dropDown.css('display','none');
+		data.dropDown.contents().remove();
+		data.empty = true;
+		$this = data = null;
+		return this;
+	},
+	
+	/**
+	 * selectSuggestion function.
+	 * Select a selection, either via return keypress or via click.
+	 */
+	selectSuggestion: function() {
+		var $this = $(this).addClass('submitting'),
+			data = $this.data(),
+			selected = $('li', data.dropDown).eq(data.active).find('a')[0].href;
+		methods.removeDropdown.apply($this[0]);
+		window.location = selected;
+		data = selected = null;
+	},
+	
+	/**
+	 * setActive function.
+	 * Set an li to it's active state
+	 * @param updateVal {bool} is a flag for whether the value of the input should be changed or not
+	 *		- true: change
+	 *		- false: don't change
+	 */
+	setActive: function(updateVal)
+	{
+		// Cache variables
+		var $this = $(this),
+			data = $this.data(),
+			activeLi,
+			// Clear the active state from the lis
+			lis = $('li', data.dropDown).removeClass('active');
+		
+		// Reset the field value if there is no selected suggestion
+		if (data.active === -1) {
+			$this.val(data.lastTerm);
+			$this = data = lis = activeli = null;
+			return false;
+		}
+		
+		activeLi = lis.filter(':eq('+ data.active +')').addClass('active');
+		
+		// If arrowing up/down, update the value
+		if ( updateVal != undefined && updateVal === true ) {
+			$this.addClass('scrolling').val( jQuery.trim( activeLi.text() ) );
+		}
+		$this = data = lis = activeli = null;
+		return this;
+	}
+};
+
+// Instantiate the Social plugin
+$.fn.autocomplete = function( method )
+{
+	// If we passed a method that exists in our methods object, run it
+	if ( methods[method] )
+	{
+		return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+	}
+	// If we didn't pass a method, or passed an object, run the init method
+	else if ( typeof method === 'object' || ! method )
+	{
+		return methods.init.apply( this, arguments );
+	}
+	// Otherwise, give up
+	else
+	{
+		return false;
+	}
+};
+
+})(jQuery);

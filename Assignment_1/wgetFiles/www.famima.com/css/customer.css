@@ -1,0 +1,616 @@
+@charset "Shift_JIS";
+/* --------------------------------------------------------------------
+	ログインフォーム
+--------------------------------------------------------------------- */
+div.login_ {
+}
+div.login_ div.loginform_ {
+	width:600px;
+	margin:10px auto 20px;
+	padding:10px;
+	text-align:left;
+	border-bottom:1px dotted #CCC;
+}
+div.login_ div.loginform_ .form_text_ {
+	margin-bottom: 10px;
+}
+/* 2011/11/3 add start */
+div.login_ div.loginform_ .allframe_ {
+	border: 1px solid;
+	margin-bottom: 10px;
+}
+
+div.login_ div.coop_form_ {
+	width:900px;
+	margin:10px auto 20px;
+	padding:10px;
+	text-align:left;
+	border-bottom:1px dotted #CCC;
+}
+/* 2011/11/3 add start */
+div.login_ div.coop_form_ .allframe_ {
+	border: 1px solid;
+	margin: 10px 0 10px 0;
+}
+
+/* 2012/03/12 mod start */
+div.login_ div.coop_form_ .subframe_{
+	width:780px;
+	/*margin:10px auto 20px;*/
+	margin:10px auto 10px;
+	padding:10px;
+	text-align:left;
+	/*border-bottom:1px dotted #CCC;*/
+}
+/* 2012/03/12 mod end */
+
+div.login_ div.coop_form_ div.subframe_ .allframe_{
+	border: 1px solid;
+	margin-bottom: 10px;
+}
+
+
+/* 2011/11/3 add end */
+
+div.login_ div.inputimage_ {
+	margin:8px auto;
+	text-align:center;
+}
+div.login_ div.askpass_ {
+	margin:5px auto;
+	text-align:center;
+}
+div.login_ div.entry_ {
+	margin:2px auto;
+	text-align:center;
+	font-size:10px
+}
+div.login_ table.loginform_ {
+	margin:auto;
+	text-align:center;
+}
+div.login_ table.loginform_ th {
+	padding: 2px;
+	text-align: right;
+	font-weight: bold;
+}
+div.login_ table.loginform_ td {
+	padding: 2px;
+	text-align: left;
+}
+div.login_ table.loginform_ td input.login_uid_ {
+	width: 300px;
+}
+div.login_ table.loginform_ td input.login_pwd_ {
+	width: 300px;
+}
+div.login_ table.loginform_ td input.login_uid_mail_ {
+	width: 300px;
+}
+/* --------------------------------------------------------------------
+	パスワードを忘れた方
+--------------------------------------------------------------------- */
+table.askpass_ {
+	margin-bottom: 10px;
+}
+table.askpass_ th {
+	width: 16em;
+}
+/* --------------------------------------------------------------------
+	マイページ・会員情報
+-------------------------------------------------------------------- */
+div.customer_ {
+}
+
+div.customer_ table {
+	width: 100%;
+}
+div.customer_ table.customer_,
+div.customer_ table.customerconfirm_ {
+	margin-bottom: 20px;
+}
+div.customer_ table.customer_
+th, div.customer_ table.customerconfirm_ th {
+	width: 25%;
+}
+
+/* --------------------------------------------------------------------
+	新規会員登録
+-------------------------------------------------------------------- */
+div.customer_ .agreebody_ {
+	margin: 20px 0;
+	width: 100%;
+}
+/* --------------------------------------------------------------------
+	マイページ　トップ
+-------------------------------------------------------------------- */
+div.mypagetop_.col1_ {
+	padding-left: 0;
+	padding-right: 0;
+}
+div.mypagetop_.col1_ .common_headline2_ {
+	background-image: url(http://www.famima.com/img/usr/common_h2_960.png);
+}
+div.customer_status_ {
+	margin: 0 0 20px 0;
+	padding: 0 10px 10px 10px;
+	width: 500px;
+
+}
+div.mypagetop_ div.customer_status_ {
+	float: left;
+}
+div.continue_ {
+	float: right;
+}
+.loginname_ {
+	font-weight: bold;
+}
+.mypoint_ {
+}
+p.recommend_ {
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+div.mymenu_ {
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+}
+div.mymenu_ h2 {
+	clear: both;
+}
+div.mymenu_Line_ {
+	float: left;
+	width: 720px;
+}
+div.mypagetop_.col1_ div.mymenu_Line_ h2.inner_headline2_ {
+	width: 640px;
+	background-image: url(http://www.famima.com/img/usr/common_h2_660.png);
+	margin-top:30px;
+}
+
+div.mymenu_item_ {
+	margin: 0;
+	padding: 0 5px 10px 5px;
+	width: 230px;
+	overflow: hidden;
+	float: left;
+}
+div.mymenu_item_.logout_ {
+	margin: 0 0 0 15px;
+	display: inline;
+	/*padding: 5px;*/
+	width: 160px;
+	/*background: #F2EED2;*/
+}
+div.mymenu_item_.logout_ #mymenu_withdrawal {
+	margin-bottom: 5px;
+}
+div.mymenu_item_.logout_ #mymenu_logout {
+}
+div.mymenu_ .address_ {
+	margin-right: 0;
+	float: right;
+}
+
+div.mymenu_item_ .img_ {
+	margin: 0;
+	float: left;
+	display: inline;
+	width: 60px;
+}
+div.mymenu_item_ .desc_ {
+	margin-bottom: 5px;
+	float: right;
+	display: inline;
+	width: 170px;
+}
+div.mymenu_item_ h2 {
+	margin: 0 0 5px 0;
+	padding: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	background: url(http://www.famima.com/img/usr/dotline1.png) left bottom repeat-x;
+}
+div.mymenu_item_ p, div.mymenu_item_ ul {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+div.mymenu_item_ ul li {
+	margin: 0;
+	padding-left: 7px;
+	background: url(http://www.famima.com/img/usr/arrow_s_y.png) 0 6px no-repeat;
+}
+
+td.mymenu_ h2 {
+	clear: both;
+}
+td.mymenu_item_ {
+	margin: 0 5px 10px 5px;
+	padding: 0 0 10px 0;
+	width: 227px;
+	overflow: hidden;
+	float: left;
+}
+td.mymenu_item_ .img_ {
+	margin: 0 5px 0 10px;
+	float: left;
+	display: inline;
+	width: 60px;
+}
+td.mymenu_item_ .desc_ {
+	float: right;
+	display: inline;
+	width: 150px;
+}
+td.mymenu_item_ h2 {
+	margin: 0 0 10px 0;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+}
+td.mymenu_item_ p, div.mymenu_item_ ul {
+}
+td.mymenu_item_ ul li {
+	margin-left: 2em;
+	list-style: square;
+}
+/* 2011/11/3 add start */
+table.t_p_renkei_ {
+	width: 960px;
+	margin: 30px 0 30px 0;
+	border: 1px solid #CCC;
+}
+
+table.t_p_renkei_ .bk_color1_ {
+	font-size: 14px;
+	background-color: #CCFF00;
+	padding-left: 7px
+}
+
+table.t_p_renkei_ .bk_color2_ {
+	font-size: 14px;
+	background-color: #F0F0F0;
+}
+
+table.t_p_renkei_ .link {
+	font-size: 12px;
+}
+table.t_p_renkei_ .limit {
+	font-size: 10px;
+}
+table.t_p_renkei_p {
+	width: 660px;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	border: 1px solid #CCC;
+}
+table.t_p_renkei_p th{
+	width: 220px;
+	height: 30px;
+	font-size: 12px;
+	background-color: #F2FEE2;
+	border: 1px solid #CCC;
+	text-align: center;
+	vertical-align:middle;
+}
+table.t_p_renkei_p td{
+	font-size: 12px;
+	height: 30px;
+	background-color: #FFFFFF;
+	border: 1px solid #CCC;
+	text-align: center;
+	vertical-align:middle;
+}
+.t_mark_{
+	vertical-align:-2px;
+}
+.t_mark2_{
+	vertical-align:-3px;
+}
+.t_status_{
+	font-size:14px;
+	font-weight: bold;
+	/* margin: 0px 0px 0px 5px; */
+}
+.t_point_in_ {
+	font-size:14px;
+	font-weight: bold;
+	margin: 0px 0px 0px 5px;
+	color: #ec0100;
+}
+
+/* 2011/11/3 add end */
+
+/* --------------------------------------------------------------------
+	マイページ　購入履歴
+-------------------------------------------------------------------- */
+div.customer_ .method_addr_ {
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+div.customer_ .destgoodslist_ {
+	margin-bottom: 20px;
+}
+table.history_ {
+	margin-bottom: 20px;
+}
+table.history_ th {
+	font-weight: bold;
+}
+table.history_ td.order_dt_ {
+	white-space: nowrap;
+}
+table.history_ td.order_detail_ ul {
+	margin-bottom: 5px;
+}
+table.history_ td.order_detail_ ul li {
+	margin-left: 2em;
+	list-style: square;
+}
+table.history_ td.order_detail_ p.order_again_ {
+	padding: 5px;
+	text-align: right;
+	font-weight: bold;
+}
+table.history_ td.total_ {
+	text-align: center;
+	font-size: 14px;
+}
+table.history_ div.img_ img {
+    width: 70px;
+}
+ul.historydetail_ {
+	margin: 10px auto;
+	width: 18em;
+}
+ul.historydetail_ li {
+	margin-left: 2em;
+	font-weight: bold;
+	list-style: square;
+}
+/* --------------------------------------------------------------------
+	マイページ　カード情報確認
+-------------------------------------------------------------------- */
+div.cardedit_ {
+}
+div.cardedit_ table th {
+	width: 16em;
+}
+/* 現在の登録内容 */
+div.cardedit_info_ {
+	margin-bottom: 20px;
+}
+/**/
+td.card_ label {
+	margin: 0 20px 0 5px;
+}
+/* --------------------------------------------------------------------
+	マイページ　メールアドレス変更
+-------------------------------------------------------------------- */
+table.mailchange_ {
+	margin-bottom: 10px;
+}
+table.mailchange_ th {
+	width: 16em;
+}
+/* --------------------------------------------------------------------
+	マイページ　ID変更
+-------------------------------------------------------------------- */
+table.idchange_ {
+	margin-bottom: 10px;
+}
+table.idchange_ th {
+	width: 16em;
+}
+/* --------------------------------------------------------------------
+	マイページ　パスワード変更
+-------------------------------------------------------------------- */
+table.passchange_ {
+	margin-bottom: 10px;
+}
+table.passchange_ th {
+	width: 16em;
+}
+/* --------------------------------------------------------------------
+	マイページ　お気に入り
+-------------------------------------------------------------------- */
+div.customer_ .bookmark_frame_ {
+	border-top: 1px dotted #CCC;
+	margin-bottom: 10px;
+}
+div.customer_ div.bookmark_item_ {
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px dotted #CCC;
+}
+div.bookmark_item_ div.cartgoods_ {
+	padding: 10px;
+	float: left;
+	display: inline;
+	width: 15px;
+}
+div.bookmark_item_ div.img_ {
+	padding: 10px 10px 10px 0;
+	float: left;
+	display: inherit;
+	width: 100px;
+	overflow: hidden;
+}
+div.bookmark_item_ div.img_ img {
+	width: 100px;
+}
+div.bookmark_item_ div.desc_ {
+	padding: 10px 0;
+	float: left;
+	display: inline;
+	width: 600px;
+}
+div.bookmark_item_ div.name_ {
+	margin-bottom: 5px;
+}
+div.bookmark_item_ div.spec_ {
+	margin-bottom: 5px;
+}
+div.bookmark_item_ .edit_memo_ {
+	margin-top: 5px;
+	font-weight: bold;
+}
+div.bookmark_item_ .memo_ {
+	padding: 5px;
+	border: 1px solid #CCC;
+	background: #F8F8F8;
+}
+div.bookmark_item_ div.del_ {
+	padding: 10px;
+	float: right;
+	display: inline;
+	width: 60px;
+}
+div.bookmark_buy_ {
+	margin-bottom: 20px;
+}
+/* --------------------------------------------------------------------
+	マイページ　お問い合わせ
+-------------------------------------------------------------------- */
+div.contact_ {
+}
+div.contact_ table {
+	width: 100%;
+}
+/* new お問合せフォーム */
+div.contact_ table.contact_ th {
+	width: 16em;
+}
+div.contact_ table.contact_ td {
+}
+div.contact_ div.contact_reform_ {
+	margin:auto;
+	text-align:center;
+}
+/* --------------------------------------------------------------------
+	マイページ　お問い合わせ履歴
+-------------------------------------------------------------------- */
+/* お問合せ履歴 */
+div.contact_ ul.contactlist_ {
+}
+div.contact_ ul.contactlist_ li {
+	padding: 10px;
+	border-bottom: 1px dotted #CCC;
+}
+div.contact_ table.detaillistline_ {
+	border: dotted 1px;
+	margin:2px auto;
+}
+/* お問合せ詳細 */
+.contactdetail_title_ {
+	margin-bottom: 20px;
+	padding: 10px;
+	font-size: 14px;
+	border-bottom: 1px dotted #CCC;
+	border-top: 1px dotted #CCC;
+}
+.contactdetail_title_ .subject_ {
+	margin-left: 20px;
+	font-weight: bold;
+}
+.contactdetail_title_ .id_ {
+	margin-left: 10px;
+	font-size: 10px;
+}
+/* スレッド */
+div.contactlist_ {
+	margin-bottom: 20px;
+}
+div.contactlist_ .contactlist_order_id_ {
+}
+div.contactlist_ .contactlist_goods_ {
+	margin: 0 0 0 20px;
+}
+div.contactlist_line_ {
+	margin-top: 10px;
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+div.contactlist_line_ .contactlist_head_ {
+	width: 100%;
+	overflow: hidden;
+	background: #F0F0F0;
+	border-bottom: 1px solid #CCC;
+}
+div.contactlist_line_ .contactlist_head_ .name_ {
+	padding: 5px;
+	float: left;
+	display: inline;
+	font-weight: bold;
+	width: 40%;
+}
+div.contactlist_line_ .contactlist_head_ .updt_ {
+	padding: 5px;
+	float: right;
+	display: inline;
+	text-align: right;
+	width: 40%;
+}
+div.contactlist_line_ .comment_ {
+	padding: 10px;
+}
+/* --------------------------------------------------------------------
+	マイページ　退会
+-------------------------------------------------------------------- */
+table.withdrawal_ {
+	margin-bottom: 10px;
+}
+table.withdrawal_ th {
+	width: 16em;
+}
+
+/* --------------------------------------------------------------------
+	酒類購入規約
+-------------------------------------------------------------------- */
+div.pagree_ {
+	width: 960px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #FAECEC;
+}
+
+div.pagree_ .comment_ {
+	text-align: center;
+	font-size: 12px;
+	color: #FF0000;
+	padding-bottom: 8px;
+}
+
+div.pagree_ .title_ {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-block; 
+	_display: inline;
+}
+
+div.pagree_ .form_ {
+	font-weight: normal;
+	display: inline-block; 
+	_display: inline;
+}
+
+div.pagree_ .err_ select{
+	background-color: #FEB7BF;
+	display: inline-block; 
+	_display: inline;
+}
+
+div.pagree_ .error_ {
+    clear: both;
+    height: auto !important;
+    min-height: 20px;
+    padding-left: 20px;
+}

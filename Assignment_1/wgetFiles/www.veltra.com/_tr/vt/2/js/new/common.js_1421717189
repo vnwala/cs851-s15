@@ -1,0 +1,640 @@
+$(document).ready(function() {
+        /**********
+         global variables
+        **********/
+        $is_HUB_page = false; // var to detect is HUB area top page
+        if($('#HUB').length > 0) {
+             $is_HUB_page = true;
+         }
+        
+	/**********
+	Site Navigation
+	***********/
+	/*$('#primary a').click(function(e) {
+		e.preventDefault();
+		$('#primary').toggleClass('selected').siblings('#primary_child').toggle();
+		$('#secondary').removeClass('selected');
+		$('#secondary_child').hide();
+
+		// a div to hide the dropdown when click outside the dropdown
+		$(".dropdown_overlay").show();
+	});
+
+	$('#primary_child a').click(function(e) {
+		//e.preventDefault();
+		// temporary hacks for testing purpose in london.html
+		$urlVal = $(this).attr('href');
+		if($urlVal == '#') {
+			e.preventDefault();
+			var $val = $(this).text();
+			$('#primary_child').hide();
+			$('#primary').removeClass('selected');
+			$('#primary > a').html($val);
+			$('#secondary').show();
+		}
+		// a div to hide the dropdown when click outside the dropdown
+		$(".dropdown_overlay").show();
+	});
+
+	$('#secondary a.parent').click(function(e) {
+		e.preventDefault();
+		$(this).parent().toggleClass('selected');
+		$(this).siblings('#secondary_child').toggle();
+		$('#primary').removeClass('selected');
+		$('#primary_child').hide();
+
+		// a div to hide the dropdown when click outside the dropdown
+		$(".dropdown_overlay").show();
+	});
+
+	$('#secondary_child a').click(function(e) {
+		//e.preventDefault();
+		var $val = $(this).text();
+		$('#secondary').removeClass('selected');
+		$('#secondary > a').html($val);
+		$('#secondary_child').hide();
+		// a div to hide the dropdown when click outside the dropdown
+		$(".dropdown_overlay").show();
+	});*/
+
+	$(".dropdown_overlay").click(function() {
+		$(this).hide();
+		$('.dropdown_parent').removeClass('selected');
+		$('.dropdown_child').hide();
+                
+                // if is new category page or similar page that has hidden side nav in 960px layout
+                if($('.responsive_layout').length > 0) {
+                    if($('.side_nav').length > 0) {
+                        if($('.side_nav > ul.parent_side').is(':visible')) {
+                            $('.side_nav > ul.parent_side').hide();
+                        }
+                    }
+                }
+                
+                // #8184 Sightseeing area search
+                if($('#area_top_sightseeing_search').length > 0){
+                    $('#area_top_sightseeing_search_popup').hide();
+                }
+                
+                
+	});
+        
+        
+        $('#primary, #secondary > a.parent').click(function() {
+            if($('.dropdown_overlay').is(':visible')) {
+                $('.dropdown_overlay').hide();
+            } else {
+                $('.dropdown_overlay').show();
+            }
+        });
+        
+
+        /* #7728 start */
+       $('#primary, #primary_child').click(function() {
+		$('#primary').toggleClass('selected').siblings('#primary_child').toggle();
+		$('#secondary').removeClass('selected');
+		$('#secondary_child').hide();
+	});
+
+        $('#secondary').click(function() {
+		$('#secondary').toggleClass('selected');
+		$('#secondary_child').toggle();
+		$('#primary').removeClass('selected');
+		$('#primary_child').hide();
+	});
+
+        $('#primary.dropdown_parent > a, #secondary a.parent').click(function(e) {
+                e.preventDefault();
+        });
+        
+        $('#primary_child, #secondary_child').click(function() {
+                $(".dropdown_overlay").addClass('hide').hide();
+        });
+        /* #7728 end */
+
+	/**********
+	Body Interaction
+	***********/
+	//insertHRTag();
+
+
+	// monitor tour
+	$('.monitor_slider').bxSlider({
+	    slideWidth: 80,
+	    infiniteLoop: false,
+	    hideControlOnEnd: true,
+	    pager: false,
+	    adaptiveHeight : true,
+	    minSlides: 4,
+	    maxSlides: 4,
+	    moveSlides: 1,
+	    slideMargin: 5
+	  });
+
+	$('.monitor_slider .ac_block').click(function() {
+		$price = $(this).data('price');
+		$discount = $(this).data('discount');
+		$image = $(this).data('image');
+		$url = $(this).data('url');
+		$title = $(this).data('title');
+		$id = $(this).data('id');
+                $quantity = $(this).data('quantity');
+
+		$('.monitor_slider .ac_block img').css('opacity','1');
+		$('.monitor_slider .ac_block').each(function() {
+			$loopID = $(this).data('id');
+			if($id==$loopID) {
+				$(this).children('img').css('opacity','0.6');
+			}
+		});
+		$(this).find('img').css('opacity','0.6');
+
+		$('#MonitorTours .first .discount').html($discount);
+		$('#MonitorTours .first img').attr('src',$image);
+		$('#MonitorTours .first a').attr('href',$url);
+		$('#MonitorTours .first .info .title').html($title);
+		$('#MonitorTours .first .info .price span').html($price);
+                if(typeof $quantity != 'undefined'){
+                    $('#MonitorTours .first .info .quantity').html($quantity);
+                }
+	});
+
+        // optimized_design popular categories tour
+        $popular_cat_slider = $('.popular_cat_slider').length;
+        $campaign_slider = $('.campaign_slider').length;
+
+        if($popular_cat_slider > 0) {
+           var pop_carousel = $('.popular_cat_slider').bxSlider({
+                useCSS: false, // disable use of CSS animation, to prevent IE10 - 11 error
+                oneToOneTouch: false, // mobile / tablet need this
+                slideWidth: 294,
+                infiniteLoop: false,
+                hideControlOnEnd: true,
+                pager: false,
+                adaptiveHeight : true,
+                minSlides: 2,
+                maxSlides: 4,
+                moveSlides: 0,
+                slideMargin: 10,
+                onSliderLoad: function(){
+                    $(".popular_cat_slider").css("visibility", "visible"); // prevent broken layout on slow machine. Hide everything 1st, then only visible slider when slider is fully loaded
+                  }
+              });
+              
+              // #8034 reload the slider to avoid responsive issue
+              $(window).resize(function() {
+                pop_carousel.reloadSlider();
+              });
+              // #8034 end
+        }
+
+        if($campaign_slider > 0) {
+            var camp_carousel = $('.campaign_slider').bxSlider({
+                useCSS: false, // disable use of CSS animation, to prevent IE10 - 11 error
+                oneToOneTouch: false, // mobile / tablet need this
+                slideWidth: 170,
+                infiniteLoop: false,
+                hideControlOnEnd: true,
+                pager: false,
+                adaptiveHeight : true,
+                minSlides: 4,
+                maxSlides: 6,
+                moveSlides: 4,
+                slideMargin: 5
+              });
+              
+              // #8034 reload the slider to avoid responsive issue
+              $(window).resize(function() {
+                camp_carousel.reloadSlider();
+              });
+              // #8034 end
+        }
+
+          /* TW section
+
+	//BxSlider slides counter for campaign & recommend section
+        $('#Campaign .balloon .balloon_body, #Recommend .balloon .balloon_body').show();
+
+
+        var paginate_page   = typeof special_deal_item_paginate_page !== 'undefined' ? special_deal_item_paginate_page : 1;
+        var paginate_limit  = typeof special_deal_item_paginate_limit !== 'undefined' ? special_deal_item_paginate_limit : 20;
+        var m_origin_id     = typeof special_deal_item_m_origin_id !== 'undefined' ? special_deal_item_m_origin_id : 0;
+        var total_item      = typeof special_deal_item_total_item !== 'undefined' ? special_deal_item_total_item : 20;
+        var lang_id         = typeof special_deal_item_lang_id !== 'undefined' ? special_deal_item_lang_id : 1;
+
+        function checkRequest(current_slide, item_per_slide, runtime_item_count){
+            //number of item is already displayed (for runtime item)
+            display_item_count     = (current_slide + 1) * item_per_slide;
+            //number of item is not yet displayed (for runtime item)
+            hide_item_count  = runtime_item_count - display_item_count;
+            //console.log('checkRequest - runtime item count:%s, displayed count:%s, hide count:%s, item per slide:%s', runtime_item_count, display_item_count, hide_item_count, item_per_slide);
+
+            //console.log('checkRequest: display_item_count:%s, hide_item_count:%s, item_per_slide:%s, runtime_item_count:%s, total_item:%s', display_item_count, hide_item_count, item_per_slide, runtime_item_count, total_item);
+            if(hide_item_count < paginate_limit && runtime_item_count < total_item){
+                paginate_page += 1;
+                //console.log('checkRequest=true. paginate_page:%s, paginate_limit:%s', paginate_page, paginate_limit);
+                return true;
+            }
+            else {
+                //console.log('checkRequest=false.');
+                return false;
+            }
+        }
+
+        var compaginSliderOptions = {
+	    slideWidth: 220,
+	    infiniteLoop: true,
+	    pager: false,
+	    adaptiveHeight : true,
+            minSlides: 4,
+	    maxSlides: 6,
+            slideMargin: 10,
+
+            customTotalItem: total_item,
+
+            //debug only
+            //minSlides: 2,
+	    //maxSlides: 2,
+
+	    onSlideBefore: function($slideElement, oldIndex, newIndex){
+                //console.log('onSlideBefore oldIndex:%s, newIndex:%s', oldIndex, newIndex);
+                //console.log('onSlideBefore runtime item count:%s, current slide number:%s', slider.getSlideCount(), slider.getCurrentSlide());
+
+                if(checkRequest(slider.getCurrentSlide(), compaginSliderOptions.customTotalItem, slider.getSlideCount()) == true){
+                    $.ajax({
+                        type: 'GET',
+                         url: '/tr_json/special_deal_item/',
+                        data: {m_origin_id: m_origin_id, page: paginate_page, limit: paginate_limit, lang_id: lang_id},
+                    dataType: 'json',
+                        success: function(data)
+                        {
+                            if(data != null && typeof data.total_item !== 'undefined'){
+                                //update total item
+                                //console.log('ajax response - update total_item:%s', data.total_item);
+
+                                //special_deal_item_total_item = data.total_item;
+                                total_item = data.total_item;
+                            }
+
+                            if(data != null && data.status == 'success' && jQuery.isEmptyObject(data.list) == false){
+                                $.each(data.list, function(i, item) {
+                                    $('.campagin_slider').append(item);
+                                });
+                                $('#Campaign .balloon .balloon_body').show();
+
+                                compaginSliderOptions.startSlide = slider.getCurrentSlide();
+                                //console.log('ajax response - reload and start slide at:%s, infiniteLoop:%s', compaginSliderOptions.startSlide, compaginSliderOptions.infiniteLoop);
+                                slider.reloadSlider(compaginSliderOptions);
+                            }
+                       }
+                    });
+                }
+            },
+            onSlideAfter: function ($slideElement, oldIndex, newIndex){
+	        var slide_count = this.customTotalItem;
+	        var slide_curr  = slider.getCurrentSlide();
+	        insertCount(slide_curr, Math.ceil(slide_count/$moveSlides_campaign), '#Campaign .slide-counter');
+            },
+            onSlideNext: function($slideElement, oldIndex, newIndex) {
+            },
+            onSlidePrev: function (){
+                var slide_count = this.customTotalItem;
+	        var slide_curr  = slider.getCurrentSlide();
+	        insertCount(slide_curr, Math.ceil(slide_count/$moveSlides_campaign), '#Campaign .slide-counter');
+            },
+            onSliderResize: function() {
+            }
+        };
+
+        var slider = $('.campagin_slider').bxSlider(compaginSliderOptions);
+
+	// when window resize, change the moveSlides number
+	if($(window).width() > 1280) {
+            $moveSlides_campaign = 6;
+	} else {
+            $moveSlides_campaign = 4;
+	}
+
+	$(window).resize(function() {
+            if($(window).width() > 1280) {
+                $moveSlides_campaign = 6;
+            } else {
+                $moveSlides_campaign = 4;
+            }
+            // reload again to change to correct pagination, after resize
+            showCountInit('#Campaign .slide-counter', slider);
+	});
+
+	// display the current slide / total slide when the carousel is loaded
+	showCountInit('#Campaign .slide-counter', slider);
+
+	function showCountInit(obj, slider) {
+            current_page    = slider.getCurrentSlide()+1;
+            total_page      = Math.ceil(total_item / $moveSlides_campaign);
+
+            //console.log('showCountInit: total_item:%s, current_page:%s, total_page:%s, item_per_slide:%s', total_item, current_page, total_page, $moveSlides_campaign);
+            $(obj).html('<strong>' + current_page + ' / ' + total_page +  '</strong>');
+	}
+
+	function insertCount(slide_curr,slide_count,obj){
+            $(obj).html('<strong>'+(slide_curr + 1) +' / '+ slide_count +'</strong>');
+	};
+	//BxSlider slides counter end
+
+ end TW section */
+
+	//use JS to put in the HR line for the campaign & recommend section
+	/*$(window).resize(function() {
+		// clear and remove the previous HR tag
+		$('#Campaign .centralize_wrapper hr').each(function() {
+			$(this).remove();
+		});
+
+		$('#Recommend .centralize_wrapper hr').each(function() {
+			$(this).remove();
+		});
+
+		insertHRTag();
+        });*/
+
+    function insertHRTag() {
+		// for smaller than 1280px
+		if($(window).width() < 1200) {
+			// Insert new HR tag
+	    	var $HRSpawnCount = 0;
+	    	var $HRSpawnCount02 = 0;
+	    	$('#Campaign .centralize_wrapper .ac_block').each(function() {
+	    		$HRSpawnCount++;
+	    		if($HRSpawnCount == 2) {
+	    			$('<hr />').insertAfter($(this));
+	    			$HRSpawnCount = 0;
+	    		}
+	    	});
+
+	    	$('#Recommend .centralize_wrapper .ac_block').each(function() {
+	    		$HRSpawnCount02++;
+	    		if($HRSpawnCount02 == 2) {
+	    			$('<hr />').insertAfter($(this));
+	    			$HRSpawnCount02 = 0;
+	    		}
+	    	});
+    	}
+
+    	// for wider than 1280px
+		if($(window).width() > 1200) {
+			// Insert new HR tag
+	    	var $HRSpawnCount = 0;
+	    	var $HRSpawnCount02 = 0;
+	    	$('#Campaign .centralize_wrapper .ac_block').each(function() {
+	    		$HRSpawnCount++;
+	    		if($HRSpawnCount == 3) {
+	    			$('<hr />').insertAfter($(this));
+	    			$HRSpawnCount = 0;
+	    		}
+	    	});
+
+	    	$('#Recommend .centralize_wrapper .ac_block').each(function() {
+	    		$HRSpawnCount02++;
+	    		if($HRSpawnCount02 == 3) {
+	    			$('<hr />').insertAfter($(this));
+	    			$HRSpawnCount02 = 0;
+	    		}
+	    	});
+    	}
+
+    	//remove the last hr tag
+    	$('#Campaign .centralize_wrapper hr:last-child').remove();
+    	$('#Recommend .centralize_wrapper hr:last-child').remove();
+	}
+
+
+	// back to top
+	$('.btn_back_top a').click(function (e) {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		e.preventDefault();
+	});
+
+	//filter pop up
+	/*$(".category_list_link").click(function(e) {
+		e.preventDefault();
+		$("#CategoryList").show();
+		$(".category_list_popup_overlay").show();
+	});*/
+/* hide for #7831, as we don't need anymore
+        var hideCategoryListTimer;
+        $(".category_list_link_parent a, #CategoryList").hover(
+            function() {
+                $("#CategoryList").show();
+                clearTimeout(hideCategoryListTimer);
+            },
+            function() {
+                 hideCategoryListTimer = setTimeout(function() {
+                     $("#CategoryList").hide();
+                 },500);
+        });
+
+        $(".category_list_link").click(function(e) {
+		e.preventDefault();
+		$("#CategoryList").show();
+	});
+
+        $(".category_list_link").click(function(e){
+                e.preventDefault();
+        });
+
+	$("#CategoryList").find(".btn_close").click(function(e) {
+		e.preventDefault();
+		$("#CategoryList").hide();
+		$(".category_list_popup_overlay").hide();
+	});
+
+	// close when click outside the pop up
+	$(".category_list_popup_overlay").click(function(){
+	    $("#CategoryList").hide();
+	    $(".category_list_popup_overlay").hide();
+	});
+end 7831 */
+	//customize scroller
+	/*$(".scroller").mCustomScrollbar({
+            theme:"dark",
+            scrollInertia: 400
+        });*/
+
+        /* #7728 start */
+        //make equals height to every div in 5 star reviews section
+        //set the starting bigestHeight variable
+        if($('#FiveStar .w_294 .info').length > 0){
+            var biggestHeight = 0;
+            //check each of them
+            $('#FiveStar .w_294 .info').each(function(){
+                //if the height of the current element is
+                //bigger then the current biggestHeight value
+                if($(this).height() > biggestHeight){
+                    //update the biggestHeight with the
+                    //height of the current elements
+                    biggestHeight = $(this).height();
+                }
+            });
+            //when checking for biggestHeight is done set that
+            //height to all the elements
+            $('#FiveStar .w_294 .info').height(biggestHeight);
+        }
+        /* #7728 end */
+
+        /* #7828 start */
+        if($('#FiveStar .w_294').length > 0){
+            var fivestar_ac_block = 0;
+            $('#FiveStar .w_294').each(function(){
+                fivestar_ac_block++;
+            });
+        }
+
+        //when init load in smaller screen
+        if($(window).width() < 1200) {
+            if($is_HUB_page != true) {
+                if(fivestar_ac_block == 4) {
+                    $('#FiveStar .w_294:last-child').hide();
+                }
+            }
+        }
+
+        //when resize down
+        $(window).resize(function() {
+            if($is_HUB_page != true) {
+                if(fivestar_ac_block == 4) {
+                    if($(window).width() < 1200) {
+                        $('#FiveStar .w_294:last-child').hide();
+                    } else {
+                        $('#FiveStar .w_294:last-child').show();
+                    }
+                }
+            }
+        });
+        /* #7828 end */
+
+        /* IE7 Hacks to solve dropdown menu overlap start */
+        if(navigator.appVersion.indexOf("MSIE 7.")!=-1) {
+            var zIndexNumber = 100000;
+                $('#Header div, #Header li, #PopularCategories').each(function() {
+                $(this).css('zIndex', zIndexNumber);
+                zIndexNumber -= 10;
+            });
+        }
+
+        $('.notice a').click(function(){
+            $('html, body').animate({
+                scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+            }, 500);
+            return false;
+        });
+        
+        
+        // HUB Area Top page custom script
+         if($is_HUB_page == true) {
+            if($('#PromoTheme').length > 0) {
+                $banner_count = 0;
+                $('#PromoTheme ul.banner_list li').each(function() {
+                    $banner_count++;
+                    if($banner_count == 4) {
+                        $banner_count = 0;
+                        $(this).addClass('last');
+                    }
+                });
+            }
+        } // end $is_HUB_page == true
+        
+        
+        // #7906, 7767, 7724
+        if($('select.select_destination').length > 0) {
+            $('select.select_destination').each(function(){
+                var title = $(this).attr('title');
+                if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+                $(this)
+                    .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+                    .after('<span class="select_destination">' + title + '</span>')
+                    .change(function(){
+                        val = $('option:selected',this).text();
+                        $(this).next().text(val);
+                        })
+            });
+        }// end if($('select.select_destination').length > 0)
+        
+        if($('.responsive_layout').length > 0) {
+            if($('.side_nav').length > 0) {
+                $('.side_nav > .title').click(function() {
+                    if($('.side_nav > ul.parent_side').is(':visible')) {
+                        $('.side_nav > ul.parent_side').hide();
+                        $(".dropdown_overlay").hide();
+                    } else {
+                        $('.side_nav > ul.parent_side').show();
+                        $(".dropdown_overlay").show();
+                    }
+                });
+            }
+        }// end  if($('.responsive_layout').length > 0)
+        
+        
+        /******************
+        Merging the new design Header & Footer with JP old design body content
+        Note: Here is the script to force the new Header & Footer width to 960px
+        ******************/
+       /*
+       if($('.page_content').length == 0){
+           $('#Header').addClass('old_new_merged');
+           $('.tree').addClass('old_new_merged');
+           $('#SEOTitle').addClass('old_new_merged');
+           $('#Footer').addClass('old_new_merged');
+           if($('#header_02').length > 0){ // TA header
+               $('#header_02').addClass('old_new_merged');
+           }
+           
+           if($('#contents_wrapper').length > 0){
+               $('#contents_wrapper').addClass('old_new_merged');
+           } else if($('#contents_wrapper_border').length > 0){
+               $('#contents_wrapper_border').addClass('old_new_merged');
+           }
+       }
+       */
+      
+      if($('.page_content').length == 0){
+           if($('#header_02').length > 0){ // TA header
+               $('#header_02').addClass('old_new_merged');
+           }
+           
+           if($('#vtrheader').length > 0) { // #8178
+               $('#vtrheader').addClass('old_new_merged');
+            }
+       }
+       
+       
+       /******************
+        Override for the new design page that has common element / class name as old design
+        such as 'wrapper', breadcrumb 'tree' div (#8091)
+        ****************/
+       if($('.page_content').length > 0){
+           if($('.wrapper').length > 0){ // this condition is make for #8091
+               $('.wrapper').addClass('new_design');
+           }
+           
+           if($('#header_02').length > 0){ // TA header
+               $('#header_02').addClass('new_design');
+           }
+           
+           if($('.sticky_header_banner').length > 0){ // this condition is make for #8091
+               $('.sticky_header_banner').addClass('new_design');
+           }
+           
+           if($('.container.crumbarea').length == 0) {
+               if($('.tree').length > 0) {
+                   $('.tree').wrap('<div class="container crumbarea">'); // wrap .tree with breadcrumb container
+               }
+           }
+       }
+       
+       if($('#vtrheader').length > 0) { // #8178
+           $('#vtrheader').wrapInner('<div class="container">');
+       }
+});
+

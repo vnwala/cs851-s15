@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #666;
+	line-height: 125%;
+	background: url(../shop/item/foula/design/img05/bg-page_background.gif) center top repeat-y;
+}
+
+a:link
+{
+	color: #04C;
+	text-decoration: underline;
+}
+
+a:visited
+{
+	color: #C69;
+	text-decoration: underline;
+}
+
+a:hover
+{
+	color: #F09;
+	text-decoration: underline;
+}
+
+a:active
+{
+	color: #6F6;
+	text-decoration: none;
+}
+
+#wrapper
+{
+	width: 950px;
+	margin: 0 auto;
+}
+
+#subWrapper
+{
+	width: 98%;
+	margin: 0 auto;
+}
+
+#mainColumn
+{
+	float: left;
+	width: 730px;
+	margin-left: 0.8em;
+}
+
+/*-- clear --*/
+.clear
+{
+	clear: both;
+}
+
+/*-- clearfix --*/
+.clearfix:after{
+	content:".";	/* 新しい要素を作る */
+	display:block;	/* ブロックレベル要素に */
+	clear:both;
+	height:0;
+	visibility:hidden;
+}
+.clearfix{
+	min-height:1px;
+}
+* html .clearfix{
+	height:1%;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+

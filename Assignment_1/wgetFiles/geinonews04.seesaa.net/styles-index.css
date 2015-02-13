@@ -1,0 +1,484 @@
+/* font size & font family */
+body{font-family:"ƒƒCƒŠƒI";}
+.description{font-size: 90%;}
+h2{font-size: 90%;}
+.blogbody{font-size: 90%;}
+.listCategoryArticle > ul > li{font-size: 80%;}
+.navi{font-size: 80%;}
+.comments-body{font-size: 80%;}
+.tag-search{font-size:80%;}
+.tag-more{font-size:80%;}
+.side{font-size: 80%;}
+.syndicate{font-size:80%;}
+#calendar{font-size: 80%;}
+
+/* blogstyle */
+
+
+body{
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/bg.gif);
+  margin: 0;
+  color: #583822;
+  line-height:20px;
+  _text-align: center;
+  }
+
+a{
+  color:#f39800;
+  }
+
+#container{
+  width: 850px;
+  margin:0px auto;
+  overflow: hidden;
+  _text-align: left;
+  }
+
+#banner{
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/header.jpg) top no-repeat;
+  height: 125px;
+  }
+
+h1{
+  margin:0;
+  line-height: 50px;
+  }
+
+h1 a{
+  color: #583822;
+  text-decoration: none;
+  }
+
+
+/* Left */
+#content{
+  width:585px;
+  float: left;
+  margin-right: 15px;
+  }
+
+.blog{
+  width: 565px;
+  margin-bottom:40px;
+  padding: 25px 10px 10px 10px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/blog_bg.gif);
+  text-align: right;
+  position:relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  }
+
+/* Article */
+h2{
+  margin: 0;
+  padding-bottom:6px;
+  display: inline;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/border.gif) no-repeat bottom;
+  }
+
+.blogbody{
+  text-align: left;
+  margin-top: 15px;
+  }
+
+h3{
+  height:30px;
+  margin:0;
+  padding:0 5px;
+  position: absolute;
+  top:-15px;
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/contents_title.gif);
+  line-height:30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  display: inline;
+  /left:8px;
+  }
+
+h3 a{
+  color: #583822;
+  text-decoration: none;
+  }
+
+.text{
+  margin-bottom:10px;
+  color: #765239;
+  }
+
+blockquote{
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/blockquote.gif);
+  border: 1px #e7d6c2 solid;
+  padding:10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+
+.bookmark{
+  margin:10px 0px;
+  }
+
+.posted{
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/border.gif) top no-repeat;
+  padding-top: 15px;
+  }
+
+/* Recent Entries */
+.listCategoryArticle{
+  margin-top:10px;
+}
+
+.listCategoryArticle > ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+  }
+
+.listCategoryArticle > ul > li{
+  height:19px;
+  margin: 2px;
+  }
+
+.listCategoryArticle > ul > li a{
+  padding-left:25px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/list_green.gif) left center no-repeat;
+  }
+
+.listCategoryArticle > ul > li a:visited{
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/list_orange.gif) left center no-repeat;
+  }
+
+/* Diet */
+#diet-container{
+  width:510px;
+  padding: 50px 10px 10px 10px;
+  margin:0px auto 10px auto;
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/diet.gif) no-repeat top left #f6f1e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+
+.diet-content{
+  padding-bottom:10px;
+  border-bottom: 1px dotted #e0cfb1;
+  margin-bottom:10px;
+  }
+
+.diet-title{
+  font-weight: bold;
+  }
+
+.food-title{
+  float:left;
+  margin-right:15px;
+  width:4.5em;
+  clear:left;
+  }
+
+/* Navigation */
+.navi{
+  margin-bottom: 30px;
+  text-align:center;
+ }
+
+.navi > a{
+  text-decoration: none;
+  }
+
+/*  Comments, Trackback */
+#comments , #trackback{
+  width: 565px;
+  margin-bottom:40px;
+  padding: 10px 10px 10px 10px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/blog_bg.gif);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  }
+
+.comments-head{
+  height:30px;
+  padding:5px;
+  line-height:30px;
+  background: #e8dfd5;
+  display: inline;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+
+.comments-body{
+  margin: 10px 0 10px 20px;
+  }
+
+.comments-post{
+  padding-bottom:15px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/border.gif) bottom no-repeat;
+  }
+
+.comments-body input[type="submit"]{
+  width:82px;
+  height: 34px;
+  color: #fff;
+  font-weight: bold;
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/button.gif);
+  border: 0;
+  margin: 10px 10px 0 0;
+  }
+
+#trackback hr{
+  border:1px solid #f0eade;
+  }
+
+/* Tag */
+.tag-word{
+  margin:20px 0px 0px 0px;
+  line-height:1.4em;
+}
+
+.tag{
+  width: 565px;
+  padding: 10px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/blog_bg.gif);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  }
+
+#tag_cloud{
+  margin-top: 20px;
+  }
+
+.tag-title{
+  height:30px;
+  padding:5px;
+  line-height:30px;
+  background: #e8dfd5;
+  display: inline;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
+
+.tag-search{
+  padding-bottom:15px;
+  background: url(http://blog.seesaa.jp/img/bg/decomoji/border.gif) bottom no-repeat;
+  margin-bottom: 10px;
+  }
+
+.tag-service{
+  font-weight: bold;
+  }
+
+.tag-article{
+  padding:0px 10px 10px 10px;
+  text-align:left;
+  position:relative;
+}
+.tag-article-title{
+  text-align:left;
+  padding:0px 0px 5px 0px;
+  font-weight:bold;
+  position:relative;
+}
+.tag-article-posted{
+  font-weight:normal;
+  position:relative;
+}
+.tag-article-summary{
+  padding:0px 10px;
+  line-height:1.4em;
+  position:relative;
+}
+.tag-photos{
+  margin:10px 5px;
+  width:140px;
+}
+.tag-photos-title{
+  padding:5px 0px;
+}
+.tag-audios{
+  margin:5px;
+  position:relative;
+}
+.tag-audios-title{
+  font-weight:bold;
+  padding:0px 0px 5px 0px;
+  position:relative;
+}
+.tag-audios-posted{
+  font-weight:normal;
+  position:relative;
+}
+.tag-videos{
+  float:left;
+  margin:10px 5px;
+  position:relative;
+}
+.tag-videos-title{
+  line-height:1.4em;
+  padding:5px 0px;
+  text-align:left;
+  position:relative;
+}
+.tag-navi{
+  clear:left;
+  text-align:center;
+  margin:10px 0px;
+  position:relative;
+}
+
+.tag-more{
+  margin-top: 15px;
+  }
+
+/* Right */
+#links{
+  width: 230px;
+  float: right;
+  }
+
+.sidetitle{
+  text-align: center;
+  height:36px;
+  line-height: 36px;
+  font-weight: bold;
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/side_tit.jpg) center no-repeat;
+  margin-bottom:5px;
+  }
+
+.side{
+  margin-bottom: 20px;
+  }
+
+/* Calendar */
+#calendar{
+  width: 230px;
+  margin-bottom: 20px;
+  }
+
+#calendar > table{
+  margin: 0px auto;
+  width:210px;
+  }
+
+.calendarhead{
+  text-align: center;
+  height:36px;
+  line-height: 36px;
+  font-weight: bold;
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/side_tit.jpg) center no-repeat;
+  margin-bottom:5px;
+  }
+
+.calendarhead a{
+  color: #583822;
+  text-decoration: none;
+  }
+
+#calendar > table th , #calendar > table td{
+  width:22px;
+  height:20px;
+  padding-bottom: 5px;
+  }
+
+#calendar > table th{
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/calendarday_orange.gif) top center no-repeat;
+  }
+
+#calendar > table td a{
+  background:url(http://blog.seesaa.jp/img/bg/decomoji/calendarday_green.gif) top center no-repeat;
+  display: block;
+  width:22px;
+  height:20px;
+  text-decoration: none;
+  color: #583822;
+  font-weight: bold;
+  }
+
+.seesaaArticleSearch{
+  margin: 0px auto;
+  }
+
+.side-tag{
+  margin-bottom: 20px;
+  }
+
+/* Etc */
+#footer{
+  width: 138px;
+  clear: both;
+  margin: 0 auto;
+  }
+
+.powered{
+  padding-top: 40px;
+  }
+
+#footer a{
+  text-decoration: none;
+  }
+
+
+/*Clearfix*/
+#container:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*\*/
+* html #container {
+    height: 1em;
+    overflow: visible;
+}
+/**/
+/* twitter quote */
+.tweetBlockQuote{
+ margin-bottom:10px;
+ overflow:hidden;
+ width:98%;
+}
+.tweetBlockQuote img{
+ border:0;
+}
+.tweetBlockQuote .tweetImg{
+ padding:0px;
+ width:53px;
+ text-align:left;
+ overflow:hidden;
+ vertical-align:top;
+ float:left;
+ margin-right:7px;
+}
+.tweetBlockQuote .tweetMain{
+ padding:5px;
+ border:solid 1px #ddd;
+ background:#fff;
+ color:#000;
+ overflow:hidden;
+ vertical-align:top;
+ float:left;
+ width:70%;
+}
+.tweetBlockQuote .tweetMain a.tweetOwner{
+ color:#E86390;
+ font-weight:bold;
+ text-decoration:none;
+}
+.tweetBlockQuote .tweetMain a.tweetFriends{
+ font-weight:bold;
+ color:#26A6DC;
+ text-decoration:none;
+}
+.tweetBlockQuote .tweetMain .tweetText{
+ color:#000;
+}
+.tweetBlockQuote .tweetMain .tweetText a{
+ color:#000;
+ text-decoration:underline;
+}
+.tweetBlockQuote .tweetMain .tweetDate{
+ color:#9C9C9C;
+}
+.tweetBlockQuote .tweetBoth{
+ clear:both;
+}
+/* twitter quote */

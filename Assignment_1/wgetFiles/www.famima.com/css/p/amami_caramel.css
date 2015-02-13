@@ -1,0 +1,148 @@
+@charset "shift_jis";
+
+/*
+Title: amami_caramel
+URI: http://famima.com/shop/pages/amami_caramel/
+*/
+
+
+#amamicaramel_bodytop	{ margin: 0; padding: 0; text-align: center; background-color: #502e0c;}
+#amamicaramel_bodytop h1	{ width: 860px; height: 176px; margin: 0 auto; padding: 0; background: transparent url(http://www.famima.com/images/p/amami_caramel/mainimage01.jpg) top left no-repeat; text-indent:-9999px;}
+#amamicaramel_bodytop h2,
+#amamicaramel_bodytop p { display: none}
+#amamicaramel_bodyall	{ margin: 0; padding: 0; text-align: center; background-color: #FFFFFF; background-image: url(http://www.famima.com/images/p/amami_caramel/bg1.gif); background-position: center top;}
+#amamicaramel_whBase	{ width: 778px; margin: 0 auto; padding: 0; text-align: left; background-color: #FFFFFF; background-image: url(http://www.famima.com/images/p/amami_caramel/bgwh.gif); background-repeat: y-repeat;}
+#amamicaramel_whBase br	{ letter-spacing: 0;}
+.amamicaramel_clear	{ clear: both; margin: 0; padding: 0; line-height:0px; font-size:0px;}
+.amamicaramel_clear hr	{ display: none }
+
+/*TITLEBASE*/
+#amamicaramel_mainTitle	{ width: 860px; height: 292px; margin: 0 auto; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/mainimage02.jpg") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_mainTitle h3,
+#amamicaramel_mainTitle p { display: none}
+#amamicaramel_subTitle01	{ display: block; width: 770px; height: 60px; margin: 0 0 0 4px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl02.jpg") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_subTitle02	{ display: block; width: 770px; height: 60px; margin: 0 0 0 4px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl03.jpg") top left no-repeat; text-indent:-9999px;}
+.amamicaramel_2columnL	{ display: block; float: left; width: 474px; margin: 0; padding: 0;}
+.amamicaramel_2columnR	{ display: block; float: right; width: 274px; margin: 0; padding: 0;}
+.amamicaramel_2columnR2	{ display: block; float: right; width: 304px; margin: 0; padding: 0;}
+
+
+/*NEWS*/
+#amamicaramel_newsBase	{ margin: 0 0 0 34px; padding: 0; background-color:#fef5f5;}
+#amamicaramel_newsBase h3	{ display: block; width: 440px; height: 21px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl01.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_newsBase dl	{ margin: 0; padding: 3px; }
+#amamicaramel_newsBase dt	{ float: left; color: #393939; font-size: 12px; line-height: 1.5; margin: 0; padding: 0; }
+#amamicaramel_newsBase dd	{ float: left; color: #393939; font-size: 12px; line-height: 1.5; margin: 0 0 0 10px; padding: 0 0 8px; }
+#amamicaramel_newsBase h4	{ color: #ff5a00; font-size: 14px; line-height: 1.5; margin: 0; padding: 0; }
+.amamicaramel_newsline	{ clear: both; margin: 0; padding: 0; line-height:0px; font-size:0px; border-top: 1px dashed #bbb299; height:1px; }
+.amamicaramel_newslineEnd	{ clear: both; margin: 0; padding: 0; line-height:0px; font-size:0px;}
+.amamicaramel_newslineEnd2	{ clear: both; margin: 0 0 15px; padding: 0; line-height:0px; font-size:0px;}
+.amamicaramel_newsEndftr	{ margin: 0 0 10px; padding: 0; line-height:0px; font-size:0px; border-top: 1px solid #bbb299; }
+.amamicaramel_newsPoint	{ margin:5px 0 5px 10px; padding:0; background-color:#fcfce0; width:420px;}
+
+/*CART*/
+.amamicaramel_cartBaseA	{ display: block; width: 270px; height: 219px; margin: 0 4px 10px 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/cartbase.jpg") top left no-repeat;}
+.amamicaramel_cartBaseA p	{ color: #333333; font-size: 10px; line-height: 1.3; margin: 0 0 0 126px; padding: 0; }
+.amamicaramel_cartBtnA	{ display: block; width: 126px; height: 66px; text-indent: -9999px; margin: 0 0 5px 126px; padding: 102px 0 0; }
+.amamicaramel_cartBtnA a	{ display: block; width: 126px; height: 66px; background: url("http://www.famima.com/images/p/amami_caramel/btn01.jpg") no-repeat; text-decoration: none; outline: none;}
+.amamicaramel_cartBtnA a:hover	{ background-position: 0 -66px }
+
+.amamicaramel_cartBaseB	{ display: block; width: 270px; height: 240px; margin: 0 4px 10px 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/cartbase_b.jpg") top left no-repeat;}
+.amamicaramel_cartBaseB p	{ color: #333333; font-size: 10px; line-height: 1.3; margin: 0 0 0 126px; padding: 0; }
+.amamicaramel_cartBtnB	{ display: block; width: 126px; height: 66px; text-indent: -9999px; margin: 0 0 5px 126px; padding: 120px 0 0; }
+.amamicaramel_cartBtnB a	{ display: block; width: 126px; height: 66px; background: url("http://www.famima.com/images/p/amami_caramel/btn01.jpg") no-repeat; text-decoration: none; outline: none;}
+.amamicaramel_cartBtnB a:hover	{ background-position: 0 -66px }
+
+/*CART_YOYAKU*/
+.amamicaramel_cartBaseA	{ display: block; width: 270px; height: 219px; margin: 0 4px 10px 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/cartbase.jpg") top left no-repeat;}
+.amamicaramel_cartBaseA p	{ color: #333333; font-size: 10px; line-height: 1.3; margin: 0 0 0 126px; padding: 0; }
+.amamicaramel_cartBtnAY	{ display: block; width: 126px; height: 66px; text-indent: -9999px; margin: 0 0 5px 126px; padding: 102px 0 0; }
+.amamicaramel_cartBtnAY a	{ display: block; width: 126px; height: 66px; background: url("http://www.famima.com/images/p/amami_caramel/btn01_yoyaku.jpg") no-repeat; text-decoration: none; outline: none;}
+.amamicaramel_cartBtnAY a:hover	{ background-position: 0 -66px }
+
+.amamicaramel_cartBaseB	{ display: block; width: 270px; height: 240px; margin: 0 4px 10px 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/cartbase_b.jpg") top left no-repeat;}
+.amamicaramel_cartBaseB p	{ color: #333333; font-size: 10px; line-height: 1.3; margin: 0 0 0 126px; padding: 0; }
+.amamicaramel_cartBtnBY	{ display: block; width: 126px; height: 66px; text-indent: -9999px; margin: 0 0 5px 126px; padding: 120px 0 0; }
+.amamicaramel_cartBtnBY a	{ display: block; width: 126px; height: 66px; background: url("http://www.famima.com/images/p/amami_caramel/btn01_yoyaku.jpg") no-repeat; text-decoration: none; outline: none;}
+.amamicaramel_cartBtnBY a:hover	{ background-position: 0 -66px }
+
+/*YOYAKU Information*/
+.amamicaramel_yoyakuInfoBase{ display:block; width:270px; height:84px; background:url(http://www.famima.com/images/p/amami_caramel/yoyaku_info.jpg) no-repeat;}
+.amamicaramel_yoyakuInfoBase p{ margin:0; padding:13px 8px 0 78px; color:#FFFFFF; font-size:12px; line-height:140%;}
+
+
+
+.amamicaramel_kokuchi	{ display: block; width: 126px; height: 66px; margin: 0 0 5px 126px; padding: 102px 0 0; }
+
+/*COPY*/
+#amamicaramel_copyText	{ color: #333333; font-size: 14px; line-height: 1.5; margin: 0; padding: 0 0 0 34px;}
+
+
+/*OISHISA NO HIMITSU*/
+#amamicaramel_ssbTitle01	{ display: block; width: 440px; height: 45px; margin: 0 0 0 34px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl04.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_ssbTitle02	{ display: block; width: 440px; height: 45px; margin: 0 0 0 34px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl05.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_ssbTitle03	{ display: block; width: 440px; height: 58px; margin: 0 0 0 34px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/sttl06.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_oishiImg01	{ display: block; width: 300px; height: 220px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/photo01.jpg") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_oishiImg02	{ display: block; width: 300px; height: 200px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/photo02.jpg") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_oishiImg03	{ display: block; width: 300px; height: 230px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/photo03.jpg") top left no-repeat; text-indent:-9999px;}
+.amamicaramel_oishiText	{ color: #333333; font-size: 12px; line-height: 1.7; margin: 0; padding: 0 0 0 34px;}
+
+
+/*VOICE*/
+#amamicaramel_voiceList { margin: 0 0 0 34px;; padding: 0}
+#amamicaramel_voiceList dl	{ margin: 0; padding: 0; }
+#amamicaramel_voiceList dt	{ float: left; display: inline; width: 35px; height: 24px; margin: 0; padding: 0 0 3px; background: transparent url("http://www.famima.com/images/p/amami_caramel/icon01.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_voiceList dd	{ float: left; display: inline; width: 395px; color: #333333; font-size: 12px; line-height: 1.5; margin: 0; padding: 3px 0 3px 8px; }
+.amamicaramel_voiceline	{ clear: both; margin: 0 0 8px; padding: 0; line-height:0px; font-size:0px; border-bottom: 1px dashed #5b2c27; }
+.amamicaramel_voiceLinkexp	{ color: #663a35; font-size: 12px; line-height: 1.5; font-weight: bold; margin: 0; padding: 0 0 0 34px;}
+.amamicaramel_voiceLink	{ display: block; height: 18px; margin: 0 0 0 34px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/arrow01.gif") top left no-repeat;}
+.amamicaramel_voiceLink p	{ color: #ff6000; font-size: 12px; line-height: 1.5; margin: 0; padding: 0 0 0 20px;}
+.amamicaramel_voiceLink a:link,
+.amamicaramel_voiceLink a:visited	{ color: #ff6000; text-decoration: none;}
+.amamicaramel_voiceLink a:hover,
+.amamicaramel_voiceLink a:active	{ color: #ff6000; text-decoration: underline;}
+#amamicaramel_ribbonLine	{ display: block; width: 770px; height: 90px; margin: 0 0 0 4px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/line01.jpg") top left no-repeat; text-indent:-9999px;}
+
+
+/*PROFILE*/
+#amamicaramel_proBase	{ display: block; width: 710px; margin: 0 0 0 34px;; padding: 0; background-color: #f7f6f3;}
+#amamicaramel_proBase h3	{ display: block; width: 710px; height: 110px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/pro_name.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_proSttl01	{ display: block; width: 670px; height: 40px; margin: 0 0 0 20px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/pro_sttl01.gif") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_proSttl02	{ display: block; width: 670px; height: 40px; margin: 0 0 0 20px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/pro_sttl02.gif") top left no-repeat; text-indent:-9999px;}
+.amamicaramel_proText01	{ color: #333333; font-size: 14px; line-height: 1.5; margin: 0; padding: 0 20px 10px;}
+.amamicaramel_proText02	{ color: #333333; font-size: 12px; line-height: 1.5; margin: 0; padding: 10px 20px 0;}
+.amamicaramel_proLink	{ display: block; height: 18px; margin: 5px 0 10px 20px; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/arrow02.gif") top left no-repeat;}
+.amamicaramel_proLink p	{ color: #ff6000; font-size: 12px; line-height: 1.5; margin: 0; padding: 0 0 0 20px;}
+.amamicaramel_proLink a:link,
+.amamicaramel_proLink a:visited	{ color: #ff6000; text-decoration: none;}
+.amamicaramel_proLink a:hover,
+.amamicaramel_proLink a:active	{ color: #ff6000; text-decoration: underline;}
+#amamicaramel_proMessage	{ display: block; width: 710px; height: 390px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/pro_message.jpg") top left no-repeat; text-indent:-9999px;}
+#amamicaramel_proMessage p	{ clear: both; margin: 0; padding: 0; line-height:0px; font-size:0px;}
+#amamicaramel_proFooter	{ display: block; width: 710px; height: 15px; margin: 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/pro_footer.gif") top left no-repeat; text-indent:-9999px;}
+
+
+/*FOOTER*/
+#amamicaramel_footerBase	{ display: block; width: 770px; height: 30px; margin: 15px 0 0 4px;; padding: 0; background-color: #502e0c;}
+.amamicaramel_ftrLink	{ float: right; display: block; width: 120px; height: 12px; margin: 5px 0 0; padding: 0; background: transparent url("http://www.famima.com/images/p/amami_caramel/arrow03.gif") top left no-repeat;}
+.amamicaramel_ftrLink p	{ color: #ffffff; font-size: 10px; line-height: 1.5; margin: 0; padding: 0 0 0 12px;}
+.amamicaramel_ftrLink a:link,
+.amamicaramel_ftrLink a:visited	{ color: #ffffff; text-decoration: none;}
+.amamicaramel_ftrLink a:hover,
+.amamicaramel_ftrLink a:active	{ color: #ffffff; text-decoration: underline;}
+
+
+/*Media Information*/
+#amamicaramel_MediaBase{ margin:0; padding:10px 0 5px 7px; width:426px;}
+#amamicaramel_MediaTTL{ margin:0; padding:0; width:426px; height:38px; background:url(http://www.famima.com/images/p/amami_caramel/media_ttl.gif) no-repeat; text-indent:-9999px;}
+#amamicaramel_MediaBase p{ margin:0 0 2px 0; padding:5px; width:416px; font-size:11px; color:#555555; line-height:120%; border-top:1px #d9cfc9 solid;}
+
+
+/*FDC_MiniBanner*/
+.amamicaramel_minibnTOP{ margin:0; padding:10px 0 0 14px;}
+.amamicaramel_minibn{ margin:0; padding:5px 0 0 14px;}
+
+
+
+
+

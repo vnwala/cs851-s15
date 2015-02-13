@@ -1,0 +1,179 @@
+// special deals
+
+$(function(){
+
+    if ("SPECIAL_DEAL_COUNT" in window) {
+    }
+    else {
+        SPECIAL_DEAL_COUNT = 0;
+    }
+	
+	var s_t = SPECIAL_DEAL_COUNT;  //写真総枚数
+	var s_n = 0;
+	var s_w = 228;
+	var s_a = true;
+	
+	
+	// 写真が１以下のとき
+	if (s_t <= 1) {
+	    $(".slide_btn_left").hide();
+        $(".slide_btn_right").hide();
+    }
+   
+    
+    // スライダの左ボタンが押されたとき
+    $(".slide_btn_left").click(function(){
+		s_slidePrev();
+	});
+	// スライダの右ボタンが押されたとき
+	$(".slide_btn_right").click(function(){
+		s_slideNext();
+	});
+	// スライダの左ボタンが乗せたとき
+	$(".slide_btn_left").hover(function(){
+		$(this).css("cursor", "pointer");
+	});
+	// スライダの右ボタンが乗せたとき
+	$(".slide_btn_right").hover(function(){
+		$(this).css("cursor", "pointer");
+	});
+	// 最初の写真の要素をコピー
+	$('.slide_img > .slide_item')
+	   .eq(0)
+	   .clone()
+	     .appendTo('.slide_img');
+	$('<div class="clear"></div>').appendTo('.slide_img');
+	
+	// スライダさせるの動き
+	function s_slideMove(){
+		$(".slide_img").animate({left: s_w*s_n*-1}, 500, function(){
+			s_a = true;
+		});
+	}
+	// 次へスライダさせる
+	function s_slideNext(){
+		if (s_a) {
+			s_a = false;
+			if (s_n == s_t) {
+				s_n = 0;
+				$(".slide_img").css("left", 0);
+			}
+			s_n++;
+			s_slideMove();
+		}
+	}
+	// 前へスライダさせる
+	function s_slidePrev(){
+		if (s_a) {
+			s_a = false;
+			if (s_n == 0) {
+				s_n = s_t;
+				$(".slide_img").css("left", s_w*s_t*-1);
+			}
+			s_n--;
+			s_slideMove();
+		}
+	}
+	// 自動に次へスライダタイマーを設定する
+	function startTimer(){
+	  if (s_t != 1) {
+		 var timer = setInterval(function(){
+			
+			   s_slideNext();
+			
+		 }, 5000);
+	  }
+	}
+	
+	// 写真の横幅を指定する
+	$(".slide_img").css("width", s_w*(s_t+1));
+	startTimer();
+	
+});
+
+// special promotions
+
+$(function(){
+
+//	var t = 10;
+	var t = $('.promotions_count').attr('target') - 3
+	var n = 0;
+	var w = 150;
+	var a = true;
+
+	jQuery(document).ready(function($){
+
+	    $('.promotions_left').hide();
+	    $('.promotions_left_no').show();
+	    if($('.promotions_count').attr('target') <= 3){
+	    	$('.promotions_right').hide();
+	    }
+
+	});
+
+	$(".promotions_left").click(function(){
+		slidePrev();
+	});
+	$(".promotions_right").click(function(){
+		slideNext();
+	});
+	$(".promotions_left").hover(function(){
+		$(this).css("cursor", "pointer");
+	});
+	$(".promotions_right").hover(function(){
+		$(this).css("cursor", "pointer");
+	});
+
+	function slideMove(){
+		$(".promotions_items").animate({left: w*n*-1}, 500, function(){
+			a = true;
+		});
+	}
+	function slideNext(){
+		if(a){
+			a = false;
+			if(n == t){
+				n = 0;
+				$(".promotions_items").css("left", 0);
+			}
+			n++;
+
+			if(n == t){
+				$(".promotions_right").hide();
+			}
+			else{
+				$(".promotions_right").show();
+			}
+			if(n > 0){
+				$(".promotions_left").show();
+				$('.promotions_left_no').hide();
+			}
+
+			slideMove();
+		}
+	}
+	function slidePrev(){
+		if(a){
+			a = false;
+			if(n == 0){
+				n = t;
+				$(".promotions_items").css("left", w*t*-1);
+			}
+			n--;
+
+			if(n == 0){
+				$(".promotions_left").hide();
+				$('.promotions_left_no').show();
+			}
+			if(n < t){
+				$(".promotions_right").show();
+			}
+
+			slideMove();
+		}
+	}
+
+	$(".promotions_items").css("width", w*(t+3));
+
+});
+

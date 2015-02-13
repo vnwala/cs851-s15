@@ -1,0 +1,593 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	GOODS DIRECT powered by famima.com
+	http://www.famima.com/goods_direct/
+--------------------------------------------------------------------- */
+
+body#gd {
+	background:url(http://www.famima.com/images/p/goods_direct/back.png) repeat-x #060837;
+	margin:0;
+	font-size:0.75em;
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+}
+
+#gd h1,h2,h3,ul,li,dl,dt,dd {
+	margin:0;
+	padding:0;
+	}
+
+#gd .maru_go {
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+	}
+
+#gd a {
+	color:#000000;
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+}
+
+#gd a:hover {
+	color:#cc0000;
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+}
+
+#gd a:visited {
+	color:#666666;
+	font-family:"ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "ÉÅÉCÉäÉI", Meiryo, Osaka, "ÇlÇr ÇoÉSÉVÉbÉN", "MS PGothic", sans-serif;
+}
+
+#gd #container {
+	width:960px;
+	margin:0 auto;
+	line-height:1.25;
+	vertical-align:top;
+	
+}
+
+#gd #container .left_navi {
+	float:left;
+	width:240px;
+	margin:0;
+	vertical-align:top;
+}
+
+#gd #container .right_container {
+	float:right;
+	width:700px;
+	margin:0;
+	vertical-align:top;
+}
+
+#gd #container .left_navi .navi {
+	margin:40px 0 0;
+}
+
+#gd #container .left_navi .navi img.navibtn {
+	margin:6px 0 0;
+}
+
+#gd #container .right_container .head {
+	width:700px;
+	height:56px;
+	vertical-align:top;
+}
+
+#gd #container .right_container .head img.samurai {
+	float:right;
+}
+
+#gd #container .right_container .pickup {
+	margin:15px 0 30px;
+	color:#FFFFFF;
+}
+
+#gd #container .right_container .title {
+	margin:30px 0;
+	color:#FFFFFF;
+}
+
+#gd #container .right_container .subtitle {
+	margin:40px 0 10px;
+	color:#FFFFFF;
+}
+
+#gd #container .right_container .subcontainer_pickup {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	/* padding:10px; */
+}
+
+#gd #container .right_container .subcontainer {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	padding:10px;
+}
+
+#gd #container .right_container .items {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:133px; /* w167px */
+	height:210px; /* height:210px; */
+	padding:16px;
+	border:1px solid #666666;
+	margin:0 3px 15px 3px;
+	float:left;
+}
+
+
+#gd #container .right_container .items_prog {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:133px; /* w167px */
+	height:210px; /* height:210px; */
+	padding:16px;
+	border:1px solid #666666;
+	margin:0 3px 15px 3px;
+	float:left;
+	font-size:11px;
+}
+
+#gd #container .right_container .items_prog a {
+	font-size:11px;
+	}
+
+
+#gd #container .right_container .items_title {
+	background:url(http://www.famima.com/images/p/goods_direct/back_ancher.png);
+	width:133px; /* w167px */
+	height:210px; /* height:210px; */
+	padding:16px;
+	border:1px solid #666666;
+	margin:0 3px 15px 3px;
+	float:left;
+	text-align:center;
+	vertical-align:middle;
+	color:#5c5d43;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#gd #container .right_container .items_title .squere {
+	width:133px;
+	height:37px;
+	background:#e3e5aa;
+	margin:0 0 10px 0;
+}
+
+#gd #container .right_container .items img {
+	margin-bottom:5px;
+}
+
+
+#gd #container .right_container .subcontainer td {
+	vertical-align:top;
+	padding:0 0 10px;
+}
+
+#gd #container .right_container .subcontainer td.date {
+	width:80px;
+}
+
+#gd #container .right_container .subcontainer .comment_number {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_number.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .comment_program {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_program.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .comment_replica {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_replica.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .comment_support {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_support.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .comment_towel {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_towel.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .comment_wear {
+	background:url(http://www.famima.com/images/p/goods_direct/icon_wear.png) no-repeat left center;
+	margin:0 20px 0 0;
+	padding:0 0 0 50px;
+}
+
+#gd #container .right_container .subcontainer .keywords {
+	display:inline;
+	margin:0 20px 0 0;
+}
+
+#gd #container .mt20 {
+	margin:20px 0 0;
+}
+
+#gd #container .mt40 {
+	margin:40px 0 0;
+}
+
+#gd #container br.clear {
+	clear:both;
+}
+
+#gd #footer {
+	background:url(http://www.famima.com/images/p/goods_direct/footer_grass.png) repeat-x center bottom;
+	color:#FFFFFF;
+	margin:40px 0 0;
+	height:135px;
+}
+
+#gd #footer #footer_container {
+	width:960px;
+	font-size:10px;
+	margin:30px auto 5px;
+	line-height:1.25;
+}
+
+#gd #footer #footer_container table {
+	/* margin:20px 0 0 0; */
+}
+
+#gd #footer #footer_container .supporting_company {
+	text-align:center;
+	margin:5px 0 0;
+}
+
+#gd #footer #footer_container a {
+	color:#FFFFFF;
+}
+
+#gd #container .right_container .ancher {
+	border:1px solid #666666;
+	padding:10px;
+	margin:20px 0;
+	color:#b4b4b4;
+}
+
+#gd #container .right_container .ancher_up {
+	border:1px solid #666666;
+	padding:10px;
+	margin:20px 0;
+	color:#b4b4b4;
+	text-align:right;
+}
+
+#gd #container .right_container .ancher_up a {
+	color:#ffffff;
+}
+
+#gd #container .right_container .ancher a {
+	color:#b4b4b4;
+}
+
+#gd .right_container .pickup_items {
+	width:165px;
+	float:left;
+	margin:10px 4px;
+}
+
+#gd .right_container .pickup_items img.space {
+	margin:0 0 10px;
+}
+
+/*------------------------------------------------------------------*/
+#gd #container .right_container #free_soccer h1,h2,h3,ul,li,dl,dt,dd {
+	margin:0;
+	padding:0;
+	}
+
+#gd #container .right_container #free_soccer .clear {
+	clear:both;
+	}
+
+#gd #container .right_container #free_soccer .zero {
+	margin:0;
+	padding:0;
+	}
+
+/*------------------------------------------------------------------*/
+
+#gd #container .right_container #free_soccer h2.special_gd {
+	background:url(http://www.famima.com/images/p/goods_direct/subt_special.png) no-repeat;
+	width:71px;
+	height:22px;
+	text-indent:-9999px;
+	margin:0 0 5px 0;
+	}
+
+#gd #container .right_container #free_soccer h2.pickup_gd {
+	background:url(http://www.famima.com/images/p/goods_direct/subt_pickup.png) no-repeat;
+	width:200px;
+	height:19px;
+	padding:5px 5px 0 80px;
+	margin:20px 0 5px 0;
+	color:#FFF;
+	font-size:1em;
+	}
+
+#gd #container .right_container #free_soccer ul.itm4_pcup {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:696px;	
+	display:block;
+	padding:0 0 0 4px;
+	list-style:none inside;
+	}
+
+#gd #container .right_container #free_soccer ul.itm4_pcup li {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:165px;
+	vertical-align:top;
+	margin:10px 4px;
+	float:left;
+	display:inline-block;
+	}
+
+#gd #container .right_container #free_soccer ul.itm4_pcup li img  {
+	margin:0 0 5px 0;
+	}
+
+#gd #container .right_container #free_soccer h2.whatsnew_gd {
+	background:url(http://www.famima.com/images/p/goods_direct/sub_new.png) no-repeat;
+	width:78px;
+	height:11px;
+	margin:5px 0 5px 0;
+	text-indent:-9999px;
+	}
+
+#gd #container .right_container #free_soccer h2.keywords_gd {
+	background:url(http://www.famima.com/images/p/goods_direct/sub_words.png) no-repeat;
+	width:101px;
+	height:14px;
+	margin:25px 0 5px 0;
+	text-indent:-9999px;
+	}
+	
+
+
+
+
+#gd #container .right_container #free_soccer dl.newitemtxt {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:680px;	
+	display:block;
+	padding:10px;	
+	}
+
+#gd #container .right_container #free_soccer dl.newitemtxt dt {
+	display:inline-block;
+	float:left;
+	width:70px;
+	vertical-align:top;
+	font-weight:bold;
+	}
+
+#gd #container .right_container #free_soccer dl.newitemtxt dd {
+	display:inline-block;
+	float:left;
+	width:610px;
+	vertical-align:top;
+	font-weight:bold;
+	}
+
+
+#gd #container .right_container #free_soccer ul.kywrds {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	width:700px;	
+	display:block;
+	list-style:none inside;
+	padding:10px 0 0 0;
+	}
+
+#gd #container .right_container #free_soccer ul.kywrds li {
+	background:url(http://www.famima.com/images/p/goods_direct/back_container.png);
+	vertical-align:top;
+	margin:0 10px 10px 10px;
+	float:left;
+	display:inline;
+	}
+
+/*------------------------------------------*/
+
+#gd #confit_tokuten_2011May {
+	background:#f0f0f0;
+	border:5px solid #c8c8c8;
+	}
+
+#gd #confit_tokuten_2011May h2.confit {
+	background:url(http://www.famima.com/images/p/soccer/catch_confit_tokuten_20110527.png) no-repeat;
+	width:667px;
+	height:44px;
+	display:block;
+	text-indent:-9999px;
+	margin:15px auto 5px;
+	}
+
+#gd #confit_tokuten_2011May h2.charity {
+	background:url(http://www.famima.com/images/p/goods_direct/title_charity.png) no-repeat;
+	width:667px;
+	height:91px;
+	display:block;
+	text-indent:-9999px;
+	margin:5px auto;
+	}
+
+	
+#gd #confit_tokuten_2011May	.date {
+	text-align:center;
+	margin:0 0 10px 0;
+	color:#0D1560;
+	font-weight:bold;
+	}
+
+
+#gd #confit_tokuten_2011May .cft_img {
+	float:left;
+	width:200px;
+	display:inline-block;
+	vertical-align:top;
+	margin:5px 0 10px 12px;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt {
+	float:left;
+	width:440px;/* 450px */
+	display:inline-block;
+	vertical-align:top;
+	margin:5px 12px 10px 15px;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt strong {
+	font-size:150%;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt .fs110p {
+	font-size:110%;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt .fs120p {
+	font-size:120%;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt .lh2 {
+	line-height:2;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt .mt15 {
+	margin-top:15px;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt ul {
+	clear:both;
+	margin:10px 0 0 0;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt li {
+	float:left;
+	margin:0 10px 10px 0;
+	width:90px;
+	list-style:none;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt li.long {
+	float:left;
+	margin:0 10px 10px 0;
+	width:120px;
+	list-style:none;
+	}
+
+#gd #confit_tokuten_2011May .cft_txt li.short {
+	float:left;
+	margin:0 10px 10px 0;
+	width:30px;
+	list-style:none;
+	}
+
+
+
+
+#gd .red {
+	color:#cc0000;
+}
+
+#gd .mb10 {
+	margin-bottom:10px;
+	}
+
+#gd .mb20 {
+	margin-bottom:20px;
+	}
+
+/* --- */
+#gd .box {
+	display:block;
+	}
+
+#gd img.0 {
+	border:none;
+	}
+
+#gd .fs14px {
+	font-size:14px;
+	}
+
+#gd .bold {
+	font-weight:bold;
+}
+
+#gd a.linkarrow {
+	padding-left:13px; 
+	background:url(../../common_images/arrow_link.png) left center no-repeat;
+	}
+
+#gd .ml3 {
+	margin-left:3px;
+	}
+
+#gd img.0 {
+	border:none;
+	}
+
+#gd .box {
+	display:block;
+	}
+
+#gd .txta_c {
+	text-align:center;
+	}
+
+#gd .info {
+	border:1px solid #e8e8e8;
+	background:#E8F4FD;
+	}
+
+#gd .padt10 {
+	padding-top:10px;
+	}
+
+#gd .padb10 {
+	padding-bottom:10px;
+	}
+
+#gd .mb10 {
+	margin-bottom:10px;
+	}
+
+
+#gd #container ul.2items {
+	display:block;
+	width:700px;
+	}
+
+#gd #container ul.2items li.leftx {
+	width:325px;
+	height:135px;
+	display:inline-block;
+	float:left;
+	background:#f0f0f0;
+	border:5px solid #c8c8c8;
+	margin-bottom:10px;
+	margin-right:10px;
+	padding:5px;
+	}
+#gd #container ul.2items li.rightx {
+	width:325px;
+	height:135px;
+	display:inline-block;
+	float:left;
+	background:#f0f0f0;
+	border:5px solid #c8c8c8;
+	margin-bottom:10px;
+	padding:5px;
+	}
+
+#gd #container ul.2items li a {
+	font-weight:bold;
+	font-size:110%;
+	}

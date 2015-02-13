@@ -1,0 +1,191 @@
+// currency_change
+
+$(function(){
+	
+	var c = CURRENCY_CODE;
+	currency_image_change(c);
+	
+	$(".currency").hover(function(){
+		$(".btn_currency").css("cursor", "pointer");
+		$(".btn_currency").css("background-position", "left bottom");
+		$(".btn_" + c).fadeTo(0, 0.45);
+		$(".select_currency").css("visibility", "visible");
+	}, function(){
+		$(".btn_currency").css("background-position", "left top");
+		$(".select_currency").css("visibility", "hidden");
+	});
+	
+	$("div.currency_change_js").hover(function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_over(key_array[1]);
+	}, function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_out(key_array[1]);
+	})
+	.click(function(){
+		var key_array = $(this).attr('id').split('_');
+		return currency_change(key_array[1]);
+	});
+
+	function btn_over(n){
+		if(c == n){
+			$(".btn_" + n).css("cursor", "default");
+		}else{
+			$(".btn_" + n).css("cursor", "pointer");
+			$(".btn_" + n).css("background-position", "left bottom");
+		}
+	}
+	
+	function btn_out(n){
+		if(c != n){
+			$(".btn_" + n).css("background-position", "left top");
+		}
+	}
+	
+	function currency_change(n){
+		if(c != n){
+			currency_image_change(n);
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	function currency_image_change(n){
+		$(".select_currency").css("visibility", "hidden");
+		$(".btn_" + c).fadeTo(0, 1);
+		$(".btn_" + n).css("background-position", "left top");
+		$(".btn_currency").css("background-image", "url(" + tr_path + LANG_ID + "/img/v2/btn_" + n + HA_IMAGE_POSTFIX + ".png)");
+		$(".btn_currency").css("background-position", "left top");
+		c = n;
+	}
+	
+});
+
+// currency_change hawaii
+
+$(function(){
+	
+	var c = CURRENCY_CODE;
+	currency_image_change(c);
+	
+	$(".ha_currency").hover(function(){
+		$(".ha_btn_currency").css("cursor", "pointer");
+		$(".ha_btn_currency").css("background-position", "left bottom");
+		$(".ha_btn_" + c).fadeTo(0, 0.45);
+		$(".ha_select_currency").css("visibility", "visible");
+	}, function(){
+		$(".ha_btn_currency").css("background-position", "left top");
+		$(".ha_select_currency").css("visibility", "hidden");
+	});
+	
+	$("div.currency_change_js").hover(function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_over(key_array[1]);
+	}, function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_out(key_array[1]);
+	})
+	.click(function(){
+		var key_array = $(this).attr('id').split('_');
+		return currency_change(key_array[1]);
+	});
+
+	function btn_over(n){
+		if(c == n){
+			$(".ha_btn_" + n).css("cursor", "default");
+		}else{
+			$(".ha_btn_" + n).css("cursor", "pointer");
+			$(".ha_btn_" + n).css("background-position", "left bottom");
+		}
+	}
+	
+	function btn_out(n){
+		if(c != n){
+			$(".ha_btn_" + n).css("background-position", "left top");
+		}
+	}
+	
+	function currency_change(n){
+		if(c != n){
+			currency_image_change(n);
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	function currency_image_change(n){
+		$(".ha_select_currency").css("visibility", "hidden");
+		$(".ha_btn_" + c).fadeTo(0, 1);
+		$(".ha_btn_" + n).css("background-position", "left top");
+		$(".ha_btn_currency").css("background-image", "url(" + tr_path + LANG_ID + "/img/v2/btn_" + n + HA_IMAGE_POSTFIX + ".png)");
+		$(".ha_btn_currency").css("background-position", "left top");
+		c = n;
+	}
+	
+});
+
+// language_change
+
+$(function(){
+	
+	var c = LANG_CODE;
+	language_image_change(c);
+	
+	$("div.language_js").hover(function(){
+		$("div.btn_language_js").css("cursor", "pointer").css("background-position", "left bottom");
+		$("#btn_" + c).fadeTo(0, 0.45);
+		$("div.select_language_js").css("visibility", "visible");
+	}, function(){
+		$("div.btn_language_js").css("background-position", "left top");
+		$("div.select_language_js").css("visibility", "hidden");
+	});
+	
+	$("div.language_change_js").hover(function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_over(key_array[1]);
+	}, function(){
+		var key_array = $(this).attr('id').split('_');
+		btn_out(key_array[1]);
+	})
+	.click(function(){
+		var key_array = $(this).attr('id').split('_');
+		return language_change(key_array[1]);
+	});
+
+	function btn_over(n){
+		if(c == n){
+			$("#btn_" + n).css("cursor", "default");
+		}else{
+			$("#btn_" + n).css("cursor", "pointer").css("background-position", "left bottom");
+		}
+	}
+	
+	function btn_out(n){
+		if(c != n){
+			$("#btn_" + n).css("background-position", "left top");
+		}
+	}
+	
+	function language_change(n){
+		if(c != n){
+			language_image_change(n);
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	function language_image_change(n){
+		$("div.select_language_js").css("visibility", "hidden");
+		$("#btn_" + c).fadeTo(0, 1).css("background-position", "left top");
+		$("div.btn_language_js").css("background-image", "url(" + tr_path + LANG_ID + "/img/v2/btn_" + n + HA_IMAGE_POSTFIX + ".png)").css("background-position", "left top");
+		c = n;
+	}
+	
+});
+

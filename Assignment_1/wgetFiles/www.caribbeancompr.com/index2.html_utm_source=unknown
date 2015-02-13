@@ -1,0 +1,1165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>カリビアンコムプレミアム 単品購入</title>
+<meta name="description" content="">
+
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+<link rel="stylesheet" type="text/css" href="css/normalize.css" >
+
+<script src="js/util.js"></script>
+<script src="d2p/d2p.js"></script>
+<!-- movie detail page gallery -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+<script type='text/javascript' src="js/jquery.regex.js"></script>
+<script type='text/javascript' src="js/jquery.customfunction.js"></script>
+<link rel="stylesheet" href="js/fancybox2/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/fancybox2/jquery.fancybox.pack.js"></script>
+<!-- end movie detail page gallery -->
+
+<!-- index2 slider & tip -->
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/jquery.powertip.min.js"></script>
+<!-- end index2 slider & tip  -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=0;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41728033-1', 'caribbeancompr.com');
+  if( getCookie('NetiA'))
+  {
+      ga('set', 'dimension1', 'Member');
+  }
+  else if( getCookie('member_LO'))
+  {
+      ga('set', 'dimension1', 'Member');
+  }
+  else
+  {
+      ga('set', 'dimension1', 'Guest');
+  }
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+ var _gaq = _gaq || {
+     push : function(params)
+     {
+         try
+         {
+             if( typeof params == 'object' && params[0] == '_trackEvent' )
+             {
+                 ga('send', 'event', params[1], params[2], params[3]?params[3]:undefined);    
+             }
+         }catch(e){}
+     }
+ };
+
+</script>
+
+
+
+
+<script src="http://smovie.caribbeancom.com/toolbar/ga.jquery.min.js"></script>
+<script src="http://smovie.caribbeancom.com/toolbar/ga.trackevent_universal.js"></script>
+
+</head>
+
+<body>
+
+<script id="dlbunki" src="http://www.caribbeancom.com/js/bunki/bunki.js"></script>
+<script>try{DLBunki.init();}catch(e){if(typeof DLBunki == 'object')DLBunki.exception(e);}</script>
+
+<!-- scrollTop用 -->
+<style type="text/css">body { visibility: hidden; }</style>
+<noscript><style type="text/css">body { visibility: visible; }</style></noscript>
+<!-- end scrollTop用 -->
+<script src ="d2p/d2p.js"></script>
+
+<div id="container">
+
+<script>
+if( getCookie('NetiA') )
+{
+   $("<script src='member/app/json_user'></scri" + "pt>").appendTo('head');
+}
+</script>
+
+<script>
+$(document).ready(function(){$.getScript('http://tar1.d2pass.com/js/ppv.js')});
+</script>
+
+<div id="header">
+    <div id="header-top">
+        <ul>
+            <li class="bg-cc"><a ga-trackevent='{"Category":"header", "Action":"月額動画", "Label":"caribbeancom"}' href="http://www.caribbeancom.com/index2.htm">月額動画</a></li>
+            <li class="bg-ccg"><a ga-trackevent='{"Category":"header", "Action":"ライブチャット", "Label":"ccg"}' href="http://www.caribbeancomgirl.com/home">ライブチャット</a></li>
+            <li class="bg-ppv"><a ga-trackevent='{"Category":"header", "Action":"単品購入", "Label":"home"}' href="http://www.caribbeancompr.com/index2.html">単品購入</a></li>
+        </ul>
+    </div>
+    <div id="header-main">
+        <div id="header-main-left">
+            <div id="header-logo">
+                <h1><a ga-trackevent='{"Category":"header", "Action":"ロゴ", "Label":"home"}' href="http://www.caribbeancompr.com/index2.html">カリビアンコムプレミアム PPV</a></h1>
+            </div>
+            <div id="header-search" class="search-box">
+            <form action="http://www.caribbeancompr.com/search/" method=get name="searchbox">
+                <div class="search-box-input">
+                    <input id="q" name="q" value="">
+                <i class="icon-delete" onclick="{$('input[name=q]').val(''); $(this).hide();}" style="display:none"></i>
+              </div>
+              <div class="search-btn"><a href="javascript:void(0)" class="btn-red" onclick="{$('form[name=searchbox]').submit()}"><i class="icon-search">検索</i></a></div>
+              </form>
+              <script>
+               $("input[name=q]").on('keypress click keydown keyup', function(){
+                   if( $(this).val() != "" ) $('.icon-delete').show(); else $('.icon-delete').hide();
+               })
+              </script>
+              </div>
+             </div>
+        <div id="header-main-right">
+            <div id="header-login"><a href="javascript:void(0);" onclick="{location.href='/member/app/login?url='+document.URL}" class="btn-red fancy-login">ログイン</a></div>
+              <div id="header-cart">
+                <a href="http://www.caribbeancompr.com/app/cart" class="btn-red">
+                    <span class="icon-cart"></span>
+                    <span class="item_number"></span>
+                    <span>カートを見る</span>
+                </a>
+              </div>
+            </div>
+        </div>
+        <script>
+        if( !getCookie('NetiA'))
+        {
+            $(document).ready(function()
+            {
+                $.ajax({
+                   url : "/app/header_sample_right?utf?=1"
+                }).done( function( data )
+                {
+                    $('.item_number').html(data);
+                });
+             });
+         } 
+         </script>
+    <!--end #header-main-->
+        <script>
+        if( getCookie('NetiA') )
+        {
+            $('#header-login').hide();
+           // $('#header-join').hide();
+
+            $(document).ready(function()
+            {
+                $.ajax({
+                    url : "/member/app/header_member_right?utf=1"
+                }).done( function( data )
+                {
+                    $('#header-main-right').html(data);
+                    $(document).click(function()
+                    {
+                        $('#account-popup').slideUp(70);
+                        $('.icon-user').removeClass('btn-on');
+                    });
+
+                    $('.icon-user').click(function(ev)
+                    {
+                        ev.stopPropagation();
+                        $(this).toggleClass('btn-on');
+                        $('#account-popup').slideToggle(70);
+                    });
+                });
+            });
+        }
+        </script>
+
+    <div id="nav">
+        <ul>
+            <li><a ga-trackevent='{"Category":"header", "Action":"ホームアイコン", "Label":"home"}' href="http://www.caribbeancompr.com/index2.html"><i class="icon-home">ホーム</i></a></li>
+            <li><a ga-trackevent='{"Category":"header", "Action":"全作品リスト", "Label":"list_all"}' href="http://www.caribbeancompr.com/listpages/1.html">全作品リスト</a></li>
+
+            <li><a ga-trackevent='{"Category":"header", "Action":"割引セール"}' href="http://www.caribbeancompr.com/listpages/discount_1.html">割引セール</a></li>
+            <li class="setSaleNav"><a ga-trackevent='{"Category":"header", "Action":"セット販売"}' href="http://www.caribbeancompr.com/set.html" title="割引セット価格で、お得！">セット販売</a><!-- <div style="color: #ffcc00; display: block; position: relative; right: 0px; top: -45px; font-size: 11px;">期間限定セール! <span style="color:red;">9/1まで</span></div> --></li>
+            <li><a href="javascript:void(0)" class="after-arrow-sld-dw">カテゴリー</a>
+                <div class="nav-sub-cat sub-content" style="display: none;">
+                    <div class="cc-pink-bg-hov">
+                        <h4 class="cc-pink">女優タイプ</h4>
+                        <ul>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_av_actress"}' href="http://www.caribbeancompr.com/listpages/1_1.html">AV女優</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_amateur"}' href="http://www.caribbeancompr.com/listpages/3_1.html">素人</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_hatsuura"}' href="http://www.caribbeancompr.com/listpages/53_1.html">初裏</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_list_bikyaku"}' href="http://www.caribbeancompr.com/listpages/64_1.html">美脚</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_bishiri"}' href="http://www.caribbeancompr.com/listpages/62_1.html">美尻</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_paipan"}' href="http://www.caribbeancompr.com/listpages/29_1.html">パイパン</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_jukujyo"}' href="http://www.caribbeancompr.com/listpages/60_1.html">熟女/人妻</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_gal"}' href="http://www.caribbeancompr.com/listpages/16_1.html">ギャル</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_kyonyu"}' href="http://www.caribbeancompr.com/listpages/20_1.html">巨乳</a></li>
+                            <li class="ichiran"><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_all_actress_type"}' href="http://www.caribbeancompr.com/category.html#cat-actor" class="cc-pink-hover">女優タイプ一覧&#187;</a></li>
+                        </ul>
+                    </div>
+                    <div class="cc-yellow-bg-hov">
+                        <h4 class="cc-yellow">プレイ内容</h4>
+                        <ul>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_nakadashi"}' href="http://www.caribbeancompr.com/listpages/11_1.html">中出し</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_onany"}' href="http://www.caribbeancompr.com/listpages/31_1.html">オナニー</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_shiofuki"}' href="http://www.caribbeancompr.com/listpages/12_1.html">潮吹き</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_seikan"}' href="http://www.caribbeancompr.com/listpages/44_1.html">生姦</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_hamedori"}' href="http://www.caribbeancompr.com/listpages/10_1.html">ハメ撮り</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_69"}' href="http://www.caribbeancompr.com/listpages/39_1.html">69</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_paizuri"}' href="http://www.caribbeancompr.com/listpages/33_1.html">パイズリ</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_anal"}' href="http://www.caribbeancompr.com/listpages/40_1.html">アナル</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_gansha"}' href="http://www.caribbeancompr.com/listpages/79_1.html">顔射</a></li>
+                            <li class="ichiran"><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_all_play_type"}' href="http://www.caribbeancompr.com/category.html#cat-play" class="cc-yellow-hover">プレイ内容一覧&#187;</a></li>
+                        </ul>
+                    </div>
+                    <div class="cc-green-bg-hov">
+                        <h4 class="cc-green">コスチューム</h4>
+                        <ul>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_uniform"}' href="http://www.caribbeancompr.com/listpages/56_1.html">制服</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_mizugi"}' href="http://www.caribbeancompr.com/listpages/21_1.html">水着</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_buruma"}' href="http://www.caribbeancompr.com/listpages/46_1.html">ブルマ</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_yukata_kimono"}' href="http://www.caribbeancompr.com/listpages/84_1.html">浴衣/着物</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_nurse"}' href="http://www.caribbeancompr.com/listpages/45_1.html">ナース</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_maid"}' href="http://www.caribbeancompr.com/listpages/83_1.html">メイド</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_teacher"}' href="http://www.caribbeancompr.com/listpages/18_1.html">女教師</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_OL"}' href="http://www.caribbeancompr.com/listpages/82_1.html">OL</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_glasses"}' href="http://www.caribbeancompr.com/listpages/81_1.html">めがね</a></li>
+                            <li class="ichiran"><a ga-trackevent='{"Category":"header", "Action":"カテゴリー", "Label":"list_all_costume_type"}' href="http://www.caribbeancompr.com/category.html#cat-cos" class="cc-green-hover">コスチューム一覧&#187;</a></li>
+                        </ul>
+                    </div>
+                    <div class="cc-blue-bg-hov">
+                        <h4 class="cc-blue">シリーズ</h4>
+                        
+                        <ul>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"スカイハイ熟女プレミアム", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%A5%B9%A5%AB%A5%A4%A5%CF%A5%A4%BD%CF%BD%F7%A5%D7%A5%EC%A5%DF%A5%A2%A5%E0/1.html">スカイハイ熟女プレミアム</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"スカイエンジェル ブルー", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%A5%B9%A5%AB%A5%A4%A5%A8%A5%F3%A5%B8%A5%A7%A5%EB+%A5%D6%A5%EB%A1%BC/1.html">スカイエンジェル ブルー</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"素姦", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%C1%C7%B4%AF/1.html">素姦</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"スカイハイプレミアム", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%A5%B9%A5%AB%A5%A4%A5%CF%A5%A4%A5%D7%A5%EC%A5%DF%A5%A2%A5%E0/1.html">スカイハイプレミアム</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"Mappa マッパ", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/Mappa+%A5%DE%A5%C3%A5%D1/1.html">Mappa マッパ</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"Premium Juice", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/Premium+Juice/1.html">Premium Juice</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"地方ナンパ", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%C3%CF%CA%FD%A5%CA%A5%F3%A5%D1/1.html">地方ナンパ</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"ぶっかけ熟女", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%A4%D6%A4%C3%A4%AB%A4%B1%BD%CF%BD%F7/1.html">ぶっかけ熟女</a></li>
+                                                  <li><a ga-trackevent='{"Category":"header", "Action":"金髪ヤロー", "Label":"series_header"}' href="http://www.caribbeancompr.com/serieslist/%B6%E2%C8%B1%A5%E4%A5%ED%A1%BC/1.html">金髪ヤロー</a></li>
+                         
+                          <li class="ichiran"><a href="http://www.caribbeancompr.com/category.html#cat-series" class="cc-blue-hover" >シリーズ一覧&#187;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end .nav-sub-cat-->
+            </li>
+            <li><a ga-trackevent='{"Category":"header", "Action":"ランキング", "Label":"ranking_top"}' href="http://www.caribbeancompr.com/ranking/weekly.html">人気ランキング</a></li>
+            <li><a href="javascript:void(0)" class="after-arrow-sld-dw">ヘルプ</a>
+                <div class="nav-sub-other sub-content" style="display: none;">
+                    <div class="cc-pink-bg-hov">
+                        <h4 class="cc-pink">サイトガイド</h4>
+                        <ul>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"new_user_guide"}' href="http://www.caribbeancompr.com/first.html">初めての方へ</a></li>
+                            <!--<li><a href="/freesample.html">無料サンプル動画</a></li>-->
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"sitemap"}' href="http://www.caribbeancompr.com/sitemap.html">サイトマップ</a></li>
+                        </ul>
+                    </div>
+                    <div class="cc-green-bg-hov">
+                        <h4 class="cc-green">サポート</h4>
+                        <ul>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"faq"}' href="http://www.caribbeancompr.com/faq.html">よくあるご質問</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"contact"}' href="http://www.caribbeancompr.com/contact.html">お問い合わせ</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"privacy"}' href="http://www.caribbeancompr.com/privacy.html">プライバシー</a></li>
+                            <li><a ga-trackevent='{"Category":"header", "Action":"ヘルプ", "Label":"user_agreement"}' href="http://www.caribbeancompr.com/agreement.html">会員規約</a></li>
+                        </ul>
+                    </div>
+                </div><!--end .nav-sub-other-->
+            </li>
+            <li><a  ga-trackevent='{"Category":"header", "Action":"まとめ買いチケット", "Label":"ticket_page"}' href="http://www.caribbeancompr.com/ticket.html">まとめ買いチケット</a></li>
+        </ul>
+    </div>
+    <!--end #nav-->
+</div>
+<!--end #header-->
+<script type="text/javascript">
+
+$(document).ready(function() {
+/*
+  $(".fancy-login").fancybox({
+    'width' : 380,
+    'height' : 384,
+    'padding':0,
+    'background': 'transparent',
+    'autoScale' : false,
+    'transitionIn' : 'none',
+    'transitionOut' : 'none',
+    'overlayOpacity' : 0.7,
+    'overlayColor' : "#000"
+  });
+*/
+    setD2passToolbar();
+
+    /*ページロード時にはヘッダー最上部を表示しない。スクロールアップではじめて見える*/
+    var headerPosition = getCookie('NetiA')
+                       ? ( getCookie('NetiA').split(":")[0].match(/^.+@.+$/) ? 100 : 85 ) : 60;
+
+    if( $(window).scrollTop() <= headerPosition )
+    {
+      $(window).scrollTop(headerPosition);
+    }
+
+    $("body").css({ visibility: "visible" });
+});
+
+
+</script>
+
+<noscript>カリビアンコムを最適な環境でご利用いただくため、<br>JavaScriptを有効にしてください。</noscript>
+<script type="text/javascript">
+/*IE6,7へアップデートを促すメッセージ（簡易版）*/
+$(function () {
+     if ( $.browser.msie && $.browser.version <= 7 ) {
+     $('#header').after('<div class="iemsg"><span>カリビアンコムプレミアムの快適な閲覧に<a href="http://www.mozilla.jp/firefox/" target="_blank">Firefox</a>, <a href="http://www.google.co.jp/intl/ja/chrome/" target="_blank">Chrome</a>,または<a href="http://www.microsoft.com/ja-jp/download/internet-explorer.aspx" target="_blank">Internet Explorerのバージョン8以上</a>を推奨しています。Internet Explorerのアップデートは<a href="http://www.microsoft.com/ja-jp/download/internet-explorer.aspx" target="_blank">こちら</a>から</span></div>');
+     }
+});
+</script>
+
+
+
+<div id="main" class="main-top main-100">
+<!-- bannerarea-top-9 -->
+
+<h2>カリビアンコムプレミアムはおかげさまで10周年！ 今年はお得なキャンペーンが盛りだくさん！</h2>
+
+<div class="bannerarea-top-1">
+<a ga-trackevent='{"Category":"index2","Action":"トップ固定バナー","Label":"ロリセール"}' href="http://www.caribbeancompr.com/listpages/59_1.html"><img  style="border:none;" src="box/images/top/rorisale.jpg"></a>
+</div>
+
+<!-- end .bannerarea-top-9 -->
+
+        
+        <h2>オススメ最新作品<span><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品","Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/listpages/1_1.html">新着順作品一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-latest">
+                <div class="top-list-area row-1">
+                    <ul>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_105"}' href="http://www.caribbeancompr.com/moviepages/021015_105/index.html"><img src="moviepages/021015_105/images/main_b.jpg" alt="木村つな"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_104"}' href="http://www.caribbeancompr.com/moviepages/021015_104/index.html"><img src="moviepages/021015_104/images/main_b.jpg" alt="瀬奈まお"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_103"}' href="http://www.caribbeancompr.com/moviepages/021015_103/index.html"><img src="moviepages/021015_103/images/main_b.jpg" alt="白咲碧"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_102"}' href="http://www.caribbeancompr.com/moviepages/021015_102/index.html"><img src="moviepages/021015_102/images/main_b.jpg" alt="さくらあきな"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_101"}' href="http://www.caribbeancompr.com/moviepages/021015_101/index.html"><img src="moviepages/021015_101/images/main_b.jpg" alt="真白優"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"021015_100"}' href="http://www.caribbeancompr.com/moviepages/021015_100/index.html"><img src="moviepages/021015_100/images/main_b.jpg" alt="ゆうか"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020615_099"}' href="http://www.caribbeancompr.com/moviepages/020615_099/index.html"><img src="moviepages/020615_099/images/main_b.jpg" alt="前田かおり"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020615_098"}' href="http://www.caribbeancompr.com/moviepages/020615_098/index.html"><img src="moviepages/020615_098/images/main_b.jpg" alt="秋野千尋"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020615_097"}' href="http://www.caribbeancompr.com/moviepages/020615_097/index.html"><img src="moviepages/020615_097/images/main_b.jpg" alt="レクシー・ベル"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020615_096"}' href="http://www.caribbeancompr.com/moviepages/020615_096/index.html"><img src="moviepages/020615_096/images/main_b.jpg" alt=" 生成うい"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_095"}' href="http://www.caribbeancompr.com/moviepages/020515_095/index.html"><img src="moviepages/020515_095/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_094"}' href="http://www.caribbeancompr.com/moviepages/020515_094/index.html"><img src="moviepages/020515_094/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_089"}' href="http://www.caribbeancompr.com/moviepages/013015_089/index.html"><img src="moviepages/013015_089/images/main_b.jpg" alt="前田かおり"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_088"}' href="http://www.caribbeancompr.com/moviepages/013015_088/index.html"><img src="moviepages/013015_088/images/main_b.jpg" alt="大橋未久"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_087"}' href="http://www.caribbeancompr.com/moviepages/013015_087/index.html"><img src="moviepages/013015_087/images/main_b.jpg" alt="杏奈りか"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/013015_086/index.html"><img src="moviepages/013015_086/images/main_b.jpg" alt="雪平こよみ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_085"}' href="http://www.caribbeancompr.com/moviepages/013015_085/index.html"><img src="moviepages/013015_085/images/main_b.jpg" alt="水樹まや"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"013015_084"}' href="http://www.caribbeancompr.com/moviepages/013015_084/index.html"><img src="moviepages/013015_084/images/main_b.jpg" alt="ララ・ブルックス ネシー クロエ・フォスター"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_093"}' href="http://www.caribbeancompr.com/moviepages/020515_093/index.html"><img src="moviepages/020515_093/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_080"}' href="http://www.caribbeancompr.com/moviepages/012315_080/index.html"><img src="moviepages/012315_080/images/main_b.jpg" alt="波多野結衣 朝桐光 横山みれい 江波りゅう 滝川ソフィア 古瀬玲 西野エリカ 渡辺美羽 都盛星空 新山かえで 百合川さら 倖田りな"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_079"}' href="http://www.caribbeancompr.com/moviepages/012315_079/index.html"><img src="moviepages/012315_079/images/main_b.jpg" alt="若菜みなみ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_078"}' href="http://www.caribbeancompr.com/moviepages/012315_078/index.html"><img src="moviepages/012315_078/images/main_b.jpg" alt="加藤麻耶"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_077"}' href="http://www.caribbeancompr.com/moviepages/012315_077/index.html"><img src="moviepages/012315_077/images/main_b.jpg" alt="RAY"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_076"}' href="http://www.caribbeancompr.com/moviepages/012315_076/index.html"><img src="moviepages/012315_076/images/main_b.jpg" alt="秋野千尋"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"012315_075"}' href="http://www.caribbeancompr.com/moviepages/012315_075/index.html"><img src="moviepages/012315_075/images/main_b.jpg" alt="ジーナ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_092"}' href="http://www.caribbeancompr.com/moviepages/020515_092/index.html"><img src="moviepages/020515_092/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011715_083"}' href="http://www.caribbeancompr.com/moviepages/011715_083/index.html"><img src="moviepages/011715_083/images/main_b.jpg" alt="大橋未久"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011615_074"}' href="http://www.caribbeancompr.com/moviepages/011615_074/index.html"><img src="moviepages/011615_074/images/main_b.jpg" alt="瀬奈まお"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011615_072"}' href="http://www.caribbeancompr.com/moviepages/011615_072/index.html"><img src="moviepages/011615_072/images/main_b.jpg" alt="大澤美咲"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011615_071"}' href="http://www.caribbeancompr.com/moviepages/011615_071/index.html"><img src="moviepages/011615_071/images/main_b.jpg" alt="星咲優菜"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011615_070"}' href="http://www.caribbeancompr.com/moviepages/011615_070/index.html"><img src="moviepages/011615_070/images/main_b.jpg" alt="椎名みゆ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011615_069"}' href="http://www.caribbeancompr.com/moviepages/011615_069/index.html"><img src="moviepages/011615_069/images/main_b.jpg" alt="ゆき"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_091"}' href="http://www.caribbeancompr.com/moviepages/020515_091/index.html"><img src="moviepages/020515_091/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011015_073"}' href="http://www.caribbeancompr.com/moviepages/011015_073/index.html"><img src="moviepages/011015_073/images/main_b.jpg" alt="大橋未久"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"011015_068"}' href="http://www.caribbeancompr.com/moviepages/011015_068/index.html"><img src="moviepages/011015_068/images/main_b.jpg" alt="綾瀬なるみ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_082"}' href="http://www.caribbeancompr.com/moviepages/010915_082/index.html"><img src="moviepages/010915_082/images/main_b.jpg" alt="水城奈緒"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_081"}' href="http://www.caribbeancompr.com/moviepages/010915_081/index.html"><img src="moviepages/010915_081/images/main_b.jpg" alt="水城奈緒"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_067"}' href="http://www.caribbeancompr.com/moviepages/010915_067/index.html"><img src="moviepages/010915_067/images/main_b.jpg" alt="前田かおり"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_066"}' href="http://www.caribbeancompr.com/moviepages/010915_066/index.html"><img src="moviepages/010915_066/images/main_b.jpg" alt="春日野結衣"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_065"}' href="http://www.caribbeancompr.com/moviepages/010915_065/index.html"><img src="moviepages/010915_065/images/main_b.jpg" alt="北条麻妃"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_064"}' href="http://www.caribbeancompr.com/moviepages/010915_064/index.html"><img src="moviepages/010915_064/images/main_b.jpg" alt="ブルーク・バナー エイプリル・オニール サミー・クルーズ ブルック・ヴァンビューレン"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"010915_063"}' href="http://www.caribbeancompr.com/moviepages/010915_063/index.html"><img src="moviepages/010915_063/images/main_b.jpg" alt="かほ"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"020515_090"}' href="http://www.caribbeancompr.com/moviepages/020515_090/index.html"><img src="moviepages/020515_090/images/main_b.jpg" alt="本多成実"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_043"}' href="http://www.caribbeancompr.com/moviepages/123114_043/index.html"><img src="moviepages/123114_043/images/main_b.jpg" alt="舞咲みくに"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_048"}' href="http://www.caribbeancompr.com/moviepages/123114_048/index.html"><img src="moviepages/123114_048/images/main_b.jpg" alt="アビゲイル・ジョンソン"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_062"}' href="http://www.caribbeancompr.com/moviepages/123114_062/index.html"><img src="moviepages/123114_062/images/main_b.jpg" alt="猫田りく"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_047"}' href="http://www.caribbeancompr.com/moviepages/123114_047/index.html"><img src="moviepages/123114_047/images/main_b.jpg" alt="舞咲みくに 愛乃なみ 希咲あや 綾瀬ゆい 佐々木絵美 皆月もか 新山かえで 都盛星空 小司あん 高橋さやか 日向小  夏 あずみ恋"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_046"}' href="http://www.caribbeancompr.com/moviepages/123114_046/index.html"><img src="moviepages/123114_046/images/main_b.jpg" alt="柄本ゆかり"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_045"}' href="http://www.caribbeancompr.com/moviepages/123114_045/index.html"><img src="moviepages/123114_045/images/main_b.jpg" alt="さや"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_044"}' href="http://www.caribbeancompr.com/moviepages/122314_044/index.html"><img src="moviepages/122314_044/images/main_b.jpg" alt="吉村美咲"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_042"}' href="http://www.caribbeancompr.com/moviepages/122314_042/index.html"><img src="moviepages/122314_042/images/main_b.jpg" alt="桜井心菜"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_041"}' href="http://www.caribbeancompr.com/moviepages/122314_041/index.html"><img src="moviepages/122314_041/images/main_b.jpg" alt="松永ちえり"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_040"}' href="http://www.caribbeancompr.com/moviepages/122314_040/index.html"><img src="moviepages/122314_040/images/main_b.jpg" alt="上条めぐ 羽月希 小澤マリア 苺みるく あいりみく 綾瀬ティアラ 遙めぐみ Maika まりか 沙藤ユリ 橘ひなた 当真ゆき"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_039"}' href="http://www.caribbeancompr.com/moviepages/122314_039/index.html"><img src="moviepages/122314_039/images/main_b.jpg" alt="みづき"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"122314_038"}' href="http://www.caribbeancompr.com/moviepages/122314_038/index.html"><img src="moviepages/122314_038/images/main_b.jpg" alt="アビゲイル・ジョンソン アシュリン・レイ  シオーネ・クーパー ベラ・ベイビー アリッサ・ブランチ バンダラスト リッキー・シックス 他"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"121914_037"}' href="http://www.caribbeancompr.com/moviepages/121914_037/index.html"><img src="moviepages/121914_037/images/main_b.jpg" alt="大橋未久"></a></li>
+                                        <li><a ga-trackevent='{"Category":"index2","Action":"オススメ最新作品", "Label":"123114_049"}' href="http://www.caribbeancompr.com/moviepages/123114_049/index.html"><img src="moviepages/123114_049/images/main_b.jpg" alt="大橋未久"></a></li>
+                                       </ul>
+                </div><!--end .top-list-area-->
+            </div><!--end #slider-latest-->
+        </div><!--end .slider-outer-->
+       
+<!-- bannerarea-top-7 -->
+
+<div class="bannerarea-top-1">
+<a ga-trackevent='{"Category":"index2","Action":"トップ固定バナー","Label":"020615_098 秋野千尋"}' href="http://www.caribbeancompr.com/moviepages/020615_098/index.html"><img  style="border:none;" src="box/images/top/top_akinochihiro.jpg"></a>
+</div>
+
+
+<!--end .bannerarea-top-7-->
+
+
+        
+        <h2>週間売れ筋ランキング<span><a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/ranking/top_movie_ranking.htm">ランキング一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-ranking">
+                <div class="top-list-area row-1">
+                    <ul>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"020615_098"}' href="http://www.caribbeancompr.com/moviepages/020615_098/index.html">
+                                <img src="moviepages/020615_098/images/main_b.jpg" alt="秋野千尋">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">1</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"020615_096"}' href="http://www.caribbeancompr.com/moviepages/020615_096/index.html">
+                                <img src="moviepages/020615_096/images/main_b.jpg" alt=" 生成うい">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">2</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"013015_087"}' href="http://www.caribbeancompr.com/moviepages/013015_087/index.html">
+                                <img src="moviepages/013015_087/images/main_b.jpg" alt="杏奈りか">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">3</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"020615_099"}' href="http://www.caribbeancompr.com/moviepages/020615_099/index.html">
+                                <img src="moviepages/020615_099/images/main_b.jpg" alt="前田かおり">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">4</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"020615_097"}' href="http://www.caribbeancompr.com/moviepages/020615_097/index.html">
+                                <img src="moviepages/020615_097/images/main_b.jpg" alt="レクシー・ベル">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">5</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"013015_088"}' href="http://www.caribbeancompr.com/moviepages/013015_088/index.html">
+                                <img src="moviepages/013015_088/images/main_b.jpg" alt="大橋未久">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">6</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"011715_083"}' href="http://www.caribbeancompr.com/moviepages/011715_083/index.html">
+                                <img src="moviepages/011715_083/images/main_b.jpg" alt="大橋未久">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">7</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"012315_076"}' href="http://www.caribbeancompr.com/moviepages/012315_076/index.html">
+                                <img src="moviepages/012315_076/images/main_b.jpg" alt="秋野千尋">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">8</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"012315_075"}' href="http://www.caribbeancompr.com/moviepages/012315_075/index.html">
+                                <img src="moviepages/012315_075/images/main_b.jpg" alt="ジーナ">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">9</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"020515_094"}' href="http://www.caribbeancompr.com/moviepages/020515_094/index.html">
+                                <img src="moviepages/020515_094/images/main_b.jpg" alt="本多成実">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">10</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"111814_020"}' href="http://www.caribbeancompr.com/moviepages/111814_020/index.html">
+                                <img src="moviepages/111814_020/images/main_b.jpg" alt="前田かおり">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">11</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"021015_103"}' href="http://www.caribbeancompr.com/moviepages/021015_103/index.html">
+                                <img src="moviepages/021015_103/images/main_b.jpg" alt="白咲碧">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">12</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"012315_079"}' href="http://www.caribbeancompr.com/moviepages/012315_079/index.html">
+                                <img src="moviepages/012315_079/images/main_b.jpg" alt="若菜みなみ">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">13</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"011015_073"}' href="http://www.caribbeancompr.com/moviepages/011015_073/index.html">
+                                <img src="moviepages/011015_073/images/main_b.jpg" alt="大橋未久">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">14</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"010915_066"}' href="http://www.caribbeancompr.com/moviepages/010915_066/index.html">
+                                <img src="moviepages/010915_066/images/main_b.jpg" alt="春日野結衣">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">15</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"010915_067"}' href="http://www.caribbeancompr.com/moviepages/010915_067/index.html">
+                                <img src="moviepages/010915_067/images/main_b.jpg" alt="前田かおり">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">16</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"121114_030"}' href="http://www.caribbeancompr.com/moviepages/121114_030/index.html">
+                                <img src="moviepages/121114_030/images/main_b.jpg" alt="小西まりえ">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">17</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"011615_074"}' href="http://www.caribbeancompr.com/moviepages/011615_074/index.html">
+                                <img src="moviepages/011615_074/images/main_b.jpg" alt="瀬奈まお">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">18</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"011615_071"}' href="http://www.caribbeancompr.com/moviepages/011615_071/index.html">
+                                <img src="moviepages/011615_071/images/main_b.jpg" alt="星咲優菜">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">19</div>
+                            </a>
+                        </li>
+                                                <li>
+                            <a ga-trackevent='{"Category":"index2","Action":"週間売れ筋ランキング","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/013015_086/index.html">
+                                <img src="moviepages/013015_086/images/main_b.jpg" alt="雪平こよみ">
+                                <div class="rank-corner"></div>
+                                <div class="rank-no">20</div>
+                            </a>
+                        </li>
+                                            </ul>
+                </div>
+            </div><!--end #slider-ranking-->
+        </div><!--end .slider-outer-->
+        
+       <!-- bannerarea-top-6 -->
+
+<style>
+
+/* 右側バナーボタン */
+.tBnrBtnBox { width: 214px;  height:230px; z-index: 2; position: absolute; top: 10px; right: 10px; display:/* table-cell !important; vertical-align: central;  background: red;*/}
+.tBnrBtn1 {  width: 214px; margin-bottom: 10px; margin-top: 10px; /*background: yellow; */}
+.tBnrBtn1 img 
+ {
+	width: 214px ; border: none !important;
+}
+
+
+}
+.tBnrBtn2 {  width: 214px; /* background: orange;*/}
+
+.tBnrBtn2 img
+ {
+	width: 214px ; border: none !important ;
+
+ }
+
+
+@media screen and (min-width: 1200px) {
+.tBnrBtnBox {
+	width: 224px; margin-top: 16px;
+}
+
+.tBnrBtn1 img
+ {
+	width: 224px ;
+}
+
+.tBnrBtn2 img
+ {
+	width: 224px ;
+}
+
+
+}
+
+
+@media screen and (min-width: 1400px) {
+
+.tBnrBtnBox {
+	width: 280px;  margin-top: 18px;
+}
+
+.tBnrBtn1 img
+ {
+	width: 280px ;
+}
+
+.tBnrBtn2 img
+ {
+	width: 280px ;
+}
+
+}
+
+
+</style>
+
+
+
+
+	<div class="bannerarea-top-1" style="margin:0 auto 50px; position:relative; z-index:1; border: none; " >
+    <a href="http://www.dxlive.com/preview/hondanarumi" target="_blank" ga-trackevent='{"Category":"index2","Action":"トップ固定バナー","Label":"honda narumi"}'><img src="box/images/top/honda_narumi_dx/honda_narumi_dx.jpg"></a>
+
+
+<div class="tBnrBtnBox">
+    <div class="tBnrBtn1"><a href="http://www.dxlive.com/preview/hondanarumi" target="_blank">
+    <img src="box/images/top/honda_narumi_dx/honda_narumi_dx_btn.png"></a></div>
+
+	<div class="tBnrBtn2"><a href="http://www.caribbeancompr.com/search/%CB%DC%C2%BF%C0%AE%BC%C2/1.html"><img src="box/images/top/honda_narumi_dx/honda_narumi_ppv_btn.png"></a></div>    
+</div>
+
+</div>
+
+<!--end .bannerarea-top-6-->
+
+        <div class="slider-outer"><!-- bannerarea-top-4-->
+    <div class="bannerarea-top-4">
+    <ul>
+    	
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#1"}' href="http://www.caribbeancompr.com/listpages/ticketonly1.html"><img src="box/images/top/matomegai_ticket_only.png" alt="まとめ買い限定作品一覧"></a></li>
+       
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#2"}' href="http://www.caribbeancompr.com/search/?q=%C1%B0%C5%C4%A4%AB%A4%AA%A4%EA"><img src="box/images/top/maeda_kaori.png" alt="「前田かおり」作品一覧"></a></li>
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#3"}' href="http://www.caribbeancompr.com/search/?q=%C2%E7%B6%B6%CC%A4%B5%D7"><img src="box/images/top/ohashi_miku.png" alt="「大橋未久」作品一覧"></a></li>
+     
+       <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#4"}'href="http://www.caribbeancompr.com/search/?q=%BB%B3%BC%EA%DB%D9"><img src="box/images/top/yamate_shiori.png" alt="「山手栞」作品一覧"></a></li>        
+        
+       <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#5"}'href="http://www.caribbeancompr.com/search/%C0%AE%B5%DC%A5%EB%A5%EA/1.html"><img src="box/images/top/narumiya_ruri.png" alt="「成宮ルリ」作品一覧"></a></li>
+       
+       
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#6"}' href="http://www.caribbeancompr.com/projects/yoshino_kimika2/index.html"><img src="box/images/top/yoshino_kimika.png" alt="芸能人“吉野公佳”がヘアヌードSEX解禁！"></a></li>
+        
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#7"}' href="http://www.caribbeancompr.com/set.html"><img src="box/images/top/set_sale.png" alt="セット販売一覧"></a></li>
+        
+       
+      <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#8"}' href="http://www.caribbeancompr.com/listpages/40_1.html"><img src="box/images/top/ana_ru.png" alt="アナル作品一覧"></a></li>
+   
+   <!--  
+    <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#8"}' href="/search/%C0%C4%B4%AF/1.html"><img src="/box/images/top/ao_kan.png" alt="青カン作品一覧"></a></li>-->
+    
+    <!-- <li><a href="/search/?q=FULLHD"><img src="/box/images/top/mini_11.png" alt="Full HD作品一覧"></a></li>-->
+    
+ 
+  <!--  <li><a href="/search/%C7%C8%C2%BF%CC%EE%B7%EB%B0%E1/1.html"><img src="/box/images/top/hanzawa_hatano_yui.png" alt="「波多野結衣」作品一覧"></a></li>-->
+     
+<!--     <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#6"}' href="/listpages/price_10_1999_1.html"><img src="/box/images/top/mini_07.png" alt="お買い得作品"></a></li>
+     <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#7"}' href="/studio/2000_1.html"><img src="/box/images/top/mini_05.png" alt="スカイハイ作品一覧"></a></li>
+     -->
+<!--        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#8"}' href="/listpages/60_1.html"><img src="/box/images/top/mini_03.png" alt="熟女作品一覧"></a></li>
+        <li><a ga-trackevent='{"Category":"index2","Action":"ランダムバナー","Label":"banner#9"}' href="/listpages/13_1.html"><img src="/box/images/top/mini_01.png" alt="乱交作品一覧"></a></li>-->
+      <!--  <li><a href="/search/%CE%A9%C0%EE%CD%FD%B7%C3/1.html"><img src="/box/images/top/mini_02.png" alt="立川理恵ベスト作品"></a></li>-->
+        <!--<li><a href="/app/cart_add/?id=18358"><img src="/box/images/top/mini_04.png" alt="制服素人図鑑Vol.3"></a></li> 
+        <li><a href="/search/%B2%AD%A4%D2%A4%C8%A4%DF/1.html"><img src="/box/images/top/mini_13.png" alt="沖ひとみ作品一覧"></a></li>-->
+        
+<!--        <li><a href="/app/cart_add/?id=19057"><img src="/box/images/top/heyzo_matomegai.png" alt="HEYZO 10本セット購入"></a></li>-->
+
+        </ul>
+    </div><!--end .bannerarea-top-4-->
+</div>
+
+       <!-- bannerarea-top-1 -->
+
+<h2>一本あたりの価格が安くなるお得なチケット</h2>
+
+<div class="bannerarea-top-1">
+    <a onclick='ga("send","event","index2","まとめ買いチケット","ticket_page")' href="http://www.caribbeancompr.com/ticket.html"><img src="box/images/top/ticket.png"></a>
+</div>
+<!--end .bannerarea-top-1-->
+
+       
+       
+       
+        
+        <h2>人気「アナル」作品<span><a ga-trackevent='{"Category":"index2", "Action":"人気アナル作品","Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/listpages/40_1.html">アナル作品一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-popcat3">
+                <div class="top-list-area row-1">
+                    <ul>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/042214_009/index.html"><img src="moviepages/042214_009/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/051614_847/index.html"><img src="moviepages/051614_847/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/040414_810/index.html"><img src="moviepages/040414_810/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/102414_989/index.html"><img src="moviepages/102414_989/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/031414_793/index.html"><img src="moviepages/031414_793/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/053014_858/index.html"><img src="moviepages/053014_858/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/121114_030/index.html"><img src="moviepages/121114_030/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/071114_895/index.html"><img src="moviepages/071114_895/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/050914_840/index.html"><img src="moviepages/050914_840/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/062714_882/index.html"><img src="moviepages/062714_882/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/042514_830/index.html"><img src="moviepages/042514_830/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/041114_819/index.html"><img src="moviepages/041114_819/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/080114_913/index.html"><img src="moviepages/080114_913/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/030714_788/index.html"><img src="moviepages/030714_788/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/092614_964/index.html"><img src="moviepages/092614_964/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/022114_777/index.html"><img src="moviepages/022114_777/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/123114_047/index.html"><img src="moviepages/123114_047/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/071814_901/index.html"><img src="moviepages/071814_901/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/050214_838/index.html"><img src="moviepages/050214_838/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/090514_944/index.html"><img src="moviepages/090514_944/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気アナル作品","Label":"013015_086}' href="http://www.caribbeancompr.com/moviepages/040414_809/index.html"><img src="moviepages/040414_809/images/main_b.jpg" alt=""></a></li>
+                                            </ul>
+                </div><!--end .top-list-area-->
+            </div><!--end #slider-popcat3-->
+        </div><!--end .slider-outer-->
+
+        
+        <h2>人気「パイパン」作品<span><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品", "Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/listpages/29_1.html">パイパン作品一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-popcat4">
+                <div class="top-list-area row-1">
+                    <ul>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032814_803/index.html"><img src="moviepages/032814_803/images/main_b.jpg" title="ロシア少女と交わる、体液濃厚セックス。 アビゲイル・ジョンソン"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/072514_910/index.html"><img src="moviepages/072514_910/images/main_b.jpg" title="Mappa マッパ ~全編これでもかの全裸！ 愛乃なみ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/030714_791/index.html"><img src="moviepages/030714_791/images/main_b.jpg" title="お願いされたら断れないモデル 押しに弱くていい女 松岡聖羅"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/051614_850/index.html"><img src="moviepages/051614_850/images/main_b.jpg" title="ラフォーレ ガール Vol.23 小西まりえ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101714_983/index.html"><img src="moviepages/101714_983/images/main_b.jpg" title="ラフォーレ ガール Vol.32 春日野結衣"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/061314_870/index.html"><img src="moviepages/061314_870/images/main_b.jpg" title="スカイエンジェル 176 みやび真央"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101014_976/index.html"><img src="moviepages/101014_976/images/main_b.jpg" title="キャットウォーク ポイズン 110 20歳の超高級サービス 井上英李"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032814_805/index.html"><img src="moviepages/032814_805/images/main_b.jpg" title="KIRARI 69 妹のロリマンに中出し 大桃りさ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082914_936/index.html"><img src="moviepages/082914_936/images/main_b.jpg" title="金髪爆乳！リッキー・シックスと情熱性交。 リッキー・シックス"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/092614_962/index.html"><img src="moviepages/092614_962/images/main_b.jpg" title="キャットウォーク ポイズン 109 野外で中出しHしようよ&#9825; 阿久美々"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/103114_992/index.html"><img src="moviepages/103114_992/images/main_b.jpg" title="ムチャブリ 宮澤みほ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/091914_958/index.html"><img src="moviepages/091914_958/images/main_b.jpg" title="モデル志願の面接に来た子は元（現役）芸能人！ 希咲あや"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/010915_066/index.html"><img src="moviepages/010915_066/images/main_b.jpg" title="キャットウォーク ポイズン DV 29 ワレメくっきりパイパン女子校生 春日野結衣"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/120514_022/index.html"><img src="moviepages/120514_022/images/main_b.jpg" title="レクシー ベル スペシャルベスト 150min レクシー・ベル"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042514_827/index.html"><img src="moviepages/042514_827/images/main_b.jpg" title="西洋ブロンド美少女の純白ワレメに生中出し ララ・ブルックス ララ・ブルックス"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082214_931/index.html"><img src="moviepages/082214_931/images/main_b.jpg" title="日本式性感オイルマッサージ2 欧米美女3連発 ティファニー ナタリー カルメン"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080914_923/index.html"><img src="moviepages/080914_923/images/main_b.jpg" title="スカイエンジェル 181 琴吹まりあ（星まりあ）"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080114_914/index.html"><img src="moviepages/080114_914/images/main_b.jpg" title="S Model 104 最高に淫らな絶品ボディ 阿久美々"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/120514_026/index.html"><img src="moviepages/120514_026/images/main_b.jpg" title="ラフォーレ ガール Vol.34 川井まゆ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/111414_013/index.html"><img src="moviepages/111414_013/images/main_b.jpg" title="スカイエンジェル 185 沖野るり"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/012315_075/index.html"><img src="moviepages/012315_075/images/main_b.jpg" title="大人気の金髪ロシア女優ジーナとガチSEX ジーナ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/052314_853/index.html"><img src="moviepages/052314_853/images/main_b.jpg" title="レッドホットフェティッシュコレクション 厳選！美少女スペシャル4時間 つくし 木村つな 沖ひとみ 石川鈴華 石原ちか 晴海カンナ 早乙女りん 詩しおり 水玉レモン 星野あいか あいりみく 前田陽菜 杏樹紗奈 大倉彩音 このは 京野結衣 中野ありさ 中川美香 椎名みゆ 羽川るな"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101714_979/index.html"><img src="moviepages/101714_979/images/main_b.jpg" title="ホームステイ滞在先 金髪美女セックス映像流出 日本人留学生の盗撮映像 ホームステイ金髪３人"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/100314_969/index.html"><img src="moviepages/100314_969/images/main_b.jpg" title="金髪ロシア少女3名！快楽に魅了されていく情熱性交。 キャンディ ケリー レオニー・エイプリル"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/011615_072/index.html"><img src="moviepages/011615_072/images/main_b.jpg" title="S Model 113 変態露出狂に出会って2.5秒で合体 大澤美咲"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/111414_004/index.html"><img src="moviepages/111414_004/images/main_b.jpg" title="タイムファックバンディット 時間よ止まれ 〜ヨーロッパ編〜 ＋ マンコ図鑑 ジーナ まりか"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/012315_077/index.html"><img src="moviepages/012315_077/images/main_b.jpg" title="キャットウォーク ポイズン 116 Ray 降臨 RAY"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/103114_991/index.html"><img src="moviepages/103114_991/images/main_b.jpg" title="中出しインターナショナル女子校生編�� ベラ チャスティティ・リン クリスタル・ベンツ ルビー・レイズ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/122314_038/index.html"><img src="moviepages/122314_038/images/main_b.jpg" title="金髪少女！本能のままに腰を振る！ディルドオナニー！ アビゲイル・ジョンソン アシュリン・レイ  シオーネ・クーパー ベラ・ベイビー アリッサ・ブランチ バンダラスト リッキー・シックス 他"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/123114_048/index.html"><img src="moviepages/123114_048/images/main_b.jpg" title="アビゲイル ジョンソンの制服真性中出しセックス アビゲイル・ジョンソン"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082214_932/index.html"><img src="moviepages/082214_932/images/main_b.jpg" title="モデルコレクション ギャル  「極限陶酔」 阿久美々"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032114_797/index.html"><img src="moviepages/032114_797/images/main_b.jpg" title="Premium Juice Vol.8 真理花"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/020615_096/index.html"><img src="moviepages/020615_096/images/main_b.jpg" title="KIRARI 88 働きウーマン 〜新米ナースの奮闘記〜  生成うい"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101014_975/index.html"><img src="moviepages/101014_975/images/main_b.jpg" title="憧れだったあの金髪スチュワーデスと生セックス リリー・ラビュー"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080114_912/index.html"><img src="moviepages/080114_912/images/main_b.jpg" title="パイパンGAL中出し ルナ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112614_014/index.html"><img src="moviepages/112614_014/images/main_b.jpg" title="プレミアム・インターナショナル・ファック アレクシア・レイ アレクシア・レイ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/011615_069/index.html"><img src="moviepages/011615_069/images/main_b.jpg" title="生活に困ってアナルを提供してしまったJK ゆき"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/013015_084/index.html"><img src="moviepages/013015_084/images/main_b.jpg" title="日本式性感オイルマッサージ3 欧米美女3連発 ララ・ブルックス ネシー クロエ・フォスター"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/062014_874/index.html"><img src="moviepages/062014_874/images/main_b.jpg" title="Girls Mix Juice vol.2 ミユキ カナ マユミ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/100314_966/index.html"><img src="moviepages/100314_966/images/main_b.jpg" title="Girls Mix Juice vol.6 アイリ カオリ レオナ"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/021015_101/index.html"><img src="moviepages/021015_101/images/main_b.jpg" title="処女喪失 真白優"></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気パイパン作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/021015_102/index.html"><img src="moviepages/021015_102/images/main_b.jpg" title="スジッ娘倶楽部 さくらあきな"></a></li>
+                                            </ul>
+                </div><!--end .top-list-area-->
+            </div><!--end #slider-popcat4-->
+        </div><!--end .slider-outer-->
+
+        
+        
+        <h2>人気「巨乳」作品<span><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品", "Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/listpages/20_1.html">巨乳作品一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-popcat1">
+                <div class="top-list-area row-1">
+                    <ul>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/040414_812/index.html"><img src="moviepages/040414_812/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/072514_910/index.html"><img src="moviepages/072514_910/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/111414_007/index.html"><img src="moviepages/111414_007/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/071114_898/index.html"><img src="moviepages/071114_898/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/060614_867/index.html"><img src="moviepages/060614_867/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/060614_868/index.html"><img src="moviepages/060614_868/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042214_005/index.html"><img src="moviepages/042214_005/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042214_010/index.html"><img src="moviepages/042214_010/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/061314_873/index.html"><img src="moviepages/061314_873/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/062014_879/index.html"><img src="moviepages/062014_879/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/052314_855/index.html"><img src="moviepages/052314_855/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/050214_839/index.html"><img src="moviepages/050214_839/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042914_833/index.html"><img src="moviepages/042914_833/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/090514_946/index.html"><img src="moviepages/090514_946/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/081514_926/index.html"><img src="moviepages/081514_926/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082914_936/index.html"><img src="moviepages/082914_936/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112614_019/index.html"><img src="moviepages/112614_019/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/010114_003/index.html"><img src="moviepages/010114_003/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080814_921/index.html"><img src="moviepages/080814_921/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/022814_783/index.html"><img src="moviepages/022814_783/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/092614_962/index.html"><img src="moviepages/092614_962/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/051614_848/index.html"><img src="moviepages/051614_848/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/053014_858/index.html"><img src="moviepages/053014_858/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/041114_818/index.html"><img src="moviepages/041114_818/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/070414_894/index.html"><img src="moviepages/070414_894/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112014_009/index.html"><img src="moviepages/112014_009/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/071114_897/index.html"><img src="moviepages/071114_897/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/011015_073/index.html"><img src="moviepages/011015_073/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/041814_822/index.html"><img src="moviepages/041814_822/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/100314_968/index.html"><img src="moviepages/100314_968/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/111414_006/index.html"><img src="moviepages/111414_006/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032814_806/index.html"><img src="moviepages/032814_806/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/041814_824/index.html"><img src="moviepages/041814_824/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/061314_872/index.html"><img src="moviepages/061314_872/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/011615_071/index.html"><img src="moviepages/011615_071/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080114_914/index.html"><img src="moviepages/080114_914/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/121914_035/index.html"><img src="moviepages/121914_035/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101714_981/index.html"><img src="moviepages/101714_981/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/111414_005/index.html"><img src="moviepages/111414_005/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/070414_891/index.html"><img src="moviepages/070414_891/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/070414_890/index.html"><img src="moviepages/070414_890/images/main_b.jpg" alt=""></a></li>
+                         
+                            <li><a ga-trackevent='{"Category":"index2","Action":"人気巨乳作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/051614_846/index.html"><img src="moviepages/051614_846/images/main_b.jpg" alt=""></a></li>
+                                            </ul>
+                </div><!--end .top-list-area-->
+            </div><!--end #slider-popcat1-->
+        </div><!--end .slider-outer-->
+
+    
+    <h2>人気「熟女」作品<span><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"list"}' class="ichiran" href="http://www.caribbeancompr.com/listpages/60_1.html">熟女作品一覧</a></span></h2>
+        <div class="slider-outer">
+            <div id="slider-popcat2">
+                <div class="top-list-area row-1">
+                    <ul>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/050914_843/index.html"><img src="moviepages/050914_843/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042214_009/index.html"><img src="moviepages/042214_009/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/053014_862/index.html"><img src="moviepages/053014_862/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/031414_795/index.html"><img src="moviepages/031414_795/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/072514_908/index.html"><img src="moviepages/072514_908/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/010114_004/index.html"><img src="moviepages/010114_004/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/062714_885/index.html"><img src="moviepages/062714_885/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/071814_903/index.html"><img src="moviepages/071814_903/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/022114_778/index.html"><img src="moviepages/022114_778/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/091214_951/index.html"><img src="moviepages/091214_951/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/102414_989/index.html"><img src="moviepages/102414_989/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/031414_793/index.html"><img src="moviepages/031414_793/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032814_804/index.html"><img src="moviepages/032814_804/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/012315_076/index.html"><img src="moviepages/012315_076/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042514_828/index.html"><img src="moviepages/042514_828/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/062014_876/index.html"><img src="moviepages/062014_876/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082914_938/index.html"><img src="moviepages/082914_938/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042214_008/index.html"><img src="moviepages/042214_008/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042514_831/index.html"><img src="moviepages/042514_831/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112614_018/index.html"><img src="moviepages/112614_018/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/062714_882/index.html"><img src="moviepages/062714_882/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/100314_967/index.html"><img src="moviepages/100314_967/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/101714_978/index.html"><img src="moviepages/101714_978/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/032114_798/index.html"><img src="moviepages/032114_798/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/042214_007/index.html"><img src="moviepages/042214_007/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/070414_889/index.html"><img src="moviepages/070414_889/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/110614_999/index.html"><img src="moviepages/110614_999/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/092614_960/index.html"><img src="moviepages/092614_960/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112014_012/index.html"><img src="moviepages/112014_012/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/030714_788/index.html"><img src="moviepages/030714_788/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/082914_937/index.html"><img src="moviepages/082914_937/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/053014_857/index.html"><img src="moviepages/053014_857/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/080814_919/index.html"><img src="moviepages/080814_919/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/091914_957/index.html"><img src="moviepages/091914_957/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/020615_098/index.html"><img src="moviepages/020615_098/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/071814_900/index.html"><img src="moviepages/071814_900/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/010915_082/index.html"><img src="moviepages/010915_082/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/122314_041/index.html"><img src="moviepages/122314_041/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/010915_065/index.html"><img src="moviepages/010915_065/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/060614_864/index.html"><img src="moviepages/060614_864/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/123114_046/index.html"><img src="moviepages/123114_046/images/main_b.jpg" alt=""></a></li>
+                                                    <li><a ga-trackevent='{"Category":"index2","Action":"人気熟女作品","Label":"013015_086"}' href="http://www.caribbeancompr.com/moviepages/112614_016/index.html"><img src="moviepages/112614_016/images/main_b.jpg" alt=""></a></li>
+                                            </ul>
+                </div><!--end .top-list-area-->
+            </div><!--end #slider-popcat2-->
+        </div><!--end .slider-outer-->
+
+        
+       
+
+        
+       
+        
+
+    </div><!--end #main-->
+
+<script type="text/javascript">
+
+/*bxSliderトップ*/
+$('#slider-top ul').bxSlider({
+    speed: 600,
+		pause: 5000,
+    infiniteLoop: true,
+    controls: true,
+    pager: true,
+    slideWidth: 940,
+    auto: true,
+    autoHover: true,
+    easing: 'swing'
+});
+
+/*横長4枚バナースライダー*/
+
+$('.bannerarea-top-4 ul').bxSlider({
+    speed: 300,
+    infiniteLoop: true,
+    controls: true,
+    pager: false,
+    slideMargin: 16,
+    slideWidth: 270,
+    minSlides: 3,
+    maxSlides: 8,
+    easing: 'swing',
+    stopAuto: false
+});
+
+/*bxSlider最新、ランキング*/
+var regSliderUl = $('#slider-latest div ul, #slider-ranking div ul');
+
+regSliderUl.bxSlider({
+    speed: 300,
+    infiniteLoop: true,
+    controls: true,
+    pager: false,
+    slideMargin: 16,
+    slideWidth: 175,
+    minSlides: 5,
+    maxSlides: 7,
+    easing: 'swing'
+});
+
+/*bxSlider人気カテゴリー (「#slider-popcat番号」)*/
+var sliderPopcat = 'div[id^="slider-popcat"]';
+
+for(var i =1; i<sliderPopcat.length; i++){
+    var eachPopcatSliderUl = "#slider-popcat" + i + " div ul";
+
+    $(eachPopcatSliderUl).bxSlider({
+        speed: 300,
+        infiniteLoop: true,
+        controls: true,
+        pager: false,
+        slideMargin: 16,
+        slideWidth: 175,
+        minSlides: 5,
+        maxSlides: 7,
+        easing: 'swing',
+    });
+
+}
+
+</script>
+<script>
+$(document).ready(function(){
+/*        $('#slider-latest a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"オススメ最新作品","Label":"arrow"}');
+	$('#slider-latest a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"オススメ最新作品","Label":"arrow"}');
+        $('#slider-ranking a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"週間売れ筋ランキング","Label":"arrow"}');
+        $('#slider-ranking a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"週間売れ筋ランキング","Label":"arrow"}');
+        $('#slider-popcat1 a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"人気巨乳作品","Label":"arrow"}');
+        $('#slider-popcat1 a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"人気巨乳作品","Label":"arrow"}');
+        $('#slider-popcat2 a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"人気熟女作品","Label":"arrow"}');
+        $('#slider-popcat2 a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"人気熟女作品","Label":"arrow"}');
+        $('#slider-popcat3 a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"人気アナル作品","Label":"arrow"}');
+        $('#slider-popcat3 a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"人気アナル作品","Label":"arrow"}');
+        $('#slider-popcat4 a.bx-prev').attr('ga-trackevent', '{"Category":"index2","Action":"人気パイパン作品","Label":"arrow"}');
+        $('#slider-popcat4 a.bx-next').attr('ga-trackevent', '{"Category":"index2","Action":"人気パイパン作品","Label":"arrow"}');
+*/
+
+        $('#slider-latest a.bx-prev').attr('onclick', 'ga("send","event","index2","オススメ最新作品","arrow")');
+        $('#slider-latest a.bx-next').attr('onclick', 'ga("send","event","index2","オススメ最新作品","arrow")');
+        $('#slider-ranking a.bx-prev').attr('onclick', 'ga("send","event","index2","週間売れ筋ランキング作品","arrow")');
+        $('#slider-ranking a.bx-next').attr('onclick', 'ga("send","event", "index2","週間売れ筋ランキング作品","arrow")');
+        $('#slider-popcat1 a.bx-prev').attr('onclick', 'ga("send", "event","index2","人気巨乳作品","arrow")');
+        $('#slider-popcat1 a.bx-next').attr('onclick', 'ga("send", "event","index2","人気巨乳作品","arrow")');
+        $('#slider-popcat2 a.bx-prev').attr('onclick', 'ga("send", "event","index2","人気熟女作品","arrow")');
+        $('#slider-popcat2 a.bx-next').attr('onclick', 'ga("send", "event","index2","人気熟女作品","arrow")');
+        $('#slider-popcat3 a.bx-prev').attr('onclick', 'ga("send","event","index2","人気アナル作品","arrow")');
+        $('#slider-popcat3 a.bx-next').attr('onclick', 'ga("send","event","index2","人気アナル作品","arrow")');
+        $('#slider-popcat4 a.bx-prev').attr('onclick', 'ga("send","event","index2","人気パイパン作品","arrow")');
+        $('#slider-popcat4 a.bx-next').attr('onclick', 'ga("send","event","index2","人気パイパン作品","arrow")');
+	$('.bannerarea-top-4 a.bx-next').attr('onclick', 'ga("send","event","index2","ランダムバナー","arrow")');
+        $('.bannerarea-top-4 a.bx-prev').attr('onclick', 'ga("send","event","index2","ランダムバナー","arrow")');
+});
+</script>
+
+<div id="footer">
+    <div id="footer-main">
+        <div id="footer-nav">
+            <div class="footer-menu">
+                <h4 class="cc-pink">サイトガイド</h4>
+                <ul class="cc-pink-hover">
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サイトガイド","Label":"home"}' href="http://www.caribbeancompr.com/index2.html">ホーム</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サイトガイド","Label":"new_user_guide"}' href="http://www.caribbeancompr.com/first.html">初めての方へ</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サイトガイド","Label":"ticket_page"}' href="http://www.caribbeancompr.com/ticket.html">まとめ買いチケット</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サイトガイド","Label":"sitemap"}' href="http://www.caribbeancompr.com/sitemap.html">サイトマップ</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <h4 class="cc-yellow">作品検索</h4>
+                <ul class="cc-yellow-hover">
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"list_all"}' href="http://www.caribbeancompr.com/listpages/1.html">全作品リスト</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"list_category_all"}' href="http://www.caribbeancompr.com/category.html">カテゴリー一覧</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"series_all"}' href="http://www.caribbeancompr.com/category.html#cat-series">シリーズ一覧</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"studio_all"}' href="http://www.caribbeancompr.com/category.html#cat-studio">スタジオ一覧</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"ranking_top"}' href="http://www.caribbeancompr.com/ranking/weekly.html">ランキング</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"作品検索","Label":"actress_search"}' href="http://www.caribbeancompr.com/actress/a.html">女優検索</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <h4 class="cc-blue">サポート</h4>
+                <ul class="cc-blue-hover">
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サポート","Label":"faq"}' href="http://www.caribbeancompr.com/faq.html">よくあるご質問</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サポート","Label":"contact"}' href="http://www.caribbeancompr.com/contact.html">お問い合わせ</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サポート","Label":"privacy"}' href="http://www.caribbeancompr.com/privacy.html">プライバシー</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"サポート","Label":"user_agreement"}' href="http://www.caribbeancompr.com/agreement.html">会員規約</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <h4 class="cc-green">その他</h4>
+                <ul class="cc-green-hover">
+                    <li><a ga-trackevent='{"Category":"footer","Action":"その他","Label":"ranking_access"}' href="http://www.adultmango.com/cgi-bin/ranklink.cgi?id=caribpr" target="_blank">アクセスランキング</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"その他","Label":"adult_affiliate"}' href="http://www.affiliate-dti.com/" target="_blank">アダルトアフィリエイト</a></li>
+                    <li><a href="http://dxjob.dxlive.com/" target="_blank" ga-trackevent='{"Category": "footer","Action":"chat_lady"}'>チャットレディでお仕事</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"その他","Label":"business_partner"}' href="https://www.d2pass.com/form/business_partner/" target="_blank">ビジネスパートナー</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <h4 class="cc-purple">おすすめサイト</h4>
+                <ul class="cc-purple-hover">
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"caribbeancom"}' href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=6&amp;b=1400&amp;lang=tokyo" target="_blank">カリビアンコム</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"1pondo"}'　href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=18&amp;b=1400&amp;lang=tokyo" target="_blank">一本道</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"10musume"}' href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=292&amp;b=1400&amp;lang=tokyo" target="_blank">天然むすめ</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"pacopacomama"}' href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=320&amp;b=1400&amp;lang=tokyo" target="_blank">パコパコママ</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"muramura"}' href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=365&amp;b=1400&amp;lang=tokyo" target="_blank">ムラムラっとくる素人</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"nukumori"}' href="http://click.dtiserv2.com/redir.fcgi?click=1400&amp;site=436&amp;b=1436&amp;lang=tokyo" target="_blank">ぬくもりオークション</a></li>
+                    <li><a ga-trackevent='{"Category":"footer","Action":"おすすめサイト","Label":"dxlive"}' href="http://www.dxlive.com" target="_blank">ライブチャットDXLIVE</a></li>
+                </ul>
+            </div>
+        </div><!--end #footer-nav-->
+    </div><!--end #footer-main-->
+    <div id="footer-copyright">
+        <ul>
+            <li><a href="http://www.caribbeancompr.com/">&copy; 2001-<script type="text/javascript">ShowCurrentYear();</script> www.caribbeancompr.com</a></li>
+            <li><a href="http://www.dream-room.net/" target="_blank">&copy; 2004-<script type="text/javascript">ShowCurrentYear();</script> Dreamroom Productions, Inc.</a></li>
+            <li><a class="usc2257" href="javascript:;" onclick="window.open('/2257.html','','width=450,height=700')">18 USC § 2257 Record-Keeping Requirements</a></li>
+        </ul>
+    </div><!--end #footer-copyright-->
+</div>
+<div style="display:none" id="embedForm">
+        <h2>【アフィリエイトID】</h2>
+        <p>
+                <label for="aff_id">ID: </label>
+                <input type="text" id="aff_id" name="aff_id" size="30" />
+        </p>
+        <p id="id_error" style="display:none">アフィリエイトIDを入力してください</p>
+        <div id="sample_m_check" style="display:none;">
+                <h2>【サンプル動画の選択】</h2>
+                <p>
+                        <input type="checkbox" name="checkbox01" id="checkbox01" checked />
+                        <label for="checkbox01">無修正サンプル</label>
+                </p>
+                <p>
+                        <input type="checkbox" name="checkbox02" id="checkbox02" />
+                        <label for="checkbox02">モザイク付きサンプル</label>
+                </p>
+        </div>
+        <h2>【プレーヤーサイズの設定】</h2>
+        <p>
+                <label for="pWidth">横幅: </label>
+                <input type="text" id="pWidth" name="pWidth" size="30" value="450" />
+        </p>
+        <p>
+                <label for="pHeight">高さ: </label>
+                <input type="text" id="pHeight" name="pHeight" size="30" value="273" />
+        </p>
+        <p>
+                <input type="button" id="getId" value="コード取得"/>
+        </p>
+        <div id="embedPlayer" style="display:none;">
+        </div>
+        <div id="embedText" style="display:none;">
+        <h3>動画プレイヤーの埋め込みコード</h3>
+        </div>
+        <div id="embedCode" style="display:none;">
+        </div>
+        <div id="embedImgText" style="display:none;">
+        <h3>画像の埋め込みコード</h3>
+        </div>
+        <div id="embedBann" style="display:none;">
+        </div>
+</div>
+<script src="js/affEmbed.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        $("#embedCode").on('copy',function(){
+                        _gaq.push(['_trackEvent','affiliate','embedPlayer','013015_086']);
+                })
+        $("#embedBann").on('copy',function(){
+                        _gaq.push(['_trackEvent','affiliate','embedBanner','013015_086']);
+                })
+}); 
+</script>
+
+</body>
+</html>

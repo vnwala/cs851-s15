@@ -1,0 +1,334 @@
+﻿.PressOpsPageWrapper
+{
+    width:990px;text-align:left;overflow:hidden;
+}
+
+h1.PressOpsTitle 
+{
+    padding-top:5px;font: 24px Arial, Helvetica, sans-serif;color: #606783;margin: 0;
+}
+
+div.PressOpsColumnOne
+{
+    background-color:#E8E9F0;
+    width:120px;
+    vertical-align:top;
+    float:left;
+    padding:0 5px 5px 5px;
+    margin-bottom: -9999px;padding-bottom: 9999px;  /*to force it to "fill" */
+}
+ul {list-style-position:inside;}
+
+/* override the margin set in the cms for the first column @TODO remove this once Press Ops goes live*/
+.leftColumnBox { margin: 0 !important; }
+
+div.PressOpsColumnTwo
+{
+    width:575px;
+    float:left;
+    padding:5px;
+    overflow:hidden;
+}
+
+div.PressOpsColumnTwoInTwoColumnOnly
+{
+    width:850px;
+    float:left;
+    padding:5px;
+    overflow:hidden;
+}
+
+.PressOpsContactRightNav { padding:6px; }
+
+td.Date
+{    
+    padding-left:3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000066;
+}
+
+.text12
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+
+.MoreNews3a {
+	font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+	text-decoration: none;
+}
+
+.PressOpsTodayInDOD {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}
+
+/* Non matching name due to thirdcolum expectations from original location (/default.css)*/
+div.ThreeColRow_Col3 {
+    width:256px; 
+    float:right; 
+    clear:right; 
+    right:0px; 
+    padding:10px 10px 10px 5px;
+    background-color:#E8E9F0;
+    margin-bottom: -9999px;padding-bottom: 9999px;  /*to force it to "fill" */
+}
+
+.MostRecentWrapper
+{
+    width:94%;
+    padding-top: 2px;
+    margin:auto;
+}
+
+.MostRecentItemBlock
+{
+    margin:auto;
+    overflow:hidden;
+    border-bottom: 1px dotted #adafb3;
+    margin-bottom:5px;
+	font: normal 10px Arial, Helvetica, sans-serif;
+	padding-bottom: 4px;
+}
+.MostRecentItemDate
+{
+	font: normal 10px Arial, Helvetica, sans-serif;
+    color: #818487;
+}
+
+a.MostRecentLink
+{
+	font: bold 10px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #1c2669;
+}
+
+a.MostRecentLink:hover {
+	text-decoration: underline;
+}
+
+a.link12 {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+	text-decoration: none;
+}
+a.link12:hover {
+	text-decoration: underline;
+}
+
+a.link13 {
+	font: normal 13px Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+	text-decoration: none;
+}
+a.link13:hover {
+	text-decoration: underline;
+}
+
+.Link12Wrap
+{
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+}
+a.Link12 {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+	text-decoration: none;
+}
+a.Link12:hover {
+	text-decoration: underline;
+}
+
+a.Link13 {
+	font: normal 13px Arial, Helvetica, sans-serif;
+	color: #1B1E47;
+	text-decoration: none;
+}
+a.Link13:hover {
+	text-decoration: underline;
+}
+
+a.Link122 {
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color: #000066;
+	text-decoration: none;
+}
+a.Link122:hover {
+	text-decoration: underline;
+}
+.CategoricalArticleSearch
+{
+    text-align:left; padding:0 5px 5px 5px; float:right; border:solid 1px #ced0df; background-color:#E8E9F0;
+}
+
+.PressResourceItemHeader
+{
+    width:100%;position:relative;clear:both;text-align:left;
+}
+
+.ClearSpace100PercentBy5px
+{
+    width:100%;height:10px;clear:both;
+}
+
+/* PressOpsItem Pages */
+.PressOpsItemHeader{color:#1a2a5d;font:bold 15pt arial;margin:0;}
+.PressOpsItemSubHeader {color:#909ea8;font:bold 9pt arial;margin:0;margin-top:5px;line-height:9px;position:relative;}
+.PressOpsItemContentHeader {float:right;min-width:0;margin-right:5px;color:#aaa;}
+.PressOpsItemContentHeader a {color:#ccc;font-weight:normal;font-size:9px;text-decoration:none;}
+.PressOpsItemContentHeader a:hover {color:#fff;}
+.PressOpsItemContentBlock {background:url(../images/header-bkg3_shadow.gif) repeat-x top;padding:8px 4px 1px 8px;}
+.PressOpsItemContentBlockTitle {color: #1a2a5d;margin: 2px 0 10px 0;display: block;font-weight:bold;font-size: 1.17em;}
+.PressOpsItemContentRemarksBy {font-style: italic;margin-bottom:10px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #000000;}
+.PressOpsContentHeaderWrapper 
+{
+    background:url(../images/header-bkg1.gif) repeat-x top;
+    color:#fff;
+    margin:0;
+    font-size:11px;
+    text-transform:uppercase;
+    line-height:14px;
+    height:14px;
+    min-width:0;
+    padding-top: 2px;
+    padding-bottom : 1px;
+}
+.PressOpsContentHeaderWrapper a {padding:2px 0 1px 0px;color:#fff;}
+a .PressOpsContentHeaderWrapper {text-decoration:none;}
+
+.PressOpsContentBody {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;}
+.PressOpsContentBody p {margin:0;line-height:1.2em;padding-bottom:12px;}
+/* End PressOpsItem Pages */
+
+.PressOpsTodayInDOD  {font-size: 12px !important;}
+.PressOpsTodayInDOD p {margin-top:8px;margin-bottom:8px;}
+.PressOpsTodayInDOD * {font-size: 12px !important;}
+a.PressOpsTodayInDODSummaryTitle {width:100%;font: bold 13.3px Arial, Helvetica, sans-serif; color: Black;text-decoration:none;}
+a.PressOpsTodayInDODSummaryTitle:hover {text-decoration:underline;}
+.PressOpsListSummaryWrapper
+{
+    width:96%;
+    margin:auto;
+    position:relative;
+    clear:both;
+}
+.PressOpsPreviewFirst {overflow:auto;width:100%;}
+.lblSummaryItemTitle {font: bold 12px Arial, Helvetica, sans-serif;display:inline;position:relative;}
+.hlSummaryItemLinkXtra {padding:left:3px;font: normal 12px Arial, Helvetica, sans-serif;}
+.hlSummaryItemLinkXtra2 {padding:left:3px;font: normal 11px Arial, Helvetica, sans-serif;color: #000066 !important;}
+a.hlSummaryItemLink { color: #000066; text-decoration:none;}
+a.hlSummaryItemLink:hover {text-decoration:underline;}
+img.imgSummaryItemImage  {position:relative;display: block;vertical-align: top;padding-top: 5px;float: right;margin-left: 5px;}
+.PressOpsVerticalSeparator
+{
+    border:none;
+    width:1px;
+    height:85px;
+    margin:auto;
+}
+
+hr.PressOpsTodayInDODHR { width: 80% ;margin: auto;height: 1px;border-width: 0;background-color: gray;margin-top: 10px; margin-bottom: 10px;}
+
+/* News Photo pages */
+.PressOpsNewsPhoto {
+    width: 69%;
+    height: 225;
+    min-height: 225px;
+    position: relative;
+    padding:10px;
+    float:left;
+}
+.PressOpsNewsPhotoLeadPhoto {width: 324px;display: inline-block;float: left;margin-right: 10px;;border-color:#084476;border-width:2px !important;border-style:Solid;}
+
+.PressOpsNewsPhoto h2 {color:#1a2a5d; font-size:24px;}
+.PressOpsNewsPhotoCategories {width:24%;float:right;padding-top:15px;font-size:12px;}
+.PressOpsNewsPhotoThePhotos {float:left;width: 19%;min-height: 120px;text-align:center; }
+img.NewsPhotoThePhotos   {margin:10px;width:100px;display:inline-block;border-color:#084476;border-width:2px !important;border-style:Solid;}
+
+
+.PressOpsPhotoNav {padding-left:5px;font: bold 18px Helvetica, Arial, sans-serif;color:#1a2a5d;}
+.PressOpsPhotoNav2 {height: 20px;padding: 2px;width:98%;margin:auto;
+                    background:url(../images/header-bkg1.gif) repeat-x top;
+                    font: bold 12px Helvetica, Arial, sans-serif; color: white;}
+.PressOpsPhotoNav2 a{color:White; text-decoration :none;}
+.PressOpsPhotoNav2 a:hover{text-decoration:underline;}
+.imgNewsPhotoCamera {border:0;display:inline-block;vertical-align:middle;}
+
+td.PressOpsPhotoByCategorySub {padding-left:10px; font: bold 13px Helvetica, Arial, sans-serif; color:#37639b; text-decoration: none; display: block;}
+a.PressOpsPhotoByCategorySub {padding-left:10px; font: bold 13px Helvetica, Arial, sans-serif; color:#37639b; text-decoration: none; display: block;}
+a.PressOpsPhotoByCategorySub:hover {text-decoration: underline;}
+.PressOpsPaddedLeft{padding-left:10px;}
+.PressOpsArchiveCategoryHeader{background-color:#E8E9F0;}
+
+/* classes used by Employee_Resources.aspx */
+.ThirdColumnWhite {width:340px;float:right; overflow: hidden;width:235px; padding-right:5px;}
+
+h2.empResContentHeader {background:url(../images/bkg_h2a.gif) repeat-x left top;width:100%;color:#fff;font:bold 11px Arial;padding:2px 0 1px 7px;margin:0;text-align:left; vertical-align:middle;}
+.empResContentBox2 {padding:9px 8px 8px 8px; background:url(../images/dropshadow.png) repeat-x top left;width:100%;}
+
+.empResFeatureBox {overflow: hidden;width:100%; padding:0px;}
+.empResFeatureBox img {display:block;}
+.empResFeatureBox h3 {margin:0 0 6px 0px;text-transform:uppercase;font-size:9px;}
+
+ul.special5 {margin:0;padding:0;list-style:none;min-width:0; padding-top:10px;}
+ul.special5 li {margin:3px 5px 7px 0;padding:0px 5px 7px 10px; background:url(../images/bullet_link1.png) no-repeat 0px 2px; font-size:12px;font-weight:bold;line-height:1.1em;}
+ul.special5 li a {color:#001983; padding-left:5px;}
+ul.special5 li a:hover {color:#970000;}
+    
+ul.special6 {margin:0;padding:0;list-style:none;min-width:0;}
+ul.special6 li {margin:0;padding:0 0 5px 8px; background:url(../images/bullet1.gif) no-repeat 2px 5px;font-size:14px;font-weight:bold;line-height:1.1em;}
+ul.special6 li a {color:#0b257a;}
+ul.special6 li a:hover {color:#970000;}
+
+ul.special7 {margin:0;padding:0; list-style:none; min-width:0; }
+ul.special7 li {background:url(../images/bullet2.gif) no-repeat 0px 3px; margin:0; padding:0 0 5px 8px; font-size:11px; font-weight:normal; color:#000; line-height:1.1em; }
+ul.special7 li a {color:#0b257a; font-weight:normal;}
+ul.special7 li a:hover {color:#1458b3;}
+
+/* end classes used by Employee_Resources.aspx */
+
+/* HomePage Lead Photos */
+div#PhotoGalleryBlock {position:relative;padding-bottom:10px;height:215px;}
+div#PhotoGalleryBlock h2 {margin-bottom: 1px;}
+div#PhotoGalleryBlock #PhotoGalleryList {list-style:none; background:url(../images/2.1/icons/icon_galleryspinner1.gif) #D4DDE6 center center no-repeat; width:256px; height:170px; position:relative;}
+div#PhotoGalleryBlock #PhotoGalleryList li {float:left; margin-top:2px; margin-right:1px; margin-left:1px;}
+div#PhotoGalleryBlock #PhotoGalleryList a {border:none;}
+div#PhotoGalleryBlock #PhotoGalleryList img {border:solid 1px #798086;}
+div#PhotoGalleryBlock #PhotoGalleryList img:hover {border-color:#000;}
+div#PhotoGalleryBlock #DisplayedPhotoContainer {border:solid 1px #716F72; background:url(../images/2.1/icons/icon_galleryspinner1.gif) #D4DDE6 center center no-repeat; width:256px; height:170px; position:relative;}
+div#PhotoGalleryBlock #DisplayedPhotoCaptionButton {position:absolute; bottom:25px; right:0px; background-color:#000; color:#fff; padding:.1em .5em; font-size:.8em; cursor:pointer;}
+div#PhotoGalleryBlock #DisplayedPhotoCaptionBlock {overflow:auto; width:236px; height:8em; position:absolute; bottom:24px; left:2px; background-color:#000; color:#fff; padding:1em 10px; font-size:.9em; display:none;}
+div#PhotoGalleryBlock .FeaturedPhotoGalleryBannerMenuBox{display:none;width:120px;height:11px; left:2px;overflow:hidden;position:absolute;top:205px;}
+.PhotoGalleryToolTip {cursor:pointer;margin-right:3px;}
+
+#PhotoGalleryToolTipPreviewWrapper{position:absolute;display:none;z-index:50000;}
+#PhotoGalleryToolTipPreview{
+    -moz-border-radius:8px; 
+    -webkit-border-radius:8px; 
+    border-radius:8px; 
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.35); 
+	position:absolute;
+	border:1px solid #ccc;
+	white-space:nowrap;
+	background:#000;
+	padding:5px;
+	text-align:center;
+	color:#fff;
+	}
+#PhotoGalleryToolTipArrows 
+{
+    position:absolute;top:65px;left:16px;height:18px;width:18px; 
+    background:url(../images/2.1/icons/icon_tooltiparrows_18px_black.png) no-repeat 0 0;
+}
+
+
+/* Pentagon Channel */
+div#PentagonChannelBlock {margin-bottom:5px;}
+div#PentagonChannelBlock div.Box1_Content {padding:6px;}
+div#PentagonChannelBlock div.TPCVideoCell {position:relative; height:100px;}
+div#PentagonChannelBlock .TPCVideoThumbnail {position:absolute; top:0; border:solid 1px #919191;}
+div#PentagonChannelBlock p.TPCVideoTitle {font-size:.9em; font-weight:bold;padding-left:8px;}
+div#PentagonChannelBlock p.TPCVideoDesc {font-size:.9em; margin-bottom:1em;padding-left:8px;padding-top:3px;}
+div#PentagonChannelBlock ul {list-style:none;}

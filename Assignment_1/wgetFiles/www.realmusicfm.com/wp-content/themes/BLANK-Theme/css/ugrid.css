@@ -1,0 +1,38 @@
+/*!
+ * UGrid Web Grid System 2.0
+ * http://webnicer.com/ugrid.html
+ *
+ * Copyright 2012, Jacek Ciolek <j.ciolek@webnicer.com>
+ * Dual licensed under the MIT or GPL Version 3 licences.
+ * http://webnicer.com/ugrid/licence.html
+ */
+.row:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.row {display:inline-block;}
+.row {display:block;}
+.row {position:relative; margin-left:-15px; margin-bottom:5px}
+.gu12 .row {width:912px;}
+.gu11 .row {width:836px;}
+.gu10 .row {width:760px;}
+.gu9 .row {width:684px;}
+.gu8 .row {width:608px;}
+.gu7 .row {width:532px;}
+.gu6 .row {width:456px;}
+.gu5 .row {width:380px;}
+.gu4 .row {width:304px;}
+.gu3 .row {width:228px;}
+.gu2 .row {width:152px;}
+.gu1 .row {width:76px;}
+
+.col {padding-left: 12px; float:left; position:relative;}
+.gu12 {width:900px;}
+.gu11 {width:824px;}
+.gu10 {width:748px;}
+.gu9 {width:672px;}
+.gu8 {width:596px;}
+.gu7 {width:520px;}
+.gu6 {width:444px;}
+.gu5 {width:368px;}
+.gu4 {width:292px;}
+.gu3 {width:216px;}
+.gu2 {width:140px;}
+.gu1 {width:64px;}

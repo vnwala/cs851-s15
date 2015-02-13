@@ -1,0 +1,781 @@
+var mapArray = new Array();
+var markerArray = new Array();
+var infowindowsArray = new Array();
+var resizedMap = [];
+
+var iPhoneFlag = false;
+if( navigator.userAgent.match(/iPhone|iPod/) ){
+  iPhoneFlag = true;
+}
+//alert(navigator.userAgent);
+//alert(iPhoneFlag);
+
+$(document).ready(function (){
+
+  //show social dialog
+  var url_vars = get_url_vars();
+  if(url_vars["social_f"]) {
+    //console.log(url_vars["social_f"]);
+    if(url_vars["social_f"] == 1 && LANG_ID == 2) { 
+      var social_img = "/_tr/vt/2/img/v2/share_acpage_jp.png";
+    } else if(url_vars["social_f"] == 2 && LANG_ID == 2) {
+      var social_img = "/_tr/vt/2/img/v2/share_acpage_jp2.png";
+    } else if(url_vars["social_f"] == 1 && LANG_ID == 1) { 
+      var social_img = "/_tr/vt/2/img/v2/share_acpage_en.png";
+    } else if(url_vars["social_f"] == 2 && LANG_ID == 1) {
+      var social_img = "/_tr/vt/2/img/v2/share_acpage_en2.png";
+    }
+    var this_item = $('<div id="share_acpage_dialog" style="width: 343px; height: 110px; z-index: 9999; position:absolute; margin-top:25px; margin-left:200px; background-image: url('+social_img+');"><span style="width:22px;height:23px;position:absolute;top:0px;right:0px;display:block;cursor:pointer;" class="share_acpage_close"></span></div>').hide().fadeIn(1000);
+    $('#social_print_btn').append(this_item);
+    $('span.share_acpage_close').click(function(){ $('#share_acpage_dialog').fadeOut(); });
+  }
+
+  //iPhoneの場合は.scrollを消す
+  if( iPhoneFlag ) {
+    $('a.scroll').removeClass('scroll').addClass('scroll_ios');
+  }
+        
+        
+    var is_price_converted = false;
+    var is_request_running = false;
+    $("a#vtr_price_btn").click(function (){
+        if(is_request_running == true){
+            return false;
+        }
+        
+        if(is_price_converted == true){
+            $("div.vtr_price_1").toggleClass("hide");
+            $("div.vtr_price_2").toggleClass("hide");                
+        }
+        else {
+            is_request_running = true;
+            
+            var priceList = [];
+            $('.span_vtr_price_1').each(function(){
+                var obj     = {};
+                obj.id      = $(this).attr('id');
+                obj.text    = $(this).text();
+                priceList.push(obj);
+            });
+
+            $.ajax({
+               type: 'POST',
+                url: '/' + SITE_CODE + 'activity_detail/convert_currency/',
+               data: {price_list: priceList, activity_id: activity_id},
+               dataType: 'json',
+               success: function(data)
+               {    
+                   if(data != null && data.status == 'success' && data.result.length > 0){
+                       $.each(data.result, function(index, obj){
+                           if($('#'+ obj.id).length > 0){
+                               //console.log('updating element, id:' + obj.id);
+                                $('#'+ obj.id).text(obj.text);
+                                
+                                //debug only
+                                //default_text = $('#'+ obj.id).text();
+                                //$('#'+ obj.id).text(obj.text +' D:' +default_text);
+                           }
+                           else {
+                               //debug only
+                               //console.log('bug, element not found, id:' + obj.id);
+                           }
+                       });
+
+                       is_price_converted = true;
+                   }
+                   
+                   is_request_running = false;
+                   $("div.vtr_price_1").toggleClass("hide");
+                   $("div.vtr_price_2").toggleClass("hide");
+               },
+               error: function (xhr, ajaxOptions, thrownError) {
+                   //console.log('error happen');
+                   is_request_running = false;
+                   is_price_converted = true;
+                   $("div.vtr_price_1").toggleClass("hide");
+                   $("div.vtr_price_2").toggleClass("hide");
+               }
+            });
+        }
+    });
+    
+    
+  // $("div.pToggle").click(function (){    
+//   	var prefix = "#Package_Detail_";
+//   	var obj = $(this).attr('rel');
+//   	if (obj){
+//   		obj = obj.split(',');
+//   		if (obj.length < 2){
+//   			return false;
+//   		}
+//   		$(this).toggleClass("nowOpen");
+//   	}
+//   	package_id = obj[0];
+//   	note_id = obj[1];
+//   	target_toggle_div = prefix+package_id+"_"+note_id;
+// //  $(target_toggle_div).slideToggle('slow', function() {
+//   		//$(this).find("[id^=googlemap_div]").each(function (){
+//       $(target_toggle_div).find("[id^=googlemap_div]").each(function (){
+//   			//var m = $(this).attr('id').match(/^googlemap_div_other_note_(\d+)_(\d+)_(\d+)/);
+//   			var m = $(target_toggle_div).attr('id').match(/^googlemap_div_other_note_(\d+)_(\d+)_(\d+)/);
+//   			if (m){
+//   				if (m.length == 4 && typeof m[1] != 'undefined' && typeof m[3] != 'undefined'){
+//   					googlemapResize(m[1], m[3]);
+//   				}
+//   			}
+//   		});
+// //  });
+// 	});
+});
+
+$(function(){
+    $("input.googlemap_other_0_0_note_id").each(function(){
+        var note_id = $(this).val();
+//        googlemapSet("other_note" , 0 , note_id);
+    });
+
+    $("a[rel='lightbox']").lightBox();
+
+    //$('ul.photo a').lightBox();
+/*
+    $('div.photo2 a').live("click", function(e){
+        var id = $(this).attr('class');
+        if($("#" + id).length){
+            $("#" + id).trigger('click');
+        }
+        else{
+            $(this).lightBox().trigger('click');
+        }
+        return false;
+    });
+*/
+    $("input.googlemap_other_0_0_note_id").each(function(){
+        var note_id = $(this).val();
+        googlemapSet("other_note" , 0 , '0_'+note_id);
+    });
+    $("div.package").each(function(i){
+        var package_id = $(this).attr('id').substring(7);
+        $('#PhotoPackage' + package_id + ' a').lightBox();
+        $("input.googlemap_other_"+package_id+"_0_note_id").each(function(){
+            var note_id = $(this).val();
+            googlemapSet("other_note" , package_id , '0_'+note_id);
+        });
+    });
+    $("div.special_deal_gift").each(function(i){
+        var special_deal_id = $(this).attr('id').substring(15);
+        $('#PhotoSpecialDealGift' + special_deal_id + ' a').lightBox();
+    });
+    $("ul.additional li").each(function(i){
+        var additional_id = $(this).attr('id').substring(15);
+        $('#PhotoAdditional' + additional_id + ' a.image').lightBox();
+    });
+    $('.slider10').tinycarousel();
+    $('.slider11').tinycarousel();
+    // $('#fix_submenu').exFlexFixed({
+        // container : 'div#contents_inner'
+    // });
+    $("a.view_calendar").live("click", function(e){
+        var ids = $(this).next().attr("id");
+        var calendar_id = ids.replace(/calendar_id/,"").replace(/_[0-9]+/g,"");
+        var id_array    = ids.replace(/calendar_id/,"").split('_');
+        var unit_id     = (id_array.length == 3) ? id_array[2] : '';
+        $("#BookingAcHPackageId").val(calendar_id);
+        $("#BookingAcHUnitId").val(unit_id);
+
+        $("#"+ids).datepicker({
+          firstDay: 0,
+          numberOfMonths: 2,
+          showMonthAfterYear:true,
+          unselectable:true,
+          defaultDate: new Date(),
+//          monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+//          dayNamesMin: ['S','M','T','W','T','F','S'],
+          calNo:'jump',
+          calKey:calendar_id+'_'+unit_id,
+          clickFlg:true
+        });
+
+        $("#"+ids).trigger("focus").trigger("blur");
+    });
+/*
+    $("div.schedule").each(function(){  
+        var package_id = $(this).attr('id').replace(/[a-z\_]+/ig, '');
+        displaySchedule(package_id);
+    });
+*/
+    $(".toggle_schedule").click(function(){
+        var sp = $(this).attr("id").split("_");
+        var starting_option_id = $("#Schedule_"+sp[2]+"_"+sp[3]+"_hidden").val();
+
+        $("#Schedule_tour_"+sp[3]).hide();
+        $("#Schedule_pickup_"+sp[3]).hide();
+        $("#Schedule_drop-off_"+sp[3]).hide();
+
+        $("#Schedule_"+sp[2]+"_"+sp[3]).show();
+
+        $(".toggle_schedule_ul_"+sp[3]+" li").removeClass("schedule_on");
+        $(this).parent().addClass("schedule_on");
+
+        if($("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtimearea_tour").is(":visible")){
+            $("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtime_fromto_tour").hide();
+        }
+        
+        if($("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtimearea_pickup").is(":visible")){
+            $("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtime_fromto_pickup").hide();
+        }
+        
+        if($("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtimearea_drop-off").is(":visible")){
+            $("#Schedule_"+sp[2]+"_"+sp[3]).find(".startingtime_fromto_drop-off").hide();
+        }
+    
+        googlemapSetAll(sp[2] , sp[3] , starting_option_id);
+    });
+
+    $("a.schedule_sort").live("click", function(){
+        var key_array  = $(this).attr('id').split('_');
+        var order_key  = key_array[2] + '_' + key_array[3];
+        var tmp_order  = (key_array[0] == 'pickup') ? PickUpScheduleOrder : DropOffScheduleOrder;
+        var tmp_order  = (key_array[1] == 'time')   ? tmp_order['time'] : tmp_order['location'];
+        var order      = tmp_order[order_key];
+        var tmp_target = (key_array[0] == 'pickup') ? 'SchedulePickup' : 'ScheduleDropOff';
+        var target     = $("#" + tmp_target + order_key + "Area > tbody");
+        var other_name = (key_array[1] == 'time')   ? 'location' : 'time';
+        var order_btn  = $("#" + key_array[0] + "_" + key_array[1] + "_btn_" + key_array[2] + "_" + key_array[3]);
+        var other_btn  = $("#" + key_array[0] + "_" + other_name   + "_btn_" + key_array[2] + "_" + key_array[3]);
+        for (var i = 0; i < order.length; i ++) {
+            $("#Marker" + order[i], target).appendTo(target);
+        }
+        order_btn.attr('src', SCHEDULE_CURRENT_BUTTON);
+        other_btn.attr('src', SCHEDULE_DEFAULT_BUTTON);
+        return false;
+    });
+
+    $("#print_activity").click(function(){
+        window.print();
+        return false;
+    });
+    
+
+
+/** Descriptionの開閉ここから **/
+  //iPhone以外の場合はページ内リンクを消す
+  if( !iPhoneFlag ) {
+    $('.close_ac_desc_detail').unwrap();
+  }
+
+  var $pkg_wrapper = $('#package_info_wrapper');
+  var $package_switch_btn = $('#package_switch_btn');
+  var $ac_information_extra = $('.ac_information_extra');
+  var $ac_description_height = $('.ac_information_extra').height();
+  var $ac_description_top = $('.ac_information_extra').offset().top;
+
+  //console.log($ac_description_top);
+
+  //ヒルトン対応(コンテンツのみの場合)の時はコンテンツ全出し
+  //Descriptionが100px以上の時のみ開閉可能
+  if($pkg_wrapper.length > 0 && $ac_description_height > 100) { 
+
+    $ac_information_extra.css('height', '85px'); //上部85pxを常時表示
+
+    //var margin_minus = $ac_description_height - 85,
+    //    margin_minus_px = '-'+margin_minus+'px';
+    //$('#package_info_wrapper').css('margin-top', margin_minus_px).addClass('nowClose');
+
+    $('#package_switch_btn').click(function() {
+      if($ac_information_extra.hasClass('nowClose')) { 
+        $ac_information_extra.animate({ 
+          "height": "85px"
+        }, 500 ).removeClass('nowClose');
+        $('#package_switch_btn .btn_text_closed').show();
+        $('#package_switch_btn .btn_text_opened').hide();
+        //$('html,body').animate({ scrollTop: $ac_description_top }, 500);
+        //iPhone以外の場合のみscrollTopを使う
+        if( !iPhoneFlag ){
+          $('html,body').animate({ scrollTop: 0 }, 500);
+        }
+      } else {
+        $ac_information_extra.animate({ 
+          "height": $ac_description_height+30 + "px"
+        }, 500 ).addClass('nowClose');
+        $('#package_switch_btn .btn_text_closed').hide();
+        $('#package_switch_btn .btn_text_opened').show();
+      }
+    });
+
+  } else { //100px以下の時は隠す
+
+    $('#package_switch_btn').hide();
+    $('.transparent_bottom').hide();
+  }
+/** Descriptionの開閉ここまで **/
+
+/** Package description open and close START **/
+
+  //iPhone以外の場合はページ内リンクを消す
+  if( !iPhoneFlag ) {
+    $('.close_package_detail').unwrap();
+  }
+
+  $('.ac_pricelist').each(function(){
+    var $this = $(this);
+    var $pkg_detail = $this.find('.switchDetail');
+    //console.log($pkg_detail.size());
+
+    if($pkg_detail.size() > 0) {
+
+      var $pkg_toggle_btn = $this.find('.pToggle2');
+      var $pkg_detail_height = $pkg_detail.height();
+
+      if($pkg_detail_height > 100) { // if height is over 100px
+
+        $pkg_detail.css('height', '25px'); // display Upper 25px
+
+        $pkg_toggle_btn.click(function(e) {
+          //e.preventDefault();
+          //e.stopPropagation();
+
+          if($pkg_detail.hasClass('nowClose')) { 
+            $pkg_detail.animate({ 
+              "height": $pkg_detail_height+30 + "px"
+//            "height": "auto"
+            }, 'normal', '', function(){ $pkg_detail.addClass('overflow_visible').css("height", "auto"); } ).removeClass('nowClose'); // .css("height", "auto")を入れることでスケジュールの高さを可変に戻す↑
+
+            $this.find('.pToggle2 .btn_text_closed').hide();
+            $this.find('.transparent_bottom2').hide();
+            $this.find('.pToggle2 .btn_text_opened').show(0, function(){
+                var prefix = "#Package_Detail_";
+                var obj = $(this).parent().attr('data-mapping');
+                if (obj){
+                    obj = obj.split(',');
+                    if (obj.length < 2){
+                        return false;
+                    }
+                    
+                    package_id = obj[0];
+                    note_id = obj[1];
+                    target_toggle_div = prefix+package_id+"_"+note_id;
+                
+                    $(target_toggle_div).find("[id^=googlemap_div]").each(function (){
+                        var m = $(this).attr('id').match(/^googlemap_div_other_note_(\d+)_(\d+)_(\d+)/);
+                        //var m = $(target_toggle_div).attr('id').match(/^googlemap_div_other_note_(\d+)_(\d+)_(\d+)/);
+                        if (m){
+                            if (m.length == 4 && typeof m[1] != 'undefined' && typeof m[3] != 'undefined'){
+                                googlemapResize(m[1], m[3]);
+                            }
+                        }
+                        
+                    });
+                }
+            });
+          } else {
+            $pkg_detail.animate({ 
+              "height": "25px"
+            }, 'normal' ).addClass('nowClose').removeClass('overflow_visible');
+            $this.find('.pToggle2 .btn_text_closed').show();
+            $this.find('.pToggle2 .btn_text_opened').hide();
+            $this.find('.transparent_bottom2').show();
+            //iPhone以外の場合のみscrollTopを使う
+            if( !iPhoneFlag ){
+              $('html,body').animate({ scrollTop: $this.offset().top }, 500);
+            }
+          }
+        });
+
+      } else { 
+        $this.find('.pToggle2').hide();
+        $('.transparent_bottom2').hide();
+      }
+    } else { 
+      $this.find('.pToggle2').hide();
+      $('.transparent_bottom2').hide();
+    }
+  });
+/** Package description open and close END **/
+
+
+/* スケジュールのfrom_to表示ここから */
+  $('.open_starting_time_toggle_tour').click( function(){ 
+    $('.startingtimearea_tour').toggle(); 
+    $('.startingtime_fromto_tour').toggle(); 
+  });
+  $('.open_starting_time_toggle_pickup').click( function(){ 
+    $('.startingtimearea_pickup').toggle(); 
+    $('.startingtime_fromto_pickup').toggle(); 
+  });
+  $('.open_starting_time_toggle_drop-off').click( function(){ 
+    $('.startingtimearea_drop-off').toggle(); 
+    $('.startingtime_fromto_drop-off').toggle(); 
+  });
+/* スケジュールのfrom_to表示ここまで */
+
+
+  //旧changeImage関数
+  //小サイズのサムネイルをクリックした際の処理
+  $('.ac_photo_list_item').click(function(e) {
+    e.preventDefault(); e.stopPropagation();
+
+    //ie8対応
+    //youtubeのiframeがある場合はsrcをnullにする
+    if($('#ac_photo_movie_bg_inner iframe')) {
+      $('#ac_photo_movie_bg_inner iframe').attr('src','');
+    }
+
+    var $this = $(this);
+    var caption = $this.attr('caption');
+    $('#ac_photo_movie_bg').css('background-color','#fff');
+    var $elem = $('<div id="ac_photo_movie_bg_inner" class="photo2"><a class="ac_photo_middle" photo_index="'+$this.attr('thumb_index')+'" title="'+caption+'"><img id="mainphoto" src="'+$this.attr('img_middle')+'" width="240" height="180" alt=""></a></div>');
+    $('#ac_photo_movie_bg_inner').replaceWith($elem);
+    if(caption != null){
+      $("#maincaption").text(caption);
+    }
+  });
+
+  //中サイズのサムネイルをクリックした際の処理
+  $('.ac_photo_middle').live('click', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    var index = $(this).attr('photo_index');
+    $('a.ac_photo_list_href[href_index='+index+']').trigger('click');
+    //$.lightBox({href:"http://dev.veltra.com/upload_file/ptr/20130620005427_898020838_14_9.jpg"})
+  });
+
+});
+
+
+
+
+
+
+
+function changeMovie2(tube_id,autoplay_v) {
+
+  //ie8対応
+  //youtubeのiframeがある場合はsrcをnullにする
+  if($('#ac_photo_movie_bg_inner iframe')) {
+    $('#ac_photo_movie_bg_inner iframe').attr('src','');
+  }
+
+  if(typeof autoplay_v === 'undefined'){ autoplay_v = 0; }
+
+  if(tube_id == $("#current_youtube_id").text() && autoplay_v == 0) { /* do nothing */ }
+  else {
+    $('#ac_photo_movie_bg').css('background-color','#000');
+    var $elem = $('<div id="ac_photo_movie_bg_inner"><iframe width="240" height="180" src="http://www.youtube.com/embed/'+tube_id+'?autoplay='+autoplay_v+'" frameborder="0" allowfullscreen></iframe></div>');
+    $('#ac_photo_movie_bg_inner').replaceWith($elem);
+    $("#maincaption").text('');
+    $("#current_youtube_id").text(tube_id);
+  }
+}
+
+
+
+function displaySchedule(package_id){
+    $.ajax({
+        url:      '/' + SITE_CODE + 'activity_detail/schedule/' + activity_id + '/' + package_id,
+        type:     'GET',
+        async: false,
+        dataType: 'html',
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+//            alert('textStatus=' + textStatus + ' errorThrown=' + errorThrown);
+            $("#Schedule" + package_id).html(ERROR_MESSAGE_1006_SCHEDULE_GET);
+        },
+        success: function(html){
+            $("#Schedule" + package_id).html(html);
+
+            // 初期表示処理
+            ids = new Array();
+            $(".toggle_schedule").each(function(){
+                var sp = $(this).attr("id").split("_");
+
+                if(!ids[sp[3]]){
+                    ids[sp[3]]=true;
+
+                    $("#Schedule_"+sp[2]+"_"+sp[3]).show();
+
+                    if(sp[2]=="pickup" || sp[2]=="drop-off"){
+                        var starting_option_id = $("#Schedule_"+sp[2]+"_"+sp[3]+"_hidden").val();
+                        googlemapSetAll(sp[2] , sp[3] , starting_option_id);
+                    }
+                }
+            });
+
+//            $(".googlemap" + package_id).each(function(){
+//                var split_data= $(this).attr("id").split("_");
+//                googlemapSetAll(split_data[1] , split_data[2] , split_data[3]);
+//            });
+        }
+    });
+}
+
+
+function displayStartingOption(e, type, package_id, starting_option_id, preview_flg){
+    $("div.StartingOption_" + type + "_" + package_id).hide();
+
+    $(".startingtimearea_" + type + "_" + package_id+" a").removeClass("startingtime_on");
+    $(".startingtime_fromto_" + type + "_" + package_id+" a").removeClass("startingtime_on");
+    $(e).addClass("startingtime_on");
+    var index = $(e).parent().index();
+    $(".startingtime_fromto_" + type + "_" + package_id+" span").eq(index).children().first().addClass("startingtime_on");
+    $(".startingtimearea_" + type + "_" + package_id+" span").eq(index).children().first().addClass("startingtime_on");
+
+    $("#StartingOption_" + type + "_" + package_id + '_' + starting_option_id).after("<img src='/_ptr/en/img/loader/ajax.gif' style='margin-left:30px;'>");
+
+    $("#StartingOption_" + type + "_" + package_id + '_' + starting_option_id).show();
+    if(!$("#StartingOption_" + type + '_' + package_id + '_' + starting_option_id).hasClass('StartingOptionNeed')){
+        $("#StartingOption_" + type + '_' + package_id + '_' + starting_option_id).next().remove();
+        $("#duration").text($("#duration_" + type + '_' + package_id + '_' + starting_option_id).text());
+        return;
+    }
+
+    $.ajax({
+        url:      '/' + SITE_CODE + 'activity_detail/starting_option/' + activity_id + '/' + type + '/' + package_id + '/' + starting_option_id + '?preview=' + preview_flg,
+        type:     'GET',
+        async: false,
+        dataType: 'html',
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+//            alert('textStatus=' + textStatus + ' errorThrown=' + errorThrown);
+            $("#StartingOption_" + type + '_' + package_id + '_' + starting_option_id).html(ERROR_MESSAGE_1006_SCHEDULE_GET);
+        },
+        success: function(html){
+            $("#StartingOption_" + type + '_' + package_id + '_' + starting_option_id).html(html).removeClass('StartingOptionNeed').next().remove();
+            $("#duration").text($("#duration_" + type + '_' + package_id + '_' + starting_option_id).text());
+            if(type!="tour"){
+                googlemapSetAll(type , package_id , starting_option_id);
+            }
+        }
+    });
+}
+
+/*
+ * グーグルマップ実行
+ */
+function googlemapSetAll(type , package_id , starting_option_id){
+    googlemapSet(type , package_id , starting_option_id);
+    $("input.googlemap_"+type+"_"+package_id+"_"+starting_option_id+"_note_id").each(function(){
+        var note_id = $(this).val();
+        googlemapSet(type+"_note" , package_id , starting_option_id+"_"+note_id);
+    });
+}
+function googlemapSet(type , package_id , starting_option_id , target_number){
+//alert(type +' '+ package_id +' '+ starting_option_id +' '+ target_number);
+	var target_map = type + "_" + package_id + "_" + starting_option_id;
+	var data = "";
+	markers = new Array();
+	markerArray[target_map] = [];
+	info = new Array();
+	infowindowsArray[target_map] = [];
+	var g_marker="";
+	var target_i=false;
+	// 緯度・経度の範囲を取得
+	var maxlat = false;//最大緯度
+	var maxlong = false;//最大経度
+	var minlat = false;//最小緯度
+	var minlong = false;//最小経度
+	
+	// データー取得
+	if( $("#googlemap_"+type+"1_"+package_id+"_"+starting_option_id+"_marker").size() == 1){
+		data += $("#googlemap_"+type+"1_"+package_id+"_"+starting_option_id+"_marker").val();
+	}
+	if( $("#googlemap_"+type+"2_"+package_id+"_"+starting_option_id+"_marker").size() == 1){
+		data += $("#googlemap_"+type+"2_"+package_id+"_"+starting_option_id+"_marker").val();
+	}	
+	
+	if(data==""){return;}
+
+	
+	var obj = eval("({marker:["+ data.substring(0, data.length-1) +"]})");
+	
+	// target_number が存在する場合
+	
+	if(target_number){
+		for (i = 0; i < obj.marker.length; i++) {
+			if(obj.marker[i].number == target_number){
+				target_i=i;
+				break;
+			}
+			
+		}
+	}
+	else if(obj.marker.length == 1){
+		target_i = 0;
+	}
+	
+	//var geocoder = new google.maps.Geocoder();
+	
+	if(target_i!==false){
+		// 緯度経度無
+		if(obj.marker[target_i].marker_lat==""){
+			return;
+		}
+		$("#googlemap_div_"+type+"_"+package_id+"_"+starting_option_id).show();
+		var latlng = new google.maps.LatLng(parseFloat(obj.marker[target_i].marker_lat), parseFloat(obj.marker[target_i].marker_long));
+	}
+	else{
+		for (i = 0; i < obj.marker.length; i++) {
+			if(obj.marker[i].marker_lat!=""){
+				
+				obj.marker[i].marker_lat = parseFloat(obj.marker[i].marker_lat);
+				obj.marker[i].marker_long = parseFloat(obj.marker[i].marker_long);
+				
+				if(!maxlat){
+					maxlat = obj.marker[i].marker_lat;
+					minlat = obj.marker[i].marker_lat;
+					maxlong = obj.marker[i].marker_long;
+					minlong = obj.marker[i].marker_long;
+				}
+				else{
+					if(maxlat < obj.marker[i].marker_lat){maxlat=obj.marker[i].marker_lat;}
+					if(minlat > obj.marker[i].marker_lat){minlat=obj.marker[i].marker_lat;}
+					if(maxlong < obj.marker[i].marker_long){maxlong=obj.marker[i].marker_long;}
+					if(minlong > obj.marker[i].marker_long){minlong=obj.marker[i].marker_long;}
+				}
+			}
+		}
+		
+		// 緯度経度がひとつも設定されていない場合
+		if(maxlat==false){return;}
+		
+		$("#googlemap_div_"+type+"_"+package_id+"_"+starting_option_id).show();
+		
+		var latlng = new google.maps.LatLng(maxlat, maxlong);
+	}
+	
+	
+	
+	var opts = {
+	    zoom: parseInt(18),
+	    center: latlng,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scaleControl: true,
+            zoomControl: true,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.LEFT_BOTTOM
+            },
+            streetViewControl: true,
+            streetViewControlOptions: {
+                position: google.maps.ControlPosition.LEFT_BOTTOM
+            }
+	};
+	
+	
+	// マップ表示
+	mapArray[target_map] = new google.maps.Map($("#googlemap_"+type+"_"+package_id+"_"+starting_option_id)[0], opts);
+	// マーカー表示
+	for (i = 0; i < obj.marker.length; i++) {
+    var mcolor = '';
+    if (obj.marker[i].color) { mcolor = obj.marker[i].color + '/'; }
+
+		markerArray[target_map][i] = new google.maps.Marker({
+				map: mapArray[target_map],
+				icon: "/_tr/vt/1/img/markers/"+mcolor+"marker"+obj.marker[i].number+".png",
+				position: new google.maps.LatLng(obj.marker[i].marker_lat , obj.marker[i].marker_long )
+		});
+		
+		dispInfo(target_map, markerArray[target_map][i], obj.marker[i].location, obj.marker[i].marker_lat, obj.marker[i].marker_long);
+
+		g_marker += "&"+obj.marker[i].marker_lat+","+obj.marker[i].marker_long;
+	}
+
+
+	
+	//範囲を設定
+	if(maxlat && (maxlat!=minlat || maxlong!=minlong) ){
+		// 北西
+		var ne = new google.maps.LatLng(maxlat, minlong);
+		// 南東
+		var sw = new google.maps.LatLng(minlat, maxlong);
+		
+		var bounds = new google.maps.LatLngBounds(ne, sw);
+		
+		//自動調整
+		mapArray[target_map].fitBounds(bounds);
+		
+		// 単一表示は倍率を18に変更
+		if(obj.length==1){
+			setTimeout(function(){
+				mapArray[target_map].setZoom(18);
+			}, 500);
+		}
+	}
+	else if(target_i !== false){
+		setTimeout(function(){
+			google.maps.event.trigger(markerArray[target_map][target_i], "click");
+		}, 600);
+	}
+	
+	/*
+	var g_link = "http://maps.google.co.jp/maps?";
+	
+	var g_center = mapArray[target_map].getCenter();
+	// ズーム
+	g_link += "z=" + mapArray[target_map].getZoom();
+	// 緯度・経度
+	g_link += "&ll=" + g_center.lat() + "," + g_center.lng();
+	// マーカー
+	g_link += g_marker;
+	// 拡大表示用のリンク
+	$("#googlemap_link_"+type+"_"+package_id+"_"+starting_option_id).attr("href",g_link);
+	*/
+}
+
+// googlemapを拡大表示
+function large_googlemap_view(type , package_id , starting_option_id){
+	
+	$("#slide_type").val(type);
+	$("#slide_package_id").val(package_id);
+	$("#slide_starting_option_id").val(starting_option_id);
+    var target = 'pointongooglemap';
+    window.open('/'+LANG_CODE+'/tr_googlemap/maps/', target ,'width='+$(window).width()+',height='+$(window).height()+',titlebar=no,menubar=yes,toolbar=no,location=no,scrollbars=no,status=no,directories=no,resizable=no');
+
+}
+
+
+//情報窓表示メソッド
+function dispInfo(target_map, marker, location, panto_lat, panto_long) {
+
+    //マーカクリック時に駅名を情報窓に表示
+    google.maps.event.addListener(marker, 'click', function(event) {
+    	deleteInfoWindow(target_map);
+        var infowindow =new google.maps.InfoWindow({content:location});
+        infowindow.open(marker.getMap(), marker);
+        infowindowsArray[target_map].push(infowindow);
+        // 地図の中心を移動
+        var movePos = new google.maps.LatLng(panto_lat, panto_long);
+        mapArray[target_map].panTo(movePos);
+    });
+} 
+
+
+// 
+function deleteInfoWindow(target_map) {
+    if (infowindowsArray[target_map]) {
+        for (i in infowindowsArray[target_map]) { infowindowsArray[target_map][i].close(); }
+    }
+}
+
+function add_on_view(addonUrl, w, h) {
+     window.open(addonUrl, 'addon', 'width=' + w + ',height=' + h + ',titlebar=no,menubar=yes,toolbar=no,location=no,scrollbars=yes,status=no,directories=no,resizable=no');
+}
+
+function resetGoogleMap(eid){
+	prefix = "#googlemap_";
+	$(prefix+eid).empty();
+}
+
+function googlemapResize(package_id, note_id){
+	if (typeof resizedMap["other_note_"+package_id+'_0_'+note_id] == "undefined"){
+		resetGoogleMap("other_note_"+package_id+'_0_'+note_id);
+		googlemapSet("other_note" , package_id , '0_'+note_id);
+		resizedMap["other_note_"+package_id+'_0_'+note_id] = 1;
+	}
+}
+
+function get_url_vars() {
+  var vars = new Object, params;
+  var temp_params = window.location.search.substring(1).split('&');
+  for(var i = 0; i <temp_params.length; i++) {
+    params = temp_params[i].split('=');
+    vars[params[0]] = params[1];
+  }
+  return vars;
+}
+

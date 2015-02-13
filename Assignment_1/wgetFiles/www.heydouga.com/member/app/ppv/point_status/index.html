@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<title>D2 Pass ログインページ</title>
+<script type="text/javascript" src="https://images.d2pass.com/images/js/cookie.js"></script>
+
+<link href="https://images.d2pass.com/images/css/m_login.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+body {
+	font-family: "Meiryo", "メイリオ", "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Osaka", "sans-serif", "Arial";
+}
+.bp-login {
+	width: 508px; _width: 520px;
+	border: 1px solid #9c9;
+	background: #fff;
+	margin: 25px auto 15px auto;
+	padding: 5px;
+	font-size: 12px;
+}
+.whitearea-wrap {
+	background: #f0f0f0;
+	padding: 5px 10px 4px 0;
+}
+#d-title {
+	width: 295px;
+	height: 64px;
+	background: url(https://images.d2pass.com/images/global/login_title.png) no-repeat;
+	background-position: left top;
+	margin: 15px auto;
+}
+#forgot-password-block {
+	margin-left: 94px;
+	margin-bottom: 20px;
+}
+#bp-login-form {
+	margin-top: 10px;
+}
+#bp-login-d2logo {
+	width: 85px;
+	height: 36px;
+	background: url(https://images.d2pass.com/images/global/login_title.png) no-repeat;
+	background-position: -210px -65px;
+}
+.smaller-font {font-size: 10px;}
+.button-style {font-size: 14px; height: 40px; color:#666; font-weight: bold;}
+.button-style a, .button-style a:hover {text-decoration: none; color:#666; }
+#dti-box {
+	width: 498px; _width: 520px;
+	margin: 0 auto 7px auto;
+	padding: 10px;
+	font-size: 12px;
+	border: 1px solid #CCC;
+	}
+</style>
+
+
+</head>
+
+<body onLoad="document.login_form.FORM_USER.focus()">
+
+<div class="bp-login" id="login-box">
+	<div class="whitearea-wrap" id="login-box-inner">
+		<div id="d-title"> </div>
+		
+		
+    
+		
+		<form name="login_form" id="form1" method="post" action="https://login.d2pass.com/n15/">
+			<table border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="left">
+						<label>D2Pass ID&nbsp;(登録Ｅメールアドレス／Your Registered Email)</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<INPUT TYPE="HIDDEN" NAME="V" VALUE="1">
+						<INPUT TYPE="HIDDEN" NAME="l" VALUE="Y-Y-Wl0sCkB4YkY0Wl.4JqSDOMS4JkmN2lmZWjeK1XgK1u241rgaJ9Bz1-B0YumHWHSiOMSi2HhDxMUVOH5n2qdDIkxsIqYs.Mx6OM5n2kFH.rF-.f">
+						<INPUT TYPE="HIDDEN" NAME="EQS" VALUE="2k.cGkgvQLEKYngKJjsvYegHYrecYLO4">
+						<input class="clplogin" id="username" size="40" name="FORM_USER" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<label>パスワード／Password</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="left"><input class="clplogin" id="passwd" type="password" size="40" value="" name="FORM_PASSWD" /></td>
+				</tr>
+				<tr>
+					<td>
+						<table style="margin-bottom:7px;">
+							<tr>
+								<td align="left">
+									<a href="https://pw.allbrightinformation.com" target="_blank" style="text-decoration: none;"><span class="smaller-font">パスワードを忘れた場合／Forgot Password</span></a>
+								</td>
+							</tr>
+							<tr>
+								<td align="left">
+									<a href="http://www.d2pass.com/help/faq/5" target="_blank" style="text-decoration: none;"><span class="smaller-font">ログインできない場合／Unable To Login</span></a>
+								</td>
+							</tr>
+
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="left" valign="bottom">
+						<span class="uss_fold">
+							<input type="checkbox" value="y" name="remember_login" />
+							次回からIDの入力を省略／Remember me
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<span class="uss_fold" id="uss_check2">
+							<INPUT TYPE="checkbox" onClick="javascript:neti_found2();"  NAME="NETI_SUS" VALUE="1" />
+							次回からIDとパスワードを省略／Remember my password
+						</span>
+						
+						<!--Remember my IDandPW on this computer-->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="uss_fold" id="uss_check">
+							<INPUT TYPE="CHECKBOX" onClick="javascript:clear_me();" NAME="NETI_USS" VALUE="1" />
+							次回からIDとパスワードを省略／Remember my password
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td height="60" align="left">
+						<input onClick="javascript:remember_me();" type="submit" value="   ログイン／LOGIN   " name="login_btn" class="loginButton" style="font-size: 14px; height:30px; line-height:30px;" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+				</tr>
+			</table>
+			<table width="100%">
+				<tr>
+					<td align="right"><div id="bp-login-d2logo"> </div></td>
+				</tr>
+			</table>
+			
+		</form>
+	</div>
+</div>
+<div style="text-align:center; font-size:12px;">
+	Copyright © 2011 D2Pass.net
+</div>
+</body>
+
+</html>
+
+
+
+<script  language="JavaScript">
+
+var NETI_SSU = '';
+
+var NETI_SSC = 0;
+
+
+var CheckFold = document.getElementById( "uss_check" );
+
+var CheckFold2 = document.getElementById( "uss_check2" );
+
+var neti_found = 0;
+
+
+
+var dateObj    = new Date();
+
+dateObj.setFullYear(dateObj.getFullYear() + 1);
+
+var cookieDobj = new hmsCookie('r_login_d2p',dateObj.toUTCString());
+
+cookieDobj.get();
+
+if (cookieDobj.args.u) 
+
+{
+
+  document.login_form.FORM_USER.value = cookieDobj.args.u;
+
+  if ( NETI_SSU && document.login_form.FORM_USER.value == NETI_SSU) 
+
+  {
+
+  	document.login_form.NETI_USS.checked = true;
+
+  } 
+
+  else 
+
+  {
+
+    document.login_form.remember_login.checked = true;
+
+  }
+
+}
+
+
+
+
+
+function neti_found2()
+
+{
+
+  neti_found = 1;	
+
+}
+
+
+
+function remember_me() {
+
+ if ( document.login_form.remember_login.checked || neti_found )  
+
+ {
+
+   var dateObj    = new Date();
+
+   dateObj.setFullYear(dateObj.getFullYear() + 1);
+
+   var cookieDobj = new hmsCookie('r_login_d2p',dateObj.toUTCString());
+
+   cookieDobj.add('u',document.login_form.FORM_USER.value);
+
+   cookieDobj.set();
+
+ } 
+
+ else 
+
+ {
+
+   var dateObj    = new Date();
+
+   dateObj.setFullYear(dateObj.getFullYear() - 1);
+
+   var cobj= new hmsCookie('r_login_d2p',dateObj.toUTCString());
+
+   cobj.add('u','');
+
+   cobj.set();
+
+ }
+
+ if (neti_found == 0) 
+
+ {
+
+   document.cookie = 'NetiUSS=something; expires=Thu, 2 Aug 2006 20:47:11 UTC; domain=.login.d2pass.com; path=/ ';
+
+ }
+
+}
+
+
+
+ if ( NETI_SSC > 19 && document.login_form.FORM_USER.value == NETI_SSU ) 
+
+ {
+
+	CheckFold2.innerHTML = "";
+
+	document.login_form.FORM_PASSWD.value = '**************';
+
+	neti_found = 1;
+
+ } 
+
+ else 
+
+ {
+
+    CheckFold.innerHTML = "";
+
+ }
+
+
+
+function clear_me()
+
+{  
+
+	if (document.login_form.NETI_USS.checked)
+
+	{
+
+		document.login_form.FORM_PASSWD.value = '**************';
+
+  		neti_found = 1;
+
+	}
+
+	else
+
+	{
+
+		document.login_form.FORM_PASSWD.value = '';
+
+  		neti_found = 0;
+
+  	}
+
+}
+
+
+
+</script>
+
+
+

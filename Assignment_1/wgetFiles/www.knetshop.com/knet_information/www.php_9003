@@ -1,0 +1,271 @@
+﻿﻿﻿
+
+﻿
+<script type="text/javascript">
+function newXmlHttp()
+{
+	var xmlhttp = false;
+	try{xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");}
+	catch(e)
+	{
+		try{xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+		catch(e)
+		{xmlhttp = false;}
+	}
+	if(!xmlhttp && document.createElement){xmlhttp = new XMLHttpRequest();}
+	return xmlhttp;
+}
+
+function allMatchingBonus() 
+{
+	// USE THIS FUNCTION TO CALCULATE MATCHING BONUS OF ALL MEMBERS AT ANY TIME
+	//alert ('AllMatchingBonus');
+	var url = 'all_matching_bonus.php';
+	var pmeters = 'MemberCode=' + MemberCode;	
+	xmlhttp = newXmlHttp();
+	xmlhttp.open('POST', url, true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-length", pmeters.length);
+	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.onreadystatechange = function()
+	{
+	if(xmlhttp.readyState == 3) {document.getElementById("MainMonitor").innerHTML = "Ajax is processing";}
+	if(xmlhttp.readyState == 4) {document.getElementById("MainMonitor").innerHTML = xmlhttp.responseText;}		
+	}
+	xmlhttp.send(pmeters);
+}
+
+function calculateMatchingBonus(MemberCode)	
+{
+	var url = 'list_family_member.php';
+	var pmeters = 'MemberCode=' + MemberCode;	
+	xmlhttp = newXmlHttp();
+	xmlhttp.open('POST', url, true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-length", pmeters.length);
+	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.onreadystatechange = function()
+	{
+	if(xmlhttp.readyState == 3) {document.getElementById("MainMonitor").innerHTML = "Ajax is processing";}
+	if(xmlhttp.readyState == 4) {document.getElementById("MainMonitor").innerHTML = xmlhttp.responseText;}		
+	}
+	xmlhttp.send(pmeters);
+}
+</script>
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- THIS IS MAIN INTERFACE OF KNET AUTOMATION SYSTEM -->
+<!-- BE CAREFUL TO MODIFY ANY PART OF THE CODE -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<meta http-equiv="Content-Language" content="th">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>KNET Automation</title>
+<meta name="generator" content="KNET Automation System">
+<script type="text/javascript" src="jquery.js"></script>
+
+<style type="text/css">
+*{ margin:0; padding:0;}
+html, body { height: 100%;}
+body {background-color:transparent;}
+
+div#container {width: 976px; height:100%; position: relative; margin-top: 0px; margin-left: auto; margin-right: auto; margin-bottom:auto; text-align:center;}
+
+div#banner {width:100%; position:absolute; left:0px; top:3px; width:975px; height:140px; text-align:center; z-index:1}
+
+div#main {margin:0px auto; width:975px; height:100%; position:absolute; left:0px; top:112px; text-align:center; z-index:1, overflow:auto;}
+
+div#menu {margin:0px auto; width:100%; position:absolute; left:1px; top:78px; width:580px; height:64px; text-align:left; color:#bbbbbb; z-index:9999}
+div#login {margin:0px auto; width:100%; font:13px 'Tahoma'; padding:0; position:absolute; left:970px; top:71px; width:150px; height:24px; background:#ffffff; text-align:center; z-index:1}
+
+div#SimulatorButtonDiv {position:absolute; left:500px; top:70px; width:276px; height:46px; z-index:1001}
+
+
+
+div#LoginButtonDiv {margin:0px auto; width:100%; position:absolute; left:855px; top:72px; width:134px; height:50px; z-index:1001}
+div#LogoutButtonDiv {margin:0px auto; width:100%; position:absolute; left:855px; top:72px; width:134px; height:50px; z-index:1000}
+div#LoginMember {margin:0px auto; width:100%; font:13px 'Microsoft Sans Serif'; padding:0; position:absolute; left:40px; top:102px; width:198px; height:19px; text-align:center; border-radius:0px; border:0px solid;z-index:1000}
+div#LoginMemberCode {margin:0px auto; width:100%; font:13px 'Microsoft Sans Serif'; padding:0; position:absolute; left:6px; top:90px; width:32px; height:19px; text-align:center; border-radius:0px; border: 0px solid; z-index:1000}
+
+<!--div#LoginMemberFrame {margin:0px auto;width:100%;font:13px 'Microsoft Sans Serif';padding:0;position:absolute;left:0px;top:74px;width:240px;height:36px;background:#90c0c0; text-align:center;border-radius:0px;border:0px solid;border-color:#90c0c0;z-index:1000} -->
+div#sign_up {margin:0px auto; padding:0;position:absolute; left:583px; top:109px; width:404px; height:256px; text-align:center; border-radius:0px; border: 0px solid;	border-color:#777; background:transpaarent;	z-index:3000;} 
+div#change_password {margin:0px auto; padding:0;position:absolute; left:583px; top:109px; width:404px; height:256px; text-align:center; border-radius:0px; border: 0px solid; background:transpaarent; z-index:3010;} 
+
+div#SessionParameterDisplay{position:absolute; top:0px; left:173px; width:398px; height:78px; border-radius:7px; border: 0px solid; border-color:#DDDDDD; background:#000000; box-shadow: 0px 0px 16px #666666; z-index:8000;}
+div#SessionParameterDisplayBody{position:absolute; top:4px; left:4px; width:390px; height:70px; border-radius:3px; background:#eeeeee; box-shadow: 0px 0px 16px #666666; z-index:8000;}
+
+
+div#RoundCornerFrame{position:absolute; top:2px; left:2px; width:50px; height:50px; background:transparent; z-index:9000} 
+div#LoginPicture{position:absolute; top:4px; left:4px; width:70px; height:70px; z-index:1000}
+div#LoginName{font:14px 'Tahoma'; position:absolute; top:5px; left:120px; width:200px; height:24px; text-align:left; color:#666666 }
+div#Email{font:13px 'Tahoma'; position:absolute; top:23px; left:120px; width:200px; height:24px; text-align:left; color:#666666 }
+div#MobilePhone{font:13px 'Arial'; position:absolute; top:41px; left:120px; width:200px; height:24px; text-align:left; color:#666666 }
+div#BusinessConsultant{font:14px 'Microsoft Sans Serif'; position:absolute; top:57px; left:120px; width:200px; height:32px; text-align:left; color:#666666;}
+
+div#AttentionMessage{font:26px 'CordiaUPC'; position:absolute; top:93px; left:502px; width:227px; height:220px; text-align:left; color:#666666; line-height:26px;}
+div#IntroduceMessage{font:14px 'Microsoft Sans Serif'; position:absolute; top:315px; left:505px; width:296px; height:32px; text-align:justify; color:#666666; line-height:16px;}
+
+div#LoginCode{font:16px 'Arial '; position:absolute; top:20px; left:120px; width:200px; height:32px; text-align:left; color:#7F7F7F;}
+
+div#copyright {width:80%; top: 768px; font:0px 'Tahoma'; color:#FFF; text-indent:20px; padding:40px 0 0 0;}
+div#copyright a {color:#808080;}
+div#copyright a:hover {color:#FFF;} 
+
+#wb_Shape71 a img{position: absolute;}
+#wb_Shape71 span{position: absolute;}
+#wb_Shape71 a .hover{visibility: hidden;}
+#wb_Shape71 a:hover .hover{visibility: visible;}
+#wb_Shape71 a:hover span{visibility: hidden;}
+#wb_Shape72 a img{position: absolute;}
+#wb_Shape72 span{position: absolute;}
+#wb_Shape72 a .hover{visibility: hidden;}
+#wb_Shape72 a:hover .hover{visibility: visible;}
+#wb_Shape72 a:hover span{visibility: hidden;}
+</style>
+
+
+<script type="text/javascript">
+function newXmlHttp()
+{
+	var xmlhttp = false;
+	try{xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");}
+	catch(e)
+	{
+		try{xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+		catch(e)
+		{xmlhttp = false;}
+	}
+	if(!xmlhttp && document.createElement){xmlhttp = new XMLHttpRequest();}
+	return xmlhttp;
+}
+
+function subscriptionMail(Email)
+{
+	var url = 'subscription7.php';
+	var pmeters = 'Email=' + Email;	
+	alert ('Email = ' + Email);
+	xmlhttp = newXmlHttp();
+	xmlhttp.open('POST', url, true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-length", pmeters.length);
+	xmlhttp.setRequestHeader("Connection", "close");
+	xmlhttp.onreadystatechange = function()
+	{
+	if(xmlhttp.readyState == 3) {document.getElementById("Main").innerHTML = "Ajax is processing";}
+	if(xmlhttp.readyState == 4) {document.getElementById("Main").innerHTML = xmlhttp.responseText;}		
+	}
+	xmlhttp.send(pmeters);
+}
+
+function enableMainScroll()
+{
+	document.getElementById("main").style.overflow= 'auto' ;
+	document.getElementById("main").innerHTML='<iframe name="main" id="main" style="position:absolute;left:0px;top:0px;width:975px;height:560px;z-index:2;" src="front_home_dynamic.html" frameborder="0" allowTransparency="true" scrolling="auto"></iframe>';
+}
+function disableMainScroll()
+{
+	document.getElementById("main").style.overflow= 'hidden' ;
+	document.getElementById("main").innerHTML='<iframe name="main" id="main" style="position:absolute;left:0px;top:0px;width:975px;height:560px;z-index:2;" src="front_home_dynamic.html" frameborder="0" allowTransparency="true" scrolling="no"></iframe>';
+}
+
+function Hide()
+{
+	document.getElementById("IntroduceMessage").style.visibility= 'hidden' ;
+	document.getElementById("SubscriptionDiv").style.visibility= 'hidden' ;
+	document.getElementById("AttentionMessage").style.visibility= 'hidden' ;
+}
+
+</script>
+
+</head> 
+<body  style="text-align: center;">
+
+<!-- SYSTEM PARAMETER -->
+<div style="visibility:hidden">
+<div><span style="color:#7F7F7F;font-family:Arial;font-size:11px; text-align:left">
+<div 	style="position:absolute; left:200px; top:20px; width:100px; height:20px;">LoginCode</div>
+<div 	style="position:absolute; left:200px; top:30px; width:100px; height:20px;">LoginTime</div>
+<div  style="position:absolute; left:200px; top:40px; width:100px; height:20px;">ActivePage</div>
+</span></div>
+
+<div><span style="color:#41b5e6;font-family:Arial;font-size:11px; text-align:left">
+<div id='LoginMemberCode' 	style="position:absolute; left:270px; top:20px; width:100px; height:20px;">LoginCode</div>
+<div id='LoginTime' 				style="position:absolute; left:270px; top:30px; width:100px; height:20px;">LoginTime</div>
+<div id='ActivePage' 				style="position:absolute; left:270px; top:40px; width:100px; height:20px;">ActivePage</div>
+</span></div>
+</div>
+
+<div id="container">
+
+<!-- Video Clip 
+	<div id="SimulatorButtonDiv">
+		<div id="wb_Shape1" style="position:absolute;left:0px;top:0px;width:300px;height:50px;z-index:0;padding:0;">
+		<img src="images/img0957.png" id="Shape1" alt="" title="" style="border-width:0;width:282px;height:48px;"></div>
+		<div id="wb_Shape15" style="position:absolute;left:59px;top:8px;width:109px;height:29px;z-index:1;padding:0;">
+		<a href="./Clip_Conceptual_Design_Introduce.php" target="main"><img src="images/img0958.png" id="Shape15" alt="" title="" style="border-width:0;width:109px;height:29px;"></a></div>
+		<div id="wb_Shape14" style="position:absolute;left:168px;top:8px;width:109px;height:29px;z-index:2;padding:0;">
+		<a href="./Clip_Vision_Introduce.php" target="main"><img src="images/img0959.png" id="Shape14" alt="" title="" style="border-width:0;width:109px;height:29px;"></a></div>
+		<div id="wb_Text1" style="position:absolute;left:10px;top:5px;width:48px;height:20px;text-align:center;z-index:3;">
+		<span style="color:#FFFFFF;font-family:'Arial Narrow';font-size:16px;"><strong>Video</strong></span></div>
+		<div id="wb_Text2" style="position:absolute;left:9px;top:22px;width:48px;height:16px;text-align:center;z-index:4;">
+		<span style="color:#FFFFFF;font-family:'Arial Narrow';font-size:12px;"><strong>Clip</strong></span></div>		
+	</div>	
+-->	
+	
+<!-- Subcription Button -->
+
+	<div id="SubscriptionDiv" style="position:absolute; left:765px; top:485px; width:160px; height:52px; box-shadow: 0px 0px 16px #666666; border-radius:4px; z-index:1000 ">
+		<a href="http://www.knetshop.com/knet_operation/Subscription7.php?9003" target="main">
+		<img src="images/register_button.gif" id="Shape1" style="position:absolute; left:0px; top:0px; width:160px; height:52px;" 
+		onclick='JavaScript:Hide()';>
+		</a>
+	</div>
+
+
+	<div id="banner">
+		<iframe name="banner" id="InlineFrame1" style="position:absolute;left:0px;top:0px;width:975px;height:130px;z-index:1;" src="Banner-Login.html" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
+	
+
+	<div id="SessionParameterDisplay">
+	<div id='SessionParameterDisplayBody'></div>
+
+
+	<div id='AttentionMessage'>
+		<!--
+		นวัตกรรมใหม่ <br>
+		ของการสร้างเครือข่ายออนไลน์ 100%<br>
+		ไม่ต้องเสียค่าสมัคร<br> 
+		ไม่ต้องซื้อตำแหน่ง <br>
+		ไม่ต้องขายสินค้า <br>
+		ไม่ต้องเดินทางไปประชุม <br>
+		ลงทะเบียนรับรหัสสมาชิก ฟรี <br>
+		-->
+		<img src="../knet_operation/images/InnovationBusiness.png" style='width:287px; height:220px'>
+	</div>	
+	
+			
+		<div id="IntroduceMessage">
+		ขอเชิญผู้สนใจ ศึกษาแนวคิดใหม่ในการสร้างรายได้แบบมั่นคง  โดยการแปรรูปค่าใช้จ่ายบางส่วนในแต่ละเดือน ให้เป็นการลงทุน ท่านสามารถสร้างรายได้อย่างไม่จำกัดโดยการทำงานอยู่ที่บ้านกับครอบครัว  ไม่ต้องเสี่ยงกับการลงทุน ไม่มีค่าสมัคร ไม่มีหลุมพรางหรือค่าใช้จ่ายแอบแฝงใดๆ   <br><br>สนใจข้อมูลเพิ่มเติม คลิกที่ปุ่มข้างล่างนี้ เพื่อรับคำแนะนำจากที่ปรึกษาธุรกิจของท่าน</div>
+		
+		<div id="LoginPicture" style='z-index:9000'><img src="../knet_operation/image/member/knet-9003-20140130205527.jpg" style="border-width:0;width:70px; height:70px;"></div>
+		<div id="LoginName" style='z-index:9000'>วาสนา สีไวย์</div>
+		<div id="Email" style='z-index:9000'>lek_lek_001@hotmail.co.th</div>
+		<div id="MobilePhone" style='z-index:9000'>0875528106</div>
+		<div id="BusinessConsultant" style='z-index:9000'>ที่ปรึกษาธุรกิจเคเนท</div>
+	</div>
+	
+
+
+		
+	<div id="main">
+		<iframe name="main" id="main" style="position:absolute; left:0px; top:0px; width:975px; height:560px; z-index:2;" src="homepage_personal_web.php" frameborder="0" allowTransparency="true" scrolling="auto"></iframe>
+	</div>
+
+
+</div><!-- end of Container --> 
+
+</body>
+</html>

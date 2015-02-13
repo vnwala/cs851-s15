@@ -1,0 +1,102 @@
+jQuery(document).ready(function($){
+ /****************************/
+  // adding the tracking code to the NAVIGATION CATEGORIES
+  $('ul.tb-megamenu-nav li').each(function() {
+    var position = $(this).attr('data-id');
+    var title = $('a.dropdown-toggle', this).text();
+    
+    $('a.dropdown-toggle', this).attr('onclick', "_gaq.push(['_trackEvent', 'navigation-category', '"+ position +"', '"+ title +"']);");
+  });
+  /****************************/
+  
+  
+  // adding the tracking code to the NAVIGATION SUBCATEGORIES
+  $('.tb-megamenu-submenu ul.tb-megamenu-subnav  li.level-2').each(function() {
+    var position_sub = $(this).attr('data-id');
+    var title_sub = $('a', this).text();
+    
+    $('a', this).attr('onclick', "_gaq.push(['_trackEvent', 'navigation-subcategory', '"+ position_sub +"', '"+ title_sub +"']);");
+  });
+  /****************************/
+  
+  
+  // adding the tracking code to the NAVIGATION PROMO IMAGES
+  var index = 0;
+  $('.tb-megamenu-block a img').each(function() {
+    var position = index;
+    var title = $(this).attr('title');
+    
+    $(this).parent().attr('onclick', "_gaq.push(['_trackEvent', 'navigation-promo-images', '"+ position +"', '"+ title +"']);");
+
+    index++;
+  });
+  /****************************/ 
+  
+  
+  /****************************/
+  // adding the tracking code to the MINI-NAVIGATION
+  index = 0;
+  $('#navscrollmenu ul.nav li a').each(function() {
+    var position = index;
+    var title = $(this).text();
+    
+    $(this).attr('onclick', "_gaq.push(['_trackEvent', 'mini-navigation', '"+ position +"', '"+ title +"']);");
+    
+    index++;
+  });
+  /****************************/
+  
+  
+  /****************************/
+  // adding the tracking code to the HOMEPAGE SLIDER
+  var index = 0;
+  $('.view-id-homepage_slider_responsive a').each(function() {
+    var position = Math.floor(index/2);
+    var title = $( ".view-id-homepage_slider_responsive .carousel-inner .item:nth-child("+(position +1)+") .carousel-caption a").text();
+    
+    $(this).attr('onclick', "_gaq.push(['_trackEvent', 'homepage-carousel', '"+ position +"', '"+ title +"']);");
+    index++;
+  });
+  /****************************/
+  
+  
+  /****************************/
+  // adding the tracking code to the SIDEBAR NAV
+  var index = 0;
+  $('.view-id-latest_news_homepage .ln-left-title a').each(function() {
+    var position = index;
+    var title = $(this).text();
+    
+    $(this).attr('onclick', "_gaq.push(['_trackEvent', 'sidebar-nav', '"+ position +"', '"+ title +"']);");
+    index++;
+  });
+  /****************************/
+
+  
+  /****************************/
+  // adding the tracking code to additional links
+  $('#simple-subscription-form button').attr('onclick', "_gaq.push(['_trackEvent', 'newsletter',  'Newsletter']);");
+  $('.view-free-stuff .more-link a').attr('onclick', "_gaq.push(['_trackEvent', 'free-stuff',  'More Free Stuff']);");
+  $('.view-featured-video .more-link a').attr('onclick', "_gaq.push(['_trackEvent', 'videos',  'More Videos']);");
+  /****************************/
+  
+  
+ $(window).scroll(function(){
+  // get the height of #wrap
+  var h = $('.main-container.container').height();
+  var y = $(window).scrollTop();
+  if( y > (h*.05) && y < (h*.75) ){
+    // if we are show keyboardTips
+    $('#sharebar').css('display', 'block');
+    $('#sharebar').css('margin-top', '70px'); // the red bar should never cover the social buttons
+    $("#navscrollmenu").fadeIn("slow");
+  } else {
+    if(y > h*.75) {
+      $('#sharebar').css('display', 'none');
+    } else {
+      $('#sharebar').css('margin-top', '0px'); // the red bar should never cover the social buttons  
+    }
+    $('#navscrollmenu').fadeOut('slow');
+  }
+ });
+});

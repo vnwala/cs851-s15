@@ -1,0 +1,272 @@
+/******************
+MASTER HUB CSS - HUB means the area has child area, for example Italy (has Rome, Mirano and so on)
+Notes: Inherit from master.css & master_1280.css;
+******************/
+
+#HUB .page_content {
+	float: right;
+	margin: 0 auto;
+        width: 730px;
+}
+
+#HUB #StartingPoint .centralize_wrapper,
+#HUB #PopularAC .centralize_wrapper,
+#HUB #FiveStar .centralize_wrapper {
+	background: #f1f1f1;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#HUB #StartingPoint .ac_block {
+	float: left;
+	margin: 0 5px 10px 5px;
+        position: relative;
+	width: 226px;
+}
+
+#HUB #StartingPoint .ac_block > a {
+    display: block;
+    height: 122px;
+    overflow: hidden;
+}
+
+#HUB #StartingPoint .ac_block > a img {
+        max-width: 100%;
+        margin-top: -10%;
+}
+
+#HUB #StartingPoint .ac_block .hover_desc {
+        bottom: 21px;
+        font-size: 11px;
+}
+
+#HUB #StartingPoint .ac_block .item {
+    overflow: hidden;
+}
+
+#HUB #StartingPoint .ac_block .item:hover {
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+#HUB #StartingPoint .ac_block .link {
+	background: #222222;
+        font-size: 14px;
+	padding: 0;
+	position: static;
+  border-bottom: none !important;
+}
+
+#HUB #StartingPoint .ac_block .link a {
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	line-height: 0;
+	padding: 12px 10px 11px 20px;
+}
+
+#HUB #StartingPoint .ac_block .link a .title {
+    float: none;
+}
+
+#HUB #StartingPoint .ac_block .cat_misc_wrapper {
+    clear: both;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+#HUB #StartingPoint .ac_block .cat_misc_wrapper .half {
+    float: left;
+    width: 50%;
+}
+
+#HUB #StartingPoint .ac_block .cat_misc_wrapper .half span {
+    display: block;
+    font-size: 11px;
+}
+
+#HUB #StartingPoint .ac_block .cat_misc_wrapper .half a {
+    background: url("../../img/new/orange_arrow.png") no-repeat 10px center;
+    display: block;
+    font-size: 85%;
+    padding-left: 25px;
+}
+
+#HUB #PromoTheme ul li {
+	float: left;
+	height: 60px;
+	margin: 0 4px 10px;
+	width: 235px;
+}
+
+#HUB #PromoTheme ul li.last {
+	margin-right: 4px;
+}
+
+#HUB #PopularAC .centralize_wrapper {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+#HUB #PopularAC h3 {
+    clear: both;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+#HUB #PopularAC .ac_block {
+	border: 1px solid #ccc;
+	float: left;
+	margin: 10px;
+	width: 213px;
+}
+
+#HUB #PopularAC .centralize_wrapper .ac_block.last {
+        display: none;
+}
+
+#HUB #PopularAC .ac_block .image {
+	height: 107px;
+        overflow: hidden;
+	width: 213px;
+}
+
+#HUB #PopularAC .ac_block .image img {
+        height: auto;
+        max-width: 100%;
+        margin-top: -14%;
+}
+
+#HUB #PopularAC .ac_block .image a {
+	height: 107px;
+}
+
+#HUB #PopularAC .ac_block .link {
+	background: #fff;
+	border: 0;
+	height: 15px;
+	padding: 15px 10px;
+	position: static;
+	overflow: hidden;
+}
+
+#HUB #PopularAC .ac_block .link a {
+	display: block;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 193px;
+}
+
+#HUB #PopularAC .ac_block .hover_desc {
+    bottom: 0;
+}
+
+#HUB #PopularAC .other {
+    clear: both;
+    margin: 10px 0;
+}
+
+#HUB #PopularAC .other h3 {
+        color: #44423c;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 10px;
+        padding-top: 10px;
+}
+
+#HUB #PopularAC .other ul li {
+    float: left;
+    margin: 10px;
+    width: 213px;
+}
+
+#HUB #PopularAC .other ul li a {
+    background: url("../../img/new/orange_arrow.png") no-repeat 0 1px;
+    font-weight: bold;
+    padding-left: 18px;
+}
+
+#HUB #FiveStar .title {
+	margin-bottom: 10px;
+}
+
+#HUB #FiveStar .ac_block {
+	background: #fff;
+	border: 1px solid #e9e9e9;
+	margin-left: 6px;
+	margin-right: 5px;
+}
+
+/* All browser exclude IE8 & IE7 start */
+#HUB #FiveStar .ac_block:last-child {
+    display: none;
+}
+/* All browser exclude below IE9 end */
+
+/* Only below IE9 start */
+#HUB #FiveStar .ac_block:first-child {
+    *display: none;
+}
+/* Only below IE9 end */
+
+.optimized_design #HUB #Campaign .centralize_wrapper,
+.optimized_design #HUB #Recommend .centralize_wrapper {
+    background: #f1f1f1;
+    overflow: visible;
+    padding: 10px 6px 0;
+    width: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    #HUB .page_content {
+        width: 970px;
+    }
+
+    #HUB #StartingPoint .ac_block {
+	margin: 0 10px 10px 10px;
+	width: 295px;
+    }
+    #HUB #StartingPoint .ac_block img {
+        margin-top: -10% !important;
+    }
+
+    #HUB #StartingPoint .ac_block .hover_desc {
+        font-size: 13px;
+    }
+
+    #HUB #StartingPoint .ac_block .link a {
+        background-position: 275px 11px;
+    }
+
+    #HUB #StartingPoint .ac_block .cat_misc_wrapper .half a {
+        font-size: 13px;
+    }
+
+    #HUB #PromoTheme ul li {
+        margin: 0 10px 10px 0;
+    }
+
+    #HUB #PromoTheme ul li.last {
+        margin-right: 0px;
+    }
+
+    #HUB #FiveStar .ac_block {
+        margin-right: 6px;
+    }
+
+    /* All browser exclude IE8 & IE7 start */
+    #HUB #FiveStar .ac_block:last-child {
+        display: block;
+    }
+
+    #HUB #PopularAC .centralize_wrapper .ac_block.last {
+        display: block;
+    }
+    /* All browser exclude IE8 & IE7 end */
+    
+    .optimized_design #HUB #Campaign .centralize_wrapper,
+    .optimized_design #HUB #Recommend .centralize_wrapper {
+        padding: 10px 2px 0;
+    }
+
+}

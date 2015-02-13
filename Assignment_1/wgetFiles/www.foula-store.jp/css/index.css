@@ -1,0 +1,1043 @@
+@charset "UTF-8";
+
+
+
+/* CSS Document */
+
+
+
+#index .mainCol
+
+{
+
+	float: left;
+
+	width: 530px;
+
+}
+
+
+
+#index .mainColLeftBox,
+
+#index .mainColRightBox
+
+{
+
+	margin-bottom: 1em;
+
+	width: 260px;
+
+}
+
+
+
+#index .mainColLeftBox
+
+{
+
+	float: left;
+
+}
+
+
+
+#index .mainColRightBox
+
+{
+
+	float: right;
+
+}
+
+
+
+#index .mainCol p.harfBnrL,
+
+#index .mainCol .staffRecommend,
+
+#index .mainCol .newsBox
+
+{
+
+	float: left;
+
+	margin-right: 10px;
+
+}
+
+
+
+#index .mainCol p.harfBnrR,
+
+#index .mainCol .troubleSearchBox,
+
+#index .mainCol .harfBnrBoxR,
+
+#index .mainCol .newItemBox
+
+{
+
+	float: right;
+
+}
+
+
+
+#index p.bnrBox
+
+{
+
+	margin-top: 1em;
+
+	text-align: center;
+
+}
+
+
+
+#index .mainCol .troubleSearchBox
+
+{
+
+	width: 258px;
+
+	border: #F04A9E solid 1px;
+
+}
+
+
+
+#index .mainCol .troubleSearchBox ul
+
+{
+
+	height: 297px;
+
+	padding: 0.5em 0.5em 0;
+
+	overflow: auto;
+
+}
+
+
+
+#index .mainCol .troubleSearchBox ul li
+
+{
+
+	padding: 0 0.75em;
+
+	font-size: 0.9em;
+
+	background: url(../shop/item/foula/design/img05/common-arrow01.gif) 0.1em center no-repeat;
+
+	border-bottom: none;
+
+}
+
+
+
+#index .mainCol .staffRecommend,
+
+#index .mainCol .harfBnrBoxR,
+
+#index .mainCol .newsBox,
+
+#index .mainCol .newItemBox,
+
+#index .mainCol .recommendItems,
+
+#index .mainCol .catPickupItems,
+
+#index .mainCol .makerListBox,
+
+#index .mainCol .feuturesBox
+
+{
+
+	margin-top: 1em;
+
+}
+
+
+
+#index .mainCol .staffRecommend,
+
+#index .mainCol .harfBnrBoxR
+
+{
+
+	width: 240px;
+
+	padding: 0.75em;
+
+}
+
+
+
+#index .mainCol .staffRecommend
+
+{
+
+	background: url(../img/index/index_bg-recom_staff.gif) repeat;
+
+}
+
+
+
+#index .mainCol .staffRecommend dl
+
+{
+
+	float: left;
+
+	width: 135px;
+
+	margin: 0.5em 0;
+
+	font-size: 0.9em;
+
+}
+
+
+
+#index .mainCol .staffRecommend dl dd,
+
+#index .mainCol .newItemBox ul li,
+
+#index .mainCol .recommendItems ul li,
+
+#index .mainCol .catPickupItems ul li,
+
+#index .mainCol .makerListBox ul li,
+
+#index .mainCol .feuturesBox ol li
+
+{
+
+	font-size: 0.9em;
+
+}
+
+#index .mainCol .staffRecommend dl dd span.itemPrice,
+
+#index .mainCol .harfBnrBoxR p span.itemPrice,
+
+#index .mainCol .newItemBox ul li span.itemPrice,
+
+#index .mainCol .recommendItems ul li span.itemPrice,
+
+#index .mainCol .catPickupItems ul li span.itemPrice
+
+{
+
+	color: #333;
+
+}
+
+
+
+#index .mainCol .staffRecommend dl dd span.itemPrice em,
+
+#index .mainCol .harfBnrBoxR p span.itemPrice em,
+
+#index .mainCol .newItemBox ul li span.itemPrice em,
+
+#index .mainCol .recommendItems ul li span.itemPrice em,
+
+#index .mainCol .catPickupItems ul li span.itemPrice em
+
+{
+
+	color: #C00;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+}
+
+#index .mainCol .staffRecommend dl dd span.itemPrice em .taxIncluded,
+
+#index .mainCol .harfBnrBoxR p span.itemPrice em .taxIncluded,
+
+#index .mainCol .newItemBox ul li span.itemPrice em .taxIncluded,
+
+#index .mainCol .recommendItems ul li span.itemPrice em .taxIncluded,
+
+#index .mainCol .catPickupItems ul li span.itemPrice em .taxIncluded
+
+{
+
+	color: #666;
+
+	font-size: 12px;
+
+	font-weight: nomal;
+
+}
+
+
+
+#index .mainCol .staffRecommend p.thumbPic
+
+{
+
+	margin: 0.5em 0;
+
+	float: right;
+
+}
+
+
+
+#index .mainCol .staffRecommend p.thumbPic img,
+
+#index .mainCol .newItemBox .thumbPic img,
+
+#index .mainCol .recommendItems .thumbPic img,
+
+#index .mainCol .catPickupItems .thumbPic img
+
+{
+
+	border: #CCC solid 1px;
+
+}
+
+
+
+#index .mainCol .staffRecommend p.andMore
+
+{
+
+	font-size: 0.9em;
+
+	text-align: right;
+
+	background: url(../img/index/index_arrow-recom_staff.gif) 4em center no-repeat;
+
+}
+
+
+
+#index .mainCol .harfBnrBoxR
+
+{
+
+	background-color: #FFCDCE;
+
+}
+
+
+
+#index .mainCol .harfBnrBoxR p
+
+{
+
+	font-size: 0.9em;
+
+	text-align: center;
+
+}
+
+
+
+#index .mainCol .newsBox,
+
+#index .mainCol .newItemBox
+
+{
+
+	width: 258px;
+
+	border: #000 solid 1px;
+
+}
+
+
+
+#index .mainCol .newsBox dl
+
+{
+
+	height: 100px;
+
+	padding: 1em;
+
+	overflow: auto;
+
+}
+
+
+
+#index .mainCol .newsBox dl dt,
+
+#index .mainCol .newsBox dl dd
+
+{
+
+	padding-left: 0.5em;
+
+}
+
+
+
+#index .mainCol .newsBox dl dt
+
+{
+
+	background: url(../shop/item/foula/design/img05/common-arrow01.gif) left center no-repeat;
+
+}
+
+
+
+#index .mainCol .newsBox dl dd
+
+{
+
+	margin-bottom: 0.3em;
+
+	padding-bottom: 0.3em;
+
+	border-bottom: #666 dashed 1px;
+
+}
+
+
+
+#index .mainCol .newsBox dl dd img
+
+{
+
+	margin-right: 0.5em;
+
+}
+
+
+
+#index .mainCol .newItemBox
+
+{
+
+	margin-bottom: 1em;
+
+}
+
+
+
+#index .mainCol .newItemBox ul
+
+{
+
+	padding: 0.5em;
+
+}
+
+
+
+#index .mainCol .newItemBox ul li
+
+{
+
+	float: left;
+
+	width: 100px;
+
+	margin-left: 15px;
+
+}
+
+
+
+#index .mainCol .recommendItems
+
+{
+
+	width: 100%;
+
+}
+
+
+
+#index .mainCol .recommendItems ul,
+
+#index .mainCol .catPickupItems ul,
+
+#index .mainCol .makerListBox ul
+
+{
+
+	padding: 1em;
+
+}
+
+
+
+#index .mainCol .recommendItems ul li,
+
+#index .mainCol .catPickupItems ul li,
+
+#index .mainCol .makerListBox ul li
+
+{
+
+	float: left;
+
+	width: 120px;
+
+	margin: 3px;
+
+}
+
+
+
+#index .mainCol .recommendItems .thumbPic,
+
+#index .mainCol .catPickupItems .thumbPic
+
+{
+
+	display: block;
+
+	margin-bottom: -1em;
+
+	text-align: center;
+
+}
+
+
+
+#index .mainCol .catPickupItems
+
+{
+
+	width: 528px;
+
+	border: #9D3B6C solid 1px;
+
+}
+
+
+
+#index .mainCol .feuturesBox
+
+{
+
+	padding-bottom: 0.5em;
+
+	background-color: #000;
+
+}
+
+
+
+#index .mainCol .feuturesBox .innerBox
+
+{
+
+	width: 92%;
+
+	margin: 0 auto 0.3em;
+
+	padding: 0.5em 1em;
+
+	background-color: #FFF;
+
+}
+
+
+
+#index .mainCol .feuturesBox ol li
+
+{
+
+	margin-top: 1em;
+
+}
+
+
+
+#index .mainCol .feuturesBox ol li span
+
+{
+
+	display: block;
+
+	padding: 0.5em 1em 1em;
+
+	border-bottom: #666 dotted 1px;
+
+}
+
+
+
+#index .mainCol .feuturesBox ol li span em
+
+{
+
+	font-style: normal;
+
+	color: #F30;
+
+}
+
+
+
+#index .mainCol .categorysBox dl
+
+{
+
+	float: left;
+
+	width: 170px;
+
+	margin: 1em 3px;
+
+}
+
+
+
+#index .mainCol .categorysBox dt,
+
+#index .mainCol .categorysBox dd ul li
+
+{
+
+	width: 165px;
+
+}
+
+
+
+#index .mainCol .categorysBox dt
+
+{
+
+	margin-bottom: 1em;
+
+	padding: 0.1em 0 0.1em 0.5em;
+
+	color: #FFF;
+
+	background-color: #000;
+
+	border-bottom: #F49 solid 2px;
+
+}
+
+
+
+#index .mainCol .categorysBox dd ul li
+
+{
+
+	margin: 0.3em 0 0 0.75em;
+
+	padding-left: 0.75em;
+
+	background: url(../shop/item/foula/design/img05/common-arrow01.gif) left center no-repeat;
+
+}
+
+
+
+#index .mainCol .categorysBox dd ul li.withoutArrow
+
+{
+
+	background: none;
+
+}
+
+
+
+#index .mainCol .categorysBox dd ul li.otherCat
+
+{
+
+	margin: 1em 0 0 0;
+
+	font-size: 0.8em;
+
+	background: none;
+
+}
+
+
+
+#index .facebookLikeBox{
+
+	padding:20px 0  0 14px;
+
+}
+
+
+
+#index .mainCol .SEOtext
+
+{
+
+	clear: both;
+
+	width: 90%;
+
+	margin: 3em auto;
+
+	padding: 0 1em 1em;
+
+	background-color: #F0F0F0;
+
+	border: #999 solid 1px;
+
+}
+
+
+
+#index .mainCol .SEOtext p
+
+{
+
+	clear: both;
+
+	margin-top: 1em;
+
+	line-height: 175%;
+
+}
+
+
+
+#index .rightCol
+
+{
+
+	float: right;
+
+	width: 190px;
+
+}
+
+
+
+#index .rightCol .tweetBox,
+
+#index .rightCol .rankingBox,
+
+#index .rightCol .shopProfile,
+
+#index .rightCol .mediaPickups,
+
+#index .rightCol .links
+
+{
+
+	margin-top: 1em;
+
+}
+
+
+
+#index .rightCol .rankingBox
+
+{
+
+	background-color: #EEE;	
+
+	border:#F04A9D 1px solid;
+
+	
+
+}
+
+
+
+#index .rightCol .rankingBox p.update
+
+{
+
+	margin: 0.5em;
+
+	padding: 0.3em;
+
+	font-size: 0.85em;
+
+	color: #000;
+
+	text-align: center;
+
+	background-color: #CCC;
+
+}
+
+
+
+#index .rightCol .rankingBox p.update em
+
+{
+
+	font-style: normal;
+
+	color: #F49;
+
+}
+
+
+
+#index .rightCol .rankingBox dl
+
+{
+
+	width: 95%;
+
+	margin: 0 auto;
+
+}
+
+
+
+#index .rightCol .rankingBox dt
+
+{
+
+	width: 170px;
+
+	margin: 0.5em auto;
+
+}
+
+
+
+#index .rightCol .rankingBox dd
+
+{
+
+	margin: 0 auto 1em;
+
+	padding: 0 1.25em 0.5em;
+
+	border-bottom: #666 dotted 1px;
+
+}
+
+
+
+#index .rightCol .rankingBox .ind-rank-end
+
+{
+
+	margin: 0 auto 1em;
+
+	padding: 0 1.25em 0.5em;
+
+	border:none;
+
+}
+
+
+
+
+
+#index .rightCol .rankingBox dd span.thumbPic
+
+{
+
+	margin-bottom: 0.5em;
+
+	text-align: center;
+
+}
+
+
+
+#index .rightCol .rankingBox dd span.itemPrice
+
+{
+
+	color: #C00;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+}
+
+
+
+#index .rightCol .rankingBox dd span.itemDetail
+
+{
+
+	font-size: 10px;
+
+}
+
+
+
+
+
+#index .rightCol .mediaPickups
+
+{
+
+	border: #666 dashed 1px;
+
+}
+
+
+
+#index .rightCol .mediaPickups .innerBox
+
+{
+
+	max-height: 250px;
+
+	overflow: auto;
+
+}
+
+
+
+#index .rightCol .mediaPickups h4
+
+{
+
+	margin: 0.5em 0;
+
+	text-align: center;
+
+}
+
+
+
+#index .rightCol .mediaPickups ul
+
+{
+
+	padding-bottom: 1em;
+
+}
+
+
+
+#index .rightCol .mediaPickups ul li
+
+{
+
+	width: 147px;
+
+	margin: 0 auto;
+
+	padding: 0.75em;
+
+	background-color: #D8EFF7;
+
+}
+
+
+
+#index .rightCol .mediaPickups ul li span
+
+{
+
+	display: block;
+
+	margin-top: 0.3em;
+
+}
+
+
+
+#index .rightCol .mediaPickups ul li img
+
+{
+
+	text-align: center;
+
+	vertical-align: bottom;
+
+}
+
+
+
+#index .rightCol .mediaPickups ul li span.textLine
+
+{
+
+	font-size: 0.9em;
+
+}
+
+
+
+#index .rightCol .shopProfile
+
+{
+
+	padding: 1em 0.5em 0.5em;
+
+	text-align: center;
+
+	background-color: #EEE4CB;
+
+}
+
+
+
+#index .rightCol .shopProfile p
+
+{
+
+	width: 95%;
+
+	margin: 0.5em auto 0;
+
+	color: #333;
+
+	text-align: left;
+
+}
+
+
+
+#index .rightCol .links
+
+{
+
+	width: 188px;
+
+	border: #000 solid 1px;
+
+}
+
+
+
+#index .rightCol .links ul
+
+{
+
+	width: 170px;
+
+	margin: 0 auto 1em;
+
+}
+
+
+
+#index .rightCol .links ul li
+
+{
+
+	margin-top: 1em;
+
+}
+
+
+#index .makerListBox ul li
+
+{
+height:50px;
+}
+

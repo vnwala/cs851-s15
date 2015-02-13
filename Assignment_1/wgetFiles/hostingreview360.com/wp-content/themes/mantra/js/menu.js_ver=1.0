@@ -1,0 +1,77 @@
+jQuery(document).ready(function() 
+{
+	// Menu animation
+	jQuery("#access ul ul").css({display: "none"}); // Opera Fix
+
+	jQuery("#access li").hover(function(){
+		jQuery(this).find('ul:first').css({visibility: "visible",display: "none"}).show(250);
+		},function(){
+		jQuery(this).find('ul:first').css({visibility: "hidden"});
+	});
+	
+	// Social Icons Animation
+	jQuery(".socialicons").hover(
+		function(){
+			jQuery(this).animate({"top": "-5px" },{ queue: false, duration:200});
+		},
+		function(){
+			jQuery(this).animate({ "top": "0px" }, { queue: false, duration:200 });}
+	);
+	
+	
+}); // ready 
+
+
+jQuery(document).ready(function() 
+{
+	var tabIndexArray = [ 'menu-item-6', 'menu-item-225', 'menu-item-301' ];
+	var tabIndexMappingLocalUrls = [ '/', '/top-10-web-hosting', '/web-hosting-coupon' ];
+	var tabIndex = -1;
+
+	var firstSlash = window.location.href.indexOf('/', 8);
+	var tabIndex = firstSlash < 0 ? 0 : -1;
+
+	if(tabIndex < 0)
+	{
+		var lastSlash = window.location.href.indexOf('/', firstSlash + 1);
+		var urlSegment;
+		if (lastSlash < 0)
+		{
+			urlSegment = window.location.href.substr(firstSlash);
+			tabIndex = 0;
+		}
+		else
+		{
+			urlSegment = window.location.href.substr(firstSlash, lastSlash - firstSlash);
+		}
+		
+		if(urlSegment.indexOf('?') > -1)
+			urlSegment = urlSegment.substr(0, urlSegment.indexOf('?'));
+		
+		urlSegment = urlSegment.toLowerCase();
+		for (var i = 0; i < tabIndexMappingLocalUrls.length; i++)
+		{
+			if (tabIndexMappingLocalUrls[i] == urlSegment) 
+			{
+				tabIndex = i;
+				break;
+			}
+		}
+	}
+
+	if (tabIndex > -1)
+	{
+		var currentTabId = tabIndexArray[tabIndex];
+		jQuery('#' + currentTabId).addClass('active');
+	}
+	
+	jQuery('#header #access .menu-header .menu .menu-item').mouseover(function()
+	{
+		jQuery(this).addClass('hover');
+	});
+	
+	jQuery('#header #access .menu-header .menu .menu-item').mouseout(function()
+	{
+		jQuery(this).removeClass('hover');
+	});
+});

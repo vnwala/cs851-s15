@@ -1,0 +1,403 @@
+/******************
+1280px width Stylesheet
+Note: 1230px is the visible area after deducted on the margin left right.
+******************/
+@media screen and (min-width: 1200px) {
+
+	/******************
+	PRESET
+	******************/
+	.container {
+		width: 1230px;
+	}
+
+	/******************
+	HEADER STYLES
+	******************/
+	#Header .nav .dropdown_child.list_style_left li {
+		width: 175px;
+	}
+        
+        #Header .header_banner {
+            margin-left: 175px;
+        }
+        
+        .old_new_merged #Header .header_banner {
+            margin-left: 0;
+        }
+        
+        #header_02.new_design #ta_header {
+            width: 1200px;
+        }
+        
+        .sticky_header_banner.new_design ul {
+            width: 1200px;
+        }
+        
+        #vtrheader .container {
+            width: 1200px;
+        }
+
+	/******************
+	BODY CONTENT STYLES
+	******************/
+	.main_feat,
+	.side_feat {
+		width: 610px;
+	}
+
+	.side_feat {
+		margin-left: 10px;
+	}
+
+	.ac_block.w_450 .link {
+		width: 590px;
+	}
+
+	#PopularCategories .main_feat {
+                overflow: visible;
+		width: 610px;
+	}
+
+        #PopularCategories .ac_block:hover {
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+        }
+
+	#PopularCategories .main_feat .ac_block.w_450 {
+		height: auto;
+		width: 610px;
+	}
+
+	#PopularCategories .main_feat .ac_block.w_450 img {
+		margin-top: 0;
+	}
+
+	#PopularCategories .main_feat .ac_block.w_450 .link {
+		width: 590px;
+	}
+
+	#PopularCategories .side_feat {
+		margin-left: 10px;
+		position: static;
+		width: 610px;
+	}
+
+	#PopularCategories .side_feat .ac_block {
+		margin: 0 0 10px 10px;
+		width: 300px;
+	}
+
+	#PopularCategories .side_feat .ac_block:first-child {
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+
+	#PopularCategories .side_feat .ac_block.second {
+		margin-left: 10px;
+	}
+
+	#PopularCategories .side_feat .ac_block.third {
+		margin-left: 0;
+	}
+
+	#PopularCategories .side_feat .ac_block .link {
+		width: 280px;
+	}
+
+	#PopularCategories #CategoryList {
+		width: 1230px;
+	}
+
+	#PopularCategories #CategoryList .list {
+		margin: 0 37px;
+		width: 315px;
+	}
+
+        .csscolumns .expanded_parent_cat {
+            -moz-column-count:4;
+            -webkit-column-count:4;
+            column-count:4;
+        }
+
+        .csscolumns .expanded_parent_cat dl {
+            float: none;
+            width: auto;
+        }
+
+	#MonitorTours,
+	#TopSellers,
+	#BestRatings {
+		margin-left: 22px;
+		width: 395px;
+	}
+
+	#TopSellers .title span.ribbon,
+	#BestRatings .title span.ribbon {
+		padding-right: 28px;
+	}
+
+	#TopSellers .title span.ribbon span,
+	#BestRatings .title span.ribbon span {
+		padding-left: 25px;
+	}
+
+	#MonitorTours {
+		margin: 0;
+	}
+
+	#MonitorTours .slider_wrapper {
+		width: 315px;
+	}
+
+	#MonitorTours .first .info {
+		height: 70px;
+	}
+
+	#TopSellers .info,
+	#BestRatings .info {
+		float: left;
+		width: 270px;
+	}
+
+	#Campaign.section,
+	#Recommend.section {
+		clear: both;
+		margin-bottom: 60px;
+	}
+
+	#Campaign .slider_wrapper .ac_block .link a,
+	#Recommend .slider_wrapper .ac_block .link a {
+		line-height: 18px;
+	}
+
+	#Campaign .centralize_wrapper,
+	#Recommend .centralize_wrapper {
+		width: 1240px;
+		padding: 8px 0;
+	}
+
+	#FiveStar .centralize_wrapper {
+		margin-left: -5px;
+		width: 1240px;
+	}
+
+	#FiveStar .centralize_wrapper .ac_block {
+		margin: 10px 8px;
+	}
+
+	#FiveStar .centralize_wrapper .ac_block:last-child {
+		opacity: 1;
+		position: static;
+		left: 0;
+	}
+
+	/******************
+	FOOTER STYLES
+	******************/
+        .optimized_design #SEOTitle .container .info {
+        }
+
+	#Footer .info_block {
+		width: 275px;
+	}
+
+	#Footer .info_block.border_left {
+		padding-left: 49px;
+	}
+
+
+  /******************
+	HawaiiActivity.com
+	******************/
+	/* when HAS monitor tour, top seller, best ratings, map width change */
+	.ha .has_map #MonitorTours,
+	.ha .has_map #TopSellers,
+	.ha .has_map #BestRatings,
+	.ha .has_map #Map {
+		margin-left: 22px;
+		margin-top: 0;
+		width: 290px;
+	}
+
+        .ha .has_map #Map .map_wrapper {
+            float: none;
+            margin-right: 0;
+        }
+
+        .ha .has_map #Map .gift_cert_wrapper {
+            float: none;
+        }
+
+	.ha .has_map #MonitorTours {
+		margin: 0;
+	}
+
+	.ha .has_map #MonitorTours .slider_wrapper {
+		width: 210px;
+	}
+
+	.ha .has_map #MonitorTours .first .info {
+		height: 125px;
+	}
+
+	/* when NO monitor tour, top seller, best ratings, map width change */
+	.ha .no_monitor_tours.has_map #TopSellers,
+	.ha .no_monitor_tours.has_map #BestRatings,
+	.ha .no_monitor_tours.has_map #Map {
+		margin-left: 22px;
+		width: 395px;
+	}
+
+        .ha .no_monitor_tours.has_map #Map .map_wrapper {
+            width: 395px;
+        }
+
+        .ha .no_monitor_tours.has_map #Map .gift_cert_wrapper {
+            width: 100%;
+        }
+
+	.ha .no_monitor_tours.has_map #TopSellers {
+		margin-left: 0;
+	}
+
+	.ha .no_monitor_tours.has_map #TopSellers .info,
+	.ha .no_monitor_tours.has_map #BestRatings .info {
+		width: 80%;
+	}
+
+	/******************
+	font-size for 1280
+	******************/
+	span.arrow.align_left {
+	}
+
+        /******************
+        #8184 Sightseeing area search
+        ******************/
+        .sightseeing_content .info {
+            width: 600px;
+        }
+        
+        .sightseeing_content .sightseeing_content_embeded_map {
+            margin-left: 20px;
+        }
+
+        /******************
+        Optimization Design based on AB Test Result
+        ******************/
+        .optimized_design .container {
+            padding: 0px;
+            width: 1200px;
+        }
+
+        .optimized_design .page_content {
+            width: 970px;
+        }
+
+        .optimized_design .no_monitor_tours #TopSellers,
+        .optimized_design .no_monitor_tours #BestRatings {
+            width: 475px;
+        }
+
+        .optimized_design .no_monitor_tours #TopSellers .info span.title,
+        .optimized_design .no_monitor_tours #BestRatings .info span.title {
+            width: 390px;
+        }
+
+        .optimized_design #Campaign .centralize_wrapper,
+        .optimized_design #Recommend .centralize_wrapper {
+            padding: 10px 2px 0;
+        }
+
+        .optimized_design #Campaign .centralize_wrapper {
+            padding-bottom: 1px;
+        }
+
+        .optimized_design #Campaign .centralize_wrapper .ac_block,
+        .optimized_design #Recommend .centralize_wrapper .ac_block {
+            margin: 0 6px 10px;
+            width: 310px;
+        }
+
+        .optimized_design #Campaign .centralize_wrapper .ac_block .single,
+        .optimized_design #Recommend .centralize_wrapper .ac_block .single {
+            height: 190px;
+        }
+
+        .optimized_design #Campaign .centralize_wrapper .ac_block .single img,
+        .optimized_design #Recommend .centralize_wrapper .ac_block .single img {
+          margin-top: -5%;
+        }
+
+        .optimized_design .multi_ac .main {
+            height: 190px;
+            width: 190px;
+        }
+
+        .optimized_design .multi_ac .sub {
+            height: 190px;
+            width: 118px;
+        }
+
+        .optimized_design .single img,
+        .optimized_design .multi_ac .main img,
+        .optimized_design .multi_ac .sub img {
+            max-height:none;
+            width: 102px;
+        }
+
+        .optimized_design #Campaign .main img.lazy,
+        .optimized_design #Campaign .main img.non_lazy,
+        .optimized_design #Campaign .single img.lazy,
+        .optimized_design #Campaign .single img.non_lazy,
+        .optimized_design #Recommend .main img.lazy,
+        .optimized_design #Recommend .main img.non_lazy,
+        .optimized_design #Recommend .single img.lazy,
+        .optimized_design #Recommend .single img.non_lazy {
+            max-width: 100%;
+            width: 308px;
+            margin-top: -2%;
+        }
+        
+        .optimized_design #Campaign .main img.lazy, 
+        .optimized_design #Campaign .main img.non_lazy, 
+        .optimized_design #Recommend .main img.lazy,
+        .optimized_design #Recommend .main img.non_lazy {
+            max-width: none;
+            margin-left: -32%;
+            margin-top: -10%;
+        }
+        
+        .optimized_design .multi_ac .sub img {
+            height: 95px;
+            width: auto; /* 153px golden ratio */
+        }
+
+        .optimized_design #FiveStar .centralize_wrapper {
+            padding: 0 5px;
+        }
+
+        .optimized_design #FiveStar .centralize_wrapper .ac_block {
+             margin: 10px;
+        }
+
+        .optimized_design #Footer .info_block {
+            width: 267px;
+        }
+        
+        /******************
+        #8216 5 Star Reviews page new design
+        ******************/
+        #five_star_review_wrapper .searched_review_item_right {
+            width: 660px;
+        }
+        
+        #five_star_review_wrapper a.searched_review_item_title_large {
+            width: 490px;
+        }
+        
+        #five_star_review_wrapper .searched_review_item_right.no_img_gallery a.searched_review_item_title_large {
+            width: 720px;
+        }
+}

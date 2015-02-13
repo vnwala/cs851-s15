@@ -1,0 +1,1914 @@
+/* Type CSS rules here and they will be applied
+to pages from 'editcss'
+immediately as long as you keep this window open. */
+
+/**** LINK-tag style sheet stylesheet.css ****/
+
+/* Type CSS rules here and they will be applied
+to pages from 'editcss'
+immediately as long as you keep this window open. */
+
+/**** LINK-tag style sheet stylesheet.css ****/
+
+/*
+  $Id: stylesheet.css,v 1.20 2013/02/14 17:49:21 bschlicht Exp $
+
+  osCommerce, Open Source E-Commerce Solutions
+  http://www.oscommerce.com
+
+  Copyright (c) 2003 osCommerce
+
+  Released under the GNU General Public License
+*/
+
+/*******************************************************************
+
+  FILE: /home/shop/catalog/stylesheet.css
+
+  FUNCTIONALITY:
+	Main CSS file
+
+  MODIFICATION HISTORY:
+
+  Date      Author  Action 	 	Detail
+  ====			======  ======		======
+	03/14/06	bs			modified	added orangeBackground link classes
+	03/15/06	bs			modified	changed orangeBackground to orangeBuyNow
+	
+*******************************************************************/
+
+.boxText { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
+.errorBox { font-family : Verdana, Arial, sans-serif; font-size : 10px; background: #ffb3b5; font-weight: bold; }
+.stockWarning { font-family : Verdana, Arial, sans-serif; font-size : 10px; color: #cc0033; }
+.productsNotifications { background: #EDEDED; }
+.orderEdit { font-family : Verdana, Arial, sans-serif; font-size : 10px; color: #70d250; text-decoration: underline; }
+
+BODY {
+  background: #ffffff;
+  color: #000000;
+  margin: 0px;
+}
+
+A { 
+  color: #000000; 
+  text-decoration: none; 
+}
+
+A:hover { 
+  color: #D55500;
+  text-decoration: underline; 
+}
+
+FORM {
+	display: inline;
+}
+
+TR.header {
+  background: #ffffff;
+}
+
+TR.headerNavigation {
+  background: #ffffff;
+}
+
+TD.headerNavigation {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  background: #ffffff;
+  color: #000000;
+  font-weight : bold;
+}
+
+A.headerNavigation { 
+  color: #00794A;
+}
+
+A.headerNavigation:hover {
+  color: #000000;
+}
+
+TR.headerError {
+  background: #E36A20;
+}
+
+TD.headerError {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  background: #E36A20;
+  color: #EEEEEE;
+  font-weight : bold;
+  text-align : center;
+}
+
+TR.headerInfo {
+  background: #00794A;
+}
+
+TD.headerInfo {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  background: #00ff00;
+  color: #D5FFD6;
+  font-weight: bold;
+  text-align: center;
+}
+
+TR.footer {
+  background: #006600  url("images/rh/railbox_bkgd.gif");
+  background-repeat: repeat-x;
+  /*background: #00794A;*/
+}
+
+TD.footer {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  background: #006600  url("images/rh/railbox_bkgd.gif");
+  background-repeat: repeat-x;
+  /*background: #006633;*/
+  color: #EDEDED;
+  font-weight: bold;
+}
+.footerText {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  /*background: #006633;*/
+  color: #EDEDED;
+  font-weight: bold;
+}
+A.footerText:link, A.footerText:visited {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  /*background: #006633;*/
+  color: #EDEDED;
+  font-weight: bold;
+}
+A.footerText:hover, A.footerText:active {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+.infoBox {
+  background: #00794A;
+}
+
+.infoBoxContents {
+	background: #EDEDED;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #00794A;
+}
+
+.infoBoxContentsW {
+	background: #ffffff;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #00794A;
+}
+
+.infoBoxNotice {
+  background: #EDEDED;
+}
+
+.infoBoxNoticeContents {
+	background: #EDEDED;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #00794a;
+}
+
+.infoBoxHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background: #006633;
+  color: #FFFFFF;
+}
+
+TD.infoBox, SPAN.infoBox {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10px;
+	color: #EEEEEE;
+}
+
+TR.accountHistory-odd, TR.addressBook-odd, TR.alsoPurchased-odd, TR.payment-odd, TR.productListing-odd, TR.productReviews-odd, TR.upcomingProducts-odd, TR.shippingOptions-odd {
+  background: #EDEDED;
+
+}
+
+TR.accountHistory-even, TR.addressBook-even, TR.alsoPurchased-even, TR.payment-even, TR.productListing-even, TR.productReviews-even, TR.upcomingProducts-even, TR.shippingOptions-even {
+  background: #F6F6F6;
+
+}
+
+TR.productListing-heading {
+  background: #D9F8D6;
+}
+
+TD.productListing-heading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+  background: #DCDCDC;
+  color: #000000;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+TD.productListing-data {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+
+}
+
+A.pageResults { 
+  color: #E36A20; 
+}
+
+A.pageResults:hover { 
+  color: #FF8000; 
+  background: #EDEDED; 
+}
+
+TD.pageHeading, DIV.pageHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E36A20;
+}
+
+/* used for page headings */
+h2 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #E36A20;
+}
+
+TR.subBar {
+  background: #FFE2BB;
+}
+
+TD.subBar {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #000000;
+}
+
+TD.main, P.main {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+TD.smallText, SPAN.smallText, P.smallText {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+TD.accountCategory {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 13px;
+  color: #D9F8D6;
+}
+
+TD.fieldKey {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+TD.fieldValue {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+}
+
+TD.tableHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+SPAN.newItemInCart {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #ff0000;
+}
+
+CHECKBOX, INPUT, RADIO, SELECT {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+}
+
+TEXTAREA {
+  width: 100%;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+}
+
+SPAN.greetUser {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #FED7BA;
+  font-weight: bold;
+}
+
+TABLE.formArea {
+	background: #FDD1A2;
+	border: thin solid #FF6600;
+}
+
+TD.formAreaTitle {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+SPAN.markProductOutOfStock {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 12px;
+  color: #D55500;
+  font-weight: bold;
+}
+
+SPAN.productSpecialPrice {
+  font-family: Verdana, Arial, sans-serif;
+  color: #FF6600;
+}
+
+SPAN.errorText {
+  font-family: Verdana, Arial, sans-serif;
+  color: #00CC00;
+}
+
+/************************************
+ New pricing classes
+ for MSRP display, ~4/2005
+************************************/
+
+.products_specials_price {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffcc66;
+  font-style: italic;
+  color: #006600;
+}
+.products_display_price {
+  font-family: Verdana, Arial, sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.products_msrp_price {
+  font-family: Verdana, Arial, sans-serif;
+  color: #666666;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.smallRed {
+  font-family: Verdana, Arial, sans-serif;
+  color: #ff0000;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.products_specials_price_search {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #ffcc66;
+  font-style: italic;
+  color: #006600;
+}
+.products_display_price_search {
+  font-family: Verdana, Arial, sans-serif;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+.products_msrp_price_search {
+  font-family: Verdana, Arial, sans-serif;
+  color: #666666;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+/****************************************
+END MSRP pricing display classes
+****************************************/
+
+.moduleRow { }
+.moduleRowOver { background-color: #D9F8D6; cursor: hand; }
+.moduleRowSelected { background-color: #FDC484; }
+
+.checkoutBarFrom, .checkoutBarTo { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #D55500; }
+.checkoutBarCurrent { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #000000; }
+
+/* New Detail Page font  */
+.detail_head {
+  font-family: arial,helvetica,verdana,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+A.detail_head:link, A.detail_head:visited {
+  font-family: arial,helvetica,verdana,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+A.detail_head:hover, A.detail_head:active {
+  font-family: arial,helvetica,verdana,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+/* Special price; keep same as detail_head but for color*/
+.detail_head_special {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #ff6600;
+}
+
+.detail_subhead {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+A.detail_subhead:link, A.detail_subhead:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+A.detail_subhead:hover, A.detail_subhead:active {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.detail_body {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  margin-right: 10px;
+  margin-left: 10px;
+ 
+}
+
+A.detail_body:link, A.detail_body:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+A.detail_body:hover, A.detail_body:active {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+}
+
+.detail_orange_bkgd {
+  background-color: #ff9933;
+}
+
+.detail_green_bkgd {
+  background-color: #006600;
+}
+.detail_border {
+  border-left: 2px solid #999999;
+  border-right: 2px solid #999999;
+}
+.detail_border_top {
+  border-top: 2px solid #999999;
+}
+.detail_border_bottom {
+   border-bottom: 2px solid #999999;
+}
+
+
+/* FOR RAIL BOXES */
+.railBoxTable {
+  /*border: 1px solid #006600;*/
+}
+.railBoxHeader {
+  font-family: verdana, arial,helvetica,verdana,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #006600  url("images/rh/railbox_bkgd.gif");
+  background-position: top left;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  text-align: center;
+}
+
+A.railBoxHeader:link, A.railBoxHeader:visited {
+  font-family: verdana, arial,helvetica,verdana,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+A.railBoxHeader:active, A.railBoxHeader:hover {
+  font-family: verdana,arial,helvetica,verdana,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: underline;
+  text-align: center;
+}
+
+railBoxHeaderText,A.railBoxHeaderText:link, A.railBoxHeaderText:visited {
+  font-family: verdana, arial,helvetica,verdana,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+A.railBoxHeaderText:active, A.railBoxHeaderText:hover {
+  font-family: verdana,arial,helvetica,verdana,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* classes for top right and left corners of rail boxes*/
+.railBoxHeaderLeft {
+  background: #006600  url("images/rh/railbox_nw.gif");
+  background-repeat: no-repeat;
+  background-position: top left;
+  width: 10px;
+}  
+.railBoxHeaderRight {
+  background: #006600  url("images/rh/railbox_ne.gif");
+  background-repeat: no-repeat;
+  background-position: top right;
+}  
+
+
+
+.railBoxBody {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: #ffffff  url("images/gradient10.gif");
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  border: 1px solid #006600;
+}
+
+A.railBoxBody:link, A.railBoxBody:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: transparent;
+  text-decoration: none;
+  border: 0px;
+}
+A.railBoxBody:active, A.railBoxBody:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: underline;
+  border: 0px;
+}
+
+.podBoxBody {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: #ffffcc;
+  border: 1px solid #006600;
+}
+
+A.podBoxBody:link, A.podBoxBody:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: transparent;
+  text-decoration: none;
+  border: 0px;
+}
+A.podBoxBody:active, A.podBoxBody:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: underline;
+  border: 0px;
+}
+
+.rssBoxBody {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: #eeeeee;
+  border: 1px solid #006600;
+}
+
+A.rssBoxBody:link, A.rssBoxBody:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background: transparent;
+  text-decoration: none;
+  border: 0px;
+}
+A.rssBoxBody:active, A.rssBoxBody:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: underline;
+  border: 0px;
+}
+
+
+.railBoxShopping {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+  background: #ffffff  url("images/gradient10.gif");
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  border: 1px solid #006600;
+}
+
+A.railBoxShopping:visited, A.railBoxShopping:link {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+  background: transparent;
+  text-decoration: none;
+  border: 0px;
+}
+
+A.railBoxShopping:active, A.railBoxShopping:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: underline;
+  border: 0px;
+}
+
+.railBoxShoppingText {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+  background: transparent; 
+  text-decoration: none;
+}
+A.railBoxShoppingText:visited, A.railBoxShoppingText:link {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+  background: transparent;
+  text-decoration: none;
+}
+
+A.railBoxShoppingText:active, A.railBoxShoppingText:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: underline;
+}
+
+/* rail Browse ID */
+#railBoxBrowse {
+  padding: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-bottom: 1px dotted #009900;
+  background: transparent;
+}
+
+/* brafton CMS include */
+#braftonCMSDiv {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 12px;
+
+} 
+
+.braftonCMS {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #039900;
+  background: #ffffff;
+  border: 1px solid #006600;
+  
+}
+a.braftonCMS:link, a.braftonCMS:visited {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #039900;
+  background: #ffffff;
+  text-decoration: underline;
+  border: 0px;
+}
+a.braftonCMS:active, a.braftonCMS:hover {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #96DB95;
+  border: 0px;
+}
+
+
+
+
+/* BEGIN NEW HEADER STYLES */
+/* prepended with "rh" = revised header */
+
+.rhTable {
+  border-top: 1px solid black;
+  /*border-bottom: 1px solid black;*/
+}
+.rhDock {
+  background-color: #cccccc;
+}
+.rhDockFade {
+  background: #ffffff url("images/rh/dock_arch.gif") no-repeat top right;
+}
+.rhLogo {
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.rhMenu {
+  background: #ffffff  url("images/rh/gradient.gif") no-repeat top right;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  padding-right: 10px;
+  border-bottom: 1px solid #000000;
+}
+.rhMenuBkgd {
+  background: #0d8446 url("images/rh/gradient_menu.gif") repeat-x bottom left;
+
+}
+.rhSearch {
+  background: #cccccc;
+  border-top: 2px solid #ff9933;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  padding: 5px;
+}
+.rhSearchBottom {
+  border-top: 1px solid #000000;
+}
+
+/* Background color for search box */
+.searchBox {
+  border: 1px solid #000000;
+  background-color: #ffffcc;
+}
+
+
+
+/* END NEW HEADER STYLES */
+
+/****************************************
+Header Redesign rh3 styles
+****************************************/
+
+.rh3dock,
+a.rh3dock:visited,
+a.rh3dock:link {
+        font-family: arial, verdana, helvetica;
+        font-weight: bold;
+        font-size: 12px;
+        color: #333333;
+        text-decoration: none;
+}
+a.rh3dock:active,
+a.rh3dock:hover {
+        font-family: arial, verdana, helvetica;
+        font-weight: bold;
+        font-size: 12px;
+        color: #ff6600;                                                                                                                                               text-decoration: underline;
+
+}
+
+
+.rh3cart,
+a.rh3cart:visited,
+a.rh3cart:link {
+        font-family: arial, verdana, helvetica;
+        font-weight: bold;
+        font-size: 12px;
+        color: #FDFD67;
+        text-decoration: none;
+}                                                                                                                                                             a.rh3cart:active,                                                                                                                                             a.rh3cart:hover {
+        font-family: arial, verdana, helvetica;
+        font-weight: bold;
+        font-size: 12px;
+        color: #FDFD67;                                                                                                                                               text-decoration: underline;
+}
+#btnCartBackground {
+        background:  transparent url('images/rh3/header/btn-cart-background-off.jpg')
+}
+
+/**************************************
+rh3 styles for browse and search result
+**************************************/
+
+/* Browse genre top box */
+
+.rh3browseBoxTop {
+        background-color: #E49F20;
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+.rh3browseBoxTabs {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 11px;
+}
+A.rh3browseBoxTabs:link, A.rh3browseBoxTabs:visited, A.rh3browseBoxTabs:hover, A.rh3browseBoxTabs:active {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        text-decoration: underline;
+}
+
+.rh3browseBoxTL {
+        background:#E49F20 url("images/rh3/search/dropdown-left-top.jpg") top left;
+}
+.rh3browseBoxTR {
+        background:#E49F20 url("images/rh3/search/dropdown-right-top.jpg") top right;
+}
+.rh3browseBoxML {
+        background:#FBEEA8 url("images/rh3/search/dropdown-left-bottom.jpg") top left;
+}
+.rh3browseBoxMR {
+        background:#FBEEA8 url("images/rh3/search/dropdown-right-bottom.jpg") top right;
+}
+.rh3browseBoxMM {
+        background:#FBEEA8 url("images/rh3/search/dropdown-bottom.jpg") top left repeat-x;
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+}
+.rh3browseBoxBL {
+        background:#FBEEA8 url("images/rh3/search/dropdown-bottomleft-corner.jpg") bottom left;
+}
+.rh3browseBoxBM {
+        background:#FBEEA8 url("images/rh3/search/dropdown-bottom2.jpg") top left;
+}
+.rh3browseBoxBR {
+        background:#FBEEA8 url("images/rh3/search/dropdown-bottomright-corner.jpg") bottom right;;
+}
+
+.rh3resultsHeadLeft {
+        background: #FBEEA8 url("images/rh3/search/results-row-left-crnr.jpg") top left;
+        border-bottom: 1px solid #E49F20 ;
+}
+.rh3gresultsHeadLeft {
+        background: #E9E9E9 url("images/rh3/gdetail/results-row-left-crnr.jpg") top left;
+        border-bottom: 1px solid #aaaaaa ;
+}
+.rh3resultsHeadRight {
+        background: #FBEEA8 url("images/rh3/search/results-row-bgd.jpg") top left repeat-x;
+        border-bottom: 1px solid  #E49F20;
+}
+.rh3gresultsHeadRight {
+	background: #E9E9E9 url("images/rh3/gdetail/grey_background.jpg") top left repeat-x;
+        border-bottom: 1px solid #aaaaaa;
+}
+.rh3resultsRowBottom {
+        border-bottom: 1px dashed  #E49F20;
+}
+.rh3gresultsRowBottom {
+        border-bottom: 1px dashed  #aaaaaa;
+}
+.rh3resultsRowLeft {
+        background: #ffffff url("images/rh3/search/left-line.jpg") top left repeat-y;
+}
+.rh3searchResultsRowLeft {
+        background: #ffffff url("images/rh3/search/left-line.jpg") top left repeat-y;
+        border-bottom: 1px dashed  #E49F20;
+}
+.rh3resultsFooterLeft {
+                background: #FBEEA8 url("images/rh3/search/results-footer-left.jpg") bottom left repeat-x;
+}
+.rh3gresultsFooterLeft {
+                background: #E9E9E9 url("images/rh3/gdetail/results-footer-left.jpg") bottom left repeat-x;
+}
+
+.rh3resultsFooterRight {
+                background: #FBEEA8 url("images/rh3/search/results-row-footer.jpg") bottom left repeat-x;
+}
+.rh3gresultsFooterRight {	
+                background: #E9E9E9 url("images/rh3/gdetail/results-row-footer.jpg") bottom left repeat-x;
+}
+
+.rh3gcategoriesHeadLeft {
+	background: #E9E9E9 url("images/rh3/gdetail/dropdown_games_nw.jpg") top left;
+}
+
+.rh3gcategoriesBG {
+        background: #E9E9E9 url("images/rh3/gdetail/dropdown_games_bgd.jpg") top left repeat;
+	font-family: arial,helvetica,sansserif;
+	font-size: 13px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.rh3gcategoriesHeadRight {
+        background: #E9E9E9 url("images/rh3/gdetail/dropdown_games_ne.jpg") top left repeat-x;
+}
+
+.rh3gcategoriesFootLeft {
+        background: #E9E9E9 url("images/rh3/gdetail/dropdown_games_sw.jpg") bottom left repeat-x;
+}
+
+.rh3gcategoriesFootRight {
+        background: #E9E9E9 url("images/rh3/gdetail/dropdown_games_se.jpg") bottom left repeat-x;
+}
+
+
+
+
+/* style for shipping message (in/out of stock, prebook etc) */
+
+.rh3statusInStock {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #38955b;
+}
+.rh3statusPrebook {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #0000ff;
+}
+.rh3statusBackordered {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        color: #ff0000;
+}
+
+
+.rh3browseUsedBox {
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 11px;
+        font-weight: normal;
+        background: #FBEEA8 url("images/rh3/search/used-highlight.jpg");
+}
+
+/* Pricing Treatments */
+.rh3pricingBuy {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ff0000;
+}
+.rh3pricingMSRP {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #666666;
+        text-decoration: line-through;
+}
+.rh3pricingYouSave {
+        font-family: verdana, arial,helvetica,sans-serif;
+        font-size: 10px;
+        color: #ff0000;
+}
+
+.rh3searchResultsStreet {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 11px;
+        color: #000000;
+}
+.rh3SearchUsedClickee {
+        color: #ff6600;
+        font-weight: bold;
+        text-decoration: underline;
+}
+A.rh3contribLink:link, A.rh3contribLink:visited, A.rh3contribLink:hover, A.rh3contribLink:active {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #0000ff;
+}
+
+.rh3detailTopLine {
+         border-top: 2px solid #F6A000;
+        /* background: #ffffff url("/catalog/images/rh3/detail/line-n-top.jpg") top left repeat-x; */
+}
+.rh3detailLeftLine {
+         border-left: 2px solid #F6A000;
+         /* background: #ffffff url("/catalog/images/rh3/detail/line-w-left.jpg") top left repeat-y; */
+}
+
+.rh3detailTitle {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: -25px;
+        margin-top: 0px;
+}
+.rh3detailTitleBottom {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        color: #000000;
+        font-size: 16px;
+	margin-bottom: -15px;
+}
+
+ a.rh3detailMenu:link, a.rh3detailMenu:visited {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000000;
+        text-decoration: underline;
+}
+.rh3detailMenu, a.rh3detailMenu:hover, a.rh3detailMenu:active {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000000;
+        text-decoration: none;
+}
+
+.rh3pricingDetailOurPrice {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+}
+.rh3pricingDetailMSRP {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #666666;
+}
+.rh3pricingDetailMSRPstrike {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        color: #666666;
+        text-decoration: line-through;
+}
+
+.rh3detailHeaderBar {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        background: #FBF2B9 url("images/rh3/detail/header-row-bgd.jpg") top left repeat-x;
+        border-bottom: 1px solid #F6A000;
+        padding: 3px;
+}
+.rh3detailSpaceText {
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 11px;
+        line-height: 200%;
+}
+.rh3gdetailTopLine {
+         border-top: 2px solid #aaaaaa;
+        /* background: #ffffff url("/catalog/images/rh3/detail/line-n-top.jpg") top left repeat-x; */
+}
+.rh3gdetailLeftLine {
+         border-left: 2px solid #aaaaaa;
+         /* background: #ffffff url("/catalog/images/rh3/detail/line-w-left.jpg") top left repeat-y; */
+}
+.rh3gdetailTitle {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: -25px;
+        margin-top: 0px;
+}
+ a.rh3gdetailMenu:link, a.rh3gdetailMenu:visited {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000000;
+        text-decoration: underline;
+}
+.rh3gdetailMenu, a.rh3gdetailMenu:hover, a.rh3gdetailMenu:active {
+        font-family: arial, helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        color: #000000;
+        text-decoration: none;
+}
+.rh3gdetailHeaderBar {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        background: #E9E9E9 url("images/rh3/gdetail/feature-header-bgd.jpg") top left repeat-x;
+        border-bottom: 1px solid #aaaaaa;
+        padding: 3px;
+}
+.rh3gdetailSpaceText {
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 11px;
+        line-height: 200%;
+}
+/**** RH3 Screenshots **********/
+.rh3screenshotActive {
+        border: 2px solid #ff6600;
+}
+.rh3screenshotInactive {
+        border: 1px solid #999999;
+}
+.rh3screenshotTable {
+        background: #E9E9E9 url("images/rh3/gdetail/screenshot-box-bgd.jpg") top left repeat-x;
+}
+.rh3screenshotTop {
+        background: transparent url("images/rh3/gdetail/line-n-top.gif") top left repeat-x;
+}
+.rh3screenshotBottom {
+        background: transparent url("images/rh3/gdetail/line-s-bottom.gif") bottom left repeat-x;
+}
+.rh3screenshotLeft {
+        background: transparent url("images/rh3/gdetail/line-w-left.gif") top left repeat-y;
+}
+.rh3screenshotRight {
+        background: transparent url("images/rh3/gdetail/line-e-right.gif") top right repeat-y;
+}
+
+
+
+
+/********************************* 
+START browse category styles, 
+all begin with "cat" (for category)
+*********************************/
+.catList {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #000000;
+}
+A.catList:visited, A.catList:link {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #006600;
+}
+A.catList:hover, A.catList:active {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #006600;
+}
+
+.catListSmall {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #000000;
+}
+A.catListSmall:visited, A.catListSmall:link {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #006600;
+}
+A.catListSmall:hover, A.catListSmall:active {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #006600;
+}
+.catListError {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff3333;
+}
+
+/* cap for results, with some V space before table begins */
+.catListResultCap {
+  height: 1px;
+  border-bottom: 1px dotted #009900;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top:15px;
+}
+/* bottom cap; note auto width */
+.catListResultBottom {
+  width: auto;
+  border-top: 1px dotted #999999;
+}
+
+.catListResultOdd {
+  background: #eeeeee;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 3px;
+  border-bottom: 1px dotted #009900;
+}
+.catListResultEven {
+  background: #ffffff;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 3px;
+  border-bottom: 1px dotted #009900;
+}
+/* Pricing styles for browse function  */
+.catListPrice {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+.catListPriceStrike {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #666666;
+  text-decoration: line-through;
+}
+.catListPriceSpecial {
+  font-family: verdana, arial,helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/********************************* 
+END browse category styles, 
+all begin with "cat" (for category)
+*********************************/
+
+/* Top 50 box  */
+.topFifty {
+  border-left: 1px solid #009900;
+  border-right: 1px solid #009900;
+  border-bottom: 1px solid #009900;
+  background: #ffffff  url("images/gradient10.gif");
+  background-position: bottom right;
+  background-repeat: repeat-x;
+}
+
+/*  For product_info page, highlight other formats */
+.formatText {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 11px;
+  font-family: verdana,arial,sans-serif;
+}
+.errorMessageBold {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: verdana,arial,sans-serif;
+}
+.successMessage {
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #ffff00;
+  font-family: verdana,arial,sans-serif;
+}
+/* featuredMenu and tabText for genre browse pages */
+.featuredRow {
+        border-bottom: 1px dashed #ffcc00;
+}
+.featuredMenu {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #000000;
+        background: #ff9900  url("images/feature_tabs.gif");
+        background-position: top left;
+        background-repeat: repeat-x;
+        border-bottom: 1px solid #000000;
+}
+.featuredMenuCurrent {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        background: #ff9900  url("images/feature_tabs_current.gif");
+        background-position: top left;
+        background-repeat: repeat;
+}
+
+A.featuredMenu:link, A.featuredMenu:visited {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #000000;
+        background: transparent;
+}
+A.featuredMenu:active, A.featuredMenu:hover {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #000000;
+}
+
+
+.tabText,A.tabText:link,A.tabText:visited {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #000000;
+        text-decoration: none;
+        background-color: transparent;
+}
+A.tabText,A.tabText:hover,A.tabText:active {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #000000;
+        text-decoration: underline;
+}
+
+/* Menu/links for games browse */
+
+.featuredMenuGames {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        background-position: top left;
+        background: #333333 url("images/feature_tabs.gif");
+	background-repeat: repeat-x;
+        border-bottom: 1px solid #000000;
+}
+.featuredMenuCurrentGames {
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        background: #ff9900  url("images/feature_tabs_current.gif");
+        background-position: top left;
+        background-repeat: repeat;
+}
+
+.gameTitle, A.gameTitle:link, A.gameTitle:visited, A.gameTitle:hover, A.gameTitle:active {
+	font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: bolder;
+        color: #000000;
+	margin-bottom: 10px;
+}
+
+
+.featuredPulldown {
+  background: #ffcc00 url('images/yellow_gradiant_horz.jpg');
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
+  padding: 3px;
+  border: 1px dashed #cc6600;
+}
+
+.featuredStatus {
+  background: #ffcc66;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
+  padding: 3px;
+}
+/****** GAMES STYLES (detail page)  *********/
+#divider {
+        width:auto;
+        margin-top:10px;
+        margin-right:20px;
+        margin-bottom:10px;
+        margin-left:20px;
+        border-top: 1px solid #ff6600;
+        border-left: 10px dotted #ffffff;
+}
+.games_headCap {
+        background: #ff6600 url('images/gm/endcap_nc.jpg');
+        background-position: top left;
+        background-repeat: repeat-x;
+}
+.games_footerCap {
+        background: #ff6600 url('images/gm/endcap_sc.jpg');
+        background-position: top left;
+        background-repeat: repeat-x;
+}
+.games_divider_rule {
+        background: #ffffff url('images/gm/bar_center.jpg');
+        background-position: top left;
+        background-repeat: repeat-x;
+}
+
+.games_detail_border {
+        border-left: 2px solid #000000;
+        border-right: 2px solid #000000;
+}
+.games_detail_box_border {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        border-left: 2px solid #000000;
+        border-right: 2px solid #000000;
+        background-color: #cccccc;
+}
+.games_detail_box_footerCap {
+        border-bottom: 2px solid #000000;
+        background-color: #cccccc;
+}
+/****** GAMES SCREENSHOT styles *********/
+
+.ssBody {
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-weight: normal;
+        font-size: 12px;
+        background-color: #ffffff;
+}
+
+#ssBox {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border: 5px solid #333333;
+        background-color: transparent;
+        text-align: center;
+}
+
+.ssErrorMessage {
+        color: #993300;
+        font-weight: bold;
+}
+
+/*********** GAMES BROWSE STYLES *************/
+
+.games_browse,A.games_browse:link, A.games_browse:visited {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        color: #ffffff;
+        border: 1px solid #999999;
+        background-color: #333333;
+        padding: 3px;
+        text-decoration:none;
+}
+
+A.games_browse:hover,A.games_browse:active {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000;
+        border: 1px solid #333333;
+        border-collapse: collapse;
+        background-color: #cccccc;
+        text-decoration:none;
+        padding: 3px;
+}
+
+.games_browse_current,A.games_browse_current:link, A.games_browse_current:visited, A.games_browse_current:hover, A.games_browse_current:active {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000;
+        border: 1px solid #333333;
+        background-color: #cccccc;
+        text-decoration:none;
+        padding:3px;
+}
+/********** bargains *****************/
+
+.bargains,A.bargains:link, A.bargains:visited {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        color: #006600;
+	text-decoration: underline;
+}
+
+A.bargains:hover, A.bargains:active {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        color: #ffffff;
+	background-color: #000000;
+	text-decoration: underline;
+
+}
+
+.bargainsBold {
+        font-family:verdana,helvetica,arial,sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: #006600;
+        text-decoration: none;
+}
+
+.orangeBuyNow, A.orangeBuyNow:link, A.orangeBuyNow:visited {
+  	font-family:verdana,helvetica,arial,sans-serif;
+  	font-size: 12px;
+  	font-weight: bold;
+    color: #000000;
+    background: #ffcc66;
+    text-decoration: none;
+    padding: 0px;
+}
+
+A.orangeBuyNow:hover, A.orangeBuyNow:active {
+  	font-family:verdana,helvetica,arial,sans-serif;
+  	font-size: 12px;
+  	font-weight: bold;
+    color: #000000;
+    background: #ffcc66;
+    text-decoration: none;
+    padding: 0px;
+}
+
+/*      5/2008 - BS (Pre-billing/GiftCard Updates)
+	pretty much stolen from Jade's used classes for now
+*/
+.gcSearch {
+	background:url(images/used/usedsearch_bgd.jpg) repeat;
+	color: #333;
+	border: 1px solid #e0d194;
+}
+
+.gcBalanceBoxTable {
+	/*border: 1px solid #006600;*/
+}
+
+.gcBalanceBoxHeaderLeft {
+	background: #006600  url("images/rh/railbox_nw.gif");
+ 	background-repeat: no-repeat;
+ 	background-position: top left;
+}
+
+.gcBalanceBoxHeaderRight {
+        background: #006600  url("images/rh/railbox_ne.gif");
+        background-repeat: no-repeat;
+        background-position: top right;
+}
+
+.gcBalanceBoxHeader {
+	font-family: verdana, arial,helvetica,verdana,sans-serif;
+  	font-size: 12px;
+  	font-weight: bold;
+  	color: #ffffff;
+  	background: #006600  url("images/rh/railbox_bkgd.gif");
+  	background-position: top left;
+  	background-repeat: repeat-x;
+  	text-decoration: none;
+  	text-align: center;
+}
+
+.gcBalanceBoxBody {
+	font-family: verdana,arial,helvetica,sans-serif;
+  	font-size: 11px;
+  	font-weight: bold;
+  	color: #000000;
+  	background: #ffffff  url("images/gradient50.gif");
+  	background-position: bottom right;
+  	background-repeat: repeat-x;
+  	border: 1px solid #006600;
+}
+
+.gcBalanceBoxBodyText {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 11px;
+  	font-weight: normal;
+  	color: #000000;
+  	background: transparent; 
+  	text-decoration: none;
+}
+
+.gcBalanceBoxBodyTextSuccess {
+        font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        color: #ffffff;
+        background: #000000;
+        text-decoration: none;
+	padding: 2px;
+}
+
+.GCfaqQ {
+	font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+	margin-top: 10px;
+        color: #000000;
+        background: #ffffff;
+        text-decoration: none;
+        padding: 2px;
+}
+
+.GCfaqA {
+	font-family: verdana,arial,helvetica,sans-serif;
+        font-size: 11px;
+	margin-left: 20px;
+        color: #000000;
+        background: #ffffff;
+        text-decoration: none;
+        padding: 2px;
+
+}
+
+/*************************************************************
+ACCESSORIES-SPECIFIC CLASSES
+*************************************************************/
+.featAccBoxTop {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_top_bgd.jpg") repeat-x;
+        font-family: arial,helvetica,sans-serif;
+        font-size: 13px;
+	color: #ffffff;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
+
+.featAccBoxTL {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_top_nw.jpg") top left;
+}
+.featAccBoxTR {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_top_ne.jpg") top right;
+}
+.featAccBoxML {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_mid_nw.jpg") bottom left;
+}
+.featAccBoxMR {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_mid_ne.jpg") top right;
+}
+.featAccBoxMid {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_mid_bgd.jpg") bottom left repeat-x;
+}
+.featAccBoxCL {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_left.jpg") top left no-repeat;
+}
+.featAccBoxCR {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_right.jpg") top right no-repeat;
+}
+.featAccBoxContent {
+        font-family: arial,helvetica,sans-serif;
+        font-size: 13px;
+	font-weight: bold;
+}
+.featAccBoxBL {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_btm_sw.jpg") bottom left;
+}
+.featAccBoxBM {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_btm.jpg") bottom left repeat-x;
+}
+.featAccBoxBR {
+        background:#E9E9E9 url("images/rh3/gdetail/featured_games_btm_se.jpg") bottom right;;
+}
+
+
+/***************************************************************
+BROWSE GENRES LEFT-SIDE BOX INCLUDE - 9/2009
+***************************************************************/
+.browseLeftHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #E36A20;
+}
+
+.browseLeftHeadingSmall {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.browseLeftHeadingSmall A:hover {
+  color: #000000;
+  background: #fffccc;
+}
+
+TD.browseLeftRow {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px dashed orange;
+  padding-left: 5px;
+}
+
+TD.browseLeftRowHover { /*IE6 JAVASCRIPT HACK */
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px dashed orange;
+  padding-left: 5px;
+  background: #fffccc;
+  cursor: pointer;
+}
+
+TD.gamesLeftRowHover { /*IE6 JAVASCRIPT HACK */
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px dashed orange;
+  padding-left: 5px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+/***************************************************************
+BROWSE GENRES NEW DESIGN (multiple rows of boxart) - 9/2009
+***************************************************************/
+TABLE.browseBox {
+  border-bottom: 1px solid #C1C1C1;
+}
+
+TD.browseBox {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+IMG.browseBoxart {
+  border-top: 1px solid #E0E0E0; 
+  border-bottom: 1px solid #C1C1C1; 
+  border-left: 1px solid #DEDEDE; 
+  border-right: 1px solid #7F7F7F;
+}
+
+span.browseInStock {
+  font-size: 10px;
+  color: #38955b;
+}
+
+span.browsePrebook {
+  font-size: 10px;
+  color: #0000ff;
+}
+
+span.browseBackordered {
+  font-size: 10px;
+  font-weight: normal;
+  color: #ff0000;
+}
+
+span.browsePrice {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+TD.browseDescription {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+TD.browseDescription h4 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+/***************************************************************
+JAVASCRIPT SLIDER BANNER (10/2009)
+***************************************************************/
+#sliderTable {
+}
+
+TD.sliderCell {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+IMG.sliderImg {
+  vertical-align: top;
+  border: 0px;
+}
+
+span.sliderPrice {
+  font-family: verdana;
+  font-size: 16px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+TD.sliderNW {
+  background:#FFFFFF url("images/slider/slider_bgd_nw.jpg") top left no-repeat;  
+  width: 30px;
+  height: 30px;
+}
+
+TD.sliderN {
+  background:#FFFFFF url("images/slider/slider_bgd_top.jpg") top left repeat-x;
+  height: 30px;
+  font-family: verdana; 
+  font-size: 18px;
+  font-weight: bold;
+  color: #d97b02;
+}
+
+TD.sliderNE {
+  background:#FFFFFF url("images/slider/slider_bgd_ne.jpg") top right no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+TD.sliderW {
+  background:#FFFFFF url("images/slider/slider_bgd_left.jpg") left repeat-y;
+  width: 30px;
+}
+
+TD.sliderLeft {
+  text-align: right;
+  width: 31px;
+}
+
+TD.sliderRight {
+  text-align: left;
+  width: 31px;
+}
+
+TD.sliderE {
+  background:#FFFFFF url("images/slider/slider_bgd_right.jpg") right repeat-y;
+  width: 30px;
+}
+
+TD.sliderSW {
+  background:#FFFFFF url("images/slider/slider_bgd_sw.jpg") bottom left no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+TD.sliderS {
+  background:#FFFFFF url("images/slider/slider_bgd_bottom.jpg") bottom left repeat-x;
+  height: 30px;
+}
+
+TD.sliderSE {
+  background:#FFFFFF url("images/slider/slider_bgd_se.jpg") bottom right no-repeat;
+  width: 30px;
+  height: 30px;
+}

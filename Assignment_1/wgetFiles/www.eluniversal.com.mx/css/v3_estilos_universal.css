@@ -1,0 +1,1649 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* nuevo disenio para notas exclusivas template de 4 notas-> cesar 19012012*/
+#contenedorPrincipal_SliderUMas { /* cambio de ContenedorMas*/
+
+	width: 640px;
+	height: auto;
+	margin: 0 0 0 10px;
+}
+#HeaderMas {
+	background-color: #CCC;
+	border-bottom: 1px solid #999;
+	height: 39px;
+	width: 640px;
+}
+#HeaderMas .Texto {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color: #369;
+	float: right;
+	line-height: 40px;
+	padding: 0 10px 0 0;
+}
+#HeaderMas .logo {
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: 0 -1930px;
+	height: 39px;
+	width: 290px;
+	float: left;
+}
+#Nota01 {
+
+	width: 640px;
+	height: 179px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v2 {
+
+	width: 429px;
+	height: 184px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v31 {
+
+	width: 429px;
+	height: 237px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v31 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+
+
+#Nota01v2 {
+
+	width: 430px;
+	height: 185px;
+	z-index: 1;
+	position: relative;
+	float: left;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+.cuadroTxtOK {
+
+	background-image: url(../img/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 630px;
+	height: auto;
+	z-index: 2;
+	/*position: relative; */ /* se agregan los estilos de abajo para pruebas con IExplorer -> cesar 09022012 */
+	position: absolute !important;
+	bottom: 0 !important;
+	
+}
+
+
+.cuadroTxtOKv2 {
+
+	background-image: url(../img/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 419px;
+	height: auto;
+	z-index: 2;
+	/*position: relative; */ /* se agregan los estilos de abajo para pruebas con IExplorer -> cesar 09022012 */
+	position: absolute !important;
+	bottom: 0 !important;
+}
+
+
+#encabezadoNota01 { /* .encabezadoNota01 {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #ccc;
+	padding: 0 0 0 10px;
+}
+#encabezadoNota01 a { /* .encabezadoNota01 a {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	color: #ccc;
+	text-decoration: none;
+}
+#encabezadoNota01 a:hover { /* .encabezadoNota01 a:hover {*/
+
+	text-decoration: underline;
+}
+#txtNota01 { /* .txtNota01 { */
+
+	font-family:"Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #cccc99;
+}
+#txtNota01 a { /* .txtNota01 a {*/
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #cccc99;
+	text-decoration: none;
+}
+#ContenedorNotasSec {
+	
+	height: auto;
+	
+}
+.NotaSecPleca {
+
+	height: auto;
+	width: 197px;
+	border-right: 1px solid #ccc;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.NotaSecSinPleca {
+
+	height: auto;
+	width: 197px;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.SeccionNotasSec { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .encabezadoNotaSec {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSec .encabezadoNotaSec a { /* #SeccionNotasSec .encabezadoNotaSec a {*/
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSec .encabezadoNotaSec a:hover { /* #SeccionNotasSec .encabezadoNotaSec a:hover {*/
+
+	text-decoration: underline;
+}
+.SeccionNotasSec .resumenNotaSec { /* #SeccionNotasSec .resumenNotaSec {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSec .Herr { /* #SeccionNotasSec .Herr {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .Herr a { /* #SeccionNotasSec .Herr a {*/
+
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSec .Herr a:hover { /* #SeccionNotasSec .Herr a:hover {*/
+
+	text-decoration: underline;
+}
+
+/*#ContenedorNotasSecV2 {
+	
+	height: auto;
+	
+}*/
+
+.NotaSecIncludeV2 {
+	padding: 20px 0 0 10px;
+}
+
+.SeccionNotasSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV2 .resumenNotaSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV2 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV2 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+
+.NotaSecIncludeV31 {
+	padding: 10px 0 0 0;
+}
+
+.SeccionNotasSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV31 .resumenNotaSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV31 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV31 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+.NotaSecPlecav31 {
+
+	height: auto;
+	width: 185px;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 5px 10px 20px;
+	float: left;
+}
+.NotaSecSinPlecav31 {
+
+	height: auto;
+	width: 175px;
+	padding: 10px 5px 5px 20px;
+	float: left;
+}
+
+
+.NotaSecFotoPlecav32 {
+
+	height: auto;
+	width: 180px;
+	border-right: 1px solid #ccc;
+	padding: 10px 5px 25px 10px;
+	float: left;
+}
+.NotaSecFotoSinPlecav32 {
+
+	height: auto;
+	width: 180px;
+	padding: 10px 5px 5px 10px;
+	float: left;
+}
+
+
+
+#ContFoto {
+	
+	height: 219px;
+	width: 640px;	
+		
+}
+#ContFotoV2 {
+	
+	height: 185px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContFotoV31 {
+	
+	height: 237px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContenedorTexto {
+		
+	position: absolute;
+	bottom: 0;
+		
+}
+
+#columnaDerMas {
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+#fotoNSv32 {
+	height: 101px;
+	width: 101px;
+	margin: 10px;
+	float: left;
+}
+
+
+#footerED {
+	background-color: #CCC;
+	height: 33px;
+	width: 640px;
+}
+
+#footerED a {
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+	line-height: 33px;
+	text-decoration: none;
+	margin-left: 320px;
+	
+}
+
+.paper {
+/*	background-image: url(/img/png.png); */
+	background-position: -315px -2020px;
+	width: 90px;
+	height: 45px;
+	float: right;
+	position: relative;
+	top: -12px;
+	right: 0;
+	z-index: 5;
+}
+
+.clear {
+			clear: both;
+		}
+/* fin de nuevo disenio de notas exclusivas de 4 notas*/
+
+.newWindow{ color:#000000; }
+/* estilo pleca de red politica  home y detalle de nota -> cesar 10042012 */
+.contenedor_redpolitica {
+   display:block;
+}
+.masen_redpolitica {
+   float:right;
+   display:block;
+   color: #000;
+   font-weight: bold;
+   margin-top: 5px;
+   margin-right: 2px;
+}
+
+.pleca_redpolitica_home{
+   background-image: url('../img/v3/red_home.png');
+   display: block;
+   width:69px;
+   height:21px;
+   text-indent:-9999px;
+   float:right;
+}
+.pleca_redpolitica_home a {
+ display: block;
+ width: 100%;
+ height: 100%;
+ text-indent: -9999px;
+}
+.pleca_redpolitica_nota{
+   background-image: url('../img/v3/red_nota.png');
+   display: block;
+   width:78px;
+   height:25px;
+   text-indent:-9999px;
+   float:left;
+   background-repeat: none;
+}
+.clisttabs_rp {
+   margin-left:0px;
+}
+.arrow_rp {
+   background-position: 5px -1008px;
+   background-repeat: no-repeat;
+   padding-left:16px;   
+   display: block;
+   margin-left:80px !important;
+   margin-top: 5px;
+}
+
+
+
+/* nuevo disenio para notas exclusivas template de 4 notas-> cesar 19012012*/
+#contenedorPrincipal_SliderUMas { /* cambio de ContenedorMas*/
+
+	width: 640px;
+	height: auto !important; 
+	margin: 0 0 0 10px;
+	display: inline-block !important;
+}
+
+
+#HeaderMas .Texto {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color: #369;
+	float: right;
+	line-height: 40px;
+	padding: 0 10px 0 0;
+}
+#HeaderMas .logo {
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: 0 -1930px;
+	height: 39px;
+	width: 290px;
+	float: left;
+}
+#Nota01 {
+
+	width: 640px;
+	height: 179px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v2 {
+
+	width: 429px;
+	height: 184px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v31 {
+
+	width: 429px;
+	height: 237px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v31 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+
+
+#Nota01v2 {
+
+	width: 430px;
+	height: 185px;
+	z-index: 1;
+	position: relative;
+	float: left;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+.cuadroTxtOK {
+
+	background-image: url(../img/exclusivas/promo/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 630px;
+	height: auto;
+	z-index: 2;
+	position: relative;
+}
+
+
+.cuadroTxtOKv2 {
+
+	background-image: url(../img/exclusivas/promo/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 419px;
+	height: auto;
+	z-index: 2;
+	position: relative;
+}
+
+
+#encabezadoNota01 { /* .encabezadoNota01 {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #ccc;
+	padding: 0 0 0 10px;
+}
+#encabezadoNota01 a { /* .encabezadoNota01 a {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	color: #ccc;
+	text-decoration: none;
+}
+#encabezadoNota01 a:hover { /* .encabezadoNota01 a:hover {*/
+
+	text-decoration: underline;
+}
+#txtNota01 { /* .txtNota01 { */
+
+	font-family:"Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #cccc99;
+}
+#txtNota01 a { /* .txtNota01 a {*/
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #cccc99;
+	text-decoration: none;
+}
+#ContenedorNotasSec {
+	
+	height: auto;
+	
+}
+.NotaSecPleca {
+
+	height: auto;
+	width: 197px;
+	border-right: 1px solid #ccc;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.NotaSecSinPleca {
+
+	height: auto;
+	width: 197px;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.SeccionNotasSec { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .encabezadoNotaSec {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSec .encabezadoNotaSec a { /* #SeccionNotasSec .encabezadoNotaSec a {*/
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSec .encabezadoNotaSec a:hover { /* #SeccionNotasSec .encabezadoNotaSec a:hover {*/
+
+	text-decoration: underline;
+}
+.SeccionNotasSec .resumenNotaSec { /* #SeccionNotasSec .resumenNotaSec {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSec .Herr { /* #SeccionNotasSec .Herr {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .Herr a { /* #SeccionNotasSec .Herr a {*/
+
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSec .Herr a:hover { /* #SeccionNotasSec .Herr a:hover {*/
+
+	text-decoration: underline;
+}
+
+/*#ContenedorNotasSecV2 {
+ * 	
+ * 		height: auto;
+ * 			
+ * 			}*/
+
+.NotaSecIncludeV2 {
+	padding: 20px 0 0 10px;
+}
+
+.SeccionNotasSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV2 .resumenNotaSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV2 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV2 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+
+.NotaSecIncludeV31 {
+	padding: 10px 0 0 0;
+}
+
+.SeccionNotasSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV31 .resumenNotaSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV31 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV31 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+.NotaSecPlecav31 {
+
+	height: auto;
+	width: 185px;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 5px 10px 20px;
+	float: left;
+}
+.NotaSecSinPlecav31 {
+
+	height: auto;
+	width: 175px;
+	padding: 10px 5px 5px 20px;
+	float: left;
+}
+
+
+.NotaSecFotoPlecav32 {
+
+	height: auto;
+	width: 180px;
+	border-right: 1px solid #ccc;
+	padding: 10px 5px 25px 10px;
+	float: left;
+}
+.NotaSecFotoSinPlecav32 {
+
+	height: auto;
+	width: 180px;
+	padding: 10px 5px 5px 10px;
+	float: left;
+}
+
+
+
+#ContFoto {
+	
+	height: 219px;
+	width: 640px;	
+		
+}
+#ContFotoV2 {
+	
+	height: 185px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContFotoV31 {
+	
+	height: 237px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContenedorTexto {
+		
+	position: absolute;
+	bottom: 0;
+		
+}
+
+#columnaDerMas {
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+#fotoNSv32 {
+	height: 101px;
+	width: 101px;
+	margin: 10px;
+	float: left;
+}
+
+
+#footerED {
+	background-color: #CCC;
+	height: 33px;
+	width: 640px;
+}
+
+#footerED a {
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+	line-height: 33px;
+	text-decoration: none;
+	margin-left: -185px;
+	
+}
+
+.paper {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 300px;
+	z-index: 5;
+}
+
+.domingo {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 286px;
+	z-index: 5;
+}
+
+.clase {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 270px;
+	z-index: 5;
+}
+
+.app {
+	/*background-image: url(/graficos/img/exclusivas/promo/png.png);*/
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: -303px -2020px;
+	width: 95px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -6px;
+	left: 265px;
+	z-index: 5;
+}
+
+.clear {
+			clear: both;
+		}
+/* fin de nuevo disenio de notas exclusivas de 4 notas*/
+
+
+
+/* cambios para promo especial -> cesar 07:20 p.m. 21/05/2012 */
+/* nuevo disenio para notas exclusivas template de 4 notas -> cesar 19012012*/
+#contenedorPrincipal_SliderUMas { /* cambio de ContenedorMas*/
+
+	width: 640px;
+	height: auto;
+	margin: 0 0 0 10px;
+}
+
+#HeaderMas {
+	background-color: #CCC;
+	border-bottom: 1px solid #999;
+	height: 39px;
+	width: 640px;
+}
+
+#HeaderMas .Texto {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color: #369;
+	float: right;
+	line-height: 40px;
+	padding: 0 10px 0 0;
+}
+#HeaderMas .logo {
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: 0 -1930px;
+	height: 39px;
+	width: 290px;
+	float: left;
+}
+#Nota01 {
+
+	width: 640px;
+	height: 179px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v2 {
+
+	width: 429px;
+	height: 184px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+#Nota01v31 {
+
+	width: 429px;
+	height: 237px;
+	z-index: 1;
+	position: relative;
+}
+#Nota01v31 img {
+
+	border: 0;
+	padding: 0;
+}
+
+
+
+
+#Nota01v2 {
+
+	width: 430px;
+	height: 185px;
+	z-index: 1;
+	position: relative;
+	float: left;
+}
+#Nota01v2 img {
+
+	border: 0;
+	padding: 0;
+}
+
+.cuadroTxtOK {
+
+	background-image: url(../img/exclusivas/promo/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 630px;
+	height: auto;
+	z-index: 2;
+	position: relative;
+}
+
+
+.cuadroTxtOKv2 {
+
+	background-image: url(../img/exclusivas/promo/bg_black60trans.png);
+	background-repeat: repeat-x repeat-y;
+	border: 0;
+	padding: 0 10px 5px 0;
+	width: 419px;
+	height: auto;
+	z-index: 2;
+	position: relative;
+}
+
+
+#encabezadoNota01 { /* .encabezadoNota01 {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #ccc;
+	padding: 0 0 0 10px;
+}
+#encabezadoNota01 a { /* .encabezadoNota01 a {*/
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 30px;
+	color: #ccc;
+	text-decoration: none;
+}
+#encabezadoNota01 a:hover { /* .encabezadoNota01 a:hover {*/
+
+	text-decoration: underline;
+}
+#txtNota01 { /* .txtNota01 { */
+
+	font-family:"Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #cccc99;
+}
+#txtNota01 a { /* .txtNota01 a {*/
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #cccc99;
+	text-decoration: none;
+}
+#ContenedorNotasSec {
+	
+	height: auto;
+	
+}
+.NotaSecPleca {
+
+	height: auto;
+	width: 197px;
+	border-right: 1px solid #ccc;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.NotaSecSinPleca {
+
+	height: auto;
+	width: 197px;
+	padding: 7px 5px 5px 10px;
+	float: left;
+}
+.SeccionNotasSec { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .encabezadoNotaSec {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSec .encabezadoNotaSec a { /* #SeccionNotasSec .encabezadoNotaSec a {*/
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSec .encabezadoNotaSec a:hover { /* #SeccionNotasSec .encabezadoNotaSec a:hover {*/
+
+	text-decoration: underline;
+}
+.SeccionNotasSec .resumenNotaSec { /* #SeccionNotasSec .resumenNotaSec {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSec .Herr { /* #SeccionNotasSec .Herr {*/
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSec .Herr a { /* #SeccionNotasSec .Herr a {*/
+
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSec .Herr a:hover { /* #SeccionNotasSec .Herr a:hover {*/
+
+	text-decoration: underline;
+}
+
+/*#ContenedorNotasSecV2 {
+	
+	height: auto;
+	
+}*/
+
+.NotaSecIncludeV2 {
+	padding: 20px 0 0 10px;
+}
+
+.SeccionNotasSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .encabezadoNotaSecV2 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV2 .resumenNotaSecV2 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV2 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV2 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV2 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+
+.NotaSecIncludeV31 {
+	padding: 10px 0 0 0;
+}
+
+.SeccionNotasSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+	
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 {
+
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #363636;
+	margin: 3px 0 0 0;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a { 
+
+	color: #363636;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .encabezadoNotaSecV31 a:hover { 
+
+	text-decoration: underline;
+}
+.SeccionNotasSecV31 .resumenNotaSecV31 { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #363636;
+	margin: 5px 0 0 10px;
+}
+.SeccionNotasSecV31 .Herr { 
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #600;
+}
+.SeccionNotasSecV31 .Herr a { 
+	color: #600;
+	text-decoration: none;
+}
+.SeccionNotasSecV31 .Herr a:hover {
+
+	text-decoration: underline;
+}
+
+.NotaSecPlecav31 {
+
+	height: auto;
+	width: 185px;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 5px 10px 20px;
+	float: left;
+}
+.NotaSecSinPlecav31 {
+
+	height: auto;
+	width: 175px;
+	padding: 10px 5px 5px 20px;
+	float: left;
+}
+
+
+.NotaSecFotoPlecav32 {
+
+	height: auto;
+	width: 180px;
+	border-right: 1px solid #ccc;
+	padding: 10px 5px 25px 10px;
+	float: left;
+}
+.NotaSecFotoSinPlecav32 {
+
+	height: auto;
+	width: 180px;
+	padding: 10px 5px 5px 10px;
+	float: left;
+}
+
+
+
+#ContFoto {
+	
+	height: 219px;
+	width: 640px;	
+		
+}
+#ContFotoV2 {
+	
+	height: 185px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContFotoV31 {
+	
+	height: 237px;
+	width: 430px;
+	float: left;	
+		
+}
+#ContenedorTexto {
+		
+	position: absolute;
+	bottom: 0;
+		
+}
+
+#columnaDerMas {
+	width: 200px;
+	height: auto;
+	float: left;
+}
+
+#fotoNSv32 {
+	height: 101px;
+	width: 101px;
+	margin: 10px;
+	float: left;
+}
+
+
+#footerED {
+	background-color: #CCC;
+	height: 33px;
+	width: 640px;
+}
+
+#footerED a {
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+	line-height: 33px;
+	text-decoration: none;
+	margin-left: -350px;
+	
+}
+
+.paper {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 225px;
+	z-index: 5;
+}
+.especial {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 210px;
+	z-index: 5;
+}
+.domingo {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 196px;
+	z-index: 5;
+}
+
+.clase {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 180px;
+	z-index: 5;
+}
+
+.app {
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: -303px -2020px;
+	width: 95px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -6px;
+	left: 175px;
+	z-index: 5;
+}
+
+.clear {
+			clear: both;
+		}
+		
+	
+/* ESTILOS PARA PROMO DE EXCLUSIVAS, SE CAMBIA EL FOOTER PARA HACERLO AUTOMATICO */		
+#footerED_promo {
+	background-color: #CCC;
+	height: 33px;
+	width: 640px;
+}
+#footerED_promo a {
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+	line-height: 33px;
+	text-decoration: none;
+	margin-left: 0 !important;
+}		
+#text_ediciones_digitales {
+	float: left;
+	margin-left: 10px;
+	width: auto;
+}	
+#div_edicion_digital {
+	float:left;
+	width: auto;
+	width: 383px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align:center !important;
+}
+
+
+#div_app {
+	width: auto;
+	float: right;
+	margin-right: 5px !important;
+}
+#div_app .app {
+	background-image: url(../img/v3/master_sprite.png);
+	background-position: -303px -2020px;
+	width: 95px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -6px;
+	left: 0px !important;
+	z-index: 5;
+}
+#div_edicion_digital a {
+	display: inline;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #333;
+	line-height: 33px;
+	text-decoration: none;
+	margin-left: 0px !important;
+}	
+#div_edicion_digital .paper{	
+	width: 90px !important;
+	height: 40px !important;
+	/* float: left !important;*/
+	position: relative !important;
+	top: -7px !important;
+	left:0px !important;
+	margin-right: -15px !important; 
+}
+
+
+#div_edicion_digital.tienda {
+	background-image: url('../img/v3/master_sprite.png');
+	background-position: 0 -1691px;
+	float: left;
+	width:170px;
+	height:29px;
+	margin:1px 0 0 3px;
+}
+/* ultimo cambios, el universal mas se agrega identificador de tienda de el universal -> cesar 06:51 p.m. 25/05/2012 */
+
+
+#HeaderMas .Texto {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color: #369;
+	float: right;
+	line-height: 20px;
+	padding: 2px 10px 0 0;
+	}
+	#HeaderMas .ImgAcceso {
+	background-image: url('../img/v3/master_sprite.png');
+	background-position: 217px -1705px;
+	float: right;
+	width:202px;
+	height:20px;
+	top:22px;
+	margin:0 5px 0 0;
+	}
+	
+	#footerED p {
+	width:30px;
+	line-height:14px;
+	position:relative;
+	float:left;
+	left: 7px;
+	top:2px;
+	}
+	.paper {
+	width: 50px;
+	height: 30px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 34px;
+	z-index: 5;
+	}
+	.domingo {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 46px;
+	z-index: 5;
+	}
+	.clase {
+	width: 90px;
+	height: 40px;
+	float: left;
+	position: relative;
+	top: -7px;
+	left: 32px;
+	z-index: 5;
+	}
+	.app {
+	background-image: url('../img/v3/master_sprite.png');
+	background-position: -303px -2020px;
+	width: 95px;
+	height: 40px;
+	float: none;
+	position: relative;
+	top: -6px;
+	left: 546px;
+	z-index: 5;
+	}
+	.tienda {
+	background-image: url('../img/v3/master_sprite.png');
+	background-position: 0 -1691px;
+	float: left;
+	width:170px;
+	height:29px;
+	margin:1px 0 0 3px;
+}
+.suplOlimpiadas {
+    float: left;
+    height: 40px;
+    left: 67px;
+    position: relative;
+    top: -7px;
+    width: 90px;
+    z-index: 5;
+}
+.carruselv3{
+    margin:auto auto 20px;
+    width:306px;
+}
+#tooltip{             
+	position:absolute; 
+	background:#fff;
+	padding:3px 5px;
+	color:#000;
+	display:none;             
+	font-family: Arial, Helvetica, sans-serif;             
+	font-size:13px;             
+	border-radius: 5px;             
+	opacity:.90;             
+	filter:alpha(opacity=90);             
+	filter: "alpha(opacity=90)";
+	z-index: 10000;
+	-moz-box-shadow: 0 0 5px #333;
+	-webkit-box-shadow: 0 0 5px #333;
+	box-shadow: 0 0 5px #333;                          
+	}
+
+.pleca_df_home a {
+display: block;
+width: 100%;
+height: 100%;
+text-indent: -9999px;
+}
+
+
+.pleca_df_home {
+background-image: url('../img/v3/el_universal_distrito_federal.png');
+display: block;
+width: 69px;
+height: 24px;
+text-indent: -9999px;
+float: right;
+margin-top: 10px;
+}
+
+.masen_df {
+float: right;
+display: block;
+color: #000;
+font-weight: bold;
+margin-top: 14px;
+margin-right: 2px;
+}
+
+.semanasanta {
+width: 90px;
+height: 40px;
+float: left;
+position: relative;
+top: -7px;
+left: 14px;
+z-index: 5;
+}
+.bgimggall{ position: relative; padding-bottom: 3px !important; }
+.mpromo { position: relative; border-right-width: 0; height: 135px; margin-right: 0; padding-right: 0; width: 135px; }
+.sobre { position:absolute; top:0px; left:0px; border:none; right:0px; }
+.publicidadRojo {color: rgb(139, 39, 45) !important;}
+.publicidadRojo .titulos_small {color: rgb(139, 39, 45) !important;}
+.publicidadRojo .titulos_small a {color: rgb(139, 39, 45) !important;}
+.publicidadRojo a span {color: rgb(139, 39, 45) !important;}
+.adsMarcoContainer{ height: 100px; width:1002px; display:block; }
+.adsMarco{     height: 100px;
+    margin: 0 auto;
+    position: fixed;
+    width: 1002px;
+    z-index: 1000;
+    left:0;
+    right:0;
+-webkit-backface-visibility: hidden; 
+-webkit-transform: translateZ(0);     
+}

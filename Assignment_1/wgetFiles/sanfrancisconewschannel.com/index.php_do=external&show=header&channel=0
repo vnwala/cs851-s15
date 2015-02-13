@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body, #wrapper {
+				overflow: hidden;
+				font-family: Arial, helvetica, sans-serif;
+				margin: 0px;
+				padding: 0px;
+				border-width: 0px;
+			}
+			#wrapper {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+			#header_top {
+				width: 100%;
+				background: url('http://houstonnewschannel.com/tncnv2/img/header_bg.png') top left repeat-x;
+			}
+			#frame {
+				position: absolute;
+				top: 150px;
+				bottom: 0;
+				min-height: 75%;
+				width: 100%;
+			}
+			iframe {
+				border: none;
+				height: 100%;
+				width: 100%;
+			}
+			#header_top {
+				background: #fff url('http://houstonnewschannel.com/tncnv2/img/nc_external_header_right.jpg') top right no-repeat;
+			}
+			#header {
+				background: url('http://houstonnewschannel.com/tncnv2/img/nc_external_header_left.png') top left no-repeat;
+				height: 125px;
+				text-align: right;
+				padding-right: 10px;
+			}
+			#world {
+				background: url('http://houstonnewschannel.com/tncnv2/img/world.gif') top left no-repeat;
+				width: 144px;
+				height: 125px;
+				float: left;
+				position: absolute;
+			}
+			#block_refer {
+				height: 53px;
+				color: #fff;
+				font-size: 8pt;
+			}
+			#block_refer a {
+				color: #fff;
+			}
+			#block_refer a:hover {
+				text-decoration: none;
+			}
+			#block_dropdowns {
+				height: 34px;
+				color: #fff;
+				font-size: 8pt;
+			}
+			#block_dropdowns select {
+				border: 2px solid #c9a100;
+				font-size: 8pt;
+			}
+			#block_dropdowns select option {
+				border-width: 0px;
+			}
+			#block_title {
+				font-size: 24pt;
+				color: #fff;
+			}
+			#block_title span {
+				font-size: 14pt;
+			}
+			#navigation {
+				background: url('http://houstonnewschannel.com/tncnv2/img/navigation_bg_red.png') top left;
+				font-size: 8pt;
+				padding: 4px 0px;
+			}
+			#navigation a {
+				color: #fff;
+				text-decoration: none;
+				border-right: 1px solid #000;
+				padding: 4px 7px;
+				font-size: 8pt;
+				font-weight: bold;
+			}
+			#navigation a:hover {
+				background: url('http://houstonnewschannel.com/tncnv2/img/navigation_bg_red_hover.png');
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header_top">
+			<div id="header">
+				<div id="world"></div>
+				<div id="block_refer">&nbsp;<br/><a href="http://sanfrancisconewschannel.com/index.php?" target="_top">Home</a>
+				 &nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="index.php?do=external&amp;show=header&amp;channel=0#"
+				 onclick="this.style.behavior='url(#default#homepage)';
+				 this.setHomePage('http://newschannel.com');
+				 ">Set As Homepage</a>&nbsp;&nbsp;&#124;&nbsp;&nbsp;
+				 <a href="http://www.tncn.tv/refer/">Refer Our Site</a>
+				 &nbsp;&nbsp;&#124;&nbsp;&nbsp;<a href="index.php?do=external&amp;show=header&amp;channel=0#" onclick="bookmark()">Bookmark Page</a>
+				 </div>
+				<div id="block_dropdowns">
+					<select id="dropdown_domestic" onChange="load_channel(0)">
+					<option>Select Another City NewsChannel</option><option value='null'>A ---------------------</option><option value='abilene'>AbileneNewsChannel.com</option><option value='albany'>AlbanyNewsChannel.com</option><option value='albany'>AlbanyNewsChannel.com</option><option value='albuquerque'>AlbuquerqueNewsChannel.com</option><option value='alexandria'>AlexandriaNewsChannel.com</option><option value='alpena'>AlpenaNewsChannel.com</option><option value='amarillo'>AmarilloNewsChannel.com</option><option value='anchorage'>AnchorageNewsChannel.com</option><option value='atlanta'>AtlantaNewsChannel.com</option><option value='augusta'>AugustaNewsChannel.com</option><option value='austin'>AustinNewsChannel.com</option><option> </option><option value='null'>B ---------------------</option><option value='bakersfield'>BakersfieldNewsChannel.com</option><option value='baltimore'>BaltimoreNewsChannel.com</option><option value='bangor'>BangorNewsChannel.com</option><option value='batonrouge'>BatonRougeNewsChannel.com</option><option value='beaumont'>BeaumontNewsChannel.com</option><option value='bend'>BendNewsChannel.com</option><option value='beverlyhills'>BeverlyHillsNewsChannel.com</option><option value='billings'>BillingsNewsChannel.com</option><option value='biloxi'>BiloxiNewsChannel.com</option><option value='binghamton'>BinghamtonNewsChannel.com</option><option value='birmingham'>BirminghamNewsChannel.com</option><option value='bismarck'>BismarckNewsChannel.com</option><option value='bluefield'>BluefieldNewsChannel.com</option><option value='bocaraton'>BocaRatonNewsChannel.com</option><option value='boise'>BoiseNewsChannel.com</option><option value='boston'>BostonNewsChannel.com</option><option value='bowlinggreen'>BowlingGreenNewsChannel.com</option><option value='buffalo'>BuffaloNewsChannel.com</option><option value='burlington'>BurlingtonNewsChannel.com</option><option value='butte'>ButteNewsChannel.com</option><option> </option><option value='null'>C ---------------------</option><option value='casper'>CasperNewsChannel.com</option><option value='cedarrapids'>CedarRapidsNewsChannel.com</option><option value='champaign'>ChampaignNewsChannel.com</option><option value='charleston'>CharlestonNewsChannel.com</option><option value='charleston'>CharlestonNewsChannel.com</option><option value='charlotte'>CharlotteNewsChannel.com</option><option value='charlottesville'>CharlottesvilleNewsChannel.com</option><option value='chattanooga'>ChattanoogaNewsChannel.com</option><option value='cheyenne'>CheyenneNewsChannel.com</option><option value='chicago'>ChicagoNewsChannel.com</option><option value='chico'>ChicoNewsChannel.com</option><option value='cincinnati'>CincinnatiNewsChannel.com</option><option value='clarksburg'>ClarksburgNewsChannel.com</option><option value='cleveland'>ClevelandNewsChannel.com</option><option value='coloradosprings'>ColoradoSpringsNewsChannel.com</option><option value='columbia'>ColumbiaNewsChannel.com</option><option value='columbia'>ColumbiaNewsChannel.com</option><option value='columbus'>ColumbusNewsChannel.com</option><option value='columbus'>ColumbusNewsChannel.com</option><option value='columbus'>ColumbusNewsChannel.com</option><option value='corpuschristi'>CorpusChristiNewsChannel.com</option><option> </option><option value='null'>D ---------------------</option><option value='dallas'>DallasNewsChannel.com</option><option value='davenport'>DavenportNewsChannel.com</option><option value='dayton'>DaytonNewsChannel.com</option><option value='denver'>DenverNewsChannel.com</option><option value='desmoines'>DesMoinesNewsChannel.com</option><option value='detroit'>DetroitNewsChannel.com</option><option value='dothan'>DothanNewsChannel.com</option><option value='duluth'>DuluthNewsChannel.com</option><option> </option><option value='null'>E ---------------------</option><option value='elmira'>ElmiraNewsChannel.com</option><option value='elpaso'>ElPasoNewsChannel.com</option><option value='erie'>ErieNewsChannel.com</option><option value='eugene'>EugeneNewsChannel.com</option><option value='eureka'>EurekaNewsChannel.com</option><option value='evansville'>EvansvilleNewsChannel.com</option><option> </option><option value='null'>F ---------------------</option><option value='fairbanks'>FairbanksNewsChannel.com</option><option value='fargo'>FargoNewsChannel.com</option><option value='flint'>FlintNewsChannel.com</option><option value='fresno'>FresnoNewsChannel.com</option><option value='ftmyers'>FtMyersNewsChannel.com</option><option value='ftsmith'>FtSmithNewsChannel.com</option><option value='ftwayne'>FortWayneNewsChannel.com</option><option> </option><option value='null'>G ---------------------</option><option value='gainesville'>GainesvilleNewsChannel.com</option><option value='glendive'>GlendiveNewsChannel.com</option><option value='grandjunction'>GrandJunctionNewsChannel.com</option><option value='grandrapids'>GrandRapidsNewsChannel.com</option><option value='greatfalls'>GreatFallsNewsChannel.com</option><option value='greenbay'>GreenBayNewsChannel.com</option><option value='greensboro'>GreensboroNewsChannel.com</option><option value='greenville'>GreenvilleNewsChannel.com</option><option value='greenville'>GreenvilleNewsChannel.com</option><option value='greenwood'>GreenwoodNewsChannel.com</option><option> </option><option value='null'>H ---------------------</option><option value='harlingen'>HarlingenNewsChannel.com</option><option value='harrisburg'>HarrisburgNewsChannel.com</option><option value='harrisonburg'>HarrisonburgNewsChannel.com</option><option value='hartford'>HartfordNewsChannel.com</option><option value='hattiesburg'>HattiesburgNewsChannel.com</option><option value='helena'>HelenaNewsChannel.com</option><option value='honolulu'>HonoluluNewsChannel.com</option><option value='houston'>HoustonNewsChannel.com</option><option value='huntsville'>HuntsvilleNewsChannel.com</option><option> </option><option value='null'>I ---------------------</option><option value='idahofalls'>IdahoFallsNewsChannel.com</option><option value='indianapolis'>IndianapolisNewsChannel.com</option><option> </option><option value='null'>J ---------------------</option><option value='jackson'>JacksonNewsChannel.com</option><option value='jackson'>JacksonNewsChannel.com</option><option value='jacksonville'>JacksonvilleNewsChannel.com</option><option value='johnstown'>JohnstownNewsChannel.com</option><option value='jonesboro'>JonesboroNewsChannel.com</option><option value='joplin'>JoplinNewsChannel.com</option><option value='juneau'>JuneauNewsChannel.com</option><option> </option><option value='null'>K ---------------------</option><option value='kansascity'>KansasCityNewsChannel.com</option><option value='keywest'>KeyWestNewsChannel.com</option><option value='knoxville'>KnoxvilleNewsChannel.com</option><option> </option><option value='null'>L ---------------------</option><option value='lacrosse'>LaCrosseNewsChannel.com</option><option value='lafayette'>LafayetteNewsChannel.com</option><option value='lafayette'>LafayetteNewsChannel.com</option><option value='lakecharles'>LakeCharlesNewsChannel.com</option><option value='lansing'>LansingNewsChannel.com</option><option value='laredo'>LaredoNewsChannel.com</option><option value='lasvegas'>LasVegasNewsChannel.com</option><option value='lexington'>LexingtonNewsChannel.com</option><option value='lima'>LimaNewsChannel.com</option><option value='lincoln'>LincolnNewsChannel.com</option><option value='littlerock'>LittleRockNewsChannel.com</option><option value='losangeles'>LosAngelesNewsChannel.com</option><option value='louisville'>LouisvilleNewsChannel.com</option><option value='lubbock'>LubbockNewsChannel.com</option><option value='lynchburg'>LynchburgNewsChannel.com</option><option> </option><option value='null'>M ---------------------</option><option value='macon'>MaconNewsChannel.com</option><option value='madison'>MadisonNewsChannel.com</option><option value='mankato'>MankatoNewsChannel.com</option><option value='marquette'>MarquetteNewsChannel.com</option><option value='medford'>MedfordNewsChannel.com</option><option value='memphis'>MemphisNewsChannel.com</option><option value='meridian'>MeridianNewsChannel.com</option><option value='miami'>MiamiNewsChannel.com</option><option value='milwaukee'>MilwaukeeNewsChannel.com</option><option value='minneapolis'>MinneapolisNewsChannel.com</option><option value='minot'>MinotNewsChannel.com</option><option value='missoula'>MissoulaNewsChannel.com</option><option value='mobile'>MobileNewsChannel.com</option><option value='monroe'>MonroeNewsChannel.com</option><option value='monterey'>MontereyNewsChannel.com</option><option value='montgomery'>MontgomeryNewsChannel.com</option><option value='myrtlebeach'>MyrtleBeachNewsChannel.com</option><option> </option><option value='null'>N ---------------------</option><option value='nashville'>NashvilleNewsChannel.com</option><option value='neworleans'>NewOrleansNewsChannel.com</option><option value='newyork'>NewYorkNewsChannel.com</option><option value='norfolk'>NorfolkNewsChannel.com</option><option value='northplatte'>NorthPlatteNewsChannel.com</option><option value='nyc'>NYCNewsChannel.com</option><option> </option><option value='null'>O ---------------------</option><option value='odessa'>OdessaNewsChannel.com</option><option value='oklahomacity'>OklahomaCityNewsChannel.com</option><option value='omaha'>OmahaNewsChannel.com</option><option value='orlando'>OrlandoNewsChannel.com</option><option value='ottumwa'>OttumwaNewsChannel.com</option><option> </option><option value='null'>P ---------------------</option><option value='paducah'>PaducahNewsChannel.com</option><option value='palmsprings'>PalmSpringsNewsChannel.com</option><option value='paloalto'>PaloAltoNewsChannel.com</option><option value='panamacity'>PanamaCityNewsChannel.com</option><option value='parkersburg'>ParkersburgNewsChannel.com</option><option value='peninsula'>PeninsulaNewsChannel.com</option><option value='peoria'>PeoriaNewsChannel.com</option><option value='philadelphia'>PhiladelphiaNewsChannel.com</option><option value='phoenix'>PhoenixNewsChannel.com</option><option value='pittsburgh'>PittsburghNewsChannel.com</option><option value='portland'>PortlandNewsChannel.com</option><option value='portland'>PortlandNewsChannel.com</option><option value='presqueisle'>PresqueIsleNewsChannel.com</option><option value='providence'>ProvidenceNewsChannel.com</option><option> </option><option value='null'>Q ---------------------</option><option value='quincy'>QuincyNewsChannel.com</option><option> </option><option value='null'>R ---------------------</option><option value='raleigh'>RaleighNewsChannel.com</option><option value='rapidcity'>RapidCityNewsChannel.com</option><option value='reno'>RenoNewsChannel.com</option><option value='richmond'>RichmondNewsChannel.com</option><option value='roanoke'>RoanokeNewsChannel.com</option><option value='rochester'>RochesterNewsChannel.com</option><option value='rochester'>RochesterNewsChannel.com</option><option value='rockford'>RockfordNewsChannel.com</option><option> </option><option value='null'>S ---------------------</option><option value='sacramento'>SacramentoNewsChannel.com</option><option value='saintsimons'>SaintSimonsNewsChannel.com</option><option value='salisbury'>SalisburyNewsChannel.com</option><option value='saltlakecity'>SaltLakeCityNewsChannel.com</option><option value='sanangelo'>SanAngeloNewsChannel.com</option><option value='sanantonio'>SanAntonioNewsChannel.com</option><option value='sandiego'>SanDiegoNewsChannel.com</option><option value='sanfrancisco'>SanFranciscoNewsChannel.com</option><option value='santabarbara'>SantaBarbaraNewsChannel.com</option><option value='savannah'>SavannahNewsChannel.com</option><option value='seattle'>SeattleNewsChannel.com</option><option value='sherman'>ShermanNewsChannel.com</option><option value='shreveport'>ShreveportNewsChannel.com</option><option value='siouxcity'>SiouxCityNewsChannel.com</option><option value='siouxfalls'>SiouxFallsNewsChannel.com</option><option value='southbend'>SouthBendNewsChannel.com</option><option value='spokane'>SpokaneNewsChannel.com</option><option value='springfield'>SpringfieldNewsChannel.com</option><option value='springfield'>SpringfieldNewsChannel.com</option><option value='stjoseph'>StJosephNewsChannel.com</option><option value='stlouis'>StLouisNewsChannel.com</option><option value='syracuse'>SyracuseNewsChannel.com</option><option> </option><option value='null'>T ---------------------</option><option value='tallahassee'>TallahasseeNewsChannel.com</option><option value='tampa'>TampaNewsChannel.com</option><option value='terrehaute'>TerreHauteNewsChannel.com</option><option value='thomasville'>ThomasvilleNewsChannel.com</option><option value='toledo'>ToledoNewsChannel.com</option><option value='topeka'>TopekaNewsChannel.com</option><option value='traversecity'>TraverseCityNewsChannel.com</option><option value='tucson'>TucsonNewsChannel.com</option><option value='tulsa'>TulsaNewsChannel.com</option><option value='twinfalls'>TwinFallsNewsChannel.com</option><option value='tyler'>TylerNewsChannel.com</option><option> </option><option value='null'>U ---------------------</option><option value='usa'>USANewsChannel.com</option><option value='utica'>UticaNewsChannel.com</option><option> </option><option value='null'>V ---------------------</option><option value='victoria'>VictoriaNewsChannel.com</option><option> </option><option value='null'>W ---------------------</option><option value='waco'>WacoNewsChannel.com</option><option value='washington'>WashingtonDCNewsChannel.com</option><option value='watertown'>WatertownNewsChannel.com</option><option value='wausau'>WausauNewsChannel.com</option><option value='westpalmbeach'>WestPalmBeachNewsChannel.com</option><option value='wheeling'>WheelingNewsChannel.com</option><option value='wichita'>WichitaNewsChannel.com</option><option value='wichitafalls'>WichitaFallsNewsChannel.com</option><option value='wilkesbarre'>WilkesBarreNewsChannel.com</option><option value='wilmington'>WilmingtonNewsChannel.com</option><option value='winstonsalem'>WinstonSalemNewsChannel.com</option><option> </option><option value='null'>Y ---------------------</option><option value='yakima'>YakimaNewsChannel.com</option><option value='youngstown'>YoungstownNewsChannel.com</option><option value='yuma'>YumaNewsChannel.com</option><option> </option><option value='null'>Z ---------------------</option><option value='zanesville'>ZanesvilleNewsChannel.com</option>					</select> or <select id="dropdown_international"
+					 onChange="load_channel(1)"><option>Select Another Country NewsChannel</option>
+					<option value='null'>A ---------------------</option><option value='afghanistan'>AfghanistanNewsChannel.com</option><option value='albania'>AlbaniaNewsChannel.com</option><option value='algeria'>AlgeriaNewsChannel.com</option><option value='andorra'>AndorraNewsChannel.com</option><option value='angola'>AngolaNewsChannel.com</option><option value='antigua'>AntiguaNewsChannel.com</option><option value='argentina'>ArgentinaNewsChannel.com</option><option value='armenia'>ArmeniaNewsChannel.com</option><option value='australia'>AustraliaNewsChannel.com</option><option value='austria'>AustriaNewsChannel.com</option><option value='azerbaijan'>AzerbaijanNewsChannel.com</option><option> </option><option value='null'>B ---------------------</option><option value='bahamas'>BahamasNewsChannel.com</option><option value='bahrain'>BahrainNewsChannel.com</option><option value='bangladesh'>BangladeshNewsChannel.com</option><option value='barbados'>BarbadosNewsChannel.com</option><option value='belarus'>BelarusNewsChannel.com</option><option value='belgium'>BelgiumNewsChannel.com</option><option value='belize'>BelizeNewsChannel.com</option><option value='benin'>BeninNewsChannel.com</option><option value='bhutan'>BhutanNewsChannel.com</option><option value='bolivia'>BoliviaNewsChannel.com</option><option value='bosnia'>BosniaNewsChannel.com</option><option value='botswana'>BotswanaNewsChannel.com</option><option value='brazil'>BrazilNewsChannel.com</option><option value='brunei'>BruneiNewsChannel.com</option><option value='bulgaria'>BulgariaNewsChannel.com</option><option value='burkinafaso'>BurkinaFasoNewsChannel.com</option><option value='burma'>BurmaNewsChannel.com</option><option value='burundi'>BurundiNewsChannel.com</option><option> </option><option value='null'>C ---------------------</option><option value='cambodia'>CambodiaNewsChannel.com</option><option value='cameroon'>CameroonNewsChannel.com</option><option value='canada'>CanadaNewsChannel.com</option><option value='capeverde'>CapeVerdeNewsChannel.com</option><option value='chad'>ChadNewsChannel.com</option><option value='chile'>ChileNewsChannel.com</option><option value='china'>ChinaNewsChannel.com</option><option value='colombia'>ColombiaNewsChannel.com</option><option value='comoros'>ComorosNewsChannel.com</option><option value='congo'>CongoNewsChannel.com</option><option value='costarica'>CostaRicaNewsChannel.com</option><option value='cotedivoire'>CotedIvoireNewsChannel.com</option><option value='croatia'>CroatiaNewsChannel.com</option><option value='cuba'>CubaNewsChannel.com</option><option value='cyprus'>CyprusNewsChannel.com</option><option value='czechrepublic'>CzechRepublicNewsChannel.com</option><option> </option><option value='null'>D ---------------------</option><option value='denmark'>DenmarkNewsChannel.com</option><option value='djibouti'>DjiboutiNewsChannel.com</option><option value='dominicanrepublic'>DominicanRepublicNewsChannel.com</option><option> </option><option value='null'>E ---------------------</option><option value='easttimor'>EastTimorNewsChannel.com</option><option value='ecuador'>EcuadorNewsChannel.com</option><option value='egypt'>EgyptNewsChannel.com</option><option value='elsalvador'>ElSalvadorNewsChannel.com</option><option value='england'>EnglandNewsChannel.com</option><option value='equatorialguinea'>EquatorialGuineaNewsChannel.com</option><option value='eritrea'>EritreaNewsChannel.com</option><option value='estonia'>EstoniaNewsChannel.com</option><option value='ethiopia'>EthiopiaNewsChannel.com</option><option> </option><option value='null'>F ---------------------</option><option value='fiji'>FijiNewsChannel.com</option><option value='finland'>FinlandNewsChannel.com</option><option value='france'>FranceNewsChannel.com</option><option> </option><option value='null'>G ---------------------</option><option value='gambia'>GambiaNewsChannel.com</option><option value='germany'>GermanyNewsChannel.com</option><option value='ghana'>GhanaNewsChannel.com</option><option value='greatbritain'>GreatBritainNewsChannel.com</option><option value='greece'>GreeceNewsChannel.com</option><option value='grenada'>GrenadaNewsChannel.com</option><option value='guatemala'>GuatemalaNewsChannel.com</option><option value='guinea'>GuineaNewsChannel.com</option><option value='guyana'>GuyanaNewsChannel.com</option><option> </option><option value='null'>H ---------------------</option><option value='haiti'>HaitiNewsChannel.com</option><option value='hampton'>HamptonNewsChannel.com</option><option value='honduras'>HondurasNewsChannel.com</option><option value='hungary'>HungaryNewsChannel.com</option><option> </option><option value='null'>I ---------------------</option><option value='iceland'>IcelandNewsChannel.com</option><option value='india'>IndiaNewsChannel.com</option><option value='indonesia'>IndonesiaNewsChannel.com</option><option value='iran'>IranNewsChannel.com</option><option value='iraq'>IraqNewsChannel.com</option><option value='ireland'>IrelandNewsChannel.com</option><option value='israel'>IsraelNewsChannel.com</option><option value='italy'>ItalyNewsChannel.com</option><option> </option><option value='null'>J ---------------------</option><option value='jamaica'>JamaicaNewsChannel.com</option><option value='japan'>JapanNewsChannel.com</option><option value='jordan'>JordanNewsChannel.com</option><option> </option><option value='null'>K ---------------------</option><option value='kazakhstan'>KazakhstanNewsChannel.com</option><option value='kenya'>KenyaNewsChannel.com</option><option value='kiribati'>KiribatiNewsChannel.com</option><option value='kuwait'>KuwaitNewsChannel.com</option><option value='kyrgyzstan'>KyrgyzstanNewsChannel.com</option><option> </option><option value='null'>L ---------------------</option><option value='laos'>LaosNewsChannel.com</option><option value='latvia'>LatviaNewsChannel.com</option><option value='lebanon'>LebanonNewsChannel.com</option><option value='lesotho'>LesothoNewsChannel.com</option><option value='liberia'>LiberiaNewsChannel.com</option><option value='libya'>LibyaNewsChannel.com</option><option value='liechtenstein'>LiechtensteinNewsChannel.com</option><option value='lithuania'>LithuaniaNewsChannel.com</option><option value='luxembourg'>LuxembourgNewsChannel.com</option><option> </option><option value='null'>M ---------------------</option><option value='macedonia'>MacedoniaNewsChannel.com</option><option value='madagascar'>MadagascarNewsChannel.com</option><option value='malawi'>MalawiNewsChannel.com</option><option value='malaysia'>MalaysiaNewsChannel.com</option><option value='maldives'>MaldivesNewsChannel.com</option><option value='mali'>MaliNewsChannel.com</option><option value='malta'>MaltaNewsChannel.com</option><option value='marshallislands'>MarshallIslandsNewsChannel.com</option><option value='mauritania'>MauritaniaNewsChannel.com</option><option value='mauritius'>MauritiusNewsChannel.com</option><option value='mexico'>MexicoNewsChannel.com</option><option value='micronesia'>MicronesiaNewsChannel.com</option><option value='moldova'>MoldovaNewsChannel.com</option><option value='monaco'>MonacoNewsChannel.com</option><option value='mongolia'>MongoliaNewsChannel.com</option><option value='morocco'>MoroccoNewsChannel.com</option><option value='mozambique'>MozambiqueNewsChannel.com</option><option value='myanmar'>MyanmarNewsChannel.com</option><option> </option><option value='null'>N ---------------------</option><option value='namibia'>NamibiaNewsChannel.com</option><option value='nauru'>NauruNewsChannel.com</option><option value='nepal'>NepalNewsChannel.com</option><option value='netherlands'>NetherlandsNewsChannel.com</option><option value='newzealand'>NewZealandNewsChannel.com</option><option value='nicaragua'>NicaraguaNewsChannel.com</option><option value='niger'>NigerNewsChannel.com</option><option value='nigeria'>NigeriaNewsChannel.com</option><option value='northkorea'>NorthKoreaNewsChannel.com</option><option value='norway'>NorwayNewsChannel.com</option><option> </option><option value='null'>O ---------------------</option><option value='oman'>OmanNewsChannel.com</option><option> </option><option value='null'>P ---------------------</option><option value='pakistan'>PakistanNewsChannel.com</option><option value='palau'>PalauNewsChannel.com</option><option value='panama'>PanamaNewsChannel.com</option><option value='papuanewguinea'>PapuaNewGuineaNewsChannel.com</option><option value='paraguay'>ParaguayNewsChannel.com</option><option value='peru'>PeruNewsChannel.com</option><option value='philippines'>PhilippinesNewsChannel.com</option><option value='poland'>PolandNewsChannel.com</option><option value='portugal'>PortugalNewsChannel.com</option><option> </option><option value='null'>Q ---------------------</option><option value='qatar'>QatarNewsChannel.com</option><option> </option><option value='null'>R ---------------------</option><option value='romania'>RomaniaNewsChannel.com</option><option value='russia'>RussiaNewsChannel.com</option><option value='rwanda'>RwandaNewsChannel.com</option><option> </option><option value='null'>S ---------------------</option><option value='samoa'>SamoaNewsChannel.com</option><option value='sanmarino'>SanMarinoNewsChannel.com</option><option value='saotome'>SaoTomeNewsChannel.com</option><option value='saudiarabia'>SaudiArabiaNewsChannel.com</option><option value='senegal'>SenegalNewsChannel.com</option><option value='serbia'>SerbiaNewsChannel.com</option><option value='seychelles'>SeychellesNewsChannel.com</option><option value='sierraleone'>SierraLeoneNewsChannel.com</option><option value='singapore'>SingaporeNewsChannel.com</option><option value='slovakia'>SlovakiaNewsChannel.com</option><option value='slovenia'>SloveniaNewsChannel.com</option><option value='solomonislands'>SolomonIslandsNewsChannel.com</option><option value='somalia'>SomaliaNewsChannel.com</option><option value='southafrica'>SouthAfricaNewsChannel.com</option><option value='southkorea'>SouthKoreaNewsChannel.com</option><option value='spain'>SpainNewsChannel.com</option><option value='srilanka'>SriLankaNewsChannel.com</option><option value='stkitts'>StkittsNewsChannel.com</option><option value='stlucia'>StLuciaNewsChannel.com</option><option value='stvincent'>StVincentNewsChannel.com</option><option value='sudan'>SudanNewsChannel.com</option><option value='suriname'>SurinameNewsChannel.com</option><option value='swaziland'>SwazilandNewsChannel.com</option><option value='sweden'>SwedenNewsChannel.com</option><option value='switzerland'>SwitzerlandNewsChannel.com</option><option value='syria'>SyriaNewsChannel.com</option><option> </option><option value='null'>T ---------------------</option><option value='taiwan'>TaiwanNewsChannel.com</option><option value='tajikistan'>TajikistanNewsChannel.com</option><option value='tanzania'>TanzaniaNewsChannel.com</option><option value='thailand'>ThailandNewsChannel.com</option><option value='togo'>TogoNewsChannel.com</option><option value='trinidad'>TrinidadNewsChannel.com</option><option value='tunisia'>TunisiaNewsChannel.com</option><option value='turkey'>TurkeyNewsChannel.com</option><option value='turkmenistan'>TurkmenistanNewsChannel.com</option><option value='tuvalu'>TuvaluNewsChannel.com</option><option> </option><option value='null'>U ---------------------</option><option value='uganda'>UgandaNewsChannel.com</option><option value='ukraine'>UkraineNewsChannel.com</option><option value='unitedarabemirates'>UnitedArabEmiratesNewsChannel.com</option><option value='unitedkingdom'>UnitedKingdomNewsChannel.com</option><option value='unitedstates'>UnitedStatesNewsChannel.com</option><option value='uruguay'>UruguayNewsChannel.com</option><option value='uzbekistan'>UzbekistanNewsChannel.com</option><option> </option><option value='null'>V ---------------------</option><option value='vanuatu'>VanuatuNewsChannel.com</option><option value='vaticancity'>VaticanCityNewsChannel.com</option><option value='venezuela'>VenezuelaNewsChannel.com</option><option value='vietnam'>VietnamNewsChannel.com</option><option> </option><option value='null'>Y ---------------------</option><option value='yemen'>YemenNewsChannel.com</option><option value='yugoslavia'>YugoslaviaNewsChannel.com</option><option> </option><option value='null'>Z ---------------------</option><option value='zaire'>ZaireNewsChannel.com</option><option value='zambia'>ZambiaNewsChannel.com</option><option value='zimbabwe'>ZimbabweNewsChannel.com</option></select>
+					<script type="text/javascript">
+						function load_channel(type){
+							if(type == 1){
+								var channel =
+								 document.getElementById("dropdown_international").value;
+							}else{
+								var channel =
+								 document.getElementById("dropdown_domestic").value;
+							}
+							top.location = "http://"+channel+"newschannel.com";
+						}
+						function bookmark(){
+							if ((navigator.appVersion.indexOf("MSIE") > 0) &&
+							 (parseInt(navigator.appVersion) >= 4)) {
+								window.external.AddFavorite(location.href, unescape('The NewChannel Network'));
+							}
+						}
+					</script>
+				</div>
+				<div id="block_title">NewsChannel<span>.com</span></div>
+			</div>
+			<div id="navigation"><a href="http://newschannel.com" target=
+			"_top">Home</a><a href="http://www.tncn.tv/state-newschannels.asp" target=
+			"_top">NewsChannels By State</a><a href="http://www.tncn.tv/international-newschannels.asp" target=
+			"_top">International NewsChannels</a><a href="http://www.thesportsnetwork.com/" target=
+			"_top">Sports NewsChannels</a><a href="http://www.localweather.com/" target=
+			"_top">Local Weather</a><a href="http://www.internationalweather.com/" target=
+			"_top">International Weather</a><a href="http://ivmedia.jambocast.com/vp.php?player_reference_id=12307" target=
+			"contentframe" onclick="parent.reload_ad()">Videos</a>
+<a href="https://www.tncnclassifieds.com/Listings.php?channel=&cityid=0&catid=0"
+ target="contentframe" onclick="parent.reload_ad()">Advertise</a><a href="http://houstonnewschannel.com/contact.php" target=
+ "contentframe" onclick="parent.reload_ad()">Contact</a></div>
+		</div>
+		<!-- Start: StatCounter -->
+		<script type="text/javascript"><!--
+			var sc_project=5429797; 
+			var sc_invisible=1; 
+			var sc_partition=46; 
+			var sc_click_stat=1; 
+			var sc_security="b6bd51d4";
+			//-->
+		</script>
+		<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+		<!-- End: StatCounter -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-22220291-1']);
+			_gaq.push(['_setCustomVar', 1, 'NewsChannel', '', 3]);
+			_gaq.push(['_setDomainName', 'none']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>

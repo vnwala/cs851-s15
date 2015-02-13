@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head xmlns:fb="http://ogp.me/ns/fb#"><title>
+	Self-Publishing Boot Camp Guide for Authors guide | BookBaby
+</title><link rel="stylesheet" type="text/css" href="../css/normalization.css" /><link rel="stylesheet" type="text/css" href="../css/layout.css" /><link rel="stylesheet" type="text/css" href="../css/classes.css" /><link rel="stylesheet" type="text/css" href="../css/pages.css" /><link rel="stylesheet" type="text/css" href="../css/redmond/jquery-ui-1.8.5.custom.css" /><link rel="stylesheet" type="text/css" href="../Plugins/avlModal/styles/avlModal.css" />
+	<!--[if lte IE 8]>
+		<style type="text/css">
+			h1,h2,h3,h4 { 
+				font-weight: normal;
+			}
+		</style>
+	<![endif]-->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: { families: ['Bitter:400,700,400italic:latin', 'Open+Sans:300italic,400,300,700,800,600:latin', 'Open+Sans+Condensed:300,300italic,700'] }
+		};
+		(function () {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+
+	</script>
+    <script type="text/javascript" src="../js/modernizr-2.0.6.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="../js/jquery-1.6.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="../js/bookbaby-main.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollTo-min.js"></script>
+	<script type="text/javascript" src="../js/hoverIntent.js"></script>
+	<script type="text/javascript" src="../Plugins/avlModal/jquery.avlModal.js" ></script>	
+	<script type="text/javascript" src="../js/jquery.dropdownPlain.js"></script>
+	<script type="text/javascript" src="../JS/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		document.createElement("section");
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-2.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"6e831fb790","applicationID":"2214963","transactionName":"Y1BXMUoFDBAFVxYPCVoadDZoSxICA1ERSQBGUFBIXxELBwFHTRUDWFMYFU0GDgoXXAsIARlXWgpMSQECCURMBxVETQ==","queueTime":0,"applicationTime":5,"ttGuid":"3DE63623E98382E7","agent":"js-agent.newrelic.com/nr-515.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwMOVVVWGwECVVVbAQI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta name="robots" content="noodp,noydir,index,follow" />
+
+	
+	<script type="text/javascript">
+		/* Old stuff
+		
+		
+		$(function () {
+			$('ul.sf-menu').superfish();
+
+			$("#login-link").click(function (e) {
+				$("#login-container").slideToggle();
+				e.stopPropagation();
+			});
+
+			// prevent login-container from closing when html.click is fired by capturing click
+			$("#login-container").click(function (e) {
+				e.stopPropagation();
+			});
+
+			$('body').click(function (e) {
+				// close "open" menus if we click outside
+				$("#login-container").slideUp();
+			});
+		});  */
+	</script>
+
+	
+		<script type="text/javascript">
+			(function () {
+				if (typeof window.janrain !== 'object') window.janrain = {};
+				window.janrain.settings = {};
+
+				/* _______________ can edit below this line _______________ */
+
+				janrain.settings.tokenUrl = 'https://www.bookbaby.com/SocialLogin.aspx';
+				janrain.settings.type = 'embed';
+				janrain.settings.appId = 'bclfhaghonghlgldclec';
+				janrain.settings.appUrl = 'https://login1.bookbaby.com';
+				janrain.settings.providers = ["google", "facebook", "twitter"];
+				janrain.settings.providersPerPage = '3';
+				janrain.settings.format = 'one column';
+				janrain.settings.actionText = '';
+				janrain.settings.showAttribution = false;
+				janrain.settings.fontColor = '#333333';
+				janrain.settings.fontFamily = 'helvetica, sans-serif';
+				janrain.settings.backgroundColor = '#F3F3F3';
+				janrain.settings.width = '200';
+				janrain.settings.borderColor = '#EDF4F9';
+				janrain.settings.borderRadius = '10';
+				janrain.settings.buttonBorderColor = '#CCCCCC';
+				janrain.settings.buttonBorderRadius = '20';
+				janrain.settings.buttonBackgroundStyle = 'gradient';
+				janrain.settings.language = 'en';
+				janrain.settings.linkClass = 'janrainEngage';
+
+				/* _______________ can edit above this line _______________ */
+
+				function isReady() { janrain.ready = true; };
+				if (document.addEventListener) {
+					document.addEventListener("DOMContentLoaded", isReady, false);
+				} else {
+					window.attachEvent('onload', isReady);
+				}
+
+				var e = document.createElement('script');
+				e.type = 'text/javascript';
+				e.id = 'janrainAuthWidget';
+
+				if (document.location.protocol === 'https:') {
+					e.src = 'https://rpxnow.com/js/lib/login1.bookbaby.com/engage.js';
+				} else {
+					e.src = 'http://widget-cdn.rpxnow.com/js/lib/login1.bookbaby.com/engage.js';
+				}
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(e, s);
+			})();
+		</script>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17347712-1']);
+  _gaq.push(['_setDomainName', '.bookbaby.com']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ 		<meta name="description" content="Download your copy of Self-Publishing Boot Camp Guide for Authors guide. This guide gives you a step-by-step guide through the entire self-publishing process—from choosing the right word processor through distribution, marketing, and promotion." />
+	    <meta name="keywords" content="BookBaby, Book Baby, Independent Authors, iBooks, eBook, publishing, brand, social media, marketing" />    
+		<script type="text/javascript" src="../JS/Validation/general.js"></script>
+    <style type="text/css">
+      	#campaign-left-content {
+			position:relative;
+			width:470px;
+			height:550px;
+			margin-top:40px;
+		}
+        #campaign-left-content img{
+			margin-top:20px;
+		}	
+		#campaign-right-content{
+			border-left:none;	
+			width:445px;
+			padding-left:40px;
+			margin: 50px 0 130px 0;
+		}
+		.new-subhead{
+			font-size:24px;
+			line-height:32px;
+			color: #153268;
+			font-weight:700;
+		}
+		#campaign-right-content p{	
+			color:#666;
+			line-height:25px;
+			margin-bottom:15px;	
+		}
+		.answer-list
+		{
+			margin:0px 0px 15px 25px;
+			color:#666;
+			line-height:18px;
+		}
+		.answer-list li{
+			list-style-type:disc;
+			margin-bottom:10px;
+		}
+		#content-wrapper h1
+		{
+			margin: 0px;
+		}
+    	#campaign-left-content h1
+    	{
+			font-size:40px;
+			margin:10px 0 20px;
+		}
+		#campaign-left-content h2, #campaign-left-content p {
+			font-weight: normal;
+			font-size: 16px;
+			margin-bottom: 0px;
+			color:#333;
+		}
+		#content-wrapper
+		{
+			margin-top:135px;
+		}
+    </style>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+    <form method="post" action="self-publishing-boot-camp?Source=BBFBCARLA" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI0NzIxMzg5OQ9kFgJmD2QWAgIDDxYCHgZhY3Rpb24FNi9mcmVlLWd1aWRlL3NlbGYtcHVibGlzaGluZy1ib290LWNhbXA/U291cmNlPUJCRkJDQVJMQRYCAgEPZBYGZg9kFgICAQ8PFgQeBFRleHQFBkxvZyBJbh4LTmF2aWdhdGVVcmwFBi9Mb2dpbmRkAgQPDxYCHgdWaXNpYmxlaGRkAgUPFgIfA2hkZGxyyo2xbfNeFc1D/B/xen/ziJtJ2vBalabgnUQtxj3S" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAaX8SLYj0ZcVgRXo3BU3fAimz3xaSzhsF/Au6oIbg0pRFALgnpdJglRUiYECA5R8b6hxcN9GTgW558kyIkF64wRL1pSPW4B8UU3ZWNGG/UZ86MnwrPMMvJCSOzvDVGOkV1UPkz/ZeDOQSmJ07jo9F92zx1A/ukCrE5ym2e+incfGQ==" />
+		<div>
+			
+
+<div id="container-meta-nav" >
+	<div class="inner-wrap float-container">
+	
+		<div id="meta-nav">
+			<a id="tab-ebook" title="BookBaby eBooks">BOOKBABY eBOOKS</a>
+			<a id="tab-printedbook" href="http://print.bookbaby.com/" title="BookBaby Print Services">BOOKBABY PRINT</a>
+		</div><!--meta-nav-->
+	
+
+	<ul id="header-nav">
+		<li>
+			
+			<div id="ctl00_ucMetaNavigation_pnLogin" class="login-panel">
+	
+				<a href="javascript:;" id="login-link">Log in</a>
+			
+</div>
+			
+		</li>
+        <li><a href="http://www.bookbaby.com/contact" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'ContactUs']);">Contact Us</a></li>
+        <li><a href="http://blog.bookbaby.com" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Blog']);"><span>Blog</span></a></li>
+		<li>
+			<div id="ctl00_ucMetaNavigation_pnlJoinNow">
+	
+            <a href="http://www.bookbaby.com/signup" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'button-signup']);" >Get Started</a>
+			
+</div>
+			
+		</li>
+		
+	</ul>
+
+	<div id="ctl00_ucMetaNavigation_pnNavLogin">
+	
+		<div id="login-container" class="">
+			<p>
+				<label for="txtLogin">Email address</label>
+				<input name="ctl00$ucMetaNavigation$txtLogin" type="text" maxlength="64" id="ctl00_ucMetaNavigation_txtLogin" class="input" />
+			</p>
+			<p>
+				<label for="txtPassword">Password</label>
+				<input name="ctl00$ucMetaNavigation$txtPassword" type="password" maxlength="64" id="ctl00_ucMetaNavigation_txtPassword" class="input" />
+			</p>
+			<div class="button-container">
+				<input type="submit" name="ctl00$ucMetaNavigation$lbLogin" value="Log in" id="ctl00_ucMetaNavigation_lbLogin" title="Log in to your BookBaby Account" class="button first-button" />
+				<a class="forgot" href="http://www.bookbaby.com/account/forgot">Forgot your password?</a>
+				<span class="or">OR</span>
+			</div>
+			<hr />
+			<div class="social-login">
+				<span class="login-container-header">Log in with a social account</span>
+				<div class="social-button-container">
+					<a href="javascript:;" class="social-icon" onclick="$.openModal({ target: '#engage-modal-login', width: '300px', modalColor: '#EDF4F9' });" title="Log in to BookBaby with Google"><img src="../images/home/login-social-googleplus.png" /></a>
+					<a href="javascript:;" class="social-icon" onclick="$.openModal({ target: '#engage-modal-login', width: '300px', modalColor: '#EDF4F9' });" title="Log in to BookBaby with Facebook"><img src="../images/home/login-social-facebook.png" /></a>
+					<a href="javascript:;" class="social-icon last" onclick="$.openModal({ target: '#engage-modal-login', width: '300px', modalColor: '#EDF4F9' });" title="Log in to BookBaby with Twitter"><img src="../images/home/login-social-twitter.png" /></a>
+				</div>
+			</div>	<!-- .social-login -->
+		</div>
+	
+</div>
+	</div>
+</div><!--container-meta-nav-->
+
+			
+
+	<link rel="stylesheet" type="text/css" href="../plugins/avlModal/styles/avlModal.css" />
+<style type="text/css">
+        
+    .edit-button
+	{
+	    float:right;
+	    margin-top: 10px;
+    }
+    
+    .login-button
+    {
+        width:50px;
+        
+    }
+	#update-your-browser-banner
+	{
+		line-height: 26px;
+		background-color: #ccd00a;
+		font-size: 14px;
+		padding: 10px;
+		font-weight: bold;
+		text-align: center;
+		display: none;
+		width: 100%;
+		cursor: pointer;
+		position:fixed;
+		top:0px;
+		left:0px;
+		z-index:9999;
+	}
+	#updateYourBrowser li{
+		float: left;
+		margin: 12px 12px 34px 12px;
+		text-align: center;
+		
+	}
+	#updateYourBrowser .button-container .button {
+		float: right;
+	}
+
+	#updateYourBrowser li div{
+		background-image: url(../images/sprites/browserlogos.png);
+		background-repeat:no-repeat;
+		width: 100px;
+		height: 100px;
+	}
+	#lnk-chrome{background-position: -4px 0;}
+	#lnk-firefox{background-position: -171px 0;}
+	#lnk-safari{background-position: -340px 0;}
+	#lnk-ie{background-position:-495px 0;}
+
+</style>
+
+<script type="text/javascript">
+	// --- Session timeout notification and expiration vars ---
+
+	var jsTimeoutNotify;
+	var jsTimeoutExpire;
+	var sessTimeoutExpire = 0;
+	var sessTimeoutNotify = sessTimeoutExpire - 300000;
+	var autoRefresh;
+
+	// --- end ---
+
+	$(document).ready(function() {
+		FeatureDetection();
+	});
+
+	function FeatureDetection() {
+		//detect base support at the site level  checking for audio support elimintates IE8 this should be expanded to include common failure points in older browsers based on actual features used.
+		if (!Modernizr.audio) {
+			if($.cookie('updatebrowser') !== "true"){
+				updateYourBrowserModal();
+			}
+			if(!$('#update-your-browser-banner').length){
+				var headerElem = ($("#container-meta-nav").length > 0) ? "#container-meta-nav" : "#header";
+				$('<div id="update-your-browser-banner" onclick ="updateYourBrowserModal();">NOTE: Your browser is out of date and no longer supported by CD Baby.  Please upgrade or use a different browser for the best experience. </div>').insertBefore(headerElem)
+				
+				$("#update-your-browser-banner").show();
+				if($("#home-hero").length > 0) {
+					$("#home-hero").css('marginTop','+=45px');
+				}
+				if($("#content-hero").length > 0) {
+					$("#content-hero").attr('style','margin-top: 180px !important');
+				}
+				if($("#content-wrapper").length > 0) {
+					if($("#content-hero").length == 0 && $("#campaign-content-hero").length == 0) {
+						$("#content-wrapper").attr('style','margin-top: 180px !important');
+					}
+				}
+				if($("#container-meta-nav").length > 0) {
+					$("#container-meta-nav").css('top','+=45px');
+					$("#header").css('top','+=45px');
+				}else {
+					$("#update-your-browser-banner").css("position","relative");
+				}
+			}
+		}
+	}
+	function createUpdateBrowserCookie(){
+		$.cookie('updatebrowser', true);
+	}
+	function updateYourBrowserModal(){
+		$.openModal({ target: '#updateYourBrowser', width: '530px' });
+	}
+  
+</script>
+<script type="text/javascript" src="../js/session-notification.js"></script>
+
+<div id="updateYourBrowser" class="clearfix avlModalHideClass">
+	<h2>We need to talk.</h2>
+	<p>The web browser you're using to surf the web is so old it’s embarrassing. But hey, we hope you consider us a friend, the kind of friend you can count on to tell you when there's spinach stuck between your teeth. So here it goes: every time you surf the web with that antiquated web browser it’s like you have spinach in your teeth. Every time you get online, spinach!</p>
+	<p>Look, we don't want you to be the butt of any more jokes when the sites you visit don't load or function properly. So please - for your own sake - click on one of the links for your preferred browser below, and get that spinach out of your teeth for good.</p>
+	<p>We’re glad we were able to have this talk.  </p>
+	<ul>
+		<li><a href="http://www.google.com/chrome/" target="_blank"><div id="lnk-chrome"></div>Google Chrome</a></li>
+		<li><a href="https://www.mozilla.com/firefox/" target="_blank"><div id="lnk-firefox"> </div>Mozilla Firefox</a></li>
+		<li><a href="http://www.apple.com/safari/download/" target="_blank"><div id="lnk-safari"></div>Safari</a></li>
+		<li><a href="http://www.microsoft.com/windows/internet-explorer" target="_blank"><div id="lnk-ie"></div>Internet Explorer</a></li>
+	</ul>
+	<div class="button-container">
+		<a href="javascript:;" class="button" onclick="$.closeModal({target:'#updateYourBrowser'});createUpdateBrowserCookie();">Close</a>
+	</div>
+	<a href="javascript:;" class="overlay-close" title="close" onclick="$.closeModal({target:'#updateYourBrowser'});createUpdateBrowserCookie();"></a>    
+</div>
+
+<div id="header">
+	<div class="inner-wrap float-container">
+	<a href="http://www.bookbaby.com" id="logo">
+			<img src="../images/nav-logo2.png"  alt="BookBaby eBook Publishing" title="Get Published Now"/>
+	</a>
+		
+
+<ul id="navigation" class="dropdown">
+    <li><a href="http://print.bookbaby.com/print-on-demand.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Make a book']);"><span>Make a book</span></a>
+        <ul class="sub_menu make-a-book">
+        	<li><a href="http://print.bookbaby.com/" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Book Printing &amp; Distribution']);"><span>Book Printing &amp; Distribution</span></a></li>
+			<li><a href="http://www.bookbaby.com/ebook-services" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'eBook Publishing &amp; Distribution']);"><span>eBook Publishing &amp; Distribution</span></a></li>
+			<li class="last"><a href="http://print.bookbaby.com/print-on-demand.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Print On Demand']);"><span><span class="orange">NEW!</span> Print On Demand</span></a></li>
+        </ul>
+    </li>
+    <li><a onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Services']);" href="http://print.bookbaby.com/book-printing-services.aspx">
+	<span>Services</span>
+		</a>
+        <ul class="sub_menu services">
+			<li><a href="http://print.bookbaby.com/book-cover-design.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'BookCoverDesign']);"><span>Printed Book Cover Design</span></a></li>
+			<li><a href="http://www.bookbaby.com/ebook-cover-design" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'eBookCoverDesign']);"><span>eBook Cover Design</span></a></li>
+			<li><a href="http://print.bookbaby.com/book-formatting.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'InteriorBookDesignFormatting']);"><span>Interior Book Design &amp; Formatting</span></a></li>
+			<li><a href="http://www.bookbaby.com/bookpromo" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'BookPromo']);"><span>BookPromo™</span></a></li>
+			<li><a href="http://www.bookbaby.com/bookshop" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'BookShop']);"><span>BookShop™</span></a></li>
+			<li><a href="http://www.bookbaby.com/book-editing-services" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'BookEditingServices']);"><span>Editing</span></a></li>
+			<li><a href="http://www.bookbaby.com/book-scanning" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'BookScanningServices']);"><span>Scanning</span></a></li>
+			<li><a href="http://www.bookbaby.com/press-release" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Press Releases']);"><span>Press Releases</span></a></li>
+			<li class="last"><a href="http://www.bookbaby.com/websites-for-authors" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Web Hosting for Authors']);"><span>Web Hosting for Authors</span></a></li>
+        </ul>
+    </li>
+    <li><a onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Help']);" href="http://print.bookbaby.com/help.aspx">Help</a>
+        <ul class="sub_menu help">
+        	<li><a href="http://print.bookbaby.com/pdf/Book-Printing-Preparation-Checklist.pdf" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Preparing Your Book Printing Files']);"><span>Preparing Your Files (Print)</span></a></li>
+            <li><a href="http://www.bookbaby.com/ebook-conversion-tips" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Preparing Your eBook Files']);"><span>Preparing Your Files (eBooks)</span></a></li>
+			<li><a href="http://print.bookbaby.com/how-book-printing-works.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'How Book Printing Works']);"><span>How Book Printing Works</span></a></li>
+			<li><a href="http://www.bookbaby.com/how-to-make-an-ebook" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'How to Make an eBook']);"><span>How to Make an eBook</span></a></li>
+			<li><a href="http://print.bookbaby.com/help.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'FAQ']);"><span>FAQ (Print)</span></a></li>
+            <li><a href="http://www.bookbaby.com/faq" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'eBookFAQ']);"><span>FAQ (eBooks)</span></a></li>
+            <li><a href="http://print.bookbaby.com/templates.aspx" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Design Templates']);"><span>Design Templates (Print)</span></a></li>
+			<li class="last"><a href="http://www.bookbaby.com/free-publishing-guides" onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Free Guides']);"><span>Free Guides</span></a></li>
+        </ul>
+    </li>
+	<li><a onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Pricing']);" href="http://www.bookbaby.com/pricing">Pricing</a>
+	</li>
+    <li onclick="_gaq.push(['_trackEvent', 'navigation', 'Click', 'Phone']);"><span class="condensed-phone">1-877-961-6878</span>
+	</li>
+   
+</ul>
+		
+	</div><!-- .inner_wrap -->
+</div> <!-- #header -->
+			
+			
+    
+	<div id="content-wrapper" class="inner-wrap">
+		<div class="float-container">
+			<div id="campaign-left-content">
+				<span class="new-subhead">NEW! BookBaby exclusive!</span>
+                <h1>Self-Publishing Boot<br />Camp Guide for Authors, 3rd edition</h1>
+				<h2>A Step-by-Step to Self-Publishing Success by Carla King</h2>
+				<img src="../images/request-self-publishing-boot-camp.png"  alt="Self Publishing Boot Camp"/>
+			</div><!-- #campaign-left-content -->
+        
+	        <div id="campaign-right-content">
+			    <p style="font-weight:bold">This guide gives you a step-by-step guide through the entire self-publishing process—from choosing the right word processor through distribution, marketing, and promotion. This revised edition isn’t available in stores until April but you can get your free copy today. Learn:</p>
+				<ul class="answer-list">
+        			<li>Hybrid publishing </li>
+       				<li>An in-depth look at running your publishing business </li>
+					<li>Understanding and promoting your brand </li>
+					<li>Traditional and social media marketing </li>
+					<li>Understanding metadata </li>
+					<li>And so much more!</li>
+				</ul>
+				<div class="social-container inner-wrap">
+					
+
+<div id="fb-root"></div>
+<script>
+	$('#like').html('');
+
+	(function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	
+	$(window).load(function () {
+		if (typeof FB !== 'undefined') {
+			$("#like").html('<fb:like href="http://bookbaby.com' + window.location.pathname + '" layout="button_count" show_faces="false" width="65" action="like" font="segoe ui" colorscheme="light" />');
+			FB.XFBML.parse(document.getElementById('like'));
+		}
+	});
+</script>
+
+<!-- Markup -->
+<div id="social-icons">
+	<span id="like">
+		<fb:like href="http://bookbaby.com" layout="button_count" show_faces="false" width="65" action="like" font="segoe ui" colorscheme="light" />		
+	</span>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="bookbaby">Tweet</a>
+	<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+
+	<!-- Place this tag where you want the +1 button to render. -->
+	<div class="g-plusone" data-size="medium"></div>
+
+	<!-- Place this tag after the last +1 button tag. -->
+	<script type="text/javascript">
+		(function () {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+	</script>
+    <div style="clear:both;"></div>
+</div><!-- social icons -->
+
+				</div>
+				<p>Fill out the information below to download the PDF instantly!</p>
+				
+
+<div class="form top-label">
+	<div style="position: relative; overflow: hidden; margin-bottom:15px;" id="container_EMAIL" class="input-container">
+		<label for="control_EMAIL">Email address</label>
+		<input type="text" name="Email" id="control_EMAIL" label="Email address" class="req-email textbox txt-email" />
+		<div style="clear:left;"></div>
+        <div class="input-error">Please enter a valid email address.</div>
+	</div>
+	<div style="position: relative; overflow: hidden; margin-bottom:15px;" id="container_COLUMN1" class="input-container">
+		<label for="control_COLUMN1">First name</label>
+		<input type="text" name="firstname" id="control_COLUMN1" label="First name" class="req-field textbox txt-name" />
+		<div style="clear:left;"></div>
+        <div class="input-error">Please enter your first name.</div>
+    </div>
+	<div style="position: relative; overflow: hidden; margin-bottom:15px;" id="container_COLUMN2" class="input-container">
+		<label for="control_COLUMN2">Last name</label>
+		<input type="text" name="lastname" id="control_COLUMN2" label="Last name" class="req-field textbox txt-name" />
+		<div style="clear:left;"></div>
+        <div class="input-error">Please enter your last name.</div>
+	</div>
+    
+   <div style="position: relative; overflow: hidden; margin-bottom:15px; width:300px;" id="container_COLUMN4" class="checkbox-container">
+		<label for="control_COLUMN4">I am interested in:</label>
+        <div class="req-checked-list">
+        	<input id="interest-ebooks" type="checkbox" name="interest" label="interest" class="checkbox" value="eBooks" /><label for="interest-ebooks">eBooks</label>
+	    	<input id="interest-printedbooks" type="checkbox" name="interest" label="interest" class="checkbox" value="Printed Books" /><label for="interest-printedbooks">Printed Books</label>
+            </div>
+        
+		<div style="clear:left;"></div>
+	</div>
+    
+     <div class="sp-formfield" style="margin-bottom:20px;">
+        <div style="overflow: hidden;">
+            <div class="fieldLabel label-text"><strong>How long until you are ready to publish your book?</strong></div>
+        </div>
+        <select name="pubcountdown" id="control_COLUMN4" label="pubcountdown" class="selectInput defaultText sp-dropdown req-selection">
+            <option value="" SELECTED >Select one</option>
+            <option value="0-3 Months">0-3 Months</option>
+            <option value="4-6 Months">4-6 Months</option>
+            <option value="7-12 Months">7-12 Months</option>
+            <option value="13-18 Months">13-18 Months</option>
+            <option value="18+ Months">18+ Months</option>
+        </select>
+        <div class="input-error">Please select from the dropdown</div>
+    </div>
+    
+    <div class="sp-formfield" style="margin-bottom:30px;">
+        <div style="overflow: hidden;">
+            <div class="fieldLabel label-text"><strong>Are you:</strong></div>
+        </div>
+        <select name="occupation" id="control_COLUMN5" label="occupation" class="selectInput defaultText sp-dropdown req-selection">
+            <option value="" SELECTED >Select one</option>
+            <option value="Author">Author</option>
+            <option value="Publisher">Publisher</option>
+            <option value="Agent/Editor">Agent/Editor</option>
+            <option value="Other">Other</option>
+        </select>
+        <div class="input-error">Please select from the dropdown</div>
+    </div>
+    
+	<div style="position: relative; overflow: hidden; width: 300px;">
+		<button type="submit" class="button" onClick="this.form.action=''; return checkRequiredFields($('.form'));">Submit</button>
+	</div>    
+    <input type="hidden" name="source" id="Text1" class="textInput defaultText" value="BBFBCARLA">
+	<input type="hidden" name="initialsource" id="Text1" class="textInput defaultText" value="BBFBCARLA">
+	<input type="hidden" name="formSourceName"  value="StandardForm">
+</div> 
+        
+			</div><!--campaign-right-content-->     
+
+		</div>
+	</div><!-- #campaign-wrapper -->
+
+			
+			
+<section id="footer-bands">
+		<div class="inner-wrap">
+			<div class="footer-content">
+				<div class="footer-input">
+					<div id="ctl00_ucFooter_pnlNewsletter">
+	
+						<input name="ctl00$ucFooter$txtSignup" type="text" maxlength="64" id="ctl00_ucFooter_txtSignup" class="txt-signup textbox" Placeholder="Sign up for BookBaby&#39;s email newsletter" />
+						<a onclick="return verifyUpdatesReq();" id="ctl00_ucFooter_lbSignup" title="Sign up for Book Baby email updates" class="a-signup" href="javascript:__doPostBack(&#39;ctl00$ucFooter$lbSignup&#39;,&#39;&#39;)"></a>
+					
+</div>
+					<div class="footer-input-error">Please enter a valid email address</div>
+				</div>
+				<a class="a-social facebook" title="Join us on Facebook" target="_blank" href="http://www.facebook.com/bookbaby"></a>
+				 <a class="a-social twitter" title="Follow us on Twitter" target="_blank" href="http://www.facebook.com/bookbaby"></a>
+				 <a class="a-social insta" title="Follow us on Instagram" target="_blank" href="http://instagram.com/bookbabyofficial"></a>
+				 <a class="a-social pinterest" title="Follow us on Pinterest" target="_blank" href="https://www.pinterest.com/bookbabybooks/"></a>
+				 <a class="a-social youtube" title="Join us on Youtube" target="_blank" href="https://www.youtube.com/bookbaby "></a>
+				 <a class="a-social gplus" title="Join us on Google Plus" target="_blank" href="https://plus.google.com/100384963916732390896"></a>
+				 <a class="a-social wp last" title="Join us on our Blog" target="_blank" href="http://blog.bookbaby.com"></a>
+			</div>
+		</div>	
+</section>
+<section id="footer-link">
+	<div class="inner-wrap">
+		<div class="footer-column">
+			<ul>
+				<li class="list-title">
+				<a href="http://print.bookbaby.com/print-on-demand.aspx">Make a Book</a>
+			</li>
+				<li><a href="http://print.bookbaby.com/book-printing-services.aspx">Book Printing &amp; Distribution</a></li>
+			<li><a href="http://print.bookbaby.com/products.aspx">Book Styles</a></li>
+			<li><a href="http://print.bookbaby.com/binding-styles.aspx">Book Binding Styles</a></li>
+			<li><a href="http://www.bookbaby.com/ebook-services">eBook Publishing &amp; Distribution</a></li>
+			<li><a href="http://www.bookbaby.com/fixed-layout-ebooks">Fixed Layout eBooks</a></li>
+			<li><a href="http://www.bookbaby.com/ebook-distribution">Distribution Partners</a></li>
+        </ul>
+		</div>
+			
+		<div class="footer-column">
+			<ul>
+				<li class="list-title"><a href="http://print.bookbaby.com/book-printing-services.aspx">Services</a></li>
+			<li><a href="http://print.bookbaby.com/book-cover-design.aspx">Printed Book Cover Design</a></li>
+			<li><a href="http://www.bookbaby.com/ebook-cover-design">eBook Cover Design</a></li>
+			<li><a href="http://print.bookbaby.com/book-formatting.aspx">Interior Book Design &amp; Formatting</a></li>
+            <li><a href="http://www.bookbaby.com/bookpromo">BookPromo™</a></li>
+			<li><a href="http://www.bookbaby.com/bookshop">BookShop™</a></li>
+			<li><a href="http://www.bookbaby.com/book-editing-services">Editing</a></li>
+			<li><a href="http://www.bookbaby.com/book-scanning">Scanning</a></li>
+			<li><a href="http://www.bookbaby.com/press-release">Press Release Distribution</a></li>
+			<li><a href="http://www.bookbaby.com/wholesale">Solutions for Agents<br>and Publishers</a></li>
+			<li><a href="http://www.bookbaby.com/government">Solutions for Government Agencies</a></li>
+			</ul>
+		</div>
+			
+		<div class="footer-column">
+			<ul>
+			<li class="list-title"><a href="http://print.bookbaby.com/help.aspx">Help</a></li>
+			<li><a href="http://print.bookbaby.com/pdf/Book-Printing-Preparation-Checklist.pdf">Preparing Your Book<br>Printing Files</a></li>
+			<li><a href="http://www.bookbaby.com/ebook-conversion-tips">Preparing Your eBook Files</a></li>
+			<li><a href="http://print.bookbaby.com/how-book-printing-works.aspx">How Book Printing Works</a></li>
+			<li><a href="http://www.bookbaby.com/how-to-make-an-ebook">How to Make an eBook</a></li>
+			<li><a href="http://print.bookbaby.com/templates.aspx">Design Templates </a></li>
+			<li><a href="http://print.bookbaby.com/packagecomparison.aspx">Book Printing<br>Comparison Chart</a></li>
+			<li><a href="http://print.bookbaby.com/book-trim-sizes.aspx">Genre &amp; Trim Size<br>Recommendations</a></li>
+			<li><a href="http://print.bookbaby.com/help.aspx">Frequently Asked Questions</a></li>
+			<li><a href="http://www.bookbaby.com/free-publishing-guides">Free Guides</a></li>
+        </ul>
+		</div>
+						
+		<div class="footer-column">
+			<ul>
+				<li class="list-title"><a href="http://www.bookbaby.com/about-bookbaby.aspx">About Us</a></li>
+		    	<li><a href="http://blog.bookbaby.com">Blog</a></li>
+				<li><a href="http://www.bookbaby.com/press">Press</a></li>
+				<li><a href="http://print.bookbaby.com/guarantee/">Satisfaction Guarantee</a></li>
+				<li><a href="http://print.bookbaby.com/low-price-promise.aspx">Low Price Promise</a></li>
+				<li><a href="http://www.bookbaby.com/reviews">Customer Support Reviews</a></li>
+				<li><a href="http://www.bookbaby.com/termsofservice">Terms of Service</a></li>
+				<li><a href="http://www.bookbaby.com/privacy">Privacy Policy</a></li>
+				<li><a href="http://print.bookbaby.com/shipping.aspx">Shipping Policy</a></li>
+				<li><a href="http://print.bookbaby.com/return-policy.aspx">Return &amp; Cancellation Policy</a></li>
+				<li><a href="http://www.bookbaby.com/contact">Contact Us</a></li>
+				<li><a href="http://www.bookbaby.com/sitemap">Sitemap</a></li>
+			</ul>
+		</div>
+			
+		<div class="footer-column">
+			<ul>
+				<li class="list-title">Our Community</li>
+				<li><a href="http://www.bookbaby.com/bookbaby-affiliate-program">BookBaby Affiliate Program</a></li>
+				<li><a href="http://www.cdbaby.com/" target="_blank">CD Baby Music Store</a></li>
+				<li><a href="http://members.cdbaby.com/" target="_blank">CD Baby: Sell Music Online</a></li>
+				<li><a href="http://www.hostbaby.com/">HostBaby: Websites<br>for Authors</a></li>
+                <li><a href="http://www.bookbaby.com/friends-of-bookbaby">Author Resources</a></li>
+			</ul>
+		</div>
+
+
+	</div>	
+</section>
+
+<section id="footer-bottom">
+	<div class="inner-wrap">
+		<div id="footer-logo">
+			<a href="http://www.bookbaby.com" id="footer-logo-link" title="Book Printing &amp; Self Publishing Services Made Easy">
+				<img src="../images/home/footer-logo.gif" alt="BookBaby"/>
+				Book Printing &amp; Self Publishing Services Made Easy
+			</a>
+		</div><!-- #float-logo-->
+
+		<div id="footer-usa">
+			Made in the U.S.A. <img src="../images/home/usa-flagwave.png" alt="Made in the U.S.A."/>
+		</div> <!-- #footer-social-->
+	</div> <!-- inner-wrap -->
+</section>
+
+	
+
+
+		
+			
+
+		</div>
+    </form>
+	
+	<div id="loader" class="avlModalHideClass" style="background-color: transparent !important;">
+		<img src="../Images/async-loader-green2.gif" alt="loading" style="position:absolute; top:50%; left:50%;" />
+	</div>
+
+	<div id="session-warning" class="avlModalHideClass">
+		<h2>Session Expiration Warning</h2>
+		<p>Your BookBaby online session is due to expire shortly.  Would you like to extend your session and remain logged in?</p>
+		<div class="session-button-container">
+			<a href="javascript:;" class="button" onclick="return TimeoutNotificationYes();" title="Yes, extend my BookBaby session">Yes</a>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+		
+	<div id="session-expiration" class="avlModalHideClass">
+		<h2>Session Expiration</h2>
+		<p>We're sorry, but your BookBaby online session has expired.</p>
+		<div class="session-button-container">
+			<a href="http://www.bookbaby.com/Account" class="button light-blue" title="Log back into my account">Login</a>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+
+	<div id="overlay" class="avlModalHideClass">
+		<h2>Welcome to BookBaby!</h2>
+		
+		<img src="../Images/overlay-self-publishing-boot-camp.jpg" width="240" height="297" alt="Self-Publishing Boot Camp Guide for Authors" style="float:left; margin-right:30px; margin-left:20px; margin-top:30px;" />
+		<div id="overlay-copy">
+			<h3 style="margin-bottom: 10px; margin-top: 40px;">New! BookBaby exclusive!<br />
+Self-Publishing Boot Camp Guide for Authors, 3rd edition</h3>
+			<p class="subhead">This guide gives you a step-by-step guide through the entire self-publishing process—from choosing the right word processor through distribution, marketing, and promotion. This revised edition isn’t available in stores until April but you can get your free copy today. </p>
+			<a class="button hero" title="Get yours" href="http://www.bookbaby.com/free-guide/self-publishing-boot-camp?Source=KING-BBWEB&amp;initialsource=KING-BBWEB&amp;Dest=http://www.pages04.net/discmakers-cdbaby/BookBaby_CarlaKing/" onclick="_gaq.push(['_trackEvent', 'home', 'Click', 'NewVisOverlay-BBWEB']);">Get yours</a>
+			<a href="javascript:;" class="overlay-close" title="close" onclick="$.closeModal({target:'#overlay'})"></a>
+		</div><!--overlay-copy-->     
+	</div><!--overlay-->
+	
+	<div id="ctl00_pnlEngageModalLogin">
+	
+	<div id="engage-modal-login" class="avlModalHideClass">
+		<h2>Social login</h2>
+		<div id="janrainEngageEmbed" style="margin-left:45px;"></div>
+		<p style="text-align:center; color:#666; font-size:11px;">We will <strong>NEVER</strong> post anything to your social profiles.</p>
+		<a href="javascript:;" class="overlay-close" title="close" onclick="$.closeModal({target:'#engage-modal-login'})"></a>
+	</div>
+</div>
+
+	<!-- <img src="/plugins/avlmodal/images/closeX.png" height="1" width="1" alt="" />
+	<img src="/plugins/avlmodal/images/overlay.png" height="1" width="1" alt="" />
+	<img src="/images/async-loader.gif" height="1" width="1" alt="" />
+	<img src="/images/buttons/btn-SignIn-60x20.png" height="1" width="1" alt="" /> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#login-link").click(function () {
+				$("#login-container").slideToggle();
+				return false;
+			});
+			$("#login-container").click(function (e) {
+				e.stopPropagation();
+			});
+			$('body').click(function (e) {
+				// close "open" menus if we click outside
+				$("#login-container").slideUp();
+			});
+		});
+	</script>
+	<!-- Google Code for Remarketing Tag – Main List for BookBaby and BookBaby Print-->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. 
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1029153070;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1029153070/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,572 @@
+/* ################################################################# */
+/*  TITLE:        nbctools.js                                        */
+/*  VERSION:      1.2                                                */
+/*  AUTHOR:       sabler                                             */
+/*  LAST UPDATED: 07/03/2014                                         */ 
+/*  UPDATE DETAILS: nbc.tools.iframeResize                           */
+/*                                                                   */
+/*  NOTES: OK, fine. You can use jQuery.                             */
+/* ################################################################# */
+
+nbc.activeTools = new Array();
+
+nbc.tools = function(id) {
+    this.id = id;
+    this.instanceTime = new Date();
+    this.userLocation = null;
+    
+
+    this.init = function() {
+        if (typeof console == "object" && nbc.env != "") {
+            console.log("**** NBC OTS | NBC Tools v1.1 ****\nCalled at "+ this.instanceTime + "\n\nReference this instance as: "+ this.id +"\n\n(If you can read this, the object is OK.)");
+        }
+        
+        nbc.activeTools.push(this.id);
+    
+    }
+    
+    
+    /* function listActiveTools()
+     * Get a quick readout of how many instances of nbc.tools
+     * are active on the page.
+     */
+    this.listActiveTools = function() {
+        if(typeof console == "object") {
+            console.log("**** NBC OTS | NBC Tools v1.0 ****\nCurrent, active instances of nbc.tools: "+ nbc.activeTools);
+        }
+    }
+    
+    /* function getPDKVersion()
+     * Easily returns current version of the PDK
+     *
+     * Used for preserving sanity during PDK upgrades.
+     */
+    
+    this.getPDKVersion = function() {
+    
+        if(typeof $pdk == "object") {
+        console.log("PDK is present!\nCurrent version: " + $pdk.version.major + "." + $pdk.version.minor + "." + $pdk.version.revision);
+        } else {
+        console.warn("The PDK either hasn't loaded yet or isn't on the page.");
+        }
+    
+    }
+    
+    /* function VK()
+     * Identify an Android
+     * Coming soon - The option to return
+     * specific version numbers.
+     */
+    
+    this.VK = function() {
+        
+        var thisUserAgent=navigator.userAgent;
+        var androidIndex=thisUserAgent.indexOf('Android');
+        var isAndroid=(androidIndex!=-1)?true:false;
+        if(isAndroid==true){
+        var tmpVer=parseInt(thisUserAgent[androidIndex+8])
+        }
+        var isHoneyCombOrHigher=(tmpVer>=3)?true:false;
+        return isAndroid;
+    }
+    
+    
+    /* function makeRandomNumber()
+     * Pretty obvious, isn't it?
+     */
+
+    this.makeRandomNumber = function() {
+        var aNumber = Math.round(Math.random()*1000000000000);
+        return aNumber;
+    }
+    
+    /* function makeSafeString("string",boolean)
+     * Take a string and either replace all special characters with dashes
+     * or encode the entire string to ASCII values
+     * 
+     */
+    
+    
+    this.makeSafeString = function(targetString,encode) {
+        if(!encode) {
+            var encode = false;
+        }
+        
+        if(encode == false) {
+        var safeString = targetString.replace(/[,;:.!&?+=@*()%\$#'" ]/g,"-");
+        return safeString;
+        } else {
+        var safeString = encodeURIComponent(targetString);
+        return safeString;
+        }
+    }
+    
+    /* function renderSocialEmbeds(string)
+     * Search a DOM block and update any found social embedded media
+     * 
+     */
+    
+    this.renderSocialEmbeds = function (parentElem) {
+        function update(network,thisElement) {
+            switch(network) {
+                case "facebook":
+                console.log("Rendering Facebook embed...");
+                console.log(parentElem);
+                if(FB) {
+                FB.XFBML.parse(document.getElementById(parentElem));
+                }
+                break;
+            
+                case "twitter":
+                console.log("Rendering Twitter embed...");
+                if(twttr) {
+                twttr.widgets.load();
+                }
+                break;
+            
+                case "googleplus":
+                console.log("Rendering Google Plus embed...");
+                if(gapi) {
+                gapi.post.render(thisElement); // Google needs the exact element
+                }
+                break;
+            
+                default:
+                // do nothing
+                break;
+            }
+        }
+    
+        foundEmbeds = jQuery('#'+parentElem+' .embedded');
+        jQuery.each(foundEmbeds,function(i,v) {
+            if(jQuery(foundEmbeds[i]).data('network')) {
+            var network = jQuery(foundEmbeds[i]).data('network');
+            var thisElement = jQuery(foundEmbeds[i]);
+            update(network,thisElement);
+            }
+        });
+        return true;
+    }
+    
+    /* function makeFriendlyUrl(object,"string","string","string",boolean,boolean)
+     * Push an HTML5 history object into the browser memory
+     * and location bar.
+     * 
+     * Syntax of required object: var foo = {info:"foo",about:"foo",this:"foo",historyItem:"foo"};
+     * SAMPLE CALL: myObj.makeFriendlyUrl(foo,'/some/url/string/here.html','http://www.nbcnewyork.com','CMSID',true,true);
+     * 
+     * See https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history#Example
+     * for further information 
+     */
+    this.makeFriendlyUrl = function(stateDataObj,urlString,altUrlString,title,pushToLocationBar,redirect) {
+        if(!stateDataObj || typeof stateDataObj !="object") {
+            if(typeof console=="object") {
+                console.warn(this.id+".makeFriendlyUrl | No object passed, aborting...");
+                return false;
+            }
+        } else {
+        
+            if(!pushToLocationBar) {
+                pushToLocationBar = false;
+            }
+        
+            if(pushToLocationBar == true && redirect == true) {
+                if( (typeof history.pushState == "function")) {
+                    var stateData = stateDataObj;
+                    history.replaceState(stateData,title,urlString);
+                    if (title) {document.title = title}
+                } else {
+                    location.href = altUrlString;
+                }
+                
+            } else if(pushToLocationBar == true && redirect == false) {
+                if( (typeof history.pushState == "function")) {
+                    var stateData = stateDataObj;
+                    history.replaceState(stateData,title,urlString);
+                }
+                
+            } else {
+                console.log(this.id+".makeFriendlyUrl | URL state data stored.");
+            }
+            
+        } // end stateDataObj sniffing
+    }
+    
+    /* function rightNow("string",boolean)
+     * Can return just the time, hour, minute, day, or full date.
+     * (But if you just need the full date, why are you even using this?) :)
+     * Accepts "hour","minute","day","month","hourUTC","minuteUTC","dayUTC","monthUTC"
+     * Returns what you've asked for.
+     *
+     * Used for helping to day-part in tracking tools. 
+     */
+     
+    this.rightNow = function(flux,daypartFriendly) {
+        if(!daypartFriendly) {
+            var daypartFriendly = false;
+        }
+        
+        var getcurrentDateandTime = new Date();
+        var userRequest = null;
+        var months = new Array();
+        var days = new Array();
+        
+        months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        
+        
+        switch(flux) {
+            case "hour":
+            userRequest = getcurrentDateandTime.getHours();
+            
+            if(daypartFriendly == true) {
+                userRequestDP = userRequest + ":00";
+                return userRequestDP;
+            } else {
+                return userRequest;
+            }
+            break;
+            
+            case "minute":
+            userRequest = getcurrentDateandTime.getMinutes();
+            
+            if(daypartFriendly == true && userRequest < 10) {
+                userRequestDP = getcurrentDateandTime.getHours() + ":0" + userRequest;
+                return userRequestDP;
+            } else if(daypartFriendly == true && userRequest > 10) {
+                userRequestDP = getcurrentDateandTime.getHours() + ":" + userRequest;
+                return userRequestDP;
+            } else {
+                return userRequest;
+            }
+            break;
+            
+            case "day":
+            var dayAsNumber = getcurrentDateandTime.getDay();
+            userRequest = days[dayAsNumber];
+            break;
+            
+            case "month":
+            var monthAsNumber = getcurrentDateandTime.getMonth();
+            userRequest = months[monthAsNumber];
+            break;
+            
+            case "hourUTC":
+            userRequest = getcurrentDateandTime.getUTCHours();
+            return userRequest;
+            break;
+            
+            case "minuteUTC":
+            userRequest = getcurrentDateandTime.getUTCMinutes();
+            return userRequest;
+            break;
+            
+            case "dayUTC":
+            var dayAsNumber = getcurrentDateandTime.getUTCDay();
+            userRequest = days[dayAsNumber];
+            break;
+            
+            case "monthUTC":
+            var monthAsNumber = getcurrentDateandTime.getUTCMonth();
+            userRequest = months[monthAsNumber];
+            break;
+            
+            case "date":
+            userRequest = getcurrentDateandTime.toLocaleDateString();
+            break;
+            
+            case "fullTime":
+            if(daypartFriendly == true) {
+                var theFullTime = getcurrentDateandTime.toLocaleTimeString();
+                timeAndMeridiem = theFullTime.split(' ');
+                userRequest = timeAndMeridiem[0];
+            } else {
+                userRequest = getcurrentDateandTime.toLocaleTimeString();
+            }
+            break;
+            
+            case "fullTime12":
+                var friendlyHour = null;
+                var theFullTime = getcurrentDateandTime.toLocaleTimeString();
+                var meridiem = theFullTime.split(' ');
+                var hour = getcurrentDateandTime.getHours();
+                var minute = getcurrentDateandTime.getMinutes();
+                var seconds = getcurrentDateandTime.getSeconds();
+
+
+                if(hour == 0 || hour == 12) {
+                    friendlyHour = 12;
+                } else if (hour > 12) {
+                    friendlyHour = (hour - 12);
+                } else {
+                    friendlyHour = hour;
+                }
+                
+                if (minute < 10) {
+                    friendlyMinute = "0"+minute;
+                } else {
+                    friendlyMinute = minute;
+                }
+                
+                if(seconds < 10) {
+                    friendlySeconds = "0"+seconds;
+                } else {
+                    friendlySeconds = seconds;
+                }
+            
+    
+                
+                
+                if( (typeof meridiem[1] == "undefined") || (meridiem[1] != "AM" || meridiem [1] != "PM") ) { 
+                // The browser is reporting in 24 hour mode.
+                    if(hour > 11) {
+                        meridiem[1] = "PM";
+                    } else {
+                        meridiem[1] = "AM";
+                    }
+                }
+
+                
+                if(daypartFriendly == true) {
+                    userRequest = friendlyHour+":"+friendlyMinute+":"+friendlySeconds;
+                } else {
+                    userRequest = friendlyHour+":"+friendlyMinute+":"+friendlySeconds+meridiem[1].toLowerCase();
+                }
+                
+                return userRequest;
+                
+            break;
+            
+            case "halfHour":
+                var friendlyHour = null;
+                var theHalfHour = null;
+                var theFullTime = getcurrentDateandTime.toLocaleTimeString();
+                var meridiem = theFullTime.split(' ');
+                var hour = getcurrentDateandTime.getHours();
+                var minute = getcurrentDateandTime.getMinutes();
+                var seconds = getcurrentDateandTime.getSeconds();
+
+                if(hour == 0 || hour == 12) {
+                    friendlyHour = 12;
+                } else if (hour > 12) {
+                    friendlyHour = (hour - 12);
+                } else {
+                    friendlyHour = hour;
+                }
+                
+                if( (typeof meridiem[1] == "undefined") || (meridiem[1] != "AM" || meridiem [1] != "PM") ) { 
+                    // The browser is reporting in 24 hour mode.
+                    if(hour > 11) {
+                        meridiem[1] = "PM";
+                    } else {
+                        meridiem[1] = "AM";
+                    }
+                }
+                
+
+                if(minute > 30) {
+                    theHalfHour = 30;
+                } else {
+                    theHalfHour = "00";
+                }
+                
+                userRequest = friendlyHour+":" + theHalfHour + meridiem[1].toLowerCase();
+                return userRequest;
+                
+                
+                break;
+                
+            default:
+            return getcurrentDateandTime;
+            break;
+        }
+        
+        return userRequest;
+    }
+    
+    
+    /* function getDimensions = function(string,string)
+     * The first argument is "height" or "width", the second is the ID
+     * of the element you'd like to measure
+     * 
+     * Returns the height or width of a passed element. For now an ID is required. 
+     */
+    
+    this.getDimensions = function(measureThis,element) {
+        var targetElement = document.getElementById(element);
+        if(measureThis == "height") {
+            return targetElement.offsetHeight;
+        } else if (measureThis == "width") {
+            return targetElement.offsetWidth;
+        }
+    }
+    
+    /* function resizeIframe = function(string,string)
+     * source - The domain of the iframe's source (e.g., youtube.com, vimeo.com)
+     * size - The size you'd like the iframe to be (e.g., 300x169)
+     * 
+     * Returns true if sucessful
+     */
+    
+    this.resizeIframe = function(source,size,id) {
+       if(source == "all") {
+           var targetFrames = jQuery('iframe');
+       } else {
+           var targetFrames = jQuery('iframe[src*="'+source+'"]');
+       }
+       var sz = size.split('x');
+       var w = sz[0];
+       var h = sz[1];
+       
+       if(targetFrames.length > 0) {
+           jQuery.each(targetFrames,function(key,value) {
+               console.log(this.src);
+               jQuery(this).attr('width',w);
+               jQuery(this).attr('height',h);
+           });
+           return true;
+       } else {
+           return false;
+       }
+
+    }
+    
+    this.retinaScanner = function() {
+        if(window.devicePixelRatio) {
+            return window.devicePixelRatio;
+        }
+        
+    }
+    
+    this.iframeChatter = function () {
+        console.log("nbc.tools | iframeChatter | starting...");
+        var payload = null;
+        window.addEventListener( "message",function (e) {
+            if(e.origin !== 'http://data.nbcstations.com'){ return; } 
+            payload = JSON.parse(e.data);
+            console.log(payload);
+            
+            switch(payload.cmd) {
+
+            case 'resize':
+            // resize the iframe
+                
+                jQuery('#'+payload.id).css('height',payload.height+'px');
+                break;
+                
+            case 'pscroll':
+            // scroll the parent window to a Y coordinate within the iframe.
+                
+                var refFrame = document.getElementById(payload.parentFrameId);
+                var refFrameOffset = refFrame.offsetTop;
+                var finalPos = refFrameOffset + payload.localPos;
+            
+                console.log('iframe offset is '+refFrameOffset);
+                jQuery('body').animate({ scrollTop: finalPos });
+                
+                //window.scrollTo(0,(refFrameOffset + payload.localPos));
+                break;
+            
+            }
+            
+            
+          },
+          false);
+          
+          }
+    
+    
+    
+    this.getReferrerDomain = function() {
+        var fd = "";
+        var r = document.referrer;
+        var rd = r.split("//");
+        var d = rd[1];
+        
+        if(d.indexOf('www.') == -1) {
+            fd = fd.replace("/","");
+            return fd;
+        } else {
+            sd = d.split('www.');
+            fd = sd[1];
+            fd = fd.replace("/","");
+            return fd;
+        }
+            
+
+    }
+    
+    /* NOT FINISHED
+    this.whereAmI = function() {
+    
+    console.log(this.id);
+    console.log(window[this.id]);
+    
+    objID = this.id;
+    
+        if(!navigator.geolocation){
+            console.log("**** nbc.tools.whereAmI | The user's location can't be retrieved right now. ****");
+            return false;
+        } else {
+            
+            function parsePosition(locData) {
+                console.log("Parsing...");
+                console.log(locData);
+                this.userLocation = locData;
+                return locData;
+            }
+            
+            navigator.geolocation.getCurrentPosition(parsePosition);
+        }
+    }
+    */
+    
+    /* function createCookie('string','string',number)
+     * INHERITED FROM UTILS.JS
+     * 
+     * Creates a cookie 
+     */
+    this.createCookie = function(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires="+date.toGMTString();
+        } else {
+            var expires = "";
+        }
+        document.cookie = name + "=" + value+expires + "; path=/";
+    }
+    
+    /* function readCookie('string')
+     * INHERITED FROM UTILS.JS
+     * 
+     * Reads a cookie
+     */
+    
+
+    this.readCookie = function(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        
+            for(var i=0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') {
+                    c = c.substring(1,c.length);
+                }
+            
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length,c.length);
+                }
+            
+            }
+    }
+    
+    this.ieVersion = function () {
+        var myNav = navigator.userAgent.toLowerCase();
+        return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+    }
+    
+    
+    this.init();
+
+}

@@ -1,0 +1,5665 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 11:36:48 Jun 6, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 6:19:01 Feb 10, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+@media all { /* Hiding css from IE5Mac */
+
+
+/* GENERAL */
+BODY {
+    background: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-family: georgia, serif;
+}
+	
+BODY.grayBack {
+	background: #555555;
+}
+FORM {
+    margin: 0;
+}
+IMG {
+    border: 0;
+}
+A {
+    text-decoration: none;
+    color: #0D8ECE;
+}
+A.previous,
+A.back {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/arrow_back.gif) no-repeat left center;
+    padding-left: 0.9em;
+}
+A.previous {
+    background-position: 0 0.45em;
+}
+A.next,
+A.forward {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/arrow_forward.gif) no-repeat right center;
+    padding-right: 0.9em;
+}
+A.next {
+    background-position: 100% 0.45em;
+}
+A.forward,
+A.back {
+    display: block;
+}
+A.more {
+    padding-left: 0.8em;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+}
+A.up {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/arrow_up.gif) no-repeat left center;
+    padding-left: 0.9em;
+}
+A:hover H2,	
+A:hover {
+    text-decoration: underline;
+}
+A:visited {
+    color: #906;
+}
+A:focus H2,
+A:focus {
+    background-color: #555555 !important;
+    color: #fff !important;
+    outline: 0;
+}
+
+
+P {
+    margin: 0 0 1em 0;
+}
+DIV.error {
+    color: red !important;
+}
+DIV.error UL {
+    margin-top: 1.4em !important;
+    list-style-type: square !important;
+    padding-left: 1.5em !important;
+}
+DIV.error LI {
+    padding-left: 0 !important;
+    background: none !important;
+}
+.skip,
+.invisible {
+    position: absolute;
+    top: -1999px;
+}
+.hide {
+    display: none !important;
+}
+.first {
+    margin-top: 0 !important; /* Modifier for "first elements" */
+}
+.last {
+    margin-bottom: 0 !important; /* Modifier for "last elements" */
+}
+A.up {
+    clear: both;
+}
+A.helpLink {
+    color: #449900;
+}
+P SPAN,
+A SPAN {
+    font-weight: bold;
+}
+OL {
+    margin: 0 0 0.7em 0;
+    padding-left: 2.2em;
+}
+DIV#col1 LI {
+    margin-bottom: 0.35em;
+}
+DIV#col1 UL LI UL LI {
+    margin-bottom: 0;
+}
+UL {
+    margin: 0 0 0.7em 0;
+    padding: 0 0 0 0;
+    list-style-type: square;
+}
+
+LI {
+	list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0em 0.55em;
+	padding:0 0 0.0em 0.8em;
+}
+
+OL LI {
+	list-style-type: decimal;
+	padding: 0 0 0 0;
+	background: none;
+}
+
+UL.links{
+    margin-bottom: 1em;
+}
+UL.entries UL LI.specialli{
+	background:  url('../../../../20130606113648/http:/www.regeringen.se/img/listDot.png') 	no-repeat scroll 0 0.55em transparent;   
+	list-style-type: none; 
+	 padding: 0 0 0 0.8em;
+	
+	}	
+	
+ADDRESS {
+    font-style: normal;
+}
+
+		
+.sansSerif {
+	font-family: verdana, sans-serif;
+}
+	
+
+DIV.halfCol {
+	width:50%;
+	float: left;
+	margin:0;
+	padding:0;		
+}
+	
+DIV.halfColInnerLeft {
+	padding-right: 9px;		
+}
+DIV.halfColInnerRight {
+	padding-left: 9px;		
+}
+	
+
+/* TABLE */
+TABLE {
+    clear: both;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.4em 0 0.3em 0;
+}
+TABLE.dataTable {
+    font-family: verdana, sans-serif;
+    font-size: 0.9em;
+}
+TABLE.useTableHeaders TH {
+    font-weight: bold !important;
+}
+TABLE.numbers TD {
+    text-align: right;
+}
+TABLE.dataTable TD {
+    text-align: right;
+}
+TH,
+TD {
+    text-align: left;
+    padding: 0.25em;
+    border: 4px solid #F0F0EE;
+}
+TH {
+    padding: 0.15em 0.2em 0 0.25em;
+    background: #F0F0EE;
+    vertical-align: bottom;
+}
+TD {
+    vertical-align: top;
+}
+CAPTION {
+    text-align: left;
+    margin-bottom: 1.4em;
+    caption-side: bottom;
+    font-style: italic;
+}
+TABLE.definitions {
+    width: auto;
+    clear: none;
+}
+TABLE.definitions TH,
+TABLE.definitions TD {
+    padding: 0 0.25em 0.25em 0.25em;
+    border: none;
+    vertical-align: top;
+    background: none;
+}
+TABLE.definitions TH {
+    text-align: right;
+}
+TR.odd TD {
+    background: white;
+}
+
+
+
+/* ADVANCED TABLE / CHART */
+
+.advancedTableContainer {
+	/*background-image: url(/web/20130606113648/http://www.regeringen.se/img/menuGradient_grey.jpg);
+    background-repeat: repeat-y;
+	background-position: 1px 0;	*/
+	margin-left: 1px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	float: left;
+}
+table.advanced {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: auto;
+	font-family: verdana, sans-serif;
+	font-size: 0.75em;
+	margin-left: 0px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+table.advanced caption {
+	caption-side: top;
+}
+
+table.advanced td, table.advanced th {
+	border: none;
+	vertical-align: bottom;
+	font-weight: normal;
+	background-color: transparent;
+	padding: 0.25em 1em 0.25em 1em;
+	line-height: 1.6em;
+}
+table.advanced td.firstColumn, table.advanced th.firstColumn {
+	padding: 0.25em 0.25em 0.25em 1em;
+}
+table.advanced td.lastColumn, table.advanced th.lastColumn {
+	padding: 0.25em 1em 0.25em 1em;
+}
+table.advanced td.oddRow, table.advanced th.oddRow {
+	background-color: #ffffff;
+}
+table.advanced td.evenRow, table.advanced th.evenRow {
+	background-color: #e9e9eb;
+}
+
+table.advanced .border-bottom-thin {
+	border-bottom: 1px solid black;
+}
+table.advanced .border-bottom-thick {
+	border-bottom: 2px solid black;
+}
+table.advanced .border-right-thin {
+	border-right: 1px solid black;
+}
+table.advanced .border-right-thick {
+	border-right: 2px solid black;
+}
+table.advanced .border-top-thin {
+	border-top: 1px solid black;
+}
+table.advanced .border-top-thick {
+	border-top: 2px solid black;
+}
+table.advanced .border-left-thin {
+	border-left: 1px solid black;
+}
+table.advanced .border-left-thick {
+	border-left: 2px solid black;
+}
+table.advanced .indent-1 div {
+	padding-left: 1em;
+}
+table.advanced .indent-2 div {
+	padding-left: 2em;
+}
+table.advanced .indent-3 div {
+	padding-left: 3em;
+}
+table.advanced .data-type-numeric {
+	text-align: right;
+}
+TABLE.oldTable{
+    width: 100%;
+}
+TABLE.oldTable th,
+TABLE.oldTable td{
+    vertical-align: top;
+}
+TABLE.fixed {
+    width: 22em;
+}
+p.advancedTableSource, ol.advancedTableFootnotes, .legendContainer table {
+	font-family: verdana, sans-serif;
+	font-size: 0.75em;
+}
+
+p.advancedTableSource {
+	line-height: 1.3em;
+}
+
+ol.advancedTableFootnotes {
+	list-style-position: inside;
+	padding: 0;
+	margin-top: 0.6em;
+}
+
+ol.advancedTableFootnotes li {
+	line-height: 120%;
+}
+
+div.tableLegend {
+	margin-top: 0.6em;
+}
+
+div.pieLegend {
+	float: left;
+	margin-left: 1em;
+	width: 13em;
+}
+
+img.charttype1 {
+	float: left;
+}
+
+.legendContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.legendContainer table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0.25em 0;
+	clear: none;
+}
+
+.legendContainer table th, .legendContainer table td {
+	border: none;
+	vertical-align: baseline;
+	background-color: transparent;
+	padding: 0;
+}
+
+.legendContainer table td {
+	padding-right: 0.5em;
+}
+
+.legendContainer table th {
+	width: 0.5em;
+	font-size: 1.7em;
+	padding-right: 0.3em;
+	line-height: 0.8em;
+}
+
+table.chartLegend {
+	width: 100%;
+}
+
+table.mainLegend, table.secondaryLegend {
+	width: 49%;
+	float: left;
+}
+
+.legendContainer table caption {
+	caption-side: top;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	margin: 0 0 0.25em 0;
+}
+
+/* LAYOUT */
+DIV#page {
+    text-align: left;
+    margin: 0 auto;
+    font-size: 75%;
+    background-color: #ffffff;
+
+}
+DIV#page.popup {
+    max-width: 90%;
+    min-width: 90%;
+    width: 90%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+DIV#page.pageNotFound {
+    max-width: 32em;
+    min-width: 32em;
+    width: 32em;
+}
+
+DIV#body {
+    background-color: white;
+    clear: both;
+	position:relative;
+	z-index: 1;
+	margin-top: 24px;
+	
+}
+	
+DIV#fullWrapper {
+	position: relative;
+	z-index: 0;	
+	min-width: 960px;
+}
+	
+/* HEAD */
+DIV#header {
+    font-family: verdana, sans-serif;
+    font-size: 1em;
+    overflow: visible;
+    background-color: #eaebec;
+	position: relative;
+	z-index: 10;
+}
+
+DIV#header A {
+    color: #444;
+}
+DIV#headerInner {
+	z-index: 11;		
+}
+	
+
+DIV#header A#logoLink{
+	display: block;
+	margin-top: 24px;
+	margin-left: 12px;
+	float:left;
+}
+	
+div#header a#logoLink  .screen{
+	display:block;
+}
+
+div#header a#logoLink  .print{
+	display:none;
+}	
+
+DIV#header A#logoLink:focus {
+	background-color: transparent !important;	
+}
+DIV#header A#logoLink:focus IMG{
+	outline: #000000 dotted thin !important;
+}	
+
+DIV#serviceMenu  {
+    margin: 3em 18px 0 27px;
+    text-align: right;
+    float: right;	
+}
+DIV#serviceMenu UL {
+    list-style-type: none;
+    margin: 8px 0 0 0;
+    padding-left: 0.833em;
+    display: block;
+}
+DIV#serviceMenu UL LI {
+    margin: 0 0 0 0;
+	background: none;
+	padding:0 0 0 0;
+	display: inline;
+}
+INPUT#magnifierGlass {
+	width: 24px;
+	height: 24px;
+	float: right;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}	
+DIV#searchAndNavWrapper {
+	z-index: 1502;	
+}	
+UL#menu{
+	float: left;
+	display: block;
+	margin: 0 0 0 0;
+	z-index: 1500;
+}	
+DIV#header FORM{
+	float: right;
+	vertical-align: middle;
+	display: block;
+	height: 24px;
+	margin: 15px 18px 0 0;
+	z-indez: 1499;
+	
+}	
+DIV#header FORM INPUT.search {
+    width: 105px;
+    float: right;
+    height: 18px;
+    line-height: 1.3em;
+    border: 0;
+    margin: 0;
+    padding: 3px 0 3px 3px;
+    font-family: georgia,serif;
+}
+	
+/* ENABLE COOKIES */
+
+DIV#header DIV#enableCookies {
+	margin: 18px 0 0 0;
+	padding: 12px;
+	background-color: #ffffff;
+	border: 1px solid #555555;     
+}
+	       
+DIV#header DIV#enableCookies A{
+	color: #0D8ECE;
+}
+       
+DIV#header DIV#enableCookies A#cookieInfo {
+	display: block;
+           
+}
+     
+DIV#header DIV#enableCookies INPUT,
+DIV#header DIV#enableCookies LABEL
+{
+	float: left;
+	margin-top: 6px;
+}
+       
+DIV#header DIV#enableCookies INPUT#enableCookieCheckBox{
+	margin: 4px 0 0 6px;
+}
+       
+DIV#header DIV#enableCookies INPUT#enableCookieSubmit{
+	margin: 0 0 0 10px;
+}	
+	
+/* GOVERNMENT MEGADROPDOWN */
+
+	
+div#overlay {
+	 position: relative; 
+	 z-index: 1500;
+	 background-color: #000000; 	 
+	 filter:alpha(opacity=60);
+	 opacity: 0.6;
+	 -moz-opacity:0.6;
+	 text-align:left; 
+	 display: none;
+}
+
+div#overlay.activeDim {
+	display: block;
+}
+	
+UL#menu LI#overlayHolder {
+	width:0;
+	padding:0;
+	margin:0;
+}	
+	
+DIV.hideBorder {
+	display: none;
+	z-index: 2005;
+	left: 0px;
+	top: 53px;
+	width: 100%;
+	height: 3px;
+	background-color: #ffffff;
+	position: absolute;	
+}
+	
+LI.droppedDown DIV.hideBorder {
+	display: block !important;
+}
+	
+/* ieSupport removed with JS if dimming of background is possible */
+li.ieSupport DIV#govSub,
+li.ieSupport DIV#responsSub{
+	border: 1px solid #cccccc;
+	border-width: 0 2px 2px 2px;	
+}	
+
+/* Class added by JS */
+LI.droppedDown {
+	background-color: #ffffff !important;
+	z-index: 2002 !important;
+}
+	
+ul#menu li .sub {
+	display: none;
+	top: 53px; 
+	z-index: 2001;
+	background-color: #ffffff;
+	padding-top: 25px;
+	padding-bottom: 30px;
+	border-top: 1px solid #757576;
+	overflow: hidden;
+	
+}
+	
+
+	
+div#govSub {
+	position: absolute; /*--Important--*/
+	left: 0px;
+	width:954px;
+	
+}
+	
+ul#menu li .sub li{
+	border: 0;
+	margin-top: 4px;
+}
+	
+ul#menu li .sub li.heading{
+	border: 0;
+	margin-top: 0;
+}
+	
+
+ul#menu .sub ul.col1 {
+	display: inline-block;
+}
+	
+ul#menu .sub ul.col1 li{
+	width: 208px;
+	padding-left: 9px;
+}
+
+ul#menu div#govSub ul.col2 {
+	margin-left: 0;
+}
+UL#menu DIV#govSub DIV#subnavWrapper {
+	border-left: 1px solid #cccccc;	
+	padding-left: 18px;
+}
+UL#menu DIV#govSub DIV#subnavWrapper UL{
+	margin-bottom: 0;
+	margin-top: 4px;
+}
+	
+LI#gov div#govSub ul.col1 li a{
+	font-family: georgia, serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.3em;
+}
+
+div#govSub h2 {
+	font-family: georgia, serif;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+
+}
+	
+div#govSub li.heading {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+div#govSub H2.subNavHeading {
+	display: inline-block;
+	margin-bottom: 11px;
+}
+	
+	
+div#govSub  {
+	display: inline-block;
+	margin-bottom: 24px;
+}
+	
+ul#menu .sub li {
+	height: auto;
+	width: 100%;
+	margin-right: 0;
+	float:none;
+	padding: 0;
+	letter-spacing: 0;
+	background: none;
+	display: inline-block;
+}
+
+
+ul.subnav_gallery {
+	margin: 0 0 0 0;
+
+}
+	
+ul#menu div#govSub ul.subnav_gallery li {
+	margin-top:0;
+	display: inline-block;
+	margin-right: 9px;
+
+}
+.subnav_gallery span {
+	display: block;
+}
+
+.subnav_gallery span.minImg IMG{
+	margin-top: 4px;
+}
+	
+.subnav_gallery span.minImg {
+	float:left;
+	cursor: pointer;
+	position: relative;
+	clear:left;
+	padding-right: 12px;
+	margin:0 0 10px 0;
+}
+
+.subnav_gallery LI.last span.minImg {
+	margin-bottom: 0;
+}
+
+.subnav_gallery span.name,
+.subnav_gallery span.title {
+	float:left;
+	width: 165px;
+	line-height: 17px;
+	color: #000000;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0 4px 0 0;
+
+}
+.subnav_gallery span.title  {
+	color: #555555;
+	margin-bottom:9px;
+	font-weight: normal;
+	font-family: georgia, serif;
+	cursor: pointer;
+
+}
+	
+.subnav_gallery strong a{
+	font-weight: normal;
+	color: #000000 !important;
+}
+	
+.subnav_gallery li.hover span.title {
+	text-decoration: underline !important;
+}
+	
+.subnav_gallery li.hover span strong a{
+	text-decoration: underline !important;
+}
+	
+.subnav_gallery span A:focus
+{
+	background-color: #555555 !important;
+    color: #ffffff !important;
+    outline: 0;
+}
+	
+	
+.subnav_gallery span A:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+	
+
+/*RESPONSIBILITIES DROPDOWN */
+
+DIV#responsSub {
+	position: absolute; /*--Important--*/
+	left: -9999px;
+	font-family: georgia, serif;
+}
+DIV#responsSub h2{
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 10px 18px;
+}
+	
+DIV#responsSub li {
+	margin-right: 0;
+	float:none;
+	background: none;
+	width: 100%;
+}
+DIV#responsSub li p{
+	margin-bottom: 18px;
+	display: inline-block;
+	line-height: 1.3em;
+	font-size: 1.1666em;
+}
+	
+DIV#responsSub ul.col2 {
+	margin-left: 18px;
+}
+DIV#responsSub ul.col2 li.list_link {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) 0.2em 0.7em no-repeat;
+    padding: 0 0 0 1.2em;
+}
+DIV#responsSub ul.col2 li.list_link a{
+	font-size:14px;
+	color: #0d8ece;
+}
+	
+DIV#responsSub ul.col3 li, 
+DIV#responsSub ul.col4 li {
+	background: #fff url('../../../../20130606113648/http:/www.regeringen.se/img/lightgreyArrowRight.gif') no-repeat 0 0.4em;
+	margin-top: 4px;
+	padding: 0 0 0.4em 1.2em;
+	display: inline-block;
+}
+
+DIV#responsSub ul.col3 li A, 
+DIV#responsSub ul.col4 li A{
+	color: #000000 !important;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+DIV#responsSub ul.col3 li A:focus, 
+DIV#responsSub ul.col4 li A:focus{
+	background-color: #555555 !important;
+    color: #ffffff !important;
+    outline: 0;
+}
+
+	
+	
+/*MEGA HOVER CSS FALLBACK */
+/* The class cssFallback is removed if JS i present */	
+
+	
+UL.cssFallback LI#gov:hover DIV#govSub,
+UL.cssFallback LI#gov DIV#govSub:hover {
+	left: -80px;
+	border: 1px solid #cccccc;
+	border-width: 0 2px 2px 2px;	
+	display: block;
+}
+ 
+	
+UL.cssFallback LI#respons:hover DIV#responsSub,
+UL.cssFallback LI#respons DIV#responsSub:hover {
+	left: -310px;
+	border: 1px solid #cccccc;
+	border-width: 0 2px 2px 2px;
+	display: block;		
+}
+
+
+
+	
+	
+	
+/* PAGEHEADER */
+DIV#pageHeader {
+    font-size: 1.2em;
+    background: #F0F0EE;
+    padding: 1em 0;
+    overflow: hidden;
+}
+DIV#pageHeader DIV#intro SPAN {
+    font-family: georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+DIV#pageHeader DIV#introImage {
+    width: 25.5%;
+    float: left;
+    overflow: hidden;
+}
+DIV#pageHeader DIV#introImage IMG {
+    margin-left: 0.8em;
+    display: block;
+}
+DIV#pageHeader DIV#intro {
+    width: 50%;
+    float: left;
+}
+DIV#pageHeader DIV#intro DIV {
+    margin-left: 2em;
+    line-height: 1.3;
+}
+DIV#pageHeader DIV#pageTools {
+    width: 24.5%;
+    float: left;
+}
+DIV#pageHeader DIV#pageTools P,
+DIV#pageHeader DIV#pageTools UL {
+    padding-right: 1em;
+}
+DIV#pageHeader DIV#intro SPAN {
+    display: inline;
+}
+P.quote {
+    width: 90%;
+}
+
+
+/* MENU */
+UL#menu {
+	
+	display: inline;
+	overflow: visible;
+	background: #EAEBEC none no-repeat scroll center bottom;
+	height: 53px;
+	width: 798px;
+}
+	
+UL#menu LI {
+	z-index:2000;
+	display: block;
+	float: left;
+	list-style-type: none;
+	background: transparent none no-repeat scroll center bottom;
+	height: 18px;
+	position:relative;
+	border-right: 1px solid #eaebec;	
+}
+	
+UL#menu LI.first{
+	padding-left: 18px;	
+}
+UL#menu LI.menuItem {
+
+	padding: 0;
+	height: 53px;	
+}
+UL#menu LI.menuItem A.menuLink {
+	padding: 18px 17px 17px 18px;
+	display: block;
+	text-decoration: none;
+}
+UL#menu LI A.menuLink SPAN {
+	font-weight: normal;
+}
+	
+UL#menu LI.menuItem A.menuLink:hover {
+	text-decoration: none;
+}
+UL#menu LI.menuItem A.menuLink:hover SPAN {
+	text-decoration: underline;
+	font-weight: normal;
+}
+	
+UL#menu LI.menuItem A.menuLink:focus {
+	background-color: transparent !important;
+}	
+
+UL#menu LI.menuItem A.menuLink:focus SPAN {
+	background-color: #555555;
+}	
+
+UL#menu LI IMG.hasSubmenu{
+	vertical-align: middle;
+	margin-left: 2px;
+}
+	
+UL#menu LI#start.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerStart.png);
+}
+	
+UL#menu LI#gov.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerGov.png);
+}
+	
+UL#menu LI#respons.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerRespons.png);
+}
+	
+UL#menu LI#eu.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerEU.png);
+}
+	
+UL#menu LI#doc.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerDoc.png);
+}
+	
+UL#menu LI#fact.active{
+	background-image: url(../../../../20130606113648/http:/www.regeringen.se/img/menuMarkerFact.png);
+}
+
+UL#menu.noMenuMarker LI.active,	
+UL#menu.droppedDown LI.active {
+	background-image: none !important;	
+}
+UL#menu.droppedDown LI.menuItem{
+	border-color: #757576 !important;
+	background-color: #EAEBEC;
+}		
+	
+	
+UL#menu LI.last {
+	margin-right: 0;
+	border-right: 0;
+	overflow: visible;
+}
+	
+UL#menu LI.last A{
+	white-space: nowrap;	
+}
+	
+UL#menu LI A{
+	font-family: georgia, serif;
+	font-size: 14px;
+
+}
+	
+UL#menu LI A:focus{
+	font-family: georgia, serif;
+	font-size: 14px;
+	background-color: #555555;
+	color: #ffffff !important;
+
+}
+	
+UL#menu LI#start A.menuLink{
+	color: #852364;
+}
+	
+UL#menu LI#gov A.menuLink{
+	color: #df3400;
+}
+UL#menu LI#respons A.menuLink{
+	color: #14467f;
+}
+UL#menu LI#eu A.menuLink{
+	color: #dc2383;
+}
+	
+UL#menu LI#doc A.menuLink{
+	color: #007cc3;
+}
+	
+UL#menu LI#fact A.menuLink{
+	color: #3a732c;
+}	
+
+	
+
+/* BREADCRUMBS */
+	
+.startBackground {
+	background-color: #852364;
+}
+	
+.govBackground {
+	background-color: #df3400;
+}
+.responsBackground {
+	background-color: #14467f;
+}
+.euBackground {
+	background-color: #dc2383;
+}
+	
+.docBackground {
+	background-color: #007cc3;
+}
+	
+.factBackground {
+	background-color: #3a732c;
+}
+
+.rkcwBackground {
+	background-color: #B89600;
+}
+
+DIV#breadcrumbWrapper {
+	z-index: 1005;
+	width: 100%;
+	
+}
+	
+DIV#breadcrumbWrapper.fixed {
+	position: fixed;
+	top: 0px;
+}	
+	
+UL#breadcrumbs {
+	display: block;
+	float:none;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    overflow: auto;
+}
+UL#breadcrumbs LI {
+    float: left;
+    height: 36px;
+    margin: 0 12px 0 0;
+    padding: 0 23px 0 0;
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/breadcrumbDivider.png) no-repeat right;
+    color: #ffffff;
+    white-space: nowrap;
+}
+UL#breadcrumbs LI.last {
+
+    height: 36px;
+    background: none;
+}
+UL#breadcrumbs A {
+    display: inline-block;
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+    height: 12px;
+    color: #ffffff;
+}
+	
+UL#breadcrumbs SPAN {
+	margin-top: 11px;
+	font-weight: normal;
+	display: inline-block;
+}
+
+
+/* SUBMENU */
+DIV#submenu {
+    float: left;
+    padding-bottom: 1.5em;
+    border: 1px solid #cccccc;
+    border-width: 1px 0 0 0;
+    overflow: hidden;
+    font-size: 1.1666em;
+}
+DIV#content DIV#submenu {
+	font-size: 1em !important;
+}
+	
+DIV#submenu H2.submenuHeading {
+    color: #555555;
+    font-size: 1em;
+    margin-top: 0.86em;
+    margin-bottom: 0.9em;
+}	
+	
+DIV#submenu SPAN {
+    display: block;
+    overflow: hidden;
+}
+
+DIV#submenu UL {
+    margin: 0 0 1.29em 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+DIV#submenu UL LI {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) 0.2em 0.55em no-repeat;
+    padding: 0 0 0 0.8em;
+	margin-bottom: 4px;
+}
+/*DIV#submenu UL LI.department {
+	
+    background: url(/web/20130606113648/http://www.regeringen.se/img/menuItem_department.gif) 0 0.2em no-repeat;
+}*/
+DIV#submenu A {
+    color: black;
+    display: inline;
+}
+DIV#submenu LI.current {
+    background: none;
+    padding: 0 0 0 0;
+}
+
+DIV#submenu LI.current{
+    border-left: 0.3em solid #000000;
+    padding: 0 0 0 0.3em;
+    margin-left: 0.2em;
+}	
+BODY.start DIV#submenu LI.current {
+	border-color: #852364;
+}
+	
+BODY.gov DIV#submenu LI.current {
+	border-color: #df3400;
+}
+BODY.respons DIV#submenu LI.current {
+	border-color: #14467f;
+}
+BODY.eu DIV#submenu LI.current {
+	border-color: #dc2383;
+}
+	
+BODY.doc DIV#submenu LI.current {
+	border-color: #007cc3;
+}
+	
+BODY.fact DIV#submenu LI.current {
+	border-color: #3a732c;
+}	
+	
+	
+DIV#submenu	DIV.submenuExtra {
+    border-top: 1px solid #cccccc;
+	
+}
+
+
+
+/* PAGE NAVIGATION */
+DIV.pageNavigation {
+    clear: both;
+    padding: 0.35em 0;
+    border-top: 1px solid #F0F0EE;
+    border-bottom: 1px solid #F0F0EE;
+    margin-bottom: 0.7em;
+    position: relative;
+    text-align: center;
+}
+DIV.pageNavigation A {
+    font-weight: normal;
+}
+DIV.pageNavigation A.next {
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/arrowNext.png) no-repeat right center;
+    padding-left: 0.9em;
+    padding-right: 9px;
+    position: absolute;
+    right: 0;
+    margin-right: 0.35em;
+    font-size: 14px;
+}
+DIV.pageNavigation A.previous {
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/arrowPrev.png) no-repeat left center;
+    padding-right: 0.9em;
+    padding-left: 9px;
+    position: absolute;
+    left: 0;
+    margin-left: 0.35em;
+    font-size: 14px;
+}
+DIV.pageNavigation UL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0.35em 0.1em 0.35em;
+    text-align: center;
+}
+DIV.pageNavigation LI {
+    display: inline;
+	background: none;
+	padding: 0 0 0 0;
+}
+
+UL.internalMenu {
+    clear: both;
+    padding: 0.35em;
+    border-top: 4px solid #F0F0EE;
+    border-bottom: 4px solid #F0F0EE;
+    margin-bottom: 0.7em;
+    background-position: 0 0 !important;
+}
+	
+DIV.pageListHeader{
+    clear: both;
+    font-size: 18px;
+    padding: 12px 0 12px 0;;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 7px;
+    background-position: 0 0 !important;
+}
+DIV.pageListHeader SPAN {
+    font-weight: normal;
+}
+UL.internalMenu LI {
+    margin-right: 0.35em;
+}
+
+
+/* DEFINITION LIST */
+P.definitionList SPAN {
+    font-weight: normal;
+    font-style: normal;
+    color: #666;
+}
+
+
+/* ARTICLE LAYOUT */
+DIV#content {
+
+    padding: 0;
+    font-size: 1.166666em;
+    line-height: 1.3em;
+}
+
+DIV#content.noSubmenu {
+    float: none;
+    width: auto;
+
+}
+DIV.singleColumn DIV#col1 {
+    margin-right: 1em;
+    width: auto !important;
+    float: none;
+}
+DIV#columnHeader {
+    margin-right: 1em;
+    margin-bottom: 1.7em;
+}
+DIV#col1 {
+    float: left;
+    width: 60%;
+    overflow: hidden;
+}
+DIV#col2 {
+    float: right;
+    width: 40%;
+    overflow: hidden;
+}
+DIV#content.noSubmenu DIV#col1 {
+    width: 70.7%;
+}
+DIV#content.noSubmenu DIV#col2 {
+    width: 29.3%;
+}
+DIV.splitColumn DIV#col1 {
+    width: 50% !important;
+}
+
+DIV.splitColumn DIV#col2 {
+    width: 49.9% !important;
+}
+
+
+
+DIV#pressTakuOldTerm H2 {
+	padding: 8px 12px;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+	background: none repeat scroll 0 0 #e9e9eb;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin: 0 0 8px 0;
+}
+
+
+/* ARTICLE */
+H1 {
+    font-size: 1.8em;
+    line-height: 1.1em;
+    font-weight: normal;
+    margin: 0 0 0.3em 0;
+}
+H2 {
+    font-size: 1.29em;
+    line-height: 1.3em;
+    font-weight: normal;
+    margin: 1.4em 0 0.2em 0;
+}
+H2.sectionHeading {
+    padding-bottom: 0.35em;
+    border-bottom: 4px solid #F0F0EE;
+    margin-bottom: 1em;
+}
+H3 {
+    font-size: 1em;
+    line-height: 1.3em;
+    font-weight: bold;
+    font-style: normal;
+    margin: 1em 0 0.2em 0;
+}
+H3 SPAN {
+    font-weight: bold;
+}
+P.lead {
+    font-size: 1.286em;
+    line-height: 1.4em;
+}
+P {
+    margin-bottom: 0.7em;
+}
+P.ps {
+    color: #666;
+}
+SPAN.ps {
+    color: #666;
+    font-weight: normal;
+}
+P.dateline {
+    line-height: 1.3em;
+    color: #666;
+    margin-bottom: 1em;
+    margin-top: 8px;
+}
+P.dateline SPAN {
+    font-size: 0.78em;
+    display: block;
+}
+
+
+/* IMAGE */
+DIV.image {
+    line-height: 1.3em;
+    color: #555555;
+    font-size: 0.86em;
+    font-family: verdana, sans-serif;
+}
+DIV.image.right {
+    clear: both;
+    float: right;
+    margin: 0 0 0.7em 0.7em;
+}
+SPAN.image.right.text {
+    display: block;
+    color: #666;
+    font-size: 0.8em;
+    font-family: verdana, sans-serif;
+}
+DIV.image.full {
+    clear: both;
+    margin: 1.4em 0 1.4em 0;
+}
+DIV.image IMG {
+    margin-bottom: 0.3em;
+    display: block;
+}
+
+
+/* BOX */
+DIV.box {
+    clear: both;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 0.7em 0;
+    margin: 1.4em 0;
+    font-size: 14px;
+}
+DIV.contact.box H2,
+DIV.box.timespace H2 {
+    margin-top: 0;
+    color: #555555;
+    font-size: 1em;
+}
+A.dotLink,
+DIV.contact.box A.mailLink {
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0em 0.55em;	
+	padding-left: 8px;
+}
+DIV.box.timespace H2 {
+    margin: 0 !important;
+}
+DIV.box.timespace P {
+    margin-bottom: 0;
+}
+DIV.contact.box H2 {
+    line-height: 1em;
+}
+DIV.box.facts H2 {
+    margin-top: 0;
+}
+DIV.box.facts {
+    background: #e9e9eb;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 0.7em 0.7em;
+}
+DIV.box.timespace UL,
+DIV.contact.box UL {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+DIV.box.timespace LI,
+DIV.contact.box LI {
+    margin-bottom: 0.5em;
+	background: none;
+	padding: 0 0 0 0;
+	
+}
+
+
+/* ADDRESS microformat look */
+ADDRESS.vcard SPAN.contactRow {
+	display: block;	
+}
+	
+	
+ADDRESS.vcard SPAN.tel, ADDRESS.vcard SPAN.adr {
+    color: #666;
+    margin: 0 !important;
+}
+ADDRESS.vcard SPAN.value, ADDRESS.vcard SPAN.postal-code, ADDRESS.vcard SPAN.locality {
+    color: black;
+    margin: 0 !important;
+}
+DIV.contact.box ADDRESS, DIV#content.contact DIV.contactList ADDRESS {
+    margin-bottom: 0.7em;
+}
+
+DIV.contactList SPAN.fn {
+    font-weight: bold;
+
+}
+
+
+/* CALENDAR microformat look */
+DIV.vevent SPAN.attendee {
+    font-family: georgia, serif;
+    font-size: 1em;
+    color: #666;
+    border: 0;
+    font-weight: normal;
+    display: block;
+}
+	
+DIV.vevent SPAN.summary {
+    display: block;
+}
+
+DIV.vevent SPAN.description {
+    font-weight: normal;
+   	
+}
+DIV.vevent ABBR.dtstart {
+    display: inline;
+    border: 0;
+}
+DIV.vevent P {
+    margin: 0;
+    line-height: 1.5em;
+}
+
+DIV#col1 DIV.vevent UL LI {
+    margin-bottom: 0;
+}
+DIV#content.calendar DIV.vevent P,
+DIV#content.calendar P.noEvent {
+    padding: 0;
+}
+
+DIV#content.calendar DIV.vevent {
+	padding: 0;
+    margin-bottom: 20px;
+}
+DIV#content.calendar DIV.vevent.last {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+/* FOOTER */	
+	
+DIV#footer {
+	background-color: #555555;	
+	margin-top: 3em;
+
+}
+DIV#footer A,
+DIV#footer H3{
+	color: #ffffff;
+
+}
+DIV#footer H3{
+	margin-top: 25px;
+}
+
+DIV#footer A:focus SPAN,
+DIV#footer A:hover SPAN,
+DIV#footer A:hover,
+DIV#footer A:focus {
+	text-decoration: underline;	
+	background-color: transparent !important;
+}
+	
+DIV#footer INS
+{
+	text-decoration: none;	
+}
+
+DIV#footer DIV#directLinks{
+	padding-top: 1em;
+	min-height: 132px;
+}
+
+DIV#footer DIV#directLinks SPAN.footerIcon{
+	background:transparent url(screen.css) no-repeat scroll 0em 0em;
+	height: 60px;
+	display: block;
+	margin:0;
+}
+	
+DIV#footer DIV#directLinks A {
+	display: inline-block;
+	margin-top: 12px;	
+	cursor: pointer;
+	margin-bottom: 12px;
+}
+
+DIV#footer DIV#directLinks A:focus SPAN.footerIcon,	
+DIV#footer DIV#directLinks A:hover SPAN.footerIcon{
+	background-position: -60px 0;
+}
+
+DIV#footer DIV#directLinks DIV.directLink{
+	border-top: 1px solid #cccccc;
+
+}
+DIV#footer DIV#directLinks DIV.directLink SPAN {
+	margin-top: 4px;
+	line-height: 1.4em;
+	font-weight: normal;
+}
+DIV#footer DIV#directLinks DIV.directLink SPAN.meetDate {
+	margin:0;
+	display: block;
+}
+	
+DIV#footer DIV#directLinks DIV.directLink SPAN.grid_2 {
+	font-size: 14px;
+}
+	
+DIV#footer DIV#directLinks DIV.directLink ADDRESS SPAN {
+	color: #ffffff;
+}
+	
+DIV#footer DIV#linkColumns {
+	padding-top: 1em;
+	margin-bottom: 3.5em;
+	border-top: 1px solid #cccccc;
+}
+	
+DIV#footer DIV#linkColumns UL {
+	margin-bottom: 20px;
+}
+	
+DIV#footer DIV#linkColumns LI{
+	line-height: 1.6em;
+	list-style-type: none;
+	background: none;
+	padding:0;
+}
+DIV#footer DIV#linkColumns LI A {
+	line-height: 1em;
+	display: inline;
+}
+	
+DIV#footer DIV#linkColumns LI.heading A {
+	font-weight: bold;
+}
+
+DIV.articleFooter {
+	clear: both;
+	padding-top: 2.3em;
+}
+DIV.articleFooter P.senderDate {
+	font-family: verdana, sans-serif;
+	font-size: 12px;	
+}
+DIV.articleFooter.twoColumn{
+	width: 60%;
+}
+DIV.articleFooter DIV{
+    border-top: 1px solid #cccccc;
+    color: #666;
+    font-style: normal;
+}
+
+
+/* RIGHT COLUMN */
+DIV#col2 DIV {
+    margin-left: 1em;
+    color: #666;
+    line-height: 1.2;
+}
+	
+DIV#col2 FORM.area {
+    margin-right: 1em;
+}
+
+
+/* POPUP */
+DIV#page.popup H1 {
+    font-size: 0.98em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    background: #F0F0EE;
+    padding: 0.5em 1.3em;
+    color: #666;
+}
+DIV#page.popup H2 {
+    clear: both;
+    font-size: 1.4em;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 0;
+}
+DIV#page.popup H3 {
+    font-weight: bold;
+    font-style: normal;
+}
+DIV#page.popup DIV#content {
+    margin: 1em 1em 2em 1em;
+}
+DIV#page.popup DIV.item {
+    margin-bottom: 0.35em;
+}
+DIV#page.popup DIV#footer {
+    margin-bottom: 0;
+}
+
+
+/* RIGHT COLUMN ELEMENTS */
+DIV.links,
+DIV.sender,
+DIV.files,
+DIV.storyMenu {
+    margin-bottom: 1em;
+}
+DIV.sender {
+
+    padding: 0.5em 0 0 0;
+}
+DIV.help {
+    padding: 0.5em 0 1.4em 0;
+    color: black !important;
+}
+DIV.help LABEL,
+DIV.help INPUT {
+    display: block;
+}
+DIV.links H2,
+DIV.files H2,
+DIV.sender H2 {
+    margin: 0 0 0 0;
+    font-size: 1em;
+}
+	
+DIV.related DIV.links,
+DIV.related DIV.files		
+{
+	border-top: 1px solid #cccccc;
+	padding-top:8px;
+	font-family: georgia, serif;
+	font-size: 14px;
+}
+DIV.related DIV.links UL,
+DIV.related DIV.files UL		
+{
+	margin-top: 10px;
+	padding-left:0;
+}
+
+DIV.related DIV.links H2,
+DIV.related DIV.files H2 {
+	font-weight: bold;
+	
+}
+DIV.related.noBold DIV.links H2,
+DIV.related.noBold DIV.files H2 {
+	color: #555555;
+	font-weight: normal;
+}
+	
+	
+
+DIV.links UL,
+DIV.files UL,
+DIV.multipleLinksPuff UL {
+    margin: 0;
+    margin-top: 0.2em;
+    padding: 0 1em 0 0.6em;
+    list-style-type: none;
+}
+	
+DIV.links UL LI,
+DIV.files UL LI,
+DIV.sender UL LI,
+DIV.multipleLinksPuff UL LI {
+	list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0em 0.6em;
+	padding:0 0 0 0.8em;
+}
+
+DIV.listPuff UL LI {
+    margin: 10px 0 0 1em;
+    padding: 0;
+    background: none;
+    list-style-type: none;
+    
+}
+DIV.listPuff UL LI.first {
+    margin-top: 7px !important;
+}
+
+	
+DIV.sender UL,
+DIV.storyMenu UL {
+    margin-bottom: 0.7em;
+    margin-top: 0.2em;
+    padding-left: 0.6em;
+}
+DIV.storyMenu UL LI {
+    padding-bottom: 0;
+    list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listSquare.gif) no-repeat scroll 0em 0.5em;
+	padding:0 0 0.2em 1em;
+}
+
+
+
+DIV.storyMenu UL LI.current {
+    padding-bottom: 0;
+    list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0em 0.55em;
+	padding:0 0 0.2em 0.8em;
+}
+
+
+DIV.contactCard {
+    margin-bottom: 1.29em;
+}
+DIV.contactCard H2 {
+    margin-top: 0;
+}
+DIV.contactCard * {
+    margin-right: 1em;
+}
+DIV.contactCard UL {
+    margin-bottom: 0;
+}
+
+
+/* PUFFS ETC */
+
+DIV.multipleLinksPuff,
+DIV.listPuff {
+    margin-bottom: 1.5em;
+    clear: both;
+    /* To not break layout in IE6*/
+    overflow:hidden;
+    word-wrap: break-word 
+}
+	
+DIV.multipleLinksPuff IMG,
+DIV.listPuff IMG{
+    margin-bottom: 0;
+    
+}
+	
+DIV.webcastPuffContainer DIV.boxedHeading,	
+DIV.listPuff DIV.boxedHeading {
+	background-color: #e9e9eb;
+	border: 1px solid #cccccc;
+	padding: 12px;
+}
+
+DIV.webcastPuffContainer DIV.boxedHeading H1,
+DIV.listPuff DIV.boxedHeading H1{
+	margin:0;	
+	font-weight: normal;
+	font-size: 1.29em;
+	float: left;
+	line-height: 1.1em;
+
+}
+
+DIV.webcastPuffContainer DIV.boxedHeading UL,
+DIV.listPuff DIV.boxedHeading UL{
+	float:right;
+	margin-bottom: 0;
+	line-height: 1.1em;
+		
+}
+	
+DIV.listPuff DIV.boxedHeading SPAN IMG{
+	margin: 0 0.3em 0 0;	
+}
+	
+DIV.listPuff UL {
+    margin: 0;
+    padding: 0;
+}
+DIV.multipleLinksPuff UL.more,	
+DIV.listPuff UL.more {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+}
+
+DIV.noticeItem DIV.listPuff UL.more,
+DIV.footerPuff DIV.listPuff UL.more,
+DIV.noticeItem DIV.multipleLinksPuff UL.more,
+DIV.footerPuff DIV.multipleLinksPuff UL.more {
+    margin: 0;
+    padding: 0;
+}
+	
+
+DIV.listPuff UL.more LI,
+DIV.multipleLinksPuff UL.more LI {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+    padding: 0 0 0 0.8em;
+    margin: 0 !important;
+}
+	
+DIV.webcastPuffContainer DIV.boxedHeading LI,
+DIV.listPuff DIV.boxedHeading LI {
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+    padding: 0 0 0 0.8em;
+    margin: 3px 0 0 0 !important;
+}
+	
+
+
+DIV.listPuff UL.bottomLinks {
+	margin-top: 0.5em;
+	
+		
+}
+DIV.listPuff UL.bottomLinks LI {
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+    padding: 0 0 0.2em 0.8em;
+    margin-left: 1em;
+    margin-top: 0em;
+    	
+}
+
+DIV.listPuff.small {
+	border-top: 1px solid #cccccc;
+	padding-top: 12px;
+	
+}
+	
+DIV.listPuff.small UL LI {
+    margin-left: 0;
+}
+DIV.listPuff.small H1 {
+	font-size: 12px !important;
+	font-family: verdana, sans-serif;
+	font-weight: bold;
+	margin: 0;	
+}
+	
+	
+	
+DIV.multipleLinksPuff UL LI {
+    padding-bottom: 0;
+    margin-bottom: 0em !important;
+}
+
+
+DIV.multipleLinksPuff,
+DIV.listPuff {
+    color: black !important;
+}
+	
+DIV.multipleLinksPuff FORM DIV {
+    background: none;
+    padding: 0;
+    margin: 0 !important;
+}
+DIV.multipleLinksPuff DIV H1,
+DIV.singleLinkPuff DIV H1,
+DIV.listPuff H1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+	
+DIV.multipleLinksPuff DIV H2,
+DIV.help H2 {
+    margin-top: 0;
+    clear: both;
+    font-size: 1em;
+    font-weight: bold;
+}
+DIV.multipleLinksPuff UL {
+    padding-left: 0;
+}
+DIV.multipleLinksPuff IMG,
+DIV.singleLinkPuff IMG {
+    display: block;
+
+}
+DIV.singleLinkPuff IMG {
+    margin-top: 0.2em;
+}
+DIV.singleLinkPuff {
+    border-top: 4px solid #F0F0EE;
+    border-left: 4px solid #F0F0EE;
+    padding: 0.5em 0 0 0.6em;
+    margin-bottom: 1em;
+}
+DIV.singleLinkPuff DIV {
+    padding: 0 !important;
+    margin: 0 !important;
+    color: black !important;
+}
+DIV#col2 DIV.multipleLinksPuff,
+DIV#col2 DIV.singleLinkPuff,
+DIV#col2 DIV.sender,
+DIV#col2 DIV.help,
+DIV#col2 DIV.listPuff {
+    margin-right: 1em;
+}
+DIV.listPuff P {
+    margin-bottom: 0;
+    color: #555555 !important;
+	font-family: verdana, sans-serif;
+	font-style: normal;
+	font-size: 0.857em;
+}
+	
+DIV.notice {
+    padding: 0.7em 0.7em 0.7em 0;
+    border-bottom: 4px solid #F0F0EE;
+    margin-bottom: 0;
+}
+DIV.notice H1 {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    font-weight: normal;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+DIV.miniPuff DIV{
+    overflow: hidden;
+}
+DIV.miniPuff IMG{
+    float: left;
+    margin-right:1em;
+    margin-bottom: .5em;
+}
+DIV.miniPuff UL{
+    padding-right: 0;
+    overflow: hidden;
+    margin-top: 0.35em;
+}
+
+DIV.miniPuff DIV.clearFloat {
+	clear: both;
+	height: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+DIV.miniPuff P {
+	margin-bottom: 0;
+}
+
+SPAN.dateline {
+	color: #555555;
+	font-family: verdana, sans-serif;
+	font-style: normal;
+	font-size: 0.86em;
+}
+	
+
+	
+/* WEBCASTPUFF */
+	
+	
+DIV.webcastPuffContainer {
+	font-size: 1.16667em;
+	margin-top: 18px;
+}
+	
+DIV.webcastPuff IMG {
+	margin: 18px 0 8px 0;
+	width: 216px;
+	height: 123px;		
+}
+	
+DIV.webcastPuff DIV.imageContatiner {
+	width: 216px;
+	height: 123px;	
+}
+DIV.webcastPuff A {
+	display: block;
+	text-decoration: none;	
+}
+	
+DIV.webcastPuff A:focus {
+	background-color: transparent !important;	
+}
+	
+/*DIV.webcastPuff A:focus IMG,
+DIV.webcastPuff A:hover IMG{	
+	filter:alpha(opacity=80);
+	opacity: 0.8;
+	-moz-opacity:0.8;
+}*/
+	
+	
+DIV.webcastPuff A:focus SPAN{
+	text-decoration: none;	
+	background-color: #555555 !important;
+	color: #ffffff !important;
+}
+
+DIV.webcastPuff A SPAN{
+	color: #000000;
+	display: inline;
+	font-weight: normal;
+	font-family: verdana, sans-serif;
+	font-size: 0.86em;
+	
+}
+DIV.webcastPuff A SPAN.dateline{
+	display: block;
+}
+	
+DIV.webcastPuff A:hover SPAN {
+	text-decoration: underline;
+}
+DIV.webcastPuff A:focus SPAN {
+	background-color: #555555 !important;
+    color: #fff !important;
+}
+	
+	
+/* OPTION PUFF & EXTERNAL LISTPUFF*/
+
+	
+DIV.multipleLinksPuff,	
+DIV.optionPuff {
+	font-family: verdana, sans-serif;
+	font-size: 0.86em;
+	border-top: 1px solid #cccccc; 
+	margin-bottom: 12px;
+}
+
+DIV.multipleLinksPuffDoc{
+	font-family: verdana, sans-serif;
+	font-size: 0.86em;
+	padding: 18px 12px; background-color: #e9e9eb;
+	margin-top: 1.4em;
+	margin-bottom: 18px;
+}
+
+DIV.multipleLinksPuffDoc DIV H2
+{
+    margin-top: 0;
+    clear: both;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+DIV.firstPuff {
+	display: inline-block;
+	width: 100%;	
+}
+	
+DIV.firstPuff DIV.multipleLinksPuff,	
+DIV.firstPuff DIV.optionPuff,
+DIV.firstPuff DIV.listPuff {
+	border-width: 0;
+	padding-top: 0;
+}
+DIV.firstPuff DIV.white DIV.image,	
+DIV.firstPuff DIV.white DIV.contents,
+DIV.firstPuff DIV.white DIV.contents H3 {
+	margin-top: 0;	
+}
+
+DIV.firstPuff DIV.megaImage DIV.contents,
+DIV.firstPuff DIV.largeImage DIV.contents {
+	margin-top: 11px;
+}
+
+DIV.multipleLinksPuff IMG,	
+DIV.optionPuff IMG {
+	margin: 0;
+}
+
+		
+DIV.multipleLinksPuff H3 {
+	margin-top: 0;	
+}	
+DIV.optionPuff H3{
+	color: #000000;
+	font-weight: normal;
+	display: inline;		
+}
+	
+DIV.optionPuff H3 A{
+	color: #0D8ECE;
+	font-weight: bold;
+}
+	
+DIV.optionPuff H3 A:hover {
+	text-decoration: underline;
+}
+	
+DIV.optionPuff H3 A:focus {
+	color: #ffffff;
+	background-color: #555555;
+}
+	
+DIV.optionPuff H3.bold{
+	font-weight: bold;		
+}
+	
+DIV.optionPuff DIV.image {
+	margin-top: 12px;
+	float: left;
+	margin-bottom: 0 !important;
+}
+
+DIV.multipleLinksPuff DIV.image,
+DIV.optionPuff DIV.image{
+	overflow: hidden;
+}
+
+
+DIV.optionPuff.smallImage DIV.image{
+	margin-right: 18px;
+	width: 78px;
+	overflow: hidden;
+}
+
+DIV.noticeItem DIV.optionPuff DIV.image {
+	margin-right: 18px;
+}
+	
+DIV.optionPuff DIV.contents{
+	margin-top: 9px;
+	padding: 0;
+	vertical-align: top;
+	float: left;
+}
+	
+DIV.multipleLinksPuff DIV.contents {
+	margin-top: 9px;
+}
+
+DIV.optionPuff.smallImage DIV.contents{
+	width: 120px;
+	
+}
+DIV.noticeItem DIV.optionPuff.smallImage DIV.contents{
+	width: 354px;
+}
+
+DIV.optionPuff DIV.contents UL{
+	padding:0;
+	margin:0;
+}	
+DIV.optionPuff DIV.contents LI{
+	padding-bottom: 0;
+}
+	
+DIV.multipleLinksPuff.gray,
+DIV.optionPuff.gray{
+	background-color: #e9e9eb;
+	border-top: none;	
+}
+
+DIV.multipleLinksPuff.gray DIV.contentsInner,
+DIV.optionPuff.gray DIV.contentsInner{
+	padding: 0 12px 12px 12px;
+}
+
+DIV.optionPuff.gray.smallImage DIV.contentsInner,
+DIV.noticeItem DIV.optionPuff DIV.contentsInner{
+	padding-left: 0;
+}
+	
+DIV.noticeItem DIV.optionPuff.megaImage.gray DIV.contentsInner,
+DIV.noticeItem DIV.optionPuff.noImage DIV.contentsInner{
+	padding-left: 12px;
+}
+	
+DIV.optionPuff.gray DIV.image{
+	margin-top: 0;
+}
+	
+DIV.optionPuff.gray.smallImage DIV.image{
+	margin-bottom: 0;
+	
+}
+	
+	
+DIV.optionPuff UL.multiImage {
+	overflow: hidden;
+	margin: 0;
+	
+}
+
+DIV.optionPuff UL.multiImage LI.first{
+	margin-top: 0;
+}
+
+DIV.optionPuff UL.multiImage LI {
+	padding: 0;
+	background: none;
+	line-height:0;
+	margin-top: 12px;
+}	
+DIV.optionPuff UL.multiImage LI A{
+	line-height:0;
+}
+	
+/*TWITTER PUFF*/
+	
+.tweet,
+.query {
+	font-family: verdana, sans-serif;
+    line-height: 1.3em;
+}
+	
+.tweet_list li {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0.5em;
+	list-style-type: none;
+}
+		
+.tweet_list .tweet_avatar {
+	padding-right: 12px; 
+	float: left;
+}
+	
+.tweet_time {
+	white-space: nowrap;	
+}
+	
+	
+	
+/*Need to tweek widths since contents may const of very long lines*/	
+#content .grid_3 .twitterPuff .contents {
+	width: 216px !important;
+}
+
+#widePuff DIV.twitterPuff DIV.contents {
+	width:450 px;	
+}
+
+DIV.twitterPuff,	
+DIV.twitterPuff DIV.tweet,
+DIV.twitterPuff DIV.tweet A,
+DIV.twitterPuff DIV.tweet SPAN {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}	
+	
+DIV.twitterPuff UL.tweet_list LI {
+	background: none;
+	padding: 13px 0 0 0;
+	overflow-x: hidden;
+}
+	
+DIV.twitterPuff UL.tweet_list LI.tweet_first {
+	padding-top: 9px;
+}
+	
+DIV.twitterPuff .noAvatar UL.tweet_list LI {
+	list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0 1.65em;
+	padding: 13px 0 0.0em 0.8em;
+}
+
+DIV.twitterPuff A.tweet_avatar {
+	padding-top: 5px;
+	
+}
+DIV.twitterPuff A.tweet_avatar:active,	
+DIV.twitterPuff A.tweet_avatar:focus {
+	background-color: transparent !important;
+}
+
+
+
+	
+/*CRISIS PUFF*/
+DIV#crisisPuffContainer {
+	margin-top:	30px;
+
+}
+DIV.crisisPuff {
+	border: 6px solid #cccccc;
+	padding: 24px 30px;	
+}
+	
+DIV.crisisPuff H1{
+	font-size: 3em;
+	font-style: normal;
+	margin-bottom: 24px;
+}
+
+DIV.crisisPuff P {
+	font-size: 1.5em;
+	margin: 0 0 12px 0;
+}
+DIV.crisisPuff UL {
+	margin:0;	
+}
+	
+DIV.crisisPuff UL LI A {
+	font-size: 1.1666em;
+}
+	
+/* BREDPUFF */
+	
+DIV#widePuff div.optionPuff {
+	margin-bottom: 14px;	
+}
+	
+/* CALENDARPUFF */
+	
+DIV.calendarPuff {
+	background-color : #e9e9eb;
+	margin-bottom: 1.29em;
+}
+	
+.borderedBox{
+	border: 1px solid #cccccc;
+}
+	
+DIV.calendarPuff DIV.date {
+	width: 13.4% !important;
+	background-color: transparent;
+	padding: 13px 0 1.29em 0;
+	text-align: center;
+
+}
+DIV.calendarPuff  DIV.date SPAN.month {
+	margin-bottom: 0.48em;
+	display: block;
+	
+}
+	
+DIV.calendarPuff  DIV.date SPAN.day {
+	font-size: 1.72em;
+	
+}
+DIV.calendarPuff UL{
+	
+	/*NOTE neccesary to fit in grid when parent has borders;*/
+	width: 86.6% !important;
+	min-height: 4.8em;
+	margin: 0;
+	padding-top: 13px;
+	float: left;
+	display:inline;
+	position: relative;
+	background-color: #ffffff;
+}
+	
+DIV.calendarPuff UL LI {
+	background: none;	
+	margin-bottom: 1em;
+	padding:0;
+}
+DIV.calendarPuff UL LI.noEvents,	
+DIV.calendarPuff UL LI.moreLink {
+	clear: both;
+	margin-left: 18px
+}
+
+UL LI.calendarEvent {
+	display: block;
+}
+	
+UL LI.calendarEvent UL{
+	float: none;
+	display: inline-block;
+}
+	
+UL LI.calendarEvent P {
+    margin-bottom: 0.43em;
+    margin-left: 18px;
+	display: block;
+	
+	min-widht:1px;
+}
+	
+UL LI.calendarEvent P SPAN {
+    font-family: georgia, serif;
+    font-weight: normal;
+    font-size: 1em;
+    display: block;
+    min-widht:1px;
+	
+}	
+UL LI.calendarEvent P SPAN.dateline{
+	color: #555555;
+	
+}
+
+UL LI.calendarEvent P SPAN {
+	display: block;
+}
+
+DIV.calendarPuff.hideBody LI.calendarEvent SPAN.description {
+	display: none;
+}
+DIV.calendarPuff.hideLinks LI.calendarEvent UL {
+	display: none;
+}
+	
+UL LI.calendarEvent UL{
+	padding: 0;
+	min-height: 0;
+	width: 99%;
+	display: inline-block;
+	
+
+}
+	
+UL LI.calendarEvent UL LI{
+	margin: 0;
+	padding-left: 0.8em;
+	margin-left: 18px;
+	width: 99%;
+	display: inline-block;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+}
+/* START PAGES */
+	
+DIV#content.start DIV#col1 DIV {
+    border-right: 4px solid #F0F0EE;
+}
+DIV#content.start DIV#col1 DIV DIV {
+    border-right: 0;
+}
+/*DIV#content.start UL.noticeList LI,
+DIV#content.start DIV.noticeItem,
+DIV#content.start DIV.noticeItem LI{
+    margin-right: 1em;
+}*/
+	
+DIV#content.start DIV#col1 DIV.multipleLinksPuff {
+    margin-right: 1em;
+}
+DIV#content.start DIV#col2 DIV {
+    color: black;
+}
+DIV#content.start DIV#col2 DIV.singleLinkPuff {
+    margin-left: 0;
+    border-left: 0;
+    margin-right: 1em;
+    border-right: 4px solid #F0F0EE;
+}
+DIV#content.start DIV#col2 DIV.singleLinkPuff DIV {
+    margin-left: 0.3em !important;
+    padding-right: 0.6em !important;
+}
+DIV#content.start DIV#col2 DIV.singleLinkPuff.singleMiniPuff DIV{
+	padding-left: 0.3em !important;
+	margin-left: 0 !important;
+}
+
+DIV#content.start DIV#col1 DIV.singleLinkPuff DIV {
+    padding-right: 1em !important;
+}
+DIV#content.start DIV#col1 DIV.listPuff {
+    margin-right: 1em;
+}
+DIV#body.start UL#breadcrumbs {
+    background-color: white;
+}
+DIV#body.start.noHeader UL#breadcrumbs {
+    background-color: #F0F0EE;;
+}
+
+
+/* MINISTRY START */
+
+	
+DIV#body.ministry DIV.calendarPuff {
+	margin-bottom: 0;
+}
+	
+DIV#trigger {	
+	background-color : #e9e9eb;
+	cursor: pointer;
+	height: 60px;
+}
+	
+DIV#triggerLeft {	
+	padding: 0;
+	text-align: center;
+	width: 13.4% !important;
+}
+
+DIV#triggerLeft IMG{	
+	margin-top: 25px;
+}
+	
+
+DIV#triggerRight {	
+	/*NOTE neccesary to fit in grid when parent has borders;*/
+	width: 86.6% !important;
+	margin: 0;
+	padding: 0 0 0 0;
+	float: left;
+	display:inline;
+	position: relative;
+	background-color: #ffffff;
+	height: 100%;
+}
+DIV#triggerRight A:visited {
+	color: #0D8ECE;
+}
+	
+DIV#triggerRight A {	
+	margin:  20px 18px 0 18px;
+	font-size: 1.29em;
+	display: inline-block;
+	text-decoration: none !important;
+}
+	
+DIV#expandableBox {
+	border-width: 1px 0 0 0;
+	padding: 0.86em 0 0.86em 0;	
+	display: none;
+}
+	
+DIV#expandableBox A {
+	color: #000000;	
+}
+
+DIV#expandableBox SPAN.subMenuTitle,
+DIV#expandableBox SPAN#submenuTitle {
+	color: #555555 !important;	
+}
+	
+UL#ministerList {
+	border-width: 1px 0 0 0;
+	margin: 0;	
+}
+	
+UL#ministerList LI {
+	background: none;
+	margin:0;
+	padding:0;
+	/*NOTE neccesary to fit in grid when parent has borders;*/
+	width: 100% !important;
+	height: 60px;
+	overflow: hidden;
+	border-bottom: 1px solid #cccccc;
+	
+}
+
+UL#ministerList LI.last {
+	border-bottom: 0 !important;
+}
+	
+UL#ministerList LI A{
+	display:block;
+}
+UL#ministerList SPAN {	
+	font-weight: normal !important;
+}
+UL#ministerList SPAN.ministerListingName {
+	display: block;
+}
+UL#ministerList A:focus SPAN.ministerListingName SPAN{
+	background-color: #555555;
+}
+
+UL#ministerList SPAN.ministerListingTitle {
+	text-decoration: none !important;
+	color: #000000;
+}
+	
+UL#ministerList A:hover {
+	text-decoration: none !important;
+}
+UL#ministerList A:hover SPAN.ministerListingName{
+	text-decoration: underline !important;
+}
+	
+	
+UL#ministerList SPAN.grid_5{
+	margin-top: 0.86em;
+	width:369px;
+}
+
+DIV.ministryInfo {
+	margin-bottom: 1.29em;
+	border-top-width: 0;	
+}
+	
+DIV.noCalPuff {
+	border-top-width: 1px !important;	
+}	
+	
+DIV#content.ministry DIV.subjectList H1 {
+    margin-bottom: 0.35em;
+}
+
+DIV#body.ministry A#english,
+DIV#body.ministry A#swedish{
+    background: none;
+    text-align: right;
+    padding: 0;
+    margin-top: 0;
+    display: inline;
+    font-size: 1em;
+    font-family: verdana, sans-serif;
+}
+DIV#body.ministry DIV#content A#english,
+DIV#body.ministry DIV#content A#swedish{	
+	font-size: 0.86em;
+}
+	
+DIV#body.ministry H1#ministryTitle {
+	font-size: 1.72em;
+	margin: 0 9px 24px 0;
+}
+	
+SPAN.languageLinks {
+	text-align: right;
+}
+	
+DIV#body.ministry DIV.ministryContact{
+	background-color: #e9e9eb;
+	padding-bottom: 18px;
+	margin-bottom: 18px;
+
+}
+DIV#body.ministry DIV.ministryContact H2{
+	font-size: 1.29em;
+	margin: 0;
+	background-color: #555555;
+	padding: 12px;
+	color: #ffffff !important;	
+}
+	
+DIV#body.ministry DIV.ministryContact ADDRESS{
+	margin: 12px 12px 0 12px;
+	padding:0;
+	
+}
+DIV#body.ministry DIV.ministryContact SPAN.emailHolder{
+	padding-left: 0.8em;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+	margin: 0 12px;
+	display: block;
+}
+DIV#body.ministry DIV.ministryContact SPAN.moreContact{
+	padding-left: 0.8em;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat 0px 0.55em !important;
+	margin: 0 12px;
+	display: block;
+}
+
+	
+/* SUBJECT LIST */
+DIV.subjectList {
+	border-width: 1px 0 0 0;
+    overflow: hidden;
+    margin-bottom: 1.29em;
+}
+DIV.subjectList UL {
+    padding: 0;
+    margin: 0;
+}
+	
+DIV#tocInExpandableBox H2{
+	margin: 0;
+	color: #555555 !important;
+	font-size: 1em;
+	
+}
+DIV#tocInExpandableBox UL{
+	margin-bottom: 0;	
+}
+
+	
+/* SUBJECT START */
+
+	
+DIV.start UL.entries.half.last LI {
+    margin-right: 1em;
+}
+DIV.start DIV.sender {
+    border-left: 0;
+    padding: 1em 0 0 0;
+    margin-top: 1em;
+    color: #666 !important;
+}
+	
+H1#subjectStartTitle {
+	margin-bottom: 20px;
+	font-size: 2em;
+}
+	
+DIV#submenu DIV.ministerList {
+	padding: 0;
+	margin-bottom: 0;
+}
+	
+DIV#submenu DIV.ministerList LI {
+	padding: 0;
+	background: none;
+	padding-bottom: 12px;
+}
+	
+DIV#submenu DIV.ministerList LI.last {
+	padding-bottom: 0;
+}
+	
+DIV#submenu DIV.ministerList IMG {
+	vertical-align: middle;
+	float: left;
+}
+	
+DIV#submenu DIV.ministerList SPAN {
+	font-weight: normal;
+	padding-left: 12px;
+}
+	
+DIV#submenu DIV.ministerList SPAN.name A{
+	color: #0d8ece;
+}
+
+DIV#aboveSubjectAreasIFrame {
+	height: 35px;
+}
+	
+DIV#aboveSubjectAreasIFrame SPAN.languageLinks {
+	float: right;
+	display: block;
+	margin: 10px 9px 10px 0;
+}
+	
+DIV#aboveSubjectAreasIFrame SPAN.languageLinks A#english,
+DIV#aboveSubjectAreasIFrame SPAN.languageLinks A#swedish{
+    background: none;
+    font-family: verdana, sans-serif;
+}
+
+DIV#subjectAreasIFrame {
+	height: 360px;
+	background-color: #dddddd;
+}
+
+DIV.subjectAreasIFrameContainer {
+	margin-top: 18px;
+}
+
+	
+/* MINISTER START */
+
+DIV.articleArea {
+    margin: 0 1em 1em 0;
+}
+DIV.articleArea H1 {
+    margin-bottom: 0.7em;
+}
+DIV#content.minister DIV#col1 DIV.listPuff {
+    background: transparent;
+}
+DIV#content.minister DIV#col1 DIV.listPuff DIV {
+    padding: 0;
+    background: transparent;
+}
+DIV#content.minister DIV#col1 DIV.listPuff H1 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 0.7em;
+    margin-top: 0;
+}
+	
+DIV#fullWidthHeader {
+	background-color: #e9e9eb;	
+	padding-bottom: 36px;
+}
+DIV#aboveMinisterSlideShow {
+	height: 35px;
+}
+	
+DIV#aboveMinisterSlideShow SPAN.languageLinks {
+	float: right;
+	display: block;
+	margin: 10px 9px 10px 0;
+}
+	
+DIV#aboveMinisterSlideShow SPAN.languageLinks A#english,
+DIV#aboveMinisterSlideShow SPAN.languageLinks A#swedish{
+    background: none;
+    font-family: verdana, sans-serif;
+}
+
+DIV#ministerSlideShow {
+	height: 360px;
+	background-color: #dddddd;
+}
+
+DIV.minister DIV.contactCard SPAN.fn {
+	display: block;
+}
+	
+DIV.minister DIV.contactCard.first SPAN.fn {
+	display: none;
+}
+	
+DIV.minister DIV#contacts {
+	border-top: 1px solid #cccccc;
+}
+	
+DIV.minister DIV#contacts H2.contactHeading{
+	font-size: 1em;
+	margin: 12px 0 12px 0;
+	color: #555555;
+	
+}
+DIV.minister DIV.contactCard SPAN{
+	color: black !important;
+}
+	
+DIV.minister DIV.contactCard SPAN.fn{
+	color: #555555 !important;
+	
+}
+DIV.minister DIV.contactCard SPAN.email{
+	background: url("../../../../20130606113648/http:/www.regeringen.se/img/listDot.png") no-repeat scroll 0 0.55em transparent;
+	padding: 0 0 0 0.8em;
+}
+DIV.minister DIV.contactCard SPAN.moreContact{
+	background: url("../../../../20130606113648/http:/www.regeringen.se/img/listDot.png") no-repeat scroll 0 0.55em transparent;
+	padding: 0 0 0 0.8em;
+}
+DIV.minister DIV#submenu {
+	padding-bottom: 0;	
+	line-height: 1.1em;
+}
+	
+DIV.minister DIV#submenu UL LI{
+	line-height: 1.3em !important;
+}
+
+/* STD DEPARTMENT */
+
+DIV#stdDepartmentIFrameTop {
+	height: 360px;
+	background-color: #dddddd;
+	margin-top: 35px;
+}
+
+DIV#stdDepartmentIFrameBottom {
+	height: 360px;
+}
+
+DIV.stdDepartmentIFrameContainer {
+	margin-top: 18px;
+}
+
+
+/* ALERT PUFF */
+DIV.alert DIV.multipleLinksPuff {
+    margin-right: 1em;
+}
+
+
+/* NEWS HEADER */
+SPAN.newsHeader {
+    display: block;
+    padding: 0.25em 0.7em;
+    background: #F0F0EE;
+    margin-bottom: 1.4em;
+    font-size: 0.78em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* SHORTCUTS */
+DIV#shortcuts {
+    border: 0 !important;
+    margin-bottom: 1.4em;
+    overflow: hidden;
+}
+DIV#shortcuts A {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.2;
+    color: #0D8ECE !important;
+}
+DIV#shortcuts A:visited{
+    color: #906 !important;
+}
+DIV#shortcuts A:focus, DIV#shortcuts A:active {
+    background-color: transparent !important;
+    text-decoration: underline !important;
+} 
+DIV#shortcuts IMG {
+    display: block;
+    margin-bottom: 0.35em;
+}
+DIV#shortcut1 {
+    float: left;
+    overflow: hidden;
+    width: 48%;
+}
+DIV#shortcut2 {
+    float: left;
+    overflow: hidden;
+    width: 52%;
+}
+DIV#shortcut2 A {
+    padding-left: 1em;
+}
+DIV#col2 DIV#shortcut3 {
+    border: 0 !important;
+    margin: 0 0 1.4em 0;
+    overflow: hidden;
+}
+DIV#shortcut3 A {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.2;
+    color: #0D8ECE !important;
+}
+DIV#shortcut3 A:visited{
+    color: #906 !important;
+}
+DIV#shortcut3 A:focus, DIV#shortcut3 A:active {
+    background-color: transparent !important;
+    text-decoration: underline !important;
+} 
+DIV#shortcut3 IMG {
+    display: block;
+    margin-bottom: 0.35em;
+}
+
+DIV#shortcut3 {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+DIV#shortcut3 A {
+    padding-left: 1em;
+}
+
+
+/* PAGE TOOLS */
+DIV#pageHeader DIV#pageTools UL,
+DIV#pageHeader DIV#pageTools P {
+    margin-left: 1em;
+}
+DIV#pageHeader DIV#pageTools P {
+    margin-bottom: 0;
+}
+DIV#pageTools UL {
+    padding: 0;
+    list-style-type: none;
+    padding-top: 0.1em;
+}
+DIV#pageTools UL LI {
+
+	margin: 0 1em 0 0;
+	background: none;
+	padding:0 0 0.35em 0;
+	
+}
+
+
+
+/* MINISTER LIST */
+DIV.ministerList {
+    margin-bottom: 2em;
+}
+DIV.ministerList H1 {
+    font-size: 1.2em;
+    line-height: 1.3;
+    margin-bottom: 0.35em;
+}
+DIV.ministerList DIV {
+    margin: 0 1em 0.7em 0 !important;
+    clear: both;
+    overflow: hidden;
+}
+DIV.ministerList DIV IMG {
+    float: left;
+    margin-right: 0.7em;
+}
+	
+
+
+
+/* IMAGE ARCHIVE */
+DIV.imageArchive DIV.rightsDisclaimer {
+	margin-top: 0;
+	border-top: 1px solid #cccccc;
+	font-size: 18px;
+	color: #555555;
+	line-height: 1.23em;
+}
+	
+DIV.imageArchive DIV.rightsDisclaimer H2{
+	margin-top: 0.65em;
+	font-weight: normal;
+	font-size: 18px;
+	color: #000000;
+}
+DIV.imageArchive DIV.multipleLinksPuff {
+	font-family: georgia, serif;
+	margin-bottom: 0;
+}
+	
+DIV.imageArchive DIV.multipleLinksPuff IMG {
+	margin-top: 12px;
+    margin-bottom: 10px;
+}
+	
+DIV.imageArchive P.ps {
+	font-family: verdana, sans-seerif;
+	color: #555555;	
+	margin-bottom: 14px;
+	
+}
+DIV.imageArchive DIV.multipleLinksPuff H2.title {
+	margin-top: 10px;
+    clear: none;
+    font-weight: normal;
+    font-size: 1.16667em;
+}
+DIV.imageArchive DIV.multipleLinksPuff P.description {
+	color: #555555;
+	margin-bottom: 0;
+	font-size: 1.16667em;
+}
+DIV.imageArchive DIV.multipleLinksPuff {
+    overflow: hidden;
+}
+DIV.imageArchive DIV.multipleLinksPuff UL {
+    margin-bottom: 14px;
+}
+
+
+/* LEGISLATION STEP */
+UL#legislationSteps {
+    margin: 1em 0;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+}
+UL#legislationSteps LI {
+    width: 14.25%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+	background: none;
+}
+UL#legislationSteps LI A {
+    display: block;
+    background: white;
+    margin-right: 0.35em;
+    text-align: center;
+    padding: 0.35em 0;
+}
+UL#legislationSteps LI.last A {
+    margin-right: 0;
+}
+UL#legislationSteps LI.last {
+    width: 13%;
+}
+UL#legislationSteps LI.active A {
+    background: #C6F000 !important;
+    color: black;
+}
+DIV.legislationSteps H2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+DIV.legislationSteps H1,
+DIV.legislationSteps H2,
+DIV.legislationSteps P {
+    color: black;
+}
+DIV#content.legislationSteps UL#legislationSteps {
+    margin-top: 0;
+}
+DIV#content.legislationSteps UL#legislationSteps LI A {
+    background: #F0F0EE;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-top: 1em;
+}
+
+A.showMoreLink {
+	display: block;
+    padding-left: 1.1em;
+	margin-bottom: 0.7em;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/listItem_more.gif) no-repeat 0px 2px;
+}
+
+
+/* LEGISLATION STEP NEW 100602*/
+
+.allowOverflow {
+    overflow: visible !important;
+}
+
+.giveLayout {
+	zoom: 1;
+}
+
+
+DIV#newLegislationSteps {
+	margin: 0 0 14px 0 !important;
+	padding: 0 0 0 0;
+
+}
+
+DIV#newLegislationSteps DIV#legPrint{
+	display: none;
+}
+
+DIV#newLegislationSteps DIV#headingWrapper {
+	margin: 0 0 1px 0;
+	height: 35px;
+	background-color: #E9E9EB;
+
+}
+
+DIV#newLegislationSteps H2{
+
+	background: #E5E2DB;
+	margin: 0 0 0 0;
+	padding: 8px 0 8px 8px;
+	overflow: hidden;
+}
+
+
+DIV#newLegislationSteps DIV.step {
+	position: relative;
+	padding: 0 0 0 0;
+	background: #CCCCCC;
+	margin: 0 0 1px 0;	
+	min-width: 0;
+	zoom:1;
+	height: 35px;
+
+}
+	
+DIV#newLegislationSteps DIV.step IMG.graPil{
+	position: absolute;
+	top: 0;
+	right: 221px;
+	z-index: 1001;
+	display: none;
+}
+
+DIV#newLegislationSteps DIV.step IMG.vitPil{
+	float: right;
+	margin: 0 15px 0 0;
+
+}
+
+DIV#newLegislationSteps DIV.step A.heading{
+	float: left;
+	margin: 7px 0 0 8px;
+	text-decoration: none;
+	color: black;
+	overflow: visible;
+	cursor: default;
+}
+
+DIV#newLegislationSteps DIV.step A.headingactive{
+	float: left;
+	margin: 0 0 0 8px;
+	text-decoration: none;
+	color: white;
+	overflow: visible;
+	cursor: default;
+	line-height: 35px;
+}
+
+DIV#newLegislationSteps DIV.clearFloat {
+	clear: both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+DIV#newLegislationSteps DIV.step.active {
+	background: #555555;
+}
+
+
+DIV#newLegislationSteps DIV.popup {
+	width: 400px;
+	display: none;
+	position: absolute;
+	right: 233px;
+	top: -30px;
+	margin: 0 0 30px 0;
+	background: white;
+	z-index:1000;
+
+}
+	
+
+DIV#newLegislationSteps DIV.popup DIV.legStepOverlap {
+	
+	float:right;
+	background: #cccccc;;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 4px;
+	position: relative;
+	left: 1px;
+	
+}
+	
+DIV#newLegislationSteps DIV.active DIV.popup DIV.legStepOverlap {
+	background: #555555;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.legStepOverlap IMG {
+	margin: 14px 0 0 0;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.heading {
+    font-family: georgia, serif;
+	margin: 0 0 0 0;
+	padding: 0 0 0 7px;
+	height: 35px;
+	line-height: 35px;
+}
+DIV#newLegislationSteps DIV.popup DIV.heading SPAN.topHeadingWrapper {
+	float: left;	
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox {
+	border-style:solid;
+	border-width:1px;
+	border-top: none;
+	padding: 10px 10px 6px 10px;
+	margin: 0 0 0 0;
+	zoom: 1;
+	color: #000000;
+}
+	
+DIV#newLegislationSteps DIV.popup DIV.popBox H3{
+	margin: 0px 0 0px 0;
+}
+
+	
+DIV#newLegislationSteps DIV.popup DIV.popBox SPAN.date.info {
+	display: block;
+	color: #555555;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox  LI {
+	margin-bottom: 0.8em;
+	padding: 0;
+	list-style-type: none;
+	background: none;
+
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox  LI .last{
+	margin-bottom: 0;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox LI.more{
+	display: none;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox  DIV.links {
+	margin-bottom: 0.7em;
+}
+DIV#newLegislationSteps DIV.popup DIV.popBox  LI.fact,
+DIV#newLegislationSteps DIV.popup DIV.popBox  DIV.links LI{
+	list-style-type: none;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listDot.png) no-repeat scroll 0em 0.55em;
+	padding:0 0 0.0em 0.8em;
+	margin: 0;
+}
+DIV#newLegislationSteps DIV.popup DIV.popBox  DIV.links LI.last{
+	padding-bottom: 0;
+}
+
+DIV#newLegislationSteps DIV.active DIV.popup DIV.blueConsistent{
+	color: white !important;
+	background: #555555 !important;
+}
+
+DIV#newLegislationSteps DIV.active DIV.popup DIV.blueBorder{
+	border-color: #555555;
+	border-bottom: none;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.blueConsistent,
+DIV#newLegislationSteps DIV.popup DIV.greenConsistent{
+	color: black;
+	background: #CCCCCC;
+}
+DIV#newLegislationSteps DIV.popup DIV.blueBorder,
+DIV#newLegislationSteps DIV.popup DIV.greenBorder{
+	border-color: #CCCCCC;
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox DIV.links {
+	margin-left: 0;
+	
+}
+
+DIV#newLegislationSteps DIV.popup DIV.popBox DIV.links UL{
+	padding-left: 0;
+}
+
+
+
+/* ARCHIVE CHECKOUT/CART ETC */
+DIV#content.archiveCheckout TABLE {
+    margin-top: 0;
+}
+DIV#content.archiveCheckout TD {
+    border: 0;
+    padding-left: 0.7em;
+}
+DIV#content.archiveCheckout TD INPUT {
+    text-align: right;
+}
+TD.nr {
+    vertical-align: top;
+    width: 2em;
+    padding-right: 0.7em;
+    white-space: nowrap;
+}
+TD.nr.long {
+    width: 3em;
+}
+DIV#content.archiveCheckout.confirmation TD {
+    padding: 0;
+}
+DIV#content.archiveCheckout.confirmation A.back {
+    margin-top: 2em;
+}
+
+
+/* WEB CAST */
+DIV.mediaPlayer{
+	margin-bottom: 1em;
+	padding: 0;	
+}
+
+DIV.mediaPlayer DIV.noFlash{
+	padding: 1.2em;	
+}
+DIV.mediaPlayer DIV.noFlash DIV{
+	height: 166px;
+	color: #fff;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/noflash_back.png);
+	padding: 1em;
+}
+DIV.mediaPlayer DIV.noFlash DIV H2{
+	margin-top:0;
+	font-weight: bold;
+}
+DIV.mediaPlayer DIV.noFlash DIV A{
+	color: #fff !important;
+}
+
+DIV#content.webTransmission #col1{
+	width: 450px !important;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup{
+	border-top: 4px solid #F0F0EE;
+	margin-top: 1.5em;
+	padding-top:.7em;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff{
+	overflow: hidden;
+	margin-top: .5em;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup .mediaPlayerPuff{
+	border-top: 4px solid #F0F0EE;
+	padding: .9em .7em .5em;
+	margin-top: 0 !important;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup .first{
+	border-color: #fff;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup .active{
+	background-color:#F0F0EE;
+	border-color: #F0F0EE;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff A {
+	display: block;
+	background:transparent url(../../../../20130606113648/http:/www.regeringen.se/img/listItem_grey.gif) no-repeat scroll 0 2px;
+	padding:0 0 .35em 1em;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff IMG{
+	float: left;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup .containsImage DIV{
+	float: right;
+	width: 17.2em;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff h2{
+	margin:0;
+	font-size: 1em;
+	font-weight: bold;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff h2 A {
+	background:none;
+	padding:0;
+	margin:0 !important;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff H3{
+	margin: .5em 0 0;
+	clear: both;
+	font-weight: normal;
+	font-style: italic;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup A{
+	margin:.5em 0 0;
+}
+DIV#content.webTransmission DIV.mediaPlayerGroup P{
+	clear: both;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff UL{
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff UL LI{
+	background: transparent url(../../../../20130606113648/http:/www.regeringen.se/img/langListItem_black.gif) no-repeat scroll left center;
+	float:left;
+	margin:0 .45em 0 0 !important;
+	padding:0 0 0 .45em;
+	white-space:nowrap;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff UL LI.first{
+	background: none;
+	padding: 0;
+}
+DIV#content.webTransmission DIV.mediaPlayerPuff UL LI A{
+	background:none;
+	padding:0;
+	margin:0;
+}
+DIV#content.webTransmission DIV.multipleLinksPuff UL LI.media {
+    margin-bottom: 0.4em !important;
+}
+DIV#content.webTransmission DIV#col1 DIV.multipleLinksPuff {
+    margin-top: 1.4em;
+}
+
+/* new Webcast */
+/*base */
+.media-player, 
+.media-player .mediaPlayer, 
+.media-player .additionalOptions { 
+	width: 450px; 
+	margin: 0 !important; 
+	padding: 0 !important; 
+	overflow: hidden; 
+}
+.media-player .mediaPlayer, 
+.media-player .additionalOptions { 
+	margin-bottom: 0px !important;
+}
+
+.media-player {	
+	margin-bottom: 14px !important; 
+}
+
+.mediaPlayer { background: #000; }
+.media-player.popup { width: 100%; height: 100%; } /* max width and height if popup */
+
+/*resets */
+.media-player ul, 
+.media-player ul li, 
+.media-player textarea { padding: 0; margin: 0; }
+.media-player .optionMenu a, 
+.media-player .movies-listing a { text-decoration: none; color: #000; }
+.media-player .video img, 
+.media-player object,
+.media-player embed { display: block; }
+.media-player div.noVideo { background: #000; color: #fff; display: block; padding: 20px; }
+
+/*options menu */
+.media-player .optionMenu { width: 450px; overflow: hidden; height: 36px; border-bottom: 1px solid #fff; position: relative; }
+.media-player .optionMenu ul { width: 452px; margin: 0 !important; }
+.media-player .optionMenu li { height: 36px; width: 112px; float: left; position: relative; padding: 0; margin: 0; vertical-align: middle; display: table; text-align: center; margin: 0 1px 0 0 !important; overflow:hidden; }
+.media-player .optionMenu li a { vertical-align: middle; display: table-cell; padding: 0; margin: 0; background: #e9e9eb;  }
+.media-player .optionMenu li.active a,
+.media-player .optionMenu li a:focus, 
+.media-player .optionMenu li a:hover, 
+.media-player .optionMenu li a:active { background: #ccc !important; color: #000 !important; }
+.media-player .optionMenu li.inactive a, 
+.media-player .optionMenu li.inactive a:hover, 
+.media-player .optionMenu li.inactive a:active, 
+.media-player .optionMenu li.inactive a:focus { color: #d2d2d2 !important; background: #e9e9eb !important; cursor: default; }
+
+/*hide the sections not active */
+.media-player div.share-movie, 
+.media-player div.embed-movie, 
+.media-player div.download-movie { display: none; }
+
+/*related movies */
+.media-player .movies-listing { background: #E9E9EB; }
+.media-player .movies-listing ul { max-height: 276px; overflow-y: auto; margin: 0 1px !important; background: #fff; }
+.media-player .movies-listing .movie { cursor: pointer; clear: left; margin: 4px 0; overflow: hidden; }
+.media-player .movies-listing .movie:first-child { margin-top: 0; }
+.media-player .movies-listing .movie.active { background: #e9e9eb; cursor: default; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: -1px 0 3px 0; } /*  active movie */
+.media-player .movies-listing .image { width: 138px; height: 78px; display: block; float: left; padding: 5px 0; }
+.media-player .movies-listing .info { float: left; width: 269px; margin: 0 0 0 20px; color: #555555; font-size: 11px; line-height: 14px; padding: 12px 0 6px 0; font-family: 'verdana', 'arial', sans-serif;}
+.media-player .movies-listing .info h3 { color: #000; font-weight: normal; display: inline; }
+
+/*movies archive link */
+.media-player .archive { display: list-item; height: 36px; width: 100%; float: left; padding: 0; margin: 0; vertical-align: middle; display: table; text-align: center; }
+.media-player .archive a { color: #000; vertical-align: middle; display: table-cell; background: #e9e9eb; }
+.media-player .archive a:hover { background: #ccc; }
+
+/*sharing movies */  
+.media-player div.share-movie { background: #e9e9eb; }
+.media-player .share-movie h4 { display: block; background: #ccc; font: 14px/1em georgia, serif; padding: 12px 0 12px 25px; clear: both; margin: 0; }
+.media-player .share-movie .shareApp h4 { margin: 18px 0 10px 0; }
+.media-player .share-movie .shareLink input { border: none; background: #fff; padding: 7px 12px; width: 377px; font-family: 'verdana', 'arial', sans-serif; margin: 20px 13px 0 25px }
+.media-player .share-movie a { font: 14px/1em georgia, serif; margin: 0 5px 0 0; }
+.media-player .share-movie a img { vertical-align: top; padding: 1px 0 0 0; }
+.media-player .share-movie a.addthis_button_facebook { margin-left: 25px; }
+.media-player .share-movie a.addthis_button img { margin-right: 5px; }
+.media-player .share-movie .shareApp { padding: 0 0 8px 0; }
+
+/*embed code */
+.media-player .embed-movie textarea { width: 424px; height: 120px; background: #fff; border: none; border-left: 1px solid #ccc; border-right: 1px solid #ccc; padding: 12px; display: block; font:  12px/1em monospace; }
+.media-player .embed-movie .options { background: #fff; overflow: hidden; height: 36px; }
+.media-player .embed-movie .options ul { width: 452px; height: 40px; margin: 0 !important;}
+.media-player .embed-movie .options li { display: block; height: 36px; float: left; padding: 0; margin: 0; vertical-align: middle; display: table; text-align: center; margin: 0 1px 0 0; background: #ccc; width: 100%; vertical-align: middle; }
+.media-player .embed-movie .options li a { color: #000; vertical-align: middle; display: table-cell; background: #e9e9eb; }
+.media-player .embed-movie .options li a:hover, 
+.media-player .embed-movie .options li a.active { background: #ccc; }
+.media-player .embed-movie .proportions { overflow: hidden; display: none; background: #e9e9eb; padding: 6px 13px; }
+.media-player .embed-movie .proportions label { margin-right: 6px; }
+.media-player .embed-movie input { width: 36px; height: 10px; background: #fff; border: none; font: 11px/1em 'verdana', 'arial', sans-serif; padding: 7px 6px;  }
+
+/*download movie */
+.media-player div.download-movie { border: 1px solid #e9e9eb; border-top: none; padding: 10px 20px }
+
+/*popup styling */
+.media-player.popup .additionalOptions { display: none; }
+
+/*no javascript styles */
+.media-player.no-js .movies-listing .info h3 a { color: #06C; }
+.media-player.no-js .optionMenu li { display: none; }
+.media-player.no-js .optionMenu li.active { display: block; width: 100%; }
+.media-player.no-js .optionMenu a.movies-listing { display: block; width: 100%; height: 16px; padding: 10px; text-align: left; cursor: default; }
+.media-player.no-js .movies-listing .movie { cursor: default; }
+
+/*no flash */
+.media-player .moreOptionsNoFlash { display: table-cell; color: #000; padding: 5px 30px 5px 10px; background: #e9e9eb; background: #e9e9eb url(../../../../20130606113648/http:/www.regeringen.se/img/mediaplayer_icons.png) no-repeat 100% -182px; }
+.media-player.live  div.noVideo { color: #fff; padding: 20px; }
+.media-player  div.noVideo h2{ color: #fff !important; }
+.media-player .infoLayer { background: #000; color: #fff; position: absolute; z-index: 100; display: none; }
+.media-player .infoLayer p { padding: 20px; }
+.media-player .live-notice { background: transparent url(../../../../20130606113648/http:/www.regeringen.se/img/mediaplayer_icons.png) no-repeat -4px -384px; display: block; padding: 0 0 3px 11px; }
+
+/* STORY */
+DIV#content.story DIV.group {
+    margin-top: 1.4em;
+    border-top: 4px solid #F0F0EE;
+}
+DIV#content.story DIV.group DIV.notice.last {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* STORY MENU */
+LI A.current {
+    color: #666;
+}
+DIV.storyMenu IMG {
+    margin: 0.6em 1em 0.6em 0;
+}
+DIV.storyMenu {
+    border: 4px solid #F0F0EE;
+    border-right: 0;
+    border-bottom: 0;
+    padding: 0.5em 0 0 0.6em;
+    margin-right: 1em;
+}
+DIV.storyMenu LI.current {
+    font-weight: bold;
+    color: black;
+}
+DIV.storyMenu H2 {
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+DIV.storyMenu H3 {
+    margin: 0.7em 0 0 0.4em;
+}
+P.storyHeader {
+    border-bottom: 4px solid #F0F0EE;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.35em 0;
+    margin-bottom: 2.1em;
+    color: #666;
+}
+
+/* ADVANCED LIST IN ARTICLES */
+UL.advanced LI SPAN,
+OL.advanced LI SPAN {
+    display: block;
+    font-weight: normal;
+}
+UL.advanced LI,
+OL.advanced LI {
+    font-weight: bold;
+}
+
+
+/* FILE LIST ICONS */
+/*
+LI.pdf,
+DIV.multipleLinksPuff LI.pdf {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_pdf.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.media,
+DIV.multipleLinksPuff LI.media {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_media.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.word,
+DIV.multipleLinksPuff LI.word {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_word.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.excel,
+DIV.multipleLinksPuff LI.excel {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_excel.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.powerpoint,
+DIV.multipleLinksPuff LI.powerpoint {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_powerpoint.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.img,
+DIV.multipleLinksPuff LI.img {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_img.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+LI.misc,
+DIV.multipleLinksPuff LI.misc {
+    background: url(/web/20130606113648/http://www.regeringen.se/img/fileIcon_misc.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}*/
+
+
+/* TOOLS */
+.noTopBorder,
+.noTopBorder UL#tools {
+	padding-top: 0!important;
+}
+.noTopBorder DIV {
+	border-top: 0 !important;
+}
+	
+
+UL#tools {
+    list-style-type: none;
+    padding: 0.7em 0 1.05em 0;
+    font-style: normal;
+    border-bottom: 1px solid #cccccc;
+}
+DIV.noBottomBorder UL#tools {
+	border-bottom: 0;
+}	
+	
+UL#tools LI {
+    margin: 0 1em 0 0 !important;
+	padding: 0;
+	list-style-type: none;
+	background: none;
+}
+UL#tools LI A {
+    padding-left: 1.6em;
+    white-space: nowrap;
+}
+UL#tools LI A#print {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/icon_print.gif) 0px 1px no-repeat;
+}
+UL#tools LI A#dictionary {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/icon_dictionary.gif) 0px 1px no-repeat;
+}
+UL#tools LI A#mail {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/icon_mail.gif) 0px 2px no-repeat;
+}
+UL#tools LI A.addThis {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+UL#tools LI A.addThisAbout {
+	padding-left: 6px;
+}
+
+UL#tools LI A.addThis IMG{
+	margin-right: 0.4em;
+	margin-top: 0.7em;
+	float: none;
+}
+
+UL#tools LI A:visited {
+       color: #990066;
+}
+
+UL#tools LI A:hover {
+      text-decoration: underline;
+}
+
+
+
+/* FORMS */
+FORM.area {
+    background: #E9E9EB;
+    padding: 0.7em 0.7em 0.9em 0.7em;
+    margin-bottom: 2.1em;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    overflow: hidden;
+}
+FORM.area.big {
+    background: none;
+    border: none;
+    padding: 0;
+}
+FORM.area LABEL {
+    clear: both;
+    display: block;
+    margin-top: 0.35em;
+}
+FORM.area DIV.inline LABEL {
+    display: inline !important;
+    margin-right: 0.5em !important;
+}
+INPUT.file,
+INPUT.submit,
+INPUT.cancel {
+    width: auto !important;
+}
+FORM.area TEXTAREA {
+    width: 94%;
+}
+FORM.area INPUT {
+    width: 45%;
+}
+DIV#page.popup FORM.area INPUT {
+    width: 70%;
+}
+FORM.area INPUT[class="ctrlf"], DIV#page.popup FORM.area INPUT[class="ctrlf"] {
+    display:none;
+}
+FORM.area INPUT.submit {
+    display: block;
+    margin-top: 12px;
+}
+FORM.area DIV.singleField {
+    margin-bottom: 1.4em;
+}
+FORM.area DIV.actions {
+    margin-top: 1.4em;
+}
+FORM.area DIV.inline INPUT.submit,
+FORM.area DIV.actions INPUT.submit,
+FORM.area DIV.actions INPUT.cancel {
+    display: inline !important;
+    margin-top: 0 !important;
+}
+FORM.area DIV.actions INPUT.cancel {
+    margin-right: 1em;
+}
+FORM.area DIV.half {
+    float: left;
+    width: 45%;
+    margin-bottom: 0.35em;
+    padding-right: 1em;
+}
+FORM.area DIV.half INPUT {
+    width: 100%;
+}
+FORM.area P.notice {
+    margin-bottom: 0;
+    margin-top: 0.35em;
+}
+FORM.area DIV.checkbox INPUT,
+FORM.area DIV.radio INPUT {
+    width: auto !important;
+}
+FORM.area DIV.checkbox LABEL,
+FORM.area DIV.radio LABEL {
+    display: inline;
+}
+FIELDSET {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 1.4em;
+    border: 4px solid #F0F0EE;
+    padding: .7em;
+}
+FIELDSET DIV.checkbox {
+    text-indent: -25px;
+    padding-left: 25px;
+}
+LEGEND {
+    font-size: 0.78em;
+    font-weight: bold;
+    color: black;
+}
+OPTGROUP {
+    font-style: normal;
+
+}
+
+	
+/* CONTACT */
+	
+DIV#columnHeader.aboveSubmenu H1{
+	font-size: 24px;
+	margin-bottom: 0;	
+}
+	
+DIV#content.contact DIV.contact {
+	font-size: 18px;
+	margin-bottom: 0;
+	line-height: 1.15em;
+}
+DIV#content.contact DIV.contactList {
+    margin-bottom: 0.7em;
+    padding-bottom: 0.7em;
+    border-top: 1px solid #cccccc;
+}
+	
+DIV#content.contact DIV.group DIV.subGroup {
+    border-top: 1px solid #cccccc;
+}
+DIV#content.contact DIV.group DIV.subGroup H2{
+	margin-top: 12px;
+}
+DIV#content.contact DIV.group DIV.subGroup.first {
+    border-top: 0;
+}
+DIV#content.contact ADDRESS.vcard SPAN.org {
+    font-style: normal;
+    margin-bottom: 0.35em;
+    display: block;
+}
+
+DIV#content.contact DIV.contactList H2 {
+    font-size: 18px;
+    font-style: normal;
+    margin: 12px 0 12px 0;
+    display: block;
+    line-height: 1.1em;
+}
+DIV#content.contact DIV.contactList H2  {
+    color: #666;
+}
+DIV#content.contact div.contactList h2 span{
+	
+	display: block;
+	margin-top: .3em
+}
+DIV#content.contact DIV#col1 LI {
+    margin-bottom: 0;
+}
+
+DIV#content.contact DIV#col1 DIV.multipleLinksPuff {
+    margin-top: 1.4em;
+}
+
+
+/* CUSTOMIZE */
+DIV#content.customize FORM.area DIV.group {
+    overflow: hidden;
+    clear: left;
+    margin-bottom: 1em;
+}
+DIV#content.customize FORM.area DIV.item {
+    float: left;
+    width: 32%;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+    border-bottom: 0;
+}
+DIV#content.customize DIV.item DIV,
+DIV#content.customize DIV.item H3 {
+    margin-right: 0.5em;
+}
+
+DIV#content.customize H3 {
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+DIV#content.customize FORM.area {
+    font-size: 1.1em;
+    margin-bottom: 16px !important;
+}
+DIV#content.customize FORM.area INPUT.submit {
+    clear: both;
+}
+DIV#content.customize UL LI SPAN.key {
+    float: left;
+    display: block;
+    width: 1.4em;
+    padding: 0.35em;
+    background: #F0F0EE;
+    border: 1px solid #cccccc;
+    border-right: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
+    margin-right: 0.35em;
+    text-align: center;
+}
+DIV#content.customize DIV.shortcuts UL {
+    list-style-type: none;
+    padding-left: 0;
+}
+DIV#content.customize DIV.shortcuts UL LI SPAN {
+    display: block;
+    padding: 0.35em;
+}
+DIV#content.customize DIV.shortcuts UL LI {
+    width: 49.9%;
+    overflow: hidden;
+    margin-bottom: 0.857em;
+	background: none;
+	padding: 0 0 0 0;
+}
+DIV#content.customize DIV.item {
+    overflow: hidden;
+    padding-bottom: 0.7em;
+    margin-bottom: 0.9em;
+    border-bottom: 1px solid #cccccc;
+}
+DIV#content.customize DIV.item.last {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+DIV#content.customize DIV.actions BUTTON {
+    float: left;
+    margin-bottom: 0.7em;
+}
+DIV#content.customize DIV.actions A {
+    display: block;
+    float: left;
+    padding: 0.2em 0 0 0.35em;
+}
+DIV#content.customize DIV.actions {
+    clear: both;
+    overflow: hidden;
+}
+DIV#content.customize DIV.actions P {
+    clear: both;
+    margin: 0;
+}
+
+BODY#previewBody {
+    text-align: left;
+    background: white none;
+   
+}
+BODY#previewBody DIV#content {
+    width: auto;
+    min-width: 0;
+	padding:0;
+    float: none;
+    margin: 0;
+    border: 1px solid #cccccc;
+}
+BODY#previewBody H2 {
+    margin-top: 0;
+	padding: 12px;
+    font-size: 0.86667em;
+    background-color: #e9e9eb;
+	font-family: verdana, sans-serif;
+}	
+	
+BODY#previewBody DIV#content P#demoText,
+BODY#previewBody DIV#content DIV#demoPuff {
+    border: 0;
+	padding: 0 0.8667em 0.6667em 0.8667em;
+}
+BODY#previewBody DIV#content DIV#demoPuff {
+    font-family: verdana, sans-serif;
+    font-size: 0.857em;
+    margin-bottom: 10px;
+}
+BODY#previewBody DIV#content DIV#demoPuff H1{
+    font-size: 1em;
+}
+	
+BODY#previewBody DIV#page {
+    float: none;
+    padding: 0;
+    min-width: 0;
+    margin: 0;
+    background: white none;
+}
+BODY#previewBody DIV#body {
+    padding: 0 !important;
+    background: white none;
+    margin-top: 0;
+}
+BODY#previewBody DIV.help {
+	padding:0;
+}
+BODY#previewBody DIV.help H3 {
+    margin-top: 0;
+	padding: 0.8667em;
+	font-weight: bold;
+}
+
+
+/* ARCHIVE */
+	
+FORM#archiveSearch {
+	padding: 14px 18px 18px 18px;
+	background-color: #e9e9eb;	
+	
+}
+FORM#archiveSearch LEGEND,	
+FORM#archiveSearch FIELDSET {
+	
+	border: 0;
+	padding: 0;
+	margin:0;	
+}
+
+
+DIV.archive DIV#browsing DIV.group H3 {
+	font-size: 18px;
+	line-height: 1.5em;
+	font-weight: normal;
+	padding: 0;
+	margin-right: 18px;
+	width: 198px;
+	float:left;
+	position: relative;
+}
+	
+
+	
+DIV.archive DIV#browsing UL {
+	padding: 0;
+	width: 432px;
+	float: right;
+	position: relative;
+}
+	
+	
+FORM#archiveSearch INPUT.submit {
+    display: inline;
+    margin: 0 0 0 0.7em;
+}
+FORM#archiveSearch INPUT#searchPublicationText {
+    width: 75%;
+}
+	
+DIV.archive DIV#columnHeader {
+	margin-bottom: 10px;
+	
+}
+DIV.archive DIV.help {
+	border-top: 1px solid #cccccc;
+    padding-top: 8px;
+}
+	
+DIV.archive P.lead {
+    border-top: 1px solid #cccccc;
+    padding-top: 8px;
+}
+	
+DIV.archive DIV.group {
+    margin: 0 2em 1.4em 0;
+    
+}
+DIV.archive DIV.group H3 {
+	margin-top: 0;
+}
+DIV.archive DIV.group UL {
+    color: #666;
+}
+DIV.archive DIV#col1 LI {
+    margin-bottom: 0;
+}
+
+LEGEND#searchHeading {
+    margin-bottom: 1em;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: 0;
+    width:66px !important;
+}
+	
+DIV#searchOptionWrapper {
+	float: right !important;
+	margin-right:150px;
+	padding-top: 0;
+}
+
+#advanceSearchParentLink{ 
+	background: url("../../../../20130606113648/http:/www.regeringen.se/img/menuItem_article.gif") no-repeat scroll 0 -5px transparent; 
+	list-style: none; /* though list-style-type should still work */ 
+	margin-top: 4px; 
+	padding-bottom: 4px; 
+	padding-left:7px; 
+	padding-right: 7px; 
+	text-align: left; 
+	position: absolute; 
+	float:right; 
+	widht:100px; 
+	right:-100px; top: 0px;
+} 
+	
+DIV.archive DIV.box.facts H2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
+}
+DIV.archive DIV.box.facts {
+	padding-left: 18px;	
+}
+DIV.archive DIV.box.facts UL {
+
+    margin-bottom: 0.7em;
+}
+DIV.archive DIV.box.facts LI {
+    list-style-type: none;
+    margin-bottom: 6px;
+}
+	
+DIV.archive DIV.help {
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+}
+DIV.archive DIV.help P{
+	margin-bottom: 3px;
+}
+	
+DIV.archive DIV.categoriesSelected H2{
+	font-size: 18px;
+	color: #555555;
+}
+DIV.archive DIV.categoriesSelected UL LI{
+	font-size: 18px;
+}
+	
+
+DIV.archive DIV#browsing {
+    padding: 14px 18px 18px 18px;
+    background-color: #e9e9eb;	
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    color: #000000;
+}
+DIV.archive DIV#browsing P.ps{
+    color: #000000;
+}
+DIV.archive DIV#browsing DIV.group {
+	margin: 10px 0 0 0;
+	padding: 6px 0 0 0 !important;
+	border-top: 1px solid #cccccc;
+}
+DIV.archive DIV#browsing H2 {
+    margin-top: 0;
+}
+DIV.archive DIV#browsing UL {
+    margin-bottom: 0;
+}
+
+
+
+/* EMBASSIES */
+DIV#content.embassyCountry H3,
+DIV#content.embassy H2 {
+    font-size: 1em;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 1.4em;
+    margin-bottom: 0;
+}
+DIV#content.embassyCountry DIV.box UL {
+    list-style-type: square !important;
+    padding-left: 1em;
+}
+
+
+/* CALENDAR */
+/*DIV#content.calendar DIV.vcalendar.week H3,
+DIV#content.calendar DIV.vcalendar.day H2 {
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 1.4em;
+    margin-bottom: 0.7em;
+    background: #F0F0EE;
+    padding: 0.35em 0.7em;
+}
+DIV#content.calendar H2 {
+    margin-bottom: 0.7em;
+}
+*/
+	
+DIV#content.calendar DIV.vcalendar DIV.group{
+    padding: 0 0 14px 0;
+    border-bottom: 1px solid #cccccc;
+}
+	
+DIV#content.calendar DIV.vcalendar H2 {
+    margin: 12px 0 18px 0;
+}
+
+	
+DIV#calendarNavigation {
+	border-top:	1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	padding: 12px 0 12px 0;
+	font-weight: normal;
+}
+	
+
+UL#rssLink {
+	margin: 2px 0 14px 0;
+}	
+	
+FORM#calendarFilter {
+	margin-bottom: 18px;
+}
+	
+FORM#calendarFilter INPUT {
+	float: left;
+	width: 16px;
+	margin: 0;
+	padding: 0;
+}
+	
+FORM#calendarFilter LABEL {
+	width: 178px;
+	margin: 0;
+	padding: 0 0 5px 22px;
+	display: block;
+	color: #555555;
+}
+	
+FORM#calendarFilter SPAN.filterSelected LABEL {
+	color: #000000;
+}
+	
+DIV#calendarInfo {
+	
+	margin-top: 18px;
+	border-top: 1px solid #cccccc;	
+}
+DIV#calendarInfo H3{
+	margin-top: 8px;
+}
+	
+SPAN.boxButton {
+	background-color: #e9e9eb;
+	padding: 12px 0 12px 0;
+	text-align: center;
+	color: #555555;
+	border: 1px solid #cccccc;
+	cursor: pointer;
+	display: block;
+}
+SPAN.boxButton.grid_3 {
+	width: 214px;
+}
+	
+	
+	
+SPAN.modeLink {
+	float: left;
+	padding: 12px;
+	margin-right: 6px;
+	cursor: normal;
+	border-bottom: 0;
+}
+SPAN.modeLink.inactive{
+	text-decoration: underline;
+	color: #555555;
+	cursor: normal;
+}	
+SPAN.modeLink A{
+	color: #555555;
+	cursor: pointer;
+
+}	
+		
+	
+	
+SPAN#todayButton {
+	display: block;
+	width: 64px;
+	border-bottom: 0;	
+	cursor: pointer;
+}
+SPAN#todayButton A{
+	color: #555555;
+}	
+	
+	
+DIV#datepicker {
+	font-weight: normal;	
+}
+H3.filterCalendarHeading {
+	font-size: 1.29em;
+	margin-bottom: 8px;
+}
+	
+
+	
+
+DIV.ui-datepicker-header {
+	text-align: center;
+	padding: 12px 0 12px 0;
+	border-top: 1px solid #cccccc;
+}
+
+DIV.ui-datepicker-header DIV.ui-datepicker-title,
+DIV.ui-datepicker-header A.ui-datepicker-prev SPAN,
+DIV.ui-datepicker-header A.ui-datepicker-next SPAN {
+	font-weight: normal;
+}
+
+DIV.ui-datepicker-header A.ui-datepicker-prev {
+	float:left;
+	text-align: left;
+	width: 100px;
+	padding-left: 12px;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/calNavLeft.gif) no-repeat left center;
+	cursor: pointer;
+}
+DIV.ui-datepicker-header A.ui-datepicker-next {
+	float:right;
+	text-align: right;
+	width: 100px;
+	padding-right: 12px;
+	background: url(../../../../20130606113648/http:/www.regeringen.se/img/calNavRight.gif) no-repeat right center;
+	cursor: pointer;
+}
+
+
+TABLE.ui-datepicker-calendar {
+	background-color: #f4f4f5;
+	border: 1px solid #cccccc;
+	border-width: 1px 1px 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0;
+
+}
+
+
+TABLE.ui-datepicker-calendar  TH{
+	width: 54px;
+	padding: 8px 0 8px 0;
+	text-align: center;
+	font-weight: normal;
+	background-color: transparent;
+	border-width: 0;	
+}
+
+TABLE.ui-datepicker-calendar  TD{
+	width: 54px;
+	height: 54px;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #cccccc;
+	border-width: 1px 1px 0 0;
+}
+
+TABLE.ui-datepicker-calendar  TD A{
+	color: #000000;
+	text-decoration: none;
+}
+	
+TABLE.ui-datepicker-calendar  TD.no-event A{
+	cursor: default;
+}
+	
+
+
+
+TABLE.ui-datepicker-calendar  TD.has-event {
+	background-color: #bfebfa;
+	cursor: pointer;
+}
+
+TABLE.ui-datepicker-calendar  TD.ui-datepicker-week-col {
+	background-color: #def2f9;
+	cursor: pointer;
+}
+
+TABLE.ui-datepicker-calendar  TD:hover.ui-datepicker-week-col,	
+TABLE.ui-datepicker-calendar  TD:hover.has-event,
+TABLE.ui-datepicker-calendar  TD.selected, 
+TABLE.ui-datepicker-calendar  TD.date-chosen ,
+DIV#datepicker.weekMode TABLE.ui-datepicker-calendar  TD:hover.has-event{
+	background-color: #8fd9f5;
+}
+DIV#datepicker.weekMode TABLE.ui-datepicker-calendar  TD.date-chosen {
+	background-color: #f4f4f5;
+}
+	
+DIV#datepicker.weekMode TABLE.ui-datepicker-calendar  TD.date-chosen.has-event {
+	background-color: #bfebfa;
+}
+	
+
+TABLE.ui-datepicker-calendar  TD.ui-datepicker-other-month {
+	color: #cccccc;
+	background-color: #f4f4f5 !important;
+}	
+
+
+/* ISSUE LIST  */
+DIV#content.issueList DIV.item {
+    border-bottom: 4px solid #F0F0EE;
+    margin-bottom: 1em;
+}
+DIV#content.issueList DIV.item.last {
+    border-bottom: 0;
+}
+DIV#content.issueList DIV.item P {
+    margin-bottom: 1em;
+}
+
+/* DEBATE */
+DIV#content.debate DIV.item {
+    border-bottom: 4px solid #F0F0EE;
+    padding-bottom: 0.9em;
+}
+DIV#content.debate DIV.moderator{
+    border-bottom-color: #fff !important;
+    background-color: #F0F0EE;
+    padding:0 .4em;
+}
+DIV#content.debate DIV.moderator H2{
+    padding-top:.1em;
+}
+DIV#content.debate div.moderator p.last{
+    margin-bottom: .7em !important;
+}
+DIV#content.debate DIV.item.last {
+    border-bottom: 0;
+}
+DIV#content.debate DIV.item H2 {
+    margin-top: 0.7em;
+}
+DIV#content.debate DIV.item H2 SPAN {
+    color: #555;
+    font-size: 0.8em;
+}
+DIV#content.debate DIV.item H3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    font-style: normal;
+}
+DIV#content.debate DIV.item P {
+    padding-left: 1em;
+}
+
+
+/* FAQ */
+DIV.faq DIV.item {
+    clear: both;
+}
+DIV.faq UL.internalMenu {
+    border-top: 0 !important;
+    padding-bottom: 0.7em !important;
+    padding-left: 0;
+}
+DIV.faq DIV.item {
+    border-bottom: 4px solid #F0F0EE;
+    padding-bottom: 0.9em;
+}
+DIV.faq DIV.item.last {
+    border-bottom: none;
+}
+DIV.faq DIV.item H2 {
+    margin-top: 0.7em;
+}
+	
+DIV.faq DIV.item DIV.box.facts H2 {
+   margin-top: 0;
+}
+
+
+/* ENTRY LIST */
+UL.entries H2 {
+    margin-top: 0;
+    padding: 0;
+}
+UL.entries P {
+    margin: 0;
+}
+UL.entries,
+UL.entries UL {
+    list-style-type: none;
+    padding: 0;
+}
+UL.entries UL {
+    margin-top: 0.7em;
+    margin-bottom: 0;
+}
+UL.entries LI {
+    margin-bottom: 1.4em !important;
+	background: none;
+	padding: 0 0 0 0;
+}
+UL.entries UL LI {
+    margin-bottom: 0 !important;
+	background: none;
+	padding: 0 0 0 0;
+}
+UL.entries IMG {
+    float: left;
+    margin: 5px 18px 0 0;
+
+}
+UL.entries.half {
+    width: 49.9%;
+    float: left;
+    overflow: hidden;
+}
+UL.entries.half LI {
+    clear: both;
+    overflow: hidden;
+    margin-right: 1em;
+}
+UL.entries.half.last LI {
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+DIV.columnList UL.entries LI {
+	border-top: 1px solid #cccccc;
+    padding: 7px 0 0 0;
+    overflow: hidden;
+
+}
+	
+DIV.columnList DIV#columnHeader H1 {
+	padding-top: 10px;
+	border-top: 1px solid #cccccc;
+		
+}
+
+
+/* GENERAL LIST */
+DIV.generalList LEGEND {
+    font-weight: normal;
+    font-size: 1em;
+    font-style: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0 0 8px 0.5em;
+    margin: 0;
+}
+DIV.generalList LABEL#minCabSelectLabel {
+	 padding: 8px 0 6px 0;
+	 margin: 0;
+}
+	
+	
+
+DIV.generalList FIELDSET {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    float: left;
+    clear: none;
+}
+DIV.generalList FIELDSET DIV {
+    padding-left: 0.5em;
+}
+DIV.generalList FORM {
+    padding: 14px 0 16px 0.35em;
+    margin-right: 0 !important;
+    margin-bottom: 18px;
+    
+}
+DIV.generalList INPUT.submit {
+    display: inline;
+    margin: 0;
+}
+DIV.generalList OL {
+    padding: 0 0 .7em 3.25em;
+    color: #555555;
+    font-family: verdana, sans-serif;
+    font-size: 12px;
+}
+DIV.generalList OL LI{
+    font-family: georgia, serif;
+    font-size: 14px;
+}
+
+
+/* NOTICE LIST */
+UL.noticeList {
+    list-style-type: none;
+    padding-top: 1.29em;
+    border-top: 1px solid #cccccc;
+    margin: 0 0 0.7em;
+}
+UL.noticeList LI {
+    clear: both;
+    overflow: hidden;
+}
+UL.noticeList LI.last,
+DIV.noticeList DIV.last{
+    border-bottom: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+UL.noticeList LI.small {
+    padding: 0 0 0 0 !important;
+    background: none;
+    margin-bottom: 0.86em; 
+}
+
+DIV.noticeList P {
+    margin-bottom: 0;
+}
+DIV.noticeList P SPAN {
+    font-weight: normal;
+}
+DIV.noticeList {
+    margin:0pt 0pt 0.7em;
+    padding-left: 0;
+}
+DIV.noticeList DIV.noticeItem {
+    margin: 0;
+    clear: both;
+    padding: 0;
+    overflow: hidden;
+}
+DIV.noticeList LI {
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+DIV.noticeList UL {
+    list-style-type: square;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0.35em;
+}
+/*DIV.noticeList UL LI {
+    clear: none;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    border-bottom: 0;
+    padding: 0 0 0 1em;
+    background: url(/web/20130606113648/http://www.regeringen.se/img/listItem_grey.gif) 0 2px no-repeat;
+    list-style-type: none;
+}*/
+DIV.noticeList H1 {
+    font-size: 1.4em;
+    line-height: 1.2;
+}
+DIV.noticeList DIV.multipleLinksPuff {
+    margin: 0 !important;
+}
+
+	
+	
+	
+/* OPTION_NOTICE */
+DIV.oldNotice,
+DIV.optionNotice {
+	border-top: 1px solid #cccccc;	
+}
+	
+DIV.noticeList DIV.optionNotice SPAN.dateline{
+	display: block;
+	margin: 0 0 0 0;
+}
+DIV.noticeList DIV.optionNotice UL{
+	margin: 9px 0 0 0;
+}
+
+DIV.noticeList DIV.optionNotice DIV.image IMG{
+	margin: 0 0 3px 0;
+}
+DIV.noticeList DIV.optionNotice SPAN.imageComment{
+	margin-top: 5px;
+	display: block;
+}
+	
+DIV.noticeList DIV.oldNotice,
+DIV.noticeList DIV.optionNotice{
+	padding-bottom: 15px;
+}
+	
+DIV.noticeList DIV.optionNotice H2{
+	margin: 0 0 0 0;
+	display: inline;
+}	 
+
+DIV.noticeList DIV.optionNotice DIV.small H2{
+	font-weight: bold;
+	display: inline;
+	font-size: 1em;
+	margin: 0 0 0 0;
+}
+
+DIV.noticeList DIV.optionNotice DIV.small H2 A {
+	color: #000000;
+}
+	
+	
+DIV.noticeList DIV.optionNotice DIV.small P{
+	display: inline;
+	font-size: 1em;
+	margin: 0 0 0 0;
+}	
+DIV.noticeList DIV.optionNotice DIV.small DIV.image {
+	margin-top: 8px;	
+}	
+DIV.noticeList DIV.optionNotice DIV.small DIV.contents {
+	margin-top: 4px;	
+}	
+	
+DIV.noticeList DIV.optionNotice DIV.small.noImage DIV.contents {
+	margin-top: 9px;	
+}	
+	
+	
+DIV.noticeList DIV.optionNotice DIV.medium H2{
+
+	font-size: 1.29em;
+	color: #000000;
+	display: block;
+	margin: 9px 0 0 0;
+}
+DIV.noticeList DIV.optionNotice DIV.medium H2 A {
+	font-size: 1em;
+	color: #000000;
+}
+	
+DIV.noticeList DIV.optionNotice DIV.medium.noImage DIV.contents {
+	margin-top: 8px;	
+}
+DIV.noticeList DIV.optionNotice DIV.medium.smallImage DIV.contents {
+	margin-top: 8px;	
+}
+DIV.noticeList DIV.optionNotice DIV.medium.smallImage IMG{
+	margin-top: 12px;
+}
+	
+
+DIV.noticeList DIV.optionNotice DIV.large H2{
+	font-size: 1.72em;
+	color: #000000;
+	display: block;
+	margin: 7px 0 0 0;
+}
+DIV.noticeList DIV.optionNotice DIV.large H2 A {
+	color: #000000;	
+}
+DIV.noticeList DIV.optionNotice DIV.large.mediaPlayer H2{
+	margin-top: 11px;
+}
+	
+DIV.noticeList DIV.optionNotice DIV.large DIV.contents {
+	margin-top: 6px;	
+}
+DIV.noticeList DIV.optionNotice DIV.large.smallImage DIV.contents {
+	margin-top: 8px;	
+}
+	
+DIV.noticeList DIV.optionNotice DIV.large DIV.mediaPlayer {
+	margin-top: 1px;
+	margin-bottom: 0;
+		
+}	
+
+DIV.noticeList DIV.optionNotice DIV.large.largeImage IMG{
+	margin-top: 2px;
+	margin-bottom: 11px;
+}
+	
+DIV.noticeList DIV.optionNotice DIV.large.smallImage IMG{
+	margin-top: 11px;
+}
+	
+	
+
+
+DIV.noticeList DIV.optionNotice LI{
+	padding-bottom: 0;
+	margin: 0 0 0 0;
+}
+DIV.noticeList DIV.optionNotice DIV.hanger H3{
+	display:inline;
+	font-size: 1em;
+	margin: 0 0 0 0;
+	font-weight: bold;	
+}
+	
+DIV.noticeList DIV.optionNotice DIV.hanger H3 A{
+	color: #000000;
+	font-weight: bold;
+}
+DIV.noticeList DIV.optionNotice DIV.hanger UL {
+	margin-top:0;
+}
+DIV.noticeList DIV.optionNotice DIV.hanger UL LI.first{
+	margin-top:9px !important;
+}
+	
+DIV.noticeList DIV.optionNotice DIV.hanger.hasImage{
+	margin-top: 0;
+}
+DIV.noticeList DIV.optionNotice DIV.hanger{
+	margin-top: 9px;
+}
+
+DIV.noticeList DIV.optionNotice DIV.hanger DIV.image{
+	margin-top: 14px;
+	margin-bottom: 12px;
+}
+	
+
+		
+		
+
+	
+	
+
+/* NEWSLETTER */
+DIV#content.newsLetter DIV#col2 ADDRESS.vcard SPAN {
+    color: black;
+}
+DIV#content.newsLetter DIV#columnHeader P.storyHeader {
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	font-weight: normal;	
+	
+}
+DIV#content.newsLetter DIV.multipleLinksPuff ADDRESS {
+	margin-top: 10px;	
+}
+	
+DIV#content.newsLetter DIV.links,
+DIV#content.newsLetter DIV.files		
+{
+	border-top: 1px solid #cccccc;
+	padding-top:10px;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+
+DIV#content.newsLetter DIV.links H2,
+DIV#content.newsLetter DIV.files H2 {
+	font-weight: bold;
+	
+}
+	
+	
+	
+/* NEW NEWSLETTER */
+DIV#content.newNewsLetter DIV#columnHeader {
+	margin: 0;	
+}
+	
+DIV#content.newNewsLetter DIV#columnHeader H1{
+	border-top: 1px solid #cccccc;
+	font-size: 18px;
+	color: #555555;
+	padding-top: 9px;
+	margin-bottom: 26px;
+
+}
+DIV#content.newNewsLetter DIV.section{
+	border-top: 1px solid #cccccc;
+	margin-bottom: 10px;
+	
+}
+	
+	
+DIV#content.newNewsLetter H2.sectionHeading{
+	font-family: georgia, serif;
+	font-size: 24px;
+	border-bottom: 0;
+	margin: 5px 0 0 0;
+	padding: 0;
+	
+
+}
+DIV#content.newNewsLetter DIV.paragraphImageWrapper,	
+DIV#content.newNewsLetter DIV.imageWrapper {
+	color: #555555;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+
+}
+DIV#content.newNewsLetter DIV.imageWrapper IMG{
+	margin-top: 11px;
+	margin-bottom: 5px;
+
+}
+DIV#content.newNewsLetter P.lead{
+	margin-top: 6px;
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+	
+DIV#content.newNewsLetter DIV.paragraphImageWrapper IMG{
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+	
+DIV#content.newNewsLetter DIV.section DIV.paragraphWrapper H2{
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 11px;
+}
+	
+DIV#content.newNewsLetter DIV.section DIV.paragraphWrapper DIV.box.facts H2{
+	margin-top: 0;
+}
+	
+DIV#content.newNewsLetter DIV.section DIV.paragraphWrapper DIV.box.facts {
+	padding: 0.7em;	
+	
+}
+	
+DIV#content.newNewsLetter DIV.links,
+DIV#content.newNewsLetter DIV.files		
+{
+	border-top: 1px solid #cccccc;
+	padding-top:10px;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+
+DIV#content.newNewsLetter DIV.links H2,
+DIV#content.newNewsLetter DIV.files H2 {
+	font-weight: bold;
+	
+}
+	
+	
+DIV#content.newNewsLetter ADDRESS.vcard {
+	background-color: #E9E9EB;
+	font-family: verdana, sans-serif;
+	font-size: 12px;	
+	margin-bottom: 18px;
+	padding: 6px 12px 6px 12px;
+	
+}
+
+/* A-Z */
+DIV.a-z UL.internalMenu {
+    list-style-type: none;
+}
+DIV.a-z UL.internalMenu LI {
+    display: inline;
+	background: none;
+	padding: 0 0 0 0;
+}
+DIV.a-z DIV.group {
+    clear: both;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.7em;
+    border-bottom: 4px solid #F0F0EE;
+}
+DIV.a-z DIV.group.last {
+    border-bottom: 0;
+    margin-bottom: 0.7em !important;
+}
+DIV.a-z DIV.group UL {
+    list-style-type: none;
+    padding-left: 0;
+}
+DIV.a-z DIV.group LI {
+    margin-bottom: 0.35em;
+	background: none;
+	padding: 0 0 0 0;
+}
+DIV.a-z DIV.group LI A {
+    font-weight: bold;
+}
+DIV.a-z DIV.group LI LI A {
+    font-weight: normal;
+}
+DIV.a-z DIV.group H2 {
+    font-size: 1.6em;
+    margin-top: 0.7em;
+}
+DIV.a-z DIV.group DIV {
+    font-style: italic;
+}
+
+
+/* DICTIONARY */
+DIV.a-z.dictionary DIV.group UL UL {
+    list-style-type: square;
+    padding-left: 1.01em; /* .01 to avoid clipped bullets in IE6 */
+}
+DIV.a-z.dictionary DIV.group H3 {
+    font-size: 1em;
+    margin-top: 1em;
+    font-style: normal;
+}
+
+
+/* SEARCH */
+DIV.search H1 {
+    margin-bottom: 13px;
+}
+
+DIV.search A.back {
+    font-weight: bold;
+    margin-bottom: 0.35em;
+}
+DIV.search DIV.group H2 {
+    color: black;
+    margin: 0 0 0.3em 0;
+}
+
+DIV.search FORM.area {
+    clear: both;
+    padding: 18px 12px 18px 12px;
+    margin-bottom: 14px;
+}
+DIV.search INPUT.submit {
+	margin:0 18px 0 12px;
+}
+	
+DIV.search INPUT.search {
+	color: #555555;
+	width: 372px;	
+}
+DIV.search SPAN.active {
+	text-decoration: underline;	
+}
+DIV.search.singleColumn FORM.area {
+    margin-right: 1em;
+}
+DIV.search DIV.group DIV.pageListHeader {
+    padding: 0 0 15px 0;
+    margin-bottom: 0px;
+    border-width: 0 0 1px 0;
+    color: #555555;
+}
+DIV.search DIV.links LI {
+    padding-bottom: 0.2em;
+}
+DIV.search DIV.links H3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    margin-bottom: 0.7em;
+}
+DIV.search DIV.links {
+    padding-top: 1.4em !important;
+    margin-top: 0.7em !important;
+    border-top: 1px solid #F0F0EE !important;
+}
+DIV.search DIV.links UL {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+DIV.search.results DIV.pageListHeader {
+    border-top: 0;
+    padding: 4px 0 0 0;
+}
+
+DIV.search.results DIV.pageListHeader DIV {
+    background: white;
+    padding: 0.35em;
+}
+DIV.search OL.searchResult {
+    padding-left: 2em;
+    margin-left:3px;
+}
+DIV.search.results OL.searchResult {
+    padding-left: 3em;
+}
+	
+DIV.search.results DIV#resultPuffs {
+    margin-top: 35px;
+}
+	
+DIV.search DIV.group DIV.allResults {
+	background: #e9e9eb none;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	padding: 12px;
+	text-align: center;
+	margin: 20px 0 36px 28px;
+}
+DIV.search DIV.group DIV.allResults A.more {
+	background-image: none !important;
+	padding:0;
+	color: #555555;
+}
+
+
+/* SEARCH RESULT */
+OL.searchResult {
+    clear: both;
+    padding-left: 3em;
+}
+OL.searchResult LI {
+    margin-top: 0.7em !important;
+    color: #555555;
+}
+OL.searchResult SPAN.info {
+    font-family: verdana, sans-serif;
+    color: #555555;
+    font-size: 12px;
+}
+
+
+/* ADVANCED SEARCH */
+FIELDSET#bottomSearch {
+	margin-top: 18px;
+}
+FIELDSET#bottomSearch,	
+FIELDSET#mainSearch {
+	background-color: #e9e9eb;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	border-width: 1px 0 1px 0;	
+	padding: 18px 8px 18px 8px;
+	
+}
+FIELDSET#mainSearch DIV.radio{
+	position: relative;
+	float: left;
+	margin: 12px 0 0 63px;
+}
+	
+FIELDSET#mainSearch DIV.checkbox{
+	position: relative;
+	float: left;
+	margin: 12px 0 0 20px;
+}
+
+
+DIV.advancedDate SELECT#dateRangeFromDay,
+DIV.advancedDate SELECT#dateRangeToDay {
+	width:40px;	
+}	
+
+DIV.advancedDate SELECT#dateRangeFromMonth,
+DIV.advancedDate SELECT#dateRangeToMonth {
+	width:92px;	
+}
+	
+DIV.advancedDate SELECT#dateRangeFromYear,
+DIV.advancedDate SELECT#dateRangeToYear {
+	width:55px;	
+}
+
+
+/* PUBLICATION */
+	
+.grayText {
+	color:#555555; 	
+}
+DIV.publication DIV.group {
+    overflow: hidden;
+}
+	
+DIV.publication LI.pdf {
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/fileIcon_pdf.gif) 0px 1px no-repeat !important;
+    padding-left: 1.5em !important;
+}
+	
+DIV.publication DIV.group DL.definitions {
+	margin: 7px 0 0 0;
+}	
+
+DIV.publication DIV.group DL.definitions DT{
+    font-weight: bold;
+    display: inline;
+}
+	
+DIV.publication DIV.group DL.definitions DD{
+	display: inline;
+	margin: 0;
+    
+}
+DIV.publication P.lead {
+	margin: 0;
+	color: #555555;
+}
+DIV.publication IMG.main {
+    float: left;
+    margin-top: 12px;
+    margin-right: 18px;
+    margin-bottom: 4px;
+}
+	
+DIV.publication DIV#columnHeader {
+	margin-bottom: 0;
+}
+	
+DIV.publication H1 {
+	margin-bottom: 10px;
+}
+DIV.publication H2.description {
+	margin-top: 14px;	
+}
+	
+DIV.publication INPUT#number {
+    margin-right: 0.7em;
+}
+DIV.cart H1 {
+    color: black;
+    font-size: 12px;
+    margin-top: 6px;
+}
+DIV.cart TABLE {
+    margin: 0;
+    width: 100%;
+    color: black;
+}
+DIV.cart TABLE TD {
+    border: 0;
+    color: black;
+}
+DIV.cart TABLE TD.nr {	
+	width: 50px;
+}
+DIV.cart TABLE TD.item {
+
+    color: #555555;
+
+}
+DIV.publication	DIV.multipleLinksPuffDoc {
+	padding: 7px 12px 16px 12px;
+	font-family: georgia, serif;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+	
+DIV.publication	DIV.multipleLinksPuffDoc UL{
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+DIV.publication	DIV.multipleLinksPuffDoc UL LI{
+    margin-top: 2px;
+}
+	
+DIV.publication DIV.multipleLinksPuff {
+    margin-top: 1.4em;
+}
+DIV.publication H2.download{
+    font-family: georgia, serf;
+    font-size: 14px;
+    font-weight: normal;
+}
+	
+DIV.publication DIV.related DIV.links,
+DIV.publication DIV.related DIV.files		
+{
+	border-top: 1px solid #cccccc;
+	padding-top:10px;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+
+DIV.publication DIV.related DIV.links H2,
+DIV.publication DIV.related DIV.files H2 {
+	font-weight: bold;
+}
+
+DIV.publication DIV.articleFooter {
+	width: 684px;
+}
+
+/* SUBSCRIPTION */
+DIV.subscription DIV#columnHeader {
+	margin-bottom: 12px;	
+	
+}	
+DIV.subscription P.lead {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	padding: 8px 0 18px 0;
+	margin-bottom: 0;
+}
+	
+DIV.subscription DIV.box.facts {
+    padding: 0.7em;
+    overflow: hidden;
+}
+DIV.subscription DIV.box.facts FORM {
+    margin: 0;
+    border: 0;
+    width: 45%;
+    float: left;
+}
+DIV.subscription DIV.box.facts H3 {
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 0.7em;
+}
+DIV.subscription DIV.box.facts H3 SPAN {
+    font-weight: normal;
+    display: block;
+}
+DIV.subscription DIV.box.facts INPUT {
+    width: 80%;
+}
+DIV.subscription DIV#columnHeader SPAN {
+    display: block;
+}
+DIV.subscription DIV#col1 H1 SPAN {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+DIV.subscription DIV.group DIV.item {
+    margin-bottom: 0.7em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #cccccc;
+}
+DIV.subscription DIV.group {
+    float: left;
+    width: 332px;
+
+}
+DIV.subscription DIV.group.last {
+    width: 332px;
+    margin-left: 18px;
+}
+DIV.subscription DIV.group SPAN.newsHeader {
+   text-transform:none;
+   margin-right: 0;
+   margin-bottom: 0;
+   font-weight: normal;
+   background: none;
+   color: #555555;
+   font-size: 18px;
+   border-bottom: 1px solid #cccccc;
+   padding: 9px 0 9px 0;
+}
+DIV.subscription DIV.group.last SPAN.newsHeader {
+   margin-right: 0;
+
+   
+}
+DIV.subscription DIV.group H2 {
+    margin-top: 0.7em;
+}
+
+
+DIV.subscription DIV.subscriptions {
+    clear: both;
+    margin-bottom: 2.1em;
+}
+DIV.subscription DIV.subscriptions DIV.item {
+
+    padding: 0.7em;
+    margin-bottom: 0.7em;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+	
+DIV.subscription DIV.item.last {
+    border-bottom: none !important;
+}
+DIV.subscription DIV.item H2 {
+    font-size: 18px;
+    margin: 8px 0 0.35em 0;
+    font-style: normal;
+}
+DIV.subscription DIV.item DIV.image {
+
+    margin: 12px 0 0.35em 0;
+
+}
+DIV.subscription DIV.item FORM,
+DIV.subscription DIV.item FORM P {
+    display: inline;
+}
+DIV.subscription SPAN.newsHeader {
+    color: #666;
+}
+	
+DIV#subscriptionLoginPuff {
+	border-width: 0;	
+} 
+DIV#subscriptionLoginPuff FORM#loginForm{
+	margin-left: 0 !important;	
+	margin-right: 0 !important;
+}
+DIV#subscriptionLoginPuff DIV#subscriptionLoginPuffInner {
+    border-top: 1px solid #cccccc;	
+}
+	
+DIV#subscriptionLoginPuff FORM#loginForm{
+	padding: 0.7em 0 0 0 !important;	
+	background: none;
+}
+
+
+/* RSS */
+BODY.rss DIV.box.facts SPAN {
+    display: block;
+    padding-left: 20px;
+    background: url(../../../../20130606113648/http:/www.regeringen.se/img/icon_rss.gif) 2px 2px no-repeat;
+}
+BODY.rss DIV#col1 DIV {
+    margin-top: 2em;
+}
+BODY.rss DIV#col1 DIV UL SPAN {
+    color: #666;
+}
+	
+P.rssLead {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	font-size: 1.2em;
+    line-height: 1.4em;
+    padding: 0.5em 0 1em 0;
+    margin: 0;
+}
+	
+H2.rssHeader {
+	border-bottom: 1px solid #cccccc;
+	margin-top: 6px;	
+	padding-bottom: 6px;
+	color: #555555;
+		
+}
+	
+DIV.rssHelp {
+	border-top: 1px solid #cccccc;
+	padding-top: 8px;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+	
+DIV.rssHelp H2 {
+	margin-top: 6px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+UL.rssLinks LI{
+	padding: 0;
+	background: none;
+	margin-top: 8px;
+	
+}
+	
+
+/* ERROR PAGE */
+
+DIV.errorPage H2{
+	border-top: 1px solid #cccccc;
+	padding: 8px 0 0 0;
+	font-size: 18px;
+}
+	
+	
+DIV.errorPage P{
+	font-size: 14px;
+	margin: 5px 0 5px 0;
+	
+}
+	
+/* FIELDSET LAYOUT */
+	
+DIV.fieldsetWrapper LEGEND,	
+DIV.fieldsetWrapper FIELDSET {
+	
+	border: 0;
+	padding: 0;
+	margin:0;	
+}
+
+
+DIV.fieldsetWrapper LEGEND {
+	font-size: 18px;
+	line-height: 1.5em;
+	font-weight: normal;
+	padding: 0;
+	margin-right: 18px;
+	width: 198px;
+	float:left;
+	position: relative;
+}
+	
+DIV.fieldsetWrapper {
+	margin: 10px 0 0 0;
+	padding: 6px 0 0 0 !important;
+	border-top: 1px solid #cccccc;
+}
+	
+DIV.fieldsetWrapper.noTopBorder {
+	border: 0;
+	margin:0;
+	padding:0 !important;
+}
+	
+
+DIV.fieldsetWrapper DIV.optionWrapper {
+	padding: 2px 0 0 0;
+	width: 432px;
+	float: right;
+	position: relative;
+}
+
+} /* Stop hiding css from IE5Mac */
+

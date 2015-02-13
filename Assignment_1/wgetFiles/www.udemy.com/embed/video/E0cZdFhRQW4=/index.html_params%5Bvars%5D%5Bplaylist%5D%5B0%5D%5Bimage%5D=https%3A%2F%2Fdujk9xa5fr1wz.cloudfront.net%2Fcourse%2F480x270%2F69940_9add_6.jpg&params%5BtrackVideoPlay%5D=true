@@ -1,0 +1,150 @@
+<html style="background-color: black">
+            <head>
+                        <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+            <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.4.0/jquery.json.min.js"></script>
+            <script type="application/javascript" src="https://cdn.ravenjs.com/1.1.16/jquery,native/raven.min.js"></script>
+            <script type="application/javascript">
+                Raven.config('https://cab7859700ed4eea92b64f9b1455a405@app.getsentry.com/28588').install();
+                            </script>
+            <style>
+                @media (max-width: 400px) {
+                    html{
+                        background: none !important;
+                        font-size: 0;
+                    }
+                    iframe:last-child{
+                        display: none;
+                    }
+                }
+            </style>
+            <!--[if lt IE 10]>
+            <style>
+                body{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    overflow: hidden;
+                }
+            </style>
+            <![endif]-->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.18.25/easyXDM.min.js"></script>
+            <script type="text/javascript">
+                (function() {
+                                            var windowProxy = new easyXDM.Socket({
+                        onMessage: function(message, origin) {
+                            if(message == '"jwplayer().play().setMute()"') {
+                                jwplayer().play().setMute();
+                            }
+                        }
+                    });
+                    
+                }());
+            </script>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+            <script type="text/javascript"
+                    src="https://www-udemy-com.global.ssl.fastly.net/staticx/udemy/js/jq/iframe-players/ud.api.light.js?v=deba1503cc9005f65f504d7a664bc1d4985627fa"></script>
+            <link rel="stylesheet" media="all" type="text/css"
+                  href="https://www-udemy-com.global.ssl.fastly.net/staticx/udemy/css/iframe-player.css?v=deba1503cc9005f65f504d7a664bc1d4985627fa"?>" />
+
+                                <style type="text/css">
+                .processing {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    background: #fefefe;
+                    margin: 0px;
+                }
+            </style>
+            <script type="text/javascript" src="https://jwpsrv.com/library/zjJURF88EeKbKCIACp8kUw.js"></script>
+            <script type="text/javascript"
+                    src="https://www-udemy-com.global.ssl.fastly.net/staticx/udemy/js/jq/iframe-players/jwplayer.js?v=deba1503cc9005f65f504d7a664bc1d4985627fa"></script>
+                </head>
+    
+            <body style="margin:0; overflow: hidden; line-height: 0px;">
+                    <div id="install" class="vp-popup">
+            <div class="inner">
+                <div class="top">
+                    <h2>Flash required</h2>
+                    <p>We’re sorry, but we could not detect the correct version of Flash required to view lectures. You may switch to another browser that supports non-flash video, or install Flash now.</p>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-inner">
+                        <div class="btn-wrapper">
+                            <a href="http://get.adobe.com/flashplayer/" target="_blank" class="action-btn">Install Flash Player</a>
+                        </div>
+                        <div class="error-no">Error 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="html" class="vp-popup">
+            <div class="inner">
+                <div class="top">
+                    <h2>Flash required</h2>
+                    <p>We’re sorry, but we could not detect the correct version of Flash required to view lectures. You may switch to our HTML5 video player, or install Flash now.</p>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-inner">
+                        <div class="btn-wrapper">
+                            <a href="index.html?params%255Bvars%255D%255Bplaylist%255D%255B0%255D%255Bimage%255D=https%253A%252F%252Fdujk9xa5fr1wz.cloudfront.net%252Fcourse%252F480x270%252F69940_9add_6.jpg&amp;params%255BtrackVideoPlay%255D=true#" id="switch-to-html" class="action-btn">Switch to HTML5 video player</a>
+                        </div>
+                        <div class="button-wrapper">
+                            <a href="http://get.adobe.com/flashplayer/" target="_blank" id="install-flash" class="action-btn">Install Flash from Adobe</a>
+                        </div>
+                        <div class="error-no">Error 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div id="spinArea" class="throbber" style="position:absolute;visibility: hidden;left: 50%;top: 50%; "></div>
+            <div id="download" class="vp-popup">
+                <div class="inner">
+                    <div class="top">
+                        <h2>Video Error</h2>
+                        <p>We tried several times to play your video but there was an unforeseen error.  We've notified our engineers. Please try again in a few minutes or download the lecture now.</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom-inner">
+                            <div class="btn-wrapper">
+                                <a href="https://dabm6vlh6a177.cloudfront.net/2013-07-29_18-59-44-769eef0358edf95b7e61de02ecfe0778/WebHD_720p.mp4?response-content-disposition=attachment%3Bfilename%3Dpromo-video.mp4&Expires=1423576778&Signature=ETdBzfXkVxhh~VY6-jfJ60WNM59GkVVnyq5hAbIIqL82HsGKjke3MIIK2PHh5T9yyyFEJu5LBs4KWLBaP1WpDiLcbNefXcrQqgbYjJAQeHtNmrRYP8zgIOpzfv0UTkvIo9seqqKoIENDhLB7u7f6~ImTTlxAd2Ig3eA8ENEl9I5HMrdMFsRDIfEzsVJCJLxJ6Adt1UAU4BWpavP3S5BzJCnYg~usDUPeRFDkNYBQEWw3jw3mubVaZcFYsbFvobEyGh5kNNcbKnP7udeBKveOZAl2aO~yrezOo0Ey6QE0o~z6Odgm0cCEnUbr27edk622qc972vt6yumAbshhu7eorg__&Key-Pair-Id=APKAIEAIIUUCSAXPAJ6Q" id="download-video" class="action-btn">Download video</a>
+                            </div>
+                            <div class="error-no">Error 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div id="connection" class="vp-popup">
+            <div class="inner">
+                <div class="top">
+                    <h2>Connection problem</h2>
+                    <p>We can not find a working connection to the internet. Please check your network and try again.</p>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-inner">
+                        <div class="btn-wrapper">
+                            <a href="index.html?params%255Bvars%255D%255Bplaylist%255D%255B0%255D%255Bimage%255D=https%253A%252F%252Fdujk9xa5fr1wz.cloudfront.net%252Fcourse%252F480x270%252F69940_9add_6.jpg&amp;params%255BtrackVideoPlay%255D=true#" id="try-again" class="action-btn">Try again</a>
+                        </div>
+                        <div class="error-no">Error 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                                    <div id="player" style="width:100%;height:100%;"
+                     data-mode="video"
+                     data-cdn="CloudFront"
+                     data-captioning-setting=""
+                    >
+                </div>
+                <script>
+                    $("#player").jwplayer(
+                        {"plugins":[],"isLandingPage":false,"analytics":{"enabled":false},"playlist":[{"sources":[{"file":"https:\/\/dabm6vlh6a177.cloudfront.net\/2013-07-29_18-59-44-769eef0358edf95b7e61de02ecfe0778\/WebHD.mp4?Expires=1423576778&Signature=hYrQvHfakpMn6nXZpJtmEOh9~f7Lrcqzb-En5UcA2OIQpngQ9QWDYkfZvyw1R-lPPubOyUmX9s~xdN5iUZmn~~lqPOuOW0OYIe4jRfd4Y4iCGj7lzF7wvPpffhnFTpBGzfzsPbXWtNGlhk4XmiaE1plhhN9mJjm6vJHRFJv8NtcP~nyZ17O~MoSrZ8q7OJwYdbeXfRUKSNW75SXT5H9CA-vWFfrBzWoNZ7V61lsfvF8TSn2feEVDdsG-RjbEXlzFhe1B634Vj74EGlO~A31qBvxo977ueF0SMHqg9BirmnUU18tAlcA4y~9A~g2fc1DdlnTUDJHxFocYey6vb5RNMw__&Key-Pair-Id=APKAIEAIIUUCSAXPAJ6Q","label":"360p SD","type":"mp4","default":true},{"file":"https:\/\/dabm6vlh6a177.cloudfront.net\/2013-07-29_18-59-44-769eef0358edf95b7e61de02ecfe0778\/WebHD_720p.mp4?Expires=1423576778&Signature=cAOG4cpoBjaVDJibk3CxqYmSbN8H5exKr03C8ru3po2v-mAVxJeI6IP7d5mMLCczYCfbR83OgaDk32PoyJgi0d6JfCIN5QMzoQWlmOn19HGzwYgKpW36U3mme8BVRpoJN1ADLqk2EHmOdiwsPAvEnE8QJQUb8zdmD~RYYZK1Vb59CJNhjLCgmNAHYNCSkIMCLawExtbQzjKvTkXcy7DvCH-jbMtT5dYk80oz91xLa4QQf12vWo1hJPcQYjCAh3r-EG~vIb0K7j4rFYupwCUiR3KvO8NO~RpppJgucvtc9yUJqpfbcdt8xxqHXd9eMK0pkSPvMmlvPD6RCZJ4mJsXUA__&Key-Pair-Id=APKAIEAIIUUCSAXPAJ6Q","label":"720p HD","type":"mp4"}],"image":"https:\/\/dujk9xa5fr1wz.cloudfront.net\/course\/480x270\/69940_9add_6.jpg","tracks":[]}],"captions":{"color":"#FFD300","fontSize":"22","backgroundOpacity":"40"}}                    );
+                                            jwplayer.api.playerById("player").onPlay(function(){
+                            parent.$(parent.document).trigger("promoVideoStarted");
+                        });
+                                    </script>
+                            </body>
+    </html>

@@ -1,0 +1,604 @@
+/*-----------------------------------------------------
+	[共通]TEST
+-------------------------------------------------------*/
+/* test */
+.test {
+	display: none;
+}
+
+
+/*-----------------------------------------------------
+	[共通]clerfix
+-------------------------------------------------------*/
+.cf:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.cf {
+	min-height: 1px;
+}
+
+* html .cf {
+	height: 1px;
+	/*¥*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+
+/*-----------------------------------------------------
+	[共通]コンタクトフォーム
+-------------------------------------------------------*/
+input[type="url"] {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 6px;
+}
+@media only screen and (max-width: 480px) {
+	input[type="url"] {
+		width: 95%;
+	}
+}
+
+
+/*-----------------------------------------------------
+	[共通]大枠
+-------------------------------------------------------*/
+.site-content {
+	padding-bottom: 20px;
+}
+
+
+/*-----------------------------------------------------
+	[スマホ]前の記事・後の記事
+-------------------------------------------------------*/
+.nav-previous:after,
+.nav-next:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.nav-previous,
+.nav-next{
+	min-height: 1px;
+}
+
+* html .nav-previous,
+* html .nav-next {
+	height: 1px;
+	/*¥*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.nav-previous > a
+.nav-next > a {
+	line-height: 3;
+}
+
+/*-----------------------------------------------------
+	[PC]フェード表示中のブログ名
+-------------------------------------------------------*/
+.feed-blog-title {
+	color: #6699cc;
+	font-size: 10px;
+	padding-left: 20px;
+}
+
+
+/*-----------------------------------------------------
+	[PC]ボタンスタイル
+-------------------------------------------------------*/
+.btn-style {
+}
+
+.btn-style a {
+	background: #f8f8f8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f8f8f8 0%, #e8e8e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f8f8f8 0%,#e8e8e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f8f8f8 0%,#e8e8e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+	border: solid 1px #CCC;
+	border-radius: 5px;
+	color: #323232;
+	display: block;
+	padding: 10px;
+	text-align: center;
+}
+
+/*-----------------------------------------------------
+	[PC][side-left]
+-------------------------------------------------------*/
+.left-menu {
+	margin-bottom: 15px;
+}
+
+.left-menu p {
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.site_name li {
+	padding-left: 5px;
+}
+
+.site_name a {
+	display: block;
+	float: none;
+}
+
+.rss_image img {
+	height: auto;
+	width: 100%;
+}
+
+.left-rank-btn li {
+	list-style-type: square;
+	margin-left: 15px;
+}
+
+.left-menu-btn {
+	list-style-type: square;
+	margin-left: 15px;
+}
+
+
+/*-----------------------------------------------------
+	[PC]ナビゲーション
+-------------------------------------------------------*/
+.main-navigation a {
+	 margin-right: 2.3em;
+}
+
+
+/*-----------------------------------------------------
+	[PC][TOP]新着記事
+-------------------------------------------------------*/
+.top-news-name {
+	color: #6699cc;
+	font-size: 10px;
+	padding-left: 20px;
+}
+
+
+/*-----------------------------------------------------
+	[PC][TOP]登録はこちらへ
+-------------------------------------------------------*/
+.link-register {
+	text-align: center;
+	margin: 10px auto;
+}
+
+@media only screen and (max-width: 460px) {
+	.link-register img {
+		width: 100%;
+	}
+}
+
+/*-----------------------------------------------------
+	[PC][category]記事
+-------------------------------------------------------*/
+/* 新着記事10
+------------------------------------------------*/
+.category-new-topics {
+	margin-top: 10px;
+}
+
+.category-new-topics h2 {
+	border-radius: 5px 5px 0 0;
+}
+
+.new-topics-list {
+	border: solid 1px #F1F1F1;
+}
+
+.new-topics-list li {
+	border-bottom: dotted 1px #F1F1F1;
+	line-height: 2.2;
+	padding: 0 10px;
+}
+
+.new-topics-list li:first-of-type {
+	border-top: dotted 1px #F1F1F1;
+}
+
+/* 
+------------------------------------------------*/
+.entry-right {
+	float: left;
+	width: 80%;
+}
+
+/* ブログ名
+------------------------------------------------*/
+.even {
+	background: #f5f5f5;
+}
+.odd {
+	background: #fff;
+}
+
+/* アクセス数
+------------------------------------------------*/
+.new-access-wrap {
+	font-size:10px;
+	font-size: 1rem;
+	overflow: hidden;
+	max-height: 19px;
+}
+
+.new_access {
+	float:left;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+/* ブログ名
+------------------------------------------------*/
+.author-name {
+	background: #f1f1f1;
+	text-align: center;
+	width: 100%;
+	color:#000;
+	padding: 10px 0;
+	margin: 5px 0;
+}
+
+
+/*-----------------------------------------------------
+	[PC][category]ブログ毎新着
+-------------------------------------------------------*/
+.blog-new {}
+
+.category-box {
+	border: 2px solid #f1f1f1;
+	border-radius: 7px 7px 0 0;
+	height: 200px;
+	margin-top: 20px;
+	width: 48%;
+}
+
+.category-left-box { /* 左ボックス */
+	float: left;
+	margin-right: 2%;
+}
+
+.category-right-box { /* 右ボックス */
+	float: right;
+}
+
+.main_right {
+	overflow: auto;
+}
+
+.category-box .author-name {
+	border-radius: 5px 5px 0 0;
+	margin: 0;
+}
+
+.category-box .category-feed {
+	height: 160px;
+	overflow: scroll;
+}
+
+.category-feed .entry-right {
+	float: none;
+	width: auto;
+}
+
+.category-feed .new_access {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
+/*-----------------------------------------------------
+	[PC][TOP]カテゴリー別新着
+-------------------------------------------------------*/
+.main-box { /* .main_left・.main_right */
+	width:48%;
+	height:200px;
+	border:2px solid #f1f1f1;
+	border-radius:7px 7px 0 0;
+	margin-top:20px;
+}
+
+.main_left {
+	float:left;
+	margin-right:2%;
+}
+
+.main_right {
+	float:right;
+}
+
+.top_category_title {
+}
+
+.top_category_main {
+	height: 160px;
+	overflow: scroll;
+}
+
+
+/* [PC][TOP]カテゴリ別新着　記事
+------------------------------------------------*/
+.article-category {
+	border-bottom:1px dotted #CCC;
+}
+
+.article-category dt{
+	padding-top: 5px;
+	width: 100%;
+}
+
+.article-category dd {
+	padding-bottom: 5px;
+	width: 100%;
+}
+
+/* 日付 */
+.article-category-date {
+	display: block;
+	float: left;
+}
+
+/* カウント */
+.new-access {
+	display: block;
+	float: right;
+}
+
+/*-----------------------------------------------------
+	[PC][ブログ別新着一覧]
+-------------------------------------------------------*/
+.blog-new-list li {
+	border-bottom: 1px dotted #999;
+	line-height: 2.2;
+}
+
+.blog-new-list li a {
+	display: block;
+}
+
+
+/*-----------------------------------------------------
+	[PC][right][アクセスランキング]
+-------------------------------------------------------*/
+.ranking {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.ranking .ttl-side-rank {
+	background: #F1F1F1;
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.ranking .wpp-list{
+	max-width: 100%;
+	overflow: auto;
+}
+
+.ranking .wpp-list li {
+	line-height: 1.8;
+	padding: 5px 0;
+	width: 100%;
+}
+
+
+/*-----------------------------------------------------
+	[PC][ランキング]
+-------------------------------------------------------*/
+.ranking-list .wpp-list{
+	max-width: 100%;
+	overflow: auto;
+}
+
+.ranking-list .wpp-list li {
+	line-height: 2.2;
+	width: 100%;
+}
+
+
+/*-----------------------------------------------------
+	[PC][お問い合わせ]
+-------------------------------------------------------*/
+.page-id-36872 .entry-header {
+	display: none;
+}
+
+.wpcf7-form {
+	margin: 0;
+}
+
+.contact-wrap {
+	margin: 0 auto;
+	width: 50%;
+}
+
+@media only screen and (max-width: 460px) {
+	.contact-wrap {
+		width: 90%;
+	}
+	
+	dd {
+		margin: 0 0 1em;
+	}
+}
+
+.contact-wrap dl,
+.contact-wrap dt,
+.contact-wrap dd {
+	width: 98%;
+}
+
+.contact-wrap dl+dl {
+	margin-bottom: 10px;
+}
+
+textarea {
+	width: 100%;
+}
+
+.contact_text > p {
+	margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------
+	[SP]ナビ
+-------------------------------------------------------*/
+@media only screen and (max-width: 460px) {
+	div#tab ul.tabnavi li.ad-space {
+		border: none;
+		background: none;
+	}
+	
+	div#tab ul.tabnavi{
+		display:table;
+		table-layout: fixed;
+		width:100%;
+	}
+	
+	div#tab ul.tabnavi li{
+		font-size: 11px;
+		font-size: 1.1rem;
+		display:table-cell;
+		text-align:center;
+		border-left: solid 1px #383838;
+		border-right: solid 1px #383838;
+		border-top: solid 2px #6f6f6f;
+		vertical-align: middle;
+
+		float: none;
+		width: auto;
+
+		background: #4f4f4f; /* Old browsers */
+		background: -moz-linear-gradient(top,  #4f4f4f 0%, #353535 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f4f4f), color-stop(100%,#353535)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #4f4f4f 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #4f4f4f 0%,#353535 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #4f4f4f 0%,#353535 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #4f4f4f 0%,#353535 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#353535',GradientType=0 ); /* IE6-9 */
+	}
+	
+	div#tab ul.tabnavi li.current-page {
+		background: #8bb9dd; /* Old browsers */
+		background: -moz-linear-gradient(top,  #8bb9dd 0%, #5494c6 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8bb9dd), color-stop(100%,#5494c6)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #8bb9dd 0%,#5494c6 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #8bb9dd 0%,#5494c6 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #8bb9dd 0%,#5494c6 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #8bb9dd 0%,#5494c6 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bb9dd', endColorstr='#5494c6',GradientType=0 ); /* IE6-9 */
+	}
+	
+	div#tab ul.tabnavi li a {
+		background: none;
+		color: #ffffff;
+		display: block;
+		padding: 7px 0;
+		text-shadow: 1px 1px 2px #000;
+	}
+	
+	div#tab ul.tabnavi li.current-page a {
+		color: #ffffff;
+		display: block;
+		padding: 7px 0;
+		text-shadow: 1px 1px 2px #2e698f;
+	}
+}
+
+
+/*-----------------------------------------------------
+	[SP][top]カテゴリー別新着
+-------------------------------------------------------*/
+@media only screen and (max-width: 460px) {
+	.top_category_main {
+		height: auto;
+		overflow: visible;
+	}
+	
+	.date {
+		width:40px;
+		float:left;
+		margin: 3px;
+		border: 1px solid #999;
+		border-radius :4px;
+		line-height: 1.2;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.date-md {
+		display: block;
+		background: #000;
+		color:#FFF;
+		padding: 3px 0;
+	}
+	.date-hm {
+		display: block;
+		color:#000;
+		background: #FFF;
+		padding: 3px 0;
+	}
+	
+	.entry-title {
+		font-size: 12px;
+		line-height: 1.4;
+	}
+	
+	.author {
+		font-size: 12px;
+		color: #6699cc;
+	}
+	.new_access {
+		float:none;
+	}
+}
+
+
+/*-----------------------------------------------------
+	[SP][カテゴリー]ランキング
+-------------------------------------------------------*/
+@media only screen and (max-width: 460px) {
+	.wpp-list {
+		overflow: auto;
+		max-width: 100%;
+	}
+
+}
+
+
+/*-----------------------------------------------------
+	[SP][カテゴリー]ブログ別新着
+-------------------------------------------------------*/
+@media only screen and (max-width: 460px) {
+	.category-box,
+	.category-feed {
+		border: none;
+		border-radius: 0;
+		height: auto !important;
+		overflow: visible !important;
+		width: 100%;
+	}
+}
+

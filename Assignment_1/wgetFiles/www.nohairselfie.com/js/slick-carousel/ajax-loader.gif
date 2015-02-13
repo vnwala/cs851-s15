@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-ca" itemscope itemtype="http://schema.org/Article">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="http://www.nohairselfie.com/favicon.ico" type="image/x-icon" />
+
+        <!-- SEO -->
+        <!-- <title></title> -->
+        <!-- <meta name="description" content="Participating in the #NOHAIRSELFIE campaign gives us the chance to show our solidarity with Canadians undergoing cancer treatment and provides much-needed funds for cancer research at Princess Margaret Cancer Centre, one of the top 5 cancer research centres in the world."> -->
+
+        <!-- Bootstrap CSS -->
+        <link href="http://az681300.vo.msecnd.net/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../uniform/uniform.default.css" rel="stylesheet">
+        <link href="../../css/custom.css" rel="stylesheet">
+        <link href="../../css/custom-responsive.css" rel="stylesheet">
+        <link href="http://az681300.vo.msecnd.net/css/animate.css" rel="stylesheet">
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--[if lte IE 8]>
+        <script>
+            //IE 8 does not support bind
+            if (!Function.prototype.bind) {
+                  Function.prototype.bind = function(oThis) {
+                    if (typeof this !== 'function') {
+                      // closest thing possible to the ECMAScript 5
+                      // internal IsCallable function
+                      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+                    }
+
+                    var aArgs   = Array.prototype.slice.call(arguments, 1),
+                        fToBind = this,
+                        fNOP    = function() {},
+                        fBound  = function() {
+                          return fToBind.apply(this instanceof fNOP && oThis
+                                 ? this
+                                 : oThis,
+                                 aArgs.concat(Array.prototype.slice.call(arguments)));
+                        };
+
+                    fNOP.prototype = this.prototype;
+                    fBound.prototype = new fNOP();
+
+                    return fBound;
+                  };
+            }
+        </script>
+        <![endif]-->
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="http://fast.fonts.net/jsapi/e6f0929a-e1ca-412c-919c-aa0261dec805.js"></script>
+        
+        <script src='http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.5.js'></script>
+
+        <script src="slick.min.js" type="text/javascript"></script>
+        <link href="slick.css" type="text/css" rel="stylesheet" />
+
+        <script src='../gsap/TweenMax.min.js'></script>
+        <script src="../isotope.pkgd.min.js"></script>
+        <script src="../imagesloaded.pkgd.min.js"></script>
+        <script src="../fit-columns.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <!--<script type="text/javascript" src="/js/underscore-min.js"></script>-->
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+        <!--<script type="text/javascript" src="/js/backbone-min.js"></script>-->
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+        <script type="text/javascript" src="../backbone-azure-mobile-services.min.js"></script>
+        
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+        <script src="../os-browser-detection.js"></script>
+        <script src="../can-us-urls.js"></script>
+        <script src="../ytEmbed.js"></script>
+        <!-- AddThisEvent -->
+        <script type="text/javascript" src="http://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+        
+        <script>
+            var fbAppId = "";
+            switch (window.location.hostname){
+                case "nohairselfie-staging.azurewebsites.net":
+                    fbAppId = "576711849095696";
+                    break;
+                case "bf.pmfc.4dinc.ca":
+                    fbAppId = "357571734425304";
+                    break;
+                case "nohairselfie.com":
+                    fbAppId = "634168386689269";
+                    break;
+                case "www.nohairselfie.com":
+                    fbAppId = "634168386689269";
+                    break;
+                default:
+                    fbAppId = "";
+            }
+        </script>
+        
+                <!-- set up page title -->
+        <title></title>
+
+        <!-- set up social meta data-->
+        <meta name="name" content=""/>
+        <meta name="description" content="" />
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="http://az681300.vo.msecnd.net/assets/Facebook_OG_Image.jpg">
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- <meta name="twitter:site" content="@pm_nohairselfie"> -->
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <!-- <meta name="twitter:creator" content="@author_handle"> -->
+        <meta name="twitter:image:src" content="http://az681300.vo.msecnd.net/assets/Facebook_OG_Image.jpg">
+        <meta name="twitter:url" content="http://www.nohairselfie.com/page-not-found" />
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://www.nohairselfie.com/page-not-found" />
+        <meta property="og:image" content="http://az681300.vo.msecnd.net/assets/Facebook_OG_Image.jpg" />
+        <meta property="og:description" content="" />
+        <meta property="og:site_name" content="NoHairSelfie" />
+        <!-- <meta property="article:published_time" content="2013-09-17T05:59:00+01:00" /> -->
+        <!-- <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" /> -->
+        <!-- <meta property="article:section" content="Article Section" /> -->
+        <!-- <meta property="article:tag" content="Article Tag" /> -->
+        <!-- <meta property="fb:admins" content="Facebook numberic ID" /> -->
+
+
+
+
+
+    </head>
+    <body>
+<!-- Google Tag Manager -->
+
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-5J4HN8"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-5J4HN8');</script>
+
+<!-- End Google Tag Manager -->
+        <!-- Begin off-canvas menu -->
+<div id="my-menu">
+  
+    <a id="close-my-menu"></a>
+
+    <ul class="mm-nolist">  
+        <li><a href="http://www.nohairselfie.com/index">Home</a></li>
+        <li><a href="http://www.nohairselfie.com/thank-you-for-donating">Donate</a></li>
+        <li><a href="http://www.nohairselfie.com/register">Register</a></li>
+        <li><a href="http://www.nohairselfie.com/login">Login</a></li>
+        <li>
+            <a href="http://www.nohairselfie.com/be-a-hair-ticipant">Join the Movement</a>
+            <ul>
+                <li><a href="http://www.nohairselfie.com/be-a-hair-ticipant">Be a Hair-ticipant!</a></li>
+                <li><a href="http://www.nohairselfie.com/be-a-virtual-crop-top">Be a Virtual Crop Top!</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://www.nohairselfie.com/gallery">#NOHAIRSELFIE</a>
+            <ul>
+                <li><a href="http://www.nohairselfie.com/gallery">Gallery</a></li>
+                <li><a href="http://www.nohairselfie.com/the-buzz">The Buzz</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://www.nohairselfie.com/the-cause">Why Shave</a>
+            <ul>
+                <li><a href="http://www.nohairselfie.com/hairspiration">Hairspiration</a></li>
+                <li><a href="http://www.nohairselfie.com/the-cause">The Cause</a></li>
+                <li><a href="http://www.nohairselfie.com/about-us">About Us</a></li>
+            </ul>
+        </li>
+        <!-- <li><a href="/shave-the-day">Shave the day</a></li> -->
+        <li>
+            <a href="http://www.nohairselfie.com/how-to-shave">Live the look</a>
+            <ul>
+                <li><a href="http://www.nohairselfie.com/how-to-shave">How to Shave</a></li>
+                <li><a href="http://www.nohairselfie.com/bald-and-bodacious">Bald &amp; Bodacious</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+<!-- End off-canvas menu -->
+
+        <div id="wrap"><!-- begin of wrapper -->
+        
+            <div id="top" class="row head navbar-fixed-top mm-fixed-top">
+                <div class="container">
+
+  <nav class="navbar navbar-default" role="navigation">
+
+      <div class="action-buttons">
+        <a class="btn btn-donate" href="http://www.nohairselfie.com/thank-you-for-donating">Donate</a>
+        <a class="btn btn-signup hidden-xs" href="http://www.nohairselfie.com/register">Register</a>
+        <a class="btn btn-login hidden-xs" href="http://www.nohairselfie.com/login">Login</a>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a type="button" class="navbar-toggle" href="fonts/slick.svg#my-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+
+        <a class="navbar-brand" href="http://www.nohairselfie.com/index"><img src="http://az681300.vo.msecnd.net/assets/mpc-logo.png"></a>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li class="dropdown display-table">
+            <a href="http://www.nohairselfie.com/be-a-hair-ticipant" class="dropdown-toggle" data-toggle="dropdown">Join the Movement <b class="caret"></b></a>
+            <ul class="dropdown-menu display-table-row">
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/be-a-hair-ticipant">Be a Hair-ticipant!</a></li>
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/be-a-virtual-crop-top">Be a Virtual Crop Top!</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown display-table">
+            <a href="http://www.nohairselfie.com/gallery" class="dropdown-toggle" data-toggle="dropdown">#NOHAIRSELFIE <b class="caret"></b></a>
+            <ul class="dropdown-menu display-table-row">
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/gallery">Gallery</a></li>
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/the-buzz">The Buzz</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown display-table">
+            <a href="http://www.nohairselfie.com/the-cause" class="dropdown-toggle" data-toggle="dropdown">Why Shave <b class="caret"></b></a>
+            <ul class="dropdown-menu display-table-row">
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/hairspiration">Hairspiration</a></li>
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/the-cause">The Cause</a></li>
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/about-us">About Us</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown display-table">
+            <a href="http://www.nohairselfie.com/how-to-shave" class="dropdown-toggle" data-toggle="dropdown">Live the Look <b class="caret"></b></a>
+            <ul class="dropdown-menu display-table-row">
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/how-to-shave">How to Shave</a></li>
+              <li class="display-table-cell"><a href="http://www.nohairselfie.com/bald-and-bodacious">Bald &amp; Bodacious</a></li>
+            </ul>
+          </li>             
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    
+  </nav>
+</div>
+            </div>
+
+    <div class="content">
+        
+
+<!-- Bellow the Fold 
+********************************************************************************************************-->
+        <div class="block block-7 type-3">
+          
+            <div class="container">
+
+                <div class="row ">
+                    <div class="col-sm-8">
+                      <h2>Hair One Minute, Gone The Next! Sorry, Can't Find The Page</h2>
+                      <p>But don't tear your hair out! Since you're already here, help raise awareness
+                      and money for cancer research.</p>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3">
+                        <div class=" donate">
+                            <h4>CANCER RESEARCH<br class="hidden-xs" /> SAVES LIVES</h4>
+                            <a href="http://www.nohairselfie.com/thank-you-for-donating" class="btn btn-donate">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>     
+
+       <div class="block block-5 type-4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="shave">
+                            <h3>Shave your head</h3>
+                            <!-- <p>Make a bald-faced statement by<br /> shaving your head for cancer<br />research!</p> -->
+                            <p>Make a bald statement by<br /> shaving your head for<br /> cancer research!</p>
+                            <a href="http://www.nohairselfie.com/register" class="btn btn-1">Register</a><br/>
+                            <img src="http://az681300.vo.msecnd.net/assets/block-5a-3.png" />
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="vseparator10 bg-white visible-xs between-row"></div>
+
+                    <div class="col-sm-6">
+                        <div class="support">
+                            <h3>Go virtual shave</h3>
+                            <p>Download the #NoHairSelfie App<br class="visible-md" /> and show your support in an<br class="visible-md" /> app-propriate way!</p>
+                            <a href="https://itunes.apple.com/gb/app/nohairselfie/id938937800?mt=8" class="app-store" target="_blank"></a><br class="hidden-md" />
+                            <a href="https://play.google.com/store/apps/details?id=com.bald.selfie&hl=en" target="_blank" class="google-play"></a><br class="hidden-md" />
+                            <img src="http://az681300.vo.msecnd.net/assets/block-5a-4.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="visible-xs">
+        <div class="row footer-bar">
+    <div class="col-sm-12">
+        <div class="container">
+            <ul>
+                <li style="border-left:0;"><a class="btn" data-type="inline" href="http://www.nohairselfie.com/register">Register<br class="hidden-xs" /> a shave <span class="footer-bar-links-arrow"></span></a></li>
+                <li><a class="btn" href="http://www.nohairselfie.com/view-hair-ticipants">View<br class="hidden-xs" /> Hair-Ticipants <span class="footer-bar-links-arrow"></span></a></li>
+                <li><a class="btn" href="http://www.nohairselfie.com/support-a-hair-ticipant">Support a<br class="hidden-xs" /> Hair-Ticipant <span class="footer-bar-links-arrow"></span></a></li>
+                <li><a class="btn" href="http://www.nohairselfie.com/count-me-in-for-2016">Count me in<br class="hidden-xs" /> for 2016 <span class="footer-bar-links-arrow"></span></a></li>
+                
+                <li class="socials-bar">
+                    <span>Share</span>
+                    <a class="socials-twitter-tweet newWindow" href="https://twitter.com/intent/tweet?text="></a>
+                    <!-- test -->
+                    <a class="socials-fb fb-Share" href="https://www.facebook.com/thePMCF"></a>
+                    <a class="socials-gplus newWindow" href="https://plus.google.com/share?hl=en-US&url="></a>
+                </li>
+                <li class="download-app">
+                    <a class="btn" href="fonts/slick.svg#">Download<br class="hidden-xs" /> the App <span class="footer-bar-links-arrow"></span></a>
+                    <img src="http://az681300.vo.msecnd.net/assets/download-the-app.png" />
+                    <div class="download-app-details">
+                        <strong>#NoHairSelfie App</strong>
+                        <!-- <p>Download the App and show the world how you're supporting cancer research.</p> -->
+                        <p>Download the #NoHairSelfie App and show your support in an app-propriate way!</p>
+                        <a class="store-1" href="https://itunes.apple.com/gb/app/nohairselfie/id938937800?mt=8"></a><br class="hidden-xs" />
+                        <a class="store-2" href="https://play.google.com/store/apps/details?id=com.bald.selfie&hl=en" target="_blank"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    //twitter
+    $(document).ready(function(){
+        var tHref = $('.socials-twitter-tweet').attr('href');
+        if(window.location.href.toLowerCase().indexOf('how-to-shave') != -1){
+            tHref = tHref + encodeURIComponent('Check out my #NoHairSelfie! Download the App and join the movement! #WorldCancerDay NoHairSelfie.com') + "&url=";
+        } else {
+            tHref = tHref + encodeURIComponent($('meta[name="name"]').attr('content')) + "&url=";
+        }
+        $('.socials-twitter-tweet').attr('href', tHref);
+    });
+
+</script>
+
+        </div>
+    </div>
+    <!-- ./content -->
+
+<div id="push"></div>
+
+</div>
+<!-- end of wrapper -->
+
+<div class="row footer-bar hidden-xs">
+    <div class="col-sm-12">
+        <div class="container">
+            <ul>
+                <li><a class="btn" data-type="inline" href="http://www.nohairselfie.com/register">Register<br class="hidden-xs" /> a shave <span class="footer-bar-links-arrow"></span></a>
+                </li>
+                <li><a class="btn" href="http://www.nohairselfie.com/view-hair-ticipants">View<br class="hidden-xs" /> Hair-Ticipants <span class="footer-bar-links-arrow"></span></a>
+                </li>
+                <li><a class="btn" href="http://www.nohairselfie.com/support-a-hair-ticipant">Support a<br class="hidden-xs" /> Hair-Ticipant <span class="footer-bar-links-arrow"></span></a>
+                </li>
+                <li><a class="btn" href="http://www.nohairselfie.com/count-me-in-for-2016">Count me in<br class="hidden-xs" /> for 2016 <span class="footer-bar-links-arrow"></span></a></li>
+                <li class="socials-bar">
+                    <span>Share</span>
+                    <a class="socials-twitter-tweet newWindow" href="https://twitter.com/share?hashtags=NOHAIRSELFIE&text="></a>
+
+                    <a class="socials-fb fb-Share" href="https://www.facebook.com/thePMCF"></a>
+                    <a class="socials-gplus newWindow" href="https://plus.google.com/share?hl=en-US&url="></a>
+                </li>
+                <li class="download-app">
+                    <a class="btn" href="fonts/slick.svg#">Download<br class="hidden-xs" /> the App <span class="footer-bar-links-arrow"></span></a>
+                    <img src="http://az681300.vo.msecnd.net/assets/download-the-app.png" />
+                    <div class="download-app-details">
+                        <strong>#NoHairSelfie App</strong>
+                        <p>Download the #NoHairSelfie App and show your support in an app-propriate way!</p>
+                        <a class="store-1" href="https://itunes.apple.com/gb/app/nohairselfie/id938937800?mt=8" target="_blank"></a>
+                        <br class="hidden-xs" />
+                        <a class="store-2" href="https://play.google.com/store/apps/details?id=com.bald.selfie&hl=en" target="_blank"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+    <div class="footer-content">
+
+        <div class="container">
+
+            <div class="row footer-links">
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="action-buttons">
+                        <a class="btn btn-donate" href="http://www.nohairselfie.com/thank-you-for-donating">Donate</a>
+                        <a class="btn btn-signup" href="http://www.nohairselfie.com/register">Register</a>
+                        <a class="btn btn-login" href="http://www.nohairselfie.com/login">Login</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-8">
+
+                    <ul class="link-col-1">
+                        <li><a href="http://www.nohairselfie.com/media-room">Media</a>
+                        </li>
+                        <li><a href="http://www.nohairselfie.com/contact-us">Contact</a>
+                        </li>
+                        <li><a href="http://www.nohairselfie.com/faq">FAQs</a>
+                        </li>
+                    </ul>
+
+                    <ul class="link-col-2">
+                        <li><a href="http://www.nohairselfie.com/sponsors-and-partners">Sponsors and Partners</a>
+                        </li>
+                        <li><a href="http://www.nohairselfie.com/terms-of-use">Terms of Use</a>
+                        </li>
+                        <li><a href="http://www.nohairselfie.com/privacy-policy">Privacy Policy</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="row footer-socials">
+
+                <div class="col-sm-5 footer-signature">
+                    <a href="http://www.thepmcf.ca/" target="_blank"><img src="http://az681300.vo.msecnd.net/assets/mpc-footer-logo.png" />
+                    </a>
+                </div>
+
+                <div class="col-sm-7">
+
+                    <span class="visible-xs">Follow us:</span>
+
+                    <div id="socials">
+                        <span class="hidden-xs pull-left socials-label">Follow us:</span>
+                        
+                        <a class="socials socials-facebook" href="https://www.facebook.com/thePMCF" target="_blank"></a>
+                        <a class="socials socials-twitter" href="https://twitter.com/thepmcf" target="_blank"></a>
+                        <a class="socials socials-google" href="https://plus.google.com/107414921657461703629" target="_blank"></a>
+                        <a class="socials socials-linkedin" href="http://www.linkedin.com/company/the-princess-margaret-cancer-foundation" target="_blank"></a>
+                        <a class="socials socials-instagram" href="http://instagram.com/thepmcf" target="_blank"></a>
+                        <a class="socials socials-pinterest" href="http://www.pinterest.com/thePMCF" target="_blank"></a>
+                        <a class="socials socials-youtube" href="http://www.youtube.com/user/PrincessMargaretHF" target="_blank"></a>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row copyright">
+                <div class="col-xs-12">
+                    Copyright &copy; 2014-2015, The Princess Margaret Cancer Foundation.
+                    All rights reserved. #NoHairSelfie<sup>&#8482;</sup>
+                </div>
+            </div>
+        </div>
+        <!-- /.footer-content -->
+
+
+
+    </div>
+    <!-- /.footer -->
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="../bootstrap.min.js"></script>
+    <script src="../jquery.viewportchecker.js"></script>
+
+    <!-- Plugins -->
+    <script src="../jquery.sharrre-1.3.4.min.js"></script>
+    <script src="../uniform/jquery.uniform.min.js"></script>
+    <link href="../../css/sharrre.css" rel="stylesheet">
+    <script src="../sharrre-custom.js"></script>
+
+    <script src="../mmenu/js/jquery.mmenu.min.js" type="text/javascript"></script>
+    <link href="../mmenu/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+
+    <script src="../jquery.countdown.min.js" type="text/javascript"></script>
+
+    <script src="../jquery.scrollupformenu.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $('#top').scrollUpMenu({
+                waitTime: 50,
+                transitionTime: 50,
+                menuCss: {
+                    'position': 'fixed',
+                    'top': '0'
+                }
+            });
+        });
+    </script>
+
+    <!-- Count Down Script -->
+    <script type="text/javascript">
+        $("#getting-started")
+            .countdown("2016/02/05", function(event) {
+                $(this).html(
+                    //event.strftime('<div>%D<span>days</span></div> <div>%H<span>HRS</span></div> <div>%M<span>Mins</span></div> <div>%S<span>Secs</span></div>')
+                    event.strftime('<div>%H<span>HRS</span></div> <div>%M<span>Mins</span></div> <div>%S<span>Secs</span></div>')
+                );
+            });
+    </script>
+
+
+
+
+  <script src='http://s.codepen.io/assets/common/stopExecutionOnTimeout.js'></script>
+
+    <!-- Lightbox -->
+    <script type="text/javascript" src="../lightbox/js/jquery.requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="../lightbox/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../lightbox/js/ilightbox.packed.js"></script>
+    <link rel="stylesheet" type="text/css" href="../lightbox/css/ilightbox.css" />
+
+
+
+
+    <script src="../custom.js"></script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-55621737-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: fbAppId,
+                xfbml: true,
+                version: 'v2.2'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+</div>
+
+
+    </body>
+
+    </html>
+

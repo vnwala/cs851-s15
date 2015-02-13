@@ -1,0 +1,56 @@
+/* print ============================================================= */
+
+@media print {
+body {
+    color: #232323;
+    font: 13px/1.231 Arial,verdana,sans-serif;
+    min-height: 100%;
+    text-align: center;
+}
+
+#vtrheader {
+	display:none
+}
+
+#header2_02 {
+	display:none
+}
+
+.result_data {
+    display: block;
+    float: right;
+    margin-left: 15px;
+    width: 78%;
+}
+
+.ac_description {
+    text-align: left;
+	display:block;
+	width:500px;
+}
+
+.result_data p {
+	width:480px;
+}
+
+.pricereview {
+    float: right;
+	display:block;
+    width: 180px;
+}
+
+#footer {
+	display:none
+}
+
+.bottom_nav {
+	display:none
+}
+
+#col_bottom {
+	display:none
+}
+
+.schedulewindow {
+	height:auto
+}

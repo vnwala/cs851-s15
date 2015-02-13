@@ -1,0 +1,56 @@
+
+
+div#calendar {
+    width:205px;
+	height:187px;
+	position:absolute;
+	top:44px;
+	left:8px;
+}
+
+table.calendar {
+	padding: 0;
+	margin: 0px 6px 30px;
+}
+table.calendar tr.headline td{
+	font-size: 13px;
+    padding-top: 8px;
+}
+
+table.calendar th {
+	text-align: center;
+	font-family: 'ƒqƒ‰ƒMƒmŠpƒS Pro W3', 'Hiragino Kaku Gothic Pro', ƒƒCƒŠƒI, Meiryo, '‚l‚r ‚oƒSƒVƒbƒN', sans-serif;
+	font-size: 15px;
+	color: #777777;
+}
+table.calendar th span {
+	font-family: 'ƒqƒ‰ƒMƒmŠpƒS Pro W3', 'Hiragino Kaku Gothic Pro', ƒƒCƒŠƒI, Meiryo, '‚l‚r ‚oƒSƒVƒbƒN', sans-serif;
+	cursor: pointer;
+	float: right;
+}
+table.calendar td {
+	border-bottom: solid 1px #CCCCCC;
+	text-align: center;
+	width: 29px;
+	height: 22px;
+	vertical-align: middle;
+	font-family: 'ƒqƒ‰ƒMƒmŠpƒS Pro W3', 'Hiragino Kaku Gothic Pro', ƒƒCƒŠƒI, Meiryo, '‚l‚r ‚oƒSƒVƒbƒN', sans-serif;
+	line-height: normal;
+	font-size: 12px;
+	color: #333333;
+}
+table.calendar td.click {
+	cursor: pointer;
+	background-color: #FFFFFF;
+}
+table.calendar td.Today {
+	font-weight: bolder;
+	color: #009900;
+	font-size: 14px;
+}
+table.calendar td.Sun {
+	color: #FF0000;
+}
+table.calendar td.holyday {
+	color: #FF0000;
+}

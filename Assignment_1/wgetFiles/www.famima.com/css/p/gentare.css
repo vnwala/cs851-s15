@@ -1,0 +1,188 @@
+@charset "Shift_JIS";
+
+/*
+Title: stamina gentare
+URI: http://famima.com/shop/pages/gentare.aspx
+*/
+
+#gentare-wrap h1, #gentare-wrap h2, #gentare-wrap h3, #gentare-wrap h4,
+#gentare-wrap img, #gentare-wrap p, #gentare-wrap div, #gentare-wrap ul, #gentare-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#gentare-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#gentare-wrap h1#header{
+	width:700px; height:332px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/header.jpg) no-repeat;}
+
+#gentare-wrap #contentBase{
+	width:700px;
+	background:url(http://www.famima.com/images/p/gentare/bg.jpg) repeat;}
+	
+#gentare-wrap #contentBase2{
+	width:700px;
+	background:url(http://www.famima.com/images/p/gentare/bg.jpg) repeat;}
+	
+#gentare-wrap #contentBase3{
+	width:700px; margin-top:20px;
+	background:url(http://www.famima.com/images/p/gentare/bg.jpg) repeat;}
+
+#gentare-wrap #contentBase .itemCONT{
+	width:464px; float:left;}
+	
+#gentare-wrap #contentBase .itemIMAGE{
+	width:236px; float:left;}
+	
+#gentare-wrap #contentBase #ttl1{
+	width:464px; height:40px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/title1.jpg) no-repeat;}
+
+#gentare-wrap #contentBase #copy1{
+	width:464px; height:68px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/copy1.jpg) no-repeat;}
+
+#gentare-wrap #contentBase .itemCONT p{
+	padding:5px 13px 5px 21px; line-height:130%;}
+
+#gentare-wrap #contentBase .ywBase{
+	width:464px;
+	background:url(http://www.famima.com/images/p/gentare/yw_base.jpg) repeat-y;}
+	
+#gentare-wrap #contentBase .ywBasebtm{
+	width:464px; height:25px;
+	background:url(http://www.famima.com/images/p/gentare/yw_basebtm.jpg) repeat-y;}
+
+#gentare-wrap #contentBase .ywBase p{
+	padding:5px 32px 5px 39px; line-height:120%;}
+
+#gentare-wrap #contentBase #copy2{
+	width:464px; height:80px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/copy2.jpg) no-repeat;}
+	
+#gentare-wrap #contentBase2 #ttl2{
+	width:700px; height:40px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/title2.jpg) no-repeat;}
+	
+#gentare-wrap #item01Base{
+	width:243px; float:left;}
+#gentare-wrap #item02Base{
+	width:221px; float:left;}
+#gentare-wrap #item03Base{
+	width:236px; float:left;}
+	
+#gentare-wrap #item01Base .img{
+	width:243px; height:210px;
+	background:url(http://www.famima.com/images/p/gentare/item01base.jpg) no-repeat;}
+#gentare-wrap #item02Base .img{
+	width:221px; height:210px;
+	background:url(http://www.famima.com/images/p/gentare/item02base.jpg) no-repeat;}
+#gentare-wrap #item03Base .img{
+	width:236px; height:210px;
+	background:url(http://www.famima.com/images/p/gentare/item03base.jpg) no-repeat;}
+
+#gentare-wrap #item01Base .txtBase{
+	padding:111px 0 0 106px;}
+#gentare-wrap #item02Base .txtBase{
+	padding:111px 0 0 70px;}
+#gentare-wrap #item03Base .txtBase{
+	padding:111px 0 0 90px;}
+	
+#gentare-wrap .txtBase a{
+	outline:0;}
+
+#gentare-wrap .txtBase h3.name{
+	font-weight:bold; color:#333333; line-height:120%;}
+#gentare-wrap .txtBase .price{
+	color:#ff6600; line-height:120%; padding:4px 0;}
+	
+#gentare-wrap .txtBase h3.name a:link, 
+#gentare-wrap .txtBase h3.name a:visited{
+	text-decoration:underline; color:#333333;}
+#gentare-wrap .txtBase h3.name a:hover,
+#gentare-wrap .txtBase h3.name a:active{
+	text-decoration:none; color:#333333;}
+	
+#gentare-wrap .line1{
+	width:700px; height:10px; clear:both;
+	background:url(http://www.famima.com/images/p/gentare/line1.jpg) no-repeat;}
+
+#gentare-wrap #itemRECIPE01{
+	width:700px; height:317px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe_1.jpg) no-repeat;}
+
+
+#gentare-wrap #itemRECIPE02_base{
+	width:350px; float:left;}
+#gentare-wrap #itemRECIPE02_item{
+	width:350px; height:205px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe2_01_2.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE02_recipe{
+	width:350px; height:255px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe2_02.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE02_bt{
+	width:350px; height:50px;
+	background:url(http://www.famima.com/images/p/gentare/recipe2_03.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE02_bt a{
+	outline:0;}
+#gentare-wrap #itemRECIPE02_bt .bt{
+	padding-left:125px;}
+	
+	
+#gentare-wrap #itemRECIPE03_base{
+	width:350px; float:left;}
+#gentare-wrap #itemRECIPE03_item{
+	width:350px; height:199px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe3_01.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE03_recipe{
+	width:350px; height:255px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe3_02.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE03_bt{
+	width:350px; height:51px;
+	background:url(http://www.famima.com/images/p/gentare/recipe3_03.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE03_bt a{
+	outline:0;}
+#gentare-wrap #itemRECIPE03_bt .bt{
+	padding-left:125px;}
+
+
+#gentare-wrap #itemRECIPE04_base{
+	width:350px; float:left;}
+#gentare-wrap #itemRECIPE04_item{
+	width:350px; height:196px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe4_01_2.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE04_recipe{
+	width:350px; height:255px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/recipe4_02.jpg) no-repeat;}
+#gentare-wrap #itemRECIPE04_bt{
+	width:350px; height:54px;
+	background:url(http://www.famima.com/images/p/gentare/recipe4_03.jpg) no-repeat;
+	margin-bottom:15px;}
+#gentare-wrap #itemRECIPE04_bt a{
+	outline:0;}
+#gentare-wrap #itemRECIPE04_bt .bt{
+	padding-left:125px;}
+
+#gentare-wrap #makerTTL{
+	width:700px; height:52px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/gentare/maker_ttl.jpg) no-repeat;}
+
+
+/* clearfix */
+#gentare-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+/* IE6 */
+* html #gentare-wrap { 
+	height: 1%;}

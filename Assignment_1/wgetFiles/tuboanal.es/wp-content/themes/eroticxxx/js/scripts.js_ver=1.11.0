@@ -1,0 +1,18 @@
+$(document).ready(function(){
+	if( !$('*').hasClass('current-menu-item') ){
+		$( 'nav ul li' ).first().addClass('current-menu-item');
+	}
+	$('.menu').slicknav({
+		label: 'MENU',
+		duration: 400,
+		prependTo:'#responsive',
+	});
+
+	window.onload = function(){
+		$('.masonry').masonry({
+			columnWidth: 260,
+			itemSelector: '.item',
+			gutter:10,
+		});
+	};
+});

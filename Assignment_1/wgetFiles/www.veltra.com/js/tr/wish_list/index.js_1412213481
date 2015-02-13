@@ -1,0 +1,123 @@
+$(function(){
+
+    //set wishlist balloon position
+    var r_timer = false;
+    if(LANG_CODE == 'en')
+    {
+        $div_name='.div_wish_list_en';
+        adjust_left = 80;
+    }
+    else
+    {
+        $div_name='.div_wish_list';
+        adjust_left = 70;
+    }
+    
+    var $wish_pos_top_default = 0;
+    $(window).resize(function() {
+        if (r_timer !== false) {
+            clearTimeout(r_timer);
+        }
+        r_timer = setTimeout(function() {
+            var $wish_pos_top = ($wish_pos_top_default < $(window).scrollTop()) 
+                                    ? $(window).scrollTop()-60 
+                                    : $wish_pos_top_default;
+            var $wish_pos_left = $($div_name).position().left;
+            if($wish_pos_left == 0) { $wish_pos_left = 750; }
+            $('#wishlist_fukidashi').css({top: ($wish_pos_top)+'px', left: ($wish_pos_left-adjust_left)+'px'});
+            //console.log($wish_pos_top+' : '+$wish_pos_left);
+        }, 200);
+    }).trigger('resize');
+
+
+    if(typeof preview_flg === "undefined"){
+        
+        add_to_wishlist();
+        $(".delete-button").find("a").click(function(e) {
+            e.preventDefault();
+            var wish_list_id = $(this).attr('id'), 
+                $message_show_point = $(this).parent().parent();
+            $.ajax({
+                url     : '/tr_json/delete_wish_list',
+                type    : 'GET',
+                data: {wish_list_id: wish_list_id},
+                dataType: 'json',
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    
+                },
+                success: function(data){
+                    var message = 'This item has been deleted from Wish list';
+                    if(LANG_CODE == 'jp'){
+                        message = "削除しました";
+                    }
+
+                    $message_show_point.append('<div id="wishlist_delete_message">'+message+'</div>');
+                    $('#wish_list_count').html(data['wish_list_count']);
+                    $("#wish_list_"+wish_list_id).fadeOut(500);
+					  if(data['wish_list_count'] == 0) {
+					  	$('.noresult').fadeIn(1000);
+					  }
+                }
+            });
+        });
+        
+    } else if (preview_flg == 0){
+    
+        add_to_wishlist();
+        
+        $.ajax({
+            url     : '/tr_json/add_recent_list',
+            type    : 'GET',
+            data: {activity_id: activity_id},
+            dataType: 'json',
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+                
+            },
+            success: function(data){
+                if(data['recent_list_action'] == 'insert'){
+                    $('#recent_list_count').html(data['recent_list_count']);
+                }
+
+            }
+        });
+    }
+
+    function add_to_wishlist(){
+        $(".add-button").find("a,span").click(function(e) {
+            e.preventDefault();
+            var activity_id = $(this).attr('id'),
+                $this_btn = $(this).parent();
+                $message_show_point = $(this).parent().parent();
+            
+            $.ajax({
+                url     : '/tr_json/add_wish_list',
+                type    : 'GET',
+                data: {activity_id: activity_id},
+                dataType: 'json',
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    
+                },
+                success: function(data){
+                    if(data['wish_list_action'] == 'insert'){
+                        $(window).trigger('resize');
+                        var message = 'Added to Wish list';
+                        if(LANG_CODE == 'jp'){
+                            message = "この商品はお気に入りに追加済みです";
+                        }
+                    
+                        
+                        //$('#wishlist_add_message').fadeOut(3000);
+                        $('#wish_list_count').html(data['wish_list_count']);
+                        $('#wishlist_fukidashi').fadeIn(500);
+                        $this_btn.fadeOut(500, function(){
+                            $message_show_point.append('<div id="wishlist_add_message">'+message+'</div>');
+                        });
+                        setTimeout(function(){ $('#wishlist_fukidashi').fadeOut(3000); }, 500);
+                    }
+
+                }
+            });
+        
+        });
+    }
+});

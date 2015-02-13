@@ -1,0 +1,15 @@
+// Create the CCI object if it doesn't exist else use the existing
+if(typeof CCI == "undefined")
+{
+	var CCI = {};
+}
+
+CCI["Comments"] = {
+    "Abuse": {
+        "emailFrom": "do-not-reply@tirebusiness.com",
+        "emailFromName": "Tire Business",
+        "emailTo": "dzielasko@crain.com,smikolajczyk@crain.com,ascott@crain.com,kphill@crain.com",
+        "emailSubject": "Comment Abuse Report Notification",
+        "emailObjectClass": "1"	
+    }
+};

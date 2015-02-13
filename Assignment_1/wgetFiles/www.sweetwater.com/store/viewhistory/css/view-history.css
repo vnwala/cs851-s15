@@ -1,0 +1,256 @@
+/*************************************************
+*
+* Sweetwater View History CSS
+*
+**************************************************/
+/*
+.recently-viewed-container {
+	width:100%;
+	overflow:hidden;
+	clear:both;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-weight: normal;
+}
+
+.recently-viewed-container .item-container {
+	float:left;
+	width:150px;
+	height:198px;
+	border:1px solid black;
+}
+
+.recently-viewed-container h3 {
+	background: #156DA1;
+	color:#fff;
+	font-size:24px;
+	height:46px;
+	line-height:46px;
+	padding:0 15px;
+}
+*/
+
+
+.recently-viewed-container {
+	padding:5px 0;
+	clear: both;
+	border: solid #e6e6e6;
+	border-width: 1px 0;
+	/* border-bottom: solid #e6e6e6; */
+	width:930px;
+	margin: 15px auto 10px;
+}
+.recently-viewed-container h3 {
+	padding: 0 15px;
+	color: #000;
+	width:500px;
+	float:left;
+	margin:0;
+	font-weight:normal;	
+}
+
+.recently-viewed-container.bar h3 {
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.recently-viewed-container.panel h3 {
+	font-size: 24px;
+	line-height: 46px;
+}
+
+.recently-viewed-header {
+	background: #fff;
+	color: #000;	
+}
+
+.bar .recently-viewed-header {
+	height: 26px;
+}
+
+.panel .recently-viewed-header {
+	height: 46px;
+}
+
+.bar .recently-viewed-header a {
+	line-height: 26px;
+}
+.panel .recently-viewed-header a {
+	line-height: 46px;
+}
+
+.recently-viewed-header a {
+	color:#000;
+	float:right;
+	padding-right:15px;
+}
+.recently-viewed-container .clear {
+	clear:both;
+}
+.recently-viewed-container.bar li {
+	position: relative;
+}
+.recently-viewed-container.panel li {
+	line-height: 1.2;
+	padding: 15px 0;
+}
+.recently-viewed-container.panel .thumb {
+	display: none;
+}
+
+.recently-viewed-container.panel li {
+	width: 20%;
+}
+
+.recently-viewed-container li {
+	display: inline-block;
+	*display: inline;
+	font-size: 12px;
+	
+	text-align: center;
+	vertical-align: top;
+	zoom: 1.0;
+}
+.recently-viewed-container li div {
+	padding: 0 10px;
+}
+
+.recently-viewed-container.bar .recently-viewed-img.thumb  {
+	width: 75px; 
+	height: 75px;
+}
+
+.recently-viewed-container.panel .recently-viewed-img  {
+	width: 130px;
+	height: 130px;
+}
+
+.recently-viewed-container .recently-viewed-img {
+	background: #fff;
+	border: 1px solid #fff;
+	display: block;
+	margin: 0 auto;
+}
+
+.recently-viewed-container .recently-viewed-img {
+	background: #fff; 
+	border:  1px solid #fff; 
+	display: block;
+	margin: 0 auto;
+}
+
+.recently-viewed-container .thumb img.larger-width {
+	width: 60px;
+}
+.recently-viewed-container .thumb img.larger-height {
+	height: 60px;
+}
+
+.recently-viewed-container.bar .detail-panel {
+	
+	display:none;
+	width: 180px;
+	position: absolute;
+	background-color:#fff;
+	padding: 15px 10px;
+	border-radius: 5px;
+	z-index:100;
+}
+
+.recently-viewed-container.bar .detail-panel h5 {
+	font-size: 11px;
+}
+
+.recently-viewed-container.bar .recently-viewed-desc,
+.recently-viewed-container.bar .recently-viewed-price .free-ship {
+	font-size: 10px;
+}
+
+.recently-viewed-container.bar .recently-viewed-price b {
+	display: inline-block;
+	font-size: 0.6em;
+	line-height: 1.2;
+	vertical-align: top;
+	zoom: 1.0;
+}
+
+.recently-viewed-container.bar li:hover .detail-panel {
+	display:block;
+	position: absolute;
+	box-shadow: 0 0 3px 1px #999;
+	top: 75px;
+	left: -60px;
+}
+
+.recently-viewed-container.bar li.first:hover .detail-panel {
+	left: -20px;
+}
+
+.recently-viewed-container.bar li.last:hover .detail-panel {
+	left: -100px;
+}
+
+.no-touch .recently-viewed-container.bar .recently-viewed-img.thumb:hover,
+.no-touch .recently-viewed-container.panel .recently-viewed-img:hover {
+	background: #fff;
+	border-color: #ff7900;
+}
+.recently-viewed-container .recently-viewed-img:before,
+.recently-viewed-container .recently-viewed-img img {
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
+	zoom: 1.0;
+}
+.recently-viewed-container .recently-viewed-img:before {
+	content: '';
+	height: 100%;
+	width: 0;
+}
+.recently-viewed-container h5 {
+	font-size: 14px;
+	margin-bottom: 3px;
+}
+.recently-viewed-container h5 a {
+	text-decoration: none;
+	color: #005887;
+}
+.recently-viewed-container h5 a:hover {
+	text-decoration: underline;	
+}
+
+.recently-viewed-container .recently-viewed-desc {
+	margin-bottom: 6px;
+}
+.recently-viewed-container .recently-viewed-price a {
+	color: #e13233;
+	text-decoration: none;
+	margin-bottom: 3px;
+}
+.recently-viewed-container .recently-viewed-price .amount {
+	font-size: 26px;
+	line-height: 1;
+}
+
+.recently-viewed-container .recently-viewed-price strong {
+	font-size: 14px;
+}
+.recently-viewed-container .recently-viewed-price em {
+	font-style: normal;
+	text-transform: uppercase;
+}
+.recently-viewed-container .recently-viewed-price span {
+	white-space: nowrap;
+}
+
+.recently-viewed-container.bar ul {
+	padding: 0 3px;
+	margin: 5px 0px;
+}
+
+.recently-viewed-container.panel ul {
+	padding: 0 20px;
+}
+
+.recently-viewed-container .clear-history {
+	color: #777;
+}

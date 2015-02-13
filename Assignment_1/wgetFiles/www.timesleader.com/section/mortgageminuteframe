@@ -1,0 +1,41 @@
+<div id="bim-mortgage-container">
+	<!-- Google Analytics Code -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-43321207-1']);
+		_gaq.push(['_trackEvent', 'TimesLeader', 'Widget Loaded', 'TMM Widget']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+			'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<!-- LOGO -->
+	<div id="bim-mortgage-min-logo">
+		<a href="http://www.timesleader.com/section/mortgageminute" target="_parent"><img src="http://images.bimedia.net/images/tmm_logo_final1.jpg" title="Today's Mortgage Minute"></a>
+	</div>
+	<!-- PLAYER -->
+	<div id="bim-mortgage-min-player">
+		<script src='http://player.bimvid.com/v2/playlist/mortgageminute/fa7fa3afec16fb7c8620ebfd9764050ca4366ce5'></script>
+	</div>
+	<!-- AD -->
+	<div id="bim-mortgage-min-ad">
+		<!-- BIM Todays Mortgage Minute 300x250 ad tag -->
+		<script language="JavaScript" type="text/javascript">
+			if (typeof ord=='undefined') {ord=Math.random()*10000000000000000;}
+			document.write('<script language="JavaScript" src="http://ad.doubleclick.net/N5152/adj/CivitasMedia_TMM_Local_Rev/TimesLeader;sz=300x250;ord=' + ord + '?" type="text/javascript"><\/script>');
+		</script>
+		<noscript>
+			<a href="http://ad.doubleclick.net/N5152/jump/CivitasMedia_TMM_Local_Rev/TimesLeader;sz=300x250;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/N5152/ad/CivitasMedia_TMM_Local_Rev/TimesLeader;sz=300x250;ord=123456789?" width="300" height="250" border="0" alt=""></a>
+		</noscript>
+		<!-- End ad tag -->
+	</div>
+</div>		
+<div style="float:left;">
+	<a href="http://www.timesleader.com/section/legalminute" target="_parent"><img src="../globalpaths1/images/legalmed.png" width="120px"></a>
+</div>

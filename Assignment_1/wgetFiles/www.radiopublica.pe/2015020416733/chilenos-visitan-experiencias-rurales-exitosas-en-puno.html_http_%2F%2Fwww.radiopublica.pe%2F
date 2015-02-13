@@ -1,0 +1,536 @@
+ <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES">
+<head>	<meta charset="UTF-8" />
+<title>Chilenos visitan experiencias rurales exitosas en Puno &#8211; Radio Pública ::: La Radio de Todos</title> 
+<meta name="keywords" content="Radio Pública la radio de todos Puno Juliaca  Noticias"/>
+	<link rel="stylesheet" href="../wp-content/themes/rrcn/style.css" type="text/css" media="screen"/>
+    <link rel="shortcut icon" href="http://www.radiopublica.pe/publica.png"/>
+    <link rel="shortcut icon" href="http://www.radiopublica.pe/publica.png" type="image/x-icon"/>
+    <meta name="generator" content="Radio Pública PERÚ" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Radio Pública ::: La Radio de Todos RSS Feed" href="http://www.radiopublica.pe/feed" />
+	<link rel="pingback" href="http://www.radiopublica.pe/xmlrpc.php" />
+	<script type="text/javascript" src="../wp-content/themes/rrcn/js/jquery.js"></script>
+     <script type="text/javascript"> $(document).ready(function() { $(".tab_content").hide(); $("ul.tabs li:first").addClass("active").show(); $(".tab_content:first").show(); $("ul.tabs li").click(function() { $("ul.tabs li").removeClass("active"); $(this).addClass("active"); $(".tab_content").hide(); var activeTab = $(this).find("a").attr("href"); $(activeTab).fadeIn(); return false;	}); }); </script>     
+<script type="text/javascript">  $(document).ready(function () {  createTicker();  }); function createTicker(){ var tickerLIs = $("#header3-1-left-ticker ul").children();  tickerItems = new Array(); tickerLIs.each(function(el) { tickerItems.push( jQuery(this).html() ); });
+
+	i = 0                                                     
+	rotateTicker(); }  function rotateTicker(){   if( i == tickerItems.length ){    	  i = 0;   	}                                                         
+      tickerText = tickerItems[i];  c = 0;  typetext();     setTimeout( "rotateTicker()", 5000 );                     
+	i++;    }   var isInTag = false;  function typetext() { var thisChar = tickerText.substr(c, 1);  if( thisChar == '<' ){ isInTag = true; } if( thisChar == '>' ){ isInTag = false; }  $('#header3-1-left-ticker').html("&nbsp;" + tickerText.substr(0, c++));   
+	if(c < tickerText.length+1) if( isInTag ){ typetext(); }else{ setTimeout("typetext()", 28); }                                                             
+	else { 	c = 1;   	tickerText = "";  } }    </script> 
+    <script type="text/javascript" src="../wp-content/themes/rrcn/js/slides.min.jquery.js"></script>
+<script> $(function(){ $('#slides').slides({ preload: true, play: 5000, pause: 2500, hoverPause: true, animationStart: function(current){ $('.caption').animate({ 	bottom:-35 },100); if (window.console && console.log) { console.log('animationStart on slide: ', current); }; }, animationComplete: function(current){ 
+ $('.caption').animate({ bottom:0 },200); if (window.console && console.log) { console.log('animationComplete on slide: ', current); }; }, slidesLoaded: function() { $('.caption').animate({ bottom:0 },200); } }); });
+ </script>
+     <style>#content .post {  border: none !important;} </style>  <style media="screen" type="text/css"> 
+.custom1{border-top:3px solid #1852c7 !important;} .custom1 a{color:#1852c7 !important;} .custom2{border-top:3px solid #f5ea23 !important;}  .custom2 a{color:#f5ea23 !important}  .custom3{border-top:3px solid #edcf09 !important;}  .custom3 a{color:#edcf09 !important} .custom4{border-top:3px solid #028a0b !important;} .custom4 a{color:#028a0b !important} .custom5{border-top:3px solid #cc0202 !important;} .custom5 a{color:#cc0202 !important} .custom6{border-top:3px solid #19b800 !important;} .custom6 a{color:#19b800 !important} .custom7{border-top:3px solid #0f6fa3 !important;} .custom7 a{color:#0f6fa3 !important}    
+.custom8{border-top:3px solid #a018c2 !important;} .custom8 a{color:#a018c2 !important} .custom9{border-top:3px solid #000 !important;} .custom9 a{color:#000 !important} .custom10{border-top:3px solid #000 !important;} .custom10 a{color:#000 !important} .custom11{border-top:3px solid #000 !important;} .custom11 a{color:#000 !important} .custom12{border-top:3px solid #000 !important;} .custom12 a{color:#000 !important}     #header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper font {
+	color: #C00;
+	font-weight: bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper p {
+	font-weight: bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	text-align: center;
+	color: #090;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper h2 {
+	font-size: 10px;
+	color: #060;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper table tr td h2 {
+	text-align: center;
+	font-size: 12px;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper table tr td h2 {
+	font-size: 14px;
+}
+#header #header2 #logoright #logoright-left #logoright-left-cat #logoright-left-cat-wrapper table tr td h2 {
+	font-size: 12px;
+	color: #090;
+	font-weight: bold;
+}
+.mensaje {
+	color: #FC0;
+}
+</style>
+  	
+<style type="text/css">
+.innertab { background-color:rgb(7,66,242); } 
+.playlist-colour { background:rgb(0,0,0); } 
+.loadMI_mp3j, .loadB_mp3j, .load_mp3j { background:rgb(44,0,105); } 
+.poscolMI_mp3j, .MIsliderVolume .ui-widget-header, .vol_mp3t .ui-widget-header, .vol_mp3j .ui-widget-header { background-color:rgb(105,0,0); } 
+.interface-mjp { color:#F5E900; } 
+.player-track-title { font-size:11px; } 
+.a-mjp { color:#FFFFFF; background-image:none !important; } 
+.a-mjp:hover { background-image:none !important; color:#3CFF00 !important; background:#347EE3 !important; } 
+.a-mjp.mp3j_A_current { background-image:none !important; color:#549DFF !important; background:#000000 !important; } 
+.a-mjp { font-size:9px; } 
+.transport-MI div, .mp3j-popout-MI:hover, .playlist-toggle-MI:hover, .dloadmp3-MI.whilelinks { background-color:rgb(105,0,0); border-color:rgb(105,0,0); } 
+.popout-text-mjp:hover { color:rgb(105,0,0); } 
+span.textbutton_mp3j, .transport-MI div, .transport-MI div:hover { color:#549DFF; } 
+.mp3-tint, .Smp3-tint { background-color:#aaa; } 
+</style>
+<link rel="alternate" type="application/rss+xml" title="Radio Pública ::: La Radio de Todos &raquo; Chilenos visitan experiencias rurales exitosas en Puno RSS de los comentarios" href="http://www.radiopublica.pe/2015020416733/chilenos-visitan-experiencias-rurales-exitosas-en-puno.html/feed" />
+<link rel='stylesheet' id='v1-dark-css'  href='http://www.radiopublica.pe/wp-content/plugins/mp3-jplayer/css/v1-skins/v1-dark.css?ver=2.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-content/plugins/tabber-tabs-widget/js/tabber-minimized.js?ver=4.1'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-content/plugins/mp3-jplayer/js/jquery.jplayer.min.2.7.1.js?ver=2.7.1'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-content/plugins/mp3-jplayer/js/mp3-jplayer-2.0.js?ver=2.0'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-content/plugins/vslider/js/vslider.js?ver=4.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.radiopublica.pe/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.radiopublica.pe/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Alcalde Oswaldo Marín expresa saludo a canillitas de Juliaca' href='http://www.radiopublica.pe/2015020416730/alcalde-oswaldo-marin-expresa-saludo-a-canillitas-de-juliaca.html' />
+<link rel='next' title='ADFP confirma acuerdo con el Mininter y asegura que Copa Inca se juega desde el viernes' href='http://www.radiopublica.pe/2015020416736/adfp-confirma-acuerdo-con-el-mininter-y-asegura-que-copa-inca-se-juega-desde-el-viernes.html' />
+<meta name="generator" content="WordPress 4.1" />
+<link rel='canonical' href='http://www.radiopublica.pe/2015020416733/chilenos-visitan-experiencias-rurales-exitosas-en-puno.html' />
+<link rel='shortlink' href='http://www.radiopublica.pe/?p=16733' />
+    <style type='text/css'> #disabled_msgCM { }</style>
+ <script type="text/javascript">document.write('<style type="text/css">.tabber{display:none;}<\/style>');</script><link rel="stylesheet" type="text/css" media="screen" href="http://www.radiopublica.pe/wp-content/plugins/tabber-tabs-widget/tabber.css" /><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; background-image: url('http://www.radiopublica.pe/imagenes/publica2.png'); background-repeat: repeat-x; background-position: top center; background-attachment: scroll; }
+</style>
+<!-- ## NXS/OG ## -->
+<meta property="og:site_name" content="Radio Pública ::: La Radio de Todos" />
+<meta property="og:title" content="Chilenos visitan experiencias rurales exitosas en Puno &#8211; Radio Pública ::: La Radio de Todos" />
+<meta property="og:description" content="Con el fin de intercambiar conocimientos acerca de innovaciones exitosas impulsadas por el Ministerio de Agricultura y Riego mediante Agro Rural, la Asociación de Mujeres Artesanas “Aymar Warmi”" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.radiopublica.pe/2015020416733/chilenos-visitan-experiencias-rurales-exitosas-en-puno.html?http://www.radiopublica.pe/" />
+<meta property="og:locale" content="es_es" />
+<meta property="og:image" content="http://www.radiopublica.pe/imagenes/CHILENOS-355x300.jpg" />
+<!-- ## NXS/OG ## -->
+ <link rel="canonical" href="http://www.radiopublica.pe/2015020416733/chilenos-visitan-experiencias-rurales-exitosas-en-puno.html" /> 
+</head> <body><div class="top1"><a name="top"></a></div>
+<div id="wrapper">
+    <div id="header">
+    <div id="topheaderbar">
+        <div id="topheaderbar-l">
+        <div id="topnavigation">
+                  <div id="nav"><div id="menu"><ul><div class="menu-header"><ul id="menu-descripcion" class="menu"><li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="http://www.radiopublica.pe/nuestra-programacion">PROGRAMACIÓN</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="http://www.radiopublica.pe/nosotros">QUIENES SOMOS</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="http://www.radiopublica.pe/contactenos">CONTÁCTENOS</a></li>
+</ul></div></ul></div></div>
+          </div>
+        </div>
+        <div id="topheaderbar-r"> Puno, Martes 10 de febrero   del  2015   ..  HORA: <a href="http://time.is/Peru" id="time_is_link" style="font-size:12px"></a>
+<span id="Peru_z14d" style="font-size:12px"></span>
+<script src="http://widget.time.is/t.js"></script>
+<script>
+time_is_widget.init({Peru_z14d:{time_format:"12hours:minutes:secondsAMPM"}});
+</script></div>
+        <div class="cb"></div>
+    </div>	    
+    <div id="header2">
+    <div id="logoleft"><a href="http://www.radiopublica.pe"><img src="http://www.radiopublica.pe/publica2.png" alt="Radio Pública :::  La radio de todos" /></a></div>
+ 
+ 
+ 
+   
+   
+        <div id="logoright">
+    <div id="logoright-left">
+    <div id="logoright-left-cat">
+    <div id="logoright-left-cat-wrapper">
+      <p><font face="Verdana, Geneva, sans-serif"><font face="Verdana, Geneva, sans-serif">"Año de la Diversificación Productiva y del Fortalecimiento de la Educación"</font></p>
+      <p class="mensaje">Radio Pública, la radio de todos le da la bienvenida a la programación de la presente temporada 2015. 
+      <p><a href="http://myradiostream.com/rpublica" title="Audio en vivo :: Pública la radio de todos." target="_blank">Audio streaming para estaciones repetidoras</a>
+               
+       
+    </div>
+  
+    </div>
+    </div>
+    <div id="logoright-right">
+    <div id="logoright-right-search"><form method="get" id="footersearch1" action="http://www.radiopublica.pe/">
+<input type="text" name="s" value=" " onBlur="if(this.value=='') this.value=' Ingrese palabra clave y pulsa enter';" onFocus="if(this.value==' Búsqueda de Noticias - Ingrese palabra clave y pulse enter') this.value='';" id="s2" />
+			<input type="submit" value=" " id="searchsubmit" />
+		   </form></div>
+    <div id="logoright-right-trending"><ul>
+    <li><b></b></li>
+      <table width="280" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="140" height="90" align="center" valign="middle"><p style="text-align: center;">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="130" height="60">
+<param name="movie" value="muses.swf" />
+<param name="flashvars" value="url=http://giss.tv:8000/rpublica.mp3&lang=es&codec=mp3&volume=80&introurl=&tracking=false&jsevents=false&buffering=0&skin=tiny&title=Radio%20Publica 1&welcome=La%20Radio de Todos" />
+<param name="wmode" value="transparent" />
+<param name="allowscriptaccess" value="always" />
+<param name="scale" value="noscale" />
+<embed src="http://www.radiopublica.pe/2015020416733/muses.swf" flashvars="url=http://giss.tv:8000/rpublica.mp3&lang=es&codec=mp3&volume=80&introurl=&tracking=false&jsevents=false&buffering=0&skin=tiny&title=Radio%20Publica 1&welcome=La%20Radio de Todos" width="130" scale="noscale" height="60" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />
+</object>
+          </a><a title="Reproducir en ASX" href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8000&amp;mountpoint=rpublica.mp3&amp;format=ASX" target="_blank"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/wmplay.png" width="25" height="25" /></a><a title="Reproducir en RAM" href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8000&amp;mountpoint=rpublica.mp3&amp;format=RAM" target="_self"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/real.png" width="25" height="25" /></a><a href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8000&amp;mountpoint=rpublica.mp3&amp;format=M3U" target="_top"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/winamp.png" width="25" height="25" /></a><a title="Reproducir en PLS" href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8000&amp;mountpoint=rpublica.mp3&amp;format=PLS" target="_blank"> <img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/itunes.png" width="25" height="25" /></a></p></td>
+          <td width="140" height="90" align="center" valign="middle"><p style="text-align: center;">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="130" height="60">
+<param name="movie" value="muses.swf" />
+<param name="flashvars" value="url=http://giss.tv:8001/rpublica.mp3&lang=es&codec=mp3&volume=80&introurl=&tracking=false&jsevents=false&buffering=0&skin=tiny&title=Radio%20Publica 2&welcome=La%20Radio de Todos" />
+<param name="wmode" value="transparent" />
+<param name="allowscriptaccess" value="always" />
+<param name="scale" value="noscale" />
+<embed src="http://www.radiopublica.pe/2015020416733/muses.swf" flashvars="url=http://giss.tv:8001/rpublica.mp3&lang=es&codec=mp3&volume=80&introurl=&tracking=false&jsevents=false&buffering=0&skin=tiny&title=Radio%20Publica 2&welcome=La%20Radio de Todos" width="130" scale="noscale" height="60" wmode="transparent" allowscriptaccess="always" type="application/x-shockwave-flash" />
+</object> 
+            </a><span style="text-align: center;"><a title="Reproducir en ASX" href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8001&amp;mountpoint=rpublica.mp3&amp;format=ASX" target="_blank"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/wmplay.png" width="25" height="25" /></a><a title="Reproducir en RAM" href="http://www.radiopublica.pe/botones/playlist.php?ip=giss.tv:8001&mountpoint=rpublica.mp3&format=RAM" target="_self"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/real.png" width="25" height="25" /></a><a href="http://www.radiopublica.pe/botones/playlist2.php?ip=giss.tv:8001&mountpoint=rpublica.mp3&format=M3U" target="_top"><img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/winamp.png" width="25" height="25" /></a><a title="Reproducir en PLS" href="http://www.radiopublica.pe/botones/playlist2.php?ip=giss.tv:8001&mountpoint=rpublica.mp3&format=PLS" target="_blank"> <img class="alignnone" style="font-size: 13px;" alt="" src="http://www.radiopublica.pe/botones/itunes.png" width="25" height="25" /></a></span></p></td>
+        </tr>
+      </table>
+          </li>
+    <li><a href="http://www.radiopublica.pe/2015020416733/Muy&#32;PRONTO"></a></li> 
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+
+
+     
+         
+        </ul>
+      
+    </div>
+
+    </div>
+	
+	  <div align="right">
+	
+       
+       
+      </div>
+    </div>
+     
+          
+    
+    <div class="cb"></div>
+    </div> 
+    <div id="header3">
+    <div id="header3-1">
+    <div id="header3-1-left">
+    <div id="header3-1-left-tickerimg"><img src="../wp-content/themes/rrcn/images/headlines.png" alt="Headlines" /></div>
+    <div id="header3-1-left-ticker"><ul>   <li><a href="http://www.radiopublica.pe/2015020916824/orden-de-presentacion-para-la-veneracion-a-la-mamita-candelaria.html" rel="bookmark" title="Ultimo Minuto: Orden de presentación para la Veneración a la Mamita Candelaria">Orden de presentación para la Veneración a la Mamita Candelaria</a></li>    <li><a href="http://www.radiopublica.pe/2015020916821/miles-veneran-y-danzan-a-la-mamita-candelaria-en-su-octava.html" rel="bookmark" title="Ultimo Minuto: Miles veneran y danzan a la Mamita Candelaria en su octava">Miles veneran y danzan a la Mamita Candelaria en su octava</a></li>    <li><a href="http://www.radiopublica.pe/2015020816818/siga-la-transmision-del-concurso-de-danzas-por-radio-publica.html" rel="bookmark" title="Ultimo Minuto: Siga la transmisión del concurso de danzas por radio Pública">Siga la transmisión del concurso de danzas por radio Pública</a></li> </ul></div>
+    <div class="cb"></div>
+    </div>
+    <div id="header3-1-right"> 
+    <ul>
+<li style="margin-left: 2px;"><a href="http://www.radiopublica.pe/feed" target="_blank"><img src="../wp-content/themes/rrcn/images/rss.png" /></a></li> 
+<li style="margin-left: 8px;"><a href="http://www.radiopublica.pe/correos" target="_blank"><img src="../wp-content/themes/rrcn/images/email.png" /></a></li> 
+   
+  <li><a href="http://www.facebook.com/pages/Radio-P%C3%BAblica/142342459281339" target="_blank"><img src="../wp-content/themes/rrcn/images/facebook.png" /></a> </li>            <li><a href="http://www.youtube.com/user/radiopublicaPE" target="_blank"><img src="../wp-content/themes/rrcn/images/youtube.png" /></a> </li>  <li><a href="http://twitter.com/RadioPublicaPE" target="_blank"><img src="../wp-content/themes/rrcn/images/twitter.png" /></a> </li>                  <iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FRadio-P%25C3%25BAblica-PE%2F142342459281339&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+  </ul> 
+    </div>
+    <div class="cb"></div>
+    </div>
+    
+    <div id="header3-2">
+     
+    <div id="menu2"><ul><div class="menu-header"><ul id="menu-inicio" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="http://radiopublica.pe/">INICIO</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-13"><a href="http://www.radiopublica.pe/politica">POLÍTICA</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16"><a href="http://www.radiopublica.pe/sociedad">SOCIEDAD</a></li>
+<li id="menu-item-723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-723"><a href="http://www.radiopublica.pe/economia">ECONOMÍA</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a href="http://www.radiopublica.pe/deportes">DEPORTES</a></li>
+<li id="menu-item-724" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-724"><a href="http://www.radiopublica.pe/galeria-de-fotos">ESPECIALES</a></li>
+<li id="menu-item-725" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-725"><a href="http://www.radiopublica.pe/opinion">OPINIÓN</a></li>
+</ul></div></ul></div>
+      
+    </div>
+    </div>
+</div>
+    <div id="section">
+
+  <div id="column-wrap"> <div id="headgal">
+ 
+<div id="main-content"> 
+
+ <div id="content" style="padding-right:0 !important;">  <div id="homepost">	
+	
+<div id="datemeta">
+<div id="datemeta_l"><b>Publicado:</b> Mie 4 feb  13:21 pm </div>
+<div id="datemeta_r"><a href="http://www.radiopublica.pe/galeria-de-fotos" rel="category tag">ESPECIALES</a> / <a href="http://www.radiopublica.pe/politica" rel="category tag">POLÍTICA</a> / <a href="http://www.radiopublica.pe/portada" rel="category tag">PORTADA</a> / <a href="http://www.radiopublica.pe/provincias/yunguyo" rel="category tag">YUNGUYO</a> | Por <b><a href="http://www.radiopublica.pe/author/publica" title="Ver todos las notas de Prensa Pública">Prensa Pública </a></b>    </div>
+<div class="cb"></div>
+</div>
+
+		<div class="post">
+
+			<h2>  Chilenos visitan experiencias rurales exitosas en Puno</h2>
+              
+  
+    <center></center> 
+			<div class="entry">
+
+ 			  <p><a href="http://www.radiopublica.pe/imagenes/CHILENOS.jpg"><img class="alignleft size-medium wp-image-16734" src="http://www.radiopublica.pe/imagenes/CHILENOS-355x300.jpg" alt="CHILENOS" width="355" height="300" /></a>Con el fin de intercambiar conocimientos acerca de innovaciones exitosas impulsadas por el Ministerio de Agricultura y Riego mediante Agro Rural, la Asociación de Mujeres Artesanas “Aymar Warmi” de Colchane de la región de Tararapaca Chile, visitó diferentes iniciativas rurales en el ámbito de Puno a cargo de la Agencia Zonal Chucuito Yunguyo.</p>
+<p>La delegación chilena conformada por once productores y cinco profesionales agrónomos y veterinarios, visitó la Agencia Zonal Carabaya a la Asociación de Artesanos ALPAMACU, con quienes intercambiaron experiencias, especialmente en la utilización de la fibra de alpaca para prendas de vestir, luego se reunieron con los miembros de la Sociedad Peruana de Criadores de Alpaca.</p>
+<p>De retorno de Macusani los pasantes en el Centro Experimental Quimsachata del INIA tomaron nota de la transferencia de embriones en alpacas para la creación de ejemplares de raza, además observaron la monta artificial con sementales seleccionados para la obtención de semen. Así mismo se interesaron por el manejo integrado de plagas y enfermedades de la quinua.</p>
+<p>Los visitantes se interesaron por las Cooperativas Agrarias de CECAGRO, quienes como productores de granos andinos (quinua, cañihua, habas, cebada y tarwi) se convirtieron en empresarios panificadores, elaborando panes fortificados de calidad y nutritivos; también visitaron la Cooperativa COPAIN de Cabana y Atuncolla para analizar el desarrollo del turismo rural al contorno del complejo arqueológico de Sillustani, culminó el periplo visitando las Artesanas Bartolinas de Juli, que exporta mantas de calidad, por su parte el alcalde de Colchane Chile Teófilo Mamani García, agradeció a nombre de su país por las enseñanzas y facilidades brindadas.</p>
+<p>El director Ludwen Huanca Yujra, explicó que el MINAGRI como política impulsa iniciativas y negocios rurales exitosos, que a la fecha brillan con luz propia. Aprovecho para señalar que inaugurarán 14 sistemas de riego en los distritos de Palca, Rosaspata, Asillo, Vilque, Macarí, Vilquechico, Mañazo, Llalli, Cuyo Cuyo, Pomata, Cupi, Macarí, Santa Rosa y Umachiri , beneficiando a 1,700 productores.</p>
+
+			</div>
+ 	</div>
+
+	
+	<center style="font-weight: bold;"></center>		
+
+  
+
+      
+<div id="related" class="clearfix">
+<div id="relatednews"><div id="relatednewsh2">Noticias Relacionadas</div>
+<div style="float:right;height:19px;margin-right:10px;">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+</div>
+<div class="cb"></div></div>
+
+	
+		<div class="related">
+
+ 	<div class="relatedpost">
+    
+                          <a href="http://www.radiopublica.pe/2015020916824/orden-de-presentacion-para-la-veneracion-a-la-mamita-candelaria.html"><img width="128" height="96" src="http://www.radiopublica.pe/imagenes/sikuris-128x96.jpg" class="attachment-relatedimg wp-post-image" alt="sikuris" /></a>
+              
+            
+           
+                         
+  
+			<h3><a href="http://www.radiopublica.pe/2015020916824/orden-de-presentacion-para-la-veneracion-a-la-mamita-candelaria.html" rel="bookmark" title="Orden de presentación para la Veneración a la Mamita Candelaria">Orden de presentación para la Veneración a la Mamita Candelaria</a></h3>			 
+
+			</div>
+</div> 
+	
+		<div class="related">
+
+ 	<div class="relatedpost">
+    
+                          <a href="http://www.radiopublica.pe/2015020916821/miles-veneran-y-danzan-a-la-mamita-candelaria-en-su-octava.html"><img width="128" height="96" src="http://www.radiopublica.pe/imagenes/candelaria2-128x96.jpg" class="attachment-relatedimg wp-post-image" alt="candelaria" /></a>
+              
+            
+           
+                         
+  
+			<h3><a href="http://www.radiopublica.pe/2015020916821/miles-veneran-y-danzan-a-la-mamita-candelaria-en-su-octava.html" rel="bookmark" title="Miles veneran y danzan a la Mamita Candelaria en su octava">Miles veneran y danzan a la Mamita Candelaria en su octava</a></h3>			 
+
+			</div>
+</div> 
+	
+		<div class="related">
+
+ 	<div class="relatedpost">
+    
+                          <a href="http://www.radiopublica.pe/2015020816818/siga-la-transmision-del-concurso-de-danzas-por-radio-publica.html"><img width="128" height="96" src="http://www.radiopublica.pe/imagenes/DIABLADA-128x96.jpg" class="attachment-relatedimg wp-post-image" alt="DIABLADA" /></a>
+              
+            
+           
+                         
+  
+			<h3><a href="http://www.radiopublica.pe/2015020816818/siga-la-transmision-del-concurso-de-danzas-por-radio-publica.html" rel="bookmark" title="Siga la transmisión del concurso de danzas por radio Pública">Siga la transmisión del concurso de danzas por radio Pública</a></h3>			 
+
+			</div>
+</div> 
+	
+		<div class="related">
+
+ 	<div class="relatedpost">
+    
+                          <a href="http://www.radiopublica.pe/2015020616813/backus-promueve-que-los-menores-de-edad-no-consuman-bebidas-alcoholicos-durante-la-festividad.html"><img width="128" height="96" src="http://www.radiopublica.pe/imagenes/111111-128x96.jpg" class="attachment-relatedimg wp-post-image" alt="111111" /></a>
+              
+            
+           
+                         
+  
+			<h3><a href="http://www.radiopublica.pe/2015020616813/backus-promueve-que-los-menores-de-edad-no-consuman-bebidas-alcoholicos-durante-la-festividad.html" rel="bookmark" title="Backus promueve que los menores de edad no consuman  bebidas alcohólicos durante la festividad">Backus promueve que los menores de edad no consuman  bebidas alcohólicos durante la festividad</a></h3>			 
+
+			</div>
+</div> 
+	<div class="cb"></div>
+
+</div> 
+
+<div id="comment_wrapper">
+
+		<!-- You can start editing here. --> 
+<div class="comments-box"> <a name="comments" id="comments"></a>
+      <!-- If comments are open, but there are no comments. -->
+         	 
+  <div id="respond">     
+    <h2 style="margin-top: 8px;">Deja tu comentario</h2>
+    <div class="cancel-comment-reply"> <small>
+      <a rel="nofollow" id="cancel-comment-reply-link" href="http://www.radiopublica.pe/2015020416733/chilenos-visitan-experiencias-rurales-exitosas-en-puno.html?http://www_radiopublica_pe/#respond" style="display:none;">Clic para cancelar respuesta.</a>      </small> </div>
+        <form action="http://www.radiopublica.pe/wp-comments-post.php" method="post" id="commentform">
+            <p>     <input class="author" type="text" value="Nombre..." onclick="this.value='';" name="author" id="author" size="22" tabindex="1"/>
+        <label for="author"><small>
+        (Requerido)        </small></label>  </p>    <p>
+        <input class="email" type="text" value="Email..." onclick="this.value='';" name="email" id="email" size="22" tabindex="2"/>
+        <label for="email"><small>(No sera publicado)
+         (Requerido)        </small></label>
+      </p>
+      <p>
+        <input class="url" type="text" value="Pagina Web..." onclick="this.value='';" name="url" id="url" size="22" tabindex="3"/>
+        <label for="url"><small>(Opcional)</small></label>
+      </p>
+            <p>
+        <textarea name="comment" id="comment" tabindex="4"></textarea>
+      </p>        <p>ADVERTENCIA. Radio Pública, promueve una opinión constructiva, responsable y censura todo lenguaje que atente contra la moral, las leyes y la buena costumbre; por ello rogamos no utilizar un mensaje violento, amenazante, instigador, insultante, difamatorio, calumnioso, injurioso, falso, discriminatorio y pornográfico.</p>
+      <p>        <input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="Subir Comentario" />
+        <input type='hidden' name='comment_post_ID' value='16733' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+      </p>
+      <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="64476b2394" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="179"/></p>    </form>
+      </div>
+  </div></div>
+
+
+</div> </div><div>
+
+ </div>   </div>  
+
+
+
+     </div>
+   <div id="aside">
+  
+    <!-- Start vSlider options -->
+<script type="text/javascript">
+var $jq = jQuery.noConflict(); $jq(document).ready(function() { 
+    $jq('#publicidad').coinslider({ width: 376,     height: 230, spw: 10, sph: 8, delay: 3000, sDelay: 70, opacity: 0.9, titleSpeed: 1500, effect: '', navigation: false, links : true, stickynav: false, hoverPause: true }); }); 
+    </script>
+<!-- Begin vSlider options -->
+<style type="text/css" media="screen">
+#publicidadcontainer {
+    margin: 20px 0px 5px 0px;
+    float:none;
+    }
+#publicidad { 
+    width: 376px; 
+    height: 230px;
+    overflow: hidden; 
+    position: relative; 
+    }
+    
+
+    #publicidad a, #publicidad a img {
+        border: none !important; 
+        text-decoration: none !important; 
+        outline: none !important;
+        } 
+        
+    #publicidad h4 {
+        color: #FFFFFF !important;
+        margin: 0px !important;padding: 0px !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 16px !important;}
+        
+    #publicidad .cs-title {
+        background: #222222;
+        color: #FFFFFF  !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        letter-spacing: normal !important;line-height: normal !important;}
+        
+    #publicidad .cs-title{ position:absolute;
+    width: 364px; padding: 10px;        }
+    #cs-buttons-publicidad { display: none; }    #publicidadcontainer .cs-buttons {clear:both; font-size: 0px; margin: 10px 0 10px 100px; float: left; }
+       #cs-button-publicidad{ z-index:999;outline:none;}
+                #publicidadcontainer .cs-buttons { font-size: 0px; padding: 10px; float: left; outline: none !important;}
+           #publicidadcontainer .cs-buttons a { margin-left: 5px; height: 15px; width: 15px; float: left; 
+                            background: url('http://www.radiopublica.pe/wp-content/plugins/vslider/images/default_style.png') no-repeat;background-position:top;
+                                                text-indent: -1000px;
+                                                outline: none !important;
+                             }
+             #publicidadcontainer .cs-buttons a:hover  { background: url('http://www.radiopublica.pe/wp-content/plugins/vslider/images/default_style.png') no-repeat;background-position: bottom;top:15px;outline: none !important;}
+            #publicidadcontainer  a.cs-active { background: url('http://www.radiopublica.pe/wp-content/plugins/vslider/images/default_style.png') no-repeat;background-position:bottom;outline: none !important;}          
+                                
+        
+                 #publicidad  .cs-prev,#publicidad  .cs-next { outline:none; }
+                #publicidad  .cs-prev,#publicidad .cs-next {font-weight: bold;background: #222222 !important;font-size: 28px !important;font-family: "Courier New", Courier, monospace;color: #FFFFFF 
+!important;padding: 0px 10px !important;-moz-border-radius: 5px;-khtml-border-radius: 5px;-webkit-border-radius: 5px;}
+         
+       #publicidad,#publicidad img {
+        border:2px solid #FFFFFF; 
+        border-radius:2px;
+        -moz-border-radius:2px;
+        -webkit-border-radius:2px;
+        }
+</style>
+<!-- End vSlider options -->
+    <div id="publicidadcontainer">
+    <div id="publicidad">       <a href="http://www.misionsonrisa.org" style="background:#fff;" target="_blank">
+              <img src="http://www.radiopublica.pe/wp-content/plugins/vslider/timthumb.php?src=%2Fimagenes%2Fnarices-verdes.jpg&amp;w=376&amp;h=230&amp;zc=1&amp;q=100" style="width:376px;height:230px;" alt="Misión Sonrisa - Narices Verdes" />
+                    <span><h4>Misión Sonrisa - Narices Verdes</h4>Somos una Asociación Humanitaria que comparte amor, alegría y esperanza a través de terapias innovadoras como la risoterapia.</span>
+                </a>
+           <a href="chilenos-visitan-experiencias-rurales-exitosas-en-puno.html?http:%252F%252Fwww.radiopublica.pe%252F" style="background:#fff;" target="_blank">
+              <img src="http://www.radiopublica.pe/wp-content/plugins/vslider/timthumb.php?src=%2Fimagenes%2Fanuncie.png&amp;w=376&amp;h=230&amp;zc=1&amp;q=100" style="width:376px;height:230px;" alt="ANUNCIE AQUÍ " />
+                    <span><h4>ANUNCIE AQUÍ </h4></span>
+                </a>
+    </div></div>          
+      
+			<div id="sidebar">
+<div class="section widget_text">			<div class="textwidget">&nbsp;
+
+<span style="font-size: large;"><strong><span style="color: #339966;"><span style="color: #993366;">NOTICIAS REGIONALES: </span></span></strong><span style="color: #808000;"><a title="Noticias de Azangaro" href="http://www.radiopublica.pe/provincias/azangaro"><span style="color: #808000;">» Azángaro</span></a>  <a title="Noticias de Carabaya" href="http://www.radiopublica.pe/provincias/carabaya"><span style="color: #808000;">» Carabaya</span></a>  <a title="Noticias de Chucuito" href="http://www.radiopublica.pe/provincias/chucuito"><span style="color: #808000;">» Chucuito</span></a>  <a title="Noticias de El Collao" href="http://www.radiopublica.pe/provincias/el-collao"><span style="color: #808000;">» El Collao</span></a>  <a title="Noticias de Huancané" href="http://www.radiopublica.pe/provincias/huancane"><span style="color: #808000;">» Huancané</span></a>  <a title="Noticias de Lampa" href="http://www.radiopublica.pe/provincias/lampa"><span style="color: #808000;">» Lampa</span></a>  <a title="Noticias de Melgar" href="http://www.radiopublica.pe/provincias/melgar"><span style="color: #808000;">» Melgar</span></a>  <a title="Noticias de Moho" href="http://www.radiopublica.pe/provincias/moho"><span style="color: #808000;">» Moho</span></a>  <a title="Noticias de Puno" href="http://www.radiopublica.pe/provincias/puno"><span style="color: #808000;">» Puno</span></a>  <a title="Noticias de San Antonio de Putina" href="http://www.radiopublica.pe/provincias/san-antonio-de-putina"><span style="color: #808000;">» S. A. Putina</span></a>  <a title="Noticias de San Roman" href="http://www.radiopublica.pe/provincias/san-roman"><span style="color: #808000;">» San Román</span></a>  <a title="Noticias de Sandia" href="http://www.radiopublica.pe/provincias/sandia"><span style="color: #808000;">» Sandia</span></a>  <a title="Noticias de Yunguyo" href="http://www.radiopublica.pe/provincias/yunguyo"><span style="color: #808000;">» Yunguyo</span></a></span></span>
+
+&nbsp;
+&nbsp;
+
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FRadio-P%25C3%25BAblica-PE%2F142342459281339&amp;width=400&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:258px;" allowTransparency="true"></iframe></div>
+		</div></div><div class="section widget_text">			<div class="textwidget"></div>
+		</div></div>			 	</div> 
+
+
+		</div>   
+
+
+<div id="footer">
+<div id="footer1">     <div id="footerwrapper1"> <div id="fsidebar1">     
+    
+    
+ <div id="footer2">  <div id="footerwrapper2"> 
+      <div id="fotbot">
+      <div class="fotlogoleft"> 
+        <div class="fotcopy">
+    <div data-jsid="message"> <p style="text-align: center;">© 2014 Radio Pública ::: Este es un producto de ComunicAndes PERU SAC . Todos los derechos reservados. Jirón El Puerto # 130 B - Puno. (Pque. del Periodista) - Teléfono Central: 051 352026 RPM: #051 352026 RPC: 051 633179 - E-Mail: webmaster@radiopublica.pe</p>  </div> 
+           		 
+    	   	
+     
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-content/plugins/akismet/_inc/form.js?ver=3.0.3'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/comment-reply.min.js?ver=4.1'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/ui/core.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.radiopublica.pe/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2'></script>
+	  </body> </html>

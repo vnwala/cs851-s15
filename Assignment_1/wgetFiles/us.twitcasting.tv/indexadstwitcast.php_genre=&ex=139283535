@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>TwitCasting</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=emulateIE7"><![endif]-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,600,300">
+<link rel="stylesheet" type="text/css" media="all" href="css/mainstyle-us.css">
+<!--[if lte IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="/css/newheader-ie8.css"/>
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="/css/newheader-ie7.css"/>
+<![endif]-->
+  <link rel="canonical" href="http://twitcasting.tv/indexadstwitcast.php?genre=&ex=139283535" />
+<link href="http://us.twitcasting.tv/img/icon72@2x.png" rel="apple-touch-icon" type="image/png" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/compact.js"></script>
+<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51336-17', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+   ga('create', 'UA-51336-19', 'auto', {'name': 'usTracker'});
+   ga('usTracker.require', 'displayfeatures');
+   ga('usTracker.send', 'pageview');
+
+
+
+</script>
+</head>
+<body>
+<div id="mainwrapper" class="clearfix" style="border:0;padding:0;background:#ffffff;">
+<div id="wrapper" style="width:100%;margin:0; padding:0;height:100%;">
+
+<div id="list">
+</div>
+
+<script type="text/javascript">
+
+var movieid = 0;
+var listid = 0;
+var interval = 8000;
+var genre = "";
+var exclude = 139283535;
+
+
+function update_list(){
+  var dataparam = {"action" : "update"};
+  $.ajax({
+    url: "/indexadstwitcast.php?genre=" + genre + "&mid=" + movieid + "&listid=" + listid + "&ex=" + exclude,
+    data: dataparam,
+    dataType: "json",
+    type: "POST",
+    success: function(data){
+      if (data && data["movieid"]){
+        movieid = data["movieid"];
+        listid = data["listid"];
+        var html = data["html"];
+        $("#list>div:first").slideUp("slow", function(){$(this).remove();});
+        var obj = $("<div/>").html(html).fadeIn("slow");
+        $("#list").append(obj);
+        // update
+        interval = 9000;
+        setTimeout(function(){
+          update_list();
+        }, interval);
+      }else{
+        interval = interval + 6000;
+        if (interval >= 60000){ // total 3 min
+          genre = ""; // reset genre - new only
+          interval = 60000;
+        }
+        setTimeout(function(){
+          update_list();
+        }, interval);
+      }
+    },
+    error: function(data){
+    }
+  });
+};
+
+  $(document).ready(function(){
+    update_list();
+  });
+</script>
+
+
+</body>
+</html>

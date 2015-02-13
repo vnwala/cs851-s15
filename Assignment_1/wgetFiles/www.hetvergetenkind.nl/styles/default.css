@@ -1,0 +1,67 @@
+*:focus {
+	outline: none; /* Disable Google Chrome input focus outline */
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%; /* Base font size: 12px */
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+img { border: 0px solid white; /* Geen lelijke rand wanneer het klikbaar is */ }
+
+h1 { font-size: 1.416em; } 	/* 17px */ 
+h2 { font-size: 1.333em; }	/* 16px */
+h3 { font-size: 1.250em; }	/* 15px */
+h4 { font-size: 1.167em; }	/* 14px */
+h5 { font-size: 1.083em; }	/* 13px */
+h6 { font-size: 1.000em; }	/* 12px */
+
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.2em;
+	margin-bottom: .8em;
+}
+
+.left { display: inline; float: left; }
+.right { display: inline; float: right; }
+
+.underline { text-decoration: underline; }
+.no-underline { text-decoration: none; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.txt-center { text-align: center; }
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+.txt-middle { vertical-align: middle; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+.clear:before, .clear:after,
+.group:before, .group:after {
+  display: table;
+  content: " ";
+}
+
+.clear:after, .group:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clear, .group {
+    *zoom: 1;
+}

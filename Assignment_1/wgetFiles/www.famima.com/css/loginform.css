@@ -1,0 +1,143 @@
+@charset "Shift_JIS";
+
+
+/* --------------------------------------------------------------------
+	ログインフォーム 2012/06/26～
+--------------------------------------------------------------------- */
+div.loginform120626_ h1, div.loginform120626_ h2, div.loginform120626_ h3, div.loginform120626_ h4,
+div.loginform120626_ img, div.loginform120626_ p, div.loginform120626_ div, div.loginform120626_ ul, div.loginform120626_ li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight:normal;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;}
+
+div.login_ div.loginform120626_ {
+	width:720px;
+	margin:20px auto 30px;
+	padding:0;
+	text-align:left;
+}
+
+div.login_ div.loginform120626_ .marT5{
+	margin-top:5px;}
+
+div.login_ div.loginform120626_ .marT10{
+	margin-top:10px;}
+
+div.login_ div.loginform120626_ .marT15{
+	margin-top:15px;}
+
+div.login_ div.loginform120626_ .marB10{
+	margin-bottom:10px;}
+
+div.login_ div.loginform120626_ .Login{
+	width:340px;
+	float:left;}
+
+div.login_ div.loginform120626_ .NotLogin{
+	width:340px;
+	float:left;
+	padding-left:40px;}
+
+div.login_ div.loginform120626_ .baseOR{
+	width:330px;
+	border:5px #ffbc44 solid;
+	background-color:#FFFFFF;
+	background:url(http://www.famima.com/img/sys/loginform/bg_corner_or.png) top left no-repeat;}
+
+div.login_ div.loginform120626_ .baseBL{
+	width:330px;
+	border:5px #42b3d9 solid;
+	background-color:#FFFFFF;
+	background:url(http://www.famima.com/img/sys/loginform/bg_corner_bl.png) top left no-repeat;}
+
+div.login_ div.loginform120626_ .baseGRY{
+	width:338px;
+	border:1px #cccccc solid;
+	background-color:#FFFFFF;
+	margin-top:20px;
+	background:url(http://www.famima.com/img/sys/loginform/bg_corner_gr.png) top left no-repeat;}
+
+div.login_ div.loginform120626_ .cont{
+	width:300px;
+	padding:10px 10px 0 10px;}
+
+div.login_ div.loginform120626_ .cont-guest{
+	width:300px;
+	padding:20px 18px 10px 18px;
+	margin:0;}
+
+div.login_ div.loginform120626_ .cont p,
+div.login_ div.loginform120626_ .cont-guest p{
+	margin:0; padding:0;}
+
+div.login_ div.loginform120626_ .cont .ttl{
+	text-align:center;
+	margin:15px 0 0 0;
+	padding:0;}
+
+div.login_ div.loginform120626_ .cont-guest .ttl{
+	text-align:center;
+	margin:0;}
+
+div.login_ div.loginform120626_ .cont .form_text_ {
+	margin:17px 5px 10px 5px;
+	line-height:130%;
+	text-align:left;
+	font-size:12px;}
+
+div.login_ div.loginform120626_ .cont-guest .form_text_ {
+	margin:10px 5px 0px 5px;
+	line-height:140%;
+	text-align:left;
+	font-size:12px;}
+
+div.login_ div.loginform120626_ .cont .form_text2_ {
+	/*margin:23px 0;
+	padding:10px 0;*/
+	padding:8px 0;
+	border-top:1px #cccccc dotted;
+	border-bottom:1px #cccccc dotted;
+	text-align:left;}
+
+div.login_ div.loginform120626_ .cont .btn{
+	margin:20px 0;
+	text-align:center;}
+
+div.login_ div.loginform120626_ .cont-guest .btn{
+	margin:10px 0;
+	text-align:center;}
+
+div.login_ div.loginform120626_ input.login_uid_ {
+	width: 288px;}
+
+div.login_ div.loginform120626_ input.login_pwd_ {
+	width: 288px;
+	border:1px solid #cccccc;
+	padding:5px;
+	margin-bottom:15px;}
+
+div.login_ div.loginform120626_ input.login_uid_mail_ {
+	width: 288px;
+	border:1px solid #cccccc;
+	padding:5px;
+	margin-bottom:15px;}
+
+
+div.login_ div.loginform120626_ p.txtlink{
+	padding:0 0 0 13px;
+	font-size:12px;
+	background:url(../common_images/arrow_link.png) left center no-repeat;}
+
+div.login_ div.loginform120626_ .btn:hover{
+	filter: alpha(opacity=85);
+	-moz-opacity:0.85;
+	opacity:0.85;}
+
+
+
+

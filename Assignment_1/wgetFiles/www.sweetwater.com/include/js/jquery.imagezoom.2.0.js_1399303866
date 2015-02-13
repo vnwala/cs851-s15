@@ -1,0 +1,430 @@
+;(function ( $, window, document, undefined )
+{
+	var pluginName = 'ImageZoom',
+		eventNamespace = '.ImageZoomEvents',
+		defaults = {
+			'zoom_target': 'body',
+			'href': 'lghref'
+		};
+
+	/**
+	 * Get a number that falls between a min and max value.
+	 *
+	 * @param number {number} is the number to be limited.
+	 * @param min {number} is the minimum value.
+	 * @param max {number} is the maximum value.
+	 * @returns {number}
+	 */
+	Number.between = function(number, min, max)
+	{
+		if (max === undefined || typeof max != 'number') {
+			return Math.max(parseInt(number), min);
+		} else if (min === undefined || typeof min != 'number') {
+			return Math.min(parseInt(number), max);
+		}
+		// If min and max are swapped, flip the process
+		if (max < min) {
+			return Math.max(Math.min(parseInt(number), min), max);
+		}
+		return Math.min(Math.max(parseInt(number), min), max);
+	};
+
+	// Object Create polyfill for lte IE8.
+	if (!Object.create) {
+		Object.create = (function(){
+			function F(){}
+
+			return function(o){
+				if (arguments.length != 1) {
+					throw new Error('Object.create implementation only accepts one parameter.');
+				}
+				F.prototype = o;
+				return new F()
+			}
+		})()
+	}
+
+	/**
+	 * Function.prototype.bind Polyfill
+	 * From Prototype.js
+	 * @url http://stackoverflow.com/a/3458616
+	 */
+	if (!Function.prototype.bind) { // check if native implementation available
+		Function.prototype.bind = function(){
+			var fn = this, args = Array.prototype.slice.call(arguments),
+				object = args.shift();
+			return function(){
+				return fn.apply(object,
+					args.concat(Array.prototype.slice.call(arguments)));
+			};
+		};
+	}
+
+	var PluginPrototype = {
+		/**
+		 * Initialize the plugin.
+		 * @private
+		 * @param els {object} is the DOM element(s) the plugin was instantiated on.
+		 * @param options {object} is the list of options passed to the plugin. Overrides specific defaults.
+		 */
+		_init : function(el, options)
+		{
+			var instance = this;
+
+			// Replace specific default setting with those passed to the plugin.
+			instance.options = $.extend({}, defaults, options);
+
+			// Cache elements.
+			instance.el = el;
+			instance.$el = $(el);
+			instance.$html = $('html');
+			instance.$document = $(document);
+			instance.$window = $(window);
+			instance.$image = false;
+
+			// Define our events.
+			instance.events = {
+				start: 'mouseenter',
+				move: 'mousemove',
+				end: 'mouseleave'
+			};
+
+			// If this is a touch-enabled device, replace the events.
+			instance.isTouch = (Modernizr && Modernizr.touch);
+			if (instance.isTouch)
+			{
+				instance.events.start = 'touchstart';
+				instance.events.move = 'touchmove';
+				instance.events.end = 'touchend';
+			}
+
+			// Build the image zoom HTML.
+			instance._buildZoom();
+		},
+
+		/**
+		 * Add initial plugin events to image zoom elements.
+		 * @private
+		 */
+		_addEvents: function()
+		{
+			var instance = this,
+				data = { instance: instance },
+				events = {};
+
+			events[instance.events.end + instance.eventNamespace] = instance._evtEnd;
+			events[instance.events.move + instance.eventNamespace] = instance._evtMove;
+			events[instance.events.start + instance.eventNamespace] = instance._evtStart;
+			instance.$el.on( events, data );
+
+			events = {};
+			events['blur' + instance.eventNamespace] = instance._evtEnd;
+			instance.$window.on(events, data);
+		},
+
+		/**
+		 * Constructs the HTML for the image zoom.
+		 *
+		 * @private
+		 */
+		_buildZoom: function()
+		{
+			var instance = this,
+				zoom_target = $(instance.options.zoom_target);
+			instance.$zoom = $($('<div class="imagezoom-screen"/>')).appendTo(zoom_target);
+			instance.$zoom_frame = $($('<div class="imagezoom-frame"/>')).appendTo(instance.$zoom);
+			instance.$lens = $($('<div class="imagezoom-lens"/>'));
+			instance.$loader = $($('<div class="imagezoom-overlay-loader"/>'));
+			instance.$el.append( instance.$lens, instance.$loader );
+			instance._addEvents();
+		},
+
+		/**
+		 * End the image zoom interaction.
+		 *
+		 * @param e {object} is the even object.
+		 * @private
+		 */
+		_evtEnd: function(e)
+		{
+			var instance = e.data.instance;
+			clearInterval(instance.zoom_timer);
+			instance.$html.removeClass('image-zoom-visible');
+			instance.zooming = false;
+		},
+
+		/**
+		 * Tracks movement during the image zoom interaction.
+		 *
+		 * @param e {object} is the even object.
+		 * @private
+		 */
+		_evtMove: function(e)
+		{
+			e.preventDefault();
+			e.stopPropagation();
+
+			var instance = e.data.instance;
+			if (instance.$zoom.hasClass('loading')) {
+				return;
+			}
+			if (!instance.$image) {
+				clearInterval(instance.zoom_timer);
+				return;
+			}
+			instance.$lens_dims = instance._getLensDims();
+			var pos = instance._getEventPosition(e),
+				sm_img = $('img', instance.$el),
+				lenspos = {},
+				imgpos = {},
+				el_pos = instance.$el.offset();
+			pos.x = pos.x - (el_pos.left - instance.$window.scrollLeft());
+			pos.y = pos.y - (el_pos.top - instance.$window.scrollTop());
+
+			// Move the lens
+			lenspos.left = instance._limitZoomLeft( pos.x - (instance.$lens_dims.width / 2) );
+			lenspos.top = instance._limitZoomTop( pos.y - (instance.$lens_dims.height / 2) );
+			instance.$lens.css(lenspos);
+
+			// Move the image
+			imgpos.left = - (lenspos.left / instance.zoom_ratio);
+			imgpos.top = - (lenspos.top / instance.zoom_ratio);
+			instance.$zoom_frame.css(imgpos);
+		},
+
+		/**
+		 * Starts the image zoom interaction.
+		 *
+		 * @param e {object} is the even object.
+		 * @private
+		 */
+		_evtStart: function(e)
+		{
+			e.preventDefault();
+			var instance = e.data.instance;
+			instance.zooming = true;
+			if (instance.zoom_timer !== undefined)
+			{
+				clearInterval(instance.zoom_timer);
+			}
+			instance.zoom_timer = setTimeout(function()
+			{
+				instance.$html.addClass('image-zoom-show-loading');
+			}, 500);
+			instance.start_e = e;
+			instance._loadZoom();
+		},
+
+		/**
+		 * Gets the event position based on mouse click or by deciphering touch interaction on mobile devices.
+		 * @private
+		 * @param e object is the event object of touch pointer event.
+		 * @returns {{x: (int||Number), y: (number|Number), touchid: (string)}}
+		 */
+		_getEventPosition: function(e)
+		{
+			var instance = this,
+				pos = {
+					x: e.clientX,
+					y: e.clientY,
+					touchid: (instance.hasOwnProperty('start') && instance.start.hasOwnProperty('touchid') ? instance.start.touchid : false)
+				},
+				touchobj = false;
+
+			// If this is a touch device and we have touch objects
+			if (instance.isTouch)
+			{
+				// No touch objects? Exit.
+				if (e.originalEvent.touches.length == 0) { return; }
+
+				// Loop through the touch objects and find the one we're tracking
+				var i = 0,
+					l = e.originalEvent.touches.length;
+				for (; i < l; i++)
+				{
+					if (!e.originalEvent.touches.hasOwnProperty(i)) { continue; }
+					if (e.originalEvent.touches[i].identifier == pos.touchid)
+					{
+						touchobj = e.originalEvent.touches[i];
+						break;
+					}
+				}
+
+				// If we STILL don't have one, grab the first one
+				if (!touchobj)
+				{
+					touchobj = e.originalEvent.touches[0];
+					pos.touchid = touchobj.identifier;
+				}
+
+				// Update the start position.
+				pos.x = touchobj.clientX;
+				pos.y = touchobj.clientY;
+			}
+			return pos;
+		},
+
+		/**
+		 * Gets the dimensions of the zoom lens either by calculation or from a cache.
+		 * This is used to combat the fact that movement can happen prior to loading the lens.
+		 * @private
+		 * @returns {height: (int|Number), width: (int|Number)}
+		 */
+		_getLensDims: function()
+		{
+			var instance = this;
+			if (!instance.$image) {
+				return false;
+			}
+			if (typeof instance.$lens_dims == 'object') {
+				return instance.$lens_dims;
+			} else {
+				var sm_img = $('img', instance.$el);
+				instance.zoom_ratio = sm_img.height() / instance.$image.height();
+				return { height: instance.$zoom.outerHeight() * instance.zoom_ratio, width: instance.$zoom.outerWidth() * instance.zoom_ratio };
+			}
+		},
+
+		/**
+		 * Limit the left position of the zoom-image movement to prevent the entire
+		 * image from being moved outside the bounding box.
+		 *
+		 * @param number {number} is the proposed left position.
+		 * @returns {number} is the revised left position.
+		 * @private
+		 */
+		_limitZoomLeft: function(number)
+		{
+			var instance = this,
+				max = instance.$el.width() - instance.$lens_dims.width;
+			return Number.between( (typeof number == 'number' ? number : 0), 0, max );
+		},
+
+		/**
+		 * Limit the top position of the zoom-image movement to prevent the entire
+		 * image from being moved outside the bounding box.
+		 *
+		 * @param number {number} is the proposed top position.
+		 * @returns {number} is the revised top position.
+		 * @private
+		 */
+		_limitZoomTop: function(number)
+		{
+			var instance = this,
+				max = instance.$el.height() - instance.$lens_dims.height;
+			return Number.between( (typeof number == 'number' ? number : 0), 0, max );
+		},
+
+		/**
+		 * Loads the zoom image.
+		 *
+		 * @private
+		 */
+		_loadZoom: function()
+		{
+			var instance = this,
+				src = instance.$el.attr(instance.options['href']),
+				current_src = instance.current_img || false;
+
+			if (instance.zooming === false || instance.$zoom.hasClass('loading')) { return; }
+
+			// If this image is already loaded
+			if (src == current_src)
+			{
+				instance._showZoom();
+			}
+			// Load image
+			else
+			{
+				// Image an already loaded
+				if (instance.$image)
+				{
+					instance.$lens_dims = false;
+					instance.$image.remove();
+					instance.$image = false;
+				}
+				instance.$zoom.addClass('loading');
+				instance.$image = $($('<img>'));
+				instance.$image.on('load' + instance.eventNamespace, function()
+				{
+					instance.$image = $(this).appendTo(instance.$zoom_frame);
+					instance.$zoom.removeClass('loading');
+					instance._showZoom();
+				});
+				instance.$image.attr('src', src);
+				instance.current_img = src;
+			}
+		},
+
+		/**
+		 * Shows the zoom image and zoom lens.
+		 *
+		 * @private
+		 */
+		_showZoom: function()
+		{
+			var instance = this;
+			if (instance.zooming === false) { return; }
+			clearInterval(instance.zoom_timer);
+			instance.$html.removeClass('image-zoom-show-loading');
+			instance.$image.off( 'load' + instance.eventNamespace );
+			instance.$html.addClass('image-zoom-visible');
+			instance.$lens_dims = instance._getLensDims();
+			instance.$lens.height( instance.$lens_dims.height ).width( instance.$lens_dims.width );
+			instance.$zoom_frame.height( instance.$el.height() / instance.zoom_ratio ).width( instance.$el.width() / instance.zoom_ratio );
+			instance.$image.css('margin', '-'+ (instance.$image.height() / 2) +'px auto auto -'+ (instance.$image.width() / 2) +'px');
+
+			// Position the lens and image
+			instance._evtMove.apply(instance.el, [instance.start_e]);
+		}
+	};
+
+	$.fn[pluginName] = function ( options )
+	{
+		var input = arguments;
+		if ( this.length )
+		{
+			// Plugin is not instanciated. Create it (requires an object or null as arguments)
+			if (!$.data(this, pluginName))
+			{
+				if (typeof options === 'object' || !options)
+				{
+					// Create an instance of our concrete plugin
+					var instance = Object.create(PluginPrototype);
+					instance.eventNamespace = eventNamespace + '_' + (new Date().getTime());
+					instance._init(this, options);
+					$.data(this, pluginName, instance);
+				}
+				else
+				{
+					$.error( 'Plugin jQuery.' + pluginName + " has not yet been instanciated." );
+				}
+			}
+			else if (typeof options === 'string')
+			{
+				// Methods that begin with _ are private
+				if (options[0]==='_')
+				{
+					$.error( 'Plugin jQuery.' + pluginName + ' : method ' + options + ' is private');
+					return;
+				}
+
+				// Plugin is instanciated, get it
+				var controller = $.data(this, pluginName);
+				if (controller[options])
+				{
+					controller[options].apply(controller, Array.prototype.slice.call(input, 1));
+				}
+				else
+				{
+					$.error( 'Plugin jQuery.' + pluginName + " has no method " + options);
+				}
+			}
+			else
+			{
+				$.error( 'Plugin jQuery.' + pluginName + " has already been instanciated.");
+			}
+		}
+		return this;
+	}
+})( jQuery, window, document );

@@ -1,0 +1,1136 @@
+
+jQuery.getClient = function(e)
+{
+	if (e) {
+		w = e.clientWidth;
+		h = e.clientHeight;
+	} else {
+		w = (window.innerWidth) ? window.innerWidth : (document.documentElement && document.documentElement.clientWidth) ? document.documentElement.clientWidth : document.body.offsetWidth;
+		h = (window.innerHeight) ? window.innerHeight : (document.documentElement && document.documentElement.clientHeight) ? document.documentElement.clientHeight : document.body.offsetHeight;
+	}
+	return {w:w,h:h};
+};
+
+//20120105 田口追加
+//tableのtr要素を全選択できるようにする
+$(function(){
+
+
+    // ヘッダーのサジェスト
+    $('#kw').ajaxSuggest(
+        '/tr_json/header_suggest/',
+        {'database':($("select[name='data[area]']").length) ? $("select[name='data[area]']").children(':selected').val() : $("#area").val(), 'bind_to':'master_ajax'}
+    );
+
+
+	$('tbody tr[data-href]').addClass('clickable').click( function() {
+		window.location = $(this).attr('data-href');
+	}).find('a').hover( function() {
+		$(this).parents('tr').unbind('click');
+		
+	}, function() {
+		$(this).parents('tr').click( function() {
+			window.location = $(this).attr('data-href');
+		});
+	});
+});
+
+
+// description_move
+$(function(){
+  if($("#H1Title").size() > 0 && $("#FooterH1Title").size() > 0) {
+  	$("#H1Title").prependTo("#FooterH1Title");
+  	$("#FooterH1Title").height($("#H1Title").show().height());
+  }
+});
+
+
+$(document).ready(function(){	
+
+    if (!$.browser.opera) {
+
+        $('select.select_adv_search').each(function(){
+            var title = $(this).attr('title');
+            if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+            $(this)
+                .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+                .after('<span class="select_adv_search">' + title + '</span>')
+                .change(function(){
+                    val = $('option:selected',this).text();
+                    $(this).next().text(val);
+                    })
+        });
+
+    };
+		
+});
+
+$(document).ready(function(){	
+
+    if (!$.browser.opera) {
+
+        $('select.select_destination').each(function(){
+            var title = $(this).attr('title');
+            if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+            $(this)
+                .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+                .after('<span class="select_destination">' + title + '</span>')
+                .change(function(){
+                    val = $('option:selected',this).text();
+                    $(this).next().text(val);
+                    })
+        });
+
+    };
+		
+});
+
+////////////////////////////// Form Label //////////////////////////////
+function ShowFormGuide(obj,GuideSentence) {
+	if( obj.value == '' ) {
+		obj.value = GuideSentence;
+		obj.style.color = '#999999';
+	}
+}
+function HideFormGuide(obj,GuideSentence) {
+	if( obj.value == GuideSentence ) {
+		obj.value='';
+		obj.style.color = '#333333';
+	}
+}
+
+/*
+Infomation
+==========================================================================================
+jQuery Plugin
+    Name       : jquery.ajaxSuggest
+    Version    : 1.5
+    Update     : 2010-12-12
+    Author     : sutara_lumpur
+    Author-URI : http://d.hatena.ne.jp/sutara_lumpur/20100718/1279420832
+    License    : MIT License (http://www.opensource.org/licenses/mit-license.php)
+    Based-on   : Uses code and techniques from following libraries...
+        * jquery.suggest 1.1
+            Author     : Peter Vulgaris
+            Author-URI : http://www.vulgarisoip.com/
+==========================================================================================
+
+Contents
+==========================================================================================
+    01. 変数・部品の定義
+    02. イベントハンドラ
+    03. Suggest用メソッド - 未分類
+    04. Suggest用メソッド - Ajax関連
+    05. Suggest用メソッド - 候補リスト関連
+    06. 処理の始まり
+==========================================================================================
+*/
+(function($) {
+    $.ajaxSuggest = function(input_obj, source, options) {
+    
+        //Ajaxにおけるキャッシュを無効にする
+        $.ajaxSetup({cache: false});
+
+        //================================================================================
+        // 01. 変数・部品の定義
+        //--------------------------------------------------------------------------------
+        //**********************************************
+        //変数の初期化
+        //**********************************************
+        var show_hide        = false; //候補を、タイマー処理で表示するかどうかの予約
+        var timer_show_hide  = false; //タイマー。フォーカスが外れた後、候補を非表示にするか
+        var timer_val_change = false; //タイマー変数(一定時間ごとに入力値の変化を監視)
+        var reserve_click    = false; //マウスのキーを押し続ける操作に対応するためmousedownを検知
+        var $xhr             = false; //XMLHttpオブジェクトを格納
+        var prev_value       = '';    //Suggestの、以前の値
+        var user_value       = '';    //ユーザが入力したもともとの値
+        var is_select        = false; //キー入力ではなく、候補選択で$input_objの値が変わったか？
+        var key_select       = false; //キーで候補移動したか？？
+
+        //**********************************************
+        //部品の定義
+        //**********************************************
+        $(input_obj).attr('autocomplete','off');
+            
+        var $results = $('<ul></ul>')
+            .addClass(options.results_class)
+            .appendTo('body');
+        
+        //================================================================================
+        // 02. イベントハンドラ
+        //--------------------------------------------------------------------------------
+        //**********************************************
+        //テキスト入力エリア
+        //**********************************************
+        //前処理(クロスブラウザ用)
+        if($.support.checkOn && $.support.cssFloat){
+            $(input_obj).keypress(processKey);
+        }else{
+            $(input_obj).keydown(processKey);
+        }
+        $(input_obj).focus(function() {
+            show_hide = true;
+            checkValChange();
+        });
+        $(input_obj).blur(function(ev) {
+            //入力値の監視を中止
+            clearTimeout(timer_val_change);
+
+            //候補消去を予約
+            show_hide = false;
+
+            //消去予約タイマーをセット
+            checkShowHide();
+        });
+        $(input_obj).mousedown(function(ev) {
+            reserve_click = true;
+
+            //消去予約タイマーを中止
+            clearTimeout(timer_show_hide);
+
+            ev.stopPropagation();
+        });
+        $(input_obj).mouseup(function(ev) {
+            $(input_obj).focus();
+            reserve_click = false;
+            ev.stopPropagation();
+        });
+
+        //**********************************************
+        //body全体
+        //**********************************************
+        $('body').mouseup(function() {
+            //消去予約タイマーを中止
+            clearTimeout(timer_show_hide);
+
+            //候補を消去する
+            show_hide = false;
+            hideResult();
+        });
+
+        //================================================================================
+        // 03. Suggest用メソッド - 未分類
+        //--------------------------------------------------------------------------------
+        //**********************************************
+        //タイマーによる入力値変化監視
+        //**********************************************
+        function checkValChange() {
+            timer_val_change = setTimeout(isChange,500);
+
+            function isChange() {
+                var now_value = $(input_obj).val();
+                if(!now_value){
+                    hideResult();
+                }else if(now_value != prev_value && !is_select) {                   
+                    suggest();
+                }
+                is_select = false;
+                prev_value = now_value;
+                
+                //ユーザがもともと入力していた値を格納
+                if(!getCurrentResult()) user_value = $(input_obj).val();
+
+                //一定時間ごとの監視を再開
+                checkValChange();
+            }
+        }
+
+        //**********************************************
+        //候補の消去を本当に実行するか判断
+        //**********************************************
+        function checkShowHide() {
+            timer_show_hide = setTimeout(function() {
+                if (show_hide == false && reserve_click == false){
+                    hideResult();
+                }
+            },500);
+        }
+
+        //**********************************************
+        //キー入力への対応
+        //**********************************************
+        function processKey(e) {
+            if (
+                (/27$|38$|40$|^9$/.test(e.keyCode) && $results.is(':visible')) ||
+                (/^13$|^9$/.test(e.keyCode) && getCurrentResult())
+            ) {
+                if (e.preventDefault)  e.preventDefault();
+                if (e.stopPropagation) e.stopPropagation();
+
+                e.cancelBubble = true;
+                e.returnValue  = false;
+                
+                switch(e.keyCode) {
+                    case 38: // up
+                        key_select = true;
+                        prevResult();
+                        break;
+
+                    case 40: // down
+                        key_select = true;
+                        nextResult();
+                        break;
+
+                    case 9:  // tab
+                        hideResult();
+                        break;
+
+                    case 13: // return
+                        selectCurrentResult(true);
+                        break;
+
+                    case 27: // escape
+                        hideResult();
+                        break;
+                }
+            } else {
+                checkValChange();
+            }
+        }
+
+        //================================================================================
+        // 04. Suggest用メソッド - Ajax関連
+        //--------------------------------------------------------------------------------
+        //**********************************************
+        //Ajaxの中断
+        //**********************************************
+        function abortAjax() {
+            if ($xhr){
+                $xhr.abort();
+                $xhr = false;
+            }
+        }
+
+        //**********************************************
+        //Ajax通信
+        //**********************************************
+        function suggest(){
+            if($(input_obj).val().search(/^[ 　\n\r\t]*$/) > -1) return;
+            
+            //Ajax通信をキャンセル
+            abortAjax();
+            
+            
+            //ここでAjax通信を行っている
+            $xhr = $.getJSON(
+                options.source,
+                {
+                    'q_word'   : $(input_obj).val(),
+                    'database' : options.database,
+                    'sub_info' : options.sub_info,
+                    'and_or'   : options.and_or,
+                    'limit'    : options.limit,
+                    'order_by' : options.order_by,
+                    'origin'   : $('#area').val()
+                },
+                function(json_data){
+                    if(!json_data || json_data.length < 1){
+                        hideResult();
+                    }else{
+                        displayItems(json_data);
+                    }
+                }
+            );
+        }
+
+        //================================================================================
+        // 05. Suggest用メソッド - 候補リスト関連
+        //--------------------------------------------------------------------------------
+        //**********************************************
+        //候補一覧の<ul>成形、表示
+        //**********************************************
+        // @params array arr_candidate   DBから検索・取得した値の配列
+        //
+        //arr_candidateそれぞれの値を<li>で囲んで表示。
+        //同時に、イベントハンドラを記述。
+        function displayItems(arr_candidate) {
+        
+            //候補リストを、一旦リセット
+            $results.empty();
+
+            for (var i = 0; i < arr_candidate.length; i++) {
+                
+                if(arr_candidate[i][0].id==0){continue;}
+                
+                //候補リスト
+                if(options.sub_info !== false){
+                    var $li = $('<li>' + arr_candidate[i][0] + '</li>');
+                    //サブ情報を格納する独自の属性"sub_info"を設定
+                    $li.attr('sub_info',arr_candidate[i][1]);
+                    
+                }else{
+                	//var $li = $('<li><a href="'+arr_candidate[i][0].url+'">' + arr_candidate[i][0].name + '</a></li>');
+                    var $li = $('<li>' + arr_candidate[i][0].name + '<span style=\"display:none;\">:'+ arr_candidate[i][0].url + '</span></li>');
+                }
+                $results.append($li);
+            }
+            
+            $results.append($li);
+            
+            //----------------------------------------------
+            //候補リストの位置を指定
+            //----------------------------------------------
+            var offset = $(input_obj).offset();
+
+            offset.top +=
+                parseInt($(input_obj).height(), 10) +
+                parseInt($(input_obj).css('border-top-width'), 10) +
+                parseInt($(input_obj).css('padding-top'), 10) +
+                parseInt($(input_obj).css('padding-bottom'), 10);
+            if($.browser.msie){
+                //IEは相対座標でoffsetを取得する。
+                //そのため、画面スクロール分を足し合わせる必要がある。
+                offset.top += parseInt($results.scrollTop(), 10);
+            }
+            
+            offset.left += parseInt($(input_obj).css('padding-left'), 10) - 5;
+            if($.browser.msie || $.browser.opera){
+                offset.left -= parseInt($(input_obj).css('border-left-width'), 10) - 5;
+            }
+            
+            //画面に表示
+            $results
+                .show()
+                .css({'top':offset.top, 'left':offset.left})
+                .width(
+                    parseInt($(input_obj).width() * 2) +
+                    parseInt($(input_obj).css('padding-left'), 10) +
+                    parseInt($(input_obj).css('padding-right'), 10)
+                );
+
+            $results
+                .children('li')
+                .mouseover(function() {
+
+                    //Firefoxでは、候補一覧の上にマウスカーソルが乗っていると
+                    //うまくスクロールしない。そのための対策。イベント中断。
+                    if (key_select) {
+                        key_select = false;
+                        return;
+                    }
+                    
+                    $results.children('li').removeClass(options.select_class);
+                    $(this).addClass(options.select_class);
+                    setSubInfo(this); //サブ情報
+
+                })
+                .mousedown(function(e) {
+                    reserve_click = true;
+
+                    //消去予約タイマーを中止
+                    clearTimeout(timer_show_hide);
+                    //ev.stopPropagation();
+                })
+                .mouseup(function(e) {
+                    reserve_click = false;
+
+                    //Firefoxでは、候補一覧の上にマウスカーソルが乗っていると
+                    //うまくスクロールしない。そのための対策。イベント中断。
+                    if (key_select) {
+                        key_select = false;
+                        return;
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                    selectCurrentResult(false);
+                });
+        }
+
+        //**********************************************
+        //現在選択中の候補を取得
+        //**********************************************
+        // @return object current_result 現在選択中の候補のオブジェクト(<li>要素)
+        function getCurrentResult() {
+
+            if (!$results.is(':visible')) return false;
+
+            var $current_result = $results.children('li.' + options.select_class);
+
+            if (!$current_result.length) $current_result = false;
+            
+            
+            return $current_result;
+        }
+        //**********************************************
+        //現在選択中の候補に決定する
+        //**********************************************
+        function selectCurrentResult(type) {
+
+            var $current_result = getCurrentResult();
+            if ($current_result) {
+                
+                // urlの取得
+                var texts = $current_result.text().split(":");
+                
+                // url
+                var url = texts[(texts.length-2)]+":"+texts[(texts.length-1)];
+               
+                // 遷移
+                location.href=url;
+                
+                
+                hideResult();
+
+                //added
+                prev_value = $(input_obj).val();
+            }
+            $(input_obj).focus();  //テキストボックスにフォーカスを移す
+             //候補選択を引き金に、イベントを発火する
+            if(options.bind_to) $(input_obj).trigger(options.bind_to, type);
+        }
+        //**********************************************
+        //選択候補を次に移す
+        //**********************************************
+        function nextResult() {
+            var $current_result = getCurrentResult();
+
+            if ($current_result) {
+                $current_result
+                    .removeClass(options.select_class)
+                    .next()
+                        .addClass(options.select_class);
+            }else{
+                $results.children('li:first-child').addClass(options.select_class);
+            }
+            //テキストボックスの値を変更
+            //候補リストからボックスへ戻るなら、元々の値を表示
+            is_select = true;
+            if($current_result && $current_result.is('li:last-child')){
+                $(input_obj).val(user_value);
+                if(options.sub_info !== false) $sub_info.hide();
+            }else{
+                var $selected = $results.children('.'+options.select_class);
+                var sel_val= $selected.text().replace(/\:http.+$/,"");
+                $(input_obj).val(sel_val);
+                setSubInfo($selected); //サブ情報
+            }
+        }
+        //**********************************************
+        //選択候補を前に移す
+        //**********************************************
+        function prevResult() {
+            var $current_result = getCurrentResult();
+
+            if ($current_result) {
+                $current_result
+                    .removeClass(options.select_class)
+                    .prev()
+                        .addClass(options.select_class);
+            }else{
+                $results.children('li:last-child').addClass(options.select_class);
+            }
+            //テキストボックスの値を変更
+            //候補リストからボックスへ戻るなら、元々の値を表示
+            is_select = true;
+            if($current_result && $current_result.is('li:first-child')){
+                $(input_obj).val(user_value);
+                if(options.sub_info !== false) $sub_info.hide();
+            }else{
+                var $selected = $results.children('.'+options.select_class);
+                var sel_val= $selected.text().replace(/\:http.+$/,"");
+                $(input_obj).val(sel_val);
+                setSubInfo($selected); //サブ情報
+            }
+        }
+        //**********************************************
+        //候補エリアを消去
+        //**********************************************
+        function hideResult() {
+                $results.hide();
+                if(options.sub_info !== false) $sub_info.hide();
+
+                //Ajax通信をキャンセル
+                abortAjax();
+        }
+    
+        //================================================================================
+        // 09. ComboBox用メソッド - サブ情報関連
+        //--------------------------------------------------------------------------------
+        var $sub_info = $('<div class="sub_info"></div>').hide().appendTo('body');
+        
+        //**********************************************
+        //サブ情報の位置設定
+        //**********************************************
+        function setSubInfo(obj){
+            if(options.sub_info === false) return;
+            var offset = $(obj).offset();
+            $sub_info
+                .css({
+                    'top'  : offset.top + 'px',
+                    'left' : offset.left + $results.width() + 'px'
+                });
+            var html   = $(obj).attr('sub_info');
+            //最終的に、サブ情報が空なら表示しない
+            if(html == ''){
+                $sub_info.html(html).hide();
+            }else{
+                $sub_info.html(html).show();
+            }
+        }
+        //**********************************************
+        //サブ情報のイベントハンドラ
+        //**********************************************
+        $sub_info.mousedown(function(ev) {
+            reserve_click = true;
+
+            //消去予約タイマーを中止
+            clearTimeout(timer_show_hide);
+            ev.stopPropagation();
+        });
+        $sub_info.mouseup(function(ev) {
+            reserve_click = false;
+            
+            //消去予約タイマーを中止
+            clearTimeout(timer_show_hide);
+            ev.stopPropagation();
+        });
+
+    };
+
+    //================================================================================
+    // 06. 処理の始まり
+    //--------------------------------------------------------------------------------
+    $.fn.ajaxSuggest = function(source, options) {
+        if (!source) return;
+
+        //************************************************************
+        //オプション
+        //************************************************************
+        options = $.extend({
+            //基本設定
+            source   : source,
+            database : 0,      //接続するDBの設定(配列の番号)
+            and_or   : 'AND',  //AND検索か、OR検索か?
+            limit    : 10,     //候補リストとして表示する最大件数
+            order_by : 'ASC',  //ORDER BY(SQL) で、並ベ替えるのは昇順か降順か
+            bind_to  : false,  //候補が選択されたときに発火するイベント名
+            sub_info : false,  //サブ情報を表示するか?どのフィールドを?
+            results_class : 'as_results', //候補一覧を囲む<ul>
+            select_class  : 'as_over'     //選択中の<li>
+        }, options);
+        this.each(function() {
+            new $.ajaxSuggest(this, source, options);
+        });
+        return this;
+    };
+})(jQuery);
+
+/* Ticket #7126 Sticky Header Banner start */
+$(document).ready(function() {
+    ReadCookie("alan1Banner");
+    var alan1BannerValue;
+    ValidateCookieExist();
+
+    function ReadCookie(cookieName) {
+        var allcookies = document.cookie;
+        cookiearray  = allcookies.split(';');
+        for(var i=0; i<cookiearray.length; i++){
+            name = $.trim(cookiearray[i].split('=')[0]); //use trim function to trim out white space
+            value = $.trim(cookiearray[i].split('=')[1]);
+            if(name == "alan1Banner") {
+                alan1BannerValue = value;
+            }
+        }
+    }
+
+    function WriteCookie(cookieName, expire_month) {
+        var expireDate = new Date();
+        expireDate.setMonth(expireDate.getMonth() + parseInt(expire_month));
+        var cookievalue= "closed;";
+        document.cookie=cookieName+"=" + cookievalue + ';expires=' + expireDate.toUTCString() + ';path=/';
+    }
+
+    function ValidateCookieExist() {
+        if (alan1BannerValue == "closed") {
+            //If user has close the banner before, then never shows it anymore
+            $('.sticky_header_banner').remove();
+        }
+    }
+
+    //if sticky banner exist
+    if ($('.sticky_header_banner').length > 0) {
+        $(".sticky_header_banner a.close_banner" ).click(function(e) {
+            e.preventDefault();
+            $('.sticky_header_banner').remove();
+            WriteCookie("alan1Banner", 3);
+        });
+    }
+    
+    if ($('.mail_alert_wrapper').length > 0) {
+        $(".mail_alert_wrapper a.close_banner_en" ).click(function(e) {
+            e.preventDefault();
+            $('.mail_alert_wrapper').remove();
+            WriteCookie("email_restriction_message", 1);
+        });
+        $(".mail_alert_wrapper a.close_banner_jp" ).click(function(e) {
+            e.preventDefault();
+            $('.mail_alert_wrapper').remove();
+            WriteCookie("email_restriction_message", 1);
+        });
+    }
+})
+/* Ticket #7126 Sticky Header Banner end */
+
+
+// 会員登録２重送信防止
+var up_cnt = 0;
+function update_account(b)
+{
+   up_cnt++;
+   if(up_cnt > 1)
+   {
+      return false;
+   }
+   return true;
+}
+
+
+// #7831 start
+// Special Deals' browse by category filter
+$(document).ready(function() {
+   if($('.filter_wrapper').length > 0){
+       $('.filter_wrapper .category_list_link_btn').click(function(e) {
+           e.preventDefault();
+           e.stopPropagation(); // make it ignore $(document).click, when clicking on the 'browse by category' dropdown itself
+           if($('.filter_wrapper #CategoryList').is(':visible')) {
+               $('.filter_wrapper #CategoryList').hide();
+           } else {
+               $('.filter_wrapper #CategoryList').show();
+           }
+       });
+       
+       // hide when user click on the dropdown list
+       $('.filter_wrapper #CategoryList a').click(function() {
+           $('.filter_wrapper #CategoryList').hide();
+       });
+       
+       // hide when user click outside the dropdown list
+       $(document).click(function(){
+           if($('.filter_wrapper #CategoryList').is(':visible')) {
+               $('.filter_wrapper #CategoryList').hide();
+           };
+       });
+   }
+});
+// #7831 end
+
+
+// #8109 start
+// trim down the description for theme_child_disp in category page
+$(function(){
+    if($('.cat_info_img_wrapper').length > 0) {
+        if($('.area_promotions_item_list').length > 0) {
+            var $setElm = $('ul.area_promotions_item_list .item_name');
+            var cutFigure = '33'; // カットする文字数
+            var afterTxt = ' …'; // 文字カット後に表示するテキスト
+            
+            if(LANG_CODE == 'en'){ // #8267, en page has different length
+                cutFigure = '160';
+            }
+
+            $setElm.each(function(){
+                var textLength = $(this).text().length;
+                var textTrim = $(this).text().substr(0,(cutFigure))
+
+                if(cutFigure < textLength) {
+                    $(this).html(textTrim + afterTxt).css({visibility:'visible'});
+                } else if(cutFigure >= textLength) {
+                    $(this).css({visibility:'visible'});
+                }
+            });
+        }
+    }
+});
+// #8109 end
+
+
+/******************
+#8252
+Renewal Design for EN Page Start
+******************/
+$(document).ready(function() {
+    if(LANG_CODE == 'en') {
+        if($('#EnRenewal').length > 0) {
+            var $contents_wrapper;
+
+            if($('#contents_wrapper').length > 0){
+                $contents_wrapper = $('#contents_wrapper');
+            }
+            else if($('#contents_wrapper_border').length > 0){
+                $contents_wrapper = $('#contents_wrapper_border');
+            }
+
+            $total_document_height = $('#HeaderWrapper').height() + $contents_wrapper.height() + $('#Footer').height();
+            $contents_wrapper_padding = (($(document).height() - $total_document_height)) + 'px';
+            $contents_wrapper.css('padding-bottom', $contents_wrapper_padding);
+        }
+    }
+});
+/******************
+#8252 END
+******************/
+
+
+/******************
+#8705
+Lazy load image for PC - EN & JP
+******************/
+$(document).ready(function() {
+    if($("img.lazy").length > 0) {
+        $("img.lazy").lazyload({
+           // placeholder: null,
+            load : function(elements_left, settings) {
+                $(this).siblings(".spinner").remove();
+            },
+            threshold : 600, // load earlier 200px before
+            effect : "fadeIn",
+            skip_invisible : false
+        }).parent().css({ position: 'relative', display: 'block'}).prepend('<img class="spinner" src="/_tr/vt/2/img/new/bxslider/bx_loader.gif" height="32" width="32" style="position:absolute;left:45%;top:45%" />');
+    }
+});
+/******************
+#8705 END
+******************/
+
+
+/******************
+#8254
+Renewal Area Top EN Page Start
+******************/
+$(document).ready(function() {
+    if(LANG_CODE == 'en') {
+        if($('#EnRenewal').length > 0) {
+            
+            /******* Area Top Renewal Page ******/
+            var $max_responsive_width = 1220;
+            
+            // optimized_design popular categories tour
+            $popular_cat_slider = $('.popular_cat_slider').length;
+            $campaign_slider = $('.campaign_slider').length;
+            
+            if($popular_cat_slider > 0) {
+                var pop_carousel = $('.popular_cat_slider').bxSlider({
+                     useCSS: false, // disable use of CSS animation, to prevent IE10 - 11 error
+                     oneToOneTouch: false, // mobile / tablet need this
+                     slideWidth: 294,
+                     infiniteLoop: false,
+                     hideControlOnEnd: true,
+                     pager: false,
+                     adaptiveHeight : true,
+                     minSlides: 2,
+                     maxSlides: 4,
+                     moveSlides: 0,
+                     slideMargin: 10,
+                     onSliderLoad: function(){
+                         $(".popular_cat_slider").css("visibility", "visible"); // prevent broken layout on slow machine. Hide everything 1st, then only visible slider when slider is fully loaded
+                       }
+                   });
+
+                   // reload the slider to avoid responsive issue
+                   $(window).resize(function() {
+                        pop_carousel.reloadSlider();
+                   });
+             }
+             
+             if($campaign_slider > 0) {
+                var camp_carousel = $('.campaign_slider').bxSlider({
+                    useCSS: false, // disable use of CSS animation, to prevent IE10 - 11 error
+                    oneToOneTouch: false, // mobile / tablet need this
+                    slideWidth: 170,
+                    infiniteLoop: false,
+                    hideControlOnEnd: true,
+                    pager: false,
+                    adaptiveHeight : true,
+                    minSlides: 4,
+                    maxSlides: 6,
+                    moveSlides: 4,
+                    slideMargin: 5
+                  });
+
+                  // reload the slider to avoid responsive issue
+                  $(window).resize(function() {
+                        camp_carousel.reloadSlider();
+                  });
+              }
+              
+              
+             //make equals height to every div in 5 star reviews section
+            //set the starting bigestHeight variable
+            if($('#FiveStar .w_294 .info').length > 0){
+                var biggestHeight = 0;
+                //check each of them
+                $('#FiveStar .w_294 .info').each(function(){
+                    //if the height of the current element is
+                    //bigger then the current biggestHeight value
+                    if($(this).height() > biggestHeight){
+                        //update the biggestHeight with the
+                        //height of the current elements
+                        biggestHeight = $(this).height();
+                    }
+                });
+                //when checking for biggestHeight is done set that
+                //height to all the elements
+                $('#FiveStar .w_294 .info').height(biggestHeight);
+            }
+
+            if($('#FiveStar .w_294').length > 0){
+                var fivestar_ac_block = 0;
+                $('#FiveStar .w_294').each(function(){
+                    fivestar_ac_block++;
+                });
+            }
+            
+            
+            //Override for the new design page that has common element / class name as old design
+            if($('.page_content').length > 0){
+                if($('.container.crumbarea').length == 0) {
+                    if($('.tree').length > 0) {
+                        $('.tree').wrap('<div class="container crumbarea">'); // wrap .tree with breadcrumb container
+                    }
+                }
+            }
+            
+            
+            /******* HUB Page ********/
+            $is_HUB_page = false; // var to detect is HUB area top page
+            
+            if($('#HUB').length > 0) {
+                 $is_HUB_page = true;
+             }
+             
+             //when init load in smaller screen
+            if($(window).width() < $max_responsive_width) {
+                if($is_HUB_page != true) {
+                    if(fivestar_ac_block == 4) {
+                        $('#FiveStar .w_294:last-child').hide();
+                    }
+                }
+            }
+            
+            //when resize down
+            $(window).resize(function() {
+                if($is_HUB_page != true) {
+                    if(fivestar_ac_block == 4) {
+                        if($(window).width() < $max_responsive_width) {
+                            $('#FiveStar .w_294:last-child').hide();
+                        } else {
+                            $('#FiveStar .w_294:last-child').show();
+                        }
+                    }
+                }
+            });
+            
+            // HUB Area Top page custom script
+            if($is_HUB_page == true) {
+               if($('#PromoTheme').length > 0) {
+                   $banner_count = 0;
+                   $('#PromoTheme ul.banner_list li').each(function() {
+                       $banner_count++;
+                       if($banner_count == 4) {
+                           $banner_count = 0;
+                           $(this).addClass('last');
+                        }
+                    });
+                }
+             } // end $is_HUB_page == true
+             
+             
+             // Fix HA map issue in 3 columns layout
+             if($('.main_right').length > 0 && $('.ha_map_wrapper').length > 0) {
+                 $('.ha_map_wrapper img').css("background", "url(/_tr/vt/2/img/v2/ha_map_seawave_bg.jpg) repeat left 0 #aadbec");
+                 
+                 $('.ha_map_wrapper, .ha_map_wrapper img').css({
+                     height: "207px",
+                     width: "238px"
+                 });
+                 
+                 var ratio = 0.768;
+                 var valueArray = [];
+                 var groupArray = [];
+                 
+                 $('.ha_map_wrapper #Map area').each(function(index) {
+                    var attr = $(this).attr('coords');
+                    valueArray[index] = attr.split(',');
+                 });
+                 
+                 for(j=0;j<valueArray.length;j++){
+                    var newChildValue = new Array();
+                    for(i=0;i<4;i++){
+                       newChildValue.push(Math.floor(valueArray[j][i]*ratio));
+                    }
+                    
+                    groupArray.push(newChildValue);
+                }
+
+                $('.ha_map_wrapper #Map area').each(function(index) {
+                    $(this).attr('coords', groupArray[index]);
+                });
+             }
+             // end fix HA map issue
+            
+        } // END  if($('#EnRenewal').length > 0)
+    }
+});
+/******************
+#8254 END
+******************/
+
+
+/******************
+#8121 start
+******************/
+$(document).ready(function() {
+    if($('#faq_category_api_data_field').length > 0) {
+        $('.faq_category_api_content').hide();
+        
+        $('.faq_category_api_title').live('hover', function(){
+            $(this).css('cursor','pointer');
+        });
+        
+        $('.faq_category_api_title').live('click touchstart', function() {
+            $(this).toggleClass('nowOpen');
+            $(this).next('.faq_category_api_content').slideToggle(500); 
+        });
+    }
+});
+/******************
+#8121 END
+******************/
+
+/******************
+#8344 start
+******************/
+$(document).ready(function() {
+    if($('#hotel_hub').length > 0) {        
+        var biggestHeight = 0;
+        $('.featured_wrapper .block_content_txt').each(function(){
+            if($(this).height() > biggestHeight){
+                biggestHeight = $(this).height();
+            }
+        });
+        $('.featured_wrapper .block_content_txt').height(biggestHeight);
+    }
+});
+/******************
+#8344 END
+******************/
+
+
+/******************
+#8159 start
+******************/
+$(document).ready(function() {
+    if($('#comparision_table_content').length > 0) {
+        // Record the initial loaded viewport & table width
+        var tableViewport_initial_val = $('.table_wrapper').width();
+        var comparisonTable_initial_val = $('#comparisonTable').width();
+        
+        var scrollRightEnd  = false;
+        var scrollLeftEnd   = true;
+        var cur_pos         = 0;
+        
+        var comparisonTable_height = $('#comparisonTable').height();
+        
+        $('#comparision_table_content .scroller_left').height(comparisonTable_height);
+        $('#comparision_table_content .scroller_right').height(comparisonTable_height);
+        
+        // If comparison table is smaller than viewport, then disabled left right button.
+        check_enabled_left_right_init = function(table_width, viewport_width) {
+            if(table_width <= viewport_width) {
+                $('#comparision_table_content .scroller_left').removeClass('active');
+                $('#comparision_table_content .scroller_right').removeClass('active');
+                scrollLeftEnd = true;
+                scrollRightEnd = true;
+            } else {
+                $('#comparision_table_content .scroller_right').addClass('active');
+                scrollRightEnd = false;
+
+                $('#comparision_table_content .scroller_left').click(function(){
+                    scrollTable('scroll_left');
+                });
+
+                $('#comparision_table_content .scroller_right').click(function(){
+                    scrollTable('scroll_right');
+                });
+            }
+        }
+        check_enabled_left_right_init(comparisonTable_initial_val, tableViewport_initial_val);
+        
+        // Make the left right arrow button image align vertically center as user scroll
+        $('#comparision_table_content .scroller_left span').css('top',($(window).scrollTop()+($(window).height()/2)));
+        $('#comparision_table_content .scroller_right span').css('top',($(window).scrollTop()+($(window).height()/2)));
+        $(window).scroll(function() {
+            var tableViewport = $('.table_wrapper').height()-100; // deduct 100 to prevent the image clash to the bottom of the button's bg color
+            var newPos = $(window).scrollTop()+($(window).height()/2);
+            if(newPos >= tableViewport) {
+                newPos = tableViewport;
+            }
+            $('#comparision_table_content .scroller_left span').css('top',newPos);
+            $('#comparision_table_content .scroller_right span').css('top',newPos);
+        });
+        
+        $(window).resize(function() {
+            scrollTable('scroll_left');
+            // check do we need to enable the left right button after window resize.
+            var tableViewport = $('.table_wrapper').width();
+            var comparisonTable = $('#comparisonTable').width();
+            check_enabled_left_right_init(comparisonTable, tableViewport);
+        });
+        
+
+        
+        function scrollTable(direction) {
+            var dir = direction;
+            var tableViewport = $('.table_wrapper').width();
+            var comparisonTable = $('#comparisonTable').width();
+            
+            var movePx = tableViewport;
+            
+            cur_pos = parseInt($('#comparisonTable').css('margin-left'));
+                  
+            if(dir == 'scroll_right' && !scrollRightEnd){
+                //left button enabled
+                scrollLeftEnd = false;
+                if (cur_pos == 0){
+                    //default location
+                    movePx = (tableViewport-50) * 1; //-50 is avoid user unable to view the cut off viewport data
+                    if ((movePx+tableViewport) > comparisonTable){
+                        movePx = parseInt(comparisonTable)-tableViewport;
+                        scrollRightEnd = true;
+                        $('#comparision_table_content .scroller_right').removeClass('active');
+                    }
+                }else{
+                    movePx = Math.abs(cur_pos) + tableViewport;
+                    if ((movePx+tableViewport) == comparisonTable){
+                        scrollRightEnd = true;
+                        $('#comparision_table_content .scroller_right').removeClass('active');
+                    }
+                    if ((movePx+tableViewport) > comparisonTable){
+                        movePx = (parseInt(comparisonTable)-Math.abs(cur_pos))-50; //-50 is avoid white blank space occur when reach the right end
+                        scrollRightEnd = true;
+                        $('#comparision_table_content .scroller_right').removeClass('active');
+                    }
+                }
+                $('#comparisonTable').css('margin-left', movePx*-1);
+                $('#comparision_table_content .scroller_left').addClass('active');
+            }
+            
+            if(dir == 'scroll_left' && !scrollLeftEnd){
+                scrollRightEnd = false;
+                $('#comparision_table_content .scroller_right').addClass('active');
+                if (Math.abs(cur_pos) > tableViewport){
+                    movePx = cur_pos+tableViewport;
+                }else{
+                    movePx = 0;
+                    scrollLeftEnd = true;
+                    $('#comparision_table_content .scroller_left').removeClass('active'); 
+                }
+                $('#comparisonTable').css('margin-left', movePx);
+            }
+           
+        }
+    }
+});
+/******************
+#8159 END
+******************/

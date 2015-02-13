@@ -1,0 +1,165 @@
+@charset "shift_jis";
+
+/*
+Title: バイヤーセレクト！お手軽ワイン
+URI: http://famima.com/shop/c/cliquors/
+*/
+
+
+/* --------------------------------------------------------------------
+	共通
+-------------------------------------------------------------------- */
+#liquors{
+	margin:0 0 20px 0; padding:0; width:700px;}
+
+#liquors h1, #liquors h2, #liquors h3, #liquors h4,
+#liquors img, #liquors p, #liquors div, #liquors ul, #liquors li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+/* clearfix */
+#liquors .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#liquors .clearfix {
+  min-height: 1px;}
+
+* html #liquors .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #liquors { 
+	height: 1%;}
+
+/* --------------------------------------------------------------------
+	liquors
+-------------------------------------------------------------------- */
+#liquors .header{
+	margin:0; padding:0; width:700px; height:285px;}
+
+#liquors .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#liquors #item01mainIMG{
+	width:700px; height:510px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/liquors/item01_mainimage.jpg) no-repeat;}
+
+#liquors #item01mainPRICE{
+	width:700px; height:100px;
+	background:url(http://www.famima.com/images/p/liquors/item01_price.jpg) no-repeat;}
+
+#liquors #item01mainPRICE a{
+	outline:0;}
+	
+#liquors #item01mainPRICE .bt{
+	padding:9px 0 0 549px;}
+	
+#liquors #item01CmntBase{
+	width:700px; height:426px;
+	background:url(http://www.famima.com/images/p/liquors/item01_cmntbase.jpg) no-repeat;}
+	
+#liquors #item01CmntBase p{
+	width:375px; color:#FFFFFF; line-height:130%;
+	padding:30px 0 0 30px;}
+	
+#liquors #item02mainIMG{
+	width:700px; height:250px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/liquors/item02_mainimage.jpg) no-repeat;
+	margin-top:30px;}
+	
+#liquors #item02mainPRICE{
+	width:700px; height:110px;
+	background:url(http://www.famima.com/images/p/liquors/item02_price.jpg) no-repeat;}
+	
+#liquors #item02mainPRICE a{
+	outline:0;}
+	
+#liquors #item02mainPRICE .bt{
+	padding:10px 0 0 306px;}
+	
+#liquors #item02CmntBase{
+	width:700px; height:350px;
+	background:url(http://www.famima.com/images/p/liquors/item02_cmntbase.jpg) no-repeat;}
+	
+#liquors #item02CmntBase p{
+	width:430px; color:#FFFFFF; line-height:130%;
+	padding:153px 0 0 20px;}
+	
+#liquors #sale2Item{
+	width:700px;}
+
+#liquors .sale2ItemBase170{
+	width:170px; padding-left:6px; float:left;}
+	
+#liquors .sale2ItemBase170 .txt{
+	color:#555555; font-size:11px; text-align:center; padding:5px 0 0 0;}
+	
+#liquors .sale2ItemBase170 .bt{
+	text-align:center; padding:0 0 10px 0;}
+	
+#liquors .sale2ItemBase170 a{
+	outline:0;}
+
+/* --------------------------------------------------------------------
+	memorial brandy
+-------------------------------------------------------------------- */
+#liquors .brandyBG{
+	width:700px; background:url(http://www.famima.com/images/p/brandy/bg_yw.jpg) repeat; margin:0; padding:15px 0 0 0;}
+
+#liquors .brandyBG ul{
+	width:700px;}
+
+#liquors .brandyBG ul li{
+	margin:0; padding:0; list-style:none;}
+
+#liquors .brandyBG ul .yearBTL{
+	width:332px; float:left; padding-left:6px; padding-bottom:5px;}
+	
+#liquors .brandyBG ul .yearBTR{
+	width:332px; float:left; padding-left:3px; padding-bottom:5px;}
+	
+#liquors .brandyAbBG{
+	width:698px; border:1px #330000 solid; margin:15px 0;}
+	
+#liquors .brandyAbBG .bgimg{
+	width:698px; height:356px; background:url(http://www.famima.com/images/p/brandy/bgimg_about.jpg) no-repeat;}
+	
+#liquors .brandyAbBG .ttl1{
+	width:307px; height:22px; padding:32px 0 0 22px;}
+
+#liquors .brandyAbBG .ttl2{
+	width:70px; height:21px; padding:15px 0 0 22px;}
+	
+#liquors .brandyAbBG p.txt{
+	color:#FFFFFF; line-height:130%; width:417px; padding:7px 0 0 23px;}
+	
+#liquors #iteminfoBase{
+	width:675px; padding:0 0 0 15px;}
+
+#liquors #iteminfoBase p.txt01{
+	color:#333333; line-height:130%; padding:8px 0 4px 0; margin-bottom:4px;
+	border-bottom:1px #333333 dotted; width:675px; font-weight:bold;}
+
+#liquors #iteminfoBase p.txt02{
+	color:#333333; line-height:130%; padding:4px 0; margin-bottom:3px;}
+
+#liquors #iteminfoBase table#table-01{
+    width: 642px; border-collapse: collapse; border-spacing: 0; margin-bottom:15px;}
+
+#liquors #iteminfoBase table#table-01 p.txt03{
+	color:#333333; line-height:130%; padding:3px 4px;}
+

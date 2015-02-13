@@ -1,0 +1,101 @@
+.sharrre{
+  float: left;
+}
+
+.sharrre:first-child .box{
+    margin-left:0!important;
+}
+
+.sharrre .box{
+    padding:0;
+    background:none;
+    position:relative;
+    float:left;
+    width: 54px;
+    margin-left:10px;
+
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+
+  .sharrre .box a:hover{
+    text-decoration:none;
+  }
+  .sharrre .count {
+    color:#525b67;
+    background:#fff;
+    display:block;
+    font-size:13px;
+    font-weight:bold;
+    line-height:15px;
+    position:absolute; right:0;
+    text-align:center;
+    width:35px;
+    height:20px;
+    padding-top:3px;
+}
+  .sharrre .count:before, .sharrre .count:after {
+    display:block;
+    position:absolute;
+    left:0;
+    top:10px;
+    width:0;
+    height:0;
+  }
+  .sharrre .count:before {
+    border:solid 7px transparent;
+    /*border-top-color:#b2c6cc;*/
+    border-right-color:#fff;
+    margin-left:-14px;
+    /*right: -14px;*/
+  }
+  .sharrre .count:after {
+    border:solid 6px transparent;
+    /*margin-right:-6px;*/
+    margin-left:-12px;
+    /*border-top-color:#fbfbfb;*/
+    border-right-color:#fff;
+    top:11px;
+  }
+
+  .sharrre .share {
+    color:#FFFFFF;
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    line-height:15px;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    width:18px;
+    height:20px;
+    text-indent:9999px;
+  }
+
+  .twitter.sharrre .box{
+    width:57px;
+  }
+
+  .facebook.sharrre .box{
+    width:49px;
+  }
+
+
+ .twitter .share {
+    background: url(http://az681300.vo.msecnd.net/assets/ico-twitter.png) no-repeat center left;
+  }
+
+ .facebook .share {
+    background: url(http://az681300.vo.msecnd.net/assets/ico-facebook.png) no-repeat center left;
+  }
+
+.googleplus .share {
+    background: url(http://az681300.vo.msecnd.net/assets/ico-gplus.png) no-repeat center left;
+
+  }
+
+  .pinterest .share {
+    background: url(http://az681300.vo.msecnd.net/assets/ico-pinterest.png) no-repeat center left;
+
+  }

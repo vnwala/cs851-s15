@@ -1,0 +1,1436 @@
+// Avoid FOUC
+var elements = document.getElementsByTagName("html");
+elements[0].className += " JSEnabled"
+
+// jQuery Auto start functions
+$(document).ready(function()
+{
+    // load the Martini helps
+    martini.init();
+
+    // load the comment handler
+    commentHandler.init();
+
+
+    // constituencies panel - left over from $.ready
+    $('#all_constituencies_link').click(function (e){
+        e.preventDefault();
+        $('.conlink').show();
+    })
+
+    // PROMO STRIP
+    $('.promoStrip .closeButton').on('click', function(event){
+        event.preventDefault();
+        $(this).parent('.promoStrip').slideUp('slow');
+    });
+
+    // Initialize Autocompleters
+    $("#Site-search").autocomplete({source: "/search/autoSiteSearch/jQuery/", minLength: 2, cacheLength: 20});
+    $("#LocationjQuery").autocomplete({source: "/resources/location-auto-complete/", minLength: 3, cacheLength: 20, width: '250px'});
+
+    // Search results 'relevant sections' toggle
+    if ($('.searchRelSecListMore').length > 0)
+    {
+        // $('.searchRelSecListMore').hide();
+        // $('.searchRelSecList').append('<li class="searchRelShowHide">Show more sections</li>');
+        $('.searchRelShowHide').toggle(
+            function() {
+                $('.searchRelSecListMore').slideToggle();
+                $(this).text('Show fewer sections');
+            },
+            function() {
+                $('.searchRelSecListMore').slideToggle();
+                $(this).text('Show more sections');
+            }
+        );
+    }
+
+    // Share links on article pages (excluding families)
+    $('.articleShareBox').addClass('popBox');
+    var shareBoxHtml = $('.articleShareBox').removeAttr('id').wrap('<div></div>').parent().html();
+    $('.articleShareBox').parent().remove();
+    $('.articleUtilShare a').removeAttr('href').click(
+        function() {
+            var checkBoxExists = $(this).next('div').html();
+            if (!checkBoxExists) {
+                $(this).parent().append(shareBoxHtml).find('div').toggle();
+                toggleShare();
+            } else {
+                $(this).next('div').toggle();
+                toggleShare();
+            }
+        }
+    );
+    // ShareBox hide
+    function toggleShare() {
+        $('.articleShareBox span').click(function() {
+            $(this).parent().hide();
+        });
+    };
+
+
+    // JOB SECTOR TOGGLE
+    $("#myJobsSearch .sectorToggle").show();
+    $("#myJobsSearch .sectorToggle").click(function() {
+         if (!$(this).is(".allSelected")) {
+             $(this).next().children().children("input").attr("checked", "checked");
+             $(this).addClass("allSelected").html("Deselect all");
+         } else {
+             $(this).next().children().children("input").removeAttr("checked");
+             $(this).removeClass("allSelected").html("Select all");
+         }
+    });
+
+    // Families (old NetMums) pages - FaceBox initialize
+    if ($('a[rel*=facebox]').length > 0)
+    {
+       $('a[rel*=facebox]').facebox();
+    }
+
+    // HOMES/JOB SEARCH FUNCTIONS
+    $("#myHomesSearch .searchOptions .sale").click(function() {
+        $(this).addClass("on");
+        $("#myHomesSearch .searchOptions .rent").removeClass("on");
+        $("#myHomesSearch #homeSale").css({"display":"block"});
+        $("#myHomesSearch #homeRent").css({"display":"none"});
+    });
+
+    $(".searchOptions .rent").click(function() {
+        $(this).addClass("on");
+        $("#myHomesSearch .searchOptions .sale").removeClass("on");
+        $("#myHomesSearch #homeRent").css({"display":"block"});
+        $("#myHomesSearch #homeSale").css({"display":"none"});
+    });
+
+    $("#_eventId_continue").click(function()
+    {
+        if($("#terms:checked").length == 1)
+        {
+            $("#cvUploadStep1").submit();
+        }
+        else
+        {
+            $("#unticked").removeClass('none');
+        }
+    });
+
+    // ADD HOMEPAGE
+
+        $('.iconMakeHome').on('click', function(event){
+            event.preventDefault();
+            this.style.behavior='url(#default#homepage)';
+            this.setHomePage(this.href);
+        });
+
+    // Generic form field focus highlight
+    function focusHighlight() {
+        $("input[type=text],input[type=password],input[type=file],textarea,select,.genericRadio input[type=checkbox]").focus(function() {
+            $(this).parent().addClass("formFocus");
+        });
+        $("input[type=text],input[type=password],input[type=file],textarea,select,.genericRadio input[type=checkbox]").blur(function() {
+            $(this).parent().removeClass("formFocus");
+        });
+
+        $("input[type=radio]").focus(function() {
+            $(this).parent().parent().addClass("formFocus");
+        });
+        $("input[type=radio]").blur(function() {
+            $(this).parent().parent().removeClass("formFocus");
+        });
+    }
+
+    // 'Send your news' form highlight current field
+    if ($(".sendYourNewsForm").length > 0 ) focusHighlight();
+
+
+    // 'Send your news' image increment
+    if ($('.sendYourNewsForm').length > 0) {
+        $('.sendYourNewsPhotos ul li:gt(1)').hide();
+        if ($('.sendYourNewsAdd').length == 0) {
+            $('.sendYourNewsPhotos').append('<p class="sendYourNewsAdd"><a href="#sendYourNews">Add another</a></p>');
+        }
+
+        $('.sendYourNewsAdd a').click(function() {
+            $('.sendYourNewsPhotos ul li:not(:visible):lt(2)').slideDown(400, function () {
+                if ($('.sendYourNewsPhotos ul li:not(:visible)').length < 2)
+                    $('.sendYourNewsAdd').fadeOut('slow', function() { $(this).remove(); });
+            });
+            return false;
+        });
+    }
+
+    // 'Send your news' validation
+    if ($('.sendYourNewsForm').length > 0) {
+        if ($('.validateError').length == 0) $('.sendYourNewsForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it appears some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.sendYourNewsForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                name: {
+                    required: false,
+                    minlength: 2
+                },
+                email: {
+                    required: false,
+                    email: true
+                },
+                telephone: {
+                    required: false,
+                    phoneUK: true
+                },
+                headline: {
+                    required: true,
+                    minlength: 5
+                },
+                body: {
+                    required: true,
+                    minlength: 20
+                },
+                image1: {
+                    required: false,
+                    accept: "png|gif|jpg|jpeg"
+                },
+                caption1: {
+                    required: false,
+                    minlength: 2
+                },
+                image2: {
+                    required: false,
+                    accept: "png|gif|jpg|jpeg"
+                },
+                caption2: {
+                    required: false,
+                    minlength: 2
+                },
+                image3: {
+                    required: false,
+                    accept: "png|gif|jpg|jpeg"
+                },
+                caption3: {
+                    required: false,
+                    minlength: 2
+                },
+                image4: {
+                    required: false,
+                    accept: "png|gif|jpg|jpeg"
+                },
+                caption4: {
+                    required: false,
+                    minlength: 2
+                },
+                recaptcha_response_field: {
+                    required: true
+                }
+
+            },
+
+            messages: {
+                name: {
+                    required: "Please specify your <strong>name</strong>",
+                    minlength: jQuery.format("Your <strong>name</strong> should have at least {0} characters")
+                },
+                email: {
+                    required: "Please specify your <strong>email address</strong>",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com"
+                },
+                telephone: {
+                    required: "Please specify a <strong>telephone</strong> or mobile number",
+                    phoneUK: "Please enter a valid UK <strong>telephone</strong> number"
+                },
+                headline: {
+                    required: "Please specify a <strong>title or headline</strong> for your story",
+                    minlength: jQuery.format("Please enter a meaningful <strong>title or headline</strong> for your story")
+                },
+                body: {
+                    required: "Don't forget to include your <strong>story</strong>",
+                    minlength: jQuery.format("Your <strong>story</strong> should probably be a little longer")
+                },
+                image1: {
+                    accept: "Your <strong>photo 1</strong> should be in jpg, gif or png format"
+                },
+                caption1: {
+                    required: "Please specify a <strong>caption</strong> for photo 1",
+                    minlength: jQuery.format("The <strong>caption</strong> for photo 1 should have at least {0} characters")
+                },
+                image2: {
+                    accept: "Your <strong>photo 2</strong> should be in jpg, gif or png format"
+                },
+                caption2: {
+                    required: "Please specify a <strong>caption</strong> for photo 2",
+                    minlength: jQuery.format("The <strong>caption</strong> for photo 2 should have at least {0} characters")
+                },
+                image3: {
+                    accept: "Your <strong>photo 3</strong> should be in jpg, gif or png format"
+                },
+                caption3: {
+                    required: "Please specify a <strong>caption</strong> for photo 3",
+                    minlength: jQuery.format("The <strong>caption</strong> for photo 3 should have at least {0} characters")
+                },
+                image4: {
+                    accept: "Your <strong>photo 4</strong> should be in jpg, gif or png format"
+                },
+                caption4: {
+                    required: "Please specify a <strong>caption</strong> for photo 4",
+                    minlength: jQuery.format("The <strong>caption</strong> for photo 4 should have at least {0} characters")
+                },
+                recaptcha_response_field: {
+                    required: "Please enter the security words"
+                }
+            }
+
+        });
+
+    }
+
+    // 'Add Event' form highlight current field
+    if ($(".addEventForm").length > 0 ) focusHighlight();
+
+    // 'Add Event' validation
+    if ($('.addEventForm').length > 0) {
+
+        $('#StartDate').datepicker({
+            minDate: 0,
+            "dateFormat": 'dd-M-yy',
+            onClose: function() {
+              $( this ).valid();
+            }
+        });
+
+        if ($('.validateError').length == 0) $('.addEventForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it appears some details are missing or incorrect.</h4><p>Please review the following errors, you will then be able to preview and submit your event.</p><ul></ul></div>');
+
+        $('.addEventForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+                $(element.form).find('#'+element.id).parent('fieldset')
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+                $(element.form).find('#'+element.id).parent('fieldset')
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                EventName: {
+                    required: true,
+                    minlength: 5
+                },
+                EventTypeID: {
+                    required: true
+                },
+                EventDetails: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 1000
+                },
+                EventVenue: {
+                    required: true
+                },
+                EventAddress: {
+                    required: true
+                },
+                EventCityTown: {
+                    required: true
+                },
+                EventPostCode: {
+                    required: true
+                },
+                StartDate: {
+                    required: true
+                },
+                StartTimeHH: {
+                    required: true
+                },
+                StartTimeMM: {
+                    required: true
+                },
+                AccountName: {
+                    required: true
+                },
+                AccountTelephone: {
+                    required: true
+                },
+                AccountEmail: {
+                    required: true,
+                    email: true
+                }
+
+            },
+
+            messages: {
+                EventName: {
+                    required: "Please specify the <strong>event name</strong>",
+                    minlength: jQuery.format("The <strong>event name</strong> should have at least {0} characters")
+                },
+                EventTypeID: {
+                    required: "Please specify the <strong>event type</strong>"
+                },
+                EventDetails: {
+                    required: "Please specify the <strong>event details</strong>"
+                },
+                EventVenue: {
+                    required: "Please specify the <strong>venue name</strong>"
+                },
+                EventAddress: {
+                    required: "Please specify the <strong>venue street</strong>"
+                },
+                EventCityTown: {
+                    required: "Please specify the <strong>town/village</strong>"
+                },
+                EventPostCode: {
+                    required: "Please specify the <strong>event post code</strong>"
+                },
+                StartDate: {
+                    required: "Please specify the <strong>event start date</strong>"
+                },
+                StartTimeHH: {
+                    required: "Please specify the <strong>event start time, hours</strong>"
+                },
+                StartTimeMM: {
+                    required: "Please specify the <strong>event start time, minutes</strong>"
+                },
+                AccountName: {
+                    required: "Please specify <strong>your name</strong>"
+                },
+                AccountTelephone: {
+                    required: "Please specify <strong>your telephone number</strong>"
+                },
+                AccountEmail: {
+                    required: "Please specify <strong>your email address</strong>",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com"
+                }
+            }
+
+        });
+
+    }
+
+    // Register form highlight current field
+    if ($(".regForm").length > 0) focusHighlight();
+    if ($(".regActivate").length > 0) focusHighlight();
+    if ($(".logForm").length > 0) focusHighlight();
+    if ($(".accForm").length > 0) focusHighlight();
+    if ($(".accFormNewsletters").length > 0) focusHighlight();
+
+    // Register validation - Step 1
+    if ($('.regStep1 .regForm').length > 0) {
+        if ($('.regCreate .validateError').length == 0) $('.regForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it seems some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.regForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".regCreate .validateError",
+            errorLabelContainer: ".regCreate .validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                regemail: {
+                    required: true,
+                    email: true
+                },
+                regpassword: {
+                    required: true,
+                    minlength: 6
+                },
+                regpasswordconfirm: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#regpassword"
+                }
+            },
+
+            messages: {
+                regemail: {
+                    required: "Please specify your <strong>email address</strong>.",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com."
+                },
+                regpassword: {
+                    required: "Please specify a <strong>password</strong>.",
+                    minlength: jQuery.format("Your <strong>password</strong> must contain at least {0} characters.")
+                },
+                regpasswordconfirm: {
+                    required: "Please confirm your <strong>password</strong>.",
+                    minlength: jQuery.format("Your <strong>password</strong> must contain at least {0} characters."),
+                    equalTo: "The <strong>confirm password</strong> field does not match the 'password' field."
+                }
+            }
+
+        });
+    } // End step 1 val
+
+    // Register validation - Step 2
+    if ($('.regStep2 .regForm').length > 0) {
+        if ($('.validateError').length == 0) $('.regForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it seems some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.regForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                regusername: {
+                    required: true,
+                    minlength: 6
+                },
+                year_of_birth: {
+                    required: true
+                },
+                regtitle: {
+                    required: true
+                },
+                regfirstname: {
+                    required: true,
+                    minlength: 2
+                },
+                reglastname: {
+                    required: true,
+                    minlength: 2
+                }
+            },
+
+            messages: {
+                regusername: {
+                    required: "Please specify a <strong>username</strong>.",
+                    minlength: jQuery.format("Your <strong>username</strong> must contain at least {0} characters.")
+                },
+                year_of_birth: {
+                    required: "Please select your <strong>year of birth</strong>."
+                },
+                regtitle: {
+                    required: "Please select a <strong>title</strong>."
+                },
+                regfirstname: {
+                    required: "Please specify your <strong>first name</strong>.",
+                    minlength: jQuery.format("Your <strong>first name</strong> must contain at least {0} characters.")
+                },
+                reglastname: {
+                    required: "Please specify your <strong>last name</strong>.",
+                    minlength: jQuery.format("Your <strong>last name</strong> must contain at least {0} characters.")
+                }
+            }
+
+        });
+    } // End step 2 val
+
+    // Activate validation
+    if ($('.regStep4 .regActivate').length > 0) {
+        if ($('.validateError').length == 0) $('.regActivate').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it seems some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.regActivate').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                passcode: {
+                    required: true,
+                    minlength: 32
+                }
+            },
+
+            messages: {
+                email: {
+                    required: "Please specify your <strong>email address</strong>.",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com."
+                },
+                passcode: {
+                    required: "Please enter your <strong>passcode</strong>.",
+                    minlength: jQuery.format("Your <strong>passcode</strong> should be {0} characters long. Please ensure you have copied and pasted the full passcode.")
+                }
+            }
+
+        });
+    } // End activate val
+
+    // Log in validation
+    if ($('.login .logForm').length > 0) {
+        if ($('.logUs .validateError').length == 0) $('.logForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it seems some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.logForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".logUs .validateError",
+            errorLabelContainer: ".logUs .validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 4
+                }
+            },
+
+            messages: {
+                email: {
+                    required: "Please specify your <strong>email address</strong>.",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com."
+                },
+                password: {
+                    required: "Please specify a <strong>password</strong>.",
+                    minlength: jQuery.format("Your <strong>password</strong> must contain at least {0} characters.")
+                }
+            }
+
+        });
+    } // End log in val
+
+    // 'Job free ad' validation
+    if ($('.jobFreeAd').length > 0) {
+        if ($('.validateError').length == 0) $('.jobFreeAd').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it appears some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.jobFreeAd').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                publication: {
+                    required: true
+                },
+                jobTitle: {
+                    required: true,
+                    minlength: 4
+                },
+                description: {
+                    required: true,
+                    minlength: 20
+                },
+                adPhone: {
+                    required: true,
+                    phoneUK: true
+                },
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                yourPhone: {
+                    required: true,
+                    phoneUK: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                empType: {
+                    required: true
+                }
+            },
+
+            messages: {
+                publication: {
+                    required: "Please specify a <strong>publication</strong>"
+                },
+                jobTitle: {
+                    required: "Please specify a <strong>job title</strong>",
+                    minlength: jQuery.format("Your <strong>job Title</strong> should probably be a little longer")
+                },
+                description: {
+                    required: "Don't forget to include your <strong>description</strong>",
+                    minlength: jQuery.format("Your <strong>description</strong> should probably be a little longer")
+                },
+                 adPhone: {
+                    required: "Please specify a <strong>telephone</strong> or mobile number",
+                    phoneUK: "Please enter a valid UK <strong>telephone</strong> number"
+                },
+                name: {
+                    required: "Please specify your <strong>name</strong>",
+                    minlength: jQuery.format("Your <strong>name</strong> should have at least {0} characters")
+                },
+                yourPhone: {
+                    required: "Please specify a <strong>telephone</strong> or mobile number",
+                    phoneUK: "Please enter a valid UK <strong>telephone</strong> number"
+                },
+                email: {
+                    required: "Please specify your <strong>email address</strong>",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com"
+                },
+                empType: {
+                    required: "Please specify your <strong>employment type</strong>"
+                }
+            }
+
+        });
+
+    }
+
+    // End 'Job free ad' validation
+
+    // MY ACCOUNT HOME - Update details toggle
+    if ($('.accHome .accForm').length > 0) {
+        $('.accHome fieldset').addClass('accJsView');
+        $('input,select', '.accHome > form').attr('disabled','disabled');
+        var selectVal = $('.accHome select#title').val().substr(0,1).toUpperCase()+$('.accHome select#title').val().substr(1).toLowerCase();
+        $('.accHome select#title').hide().before('<span class="select">' + selectVal + '</span>');
+        var selectVal = $('.accHome select#year_of_birth').val().substr(0,1).toUpperCase()+$('.accHome select#year_of_birth').val().substr(1).toLowerCase();
+        $('.accHome select#year_of_birth').hide().before('<span class="select">' + selectVal + '</span>');
+
+        $('a.btn').click(function() {
+            $(this).parent().removeClass('accJsView');
+            $(this).parent().find('input,select').not('#username').removeAttr('disabled');
+            if ($(this).parent().find('select').length > 0) {
+                var selectVal = $('select').val();
+                $('span.select').hide(0);
+                $('select').show();
+            }
+            if ($(this).attr('href').substr(0, 22) == "http://m.facebook.com/")
+            {
+                //FB.logout(function () { document.location = '/my/account/log-out/'});
+                return true;
+            }
+            else if ($(this).attr('href') == "/my/account/log-out/")
+            {
+                return true;
+            }
+            else if ($(this).attr('href') == "/jobs/")
+            {
+                return true;
+            }
+            return false;
+        });
+    }
+
+    // MY ACCOUNT HOME validation
+    if ($('.accHome .accForm').length > 0) {
+        if ($('.validateError').length == 0) $('.accForm').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it appears some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.genericForm').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                registerusername: {
+                    required: true,
+                    minlength: 6
+                },
+                registertitle: {
+                    required: true
+                },
+                year_of_birth: {
+                    required: true
+                },
+                realname: {
+                    required: true,
+                    minlength: 2
+                },
+                registerlocation: {
+                    required: true
+                }
+            },
+
+            messages: {
+                email: {
+                    required: "Please specify your <strong>email address</strong>.",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com."
+                },
+                registerusername: {
+                    required: "Please specify a <strong>username</strong>.",
+                    minlength: jQuery.format("Your <strong>username</strong> must contain at least {0} characters.")
+                },
+                year_of_birth: {
+                    required: "Please select your <strong>year of birth</strong>."
+                },
+                registertitle: {
+                    required: "Please select a <strong>title</strong>."
+                },
+                realname: {
+                    required: "Please specify your <strong>real name</strong>.",
+                    minlength: jQuery.format("Your <strong>real name</strong> must contain at least {0} characters.")
+                },
+                registerlocation: {
+                    required: "Please specify a <strong>postcode</strong>."
+                }
+            }
+
+        });
+    } // End MY ACCOUNT home val
+
+    // Comment Log in validation
+    if ($(".commentLogUs form").length > 0) focusHighlight();
+    if ($('.commentLogUs form').length > 0) {
+        if ($('.validateError').length == 0) $('.commentLogUs form').prepend('<div class="validateError" style="display: none;"><h4>Sorry, it appears some details are missing or incorrect.</h4><ul></ul></div>');
+
+        $('.commentLogUs form').validate({
+            ignoreTitle: true,
+            errorContainer: ".validateError",
+            errorLabelContainer: ".validateError ul",
+            wrapper: "li",
+            errorClass: "fieldInvalid",
+            highlight: function(element, errorClass) {
+                $(element).addClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .addClass(errorClass);
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).removeClass(errorClass);
+                $(element.form).find("label[for=" + element.id + "]").parent()
+                        .removeClass(errorClass);
+            },
+
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 4
+                }
+            },
+
+            messages: {
+                email: {
+                    required: "Please specify your <strong>email address</strong>.",
+                    email: "Your <strong>email address</strong> must be in the format name@domain.com."
+                },
+                password: {
+                    required: "Please specify a <strong>password</strong>.",
+                    minlength: jQuery.format("Your <strong>password</strong> must contain at least {0} characters.")
+                }
+            }
+
+        });
+    } // End Comment log in val
+
+    // Traffic cameras
+    if ($('a[rel*=trafficslideshow]').length > 0) {
+       $('a[rel*=trafficslideshow]').colorbox({slideshow:true, width:"600px", opacity:"0.1"});
+    }
+
+    //Weather IE6 PNGs fix
+    $('.weatherIcon').supersleight({shim: '/resources/static/standard/images/blank.gif'});
+    $('#weather .btnWeatherNext, #weather .btnWeatherPrev').supersleight({shim: '/resources/static/standard/images/blank.gif'});
+
+    //Weather carousel
+    if ($('#weather .carousel').length > 0) {
+            $('#weather .carousel').jcarousel({
+                buttonNextHTML: '<div class="btnWeatherNext"></div>',
+                buttonPrevHTML: '<div class="btnWeatherPrev"></div>',
+                itemFallbackDimension: '310',
+                scroll: 1
+            });
+        }
+
+    //Weather maps
+    if ($('#weather .weatherMaps').length > 0) {
+            $('#weather .weatherMaps a:first').parent().addClass('weatherMapOn');
+
+            $('#weather .weatherMaps a').click(function() {
+                $('#weather .weatherMaps li').removeClass('weatherMapOn');
+                $(this).parent().addClass('weatherMapOn');
+                return false;
+            });
+        }
+    //TRAFFIC & TRAVEL//
+    if ($('.trafficIncidents').length > 0) {
+
+        // add a submit handler to the form
+        $('#traffic_form').submit(submitTraffic);
+
+        // set
+        burl = document.location.pathname.toString();
+
+        matches = burl.match(/(public_transport|traffic|roadworks|public_engineering).in/);
+        if (matches != null)
+        {
+            match = matches[1];
+
+            $('#traffic_type').val(match).attr("selected", "selected");
+        }
+
+        // get the query string for the sort and set the correct form
+        sortVal = qs.get('sort');
+        if (sortVal !== null)
+        {
+            $('#traffic_order').val(sortVal).attr("selected", "selected");
+        }
+
+
+        if ($('.trafficCams').length > 0) {
+            $('#traffic .trafficCams p span').css({opacity: 1});
+        }
+
+        if (jQuery.support.opacity) {
+            $('.trafficIncidents .trafficShare, .trafficIncidents .trafficViewMap').css({ opacity: 0 });
+            $('.trafficIncidents .trafficViewMore').css({ opacity: 0.8 });
+
+            $('.trafficIncidents li').hover(
+                function () {
+                    $('.trafficShare, .trafficViewMap',this).stop(false, true).animate({opacity: 1}, 500 );
+                    $('.trafficViewMore',this).stop(false, true).animate({opacity: 1}, 500 );
+                },
+                function () {
+                   $('.trafficShare, .trafficViewMap',this).stop(false, true).animate({opacity: 0}, 300 );
+                   $('.trafficViewMore',this).stop(false, true).animate({opacity: 0.8}, 300 );
+                }
+            );
+        }
+
+        $('.trafficCams ul li a').click(
+            function() {
+                var currentPic = $(this).attr('href');
+                var currentCaption = $('img',this).attr('alt');
+                $('.trafficCamsMain').attr('src', currentPic);
+                $('.trafficCams p span').text(currentCaption);
+                return false;
+            }
+        );
+
+        //TRAFFIC & TRAVEL GOOGLE MAPS//
+        var trafficMap = {
+            bounds: null,
+            map: null
+        }
+
+        trafficMap.init = function(latLng, zoom) {
+            var myOptions = {
+                zoom:zoom,
+                center: latLng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            this.map = new google.maps.Map(document.getElementById("trafficMap"), myOptions);
+            this.bounds = new google.maps.LatLngBounds();
+            //var trafficLayer = new google.maps.TrafficLayer();
+            //trafficLayer.setMap(trafficMap.map);
+        }
+
+        var infoWindow;
+        var mapY = $('#traffic').offset().top;
+        trafficMap.placeMarkers = function() {
+
+            $('.trafficIncidents .trafficList > li').each(function(){
+                var incidentID    = (this.id).split("-");
+                var incident = incidentID[1];
+                var type = $('.trafficIcons span', this).last().attr('class');
+                var severityID = $(this).attr('class').split(" ");
+                var severity = severityID[0];
+
+                if (typeof type == 'undefined')
+                {
+                    return;
+                }
+
+                var icon = '/resources/static/standard/images/traffic-marker-' + type + '.png/';
+                var lat = $(this).find('.lat').text();
+                var lng = $(this).find('.lng').text();
+                var point = new google.maps.LatLng(parseFloat(lat),parseFloat(lng));
+                // extend the bounds to include the new point
+                trafficMap.bounds.extend(point);
+                // add the marker itself
+                var marker = new google.maps.Marker({
+                position: point,
+                map: trafficMap.map,
+                icon: icon
+                });
+                // create the tooltip and its text
+                //infoWindow = new google.maps.InfoWindow();
+                infoWindow = new InfoBubble({
+                  content: html,
+                  shadowStyle: 1,
+                  padding: 0,
+                  minWidth: 300,
+                  maxWidth: 300,
+                  minHeight: 100,
+                  maxHeight: 200,
+                  backgroundColor: '#FFF',
+                  borderRadius: 5,
+                  arrowSize: 10,
+                  borderWidth: 4,
+                  borderColor: '#666',
+                  disableAutoPan: false,
+                  hideCloseButton: true,
+                  arrowPosition: 50,
+                  backgroundClassName: 'trafficBubble clearfix',
+                  arrowStyle: 0
+                });
+
+                var html = $(this).clone().find('h4').addClass(severity).parent();
+                html.find('.trafficShare').remove();//removeAttr('style').parent();
+                if ($('.trafficViewMore').length > 0) {
+                    html = html.find('.trafficViewMore').removeAttr('style').remove().appendTo(html).parent().html();
+                } else {
+                    html = html.html();
+                }
+
+                // add a listener to open the tooltip when a user clicks on one of the markers
+                google.maps.event.addListener(marker, 'click', function() {
+                    infoWindow.close();
+                    infoWindow.setContent(html);
+                    infoWindow.open(trafficMap.map, marker);
+                });
+                google.maps.event.addListener(trafficMap.map, 'click', function() {
+                    infoWindow.close();
+                });
+
+                $('.trafficViewMap a',this).click(function(){
+                    $(this).parents("html:not(:animated),body:not(:animated)").animate({scrollTop: mapY}, 1000);
+                    infoWindow.close();
+                    infoWindow.setContent(html);
+                    infoWindow.open(trafficMap.map, marker);
+                    return false;
+                });
+
+                // Fit the map around the markers we added:
+                if ($('#defaultMapBounds').html() !== 'false')
+                {
+                    trafficMap.map.fitBounds(trafficMap.bounds);
+                }
+
+            });
+        }
+
+        //var myLatLng = new google.maps.LatLng(53.717787, -2.674731);
+        var myLatLng = new google.maps.LatLng(parseFloat($('#defaultCentreLat').html()),parseFloat($('#defaultCentreLon').html()));
+        var zoom = parseInt($('#defaultZoomLevel').html());
+        var mapType = $('#defaultMapType').html();
+        if (mapType === 'Sat')
+        {
+            mapType = google.maps.MapTypeId.SATELLITE;
+        }
+        else
+        {
+            mapType = google.maps.MapTypeId.ROADMAP;
+        }
+        trafficMap.init(myLatLng, zoom);
+        trafficMap.placeMarkers();
+
+    }//END TRAFFIC & TRAVEL//
+
+	//EVENTS LANDING PAGE //
+	if ($("#eventsList1").length > 0) {
+		// Apply ioslist plugin to events landing page panel
+		$("#eventsList1").ioslist({
+			stationaryHeaderElement: "h3"
+		});
+
+		// Get current time
+		var time = new Date();
+		var hours = time.getUTCHours();
+		if (hours < 10) hours = "0" + hours;
+		var minutes = time.getUTCMinutes();
+		if (minutes < 10) minutes = "0" + minutes;
+		var userTime = hours + '' + minutes;
+		// Build array of times appearing in the panel
+		var elems = $("#eventsList1 dt").toArray();
+		// Extract time from ids for this array
+		var idArr = [];
+		$.each(elems, function() {
+				idArr.push(this.id);
+		});
+		// Check current time against available times in the array
+		$.each(idArr, function(i) {
+			var id = idArr[i].substring(4); // remove 'time' from id
+			if (id >= userTime) {
+				// Position next available event at the top of the list
+				var elemY = $(elems[i]).offset().top - $(elems[i]).parents('div').offset().top;
+				$(elems[i]).parents('div').scrollTop(elemY);
+				return false;
+			}
+			$(elems[i]).parent().addClass('eventStarted');
+			i++;
+		});
+	}
+	//END EVENTS LANDING PAGE //
+
+    //HOMES SERVICE//
+    $('.soldHousePriceSubmit').click(function(event){
+        event.preventDefault();
+        $('#streetname').attr('value',$('#streetname').attr('value').replace("'", "_"));
+        $('.soldHousePriceSearch').submit();
+    });
+    //END HOMES SERVICE//
+
+	// ARTICLE GALLERY //
+	if($('.articleGallery').length > 0) {
+		$('.articleGallery li a').each(function(){
+			var src = $(this).attr('href');
+			var image = $('<img />').attr('src', src);
+		});
+
+		$('.articleGallery li a').click(function() {
+			var src = $(this).attr('href');
+			var buy = $(this).attr('rel');
+			var caption = $('img',this).attr('alt').replace('&amp;#40;', '(').replace('&#40;', '(');
+			$('.articleGallery li').removeClass('current');
+			$(this).parent().addClass('current');
+			$('.articleGallery .articlePhoto img').attr('src',src);
+			if (buy) {
+                $('.articleGallery .articlePhoto span').html('<a href="' + buy + '" class="articlePhotoBuy">Buy this photo</a>' + caption);
+			} else {
+				$('.articleGallery .articlePhoto span').text(caption);
+			}
+			return false;
+		});
+	}
+
+    // MULTIMEDIA PANEL GALLERY //
+    if($('.panelGallery').length > 0) {
+        $('#thb1').addClass('current');
+        $('.panelGallery li').click(function() {
+            var s = $(this).attr('id');
+            var index = s.charAt(s.length-1);
+            $('.panelGallery li').removeClass('current');
+            $(this).addClass('current');
+            $('.panelGallery img[id^="pic"], .panelGallery a[id^="pic"], .panelGallery span[id^="cap"]').css('display','none');
+            $('#pic' + index + ', #cap' + index).css('display','block');
+            return false;
+        });
+    }
+
+	// FLOATER //
+	if( ($('.skyFloat').length > 0) && ($('.halfPage').length <= 0) ) {
+		setTimeout(function() {
+            // sky float has been removed as there is no advert
+	        if($('.skyFloat').length == 0)
+            {
+                return;
+            }
+
+			var top = $('.skyFloat').offset().top - parseFloat($('.skyFloat').css('marginTop').replace(/auto/, 0));
+
+            var onScroll = function()
+            {
+                // This might look bit heavy, but we have to do it
+                // so on every scroll event to make it work with
+                // live events
+                var bottom = $('.lowerAds').offset().top;
+                var leftColumn = $('.articleLeft').height();
+                var centreColumn = $('.articleCentre').height();
+
+                if (centreColumn >= leftColumn)
+                {
+                    return;
+                }
+
+				var y = $(this).scrollTop();
+
+				if (y >= top) {
+					$('.skyFloat').addClass('fixed');
+					if (y+820 >= bottom) {
+						var foot = bottom - 830;
+						$('.skyFloat').css({'top' : foot, 'position' : 'absolute'});
+					} else {
+						$('.skyFloat').removeAttr('style');
+					}
+				} else {
+					$('.skyFloat').removeClass('fixed');
+				}
+            };
+
+            onScroll();
+			$(window).scroll(onScroll);
+
+		}, 10000);
+
+	} else if ($('.halfPage').length > 0){
+
+        setTimeout(function() {
+            // half page ad has been removed as their is no advert
+            if($('.halfPage').length == 0)
+            {
+                return;
+            }
+
+            var top = $('.halfPage').offset().top - parseFloat($('.halfPage').css('marginTop').replace(/auto/, 0));
+
+            var onScroll = function()
+            {
+                // This might look bit heavy, but we have to do it
+                // so on every scroll event to make it work with
+                // live events
+                var bottom = $('.lowerAds').offset().top;
+
+                var y = $(this).scrollTop();
+
+                if (y >= top) {
+                    $('.halfPage').addClass('fixed');
+                    if (y+600 >= bottom) {
+                        var foot = bottom - 610;
+                        $('.halfPage').css({'top' : foot, 'position' : 'absolute'});
+                    } else {
+                        $('.halfPage').removeAttr('style');
+                    }
+                } else {
+                    $('.halfPage').removeClass('fixed');
+                }
+            };
+
+            onScroll();
+            $(window).scroll(onScroll);
+
+        }, 10000);
+
+    }
+
+    // COMMENTS scoring & sorting //
+    if($('.comment').length > 0) {
+        $('#commentSort').change(function(e)
+        {
+            $.cookie('commentSort', $(this).val(), {expires: 7, path: '/'});
+            if ($(this).attr('data-base-url') != '' && typeof $(this).attr('data-base-url') != 'undefined')
+            {
+                document.location = $(this).attr('data-base-url');
+            }
+            else
+            {
+                document.location.reload(true)
+            }
+
+        });
+
+        // update the comment scors on click
+        $('.commentThumbsUp').click(function(e){
+            e.preventDefault();
+            commentHandler.changeLike('Plus', this);
+        });
+
+        $('.commentThumbsDown').click(function(e){
+            e.preventDefault();
+            commentHandler.changeLike('Minus', this);
+        });
+
+        // check for votes already made
+        if($.cookie('commentPlus') != null)
+        {
+            commentHandler.checkScoreCookie('Plus', '+');
+        }
+        else
+        {
+            $.cookie('commentPlus', '', { expires: 7 , path: '/'});
+        }
+
+        if($.cookie('commentMinus') != null)
+        {
+            commentHandler.checkScoreCookie('Minus', '-');
+        }
+        else
+        {
+            $.cookie('commentMinus', '', { expires: 7, path: '/' });
+        }
+
+
+    }//END COMMENTS JS
+
+    // REGISTER POP UP ON FIRST VISIT
+    // setTimeout(function() {
+    //     if( (($.cookie('nqr') == null) || ($.cookie('nqr')==1))
+    //     		&& ( $.cookie('loginmodal') == null && martini.checkCookieSupport() && $('.p402_premium').length == 0)
+    //     		&& !$.browser.mobile) {
+    //         martini.createModalRegisterBox();
+    //         $.cookie('loginmodal', '1', { expires: 28, path: '/' });
+    //     }
+    // }, 6000);
+
+    /* Showbiz Carousel in Article Footer Links Panel */
+
+    if ($('.footerLinksPanel').length > 0) {
+        $('.footerLinksPanel #showbizCarousel').jcarousel();
+    }
+
+
+
+    /* Twitter and Facebook links */
+
+
+    $('li.iconsLinks').hover(
+        function(){
+            $('.iconsLinks').removeClass('selected');
+            $(this).addClass('selected');
+        },
+        function(){
+            $('.iconsLinks').removeClass('selected');
+        }
+    );
+}); //END jQuery
+
+// handle the traffic redirects
+function submitTraffic()
+{
+    url = document.location.pathname.toString();
+
+    prefix = $('#traffic_type').val()+'.in';
+
+    options = ['traffic.in','public_transport.in','roadworks.in','traffic_and_travel.in','public_engineering.in'];
+
+    for (i in options)
+    {
+        url = url.replace(options[i], prefix);
+    }
+
+    qString = '?sort='+$('#traffic_order').val();
+    document.location = url+qString;
+
+    return false;
+}
+
+
+function showPic(whichpic)
+{
+    var source = whichpic.getAttribute('id');
+    var mainPic = parent.document.getElementById('picsNtxt');
+    mainPic.setAttribute('class',source);
+}
+
+function showTxt(whichtxt)
+{
+    var source = whichtxt.getAttribute('class');
+    var mainTxt = parent.document.getElementById('para');
+    mainTxt.setAttribute('class',source);
+}
+
+function revertTxt(prevtxt)
+{
+    var source = prevtxt.getAttribute('id');
+    var thetxt = parent.document.getElementById('para');
+    thetxt.setAttribute('class',source);
+}
+
+function popUp(strURL, strWidth, strHeight, otherOptions)
+{
+    var strOptions="";
+    strOptions="'width="+strWidth+",height="+strHeight+","+otherOptions+"'";
+    window.open(strURL, 'newWin2', strOptions);
+}
+
+// flash functions
+function sendEvent(swf,typ,prm)
+{
+    thisMovie(swf).sendEvent(typ,prm);
+};
+
+function getUpdate(typ,pr1,pr2,swf) {};
+
+function thisMovie(swf)
+{
+   var obj = document.getElementById(swf);
+   return obj;
+};
+
+function loadFile(swf,obj)
+{
+    thisMovie(swf).loadFile(obj);
+};
+
+function showVid(playlist,thumbnail)
+{
+    var pObj = {file: playlist, image: thumbnail, width: 313, height: 263, repeat: 'true', shuffle: 'false', showstop: 'false'};
+    loadFile('pic1',pObj);
+
+};
+
+function showSoundslide(soundslide,thumbnail)
+{
+    var pObj = {file: soundslide, image: thumbnail, width: 313, height: 263, repeat: 'true', shuffle: 'false', showstop: 'false'};
+    loadFile('pic1',pObj);
+
+};
+
+
+
+
+
+

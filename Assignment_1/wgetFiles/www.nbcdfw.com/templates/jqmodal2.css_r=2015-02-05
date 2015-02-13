@@ -1,0 +1,126 @@
+/* ******************************************
+
+  TITLE:        JQMODAL2.CSS
+  VERSION:      0.81
+  LAST UPDATED: 07/22/2014
+  UPDATED BY:   Patrick White
+  
+******************************************** */
+
+/*jqmodal styles*/
+.storyBody .jqmNotice .jqResize {position: absolute; right: 2px; bottom: 2px;}
+.storyBody .jqmNotice {display:none;position:absolute;background-color:#171717;top:25%;left:25%; border: 2px solid #555555; }
+
+.storyBody .jqmnTitle{
+  height: 44px !important;
+  margin: 0px;
+  padding: 0px;
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_header_bgr_overlay.gif) repeat scroll 0 0;
+}
+
+.storyBody .poll .jqmnTitle{ 
+  width: 465px;
+  height: 44px !important;
+  margin: 0px;
+  padding: 0px;
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_header_bgr_overlay.gif) repeat scroll 0 0;
+}
+
+.storyBody .poll .jqmnTitle .poll_title {
+	color:#FFFFFF;
+	font-family:$font-family-regular;
+	font-size:24px;
+	padding:15px 10px;
+	font-weight:normal;
+	}
+
+.storyBody .jqmnTitle p{
+	color:#CCC;
+	cursor:move;
+	font-family:$font-family-regular;
+	font-size:18px;
+	font-weight:bold;
+	margin-bottom:10px;
+	padding:5px;
+	text-align:left;
+	text-transform:capitalize;
+}
+
+.storyBody .video_embed .jqmnTitle p{
+  font-size:16px;
+}
+
+
+.storyBody .jqmNotice .jqmClose {position: absolute; cursor: pointer; right: 4px; top: 6px; }
+.storyBody .jqm_ex_image .jqmClose {cursor:pointer;position:absolute;right:2px;top:-3px;}
+.storyBody .jqmnContent{border-top:1px; color:#000; font:12px/18pt $font-family-regular; padding:0 20px 5px;}
+.storyBody .jqmWindow {display: none; position: fixed; top: 2%; left: 50%; margin-left: -475px; width: 950px; background-color: #EEE; color: #333; border: 1px solid black; padding: 5px;}
+.storyBody .jqmOverlay { background-color: #000;}
+* html .jqmWindow {position: absolute;}
+.storyBody .jqm {position: absolute; z-index: 99999; }
+
+.storyBody .jqmnTitle a.close_enlarge {width:34px; height:12px; top: 10px; background: transparent url('http://media.nbcdfw.com/designimages/btn_close_overlay.gif') no-repeat 0 0; margin:5px; margin-top: 8px; overflow:hidden;}
+.storyBody .jqmnTitle a.close_enlarge:hover {background-position:0 -12px;}
+.storyBody .jqmNotice .jqmnTitle a.close_enlarge {
+	  margin-top: 0px;
+	  right:14px;
+	  top:10px;
+	  position:absolute;
+}
+
+.Gallery .jqmClose {width:34px; height:12px; background: transparent url('http://media.nbcdfw.com/designimages/btn_close_dark_grey_new.gif)' no-repeat -3px -2px !important; margin:5px;}
+.Gallery .jqmClose:hover {background-position:-3px -14px !important;}
+
+/*lightbox image*/
+.storyBody .jqm_ex_outher_wpr {padding: 0px;}
+.storyBody .jqm_ex_inner_wpr{margin:5px 0;border:1px solid #2e2e2e;text-align:center;}
+.storyBody .jqm_ex_image .jqm_ex_desc {
+	background-color:#272727;
+	color:#999999;
+	display:block;
+	line-height:14px;
+	padding:20px 10px;
+	text-indent:5px;
+	width:600px;
+}
+
+.storyBody .jqm_ex_image .image_credit {width:600px;display:block;}
+
+.storyBody .jqm_ex_inner_wpr img{text-align: center;}
+.storyBody .jqm_ex_outher_wpr .image_credit {padding:5px 0 0 10px;text-align:left;font-size:10px;color:#7a7a7a;}
+
+/*lightbox video*/
+.storyBody .jqm_ex_video {padding:0px;height:auto;width:416px;}
+.storyBody .jqm_ex_video .jqmnTitle {
+	background-color:#272727;
+	color:#999;
+	margin:0;
+	padding-right:15px; 
+	padding-bottom: 10px;
+	padding-top: 5px;
+	height: auto !important;
+	width: 400px;
+}
+
+.storyBody .video_embed .jqmNotice .jqmnTitle p {
+	color:#ccc;
+	cursor:move;
+	font-family: $font-family-regular;
+	font-size:12px;
+	text-align:left;
+	text-transform:capitalize;
+	letter-spacing: normal;
+	line-height: 18px;
+	width:355px;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	height: auto;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+.storyBody .jqm_ex_video .jqm_content_wrp{background-color:#000;}
+.storyBody .jqm_content_wrp embed {position:static;}
+.storyBody .jqm_content_wrp .commManager { display:none;}
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {height:0; width:0;}

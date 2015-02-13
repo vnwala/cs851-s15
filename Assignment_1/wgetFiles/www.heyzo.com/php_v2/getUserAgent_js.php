@@ -1,0 +1,1 @@
+var user_device = 'pc'; var mobile_type = 'others'; 

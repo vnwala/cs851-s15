@@ -1,0 +1,117 @@
+/* --- 全体の背景・テキスト --- */
+body {
+margin: 0;
+padding: 0;
+//background-color: #f0f0f0; /* ページの背景色 */
+color: #000000; /* 全体の文字色 */
+font-size: 100%; /* 全体の文字サイズ */
+}
+
+/* --- 全体のリンクテキスト --- 
+a:link { color: #C0C0C0; }
+a:visited { color: #C0C0C0; }
+a:hover { color: #C0C0C0; }
+a:active { color: #C0C0C0; }
+*/
+h1 {
+font-size:20px;
+margin-top: 5px;
+ white-space: nowrap;  
+ overflow: hidden;  
+ text-overflow: ellipsis; 
+}
+
+
+/* --- コンテナ --- */
+#container {
+width: 980px; /* ページの幅 */
+margin: 0 auto; /* センタリング */
+}
+
+/* --- ヘッダ --- */
+#header {
+  background-color: #EEEEEE; /* ヘッダの背景色 */
+  margin: 5px;
+  text-align:center;
+}
+
+/* --- コンテンツ --- */
+#content {
+background-color: #ffffff; /* コンテンツの背景色 */
+margin: 0 auto; /* センタリング */
+}
+
+
+
+/* --- フッタ --- */
+#footer {
+background-color: #1ccccc; /* フッタの背景色 */
+}
+
+
+.url {
+font-size:15px;
+color: 808080;
+ white-space: nowrap;  
+ overflow: hidden;  
+ text-overflow: ellipsis; 
+}
+.notice {
+font-size:15px;
+color: 808080;
+}
+
+.ad1 {
+  float: right;
+  width: 300px;
+  height: 250px;
+  margin: 5px;
+}
+
+.ad2 {
+  width: 728px;
+  height: 90px;
+  margin: 5px auto;
+}
+
+top {
+  margin: 5px;
+  clear: right;
+}
+.middle {
+  clear: right;
+  margin: 5px;
+}
+
+.bottom {
+  clear: right;
+}
+.footer {
+  clear: right;
+  font-size: 79%;
+  font-weight: bolder;
+  letter-spacing: .1em;
+  float: left;
+  width: 660px;
+  margin-left:5px;
+}
+
+.lbody {
+  float: left;
+  width: 660px;
+  height: 249px;
+  border-bottom: 1px solid #999999;
+  border-top: 1px solid #999999;
+  margin: 5px;
+}
+
+
+#topics {
+  font-size:13px;
+  line-height: 13px;
+}
+
+.tpad {
+  width: 660px;
+  margin: 10 aoto;
+}

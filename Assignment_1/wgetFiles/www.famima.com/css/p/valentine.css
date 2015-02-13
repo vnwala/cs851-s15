@@ -1,0 +1,255 @@
+@charset "shift_jis";
+
+/*
+Title: gurume hiroba
+URI: http://famima.com/shop/pages/hiroba.aspx
+*/
+
+
+/* --------------------------------------------------------------------
+	common
+-------------------------------------------------------------------- */
+#valentine-wrap{
+	width:960px; margin:0; padding:0;}
+
+#valentine-wrap h1, #valentine-wrap h2, #valentine-wrap h3, #valentine-wrap h4,
+#valentine-wrap img, #valentine-wrap p, #valentine-wrap div, #valentine-wrap ul, #valentine-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#valentine-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0; background-color:#9f1422;}
+
+#valentine-wrap .base{
+	margin:0; padding:0;}
+
+#valentine-wrap .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+
+/* clearfix */
+#valentine-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#valentine-wrap .clearfix {
+  min-height: 1px;}
+
+* html #valentine-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #valentine-wrap { 
+	height: 1%;}
+
+/* -------------------------------------------------------------------- */
+
+#valentine-wrap #mainttl{
+	width:610px; float:left;}
+
+#valentine-wrap #naviBase{
+	width:350px; float:left;}
+	
+#valentine-wrap #mainttl_btm{
+	width:960px; height:6px; clear:both;
+	background:url(http://www.famima.com/images/p/valentine/mainttl_btm.jpg) top center no-repeat;}
+
+/* --- navi -- */
+#valentine-wrap #naviBase li{
+	list-style:none;}
+
+#valentine-wrap #naviBase li a#navi01{
+     display: block; text-indent:-9999px;
+     width: 350px;
+     height: 87px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/valentine/navi01.jpg) no-repeat;}
+#valentine-wrap #naviBase ul li a#navi01:hover,
+#valentine-wrap #naviBase ul li a#navi01:active {
+     background-position:0px -87px;}
+	 
+#valentine-wrap #naviBase li a#navi02{
+     display: block; text-indent:-9999px;
+     width: 350px;
+     height: 87px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/valentine/navi02.jpg) no-repeat;}
+#valentine-wrap #naviBase ul li a#navi02:hover,
+#valentine-wrap #naviBase ul li a#navi02:active {
+     background-position:0px -87px;}
+
+#valentine-wrap #naviBase li a#navi03{
+     display: block; text-indent:-9999px;
+     width: 350px;
+     height: 92px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/valentine/navi03.jpg) no-repeat;}
+#valentine-wrap #naviBase ul li a#navi03:hover,
+#valentine-wrap #naviBase ul li a#navi03:active {
+     background-position:0px -92px;}
+	 
+#valentine-wrap #naviBase li a#navi04{
+     display: block; text-indent:-9999px;
+     width: 350px;
+     height: 80px;
+     margin-left: 0px;
+     background:url(http://www.famima.com/images/p/valentine/navi04.jpg) no-repeat;}
+#valentine-wrap #naviBase ul li a#navi04:hover,
+#valentine-wrap #naviBase ul li a#navi04:active {
+     background-position:0px -80px;}
+
+/* --- navi//END -- */
+
+#valentine-wrap .itemBase{
+	margin:15px 0 0 0; padding:0;}
+
+/* --- item01 -- */
+#valentine-wrap #item01BaseL{
+	width:511px; float:left;}
+	
+#valentine-wrap #item01BaseL .cmntBG{
+	width:511px; height:186px;
+	background:url(http://www.famima.com/images/p/valentine/item01_img4.jpg) top no-repeat;}
+
+#valentine-wrap #item01BaseL .cmntBG p{
+	width:265px; padding:12px 0 0 30px; font-size:12px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item01BaseL .cmntBG .bt{
+	padding:10px 0 0 30px;}
+
+#valentine-wrap #item01BaseR{
+	width:449px; float:left;}
+	
+#valentine-wrap #item01BaseR .shopdata{
+	width:449; height:282px;
+	background:url(http://www.famima.com/images/p/valentine/item01_shopbg.jpg) top no-repeat;}
+
+#valentine-wrap #item01BaseR .shopdata p.shoptxt{
+	width:208px; padding:113px 0 0 24px;
+	font-size:11px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item01BaseR .shopdata .bt{
+	padding:5px 0 0 24px;}
+#valentine-wrap #item01BaseR .shopdata .bt a{
+	outline:0;}
+
+
+/* --- item02 -- */
+#valentine-wrap #item02BaseR{
+	width:504px; float:right;}
+	
+#valentine-wrap #item02BaseL{
+	width:456ppx; float:right;}
+	
+#valentine-wrap #item02BaseL .shopdata{
+	width:456; height:272px;
+	background:url(http://www.famima.com/images/p/valentine/item02_shopbg.jpg) top no-repeat;}
+	
+#valentine-wrap #item02BaseL .shopdata p.shoptxt{
+	width:211px; padding:108px 0 0 37px;
+	font-size:11px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item02BaseL .shopdata .bt{
+	padding:5px 0 0 37px;}
+#valentine-wrap #item02BaseL .shopdata .bt a{
+	outline:0;}
+	
+#valentine-wrap #item02BaseL .cmntBG{
+	width:456px; height:186px;
+	background:url(http://www.famima.com/images/p/valentine/item02_img4.jpg) top no-repeat;}
+
+#valentine-wrap #item02BaseL .cmntBG p{
+	width:258px; padding:10px 0 0 38px; font-size:12px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item02BaseL .cmntBG .bt{
+	padding:10px 0 0 33px;}
+	
+/* --- item03 -- */
+#valentine-wrap #item03BaseL{
+	width:511px; float:left;}
+	
+#valentine-wrap #item03BaseR{
+	width:449px; float:left;}
+	
+#valentine-wrap #item03BaseR .shopdata{
+	width:449; height:290px;
+	background:url(http://www.famima.com/images/p/valentine/item03_shopbg.jpg) top no-repeat;}
+
+#valentine-wrap #item03BaseR .shopdata p.shoptxt{
+	width:208px; padding:133px 0 0 25px;
+	font-size:11px; line-height:120%; color:#333333;}
+
+#valentine-wrap #item03BaseR .shopdata .bt{
+	padding:5px 0 0 25px;}
+#valentine-wrap #item03BaseR .shopdata .bt a{
+	outline:0;}
+
+#valentine-wrap #item03BaseR .cmntBG{
+	width:449px; height:240px;
+	background:url(http://www.famima.com/images/p/valentine/item03_img4.jpg) top no-repeat;}
+
+#valentine-wrap #item03BaseR .cmntBG p{
+	width:385px; padding:5px 0 0 40px; font-size:12px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item03BaseR .cmntBG .bt{
+	padding:95px 0 0 235px;}
+
+
+/* --- item04 -- */
+#valentine-wrap #item04BaseR{
+	width:511px; float:right;}
+	
+#valentine-wrap #item04BaseL{
+	width:449ppx; float:right;}
+	
+#valentine-wrap #item04BaseL .shopdata{
+	width:449px; height:270px;
+	background:url(http://www.famima.com/images/p/valentine/item04_shopbg.jpg) no-repeat;}
+	
+#valentine-wrap #item04BaseL .shopdata p.shoptxt{
+	width:211px; padding:108px 0 0 37px;
+	font-size:11px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item04BaseL .shopdata .bt{
+	padding:5px 0 0 35px;}
+#valentine-wrap #item04BaseL .shopdata .bt a{
+	outline:0;}
+
+#valentine-wrap #item04BaseL .cmntBG{
+	width:449px; height:185px;
+	background:url(http://www.famima.com/images/p/valentine/item04_img4.jpg) top no-repeat;}
+
+#valentine-wrap #item04BaseL .cmntBG p{
+	width:258px; padding:10px 0 0 38px; font-size:12px; line-height:120%; color:#333333;}
+	
+#valentine-wrap #item04BaseL .cmntBG .bt{
+	padding:10px 0 0 33px;}
+
+
+/* --- Banner -- */
+
+#valentine-wrap #bannerBase{
+	margin:30px 0 0 0;}
+	
+#valentine-wrap #bannerBase .banner{
+	width:440px; padding:0 0 0 30px; float:left;}
+	
+#valentine-wrap #bannerBase .bannerClear{
+	margin:0; padding:0; clear:both;}
+
+
+
+
+

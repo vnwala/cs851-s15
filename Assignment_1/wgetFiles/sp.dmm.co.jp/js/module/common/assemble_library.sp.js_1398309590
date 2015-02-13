@@ -1,0 +1,100 @@
+/**
+ * Library Navigator
+ */
+
+(function(scope) {
+    /**
+     * UA、OS情報を取得するためのクラスライブラリ
+     */
+    var namespace = 'dmmLib',
+        navigator = function() {
+        if (!(this instanceof arguments.callee)) {
+            return new arguments.callee();
+        }
+
+        this._initialize();
+
+        return this;
+    };
+
+    navigator.OS = {
+        IOS: 'ios',
+        ANDROID: 'android'
+    };
+
+    navigator.prototype = {
+        /**
+         * 初期化処理
+         *
+         * @return void
+         */
+        _initialize: function() {
+            this._computeOs();
+        },
+
+        /**
+         * OS情報を算出する
+         *
+         * @return void
+         */
+        _computeOs: function() {
+            // bodyにあるクラス名からOS情報を生成する
+            if (document.body.className.match(/dm-([a-zA-Z]+?)-([0-9\-]+)/)) {
+                this._osName    = RegExp.$1;
+                this._osVersion = RegExp.$2.replace('-', '.');
+            }
+        },
+
+        /**
+         * 端末のOS名を取得する
+         *
+         * @return string OS名
+         */
+        getOsName: function() {
+            return this._osName;
+        },
+
+        /**
+         * 端末のOSバージョンを取得する
+         *
+         * @return string OSバージョン
+         */
+        getOsVersion: function() {
+            return this._osVersion;
+        },
+
+        /**
+         * 端末がiOSか判定する
+         *
+         * @return boolean
+         */
+        isIOs: function() {
+            return this.getOsName() == navigator.OS.IOS;
+        },
+
+        /**
+         * 端末がAndroidOSか判定する
+         *
+         * @return boolean
+         */
+        isAndroidOs: function() {
+            return this.getOsName() == navigator.OS.ANDROID;
+        },
+
+        /**
+         * OSバージョンの判定する
+         *
+         * @param  float   begin 開始バージョン
+         * @param  float   end   末バージョン
+         * @return boolean
+         */
+        isOsRange: function(begin, end) {
+            var version = this.getOsVersion();
+            return (version >= begin && version < end);
+        }
+    };
+
+    scope[namespace] = {
+        navigator: navigator
+    };
+})(window);

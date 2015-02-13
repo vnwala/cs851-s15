@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'required';
+	src:url('http://www.cq.com/versioned/MjAxNTAyMDZfMTQ0NTEwMzA5/iconFonts/font/required.eot');
+	src:url('http://www.cq.com/versioned/MjAxNTAyMDZfMTQ0NTEwMzA5/iconFonts/font/required.eot?') format('embedded-opentype'),
+		url('http://www.cq.com/versioned/MjAxNTAyMDZfMTQ0NTEwMzA5/iconFonts/font/required.woff') format('woff'),
+		url('http://www.cq.com/versioned/MjAxNTAyMDZfMTQ0NTEwMzA5/iconFonts/font/required.ttf') format('truetype'),
+		url('http://www.cq.com/versioned/MjAxNTAyMDZfMTQ0NTEwMzA5/iconFonts/font/required.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'required';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-asterisk-square, .icon-asterisk-circle, .icon-req {
+	font-family: 'required';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-asterisk-square:before {
+	content: "\f708";
+}
+.icon-asterisk-circle:before {
+	content: "\f707";
+}
+.icon-req:before {
+	content: "\f706";
+}

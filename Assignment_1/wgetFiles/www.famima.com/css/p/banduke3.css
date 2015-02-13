@@ -1,0 +1,268 @@
+@charset "Shift_JIS";
+
+/*
+Title: chomiryo-banduke
+URI: http://famima.com/shop/pages/banduke.aspx
+*/
+
+#banduke3-wrap{
+	margin:0; padding:0; width:700px; background-color:#f7f5e7;}
+
+#banduke3-wrap h1, #banduke3-wrap h2, #banduke3-wrap h3, #banduke3-wrap h4,
+#banduke3-wrap img, #banduke3-wrap p, #banduke3-wrap div, #banduke3-wrap ul, #banduke3-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+#banduke3-wrap .clear{
+	margin:0; padding:0; clear:both; font-size:0;}
+
+#banduke3-wrap .bt a{
+	outline:0;}
+
+#banduke3-wrap h1#title{
+	width:460px; height:190px; float:left;}
+#banduke3-wrap #period{
+	width:240px; height:190px; float:left;
+	background:url(http://www.famima.com/images/p/banduke3/period.jpg) no-repeat;}
+	
+#banduke3-wrap #period p.basho{
+	font-size:25px; color:#FFFFFF; font-weight:bold; margin:97px 0 0 38px;}
+	
+#banduke3-wrap #period p.term{
+	font-size:11px; color:#FFFFFF; padding:18px 0 0 40px; line-height:125%;}
+
+#banduke3-wrap #headertxt{
+	width:700px; height:45px; background:url(http://www.famima.com/images/p/banduke3/header_txt.jpg) no-repeat;
+	text-indent:-9999px; clear:both;}
+	
+#banduke3-wrap #sohyo{
+	width:700px; height:175px; background:url(http://www.famima.com/images/p/banduke3/sohyo.jpg) no-repeat;
+	text-indent:-9999px;}
+	
+#banduke3-wrap #point{
+	width:700px; height:173px; background:url(http://www.famima.com/images/p/banduke3/point.jpg) no-repeat;
+	text-indent:-9999px; margin-top:20px;}
+
+#banduke3-wrap .itemBase{
+	margin:20px 0 0 0;}
+	
+#banduke3-wrap .name a:link, 
+#banduke3-wrap .name a:visited{
+	text-decoration:underline; color:#333333;}
+#banduke3-wrap .name a:hover,
+#banduke3-wrap .namea:active{
+	text-decoration:none; color:#333333;}
+	
+/* newItem */
+#banduke3-wrap .newitemBG{
+	width:700px; background:url(http://www.famima.com/images/p/banduke3/sinnyumaku_bg.jpg) repeat-y;}
+#banduke3-wrap .newitemBase140{
+	width:140px; float:left;}
+#banduke3-wrap .newitemBase140 .name{
+	font-size:11px; line-height:125%; font-weight:bold; padding:4px 8px;}
+#banduke3-wrap .newitemBase140 .price{
+	font-size:11px; line-height:125%; color:#FF0000; padding:0 8px 5px 8px;}
+#banduke3-wrap .newitemBase140 .bt{
+	width:86px; height:20px; padding:0 0 10px 26px;}
+#banduke3-wrap .newitemBase140 a{
+	outline:0;}
+
+/* DENDO */
+#banduke3-wrap #pr_wrapper{
+	position: relative; width: 700px; height:308px;}
+	
+#banduke3-wrap .pr_section{
+	width: 700px; height: 308px; position: absolute;
+	top: 0px; left: 0px;}
+
+#banduke3-wrap div#pr_wrapper {
+		position: relative;
+		width: 700px;
+		height: 308px;
+		border: solid 1px #CCCCCC;
+	}
+#banduke3-wrap div.pr_section {
+		width: 700px;
+		height: 308px;
+		background-color: #EEEEEE;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+#banduke3-wrap li.pr_list_current {
+		border: solid 1px #FF0000;
+	}
+#banduke3-wrap li.pr_list_enabled {
+		border: solid 1px #FFFFFF;
+	}
+
+
+
+/* BANDUKE */
+#banduke3-wrap .EASTbase350,
+#banduke3-wrap .WESTbase350{
+	width:350px; float:left;}
+	
+#banduke3-wrap .EASTbase350 .name,
+#banduke3-wrap .WESTbase350 .name{
+	font-size:12px; line-height:120%; font-weight:bold; color:#333333;}
+
+#banduke3-wrap .EASTbase350 .price,
+#banduke3-wrap .WESTbase350 .price{
+	font-size:12px; line-height:125%; color:#FF0000; padding:2px 0 0 0;}
+	
+#banduke3-wrap .EASTbase350 .cmnt,
+#banduke3-wrap .WESTbase350 .cmnt{
+	font-size:12px; line-height:125%; color:#333333; padding:2px 0 0 0;}
+	
+#banduke3-wrap .EASTbase350 .bt,
+#banduke3-wrap .WESTbase350 .bt{
+	padding:5px 0 0 0;}
+	
+#banduke3-wrap .baseBTM{
+	width:700px; height:40px; background:url(http://www.famima.com/images/p/banduke3/banduke_btm.jpg) no-repeat;
+	clear:both;}
+
+/* YOKODUNA */
+#banduke3-wrap #e_item01{
+	width:350px; height:318px; background:url(http://www.famima.com/images/p/banduke3/e_item01bg.jpg) no-repeat;}
+#banduke3-wrap #w_item01{
+	width:350px; height:318px; background:url(http://www.famima.com/images/p/banduke3/w_item01bg.jpg) no-repeat;}
+#banduke3-wrap #e_item01 .NAME{
+	padding:90px 0 0 130px;}
+#banduke3-wrap #w_item01 .NAME{
+	padding:100px 0 0 172px;}
+#banduke3-wrap #e_item01 .cont{
+	width:203px; padding:4px 0 5px 130px;}
+#banduke3-wrap #w_item01 .cont{
+	width:243px; padding:10px 0 5px 88px;}
+
+/* OZEKI */
+#banduke3-wrap #e_item02{
+	width:350px; height:323px; background:url(http://www.famima.com/images/p/banduke3/e_item02bg.jpg) no-repeat;}
+#banduke3-wrap #w_item02{
+	width:350px; height:323px; background:url(http://www.famima.com/images/p/banduke3/w_item02bg.jpg) no-repeat;}
+#banduke3-wrap #e_item02 .NAME{
+	padding:90px 0 0 130px;}
+#banduke3-wrap #w_item02 .NAME{
+	padding:92px 0 0 138px;}
+#banduke3-wrap #e_item02 .cont{
+	width:203px; padding:4px 0 5px 130px;}
+#banduke3-wrap #w_item02 .cont{
+	width:250px; padding:20px 0 5px 80px;}
+	
+/* SEKIWAKE */
+#banduke3-wrap #e_item03{
+	width:350px; height:326px; background:url(http://www.famima.com/images/p/banduke3/e_item03bg.jpg) no-repeat;}
+#banduke3-wrap #w_item03{
+	width:350px; height:326px; background:url(http://www.famima.com/images/p/banduke3/w_item03bg.jpg) no-repeat;}
+#banduke3-wrap #e_item03 .NAME{
+	padding:90px 0 0 134px;}
+#banduke3-wrap #w_item03 .NAME{
+	padding:95px 0 0 134px;}
+#banduke3-wrap #e_item03 .cont,
+#banduke3-wrap #w_item03 .cont{
+	width:196px; padding:4px 0 5px 136px;}
+
+/* KOMUSUBI */
+#banduke3-wrap #e_item04{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item04.jpg)}
+#banduke3-wrap #e_item05{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item05.jpg)}
+#banduke3-wrap #w_item04{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item04.jpg)}
+#banduke3-wrap #w_item05{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item05.jpg)}
+
+#banduke3-wrap .KMBcont{
+	width:197px; padding:98px 0 5px 134px;}
+
+/* MAEGASHIRA */
+#banduke3-wrap #e_item06{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item06.jpg)}
+#banduke3-wrap #e_item07{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item07.jpg)}
+#banduke3-wrap #e_item08{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item08.jpg)}
+#banduke3-wrap #e_item09{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item09.jpg)}
+#banduke3-wrap #e_item10{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/e_item10.jpg)}
+
+#banduke3-wrap #w_item06{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item06.jpg)}
+#banduke3-wrap #w_item07{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item07.jpg)}
+#banduke3-wrap #w_item08{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item08.jpg)}
+#banduke3-wrap #w_item09{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item09.jpg)}
+#banduke3-wrap #w_item10{
+	width:350px; height:215px; background:url(http://www.famima.com/images/p/banduke3/w_item10.jpg)}
+
+#banduke3-wrap .MGRcont{
+	width:197px; padding:100px 0 5px 134px;}
+
+
+/* clearfix */
+#banduke3-wrap #TOP3 .clearfix:after,
+#banduke3-wrap #KOMUSUBI .clearfix:after,
+#banduke3-wrap #MAEGASHIRA .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#banduke3-wrap #TOP3 .clearfix,
+#banduke3-wrap #KOMUSUBI .clearfix,
+#banduke3-wrap #MAEGASHIRA .clearfix {
+  min-height: 1px;}
+
+* html #banduke3-wrap #TOP3 .clearfix,
+* html #banduke3-wrap #KOMUSUBI .clearfix,
+* html #banduke3-wrap #MAEGASHIRA .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #banduke3-wrap #TOP3,
+* html #banduke3-wrap #KOMUSUBI,
+* html #banduke3-wrap #MAEGASHIRA{ 
+	height: 1%;}
+	
+
+
+/* Bancknumber */
+#banduke3-wrap #backnumber{
+	margin:0; padding:15px 0 20px 15px;}
+
+#banduke3-wrap #backnumber ul{
+	margin:0; padding:0; list-style:none;}
+	
+#banduke3-wrap #backnumber ul li{
+	margin:0; padding:5px 0 0 3px; color:#333333; line-height:120%;}
+
+#banduke3-wrap #backnumber ul li a:link, 
+#banduke3-wrap #backnumber ul li a:visited{
+	text-decoration:underline; color:#333333;}
+#banduke3-wrap #backnumber ul li a:hover,
+#banduke3-wrap #backnumber ul li a:active{
+	text-decoration:none; color:#333333;}
+
+
+
+
+
+
+
+

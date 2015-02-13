@@ -1,0 +1,77 @@
+
+
+/* CARD STYLES */
+
+div.ibm-card-data span.ibm-play-overlay {
+	background: url("http://www.ibm.com/smarter-computing/us/en/i/video_icon.png") no-repeat 0px 0px;
+	width: 100px;
+	height: 110px;
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+}
+div.ibm-card-data {
+	outline: 1px solid #CCC;
+	height: 110px;
+	position: relative;
+	background: url("http://www.ibm.com/smarter-computing/us/en/i/_card_grad.gif") repeat-x 0px 0px;
+	float: left;
+	width: 300px;
+	margin: 10px 20px 10px 0px;
+}
+div.ibm-card-data:hover {
+	background: #E4E4E4;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+div.ibm-card-data img {
+	float: left;
+}
+div.ibm-card-data h2 {
+	font-size: 1.1em !important;
+	padding-right: 5px !important;
+	margin-left: 110px !important;
+	line-height: 1.2em !important;
+}
+
+div.ibm-card-data p {
+	padding-right: 5px !important;
+	margin-left: 110px !important;
+	line-height: 1.2em !important;
+}
+div.ibm-card-data h2 a {
+	opacity: 1 !important;
+	color: #333;
+	text-decoration: none;
+}
+div.ibm-card-data p {
+	font-size: 0.95em !important;
+	
+}
+*:first-child+html div.ibm-card-data p {
+	padding-bottom: 0px !important;
+}
+div.ibm-card-data span.ibm-sc-featured-content {
+	background: url("http://www.ibm.com/smarter-computing/us/en/i/_premium_ico.png") no-repeat 100% 50%;
+	float: left;
+	display: inline-block;
+	padding-right: 7px;
+	font-size: 0.88em !important;
+	font-weight: bold;
+	color: #42BBE1 !important;
+}
+div.ibm-card-data p.ibm-data-type {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 5px !important;
+	font-size: 0.8em !important;
+	text-shadow: 0px 0px 1px #FFF;
+}
+div.ibm-card-data p span.ibm-item-note {
+	font-size: 0.8em !important;	
+}
+
+/* CARD STYLES */
+

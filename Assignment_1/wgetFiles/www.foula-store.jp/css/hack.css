@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/*-- hack for footer --*/
+
+#footer .innerBox .footRightCol .shopInfo dl dt.companyName
+{
+ *width: 100%;	/*IE7 hack!!*/
+}
+
+#footer .innerBox .footRightCol .shopInfo dl dd.companyAddress
+{
+ *width: 100%;	/*IE7 hack!!*/
+}
+
+#footer .innerBox .footRightCol .shopInfo dl dt.TEL,
+#footer .innerBox .footRightCol .shopInfo dl dt.FAX
+{
+ *width: 7%;	/*IE7 hack!!*/
+}
+
+#footer .innerBox .footRightCol .shopInfo dl dd.TEL,
+#footer .innerBox .footRightCol .shopInfo dl dd.FAX
+{
+ *width: 93%;	/*IE7 hack!!*/
+}
+
+#footer .innerBox .footRightCol .shopInfo dl dt.administrator,
+#footer .innerBox .footRightCol .shopInfo dl dt.securityAdministrator
+{
+ *width: 33%;	/*IE7 hack!!*/
+}
+
+#footer .innerBox .footRightCol .shopInfo dl dd.administrator,
+#footer .innerBox .footRightCol .shopInfo dl dd.securityAdministrator
+{
+ *width: 67%;	/*IE7 hack!!*/
+}
+
+/*-- hack for voices.html --*/
+
+#customerVoices ul li img
+{
+	*margin: -1px 0;
+}

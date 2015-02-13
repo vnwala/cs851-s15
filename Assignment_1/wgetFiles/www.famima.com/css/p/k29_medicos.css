@@ -1,0 +1,111 @@
+@charset "Shift_JIS";
+
+/*===================================================================
+	reset
+===================================================================*/
+
+/*default*/
+body#k29_medicos, html, #k29_medicos div, #k29_medicos pre, #k29_medicos form, #k29_medicos fieldset, #k29_medicos input, #k29_medicos textarea, #k29_medicos p, #k29_medicos blockquote { margin:0; padding:0; }
+
+#k29_medicos .hidden { display: none; }
+
+#k29_medicos h1, #k29_medicos h2, #k29_medicos h3, #k29_medicos h4, #k29_medicos h5, #k29_medicos h6 { font-weight:normal; margin:0; padding:0; font-size:100%; }
+
+/* list */
+#k29_medicos dl, #k29_medicos dt, #k29_medicos dd, #k29_medicos ul, #k29_medicos ol, #k29_medicos li { margin:0; padding:0; }
+#k29_medicos ol, #k29_medicos ul { list-style: none; }
+
+/* table */
+#k29_medicos table { border-collapse:collapse; border-spacing:0; font-size:100%; }
+#k29_medicos th, #k29_medicos td { margin:0; padding:0; }
+
+/* etc */
+#k29_medicos fieldset, #k29_medicos img { margin:0; padding:0; border:0; vertical-align: middle; }
+#k29_medicos address, #k29_medicos caption, #k29_medicos cite, #k29_medicos code, #k29_medicos dfn, #k29_medicos em, #k29_medicos strong, #k29_medicos th, #k29_medicos var { font-style:normal; font-weight:normal; }
+#k29_medicos caption, #k29_medicos th { text-align:left; }
+#k29_medicos q:before, #k29_medicos q:after { content:''; }
+#k29_medicos abbr, #k29_medicos acronym { border:0; }
+
+#k29_medicos img, #k29_medicos div { behavior:url(http://www.famima.com/common/js/iepngfix.htc); }
+
+
+/*===================================================================
+	clearfix
+===================================================================*/
+
+/* ------ clearfix ------ */
+#k29_medicos .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+#k29_medicos .clearfix { position:relative; display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html #k29_medicos .clearfix { height: 1%; }
+#k29_medicos .clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+/* ------ clear ------ */
+#k29_medicos .clear{ clear:both; display: block; font-size:1px; line-height:0px; }
+*html #k29_medicos .clear{ height:0px; }
+
+
+
+/*===================================================================
+	module
+===================================================================*/
+
+body#k29_medicos { text-align:center; background:#000000 url(http://www.famima.com/images/p/k29_medicos/header_bg.gif) repeat-x; }
+
+/* ------ header ------ */
+#k29_medicos #header { padding:5px 0; border:none; height:18px; }
+#k29_medicos #header .leftArea { float:left; }
+#k29_medicos #header .rightArea { float:right; }
+
+/* ------ contents ------ */
+#k29_medicos #contents { margin-bottom:20px; text-align:left; color:#FFFFFF; font-size:14px; line-height:1.2; }
+#k29_medicos #contents h1 { line-height:0; height:200px; }
+
+#k29_medicos #contents #section01 { position:relative; width:960px; height:630px; }
+#k29_medicos #contents #section01 .mainImg { }
+#k29_medicos #contents #section01 h2 { position:absolute; top:20px; left:510px; }
+
+#k29_medicos #contents #section01 .txtArea { position:absolute; top:88px; left:510px; width:450px; height:215px; background:url(http://www.famima.com/images/p/k29_medicos/sec01_txt_bg.gif) no-repeat; }
+#k29_medicos #contents #section01 .txtArea .topArea { margin-bottom:10px; padding:20px 20px 10px 20px; border-bottom:solid 1px #8e8b8b; }
+#k29_medicos #contents #section01 .txtArea .btmArea { padding:0 20px 20px 20px; }
+
+#k29_medicos #contents #section01 .subImg { position:absolute; top:318px; left:510px; }
+#k29_medicos #contents #section01 .attention { position:absolute; top:488px; left:510px; }
+#k29_medicos #contents #section01 .btnArea { position:absolute; top:505px; left:545px; }
+
+
+
+#k29_medicos #contents #section02 { position:relative; width:960px; height:630px; }
+#k29_medicos #contents #section02 .mainImg { }
+#k29_medicos #contents #section02 h2 { position:absolute; top:45px; left:0; }
+
+#k29_medicos #contents #section02 .txtArea { position:absolute; top:113px; left:0; width:450px; height:205px; background:url(http://www.famima.com/images/p/k29_medicos/sec02_txt_bg.gif) no-repeat; }
+#k29_medicos #contents #section02 .txtArea .topArea { margin-bottom:10px; padding:20px 20px 10px 20px; border-bottom:solid 1px #8e8b8b; }
+#k29_medicos #contents #section02 .txtArea .btmArea { padding:0 20px 20px 20px; }
+
+#k29_medicos #contents #section02 .subImg { position:absolute; top:336px; left:0; }
+#k29_medicos #contents #section02 .attention { position:absolute; top:505px; left:0; }
+#k29_medicos #contents #section02 .btnArea { position:absolute; top:525px; left:40px; }
+
+
+
+#k29_medicos #contents #section03 { position:relative; width:960px; height:845px; }
+#k29_medicos #contents #section03 .mainImg { }
+#k29_medicos #contents #section03 .lead { position:absolute; top:36px; left:75px; }
+#k29_medicos #contents #section03 h2 { position:absolute; top:166px; left:510px; }
+
+#k29_medicos #contents #section03 .txtArea { position:absolute; top:236px; left:510px; width:450px; height:215px; background:url(http://www.famima.com/images/p/k29_medicos/sec03_txt_bg.gif) no-repeat; }
+#k29_medicos #contents #section03 .txtArea .topArea { margin-bottom:10px; padding:20px 20px 10px 20px; border-bottom:solid 1px #8e8b8b; }
+#k29_medicos #contents #section03 .txtArea .btmArea { padding:0 20px 20px 20px; }
+
+#k29_medicos #contents #section03 .subImg { position:absolute; top:466px; left:510px; }
+#k29_medicos #contents #section03 .btnArea { position:absolute; top:653px; left:545px; }
+#k29_medicos #contents #section03 .lnkArea { position:absolute; top:760px; left:510px; width:450px; text-align:right; }
+#k29_medicos #contents #section03 .lnkArea a { padding-left:15px; background:url(http://www.famima.com/images/p/k29_medicos/ar_link.gif) no-repeat left center; color:#FFFFFF; text-decoration:none; }
+#k29_medicos #contents #section03 .lnkArea a:hover { text-decoration:underline; }
+
+
+

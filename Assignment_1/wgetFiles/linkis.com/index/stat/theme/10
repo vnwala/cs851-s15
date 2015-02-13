@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Theme 10 stat</title>
+</head>
+<body data-controller="index" data-action="stat" data-simple="1">
+
+
+    <script type="text/javascript">
+    /*
+     * use Ga array lika goole gaq array
+     * Later all this array will be pushed to gaq with Ga object (app/tools/ga.js)
+     */
+    var Ga = Ga || [];
+    Ga.push(['_trackPageview']);
+</script>    
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter20560528 = new Ya.Metrika({id:20560528,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="http://mc.yandex.ru/watch/20560528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+    <script type="text/javascript">
+        var LNG = {};
+    </script>
+            <script src="../../../js/steal/steal.production.js?prod%252Fproduction.js&amp;657"></script>
+    
+
+</body>
+</html>

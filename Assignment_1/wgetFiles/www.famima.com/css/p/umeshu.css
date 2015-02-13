@@ -1,0 +1,127 @@
+@charset "shift_jis";
+
+/*
+Title: awamori
+URI: http://famima.com/shop/
+*/
+
+#umeshu-wrap img, #umeshu-wrap p, #umeshu-wrap div{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#umeshu-wrap h1, #umeshu-wrap h2, #umeshu-wrap h3, #umeshu-wrap h4, #umeshu-wrap h5,
+#umeshu-wrap img, #umeshu-wrap p, #umeshu-wrap div, #umeshu-wrap ul, #umeshu-wrap li{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#umeshu-wrap .clear{
+	margin:0; padding:0; clear:both;}
+	
+#umeshu-wrap .base{
+	margin:0; padding:0;}
+#umeshu-wrap .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+
+
+	
+/* -------------------------------------------- */
+#umeshu-wrap{
+	margin:0; padding:0; width:700px;}
+
+#umeshu-wrap .itemIMG{
+	width:233px; float:left;}
+	
+#umeshu-wrap .infoBase{
+	width:467px; float:left;}
+	
+#umeshu-wrap .infoBase2{
+	width:467px; background:url(http://www.famima.com/images/p/umeshu/item_bg.jpg) no-repeat;}
+	
+#umeshu-wrap .infoBase2 h3.name{
+	font-size:110%; color:#333333; line-height:120%; font-weight:bold;}
+	
+#umeshu-wrap .itemIMG p.txt{
+	font-size:85%; color:#333333; line-height:120%; padding:4px 0 0 30px;}
+	
+#umeshu-wrap p.price{
+	font-size:85%; color:#cc3333; line-height:120%; padding:4px 0;}
+	
+#umeshu-wrap p.cmnt{
+	font-size:100%; color:#333333; line-height:130%; padding:0 0 10px 0;}
+
+#umeshu-wrap .dotBGtop{
+	width:691px; height:8px; background:url(http://www.famima.com/images/p/umeshu/dot_top.jpg) no-repeat;}
+#umeshu-wrap .dotBGmdl{
+	width:691px; background:url(http://www.famima.com/images/p/umeshu/dot_mdl.jpg) repeat-y;}
+#umeshu-wrap .dotBGbtm{
+	width:691px; height:8px; background:url(http://www.famima.com/images/p/umeshu/dot_btm.jpg) no-repeat;}
+
+#umeshu-wrap .dotBG{
+	width:690px; border:1px dotted #333333;}
+
+#umeshu-wrap .base230{
+	width:230px; float:left; margin-bottom:5px;}
+#umeshu-wrap .base230 img{
+	padding:2px 0 0 5px;}
+	
+#umeshu-wrap .base205{
+	width:205px; float:left; padding-left:17px;}
+#umeshu-wrap .base205 .img{
+	/* width:93px; float:left; padding-top:5px;} */
+	width:93px; float:left; padding-top:10px;}
+#umeshu-wrap .base205 .info{
+	/* width:110px; float:left; padding-top:5px;} */
+	width:110px; float:left; padding-top:10px;}
+
+#umeshu-wrap .base205 h3.name{
+	font-size:90%; color:#333333; line-height:120%; padding-left:5px; font-weight:bold;}
+
+#umeshu-wrap .base205 p.price{
+	font-size:85%; color:#cc3333; line-height:120%; padding:4px 0 0 5px;}
+#umeshu-wrap .base205 p.txt{
+	font-size:85%; color:#333333; line-height:120%; padding:4px 0 4px 5px;}
+
+
+#umeshu-wrap .banner340{
+	width:340p; margin:30px 0;}
+	
+#umeshu-wrap .name a:link,
+#umeshu-wrap .name a:visited{
+	color:#333333; text-decoration:underline; font-weight:bold;}
+#umeshu-wrap .name a:hover,
+#umeshu-wrap .name a:active{
+	color:#333333; text-decoration:none; font-weight:bold;}
+
+/* clearfix */
+#umeshu-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#umeshu-wrap .clearfix {
+  min-height: 1px;}
+
+* html #umeshu-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #umeshu-wrap { 
+	height: 1%;}
+
+
+
+
+
+

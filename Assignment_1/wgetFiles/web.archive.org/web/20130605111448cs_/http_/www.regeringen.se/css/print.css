@@ -1,0 +1,684 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 11:28:17 Jun 6, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 6:19:03 Feb 10, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/* GENERAL */
+body {
+    background: white;
+    text-align: left;
+}
+a,
+a.helpLink {
+    color: black;
+    text-decoration: none;
+}
+a.forward,
+a.back, 
+a.up,
+.hide {
+    display: none;
+}
+
+
+
+li {
+    list-style-type: square;
+	margin-left: 1.1em;
+	background: none  !important;
+}
+
+
+/* LAYOUT */
+div#page {
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+div#page div.wrapper {
+    background: none;
+    overflow: visible;
+    padding: 0em 12em 12em;
+}
+div#body {
+    border-top: none;
+    background: none !important;
+	margin-top:140px;
+    padding: 0;
+    overflow: visible;
+}
+* html div#minWidth1 {
+    border: none;
+    float: none;
+}
+* html div#minWidth2  {
+    margin: 0;
+    float: none;
+}
+
+
+/* hide things from print layout */
+div#header div#enableCookies,
+div#serviceMenu,
+ul#menu, #header form, div#breadcrumbPlaceholder,
+#footer{
+	visibility:hidden !important;
+	display:none !important;
+}
+
+
+/* HEAD */
+div#header {
+    background: none !important;
+    padding: 0 !important;
+}
+div#header img {
+    margin: 0;
+}
+div#header div.wrapper div {
+    display: none;
+}
+div#header a#logoLink{
+	margin-left:-60px;
+}
+div#header a#logoLink img{
+	width:240px;
+	height:105px;
+}
+
+div#header a#logoLink  .screen{
+	display:none;
+}
+
+div#header a#logoLink  .print{
+	display:block;
+}
+
+/* BREADCRUMBS */
+ul#breadcrumbs {
+    display: none;
+}
+
+
+/* SUBMENU */
+div#submenu {
+    display: none;
+}
+
+
+/* PAGE NAVIGATION */
+div.pageNavigation {
+    display: none;
+}
+div.pageListHeader {
+    border: none;
+    padding: 0;
+}
+ul.internalMenu {
+    display: none;
+}
+
+
+/* ARTICLE LAYOUT */
+div#content, .container_12 .grid_9, .container_12 .grid_6, .container_12 .grid_3 {
+    float: none;
+	font-size:18pt;
+    margin: 0;
+}
+div#contentWrapper{
+	position:relative;
+	width:90%;
+	margin-bottom:15em;
+}
+
+div#contentWrapper p.dateline{
+	position:absolute;
+	left:525px;
+	top:-205px;
+	width:350px;
+	font-size: 0.85em;
+}
+
+.container_12 .grid_6{
+	width:auto;
+	float:none;
+}
+
+.container_12 .grid_3{
+	width:auto;
+	float:none;
+}
+
+
+
+div#content.noSubmenu {
+    margin: 0;
+}
+div.singleColumn div#col1 {
+    margin: 0;
+}
+div#col1 {
+    float: none;
+    width: auto !important;
+    overflow: visible;
+}
+div#col2 {
+    float: none;
+    width: auto !important;
+    overflow: visible;
+    margin-top: 2em;
+}
+div#col2 div {
+    margin-left: 0;
+}
+
+
+div.links ul,
+div.files ul {
+    list-style-type: square;
+    padding-left: 16px;
+}
+div.links ul li,
+div.files ul li {
+    padding-left: 0;
+    list-style-type: disc !important;
+    color: black !important;
+}
+div.links H2,
+div.files H2 {
+    padding: 0;
+}
+
+
+
+/* NEWLETTER */
+div.newsLetter div#col2 {
+    display: block !important;
+    float: none !important;
+    width: auto;
+}
+
+
+
+/* ISSUE liST */
+div.issueListList div#col2 {
+    display: block !important;
+    float: none !important;
+    width: auto;
+}
+div.issueListList div#col2 * {
+    margin-left: 0 !important;
+}
+
+
+
+/* ARTICLE */
+H2.sectionHeading {
+    border: none;
+}
+P.dateline {
+    color: black;
+}
+
+
+/* BOX */
+div.box {
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    background: none !important;
+    page-break-inside: avoid !important;
+    font-size: 18pt;
+}
+div.box.timespace {
+    border: none !important;
+}
+
+
+
+
+/* table */
+td {
+    border: 1px solid black;
+    background: none !important;
+}
+th {
+    border: 1px solid black;
+    background: none !important;
+}
+
+
+/* FOOTER */
+/*div#footer {
+    border-top: 1px solid black;
+    background: none;
+    padding-left: 0;
+    overflow: visible;
+}
+div#footer ul {
+    display: none;
+}
+div#footer address {
+    float: none;
+    margin: 0;
+}
+div.articleFooter div{
+    border: none;
+}
+div.articleFooter a {
+    color: #666;
+}*/
+
+
+/* PUFFS ETC */
+div.multipleLinksPuff {
+    border-top: 1px solid black;
+    background: none !important;
+    width: auto;
+    margin-right: 0 !important;
+}
+div.multipleLinksPuff div {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+div.singleLinkPuff {
+    border: none !important;
+    border-top: 1px solid black !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0 !important;
+    margin-bottom: 1.4em;
+}
+div.help {
+    border-top: 1px solid black;
+    margin-right: 0 !important;
+}
+div.notice {
+    border-bottom: 1px solid black;
+}
+div.listPuff {
+    border-top: 1px solid black;
+    background: none !important;
+    padding-top: 1em;
+}
+div.listPuff div {
+    padding: 0;
+    background: none;
+}
+div.multipleLinksPuff ul,
+div.singleLinkPuff ul,
+div.listPuff ul {
+    list-style-type: square;
+    padding-left: 1.1em;
+}
+div.multipleLinksPuff li,
+div.singleLinkPuff li,
+div.listPuff li,
+div.listPuff.gov ul li,
+div.listPuff.doc ul li,
+div.listPuff.fact ul li {
+    padding-left: 0 !important;
+    background: none !important;
+}
+
+
+
+/* ARCHIVE CHECKOUT/CART ETC */
+div#content.archiveCheckout div.multipleLinksPuff {
+    border-top: none;
+}
+div#content.archiveCheckout div.multipleLinksPuff a {
+    display: none;
+}
+div#content.archiveCheckout div.multipleLinksPuff table a {
+    display: inline;
+}
+
+
+/* STORY */
+div#content.story div.group {
+    border-top: 1px solid black;
+}
+
+
+/* STORY MENU */
+P.storyHeader {
+    border-bottom: none;
+    margin-bottom: 0;
+    color: black;
+}
+
+
+/* New LegislationSteps */
+
+div#newLegislationSteps div.step{
+	display: none !important;;
+}
+
+div#newLegislationSteps div#legPrint {
+	display: block !important;
+	margin-left: 1em;
+}
+
+div#newLegislationSteps H2 {
+	
+	padding: 0;
+}
+
+
+div#newLegislationSteps div#legPrint ul li{
+	padding-left: 0;
+	margin-left: 1.3em;
+	margin-bottom: 1.1em;
+	page-break-before: auto;
+	page-break-after: auto;
+	page-break-inside: avoid;
+}
+
+div#newLegislationSteps div#legPrint ul  {
+	margin-top: 0.8em;
+}
+
+div#newLegislationSteps div#legPrint ul  a, div#newLegislationSteps div#legPrint span.link{
+	color: black;
+	font-weight: normal;
+}
+
+div#newLegislationSteps div#legPrint span.info{
+	color: black;
+	font-weight: normal;
+}
+
+
+
+
+/* FILE LIST ICONS */
+li.pdf,
+li.media,
+li.word,
+li.excel,
+li.powerpoint,
+li.img,
+li.misc {
+    background: none !important;
+    padding-left: 0 !important;
+}
+
+
+/* TOOLS */
+ul#tools {
+    display: none;
+}
+
+
+/* formS */
+form.area {
+    background: none;
+    border: none;
+    padding: 0;
+}
+form#archiveSearch FIELDSET {
+    border: 4px solid #F0F0EE;
+    padding: 0.7em;
+}
+input.submit,
+input.cancel {
+    display: none !important;
+}
+
+
+/* CONTACT */
+div#content.contact div.box {
+    border: none !important;
+    padding: 0;
+}
+div#content.contact div.contactList {
+    border-top: 1px solid black;
+    border-bottom: none;
+}
+div#content.contact div.contactList a {
+    display: none;
+}
+div#content.contact div#col2 {
+    display: block !important;
+    width: auto;
+    float: none;
+}
+div#content.contact div#col2 div {
+    margin-left: 0;
+}
+
+
+/* EMBASSIES */
+div#content.embassy div#columnHeader P.dateLine {
+    display: none;
+}
+div.embassyCountry div#col2,
+div.embassy div#col2 {
+    display: block !important;
+    float: none;
+    width: auto;
+}
+div.embassyCountry div#col2 *,
+div.embassy div#col2 * {
+    margin-left: 0;
+}
+
+
+
+/* CALENDAR */
+div#content.calendar div#columnHeader P {
+    display: none;
+}
+div#content.calendar div.vcalendar.week H3,
+div#content.calendar div.vcalendar.day H2 {
+    background: black;
+    color: white;
+}
+div#content.calendar div.vevent {
+    border-bottom: 1px solid black;
+}
+
+
+/* DEBATE */
+div#content.debate div.item {
+    border-bottom: 1px solid black;
+}
+div#content.debate div.item.last {
+    border-bottom: none;
+}
+
+/* START */
+div#pageHeader {
+    background: white;
+    padding: 1.7em 0 0 5em;
+}
+div#introImage {
+    display: none;
+}
+div#pageTools {
+    display: none;
+}
+div#intro {
+    width: auto !important;
+    float: none;
+    margin: 0 !important;
+}
+div#intro div {
+    margin: 0 !important;
+}
+div.start div#col1 div {
+    border-right: 0 !important;
+}
+div#shortcuts {
+    display: none;
+}
+span.newsHeader {
+    padding: 0 0 0.5em 0;
+    border-bottom: 4px solid black;
+}
+div.start div#col2 {
+    display: block !important;
+    width: auto;
+    padding: 1em 0 0 0 !important;
+    float: none;
+    margin: 0;
+    border-top: 1px solid black;
+}
+div.start div#col2 div {
+    margin-left: 0;
+}
+div.start div#contentWrapper {
+    margin: 0;
+}
+
+/* NOTICE LIST */
+ul.noticeList li,
+div.noticeList li,
+div.noticeList div.noticeItem{
+    border-bottom: 1px solid black;
+    overflow: visible;
+}
+ul.noticeList li.last,
+ul.noticeList li.small,
+div.noticeList div.last{
+    border-bottom: 0;
+    background: none;
+    list-style-type: square;
+    margin-left: 1.1em;
+    padding-left: 0 !important;
+}
+div.noticeList div.noticeItem ul li {
+    background: none;
+    list-style-type: square;
+    margin-left: 1.1em;
+    padding-left: 0;
+    height: auto;
+}
+div.noticeList div.multipleLinksPuff {
+    border-top: 0;
+}
+div.noticeList div.multipleLinksPuff div {
+    padding-top: 0;
+
+}
+
+
+/* FAQ */
+div#content.faq ul.internalMenu {
+    display: block;
+}
+div.faq div.item {
+    border-top: 1px solid black;
+}
+
+
+/* EDITORIAL LIST */
+div.editorialList div#col1 ul ul {
+    display: none;
+}
+
+
+/* GENERAL LIST */
+div#content.generalList form.area {
+    display: none;
+}
+
+
+/* IMAGE ARCHIVE */
+div.imageArchive div.item {
+    border-bottom: 1px solid black;
+}
+div.imageArchive div.item.last {
+    border-bottom: none;
+}
+div#content.imageArchive div#col2 {
+    display: block !important;
+    width: auto;
+    float: none;
+}
+div#content.imageArchive div#col2 div {
+    margin-left: 0;
+}
+div.imageArchive LI.media {
+    padding: 0 !important;
+}
+
+
+/* SEARCH */
+div.search div.group {
+    float: none;
+    width: auto !important;
+    padding-bottom: 1em;
+    border-bottom: 1px solid black;
+}
+div.search div.group div {
+    padding: 0;
+}
+
+/* COLUMN LIST */
+div.columnList ul.entries {
+    float: none;
+    width: auto;
+    margin: 0;
+}
+
+UL.entries LI{
+	list-style-type: none !important;
+	margin-left: 0px !important;
+}
+div.columnList ul.entries.half li {
+    margin: 0 !important;
+}
+
+
+/* ADVANCED table */
+table.advanced {
+	border-top: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+}
+table.advanced th, table.advanced td {
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+
+A.mailLink {
+	display: none !important;
+}
+
+/*
+DIV.links UL,
+DIV.files UL,
+DIV.sender UL,
+DIV.multipleLinksPuff UL { 
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+
+DIV.links UL LI,
+DIV.files UL LI,
+DIV.sender UL LI,
+DIV.multipleLinksPuff UL LI{
+	margin-left: 1em  !important;
+//    margin:0; 
+//    padding: 0 0 0 36px;
+//    background: url(/web/20130606112817/http://www.regeringen.se/img/listDot.png) no-repeat left center !important;
+}
+*/
+
+DIV.links {
+	border-top: 1px solid #cccccc;
+	padding-top: 1em;
+}

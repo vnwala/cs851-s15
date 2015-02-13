@@ -1,0 +1,147 @@
+@charset "shift_jis";
+
+/*
+Title: awamori
+URI: http://famima.com/shop/
+*/
+
+#fruittomato-wrap img, #fruittomato-wrap p, #fruittomato-wrap div{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#fruittomato-wrap h1, #fruittomato-wrap h2, #fruittomato-wrap h3, #fruittomato-wrap h4, #fruittomato-wrap h5,
+#fruittomato-wrap img, #fruittomato-wrap p, #fruittomato-wrap div, #fruittomato-wrap ul, #fruittomato-wrap li, #fruittomato-wrap table{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#fruittomato-wrap .clear{
+	margin:0; padding:0; clear:both;}
+	
+#fruittomato-wrap .base{
+	margin:0; padding:0;}
+#fruittomato-wrap .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+	
+/* -------------------------------------------- */
+#fruittomato-wrap{
+	margin:0; padding:0; width:700px;}
+	
+#fruittomato-wrap #yoyakuBG{
+	width:700px;}
+#fruittomato-wrap #yoyakuBase700{
+	width:700px; margin:10px 0 0 0; padding-bottom:8px;}
+	
+#fruittomato-wrap #yoyakuBase700 table#table-01{
+    width: 700px; border-collapse: collapse; border-spacing: 0;}
+#fruittomato-wrap #yoyakuBase700 #table-01 td{
+    padding: 4px; border-bottom: 1px #989488 solid;}
+
+#fruittomato-wrap #yoyakuBase700 table .cmnt{
+	width:100px; height:15px; background:url(http://www.famima.com/images/p/fruittomato/yoyaku_cmnt.gif) no-repeat;
+	text-indent:-9999px;}
+#fruittomato-wrap #yoyakuBase700 table p.date01{
+	width:44px; padding:3px 5px; margin:0 0 0 10px; color:#ffffff; background-color:#000000; text-align:center;}
+#fruittomato-wrap #yoyakuBase700 table p.date02{
+	color:#333333; text-align:left; font-weight:bold;}
+#fruittomato-wrap #yoyakuBase700 table p.date03{
+	color:#333333; background:url(http://www.famima.com/images/p/fruittomato/mark.gif) no-repeat center left;
+	padding-left:17px; text-align:left; font-weight:bold;}
+
+
+#fruittomato-wrap #infoBG{
+	width:700px; background:url(http://www.famima.com/images/p/fruittomato/info_bg.jpg) repeat-y; margin:15px 0;}
+#fruittomato-wrap #infoBG .base352{
+	width:352px; float:left;}
+#fruittomato-wrap #infoBG .base348{
+	width:348px; float:left;}
+#fruittomato-wrap #infoBG .base454{
+	width:454px; float:left; padding-top:10px;}
+#fruittomato-wrap #infoBG .base246{
+	width:246px; float:left; padding-bottom:15px;}
+	
+#fruittomato-wrap #infoBG .base348 p.txt{
+	width:330px; color:#333333; line-height:130%;}
+#fruittomato-wrap #infoBG .base454 p.txt{
+	width:400px; color:#333333; line-height:130%; padding-left:23px;}
+	
+	
+#fruittomato-wrap #setBG{
+	width:700px; margin:15px 0 30px 0;}
+#fruittomato-wrap #setBG .copy{
+	width:700px; height:90px; background:url(http://www.famima.com/images/p/fruittomato/set_img3.jpg) no-repeat; text-indent:-9999px;}
+#fruittomato-wrap #setBG .priceBase{
+	width:700px; margin:8px 0;
+	border-top:1px #666666 solid;
+	border-bottom:1px #666666 solid;}
+#fruittomato-wrap #setBG .priceBase .price{
+	width:476px; float:left; padding-left:15px;}
+#fruittomato-wrap #setBG .priceBase .bt{
+	width:195px; float:left; padding-top:15px;}
+#fruittomato-wrap #setBG .tomatotype{
+	width:700px; height:250px; background:url(http://www.famima.com/images/p/fruittomato/set_img5.jpg) no-repeat; text-indent:-9999px;}
+
+
+#fruittomato-wrap #tpBG{
+	width:700px; background:url(http://www.famima.com/images/p/fruittomato/tp_bg.gif) repeat-y;}
+#fruittomato-wrap #tpBTM{
+	width:700px; height:28px; background:url(http://www.famima.com/images/p/fruittomato/tp_btm.gif) no-repeat;}
+	
+#fruittomato-wrap #tpBG .itemIMG{
+	width:233px; float:left; padding-left:14px;}
+#fruittomato-wrap #tpBG .itemCONT{
+	width:450px; float:left;}
+#fruittomato-wrap #tpBG .itemCONT p.txt{
+	width:430px; color:#333333; line-height:130%; padding:0 0 15px 10px;}
+#fruittomato-wrap #tpBG .itemCONT .pkg{
+	width:156px; float:left;}
+#fruittomato-wrap #tpBG .itemCONT .buyBase{
+	width:290px; float:left;}
+#fruittomato-wrap #tpBG .itemCONT .buyBase p.price{
+	color:#333333; line-height:140%; padding:15px 0 10px 0; font-weight:bold;}
+	
+#fruittomato-wrap #tpBG .itemIMG_S{
+	width:143px; float:left; padding-left:14px;}
+#fruittomato-wrap #tpBG .itemCONT_S{
+	width:543px; float:left;}
+#fruittomato-wrap #tpBG .itemCONT_S p.txt{
+	width:520px; color:#333333; line-height:130%; padding:0 0 10px 10px;}
+#fruittomato-wrap #tpBG .itemCONT_S p.chui{
+	width:383px; margin-left:10px; padding:4px 6px; background-color:#333333; color:#FFFFFF;}
+	
+#fruittomato-wrap p.chuitxt{
+	color:#333333; line-height:130%; padding:5px 0 0 10px; margin-bottom:30px;}
+
+
+/* clearfix */
+#fruittomato-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#fruittomato-wrap .clearfix {
+  min-height: 1px;}
+
+* html #fruittomato-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #fruittomato-wrap { 
+	height: 1%;}
+
+
+
+
+
+

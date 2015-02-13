@@ -1,0 +1,1113 @@
+/* ****************************************** 
+ 
+  TITLE:        NBC_COMMENTS.CSS
+  VERSION:      1.60
+  Author:       Viktoriya Eremeeva
+  LAST UPDATED: 01/19/2011 
+  UPDATED BY:   Viktoriya Eremeeva
+
+ @release 2009-12-10 - spinks
+
+******************************************  */
+
+/*comments start*/
+
+#ssComments {
+    font: 12px/12px Arial, Verdana, Helvetica, sans-serif; 
+    text-align: center; 
+    color: #444; 
+    background-color:#fff;
+}
+
+#commentContainer {
+     float:left;
+     clear:both;
+     height:auto;
+     width:auto;
+     font: 12px/12px Arial, Verdana, Helvetica, sans-serif; 
+     text-align: center; 
+     color: #444; 
+     background-color:#fff;
+}
+
+#commentOrder {
+  margin-top:10px;
+  text-align: right;
+  float:left;
+  clear:none;
+  width: 640px;
+}
+
+#showNext {
+  border-top:1px dotted #D9D9D9;
+  border-bottom:1px dotted #D9D9D9;
+  background-color: transparent;
+  text-align:right;
+  vertical-align:middle;
+  clear:both;
+  float:left;
+  padding-bottom:6px;
+  margin-top:10px;
+  width:640px;
+  height:auto;
+}
+
+#article_comments #noCommentsPosted {
+  float:left;
+  font-family:georgia;
+  font-size:12px;
+  padding-bottom:10px;
+  padding-left:10px;
+  display:none;
+  position:relative;
+}
+
+.commentflagged {
+  padding-top: 8px;
+  margin-left: -200px;
+}
+
+#article_comments .commentflagged {
+  padding-top: 0px;
+}
+    
+#right_comment_block .commentflagged {
+  width:60px;
+  margin-left:-10px;
+  padding-right:4px;
+  padding-top:4px;
+}
+
+.float_right {
+  float:right;
+  width:170px;
+}
+
+.middle {
+  float:left;
+  vertical-align:middle;
+}
+
+a.storylinks, a.storylinks:visited {
+  color:#000;
+  float:left;
+  clear:none;
+  font-size:12px;
+  margin-top:14px;
+  text-decoration:none;
+}
+
+#commErrorMess, #commErrorMess_right, #commErrorMess_left {
+  clear:both;
+  font-size:10px;
+  height:22px;
+  margin:0;
+  padding:0;
+}
+
+#allmessages {
+  clear: both;
+  float: left;
+}
+
+.comment_posttime {
+  padding-left:5px;
+  float: left;
+  clear: none;
+}
+
+.comment_by {
+  padding-left: 0px;
+}
+
+.comment_by a {
+  color:#525252;
+  text-decoration:underline;
+}
+
+.comment_user_time {
+  display:block;
+  height:14px;
+  line-height:18px;
+  padding:14px 3px 5px;
+}
+
+.plaintext, .plaintextmore {
+  text-decoration: none;
+}
+
+.pagination a {
+  color:#757575;
+  margin:  0 2px;
+  padding: 0;
+  text-align: right;
+  vertical-align: baseline;
+}
+
+#pagenum {
+  text-align: center;
+  width: 20px;
+  color:#525252;
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  font-size:11px;
+}
+
+
+#comments_posting_options, #comments_posting_options_recaptcha, #comments_posting_options_right, #comments_posting_options_left {
+clear:both;
+float: left;
+display:block;
+height:25px;
+left:90px;
+*left:76px;
+/*position:absolute;*/
+width:355px;
+*width: 371px;
+}
+
+
+#article_comments #comments_posting_options, #article_comments #comments_posting_options_recaptcha {
+    left: 88px;
+    *left:74px;
+}
+
+#article_comments #comments_posting_options_recaptcha {
+	display:none;
+}
+
+*html #article_comments #comments_posting_options, *html #article_comments #comments_posting_options_recaptcha {
+width:371px;
+left:74px;
+
+}
+         
+#comments_posting_options div, #comments_posting_options_recaptcha div, #comments_posting_options_right div, #comments_posting_options_left div {
+  clear:none;
+  float:left;
+  margin:0 10px 0 0;
+  width:350px;
+}
+
+#comments_posting_options input, #comments_posting_options_recaptcha input, #comments_posting_options_right input, #comments_posting_options_left input   {
+  color:#525252;
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  font-size:11px;
+  vertical-align:bottom;
+  margin: 3px;
+}
+
+#comments_posting_options div#post_comms, #comments_posting_options_recaptcha div#post_comms, #comments_posting_options_right div#post_comms_right, #comments_posting_options_left div#post_comms_left  {   
+   float: right;
+}
+
+ #user_info ul,  #post_info ul {
+   list-style-type:none;
+}
+
+ #user_info ul li label {
+   margin: 0;
+   padding: 0;
+   float: none;
+   line-height:normal;
+}
+      
+#post_info ul li label {
+   margin: 0;
+   padding: 0;
+   float: none;
+   line-height:normal;
+}
+
+
+#right_comment_block, #right_comment_header {
+   width: 195px;
+   padding-bottom:5px;
+}
+
+#right_comment_header {
+  border-bottom:1px dotted #D9D9D9;
+  float:left;
+  height:auto;
+  padding:20px 0px 0px 10px;
+  text-align:center;
+  width: 185px;
+  margin-bottom: 10px;
+}
+
+    
+#post_comment #right_comment_header {
+  border-bottom:none;
+  clear:both;
+  float:left;
+  height:auto;
+  margin-bottom:10px;
+  padding:8px 0;
+  right:0;
+  text-align:center;
+  width:340px;
+}
+
+#right_comment_block .comment {
+  width: 195px;
+  margin-top: 8px;
+  border-top: none;
+  clear: both;
+  overflow: hidden;
+}
+
+right_allmessages .comment {
+  float: left;
+  clear: both;
+  margin-right: -3px;
+}
+
+#article_comments .comment {
+   width: 640px;
+   margin-top: 10px;
+   overflow: hidden;
+   background-color:#fff;
+}
+
+#right_comment_block {
+  margin-bottom: 10px;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  float:none;
+ text-align: left;
+}
+
+.right_comm_moment_page #right_comment_header {
+  display:none;
+  }
+.right_comm_moment_page #right_allmessages, .right_comm_moment_page #right_allmessages4 {
+   display:none;
+}
+
+
+#right_comment_show {
+  width: 195px;
+}
+
+#right_comment_show a {
+  text-decoration: none;
+}
+
+#right_allmessages {
+  width: 186px !important;
+  }
+  
+  #right_allmessages3_right, #right_allmessages3_left {
+  width: 240px !important;
+  }
+  
+#comm_img {
+  background:transparent url(http://media.nbcdfw.com/designimages/front_img_comms.png) no-repeat scroll 0 0;
+  float:left;
+  height:23px;
+  padding-right:5px;
+  padding-top:3px;
+  top:3px;
+  width:11px;
+  clear: none;
+}
+
+.numcomms {
+  font-family: helvetica;
+}
+
+#post_comm, #submit_btn, #submit_btn_right, #submit_btn_left {
+  background:transparent url('http://media.nbcdfw.com/designimages/nbc_post_comm_button_both.gif') no-repeat scroll 0 0;
+  clear:none;
+  color:#FFFFFF;
+  cursor:pointer;
+  float:left;
+  font-weight:bold;
+  height:23px;
+  margin:0 0 20px 20px;
+  text-align:center;
+  width:119px;
+}
+
+a#post_comm:hover {
+background-position:0 -23px;
+}
+
+
+#comments_posting_options #submit_btn, #comments_posting_options_right #submit_btn_right, #comments_posting_options_left #submit_btn_left, #comments_posting_options_recaptcha #recaptchaSubmit2 {
+  width:64px;
+  height: 23px;
+  margin: 0 0 0 4px;
+  border:none;
+  float:left;
+  clear:none;
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_comm_submit_button_short.jpg) no-repeat scroll 0 0;
+  cursor: pointer;
+}
+  
+#comments_posting_options  #facebookCheckbox, #comments_posting_options_recaptcha  #facebookCheckbox {
+   display:none;
+  }
+  
+#comments_posting_options  #publishtofb, #comments_posting_options_recaptcha  #publishtofb {
+  display:none;
+  }
+
+#comments_posting_options  #facebookCheckbox, #comments_posting_options_recaptcha  #facebookCheckbox, #comments_posting_options_right  #facebookCheckbox_right, #comments_posting_options_left  #facebookCheckbox_left {
+   display:block;
+  }
+#comments_posting_options  #publishtofb, #comments_posting_options_recaptcha  #publishtofb, #comments_posting_options_right  #publishtofb__right, #comments_posting_options_left  #publishtofb__right_left {
+  display:block;
+  }
+  
+#comments_posting_options #submit_btn:hover, #comments_posting_options_recaptcha #recaptchaSubmit2:hover, #comments_posting_options_right #submit_btn__right:hover, #comments_posting_options_left #submit_btn__left:hover {
+  width:64px;
+  height: 23px;
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_comm_submit_button_short.jpg) no-repeat scroll 0 -23px;
+} 
+.comm_side_img {
+  background:transparent url(http://media.nbcdfw.com/designimages/ico_comment_greybg.jpg) no-repeat scroll 0 0;
+  clear:none;
+  float:left;
+  height:20px;
+  margin-left:10px;
+  margin-right:5px;
+  margin-top:0;
+  width:17px;
+}
+
+
+*html .comm_side_img {
+    margin-left:0px;
+    }
+
+#pageDetailRight .num_comm_block .comm_side_img {
+  width:17px;
+  height:20px;
+  background:transparent url('http://media.nbcdfw.com/designimages/ico_comment_greybg.jpg') no-repeat 0 0;
+}
+
+#pageDetailRight .num_comm_block.hover .comm_side_img {
+    background: transparent url(http://media.nbcdfw.com/designimages/ico_comment_greybg.jpg) no-repeat scroll 0 -19px;
+}
+  
+#post_comment {
+   width: auto;
+   height:auto;
+}
+#post_comment #comm_img {
+  background:transparent url(http://media.nbcdfw.com/designimages/front_img_comms.png) no-repeat scroll 0 0;
+  clear:none;
+  float:left;
+  height:23px;
+  margin-left:208px;
+  padding-top:3px;
+  top:0px;
+  width:11px;
+}
+  
+#right_comment_show {
+   text-align: center;
+   float:left;
+   padding-bottom:10px;
+   padding-top:10px;
+   border-top: 1px dotted #d9d9d9;
+}
+
+.right_comm_moment_page #right_comment_show_img {
+  display: none;
+  }
+
+#right_comment_show_img span {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_recent_comms.jpg) no-repeat scroll 0 0;
+  display:block;
+  float:left;
+  height:14px;
+  width:132px;
+}
+
+#right_comment_show_img {
+  float:left;
+  padding: 0 0 0 34px;
+}
+
+.comments_text {
+  clear:none;
+  float:left;
+  line-height:15px;
+  padding-top: 4px;
+}
+
+#right_comment_show .comments_text {
+  padding-top: 2px;
+}
+
+.comments_text a {
+  color:#000000;
+  font-family:helvetica;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+a#showData1 {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_comm_see_more.jpg) no-repeat scroll 0 0;
+  display:block;
+  float:left;
+  height:12px;
+  width:59px;
+  cursor: pointer;
+  }
+  
+a#showData1 span {
+  visibility: hidden;
+}
+
+.num_comm_block.hover .comments_text a {
+  color:#FF0000;
+  text-decoration:underline !important;
+  cursor: pointer;
+}
+ 
+.num_comm_block.hover .comments_text a:hover {
+   text-decoration:underline !important;
+   cursor: pointer;
+}
+
+.num_comm_block {
+  background:#EEEEEE none repeat scroll 0 0;
+  border:3px double #FFFFFF;
+  margin-left:0;
+  margin-top:8px;
+  text-align:center;
+  width:126px;
+}
+
+#pageDetailRight #right_comment_show .num_comm_block {
+  margin:15px 0;
+  padding-left:18px;
+*padding-left:18px;
+  width:142px;
+  margin-left:0;
+}
+
+*html #pageDetailRight #right_comment_show .num_comm_block {
+  padding-left: 8px;
+  width:146px;
+}
+
+#pageDetailRight .momentAdditionalBlock {
+  width:136px;
+}
+
+#pageDetailRight ul {
+float:left;
+height:auto;
+width:165px;
+}
+
+#article_comments  .num_comm_block {
+    clear:none;
+    float:left;
+
+}
+
+#right_allmessages, #right_allmessages4,  #allmessages2, #allmessages3, #allmessages4, #commentsForm {
+  float: left; 
+  height: auto;
+  clear: both;
+  margin-top:-28px;
+}
+
+#right_allmessages, #right_allmessages4 {
+  display: block;
+  }
+
+#right_allmessages .flag.posted {
+  color:red;
+  float:right;
+  font-size:9px;
+  padding-right:10px;
+  padding-top:4px;
+  width:40px;
+  }
+  
+/*.comment .flag {
+  background:transparent url(http://media.nbcdfw.com/designimages/comm_flag.png) no-repeat scroll;
+  padding-right:20px;
+  *padding-right:0px;
+  height: 14px;
+  margin-top:-8px;
+  float:right;
+}*/
+
+.flag {
+  float:left;
+  font-size:9px;
+}
+
+.comment .flag {
+  background:transparent url(http://media.nbcdfw.com/designimages/comm_flag.png) no-repeat scroll 50px 0;
+  float:left;
+  height:14px;
+  margin-top:-8px;
+  margin-left:42px;
+  width:60px;
+}
+
+#article_comments .comment .flag {
+   margin-left:482px;
+}
+    
+*html .comment .flag {
+  /* padding-right:0px;*/
+}
+
+.comment .flag.posted {
+  background:none;
+  padding-right:20px;
+  height: 14px;
+  margin-top:-8px;
+  /* float:right; */
+}
+
+a.redlinksm:link, a.redlinksm:visited {
+  color:red;
+  float:right;
+  font-size:9px;
+  padding-right:10px;
+  padding-top:4px;
+  width:40px;
+}
+
+.comment_by a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.comment_posttime {
+  font-size: 10px;
+  color: #a8a8a8;
+}
+
+.commentbody, .comment {
+ border-top: none;
+}
+
+.clearfix {
+   display: block;
+}
+  
+.commentbody {
+  font-size: 11px;
+  font-family: Georgia;
+  line-height:14px;
+  padding:10px 5px;
+  padding-top: 2px;
+}
+
+#right_allmessages {
+  display: block;
+  float: left;
+  clear:both;
+  }
+  
+
+  
+.commentbody .showMoreComm {
+ display:inline;
+  text-transform: uppercase;
+  font-size: 9px;
+  color: #006699 !important;
+}
+
+.flag a {
+  background: transparent url(http://media.nbcdfw.com/designimages/flag-it.gif) no-repeat scroll 0 4px;
+  margin-left: -40px;
+  width:33px;
+  height:10px;
+}
+
+.comment_posttime {
+  font-size:10px;
+  margin-top:-2px;
+  font-family: Georgia;
+  display: inline;
+  clear: left;
+}
+
+.comment_by a {
+  font-size: 12px;
+  color: #000;
+  font-family: Georgia;
+}
+
+.comment_by {
+    color:#000000;
+    font-family:Georgia;
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.num_comm_block {
+  background:#EEEEEE none repeat scroll 0 0;
+  border:3px double #FFFFFF;
+  clear:none;
+  float:left;
+  margin-left:0;
+  margin-top:8px;
+  padding:1px 5px 1px 16px;
+  text-align:center;
+  width:140px;
+}
+
+#video_comm_number {
+   margin-top: 0px;
+   margin-left: 50px; 
+}
+
+#video_comm_number .comments_text a {
+}
+
+#video_comm_number .comments_text a:hover {
+   color: #000;
+   cursor: pointer;
+}
+
+#right_comment_show .num_comm_block {
+  margin-left:14px;
+  }
+
+*html #right_comment_show .num_comm_block {
+    margin-left: 7px;
+}
+.num_comm_block.bottom_comms {
+  width:auto;
+}
+
+#right_comment_block .num_comm_block {
+  margin-left:14px;
+}
+  
+#right_comment_block #right_allmessages, #right_comment_block #right_allmessages4 {
+  margin-left:2px;
+}
+.num_comm_block.bottom_comms {
+background:transparent;
+border:none;
+}
+
+#article_comments {
+  clear:both;
+  float:left;
+  height:100%;
+  width:639px;
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  background: #fff;
+ text-align:left;
+}
+
+#article_comments li {
+  border-top:1px dotted  #CFCFCF;
+}
+
+#commentOrder {
+  float:right;
+  margin-top:12px;
+  text-align:right;
+  width:160px;
+}
+
+*html #commentOrder {
+    margin-top:14px;
+    }
+    
+#commentOrder a.comment_time_on:link, #commentOrder a.comment_time_on:visited, #commentOrder a.comment_time_on:hover, #commentOrder a.comment_time_on:active {
+  color:#000;
+  text-decoration:none;
+  font-weight: bold;
+  width:43px;
+  height:12px;
+  background: transparent url(http://media.nbcdfw.com/designimages/comm_oldest_black.gif) no-repeat scroll 0 0;
+  
+}
+
+#commentOrder a.comment_time:hover, #commentOrder a.comment_time:active {
+  color:#999;
+  text-decoration:underline;
+  width:43px;
+  height:12px;
+  background: transparent url(http://media.nbcdfw.com/designimages/comm_recent_gray.gif) no-repeat scroll 0 0;
+}
+
+#commentOrder a.comment_time:link, #commentOrder a.comment_time:visited {
+  color:#999;
+  text-decoration:none;
+  width:43px;
+  height:12px;
+  background: transparent url(http://media.nbcdfw.com/designimages/comm_recent_gray.gif) no-repeat scroll 0 0;
+}
+
+#commentOrder a.comment_time_on span, #commentOrder a.comment_time span {
+  visibility: hidden;
+  }
+  
+#commentOrder span#sort_by {
+  background:transparent url(http://media.nbcdfw.com/designimages/comm_sort_by.gif) no-repeat scroll 0 0;
+  display:block;
+  float:left;
+  height:8px;
+  margin-top:8px;
+  width:36px;
+}
+
+*html #commentOrder span#sort_by {
+margin-top:7px;
+}
+  
+#comment_show {
+  border-top:1px dotted #CFCFCF;
+  float:left;
+  height:65px;
+  margin-top:10px;
+  width:639px;
+}
+
+#comment_show a {
+  font-family:Arial,Verdana,Helvetica,sans-serif;
+  font-size:12px;
+  line-height:12px;
+}
+
+#header_post_comm, #header_post_comm_right, #header_post_comm_left { 
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_post_comm_header.jpg) no-repeat scroll 50% 5px; 
+  border-bottom:1px dotted #D9D9D9;
+  border-top:none;
+  padding:5px;
+  width:630px;
+  height:21px;
+}
+
+#header_top_comm {
+    background:#FFFFFF url(http://media.nbcdfw.com/designimages/nbc_comm_header.jpg) no-repeat scroll 50% 10px;
+    height:21px;
+    padding:5px;
+    width:629px;
+}
+
+
+/* new headers for comments */
+#slideshow #header_top_comm { 
+    background:#FFFFFF url('http://media.nbcdfw.com/designimages/hdr_comments_about_ss.gif') no-repeat scroll 50% 5px;
+    height:21px;
+    padding:5px;
+    width:629px;
+}
+
+#article #header_top_comm, #blog #header_top_comm { 
+    background:#FFFFFF url('http://media.nbcdfw.com/designimages/hdr_comments_about_story.gif') no-repeat scroll 50% 5px;
+    height:21px;
+    padding:5px;
+    width:629px;
+}
+
+#video #header_top_comm {
+    background:#FFFFFF url('http://media.nbcdfw.com/designimages/hdr_comments_about_video.gif') no-repeat scroll 50% 5px;
+    height:22px;
+    padding:5px;
+    width:629px;
+}
+
+* html #header_post_comm {
+      height:30px; 
+    }
+    
+#header_post_comm span {
+  color:#4F4F4F;
+  margin:0;
+}
+
+ 
+ #textarea_comm, #textarea_comm_right, #textarea_comm_left {
+   margin:0;
+   float:left;
+   width: 349px;
+ }
+ 
+#article_comments #textarea_comm {
+   width: 380px;
+   float:left;
+ }
+ 
+#mood_block {
+  border-left:1px dotted #D9D9D9;   
+  float:left;
+  clear: right;
+  margin:-11px 0 0 4px;
+  width:194px;
+  overflow: hidden;
+  font-family:Geneva, Arial, Helvetica, sans-serif;
+  height: 214px;
+}
+ 
+#mood_block ul {
+  width:193px;
+  font-size:15px;
+  list-style-image:none;
+  list-style-type:none;
+  margin-bottom:0;
+  margin-right:0;
+  margin-top:0;
+  padding:0 0;
+  line-height: 12px;
+}
+
+#mood_block li {
+  border-top:1px dotted #D9D9D9;
+  margin:0 6px;
+  padding:8px 0 2px;
+  width:193px;
+  font-weight:bold;
+  height: 20px;
+}
+ 
+ #mood_block li span {
+  
+ }
+ 
+ #mood_block li input{
+   margin:0;
+   vertical-align: top;
+   float:left;
+ }
+ #mood_block  li label {
+  margin:0 0 0 10px;
+  float:left;
+  height:15px;
+ }
+ 
+ #mood_block  li label span {
+  visibility:hidden;
+ }
+ .mood_furious {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_fur.gif) no-repeat scroll 0 0;
+  width:64px;
+ }
+ 
+ .mood_intrigued {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_intr.gif) no-repeat scroll 0 0;
+  width:77px;
+ }
+ 
+ .mood_sad {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_sad.gif) no-repeat scroll 0 0;
+  width:31px;
+ }
+ 
+ .mood_bored {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_bored.gif) no-repeat scroll 0 0;
+  width:50px;
+ }
+ 
+.mood_thrilled {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_thr.gif) no-repeat scroll 0 0;
+  width:72px;
+ }
+ 
+ .mood_laughing {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_laught.gif) no-repeat scroll 0 0;
+  width:75px;
+  
+ }
+ 
+ #moodSelect2 {
+  background:transparent url(http://media.nbcdfw.com/designimages/nbc_mood_your_mood.jpg) no-repeat scroll 0 0;
+  width:150px;
+  padding-bottom: 4px;
+ }
+ 
+ *html  #moodSelect2 {
+   margin-top:2px;
+ }
+ #body_post_comm,  #body_post_comm_left,  #body_post_comm_right {
+ width: 640px; 
+ height: auto; 
+ clear: both; 
+ float: left; 
+ margin-top: 10px;
+ padding-bottom:10px;
+ }
+ 
+ #commentsForm {
+  background:transparent none repeat scroll 0 0;
+  border:medium none;
+  float:left;
+  height:auto;
+  padding:0;
+  margin-top:0px;
+}
+
+#body_post_comm textarea#commentTxtArea, #body_post_comm_right textarea#commentTxtArea_right, #body_post_comm_left textarea#commentTxtArea_left  {
+   border: 1px inset #000; 
+   width: 344px; 
+   height: 154px;
+   overflow: hidden;
+}
+   
+#article_comments #body_post_comm textarea#commentTxtArea {
+    width: 370px;
+    font: 13px/16px normal, none, georgia;
+    color:#666666;
+    padding:5px;
+    overflow-y: auto;
+    }
+
+*html  #article_comments #body_post_comm textarea#commentTxtArea {
+    width: 366px;
+}
+
+*html  #body_post_comm textarea#commentTxtArea {
+    width: 340px;
+}
+   
+#begin_post_comm, #begin_post_comm_right, #begin_post_comm_left {
+  background:#fff url('http://media.nbcdfw.com/designimages/nbc_comm_textarea.jpg') no-repeat scroll 0 0;  
+  float: left; 
+  clear: none; 
+  font-size: 11px; 
+  width: 60px;
+  height:11px;
+}
+  
+*html #begin_post_comm {
+  padding-right: 0px; 
+}
+ 
+
+#comments_posting_options label, #comments_posting_options input, #comments_posting_options_right label, #comments_posting_options_left input {
+  float:left;
+}
+
+#comments_posting_options_recaptcha label, #comments_posting_options_recaptcha input {
+	  float:left;
+}
+
+#postasanonym, #postasanonym_left, #postasanonym_right {
+  margin-top:4px;
+  margin-right: 5px;
+}
+
+#publishtofb, #publishtofb_left, #publishtofb_right {
+  margin-top:0px;
+}
+
+#commentsForm, #commentsForm_left, #commentsForm_right {
+  background:none;
+  border:none;
+  height:auto;
+  padding:0;
+  line-height: normal;
+  opacity: 1;
+}
+#textarea_comm .formText { 
+  display:block;
+  font-family:helvetica;
+  font-size:11px;
+  padding-top:5px;
+  text-transform:uppercase;
+  clear:both;
+  float:left;
+}
+ 
+#pagenum {
+  vertical-align: middle;
+  border: 1px solid #7f9db9;
+ }
+ 
+#showNext .pagination {
+  color:#757575;
+  padding-top:7px;
+}
+
+.storylinks {
+  color:#797979;
+  font-size:9px;
+  text-align:right;
+  padding:0;
+  vertical-align:baseline;
+}
+  
+ 
+ /* style for moment page */
+.right_comm_moment_page #right_comment_show {
+   margin-bottom: 0px;
+   padding-bottom: 0px;
+   clear: both;
+}
+  
+.comm_moment_page  #textarea_comm {
+  width: 545px;
+}
+  
+
+.comm_moment_page #body_post_comm textarea#commentTxtArea {
+  width:545px;
+}
+ 
+#nbcVideoWrapper #commentsForm {
+    height:auto;
+    margin-top:10px;
+} 
+ 
+#processing_comm {
+    display:none;
+    height:32px;
+    padding-bottom:4px;
+    right:5px;
+    text-align:right;
+    width:auto;
+    float:right;
+} 
+ 
+#processing_comm img {
+} 
+ 
+.commentAdmin {
+  float:left;
+}
+
+.commentAdminMsg {
+  float: left;
+  clear: both;
+  height: 16px;
+  width: 620px;
+  padding: 2px;
+  font-size: 10px;
+  color: #a8a8a8;
+} 
+ 
+.rejectCommentLink {
+  font-size: 12px;
+  color:#FB1616;
+  text-decoration: underline;
+  position: relative;
+  float:left;
+}
+
+.rejectCommentLink:hover {
+  text-decoration: underline;
+ }
+ 
+a.editCommentLink {
+  font-size: 12px;
+  color:#FB1616;
+  display:block;
+  float:left;
+  padding-left:10px;
+  text-decoration: underline;
+  position: relative;
+}
+ 
+ 

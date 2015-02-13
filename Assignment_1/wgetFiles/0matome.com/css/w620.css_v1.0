@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/***********************************************************************************
+  共通
+***********************************************************************************/
+
+#contents {
+	min-width: 0px;
+	padding: 20px 0;
+}
+
+.ad_smartphone {
+	display: block;
+}
+
+/***********************************************************************************
+  ヘッダー
+***********************************************************************************/
+
+#header {
+	min-width: 0px;
+}
+
+#logo {
+	margin: 0 auto 1px auto;
+}
+
+#header .search_form {
+	padding: 10px 0 10px 0;
+	border-top: 1px #cccccc solid;
+	text-align: center;
+	position: relative;
+	top: auto;
+	right: auto;
+}
+
+#header .search_form input[type=text] {
+	width: 160px;
+	min-width: 160px;
+}
+
+#header .search_form input[type=submit] {
+	min-width: 60px;
+	text-indent: 3px;
+	letter-spacing: 3px;
+}
+
+#header .list {
+	padding: 8px 20px;
+}
+
+#header .bar1 {
+	display: none;
+}
+
+#header .category_list {
+	display: block;
+}
+
+/***********************************************************************************
+  メイン
+***********************************************************************************/
+
+#main .title {
+	padding: 2px 10px 7px 15px;
+	background-color: #ffffff;
+	border-bottom: 1px #cccccc solid;
+}
+
+#main .title h1,
+#main .title h2 {
+	margin: 1px 0 10px 0;
+	color: #333333;
+}
+
+#main .title .feed {
+	margin: 0 0 10px 10px;
+}
+
+#main .title .site_icon {
+	margin: 0 0 10px 10px;
+	border: 1px #999999 solid;
+}
+
+#main .title .sort {
+	margin: 0 0 10px 10px;
+	padding: 1px 0 0 1px;
+	background-color: #cccccc;
+	border-radius: 4px;
+}
+
+#main .box {
+	border: none;
+	box-shadow: none;
+	border-bottom: 1px #cccccc solid;
+}
+
+#main .pickup {
+	margin: 0 0 12px 0;
+	border-top: 3px #cc3333 solid;
+	border-bottom: 3px #cc3333 solid;
+	border-radius: 0;
+}
+
+#main .list .indent {
+	text-indent: 0px;
+}
+
+#main .list .indent .page {
+	text-indent: -7px;
+}
+
+#main .list .link {
+	padding: 12px 15px 12px 15px;
+}
+
+#main .list .link:last-child {
+	border-radius: 0;
+}
+
+#main .list .link .page {
+	padding: 0 0 3px 0;
+	display: block;
+}
+
+#main .list .link .site_info {
+	padding: 4px 0 0 0;
+	float: none;
+}
+
+#main .list .link .site_info .site_add,
+#main .list .link .site_info .site_delete {
+	margin: 2px 10px 0 0;
+	border: 1px #333333 solid;
+	border-radius: 2px;
+	float: left;
+}
+
+#main .list .link .vote {
+	width: 69px;
+	height: 20px;
+	margin: 4px 0 0 5px;
+	float: right;
+}
+
+#main .list .link .vote a,
+#main .list .link .vote span {
+	width: 32px;
+	height: 20px;
+	margin: 0;
+}
+
+#main .list .link .vote .ii {
+	background-position: center 3px;
+	border-top: 1px #999999 solid;
+	border-left: 1px #999999 solid;
+	border-bottom: 1px #999999 solid;
+	border-radius: 2px 0 0 2px;
+}
+
+#main .list .link .vote .ikunai {
+	background-position: center 5px;
+	border: 1px #999999 solid;
+	border-radius: 0 2px 2px 0;
+}
+
+#main .pager {
+	margin: 20px 20px 0 20px;
+}
+
+/***********************************************************************************
+  サイド
+***********************************************************************************/
+
+#left {
+	position: relative;
+	top: auto;
+	left: auto;
+}
+
+#right {
+	position: relative;
+	top: auto;
+	right: auto;
+}
+
+.side {
+	width: auto;
+	padding: 0 20px;
+}
+
+.side .ad_w160 {
+	display: none;
+}
+
+.side .social_buttons {
+	min-height: 0px;
+}
+
+.side .social_buttons .social_right {
+	margin-right: 4px;
+}
+
+.side .social_buttons .social_line {
+	display: block;
+}
+
+.side .pr a {
+		margin: 0 10px 20px 10px;
+}
+
+.side .ad_item {
+	margin: 0 auto 15px auto;
+}
+
+/***********************************************************************************
+  フッター
+***********************************************************************************/
+
+#footer {
+	min-width: 0px;
+}
+

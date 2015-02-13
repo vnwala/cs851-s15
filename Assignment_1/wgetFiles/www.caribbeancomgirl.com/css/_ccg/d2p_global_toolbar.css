@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*//////////////////////////////////////////////////////
+ヘッダーの背景指定
+*/
+
+#d2pGlobalToolBarSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/bg_d2p_global_toolbar_black.jpg);
+}
+
+
+
+/*//////////////////////////////////////////////////////
+メニューのリンク色
+*/
+
+#d2pGlobalToolBarNavSec li a:link,
+#d2pGlobalToolBarNavSec li a:visited {	
+	color:#FFFFFF;
+}
+
+#d2pGlobalToolBarNavSec li a:hover {
+	color:#b3b8c5;
+}
+
+
+
+/*//////////////////////////////////////////////////////
+数字のリンク色
+*/
+
+.d2pGlobalToolBarNumberSec a:link,
+.d2pGlobalToolBarNumberSec a:visited {
+	color:#ff3366 !important;
+}
+
+.d2pGlobalToolBarNumberSec a:hover {
+	color:#FF0000 !important;
+}
+
+
+/*//////////////////////////////////////////////////////
+アイコン画像
+*/
+
+#d2pGlobalToolBarAccountsSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/icon_accounts_silver.png);/**/
+}
+
+#d2pGlobalToolBarD2PointSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/icon_d2point_silver.png);/**/
+}
+
+#d2pGlobalToolBarSitesListSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/icon_sites_list_silver.png);/**/
+}
+
+#d2pGlobalToolBarInboxSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/icon_inbox_silver.png);/**/
+}
+
+#d2pGlobalToolBarD2PassChatSec {
+	background-image:url(https://images.d2pass.com/images/global_toolbar/icon_d2pass_chat_silver.png);/**/
+}
+
+
+/*//////////////////////////////////////////////////////
+PR枠
+*/
+/* 背景色 */
+#d2pGlobalToolBarPromoTxtSec {
+	/*background-color:#1a80b1;*/
+}
+
+#d2pGlobalToolBarPromoTxtLink {
+	color:#FFF;
+}
+#d2pGlobalToolBarPromoTxtLink:hover {
+	color:#FF0;
+}
+
+
+
+
+
+

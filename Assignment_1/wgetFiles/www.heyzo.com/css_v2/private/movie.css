@@ -1,0 +1,273 @@
+
+@charset "utf-8";
+/* movie.css */
+.paginate{float:right;margin:5px 0;height:22px}
+.paginate li{float:left}
+.paginate li a{display:block;border:1px solid #3399cc;padding:2px 6px;margin-left:7px;line-height:16px;text-align:center}
+.active{color:white;background:#3399cc;border:1px solid #3399cc;padding:2px 6px;margin-left:7px;line-height:16px;text-align:center;font-size:12px}
+.paginate li a.turn{border:none; width:auto}
+.showActorImg{position:absolute; margin:-120px 0 0 -30px}
+div.clearMargin{margin-right:0}
+span[movie].icon{color:#FFFFFF;float:left;margin:8px 5px 8px 0;padding:0 3px;text-align:center}
+/* ===================================================================  moviedeteil  ============================================================================== */
+#playerContainer{float:left;width:804px;height:625px;background:url(../../images/common/parts/player-bg.png) 0 0 no-repeat;padding-left:4px;background-size:100%}
+#movies .release{clear:both; marign:0 0 0 0}
+#movie{float:left;width:1100px;margin-bottom:15px}
+#movie h1{width:1080px}
+.movietype{clear:both}
+.movietype span.deluxe{background-position:0 -7px; margin:0 3px 8px 0}
+.movie a.actor{float:left; margin-right:5px}
+.movie span{float:left;line-height:16px;padding:0 4px;margin-bottom:5px}
+span.inclusive{float:left}
+.exclusive{background:url(../../images/common/parts/actor-type-exclusive-bg.png) 0 0 repeat-x;float:left;margin-bottom:8px;clear:both;color:#444}
+#movie h1 span.exclusive{clear:none;float:left;line-height:20px;color:#444}
+#main-player{width:800px;height:480px;float:left}
+.skipwarning{float:left;height:29px}
+.resume-btn{float: left;line-height: 0;margin: 3px 0 0;}
+.info-bgWide{float:right; width:1100px}
+.info-bgWide .movieInfo{float:right;width:1096px;border:2px solid #bcbbbb;vertical-align:top;margin-right:0px}
+.info-bgWide div.actor-type{height:14px;width:1011px;float:left;padding:6px;border-bottom:1px solid #cdcdcd}
+.info-bgWide div.theme{height:14px;width:1011px;float:left;padding:6px;border-bottom:1px solid #cdcdcd}
+.info-bgWide h2{font-size:12px;font-weight:bold}
+.info-bgWide .dataInfo{vertical-align:top;width:1011px;float:left;padding:6px;border-bottom:1px solid #cdcdcd;height:14px;line-height:12px}
+.info-bgWide p.memo{clear:both;padding:6px;line-height:16px;height:auto}
+.info-bgWide p.embed{background:#cdcdcd}
+.info-bgWide .embed h3{margin-bottom:5px; font-weight:bold}
+.info-bgWide div.play-type{height:14px;width:1011px;float:left;padding:6px;border-bottom:1px solid #cdcdcd}
+.info-bgWide div.embed{background:url(../../images/common/parts/embed-bg.png) 0 0 repeat-x;padding:9px 6px;width:1087px;height:120px;position:relative;margin-left:-2px}
+#quality-btns{background:#1a1a1a;padding:10px;border-bottom:1px solid #000;float:left;width:780px;position:relative;z-index:99}
+#quality-btns .right{margin-top:4px}
+#quality-btns-free{background:#1a1a1a;padding:10px;border-bottom:1px solid #000;float:left;width:1080px;position:relative;z-index:99}
+#quality-btns div{width:224px; margin:auto}
+.quality-low{width:112px;height:30px;float:left;background:url(../../images/common/parts/quality-btn.png) 0 0 no-repeat}
+.quality-heigh{width:112px;height:30px;float:left;background:url(../../images/common/parts/quality-btn.png) -112px 0 no-repeat}
+.quality-low-en{width:112px;height:30px;float:left;background:url(../../images/common/parts/quality-btn_en.png) 0 0 no-repeat}
+.quality-heigh-en{width:112px;height:30px;float:left;background:url(../../images/common/parts/quality-btn_en.png) -112px 0 no-repeat}
+div.captureWide{background:#252525;width:1098px;overflow:hidden;background:url(../../images/common/parts/capture-bg.jpg) repeat-x;height:82px;border:1px solid #1e1e1e;position:relative;z-index:98}
+div.captureWide a{display:block;float:left;width:64px;text-align:center;margin:9px 0px 4px 32px}
+.info-bg{background:url(../../images/common/parts/info-bg.png) 0 0 no-repeat;width:284px;height:623px;float:right}
+.info-bg .movieInfo{float:right;width:273px;border:2px solid #bcbbbb;vertical-align:top;margin-right:3px;height:610px}
+.info-bg span,.movieInfo a{vertical-align:top}
+.info-bg a{padding:2px}
+.info-bg span.dataInfo a{padding:0}
+.info-bg a:hover{background:#ccc}
+span.release-day, span.actor, span.label, span.estimate, span.actor-type, span.play-type, span.theme, span.theme{border-right:1px solid #cdcdcd;border-bottom:1px solid #cdcdcd;width:60px;float:left;padding:6px;height:14px;line-height:12px;font-size:90%}
+.info-bg div.actor-type{height:14px;width:188px;float:left;padding:6px;border-bottom:1px solid #cdcdcd;overflow:hidden}
+.info-bg span.play-type{height:55px}
+.info-bg div.play-type{height:55px;width:188px;float:left;padding:6px;border-bottom:1px solid #cdcdcd}
+.info-bg span.theme{height:40px}
+.info-bg div.theme{height:40px;width:188px;float:left;padding:6px;border-bottom:1px solid #cdcdcd}
+.info-bg div.tag_cloud {clear:both;height:108px;line-height:16px;overflow:auto;padding:6px;border-bottom:1px solid #CDCDCD;word-break:keep-all}
+.info-bg div.tag_cloud ul li {float:left;margin-right:16px;height:22px}
+.info-bg p.memo{clear:both;padding:6px;line-height:16px;height:254px;overflow:auto;-webkit-overflow-scrolling:touch}
+.info-bg .dataInfo{vertical-align:top;width:188px;float:left;padding:6px;border-bottom:1px solid #cdcdcd;height:14px;line-height:12px}
+.info-bg .play-type span,.info-bgWide .play-type span,.info-bg .theme span,.info-bgWide .theme span{float:left;width:62px;line-height:18px}
+span.review-value{height:14px;overflow:hidden;float:left;margin-right:5px;display:block}
+.revieValue{float:left;margin-top:3px;width:98px}
+.info-bg div.embed{background:url(../../images/common/parts/embed-bg.png) 0 0 repeat-x;padding:5px 6px;width:264px;height:80px;position:relative;margin-left:-2px}
+.info-bg div.embed a:hover{background:none}
+div.embed h3{margin-bottom:5px;font-weight:bold;color:#444}
+.btns{padding:0 0 0 0}
+.social-btns{float:right;margin-top:3px}
+.bookmark-btn{float:left}
+a.wahtisBookmark{float:left; margin:8px 0 0 5px}
+.bookmark-btn img{vertical-align:bottom}
+.social-btns a{float:left; margin-left:5px}
+.social-btns img{width:30px; height:30px}
+#embed{height:18px;overflow:hidden;background:#FFF;white-space:pre-wrap;word-wrap:break-word;margin-bottom:7px;border:none;display:block;color:#444}
+#backgroundSwitch{height:30px;overflow:hidden;width:45px;float:right;display:none}
+.background-switch{display:block}
+.info-bgWide #embed{width:1088px}
+.info-bg #embed{width:264px}
+.info-bgWide div.tag_cloud {clear:both;line-height:16px;overflow:auto;padding:6px;border-bottom:1px solid #CDCDCD;word-break:keep-all}
+.info-bgWide div.tag_cloud ul li{float: left;height: 22px;margin-right: 16px}
+.tagkeyword{display:block; margin:0 0 5px 5px}
+span.bookmark{position:absolute; margin:-9px 0 0 890px}
+.bookmark a{float:left}
+.bookmark img{}
+.bookmark a.tlink{float:left; margin:13px 0 0 23px}
+div.capture{background:#252525;width:798px;overflow:hidden;background:url(../../images/common/parts/capture-bg.jpg) repeat-x;height:82px;border:1px solid #1e1e1e;font-size:90%}
+div.capture a{display:block;float:left;width:64px;text-align:center;margin:9px 0px 4px 8px;/*-moz-box-shadow:0px 1px 1px #555;　 Firefox用 */  
+/*-webkit-box-shadow:0px 1px 1px #555;　 Safari,Google Chrome用 */ }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+div.capture a{margin:10px 0px 4px 8px}
+.movieInfo{hieght:528px}
+div.capture{width:798px}
+.info-bg  div.embed{padding:9px 6px; height:67px}
+.info-bg p.memo{height:259px}
+}
+div.capture img{display:block;float:left;width:64px;text-align:center;margin:0 0 4px 0}
+div.capture a[limited] img{opacity: 0.2;-moz-opacity:0.2;filter:alpha(opacity=20)}
+p.sample-download{margin:0 0 20px 0px;clear:both;float:left}
+a.sample-download{background: none repeat scroll 0 0 #ff0066;border-radius: 5px;color: white;float: left;margin: 5px 15px 10px 0;padding: 9px;text-align: center;width: 445px;}
+.moviedetail-join-btn{float:left;margin:5px 0 20px 0px}
+.preliminary {margin:-607px 0 0 638px;position:absolute;z-index:100}
+table.exp td{width:72px; padding:5px; !important}
+p.downloads{clear:both; margin-bottom:3px}
+/*review*/
+.review-container{background:#EEE;padding:8px 0 8px 14px;width:896px}
+.review-box{background:url("../../images/common/parts/review-border.png") repeat-y scroll 203px 0 transparent;display:inline-block}
+.posted{widht:170px; float:left}
+span.posted-day{color:#FF0066;display:block;font-size:15px;text-decoration:underline}
+span.poster{display:block;clear:both;width:200px}
+div.review-container p.review{float:left;line-height:160%;margin:0 0 0 7px;padding:0 12px;width:660px}		
+div.review-container p.review_res{padding-top:2px;border-top:1px solid lightgray;color:darkgray}
+										/*レビュー*/
+a#divReviewformV3{border-radius: 5px;background:#ccc;width:400px;height:40px;line-height:40px;color:666;text-align:center;display:block;float:left;margin:5px 0 45px 5px;font-weight:bold;font-size:16px;vertical-align:sub}
+a#divReviewformV3 img.d2pass{vertical-align:sub; float:left}
+a#divReviewformV3 .left{font-size:15px; margin-left:6px}
+div#good-btn a{background:url(../../images/common/parts/good-btn.png) 0 0 no-repeat;width:29px;height:40px;line-height:40px;color:666;padding-left:40px;display:block;float:left;margin:5px 0 20px 5px;font-weight:bold}
+div#bad-btn a{background:url(../../images/common/parts/bad-btn.png) 0 0 no-repeat;width:29px;height:40px;line-height:40px;color:666;padding-left:40px;display:block;float:left;margin:5px 0 20px 5px;font-weight:bold}
+div#good-btn2 a{background:url(../../images/common/parts/good-btn2.png) 0 0 no-repeat;width:25px;height:40px;line-height:40px;color:666;padding-left:105px;display:block;float:left;margin:5px 0 20px 5px;font-weight:bold}
+div#bad-btn2 a{background:url(../../images/common/parts/bad-btn2.png) 0 0 no-repeat;width:24px;height:65px;line-height:40px;color:666;padding-left:140px;display:block;float:left;margin:5px 0 20px 5px;font-weight:bold}
+div.getd2passPoint{float:left;font-size:11px;margin:0 0 0 10px;width:522px}
+div.getd2passPoint em{display:block;font-style:normal;font-weight:bold;margin-bottom:3px}
+div.getd2passPoint span{font-size:11px; text-decoration:underline}
+.evaluates{width:170px; float:left}
+.evaluates div, .posted div{float:left; margin:0 8px 18px}
+.posted div{margin:8px 0}
+span.satisfaction{float:left; width:52px}
+.review-border{clear:both;display:block;width:910px;height:31px}
+.Moviepagination{clear:both;float:right;margin-bottom:10px}
+.Moviepagination li{float:left; margin-left:10px}
+.Moviepagination li a{text-decoration:underline}
+.error{color:#F06;margin:0 0 15px 15px;text-decoration:underline;font-weight:bold;float:left}
+#movie-comment .error{color:#F06;margin:-45px 0 15px 15px;text-decoration:underline;font-weight:bold;float:left}
+#d2pass_recommend{float:left;width:910px}
+/*download*/
+table.downloads{background:#e9e9e9;border:3px solid #cdcdcd;width:910px;margin-bottom:15px;float:left}
+table.downloads th{background:#999999;padding:7px;color:#FFF;border-left:1px solid #cdcdcd}
+table.downloads td{padding:12px 7px 7px 7px;vertical-align:middle;text-align:center;border-bottom:1px solid #cdcdcd;border-right:1px solid #cdcdcd;line-height:12px}
+table.downloads td.download-btns{width:90px}
+table.downloads td.capture{width:230px}
+table.downloads td.capture img{margin:6px}
+#new-movies table.downloads img{float:none}
+table .fileData{width:30px}
+table .play-type span{margin:0}
+.sample-images{width:910px}
+.sample-images h1 a{float:right;margin-top:18px;vertical-align: bottom}
+.sample-images img.onGallery{border:1px solid #FF0066}
+.sample-images img{border:1px solid #cdcdcd; margin:0 46px 18px 0}
+.sample-images img.clearMargin{margin-right:0}
+.sample-images img:hover{border:1px solid #cdcdcd}
+.relateive-movie{float:left;margin-right:57px;width:136px}
+.relateive-movie .first-time-icon{position:absolute;margin:-15px 0 0 88px;border:none}
+.relateive-movie img{border-bottom:none}
+.relateive-movie a{display:block;width:136px;height:194px;text-align:center}
+.relateive-movie a.title{height:25px;line-height:120%;margin-bottom:7px}
+.relateive-movie a.actor{font-size:115%;font-weight:bold;margin:0 5px 5px 0;width:auto;height:auto;float:left}
+#movie-reviews div.review-container{clear:both;float:left;border:3px solid #cdcdcd;margin-bottom:20px;width:734px}
+div.review-container .review{width:715px; padding-top:10px}
+div.review-container h2.title{background:url(../../images/common/parts/border-dotted.gif) no-repeat 0 0;padding-top:10px}
+div.review-container .review-info{border-bottom:1px solid #cdcdcd;width:735px;float:left}
+div.review-container span.star{vertical-align:middle;width:84px;height:14px;overflow:hidden}
+p.value{float:left; margin:-4px 0 0 15px}
+div.review-container p.comment{width:715px; vertical-align:middle}
+.relateive-movies{width:910px}
+.relateive-movies h2{margin-top:5px}
+img.limited{clear:both;display:block;margin:0 auto 5px auto;width:533px;height:89px;border:none}
+p.limited{border:none;width:518px;margin:auto}
+.special_movie_icon{margin:-607px 0 0 605px;position:absolute;z-index:100}
+.special_movie_finish_icon{margin:-607px 0 0 434px;position:absolute;z-index:100}
+.relateMoviesList{position:absolute;background:url(../../images/common/parts/opacity-50.png);z-index:100;width:800px;margin:111px 0 0 4px}
+*:first-child+html .relateMoviesList{margin:-400px 0 0 -800px}
+.relateMoviesList a{color:#FFFFFF;padding:3px;float:left;margin:7px 5px;background: -moz-linear-gradient(top,#cb3b50 0%,#ec8090);background: -webkit-gradient(linear, left top, left bottom, from(#cb3b50),to(#ec8090));border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;border: 1px solid #fff;-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),inset 0px 0px 1px rgba(255,255,255,0.6);-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),inset 0px 0px 1px rgba(255,255,255,0.6);/*　IE6・7　*/
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cb3b50', endColorstr='#ec8090');
+/*　IE8　*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cb3b50', endColorstr='#ec8090')";
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #ec8090 0%, #cb3b50 100%)}
+
+.relateMoviesList a:hover{background: -moz-linear-gradient(top,#aa2539 0%,#e66a7c);background: -webkit-gradient(linear, left top, left bottom, from(#aa2539),to(#e66a7c));border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;border: 1px solid #b24455;-moz-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),inset 0px 0px 1px rgba(255,255,255,0.6);-webkit-box-shadow: 0px 1px 3px rgba(000,000,000,0.5),inset 0px 0px 1px rgba(255,255,255,0.6);/*　IE6・7　*/
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#aa2539', endColorstr='#e66a7c');
+/*　IE8　*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#aa2539', endColorstr='#e66a7c')";
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #e66a7c 0%, #aa2539 100%);
+background-image: -o-linear-gradient(bottom, #e66a7c 0%, #aa2539 100%)}
+
+#movie-downloads,.relateive-movies{float:left; margin-bottom:30px}
+#section_gallery{float:left; margin-bottom:12px}
+#section_gallery a.download-gallery-btn{float:right}
+#section_gallery a.download-gallery-btn img{border:none;float:right;margin:0 0 0 0}
+img.download-gallery-btn{border:none;float:right;margin-right:0}
+img.download-gallery-btn:hover{border:none}
+.cloud_btn{float: right;margin: 1px 12px 0 0;width: 126px}
+.cloud_btn a{width:136px;height:25px;overflow:hidden;float:left;padding:0}
+.cloud_btn a img{margin:0}
+div.info-bg div.embed div.cloud_btn a img:hover{margin-top:-25px}
+.whatisCloud{text-align:center}
+.fps59{color:#FFFFFF;background: -moz-linear-gradient(top,#2e8fc2 0%,#006599);background: -webkit-gradient(linear, left top, left bottom, from(#2e8fc2),to(#006599));/*　IE6・7　*/
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2e8fc2', endColorstr='#006599');
+/*　IE8　*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2e8fc2', endColorstr='#006599')";
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #2e8fc2 0%, #006599 100%)}
+.finish_soon{background: none repeat scroll 0 0 #DA3D7B;color: #FFFFFF;display: list-item;font-size: 14px;font-weight: bold;list-style-position: inside;padding: 0 5px;border-radius: 10px; width:330px; text-align: center;       /* CSS3草案 */  
+-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+-moz-border-radius: 10px;   /* Firefox用 */  }
+#devicePC,#deviceMobile{float:left;border:1px solid #666;background:#3399CC;border-radius:4px;        /* CSS3草案 */  
+-webkit-border-radius:4px;    /* Safari,Google Chrome用 */  
+-moz-border-radius:4px;   /* Firefox用 */  
+color:#FFFFFF;cursor:pointer;font-size:10px;padding:1px;margin: 0 0 0 8px}
+#deviceMobile{background:#666}
+
+#reviewformV3 p{clear:both; margin-bottom:15px; border-bottom:1px dotted #333;}
+#reviewformV3 p input{margin-left:8px}
+#reviewformV3 .sub{width:80px; float:left;}
+#reviewformV3 #comment{width:385px; height:180px; margin-bottom:20px}
+#nonmember{width:1100px;margin:auto;height:300px;text-align:center}
+#makeCodeTag{border-left: 1px solid #CCCCCC;display: inline-block;height: 20px;margin: 0 0 0 15px}
+.embedBox p{padding:12px; background:#3aa400;float: left; font-size: 120%; padding: 12px;}
+table[bonus]{border-collapse: collapse;width: 274px;}
+table[bonus] th{text-align: left; padding: 7px 0 3px 5px; background:-moz-linear-gradient(top,#444444 0%,#000000);background:-webkit-gradient(linear, left top, left bottom, from(#444444),to(#000000));/*　IE6・7　*/
+filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#444444', endColorstr='#000000');/*　IE8　*/
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#444444', endColorstr='#000000')";/* IE10 Consumer Preview */ 
+background-image:-ms-linear-gradient(bottom, #000000 0%, #444444 100%);background-image:-o-linear-gradient(bottom, #000000 0%, #444444 100%); color:white;}
+table[bonus] td{border: solid 1px #aaa; text-align: center;background:#CCC;padding: 10px 8px 4px;}
+a.relatemovieBanner{float:left;margin-bottom: 15px;}
+/*appex btn*/
+#appex{float: right;font-size: 60%;margin: 14px 0 0;cursor: pointer;padding: 0}
+#appex span{background: #333;border: 1px solid #222;border-radius: 3px;/* CSS3草案 */ -webkit-border-radius: 3px;  /* Safari,Google Chrome用 */  -moz-border-radius: 3px;/* Firefox用 */ }
+#appex span.on{color:#f06;}
+#appex span:hover{color:#f06;}
+#appex img{vertical-align:bottom}
+/*hight light*/
+#myhighlightBtn{float:left;cursor: pointer;}
+#mylighlightset{background: none repeat scroll 0 0 #FF0066;display: block;float: right;margin: 6px 0 0;padding: 0 18px;cursor: pointer;}
+#newfunction{
+animation: anime1 1s 0s infinite alternate;
+-moz-animation: anime1 1s 0s infinite alternate;
+-webkit-animation: anime1 1s 0s infinite alternate;
+-o-animation: anime1 1s 0s infinite alternate;
+-ms-animation: anime1 1s 0s infinite alternate;
+color:red;
+}
+@keyframes anime1 {
+0% {color:black;}
+100% {color:#FF0066;}
+}
+
+
+@-moz-keyframes anime1 {
+0% {color:black;}
+100% {color:#FF0066;}
+}
+
+@-webkit-keyframes anime1 {
+0% {color:black;}
+100% {color:#FF0066;}
+}
+
+@-o-keyframes anime1 {
+0% {color:black;}
+100% {color:#FF0066;}
+}
+
+@-ms-keyframes anime1 {
+0% {color:black;}
+100% {color:#FF0066;}
+}
+#newfunction{ color:#red\9; }
+/*ぬきてん*/
+#nukumoriBox{clear:both; float:left; width:100%;background:#ffde00; color:#000; margin:0 0 15px 0}

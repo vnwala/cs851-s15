@@ -1,0 +1,284 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	[ NEW ]FASHION LTD STORE
+	http://www.famima.com/shop/c/cfashion/
+--------------------------------------------------------------------- */
+#FASHION_store {
+	width:700px;
+	margin:0 auto;
+	padding:0;
+	}
+
+#FASHION_store h1,h2,h3,ul,li,dl,dt,dd {
+	margin:0;
+	padding:0;
+	}
+
+#FASHION_store img {
+	border:none;
+	}
+
+
+
+#FASHION_store h1 {
+	background:url(http://www.famima.com/images/p/fashion/title_fashion.png) no-repeat;
+	width:700px;
+	height:84px;
+	text-indent:-9999px;
+	display:block;
+	}
+
+#FASHION_store h2.description {
+	text-indent:-9999px;
+	}
+
+#FASHION_store ul.brand{
+	width:700px;
+	clear:both;
+	}
+
+#FASHION_store ul.brand li {
+	float:left;
+	width:340px;
+	height:215px;
+	margin:0 5px 25px;
+	list-style-type:none;
+	text-align:left;
+	vertical-align:top;
+	}
+
+#FASHION_store ul.brand li dl {
+	width:340px;
+	height:175px;
+	margin-top:5px;
+	}
+
+#FASHION_store ul.brand li dl dt {
+	display:inline;
+	float:left;
+	width:175px;
+	height:175px;
+	}
+
+#FASHION_store ul.brand li dl dd {
+	diplay:inline;
+	float:left;
+	width:160px;
+	height:175px;
+	margin-left:5px;
+	}
+
+#FASHION_store ul.brand li dl dd img {
+	margin-bottom:5px;
+	}
+
+#FASHION_store .fashion_copyright {
+	font-size:10px;
+	color:#999;
+	width:700px;
+	line-height:1.25;
+	text-align:left;
+	margin-bottom:20px;
+	}
+
+/* --------------------------------------------------------------------
+	FASHION LTD STORE
+	http://www.famima.com/shop/c/cfashion/
+--------------------------------------------------------------------- */
+
+#fashionltdstore {
+	width:700px;
+	margin:0 auto;
+}
+
+
+
+#fashionltdstore h1,h2,h3,ul,li,dl,dt,dd {
+	margin:0;
+	padding:0;
+	}
+
+#fashionltdstore img {
+	border:none;
+	}
+
+
+#fashionltdstore a {
+	color:#309;
+	text-decoration:underline;
+	}
+
+#fashionltdstore a:hover {
+	color:#FC0;
+	text-decoration:none;
+	}
+
+#fashionltdstore a:visited {
+	color:#309;
+	text-decoration:underline;
+	}
+
+#fashionltdstore h1.fashiontitle {
+	background:url(http://www.famima.com/images/p/fashion/title_fashion.png) no-repeat;
+	width:700px;
+	height:84px;
+	text-indent:-9999px;
+	display:block;
+	margin:0 0 10px 0;
+	}
+
+
+
+#fashionltdstore br.clear {
+	clear:both;
+}
+
+#fashionltdstore #list {
+	width:700px;
+	margin:0 auto 30px;
+	vertical-align:top;
+}
+
+#fashionltdstore #list .feature {
+	width:340px;
+	float:left;
+	display:block;
+}
+
+#fashionltdstore #list .feature div.imgleft {
+	width:175px;
+	float:left;
+	margin-right:5px;
+	vertical-align:top;
+}
+#fashionltdstore #list .feature div.txtright {
+	width:160px;
+	float:right;
+	vertical-align:top;
+}
+
+#fashionltdstore #list .space {
+	width:20px;
+	float:left;
+}
+
+
+#fashionltdstore #fashion_topics {
+	width:700px;
+	}
+
+#fashionltdstore #fashion_topics .title {
+	width:668px; /* 700px */
+	background:#01a5cb;
+	padding:5px 15px;
+	border:1px solid #0184a2;
+	text-align:left;
+	color:#fff;
+	font-weight:bold;
+	}
+
+#fashionltdstore #fashion_topics .contents {
+	width:668px; /* 700px */
+	background:#fff;
+	padding:5px 15px;
+	border-left:1px solid #0184a2;
+	border-right:1px solid #0184a2;
+	border-bottom:1px solid #0184a2;
+	text-align:left;
+	margin:0;
+	}
+
+#fashionltdstore #fashion_topics ul {
+	clear:both;
+	display:block;
+	}
+
+#fashionltdstore #fashion_topics li {
+	margin:0 0 8px 0;
+	/*display:inline-block;
+	float:left;
+	margin-right:10px;
+	width:48%*/
+	}
+
+
+#fashionltdstore h2.sub {
+	font-family: 'Gentium Book Basic', serif ;
+	font-size:180%;
+	color:#666;
+	text-align:left;
+	}
+
+
+#fashionltdstore .serif {
+	font-family: 'Gentium Book Basic', serif;
+	}
+
+
+#fashionltdstore .mt20 {
+	margin-top:20px;
+	}
+
+#fashionltdstore .ml20 {
+	margin-left:20px;
+	}
+
+#fashionltdstore .mb5 {
+	margin-bottom:5px;
+	}
+
+#fashionltdstore .mb10 {
+	margin-bottom:10px;
+	}
+
+#fashionltdstore .mb20 {
+	margin-bottom:20px;
+	}
+
+#fashionltdstore .fashion_navi {
+	border:1px solid #666; 
+	padding:10px 20px; 
+	text-align:left; 
+	font-size:130%;
+	}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------
+	fashion common btn-link ( width : 960px ; )
+--------------------------------------------------------------------- */
+#fashionltdstore_link h3.go_fashion {
+	width:960px;
+	height:84px;
+	background:url(http://www.famima.com/images/p/fashion/back_fashion.jpg) no-repeat;
+}
+
+#fashionltdstore_link .btn_fashion {
+	margin:0 0 0 434px;
+	width:526px;
+}
+
+#fashionltdstore_link .left {
+	float:left;
+	display:inline;
+	}
+
+#fashionltdstore_link .right {
+	float:right;
+	display:inline;
+	}
+
+#fashionltdstore_link .mt24 {
+	margin-top:24px;
+	}
+
+#fashionltdstore_link .mt35 {
+	margin-top:35px;
+	}
+
+

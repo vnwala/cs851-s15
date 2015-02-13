@@ -1,0 +1,127 @@
+@charset "shift_jis";
+
+/*
+Title: awamori
+URI: http://famima.com/shop/
+*/
+
+#prkkz-wrap img, #prkkz-wrap p, #prkkz-wrap div{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#prkkz-wrap h1, #prkkz-wrap h2, #prkkz-wrap h3, #prkkz-wrap h4, #prkkz-wrap h5,
+#prkkz-wrap img, #prkkz-wrap p, #prkkz-wrap div, #prkkz-wrap ul, #prkkz-wrap li, #prkkz-wrap table{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#prkkz-wrap .clear{
+	margin:0; padding:0; clear:both;}
+	
+#prkkz-wrap .base{
+	margin:0; padding:0;}
+#prkkz-wrap .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+	
+/* -------------------------------------------- */
+#prkkz-wrap{
+	margin:0; padding:0; width:700px;}
+
+#prkkz-wrap .BG{
+	width:700px; background-color:#fcf9e8;}
+	
+#prkkz-wrap .headerTXT{
+	width:415px; float:left;}
+#prkkz-wrap .headerBT{
+	width:285x; float:left;}
+	
+#prkkz-wrap .title{
+	width:700px; clear:both;}
+	
+#prkkz-wrap .ctgry1_bg{
+	width:700px; background:url(http://www.famima.com/images/p/prikkiizu/ctgry1_bg1.gif) repeat-y;}
+
+#prkkz-wrap .ctgry1_bg .photo{
+	width:142px; float:left;}
+#prkkz-wrap .ctgry1_bg .txtBase{
+	width:558px; float:left;}
+#prkkz-wrap .ctgry1_bg .txtBase p{
+	line-height:120%; color:#333333; width:536px; padding-bottom:10px;}
+
+#prkkz-wrap .ctgry2_recipeBG{
+	width:700px; background:url(http://www.famima.com/images/p/prikkiizu/recipe_bg.gif) repeat-y;}
+#prkkz-wrap .ctgry2_recipeBGbtm{
+	width:700px; height:14px; background:url(http://www.famima.com/images/p/prikkiizu/recipe_bgbtm.gif) no-repeat;}
+
+#prkkz-wrap .ctgry2_recipeBG .r-photo{
+	width:280px; float:left;}
+#prkkz-wrap .ctgry2_recipeBG .r-txtBase{
+	width:420px; float:left;}
+	
+#prkkz-wrap .ctgry2_recipeBG .r-txtBase p{
+	width:380px; color:#333333; line-height:130%; padding:0 0 5px 7px;}
+
+#prkkz-wrap .ctgry2_recipeBG .r-txtBase .bt{
+	width:133px; padding:0 0 0 7px;}
+	
+#prkkz-wrap #linkBase{
+	padding:15px 0 15px 25px;}
+
+#prkkz-wrap .ctgry2_itemBG{
+	width:700px; background:url(http://www.famima.com/images/p/prikkiizu/ctgry2_bg1.gif) repeat-y;}
+#prkkz-wrap .ctgry2_itemIMG{
+	width:319px; float:left;}
+#prkkz-wrap .ctgry2_itemTXTBase{
+	width:381px; float:left;}
+	
+#prkkz-wrap .banner{
+	padding:10px 0 20px 15px;}
+	
+	
+#prkkz-wrap dl#mediainfo{
+	width:670px;
+	margin:0 0 15px 0; padding:0 0 0 15px;}
+	
+#prkkz-wrap #mediainfo dt{
+	color: #cc3333; font-size:85%;
+	margin:0; padding:5px 0 0 0;}
+	
+#prkkz-wrap #mediainfo dd{
+	padding:2px 0 5px 0; margin:0; font-size:90%; color:#333333; line-height:130%;
+	width:660px; border-bottom:dotted 1px #999999;
+}
+
+
+
+/* clearfix */
+#prkkz-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#prkkz-wrap .clearfix {
+  min-height: 1px;}
+
+* html #prkkz-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #prkkz-wrap { 
+	height: 1%;}
+
+
+
+
+
+

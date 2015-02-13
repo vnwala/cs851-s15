@@ -1,0 +1,124 @@
+$(document).ready(function()
+{
+if( typeof console === "undefined" )
+{
+console = {
+log : function()
+{
+}
+};
+}
+try
+{
+$(document).foundation();
+}
+catch( e )
+{
+
+ console.log( "WARN: foundation init failed: " + e ); 
+}
+if( $(window).width() < 940 )
+{
+$('.settings-icon').parent().hide();
+
+ }
+if( $('.trending-topics-nav li:first-child').width() + $('.trending-topics-nav li:nth-child(2)').width() + $('.trending-topics-nav li:nth-child(3)').width() + $('.trending-topics-nav li:last-child').width() > ($('.search-bar').width() - ($('#globalNavSimpleSearchForm').width() + 40))) { $('.trending-topics-nav li:last-child').hide()}
+$('.toggle-topbar').click(function(e)
+{
+console.log("THIS: ", $(this).parent());
+if( $(window).width() < 940 )
+{
+if( $('.top-bar').hasClass("expanded") )
+{
+$('.top-bar').animate({
+height : 45
+}, 200);
+$('.top-bar').removeClass("expanded");
+}
+else
+{
+$('.top-bar').animate({
+height : '100%'
+}, 200);
+$('.top-bar').addClass("expanded");
+}
+}
+});
+$('.glossary-term').hover(function()
+{
+var glossBod = $('body').offset();
+var glossOff = $(this).offset();
+var glossTerm = $(this).attr('definition');
+$('.glossary-container').html(glossTerm);
+var glossBottom = $('.glossary-box').height() + 15;
+var glossCenter = $('.glossary-box').width()/2;
+var glossTermCenter = $(this).width()/2;
+$('.glossary-box').animate({
+left : (glossOff.left - glossBod.left) + glossTermCenter - glossCenter
+, top : glossOff.top - glossBottom
+});
+$('.glossary-box').fadeIn();
+},
+function() {
+$('.glossary-box').fadeOut();
+});
+if( $(window).width() < 481 ) {
+$('.simple-search-container').show();
+$('.search-button').addClass("searching");
+$('.search-bar #globalNavSimpleSearchForm').addClass("expanded");
+$('.search-bar #globalNavSimpleSearchForm fieldset').addClass("expanded");
+}
+else {
+$('.search-link').click(
+function()
+{
+if($(this).hasClass("collapsed")) {
+if( $(window).width() < 940) {$('.advanced-search').fadeIn(400)}
+$('.trending-topics-nav').fadeOut(400);
+var delayopen = setTimeout(function(){
+$('.search-bar #globalNavSimpleSearchForm').addClass("expanded");
+$('.search-bar #globalNavSimpleSearchForm fieldset').addClass("expanded");
+$('.simple-search-container').fadeIn(400);
+$("input[name='simpleSearch']").focus();
+}, 500); 
+$(this).removeClass("collapsed");
+$('.search-button').addClass("searching");
+}
+else {
+if( $(window).width() < 940) {$('.advanced-search').fadeOut(400)}
+$('.simple-search-container').fadeOut(400);
+var delayclose = setTimeout(function(){
+$('.search-bar #globalNavSimpleSearchForm').removeClass("expanded");
+$('.search-bar #globalNavSimpleSearchForm fieldset').removeClass("expanded");
+$('.trending-topics-nav').fadeIn(400);
+}, 500); 
+$(this).addClass("collapsed");
+$('.search-button').removeClass("searching");
+}
+});
+$('.close-search').click(
+function()
+{
+if($('.search-link').hasClass("collapsed")) {
+$('.trending-topics-nav').fadeOut(400);
+var delayopen = setTimeout(function(){
+$('.search-bar #globalNavSimpleSearchForm').addClass("expanded");
+$('.search-bar #globalNavSimpleSearchForm fieldset').addClass("expanded");
+$('.simple-search-container').fadeIn(400);
+}, 500); 
+$(this).removeClass("collapsed");
+$('.search-button').addClass("searching");
+}
+else {
+$('.simple-search-container').fadeOut(400);
+var delayclose = setTimeout(function(){
+$('.search-bar #globalNavSimpleSearchForm').removeClass("expanded");
+$('.search-bar #globalNavSimpleSearchForm fieldset').removeClass("expanded");
+$('.trending-topics-nav').fadeIn(400);
+}, 500); 
+$('.search-link').addClass("collapsed");
+$('.search-button').removeClass("searching");
+}
+});
+}
+});

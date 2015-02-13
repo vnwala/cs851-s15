@@ -1,0 +1,110 @@
+/* 
+ * General usage:
+ *
+ * Attach this to an end card's play button so the script knows which end card is currently being viewed. 
+ * nbcCarousel.init(nbcVideoPageUtils.targetEndCard,'videoBox',false);
+ *
+ * Attach these to the click events of the navigation elements
+ * nbcCarousel.pressedRightArrow()
+ * nbcCarousel.pressedLeftArrow()
+*/
+
+var nbcCarousel = {};
+
+
+    nbcCarousel.howManyToDisplay = 3; // How many stories should be in the visible region. Sets width of carousel.
+    nbcCarousel.scrollBy = null;
+    nbcCarousel.arrowPadding = 0; // Hard coded for now, calculate dynamically later.
+    currentScrollPos = 0;
+
+    nbcCarousel.init = function(targetContainer,targetList,snapStatus) {
+        //U.log('nbcCarousel.init initialized');
+        nbcCarousel.limiter = (nbc.omniture.pageType == "home" || (nbc.omniture.pageType == "blog" && nbc.gptParams.pageData.adContentType != "Blog Post")) ? jQuery(targetContainer).parent().attr('id') : jQuery(targetContainer).attr('id');
+        targetContainer.hover(function() {
+             nbcCarousel.limiter = (nbc.omniture.pageType == "home" || (nbc.omniture.pageType == "blog" && nbc.gptParams.pageData.adContentType != "Blog Post")) ? jQuery(this).parent().attr('id') : jQuery(this).attr('id');
+             jQuery('.prev, .next').unbind();
+             jQuery("#"+ nbcCarousel.limiter + " .next").one('click',nbcCarousel.pressedRightArrow);
+             jQuery("#"+ nbcCarousel.limiter + " .prev").one('click',nbcCarousel.pressedLeftArrow);
+        });
+        nbcCarouselHash = nbcCarousel.limiter;
+
+        nbcCarousel[nbcCarouselHash] = {};
+        nbcCarousel[nbcCarouselHash].stories = jQuery(targetContainer).find('.'+targetList+' li');
+
+        nbcCarousel[nbcCarouselHash].targetEndCard = nbcVideoPageUtils.targetEndCard;
+        nbcCarousel[nbcCarouselHash].storyCount = nbcCarousel[nbcCarouselHash].stories.length;
+        nbcCarousel[nbcCarouselHash].storyWidth = parseInt(jQuery(nbcCarousel[nbcCarouselHash].stories.get(0)).width());
+        nbcCarousel[nbcCarouselHash].storyHeight = parseInt(jQuery(nbcCarousel[nbcCarouselHash].stories.get(0)).height());
+        nbcCarousel[nbcCarouselHash].storyLeftMargin = parseInt(jQuery(nbcCarousel[nbcCarouselHash].stories.get(0)).css('margin-left'));
+        nbcCarousel[nbcCarouselHash].storyRightMargin = parseInt(jQuery(nbcCarousel[nbcCarouselHash].stories.get(0)).css('margin-right'));
+        nbcCarousel[nbcCarouselHash].widthOfOneStory = (nbcCarousel[nbcCarouselHash].storyWidth + nbcCarousel[nbcCarouselHash].storyLeftMargin + nbcCarousel[nbcCarouselHash].storyRightMargin);
+        nbcCarousel[nbcCarouselHash].completeWidth = ((nbcCarousel[nbcCarouselHash].storyWidth + nbcCarousel[nbcCarouselHash].storyLeftMargin + nbcCarousel[nbcCarouselHash].storyRightMargin)) * (nbcCarousel[nbcCarouselHash].storyCount);
+        nbcCarousel[nbcCarouselHash].carouselWidth = (nbcCarousel.howManyToDisplay * nbcCarousel[nbcCarouselHash].widthOfOneStory);
+        nbcCarousel[nbcCarouselHash].scrollBy = nbcCarousel[nbcCarouselHash].carouselWidth;
+
+        nbcCarousel[nbcCarouselHash].totalPages = Math.ceil((nbcCarousel[nbcCarouselHash].storyCount / nbcCarousel.howManyToDisplay));
+        nbcCarousel[nbcCarouselHash].currentPage = 1;
+        nbcCarousel[nbcCarouselHash].status = "nbcCarousel found "+nbcCarousel[nbcCarouselHash].storyCount+" videos to scroll.";
+        jQuery(nbcVideoPageUtils.targetEndCard).find('.videoBox').css('left', 0);
+        jQuery('#'+ nbcCarouselHash + ' .videoBox').css({'width':nbcCarousel[nbcCarouselHash].completeWidth+'px'});
+        jQuery("#"+ nbcCarouselHash + " .next").removeClass('noArrow');
+        jQuery("#"+ nbcCarouselHash + " .prev").addClass('noArrow');
+        if(nbcCarousel[nbcCarouselHash].totalPages == 0){
+            jQuery(nbcCarousel[nbcCarouselHash].targetEndCard).find('p.related').html('More videos (1 of 1)');
+        }   else{
+                jQuery(nbcCarousel[nbcCarouselHash].targetEndCard).find('p.related').html('More videos (1 of '+nbcCarousel[nbcCarouselHash].totalPages+')');    
+        }
+        
+        return nbcCarousel[nbcCarouselHash].status;
+        
+    
+    }
+
+
+nbcCarousel.pressedRightArrow = function() {
+    var myParentId = nbcCarousel.limiter;
+    var buttonBindCheck = jQuery._data( $("#"+ myParentId + " .next").get(0), "events" );
+    if (typeof buttonBindCheck === "undefined" ) {
+        var tmpTarget = jQuery(nbcCarousel[myParentId].targetEndCard).get(0);
+        var useThisRelatedVideos = jQuery(tmpTarget).find('.videoBox');
+        if((jQuery(useThisRelatedVideos).position().left * -1) + (nbcCarousel[myParentId].scrollBy) >= nbcCarousel[myParentId].completeWidth) {
+            jQuery("#"+ nbcCarousel[myParentId].limiter + " .next").one('click',nbcCarousel.pressedRightArrow);
+        } else {
+            jQuery(useThisRelatedVideos).animate({'left':'-='+(nbcCarousel[myParentId].scrollBy) +'px'},{complete:function() {jQuery("#"+ myParentId + " .next").one('click',nbcCarousel.pressedRightArrow);}});
+            nbcCarousel[myParentId].currentPage+=1;
+            jQuery(nbcCarousel[myParentId].targetEndCard).find("p.related").html('More videos ('+nbcCarousel[myParentId].currentPage+' of '+nbcCarousel[myParentId].totalPages+')');
+            if(nbcCarousel[myParentId].currentPage > 1){
+                $("#"+ myParentId + " .prev").removeClass('noArrow');
+            }
+            if(nbcCarousel[myParentId].currentPage == nbcCarousel[myParentId].totalPages){
+                $("#"+ myParentId + " .next").addClass('noArrow');
+            }
+        }
+    }
+}
+
+nbcCarousel.pressedLeftArrow = function() {
+    var myParentId = nbcCarousel.limiter;
+    
+    var buttonBindCheck = jQuery._data( $("#"+ myParentId + " .prev").get(0), "events" );
+    if (typeof buttonBindCheck === "undefined" ) {
+        var tmpTarget = jQuery(nbcCarousel[myParentId].targetEndCard).get(0);
+        var useThisRelatedVideos = jQuery(tmpTarget).find('.videoBox');
+        if(((jQuery(useThisRelatedVideos).position().left * -1) - nbcCarousel[myParentId].scrollBy) < 0) {
+
+            jQuery("#"+ nbcCarousel[myParentId].limiter + " .prev").one('click',nbcCarousel.pressedLeftArrow);
+        } else {
+            
+            jQuery(useThisRelatedVideos).animate({'left':'+='+(nbcCarousel[myParentId].scrollBy) +'px'},{complete:function() {jQuery("#"+ myParentId + " .prev").one('click',nbcCarousel.pressedLeftArrow);}});
+            nbcCarousel[myParentId].currentPage-=1;
+            jQuery(nbcCarousel[myParentId].targetEndCard).find("p.related").html('More videos ('+nbcCarousel[myParentId].currentPage+' of '+nbcCarousel[myParentId].totalPages+')');
+            if(nbcCarousel[myParentId].currentPage == 1){
+                $("#"+ myParentId + " .prev").addClass('noArrow');
+            }
+            if(nbcCarousel[myParentId].currentPage != nbcCarousel[myParentId].totalPages){
+                $("#"+ myParentId + " .next").removeClass('noArrow');
+            }
+        }
+    }
+} //END nbcCarousel.pressedLeftArrow
+

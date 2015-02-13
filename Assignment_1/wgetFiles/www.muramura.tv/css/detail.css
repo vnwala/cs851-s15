@@ -1,0 +1,558 @@
+
+/*========================================
+
+DETAIL AREA CSS
+
+========================================*/
+
+#detail-main {
+	float: left;
+	width: 630px;
+}
+
+#player_outer {
+	margin: 10px 0;
+}
+
+#placeholder {
+	/* margin: 10px 0; */
+}
+
+#placeholder2_wrapper {
+	margin-bottom: 10px;
+}
+
+#jwbanner {
+	background: url("http://www.muramura.tv/images/bg_cloud.png") no-repeat scroll 0 0 transparent;
+	color: #FFFFFF;
+	font-size: 12px;
+	height: 33px;
+	left: 430px;
+	line-height: 28px;
+	position: relative;
+	text-align: center;
+	top: 318px;
+	width: 201px;
+	z-index: 100;
+}
+
+
+
+/*========================================
+
+INFORMATION AREA
+
+========================================*/
+
+img.newest {
+	margin: 0 5px 2px 0;
+}
+
+#detail-main h1 {
+	padding: 2px 5px;
+	color: #000;
+	background: none;
+	background-color: #fc0;
+	font-size: 16px;
+	display: inline;
+	line-height: 1.8em;
+}
+
+#detail-main h2 {
+ q position:relative;
+}
+
+#detail-main h2 span {
+	position: absolute;
+	top: 3px;
+	_top: 0;
+	right: 5px;
+	font-weight: normal;
+}
+
+#detail-main h2 span em {
+	color: #fc0;
+	padding: 0 10px;
+	font-style: normal;
+}
+
+#point-cont {
+	padding: 10px;
+	border: 1px solid #830003;
+	margin: 10px 0;
+}
+
+#point-cont p {
+	width: 200px;
+	margin: 0 auto 10px;
+}
+
+#point-cont dl {
+	width: 580px;
+	margin: 0 auto;
+}
+
+#point-cont dl dt {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	width: 230px;
+}
+
+#point-cont dl dt span {
+	display: block;
+	margin: 0 0 5px;
+	padding: 0 0 0 50px;
+}
+
+#point-cont dl dd {
+	display: block;
+	float: left;
+	width: 340px;
+}
+
+ul.info {
+	padding: 5px;
+	background-color: #282828;
+	line-height: 1.5em;
+	margin: 0 0 10px;
+}
+
+ul.info li {
+	padding: 0 0 5px;
+	margin: 0 0 5px;
+}
+
+ul.info li.lineup {
+	display: block;
+	float: left;
+	width: 120px;
+	padding: 0 20px 0 0;
+}
+
+ul.info li.lineup2 {
+	display: block;
+	float: left;
+ q width:220px;
+	padding: 0 20px 0 0;
+}
+
+ul.info li.lineup2 a, ul.info li.lineup3 a {
+	padding: 0 5px 0 0;
+}
+
+ul.info li.lineup3 {
+	display: block;
+	float: left;
+	width: 250px;
+	padding: 0;
+}
+
+ul.info li.comment {
+	clear: left;
+}
+
+ul.info li.genre a {
+	padding: 0 5px 0 0;
+}
+
+ul.info li.end {
+	border: none;
+}
+
+ul.info li em {
+	color: #fff;
+	padding: 0 5px 0 0;
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+
+/*========================================
+
+REVIEW
+
+========================================*/
+
+#review {
+	overflow: auto;
+	width: 620px;
+	padding: 5px;
+	/*	height:330px; */
+	margin: 0 0 10px;
+}
+
+#review ul {
+	margin: 0 0 10px;
+}
+
+#review ul.bsheep {
+	background-color: #151515;
+}
+
+#review ul em {
+	font-style: normal;
+	color: #fc0;
+}
+
+#review ul li span {
+	margin: 0 10px;
+	display: inline;
+}
+
+a.write-review {
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.txt-middle {
+	text-align: center !important;
+}
+
+#movie-comment-pagination {
+	font: bold 12px £Í£Ó £Ð¥´¥·¥Ã¥¯, Osaka;
+	padding-bottom: 30px;
+}
+
+#movie-comment-pagination a {
+	font-size: 12px £Í£Ó £Ð¥´¥·¥Ã¥¯, Osaka;
+}
+
+
+
+/*========================================
+
+GALLERY
+
+========================================*/
+
+#gallery {
+	margin: 10px 0;
+}
+
+#gallery ul {
+	margin: 0 0 0 -10px;
+}
+
+#gallery ul li {
+	display: block;
+	float: left;
+	margin: 0 0 10px 9px !important;
+	_margin: 0 0 10px 8px !important;
+	padding: 0 !important;
+}
+
+#gallery ul li.samp {
+q border:1px solid #f00;
+}
+
+
+
+/*========================================
+
+DL-AREA
+
+========================================*/
+
+#detail-main #dlarea {
+	margin: 0 0 10px;
+}
+
+#detail-main div.lefty {
+	display: block;
+	float: left;
+	width: 280px;
+}
+
+#detail-main div.righty {
+	display: block;
+	float: right;
+	width: 330px;
+}
+
+#detail-main #dlarea table {
+	border-collapse: collapse;
+	margin: 0 0 5px;
+	text-align: center;
+}
+
+#detail-main #dlarea table.rightside {
+	display: block;
+	float: right;
+}
+
+#detail-main #dlarea table th, #detail-main #dlarea table td {
+	padding: 5px;
+	border-left: 1px solid #a6a6a6;
+	border-right: 1px solid #a6a6a6;
+}
+
+#detail-main #dlarea table td.grey {
+	background-color: #151515;
+}
+
+#detail-main #dlarea table td.bottomline {
+	border-bottom: 1px solid #a6a6a6;
+}
+
+#detail-main #dlarea table th {
+	background-color: #a6a6a6;
+	color: #000;
+}
+
+#detail-main #dlarea table caption {
+	text-align: left;
+}
+
+#detail-main #dlarea table caption em {
+	color: #f00;
+	padding: 0 0 0 15px;
+}
+
+#detail-main #dlarea table em {
+	font-weight: bold;
+	font-style: normal;
+	padding: 0 5px 0 0;
+}
+
+#detail-main table span {
+	display: block;
+	padding: 1px 0;
+	text-align: center;
+}
+
+.btn-dl {
+	background: url(http://www.muramura.tv/images/btn-dlall.gif) 0 0 no-repeat;
+	width: 28px;
+	height: 28px;
+	display: block;
+	text-decoration: none !important;
+	margin: 0 auto;
+}
+
+.btn-dl0 {	/* sample area button no link or hover */
+	background-position: 0 0;
+	text-decoration: none !important;
+}
+
+.btn-dl1 {	/* member area btn */
+	background-position: -28px 0;
+	text-decoration: none;
+}
+
+.btn-dl1:hover { /* member area btn hover */
+	background-position: -56px 0;
+	text-decoration: none;
+}
+
+
+
+/*========================================
+
+MEMBER REVIEW WRITING AREA
+
+========================================*/
+
+#writereview {
+}
+
+#writereview form {
+	margin: 20px 0;
+}
+
+#writereview img {
+	margin: 0 0 10px;
+}
+
+#writereview label {
+	padding: 0 10px 0 0;
+}
+
+#writereview form textarea {
+	width: 615px;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+#writereview form input.enter {
+	margin: 0 auto;
+	width: 160px;
+	display: block;
+}
+
+#writereview ul {
+	margin: 10px 0;
+}
+
+
+/* Added 10/04/2010 for bookmark */
+
+.fav {
+	padding: 5px;
+	border: 1px solid #333;
+	margin: 10px 0 20px;
+	display: block;
+	height: 54px;
+}
+
+.fav a img {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+}
+
+.fav a.tlink {
+	text-decoration: underline !important;
+}
+
+
+/*	Mylist Area */
+
+#mylist-cont {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #ccc;
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+#mylist-cont dl {
+	margin: 0 0 10px !important;
+	display: block;
+	padding: 0 0 10px;
+	height: 80px;
+}
+
+#mylist-cont dl.type2 {
+	margin: 0 0 10px !important;
+	display: block;
+	padding: 0;
+	height: 102px;
+	clear: left;
+}
+
+#mylist-cont div dl dt {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#mylist-cont div p {
+	font-weight: bold;
+	margin: 10px 0;
+	clear: left;
+}
+
+#mylist-cont div.m1 {
+	width: 180px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#mylist-cont div.m2 {
+	width: 180px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#mylist-cont div.m3 {
+	float: left;
+	margin: 0;
+	width: 180px;
+}
+
+#mylist-cont div.m3 ul {
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 0;
+}
+
+#mylist-cont div.m3 ul li {
+	padding: 2px 0;
+}
+
+#mylist-cont div.m3 dl {
+	float: left;
+	margin: 0 10px 10px 0;
+	width: 240px;
+}
+
+#mylist-cont div.sp2 {
+	width: 100%;
+}
+
+
+/* newly added for D2 review 05/24/11 */
+
+div.review div.commentBox {
+	background-color: #000 !important;
+	float: left;
+	padding: 5px !important;
+	width: 620px !important;
+	height: 100px !important;
+	overflow: scroll !important;
+	overflow-x: hidden !important;
+}
+
+div.review div.eachComment {
+	border-bottom: 1px solid #ccc;
+	clear: both;
+	line-height: 1.4em;
+	margin: 0 auto;
+	padding: 5px !important;
+	width: 610px !important;
+}
+
+span.count {
+	color: #000 !important;
+}
+
+.datePost {
+	color: #ff0 !important;
+}
+
+#pagination {
+	width: 630px !important;
+}
+
+
+/* added for yokoku-date 04/25/12 */
+
+div.yokoku-date {
+	color: #FF0000 !important;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px;
+}
+
+
+
+/*========================================
+
+DL¥ê¥ß¥Ã¥È
+
+========================================*/
+
+#dl-limit-msg {
+	border: 2px solid #DF0101;
+	margin: 12px 0;
+	padding: 18px 24px;
+	text-align: center;
+}
+
+#dl-limit-msg span {
+	color: #DF0101;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin: 0;
+}
+
+#dl-limit-msg p.dl-limit-desc {
+	color: #ccc;
+	margin: 10px 0 0 0;
+	padding: 0;
+}

@@ -1,0 +1,5 @@
+#image-navigation .navi-image { position:relative;}
+#image-navigation .navi-image a { display:block; }
+#image-navigation .navi-image a { position:absolute; top:0; left:0; z-index:8; }
+#image-navigation .navi-image a.active { z-index:10; }
+#image-navigation .navi-image a.last-active { z-index:9; }

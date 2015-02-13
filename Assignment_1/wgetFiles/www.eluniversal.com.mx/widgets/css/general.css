@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+.clear{clear:both;}
+select{outline: none !important;}
+select:focus{outline: none !important;}
+option:focus{outline: none !important;}
+.separa{height:50px;}
+ul{list-style-type:none;margin:0;padding:0;}
+a{text-decoration:none;}
+
+#MxM{width:300px;height:auto;}
+#Widget{width:300px;height:auto;}
+#Horoscopos{width:300px;height:auto;}
+
+.WidgetEU a#ElUniversal{display:block;cursor:pointer;background:url(http://www.eluniversal.com.mx/widgets/img/el_universal.png) no-repeat;width:165px; height:15px;margin-bottom:5px;}
+.WidgetEU .Contenedor{background:#fff;font:13px Arial, Helvetica, sans-serif;border:1px solid #aaa;}
+.WidgetEU .Contenedor .Header{margin:6px 6px 0;}
+.WidgetEU .Contenedor .Header .Title{font:normal 20px Georgia, "Times New Roman", Times, serif;color:#900;float:left;}
+.WidgetEU .Contenedor .Header .EstiloSelect{margin:0;width: 120px;height: 28px;overflow: hidden;background:#f3f3f3  url(http://www.eluniversal.com.mx/widgets/img/btn_secciones.png) no-repeat 105px 12px;border:none;float:right;}
+.WidgetEU .Contenedor .Header .EstiloSelect select{background:transparent;width: 150px;padding: 2px 2px 2px 6px;font-size: 11px;height: 28px;border:none;-webkit-appearance: none;}
+.WidgetEU .Contenedor ul#Noticias{margin:10px 6px;height:303px;overflow-y:scroll;padding:0 15px 0 0;list-style-type:none;}
+.WidgetEU .Contenedor ul#Noticias li{border-bottom: 1px solid #D2D2D2;clear: both;padding: 5px 0;height: auto;}
+.WidgetEU .Contenedor ul#Noticias li a{color:#000;text-decoration:none;}
+.WidgetEU .Contenedor ul#Noticias li a:hover{text-decoration:underline;}
+.WidgetEU .Contenedor ul#Noticias li span{color: #8B272D !important;font-weight: bold;display:block;float:left;}
+.WidgetEU .Contenedor ul#Noticias li .timeIndent{margin: 0 0 0 35px;}
+.WidgetEU .Contenedor .Foot{height:22px;}
+.WidgetEU .Contenedor .Foot #LlevateWidget{float:right;display:block;margin:4px 6px 6px 0;font-size:12px;color:#1a548f;text-decoration:none;background:url(../img/code.png) no-repeat right center;padding-right:20px;}
+
+.WidgetEU #Videos{margin:6px 0 10px;display:block;}
+.WidgetEU #Videos img#Player{width:100%;}
+.WidgetEU #Videos ul{margin-top:7px;margin-left:8px;}
+.WidgetEU #Videos ul li{float:left;width:89px;margin-right:13px;line-height:11px;}
+.WidgetEU #Videos ul li.clear{float:none;margin:0;}
+.WidgetEU #Videos ul li a{color:#555;font-size:11px;text-decoration:none;}
+.WidgetEU #Videos ul li a:hover{text-decoration:underline;}
+.WidgetEU #Videos ul li a img{border:1px solid #aaa;}
+.WidgetEU #Videos ul li a span{margin-top:3px;line-height:11px;display:block;}
+/*.WidgetEU #VideosPrincipal{display:block;height:200px;}*/
+.WidgetEU #videosSecundarios{display:block;margin-top:7px;}
+.WidgetEU #tituloPrincipal{color: #DDDDDD; background-color:#000000;height: auto;padding: 7px;text-align: center;font: 16px Georgia,"Times New Roman",Times,serif;}
+.WidgetEU .Contenedor .Foot .Controles{float:left;margin-left:6px;}
+.WidgetEU .Contenedor .Foot .Controles a{float:left;color:#000;font-size:10px;text-decoration:none;padding-top:3px;}
+.WidgetEU .Contenedor .Foot .Controles a span{width:17px;height:17px;background-color:#000;display:block;margin-top:-3px;}
+.WidgetEU .Contenedor .Foot .Controles a:hover{text-decoration:none;}
+.WidgetEU .Contenedor .Foot .Controles a.Retroceder{margin-right:3px;}
+.WidgetEU .Contenedor .Foot .Controles a.Retroceder span{background:#000 url(http://www.eluniversal.com.mx/widgets/img/retroceder.png) no-repeat center center;margin-right:5px;float:left;}
+.WidgetEU .Contenedor .Foot .Controles a.Retroceder:hover span{background:#666 url(http://www.eluniversal.com.mx/widgets/img/retroceder.png) no-repeat center center;}
+.WidgetEU .Contenedor .Foot .Controles a.Avanzar span{background:#000 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat center center;margin-left:5px;float:right;}
+.WidgetEU .Contenedor .Foot .Controles a.Avanzar:hover span{background:#666 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat center center;margin-left:5px;}
+
+.WidgetEU#Horoscopos .Contenedor .Header a#ElUniversal{float:left;margin:3px 0 0;}
+.WidgetEU#Horoscopos .Contenedor .Header .Title{float:right}
+.WidgetEU .Contenedor .Foot .Controles{}
+.WidgetEU .Contenedor .Foot .Controles a.VideoCompleto{line-height:17px;height:17px;background:#000 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat 105px center;display:block;padding:0 3px;color:#ddd;width:110px;}
+.WidgetEU .Contenedor .Foot .Controles a.VideoCompleto:hover{background:#666 url(http://www.eluniversal.com.mx/widgets/img/avanzar.png) no-repeat 105px center;}
+
+.WidgetEU #Videos ul#Signos{margin:10px auto 0;width: 260px;}
+.WidgetEU #Videos ul#Signos li{float:left;margin:0 10px 10px 0;width:55px;}
+.WidgetEU #Videos ul#Signos li a{width:55px;height:10px;padding-top:43px;text-align:center;text-decoration:none;opacity:1;}
+.WidgetEU #Videos ul#Signos li a:hover{opacity:0.8;}
+.WidgetEU #Videos ul#Signos li a#Aries{background:url(http://www.eluniversal.com.mx/widgets/img/signos/aries.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Tauro{background:url(http://www.eluniversal.com.mx/widgets/img/signos/tauro.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Geminis{background:url(http://www.eluniversal.com.mx/widgets/img/signos/geminis.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Cancer{background:url(http://www.eluniversal.com.mx/widgets/img/signos/cancer.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Leo{background:url(http://www.eluniversal.com.mx/widgets/img/signos/leo.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Virgo{background:url(http://www.eluniversal.com.mx/widgets/img/signos/virgo.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Libra{background:url(http://www.eluniversal.com.mx/widgets/img/signos/libra.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Escorpio{background:url(http://www.eluniversal.com.mx/widgets/img/signos/escorpio.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Sagitario{background:url(http://www.eluniversal.com.mx/widgets/img/signos/sagitario.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Capricornio{background:url(http://www.eluniversal.com.mx/widgets/img/signos/capricornio.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Acuario{background:url(http://www.eluniversal.com.mx/widgets/img/signos/acuario.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li a#Piscis{background:url(http://www.eluniversal.com.mx/widgets/img/signos/piscis.png) no-repeat top center;display:block;}
+.WidgetEU #Videos ul#Signos li.clear{float:none;margin:0;}

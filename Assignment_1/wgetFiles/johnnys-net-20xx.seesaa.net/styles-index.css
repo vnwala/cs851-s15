@@ -1,0 +1,676 @@
+/* font size & font family  --base-fontsize:10px-- */
+body                        {font-family:'ÉqÉâÉMÉmäpÉS Pro W3','Hiragino Kaku Gothic Pro','ÉÅÉCÉäÉI',Meiryo,'ÇlÇr ÇoÉSÉVÉbÉN',sans-serif; font-size: 62.5%; line-height: 1.7;}
+#banner                     {font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+#banner h1 a                {font-size: 360%; *font-size: 225%;}
+.tag-title                  {font-size: x-large;}
+h3.title                    {font-size: 200%; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+.tag-word                   {font-size: 85.7%;}
+
+/* 14px */
+.side                       {font-size: 140%;}
+.sidetitle                  {font-size: 140%; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+#banner .description        {font-size: 140%;}
+.blog .text                 {font-size: 140%;}
+.comments-body              {font-size: 140%;}
+.comments-head              {font-size: 140%;}
+#trackback                  {font-size: 140%;}
+.date                       {font-size: 140%; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+#calendar th                {font-size: 140%; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+.calendarhead               {font-size: 140%; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+.calendarday                {font-size: 140%;}
+.tag-body                   {font-size: 140%;}
+
+/* 12px */
+#tag_cloud                  {font-size: 120%;}
+.side-tag                   {font-size: 120%;}
+.posted                     {font-size: 120%;}
+.navi                       {font-size: 120%;}
+.syndicate                  {font-size: 120%;}
+.calendarhead span.calendarday { font-size: 85.7%;}
+.comments-post              {font-size: 85.7%;}
+.tag-more                   {font-size: 85.7%;}
+.tag-article-posted         {font-size: 85.7%;}
+
+#links,
+#links-left,
+.side,
+#content,
+.blog,
+.blogbody,
+.text {
+  overflow: hidden;
+}
+
+body {
+  background-image: url("http://blog.seesaa.jp/img/bg/simple_pink/bg.jpg");
+  background-color: #FFF;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a:link    { color: #369; text-decoration:none; font-family:'ÉqÉâÉMÉmäpÉS Pro W6',sans-serif;}
+a:visited { color: #AAA; text-decoration:none;}
+a:hover   { text-decoration: underline;}
+
+#links a:link    { text-decoration: underline;}
+#links a:visited { text-decoration: underline;}
+#links a:hover   { text-decoration: none;}
+
+#links-left a:link    { text-decoration: underline;}
+#links-left a:visited { text-decoration: underline;}
+#links-left a:hover   { text-decoration: none;}
+
+h2,h3 {padding: 0; margin: 0;}
+
+#container{
+  width: 1080px;
+  text-align: left;
+  margin: 0 auto;
+}
+#banner {
+  height: 300px;
+}
+
+#banner h1 {
+  overflow: hidden;
+  max-height: 175px;
+  margin: 0 0 5px;
+  padding-top: 60px;
+}
+
+#banner h1 a {
+  color: #000;
+  line-height: 1.2;
+}
+
+#banner .description{
+  color: #000;
+}
+.navi {
+  padding-bottom: 14px;
+  text-align: center;
+}
+.navi a{
+  text-decoration: none;
+  color: #333;
+}
+.navi a:hover {
+  text-decoration: underline;
+}
+#links-left{
+  float: left;
+  width: 300px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  color: #FFF;
+}
+#links {
+  width: 300px;
+  float: left;
+  padding: 0;
+  color: #FFF;
+}
+
+#links a:link,
+#links-left a:link {
+  color: #369;
+}
+
+.sidetitle {
+  color: #666;
+  text-align:left;
+  padding: 10px 0 0 15px;
+  margin-bottom: 0;
+  font-weight: 700;
+  border-radius: 8px 8px 0 0;
+}
+#links .sidetitle,
+#links-left .sidetitle {
+  height: 50px;
+  background: url("http://blog.seesaa.jp/img/bg/simple_pink/bg_section_l.png") no-repeat #F5F5F5 0 30px;
+  border-radius: 8px 8px 0 0;
+}
+
+#links .sidetitle { background: url("http://blog.seesaa.jp/img/bg/simple_pink/bg_section_l.png") no-repeat #F5F5F5 0 30px;}
+
+#links .side,
+#links .side-tag,
+#links-left .side,
+#links-left .side-tag {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 15px;
+  background: #F5F5F5;
+  color: #666;
+}
+
+#content{
+  float: left;
+  width: 760px;
+  margin-right: 20px;
+}
+.blog{
+  position: relative;
+  padding-top: 0;
+  margin-bottom: 40px;
+}
+
+.date{
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  text-align: left;
+  color: #F09;
+  font-weight: 700;
+  background: #F5F5F5;
+  border-radius: 8px;
+}
+
+.blogbody{
+  margin-bottom: 0;
+  padding: 0;
+  background: #FFF;
+  font-weight: normal;
+  border-radius: 8px;
+  }
+
+  h3.title {
+    padding: 20px 20px 0 20px;
+  }
+
+  a.title{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    display: block;
+  }
+  .blog .text{
+    margin: 0;
+    padding: 20px;
+    font-weight: 400;
+  }
+  .text:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  * html .text{
+    zoom: 1;
+  } /* IE6 */
+  *:first-child+html .text{
+    zoom: 1;
+  } /* IE7 */
+  .text blockquote{
+    margin: 10px -20px;
+    padding: 20px;
+    color: #666;
+    background-color: #F5F5F5;
+  }
+  .bookmark {
+    clear: both;
+    margin-top: 5px;
+  }
+.posted {
+  color: #313131;
+  padding: 0 20px 20px 0;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+#footer{ clear:both; }
+
+.powered {
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+.powered table{
+  margin: 0 auto;
+}
+.syndicatesy {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.syndicate a:link,
+.syndicate a:visited {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.syndicate a:hover {
+  text-decoration: underline;
+}
+
+#links #calendar,
+#links-left #calendar {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 0 0 10px 0;
+  background: #F5F5F5;
+  border-radius: 8px;
+}
+
+#links #calendar table,
+#links-left #calendar table{
+  width: 280px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+#links-left #calendar table {
+  width: 193px;
+}
+
+#links .calendarhead,
+#links-left .calendarhead {
+  height: 60px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  background: url("http://blog.seesaa.jp/img/bg/simple_pink/bg_section_l.png") no-repeat 0 35px;
+  color: #666;
+  text-align: center;
+  font-weight: 700;
+}
+
+#links-left .calendarhead {
+  background: url("http://blog.seesaa.jp/img/bg/simple_pink/bg_section_s.png") no-repeat 0 35px;
+}
+
+#links td.calendarday a,
+#links-left td.calendarday a {
+  display: block;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  font-weight: 700;
+  text-decoration:none;
+  color: #369;
+  text-decoration: underline;
+}
+
+#links td.calendarday a:hover,
+#links-left td.calendarday a:hover {
+  text-decoration: none;
+}
+
+#links .calendarhead .calendarday,
+#links-left .calendarhead .calendarday{
+  color: #999;
+}
+
+#links .calendarhead a:link,
+#links .calendarhead a:visited,
+#links .calendarhead .calendarday a:link,
+#links .calendarhead .calendarday a:visited,
+#links-left .calendarhead .calendarday a:link,
+#links-left .calendarhead .calendarday a:visited,
+#links-left .calendarhead a:link,
+#links-left .calendarhead a:visited {
+  text-decoration: none;
+  color: #666;
+}
+
+#links .calendarhead a:hover,
+#links .calendarhead .calendarday a:hover,
+#links-left .calendarhead .calendarday a:hover,
+#links-left .calendarhead a:hover {
+  text-decoration: underline;
+}
+
+#calendar th{ color: #666;}
+#calendar th.calendarday:first-of-type { color: #C33;}
+#calendar th.calendarday:last-of-type { color: #06C;}
+
+#calendar td{
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  background: #FFF;
+}
+
+.calendarday {
+  padding: 1px 2px;
+  color: #000;
+}
+
+.side input[type="text"]{
+  height: 20px;
+  margin: 0;
+  padding: 0 5px;
+  border: 1px solid #E0E0E0;
+  line-height: 22px;
+  width: 200px;
+  vertical-align: middle;
+}
+
+.side .input-submit{
+  float: right;
+  width: 40px;
+  height: 22px;
+  background:url("http://blog.seesaa.jp/img/bg/simple_pink/btn_search.png") no-repeat;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font-weight: 700;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  *margin-top: -22px;
+}
+
+.side input[type="text"]:hover,
+.side .input-submit:hover {
+  opacity: 0.9;
+  filter:alpha(opacity=90);
+  -ms-filter:"alpha(opacity=90)";
+}
+
+#comments .input-submit{
+  border: none;
+  margin-right: 10px;
+  width: 74px;
+  height: 34px;
+  cursor: pointer;
+  background: url("http://blog.seesaa.jp/img/bg/simple_pink/btn_submit.png") no-repeat;
+  color: #FFF;
+  font-weight: 700;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+}
+#comments .input-submit:hover{
+  opacity: 0.9;
+  filter:alpha(opacity=90);
+  -ms-filter:"alpha(opacity=90)";
+}
+
+#comments input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border: 1px solid #E0E0E0;
+  background: #FFF;
+}
+
+#comments {
+  background: url("http://blog.seesaa.jp/img/bg/simple_pink/bg_comments.png") no-repeat 0 0 #F5F5F5;
+  padding: 20px;
+  margin-top: 25px;
+}
+#comments form {
+  margin: 0;
+}
+textarea{
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+}
+.comments-head{
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  color: #F09;
+}
+.comments-body {
+  margin: 0;
+  padding: 0;
+}
+.comments-body .text{
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+.comments-post {
+  color: #666;
+  padding: 5px 10px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+#trackback {
+  padding: 20px;
+  margin-top: 25px;
+  background: #FFF;
+  color: #333;
+}
+.copyright{
+  text-align:center;
+}
+.diet-content{
+  padding-left:10px;
+}
+#diet-foods{
+  padding-left:10px;
+}
+.food-title{
+  width: 20%;
+  clear: left;
+  float: left;
+}
+.food-content{
+  width: 75%;
+  padding-top: 10px;
+}
+#diet-container{
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+.diet-title{
+  padding: 2px 10px 2px 5px;
+  margin-top: 5px;
+}
+.diet-content{
+  padding-left: 10px;
+}
+#diet-foods{
+  padding-left: 10px;
+}
+.food-title{
+  width: 20%;
+  clear: left;
+  float: left;
+}
+.food-content{
+  width: 75%;
+  padding-top: 10px;
+}
+.tag-word{
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+  text-align: right;
+}
+.tag {
+  padding: 20px;
+  margin-top: 0;
+  background: #FFF;
+  color: #333;
+  border-radius: 8px;
+}
+#tag_cloud{
+  border: 1px solid #CCC;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+}
+#tag_cloud a {
+  padding: 2px;
+}
+.tag-title{
+  font-weight: bold;
+  text-align: left;
+}
+.tag-body{
+  margin: 10px 0px;
+  padding: 10px 0px 0px 0px;
+  position: relative;
+}
+.tag-service{
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 0 0 5px 0;
+  clear: left;
+  position: relative;
+}
+.tag-search{
+  text-align: right;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  position: relative;
+}
+.tag-article{
+  padding: 0 10px 10px 10px;
+  text-align: left;
+  position: relative;
+}
+.tag-article-title{
+  text-align:left;
+  padding: 0 0 5px 0;
+  font-weight: 700;
+  position: relative;
+}
+.tag-article-posted{
+  font-weight: 400;
+  position: relative;
+}
+.tag-article-summary{
+  padding: 0 10px;
+  line-height: 1.4;
+  position: relative;
+}
+.tag-more{
+  text-align: right;
+  margin: 10px 0;
+  clear: left;
+  position: relative;
+}
+.tag-photos{
+  float: left;
+  margin: 10px 5px;
+  position: relative;
+  width: 140px;
+  height: 200px;
+}
+.tag-photos-title{
+  line-height: 1.4;
+  padding: 5px 0;
+  text-align: left;
+  position: relative;
+}
+.tag-audios{
+  margin: 5px;
+  position: relative;
+}
+.tag-audios-title{
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 5px 0;
+  position: relative;
+}
+.tag-audios-posted{
+  font-weight: 400;
+  position: relative;
+}
+.tag-videos{
+  float:left;
+  margin: 10px 5px;
+  position: relative;
+}
+.tag-videos-title{
+  line-height: 1.4;
+  padding: 5px 0;
+  text-align: left;
+  position: relative;
+}
+.tag-navi{
+  clear: left;
+  text-align: center;
+  margin: 10px 0;
+  position: relative;
+}
+.listCategoryArticle{
+  margin-top: 5px;
+  padding: 10px 5px;
+  border: 1px solid #E0E0E0;
+}
+.listCategoryArticle ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 10px;
+  text-align: left;
+  list-style-position: outside;
+}
+.listCategoryArticle ul li {
+  margin: 0;
+  background:url(http://blog.seesaa.jp/img/listCategoryArticle.gif) no-repeat 0 4px;
+  padding-left: 12px;
+  line-height: 1.4;
+}
+
+/* twitter quote */
+.tweetBlockQuote {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.tweetBlockQuote img{
+  border: 0;
+}
+.tweetBlockQuote .tweetImg {
+  padding: 0;
+  width: 53px;
+  text-align: left;
+  overflow: hidden;
+  vertical-align: top;
+  float: left;
+  margin-right: 7px;
+}
+.tweetBlockQuote .tweetMain {
+  padding: 5px;
+  border: solid 1px #ddd;
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+  vertical-align: top;
+}
+.tweetBlockQuote .tweetMain a.tweetOwner{
+  color: #E86390;
+  font-weight: bold;
+  text-decoration: none;
+}
+.tweetBlockQuote .tweetMain a.tweetFriends{
+  font-weight: bold;
+  color: #26A6DC;
+  text-decoration: none;
+}
+.tweetBlockQuote .tweetMain .tweetText{
+  color: #000;
+}
+.tweetBlockQuote .tweetMain .tweetText a{
+  color: #000;
+  text-decoration: underline;
+}
+.tweetBlockQuote .tweetMain .tweetDate{
+  color: #9C9C9C;
+}
+.tweetBlockQuote .tweetBoth{
+  clear: both;
+}
+/* twitter quote */
+
+.seesaaArticleSearch .sASweb {
+  padding-top: 3px;
+  background-position: 0 6px;
+}
+
+.seesaaArticleSearch .sASarticle {
+  padding-top: 3px;
+  width: 140px;
+}
+
+.fanIco1,
+.fanIco2 {
+  margin-top: -7px;
+}

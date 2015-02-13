@@ -1,0 +1,252 @@
+CCI = CCI || {};
+CCI["JQ"] = {
+  "PAGER": function(bag) {
+			bag = bag || {};
+			var el = bag.el || 0;
+			$(el).live("click", function(e){
+				e.preventDefault();
+				bag.url = $(this)[0].href;
+				var pagId = $(this).closest("div").attr("id");
+				pagId = pagId.split("-pag");
+				bag.target = pagId[0];
+				bag.direction = $(this).attr("rel");
+				bag.clickedLink = this;
+				if (bag.url && bag.target){
+					CCI["JQ"].LOAD(bag);
+				}
+	});
+			
+		  },
+	"LOAD": function(bag) {
+				bag = bag || {};
+				var	url = bag.url || 0;
+				var target = bag.target || 0;
+				var direction = bag.direction || "-";
+				var clickedLink = bag.clickedLink || 0;
+				if (url && target){
+					
+					if (direction == "-") {
+						var slideInDirection = "left";
+						var slideOutDirection = "right";
+					} else {
+						var slideInDirection = "right";
+						var slideOutDirection = "left";
+					}
+					var el = $("#"+target);
+					if ($(el).is('.pag-load-under')) {
+						el = $(el).next();
+					}
+					
+					if (clickedLink) {
+						$(clickedLink).parent().addClass("loader-kit");
+					}
+					el.last().load(url, function(){
+						if (clickedLink) {
+						$(clickedLink).parent().removeClass("loader-kit");
+					}
+					});
+				}
+	
+	},
+	"TABBER": function(bag) {
+				bag = bag || {};
+				var nav = bag.nav || ".tabNav a";
+				if (nav){
+					$(nav).click(function(e){
+					e.preventDefault();
+					var target = $(this)[0].hash;
+//				console.log(target);
+					var containerNav = $(this).closest("div").attr("id");
+//				console.log(containerNav);
+					var containerTemp = containerNav.split("-nav");
+//				console.log(containerTemp);
+					var containerDiv = "#"+ containerTemp[0] +" div";
+					$(containerDiv).not(containerDiv + " div").hide().filter(target).show();
+					var navs = "#"+ containerTemp + nav;
+           		 	$(navs).each(function(e){$(this).removeClass('active');});
+   	      		 	$(this).addClass('active');
+   	      		 	return false;
+				});
+				
+				}	  
+	  },
+	  "INPUTVALUE": function(bag) {
+				bag = bag || {};
+				var el = bag.el || 0;
+				$(el).each(function(){
+				//Load
+				if(this.value == '') {
+            			this.value = $(this).attr('title');
+       			 	}
+				//Focus
+				$(this).focus(function(){
+						if(this.value == $(this).attr('title')){
+						this.value='';
+       			 	}});
+				//Blur
+					$(this).blur(function(){
+						if(this.value == '') {
+            			this.value = $(this).attr('title');
+       			 	}});
+					       			 });	
+ 		 
+	},
+	 "CROSSFADE" : {
+            "BUILD" : function(bag) {
+                 bag = bag || {};
+                 el = bag.el || 0;
+                 debug = bag.debug || 0;
+                 autoNav = (bag.navid) ? 1 : 0;
+                 bag.elid = $(bag.el).parent().attr("id");
+                 bag.itemLen = $(bag.el).length;
+                 bag.itemSize = $(bag.el).size();
+                 bag.stopOnHover = bag.stopOnHover || 0;
+                 bag.alreadyStopped = bag.alreadyStopped || 0;
+                 debugMain =  (bag.debug==1) ?  console.log("el=" + bag.el + " | debug=" + bag.debug + " | navid=" + bag.navid + " | itemLen=" + bag.itemLen + " | itemSize=" + bag.itemSize + " | navtype=" + bag.navtype + " ID=" + bag.elid) : 0;
+                 if(bag.itemLen > 1)
+                  {
+                      bag.itemrt = setTimeout(function () { CCI.JQ.CROSSFADE.NAVHELPER(bag); }, bag.delay);
+                      bag.action = "auto";
+                      if(bag.stopOnHover)
+                      {
+                          $('#'+bag.elid).hover(function() {
+                              clearTimeout(bag.itemrt);
+                              debugMain = (bag.debug==1) ? console.log('Timeout Cleared') : 0;
+                          },
+                          function() {
+
+                          // Forces to reset the slider to go to the next item once the current is done
+                          if(typeof bag.itemId !== "undefined") 
+                          {
+                              if(bag.alreadyStopped == 0)
+                              {
+                                  bag.itemId++;
+                              }
+                              bag.alreadyStopped = 1;
+                              debugMain = (bag.debug==1) ? console.log('Will restart on itemId '+bag.itemId) : 0;  
+                          }
+
+                          bag.itemrt = setTimeout(function () { CCI.JQ.CROSSFADE.NAVHELPER(bag); }, bag.delay);
+                          debugMain = (bag.debug==1) ? console.log('Timeout Restarted and set to '+bag.delay) : 0;
+
+                          }); 
+                      }
+                  }
+                    CCI.JQ.CROSSFADE.NAVBUILDER(bag);
+                 
+         }
+      , "NAVBUILDER" : function(bag) {
+                       if(bag.itemLen > 1 & bag.navtype == "range" & autoNav == 1) { $('#'+bag.navid).html('<span id="'+bag.elid+'-prev">&laquo;</span><span id="'+bag.elid+'-curr">1</span> of '+bag.itemLen+'<span id="'+bag.elid+'-next">&raquo;</span>');}    
+                 if(bag.itemLen > 1 & bag.navtype == "range" & autoNav == 0) {
+	                 //console.log("should add el");
+                       $('#'+bag.elid).prepend('<div id="'+bag.elid+'-nav"><span id="'+bag.elid+'-prev" class="control">&laquo;</span><span id="'+bag.elid+'-curr">1</span> of '+bag.itemLen+'<span id="'+bag.elid+'-next" class="control">&raquo;</span><div>'); }
+                    $('#'+bag.elid+'-prev').click(function() {
+                       bag.itemId = (bag.itemId) ? bag.itemId : 0;
+                       bag.itemId = (bag.itemId == 0) ? bag.itemLen - 1 : bag.itemId - 1;
+                       bag.itemNavId = (bag.itemId == 0) ? bag.itemLen - 1 : bag.itemId - 1;
+                       bag.action = "prevBtn";
+                       debugMain =  (bag.debug==1) ?  console.log("prev Clicked | itemId=" + bag.itemId + " | itemNavId="+ bag.itemNavId) : 0;
+                       clearTimeout(bag.itemrt);
+                       CCI.JQ.CROSSFADE.NAVHELPER(bag);
+                       });
+                     $('#'+bag.elid+'-next').click(function() {
+                       bag.itemId = (bag.itemId) ? bag.itemId : 0;
+                       bag.itemId = (bag.itemId == bag.itemLen) ? 0 : bag.itemId + 1;
+                       bag.itemNavId = (bag.itemId == bag.itemLen) ? 1 : bag.itemId + 1;
+                       bag.action = "nextBtn";
+                       debugMain =  (bag.debug==1) ?  console.log("Next Clicked | itemId=" + bag.itemId + " | itemNavId="+ bag.itemNavId) : 0;
+                       clearTimeout(bag.itemrt);
+                       CCI.JQ.CROSSFADE.NAVHELPER(bag);
+                       });
+    
+      
+      }  
+      , "ROTATE" : function(bag) {
+            bag = bag || {};
+            bag.action = "auto";
+            bag.itemId = (bag.action != "auto") ? bag.itemId : bag.itemId + 1;
+            debugRotate =  (bag.debug==1)? console.log("action=" + bag.action + "|itemId - Rotate=" + bag.itemId) : 0;
+            CCI.JQ.CROSSFADE.NAVHELPER(bag);
+	         
+         }
+      , "SLIDE" : function(bag) {
+            bag = bag || {};
+            clearTimeout(bag.itemrt);
+            debugSlide =  (bag.debug==1)? console.log("id to fade in =" + bag.itemId + "|Action in slide=" + bag.action) : 0;
+            $(bag.el).fadeOut(2000).eq(bag.itemId).fadeIn(2000);
+            //bag.itemId = (bag.action != "auto") ? bag.itemId : bag.itemId + 1;
+            bag.itemrt = setTimeout(function () { CCI.JQ.CROSSFADE.ROTATE(bag); }, bag.delay);
+          
+         }
+      , "NAVHELPER" : function(bag) {
+            bag = bag || {}; 
+            bag.itemId = (bag.itemId | bag.itemId == 0) ? bag.itemId : 0;  
+            bag.firstRun = (bag.firstRun) ? bag.firstRun : 1;
+            bag.itemId = (bag.firstRun == 1) ? 1 : bag.itemId;
+            bag.firstRun = 2;
+            bag.itemId = (bag.itemId >= bag.itemLen) ? 0 : bag.itemId;
+            bag.itemNavId = (bag.itemNavId) ? bag.itemId + 1 : 2;
+            bag.alreadyStopped = 0;
+            debugSlide =  (bag.debug==1)? console.log("item id =" + bag.itemId) : 0;
+            $('#'+bag.elid+'-curr').html(bag.itemNavId);
+               CCI.JQ.CROSSFADE.SLIDE(bag);     
+        }
+      }, 
+      "GALLERY" : {
+         "ROTATE" : function(bag) {
+            bag = bag || {};
+            bag.delay = 10000;
+//             console.log("rotate:" + bag.running + "-" + bag.clicked + "-" + bag.itemrt);
+            clearTimeout(bag.galleryrt);
+                if (bag.running!==1 && bag.clicked!==1){
+//                console.log("rotate if fired - sets timeout call for SLIDE");
+                    bag.galleryrt = setTimeout(function () { CCI.JQ.GALLERY.SLIDE(bag); }, bag.delay);
+                }
+            }
+      , "SLIDE" : function(bag) {
+            bag = bag || {};
+//            console.log("slide:" + bag.running + "-" + bag.clicked + "-" + bag.itemrt);
+            bag.running = (bag.running)? bag.running : 0;
+            clearTimeout(bag.itemrt);
+            if (bag.clicked!=1){
+            $(bag.canvas).fadeTo('slow', 0.5, function() {
+                $.post(bag.nextUrl, function(html){
+			     $(bag.canvas).html(html).fadeTo('slow', 1);	
+			     bag.running = 1;	
+			     CCI.JQ.GALLERY.ROTATE(bag);
+			     //bag.itemrt = setTimeout(function () { CCI.JQ.GALLERY.SLIDE(bag); }, bag.delay);
+                });
+                
+            });
+            }         
+         }
+        , "CLICK" : function(bag) {
+            bag = bag || {};
+            bag.clicked=0;
+            clearTimeout(bag.itemrt);
+             $(bag.canvas).fadeTo('slow', 0.5, function() {
+             $.post(bag.url +"&template=galleryajax&nocache=1", function(html){
+			 $(bag.canvas).html(html).fadeTo('slow', 1);	
+//			 console.log("click:" + bag.running);
+             bag.clicked=1;
+             bag.running=1;
+             CCI.JQ.GALLERY.ROTATE(bag);
+            });
+            
+    });
+
+
+        }
+        ,"PLAY" : function(bag) {
+            bag = bag || {};
+//            console.log("play clicked:" + bag.galleryrt);
+            clearTimeout(bag.galleryrt);
+                            }
+
+  }
+
+
+	  
+}
+ 
+

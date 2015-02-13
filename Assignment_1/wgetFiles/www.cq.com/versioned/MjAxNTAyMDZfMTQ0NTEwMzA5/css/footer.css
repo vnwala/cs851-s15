@@ -1,0 +1,32 @@
+footer {
+  font-size: 10px;
+  color: #fff;
+  padding: 15px 15px 15px 0px;
+  background-color: #093e5e;
+  /*background-image: url('images/cqrollcall-logo.png');
+  background-size:40px 40px;
+  background-position: 5px 15px;
+  background-repeat: no-repeat;*/
+   }
+.footer-logo {
+	float: left;
+	padding-right: 25px;
+	margin-left: 22px; 
+}
+footer a, footer div, footer div a, footer li, footer li a, footer address {
+	color: #fff !important;
+	font-decortation:none;
+}
+
+@media only print {
+	footer a, footer div, footer div a, footer li, footer li a, footer address { color: #000 !important; }
+	footer .row .columns { display: none; }
+	footer .row .columns:first-child, footer .row .columns:first-child span { display: inline; color: #000; background-color: #fff; }
+}
+
+@media only screen and (min-width: 939px) {
+footer {
+  font-size: 11px;
+  background-position: 15px center;
+   }
+}

@@ -1,0 +1,133 @@
+@charset "Shift_JIS";
+
+/*
+Title: tohokushoyu/ ajidouraku no sato
+URI: http://famima.com/shop/pages/banduke.aspx
+*/
+
+#tohokushoyu-wrap{
+	margin:0; padding:0 0 30px 0; width:700px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/bg2.jpg) repeat;}
+
+#tohokushoyu-wrap h1, #tohokushoyu-wrap h2, #tohokushoyu-wrap h3, #tohokushoyu-wrap h4,
+#tohokushoyu-wrap img, #tohokushoyu-wrap p, #tohokushoyu-wrap div, #tohokushoyu-wrap ul, #tohokushoyu-wrap li{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+	
+#tohokushoyu-wrap .clear{
+	margin:0; padding:0; font-size:0; clear:both;}
+
+#tohokushoyu-wrap #header{
+	width:700px; height:180px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/header.jpg) no-repeat;}
+
+#tohokushoyu-wrap #ItemBASE{
+	width:700px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/bg.jpg) repeat-y;}
+
+/* item01 */
+#tohokushoyu-wrap #item01IMG{
+	width:191px; height:290px; float:left;}
+	
+#tohokushoyu-wrap #item01Base{
+	width:509px; float:left;}
+
+#tohokushoyu-wrap #item01Name{
+	width:509px; height:79px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item01_name.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #item01Copy1{
+	width:509px; height:30px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item01_copy1.jpg) no-repeat;}
+
+#tohokushoyu-wrap #item01Copy2{
+	width:509px; height:38px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item01_copy2.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #item01Base p{
+	padding:5px 65px 10px 5px; text-align:left;
+	line-height:130%; color:#333333;}
+
+#tohokushoyu-wrap #item01Base .bt{
+	text-align:left; outline:none;}
+
+#tohokushoyu-wrap #item01Recipe{
+	width:700px; height:366px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item01_recipe.jpg) no-repeat;}	
+	
+/* item02 */
+#tohokushoyu-wrap #item02Base{
+	width:512px; float:left;}
+
+#tohokushoyu-wrap #item02IMG{
+	width:188px; float:left;}
+	
+#tohokushoyu-wrap #item02Name{
+	width:512px; height:155px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item02_name.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #item02Copy1{
+	width:512px; height:23px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item02_copy1.jpg) no-repeat;}
+
+#tohokushoyu-wrap #item02Copy2{
+	width:512px; height:33px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item02_copy2.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #item02Base p{
+	padding:5px 0 10px 68px; text-align:left;
+	line-height:130%; color:#333333;}
+
+#tohokushoyu-wrap #item02Recipe{
+	width:700px; height:360px; margin-top:20px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/item02_recipe.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #item02Base .bt{
+	padding-left:60px; text-align:left; outline:none;}
+
+#tohokushoyu-wrap #makerBase{
+	width:628px; background-color:#eed97f; margin:10px 0 0 36px; text-align:left;}
+
+#tohokushoyu-wrap #makerBase #makerTTL{
+	width:628px; height:51px; text-indent:-9999px;
+	background:url(http://www.famima.com/images/p/tohokushoyu/maker_ttl.jpg) no-repeat;}
+	
+#tohokushoyu-wrap #makerBase p{
+	padding:5px 20px; line-height:130%; color:#663300;}
+	
+#tohokushoyu-wrap #makerBase .bt{
+	padding:5px 0 10px 18px; outline:none;}
+
+
+/* add 20111221 */
+#tohokushoyu-wrap .itemBase{
+	margin:0 0 25px 60px; padding:0;}
+	
+#tohokushoyu-wrap .itemBase .item{
+	width:136px; float:left;
+	padding:0 5px;
+	margin-top:0;
+	text-align:left;}
+	
+#tohokushoyu-wrap .itemBase .item .price{
+	padding:4px 0;}
+
+
+
+/* clearfix */
+#tohokushoyu-wrap #bandukeitem_base .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+/* IE6 */
+* html #tohokushoyu-wrap { 
+	height: 1%;}

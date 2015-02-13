@@ -1,0 +1,257 @@
+@charset "shift_jis";
+
+.clear {
+	clear:both; /*floatÇÃâèú*/
+}
+.space_btm_10px {
+	margin-bottom: 10px;
+}
+.space_btm_20px {
+	margin-bottom: 20px;
+}
+.space_btm_30px {
+	margin-bottom: 30px;
+}
+.space_btm_60px {
+	margin-bottom: 60px;
+}
+.menu_list {
+	vertical-align:middle;
+	margin-right: 0.5em;
+}
+
+#contents {
+	padding-bottom:20px;
+}
+#contents #w940 {
+	width:940px;
+	text-align:left;
+}
+#contents h1, h2, h3, h4, ul, li, p, dl, dt, dd {
+	margin:0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0px;
+	padding-left: 0;
+}
+
+/*
+Title: ÉÅÅ[ÉãÉ}ÉKÉWÉì
+URI: http://famima.com/shop/info/mail.aspx
+*/
+
+#mail-wrap html, #mail-wrap body, #mail-wrap div, #mail-wrap span, #mail-wrap applet, #mail-wrap object, #mail-wrap iframe, #mail-wrap h1, #mail-wrap h2, #mail-wrap h3, #mail-wrap h4, #mail-wrap h5, #mail-wrap h6, #mail-wrap p, #mail-wrap blockquote, #mail-wrap pre, #mail-wrap a, #mail-wrap abbr, #mail-wrap acronym, #mail-wrap address, #mail-wrap big, #mail-wrap cite, #mail-wrap code, #mail-wrap del, #mail-wrap dfn, #mail-wrap em, #mail-wrap font, #mail-wrap img, #mail-wrap ins, #mail-wrap kbd, #mail-wrap q, #mail-wrap s, #mail-wrap samp, #mail-wrap small, #mail-wrap strike, #mail-wrap strong, #mail-wrap sub, #mail-wrap sup, #mail-wrap tt, #mail-wrap var, #mail-wrap b, #mail-wrap u, #mail-wrap i, #mail-wrap center, #mail-wrap dl, #mail-wrap dt, #mail-wrap dd, #mail-wrap ol, #mail-wrap ul, #mail-wrap li, #mail-wrap fieldset, #mail-wrap form, #mail-wrap label, #mail-wrap legend, #mail-wrap table, #mail-wrap caption, #mail-wrap tbody, #mail-wrap tfoot, #mail-wrap thead, #mail-wrap tr, #mail-wrap th, #mail-wrap td {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	}
+
+/* module
+--------------------------------------------- */
+.mail-mod {
+	margin-bottom: 10px;
+	}
+
+/* content
+--------------------------------------------- */
+
+.cred {
+	color:#e93c32;
+}
+
+#mail-wrap {
+	width: 960px;
+	margin: 0 auto;
+	color:#626262;
+	}
+
+#mail-wrap-in {
+	padding: 0 60px;
+	}
+	
+#mail-wrap h1#h1-01 {
+	width: 840px;
+	height: 242px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img01_1.gif);
+	}
+
+#mail-wrap h2#h2-01 {
+	width: 840px;
+	height: 217px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img02_01.gif);
+	}
+	
+#mail-wrap .ml_link01 {
+	width: 840px;
+	height: 53px;
+	margin: 0 auto;
+	background: url(http://www.famima.com/images/p/mail/img01_2.gif);
+	text-align: center;
+	}
+	
+#mail-wrap .ml_link02 {
+	width: 840px;
+	height: 53px;
+	margin: 0 auto;
+	background: url(http://www.famima.com/images/p/mail/img02_02.gif);
+	text-align: center;
+	}
+
+#mail-wrap #h3-01 {
+	width: 840px;
+	height: 43px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img03.gif);
+	}
+	
+#mail-wrap ul.ul-01 {
+	width: 840px;
+	height: 400px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img04.gif);
+	list-style: none;
+	}
+	
+#mail-wrap #h3-02 {
+	width: 840px;
+	height: 43px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img05.gif);
+	}
+#mail-wrap p {
+	font-size:12px;
+	text-align:left;
+	margin-bottom:1em;
+	}	
+
+#mail-wrap .mail-info {
+	padding: 0 0 9px 0;
+	background: url(http://www.famima.com/images/p/mail/img09.gif) no-repeat bottom;
+}
+
+#mail-wrap .mail-info-in {
+	background: url(http://www.famima.com/images/p/mail/img07.gif) repeat-y top;
+	display: block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#mail-wrap .mail-info-in .m-l {
+	width: 360px;
+	height: 371px;
+	background: url(http://www.famima.com/images/p/mail/img11_2.gif) no-repeat bottom;
+	float: left;
+}
+
+#mail-wrap .mail-info-in .m-l h4 {
+	width: 360px;
+	height: 261px;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img11_1.gif) no-repeat;
+	display: block;
+}
+
+#mail-wrap .mail-info-in .m-r {
+	width: 362px;
+	height: 371px;
+	background: url(http://www.famima.com/images/p/mail/img12_2.gif) no-repeat bottom;
+	float: left;
+}
+
+#mail-wrap .mail-info-in .m-r h4 {
+	width: 362px;
+	height: 261px;
+	text-indent: -9999px;
+	background: url(http://www.famima.com/images/p/mail/img12_1.gif) no-repeat;
+	display: block;
+}
+
+#mail-wrap .mail-info-in .m-l p {
+	display: block;
+	padding: 5px 25px 0 20px;
+	line-height: 16px;
+}
+
+#mail-wrap .mail-info-in .m-r p {
+	display: block;
+	padding: 5px 20px 0 30px;
+	line-height: 16px;
+}
+
+#mail-wrap .mail-info01 {
+	padding: 30px 60px 0 120px;
+	background: url(http://www.famima.com/images/p/mail/img06.gif) no-repeat top;
+	display:block;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#mail-wrap .mail-info02 {
+	margin: 20px 0 0 120px;
+	padding: 0 0 0 110px;
+	background: url(http://www.famima.com/images/p/mail/img08.gif) no-repeat left;
+	display:block;
+	zoom: 1;
+	overflow: hidden;	
+}
+
+#mail-wrap .mail-info03 {
+	margin: 20px 0 0 120px;
+}
+
+#mail-wrap .mail-info03 table {
+	background: #626262;
+}
+
+#mail-wrap .mail-info03 table th,
+#mail-wrap .mail-info03 table td {
+	background: #FFFFFF;
+	text-align: center;
+	font-size:12px;
+	color:#666;
+	font-weight:normal;
+	padding: 5px 10px;
+}
+
+#mail-wrap .mail-info04 {
+	margin: 20px 0 0 120px;
+	padding: 0 0 20px 0;
+}
+
+#mail-wrap #ml-txt {
+	padding: 0 60px;
+}
+
+#mail-wrap #ml-txt-in {
+	background: #fef9e8;
+	padding: 30px;
+}
+
+#mail-wrap .mlink-in {
+	text-align: center;
+}
+
+#mail-wrap .mlink-in p {
+	padding: 5px 0;
+	text-align: center;
+}
+
+#mail-wrap .mlink-txt {
+	padding: 50px 0 0 0;
+}
+
+#mail-wrap .mlink-txt p {
+	padding: 0;
+	margin: 0;
+}

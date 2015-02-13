@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<title>年齢認証ページ　カリビアンコム</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #FFF;
+	margin:0 auto;
+}
+
+a:link{
+font-size:16px; color: #FFF; text-decoration:none; font-weight:bold;}
+a:visited {
+font-size:16px; color: #FFF; text-decoration:none; font-weight:bold;}
+a:hover {
+font-size:16px; color: #FFF; text-decoration:none; font-weight:bold; text-decoration:underline;}
+
+a.en:link{
+font-size:12px; color: #FFF; text-decoration:none; font-weight:bold;}
+a.en:visited {
+font-size:12px; color: #FFF; text-decoration:none; font-weight:bold;}
+a.en:hover {
+font-size:12px; color: #FFF; text-decoration:none; font-weight:bold; text-decoration:underline;}
+
+p{
+font-size:10px;
+color:#666;
+margin:0px;
+}
+
+h1{
+color: #666666;
+padding:50px 0 0 0;
+}
+
+
+h2{
+font-size:13px;
+color:#444;
+margin:0px 0 10px 0;
+line-height:150%;
+}
+
+
+span{
+color: #6666FF;
+}
+
+
+#all {
+margin:0px auto;
+width:auto;
+}
+
+
+#main{
+width:550px;
+margin:80px auto 0 auto;
+text-align:center;
+}
+
+
+.icon{
+width:550px;
+height:150px;
+background-image:url(verify_img/icon.gif);
+background-repeat:no-repeat;
+text-align:center;
+padding:30px 0 0 0px;
+}
+
+
+.text{
+margin:10px 0 0 0;
+text-align:center;
+}
+
+.text02{
+margin:60px 0 10px 0;
+text-align:center;
+}
+
+
+.left{
+width:150px;
+margin:0 15px 0 102px;
+padding:10px 5px;
+background-color:#66C1E3;
+border:#5BA7C4 1px solid;
+float:left;
+}
+
+* html .left{
+width:150px;
+margin:0 15px 0 50px;
+padding:10px 5px;
+background-color:#66C1E3;
+border:#5BA7C4 1px solid;
+float:left;
+}
+
+.right{
+width:150px;
+margin:0 0 0 10px;
+padding:10px 5px;
+background-color:#66C1E3;
+border:#5BA7C4 1px solid;
+float:left;
+}
+
+
+.left02{
+width:60px;
+margin:0 15px 0 192px;
+padding:5px 5px;
+background-color: #CCCCCC;
+border:#999999 1px solid;
+float:left;
+}
+
+* html .left02{
+width:60px;
+margin:0 15px 0 95px;
+padding:5px 5px;
+background-color: #CCCCCC;
+border:#999999 1px solid;
+float:left;
+}
+
+.right02{
+width:60px;
+margin:0 0 0 10px;
+padding:5px 5px;
+background-color: #CCCCCC;
+border: #999999 1px solid;
+float:left;
+}
+
+.kaijo{
+clear:left;
+}
+
+.logo{
+text-align:center;
+margin:0 0 15px 0;
+}
+.sitename{
+color:#FF7FD8;
+}
+-->
+</style>
+
+
+<script type="text/javascript" charset="shift_jis" src="domains.js"></script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+	 var go = "";
+	 var JS_GO = "http://affiliate.dtiserv.com/404.html";
+
+	 function getQueryVariable(variable) {
+		 var query = window.location.search.substring(1);
+		 var vars = query.split("&");
+
+		 for (var i=0;i<vars.length;i++) {
+			 var pair = vars[i].split("=");
+
+			 if (pair[0] == variable) {
+				 return pair[1];
+			 }
+		 } 
+	 }
+
+	 if ( !go )
+	 	go = getQueryVariable('r')
+
+	 if ( !go )
+	 	go = JS_GO;
+
+  var sitename;
+  var siteid;
+  var logo;
+
+	url = unescape(go);
+	domain = url.match("(?:^https?://)([^/?]+)");
+	if ( domain && domains[domain[1]] != undefined ) {
+		if ( sitename = domains[domain[1]][1] ) {
+			siteid = domains[domain[1]][0];
+
+			document.title = sitename;
+			logo = 'http://affiliate.dtiserv.com/verify_img/logo/' + siteid + '.gif';
+		}
+	}
+
+  if ( !sitename || !siteid ) {
+    sitename = '404';
+    logo = '';
+    siteid = '';
+    window.location = JS_GO;
+  }
+    
+</script>
+</head>
+
+<body>
+<div id="all">
+<div id="main">
+<div class="icon">
+<h1>年齢認証 - Age Verification　<br><script>document.write(sitename)</script></h1>
+</div>
+<h2>ここからアダルトサイト「<span class="sitename"><script>document.write(sitename)</script></span>」にリンクしています。<br>18歳以上の方は、リンク先の閲覧が可能です。
+<br><span>あなたは18歳以上ですか？</span></h2>
+<div class="logo"></div>
+<div class="left"><a href='javascript:window.location=unescape(go)'>はい</a></div>
+<div class="right"><a href="http://www.yahoo.co.jp">いいえ</a></div>
+<div class="kaijo"></div>
+<div class="text02"><p>This website contains sexually explicit content. If you are under the age of 18, or if it is illegal to view sexually explicit material in your area, please leave now by clicking on the EXIT button below.</p></div>
+<div class="left02"><a href='javascript:window.location=unescape(go)' class="en">Over 18</a></div>
+<div class="right02"><a href="http://www.yahoo.com" class="en">EXIT</a></div>
+
+
+</div>
+</div>
+</body>
+</html>

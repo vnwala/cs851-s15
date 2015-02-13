@@ -1,0 +1,401 @@
+@charset "Shift_JIS";
+
+/* --------------------------------------------------------------------
+	header 2013.04.01リニューアル
+--------------------------------------------------------------------- */
+#header_ {
+	width: 100%;
+	/*height: 142px;*/
+	/*-height: 104px;*/
+	margin:0 0 15px 0; /*margin:0 0 10px 0; 20130518[ot]*/
+	padding:0;
+	clear:both;
+	display:block;
+}
+
+#header_ a:hover img {
+	filter: alpha(opacity=80);
+	-moz-opacity:0.80;
+	opacity:0.80;
+	}
+
+#header_ img {
+	border:none;
+	}
+
+#header_ #sitelogo {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* layout */
+#header_ .mt5 {
+	margin-top:5px;
+	}
+
+#header_ .mb5 {
+	margin-bottom:5px;
+	}
+
+#header_ br.flat {
+	margin:0;
+	padding:0;
+	}
+
+/* TOP-block */
+#header_ #top_block {
+	display:block;
+	width:960px;
+	background:url(http://www.famima.com/img/header/hd_bordertop.png) top center no-repeat;
+	padding-top:46px;
+	}
+
+#header_ #top_block .topblock_left {
+	/* display:inline-block; */
+	display:block;
+	float:left;
+	width:238px;
+	}
+	
+#header_ #top_block .topblock_left #sitelogo {
+	display:block;
+	float:left;
+	width:238px;
+	height:57px;
+	background:url(http://www.famima.com/img/header/hd_sitelogo.png) no-repeat;
+	}
+	
+#header_ #top_block .topblock_left #sitelogo span{
+	display:none;
+	}
+
+#header_ #top_block .topblock_center {
+	display:inline-block;
+	float:left;
+	width:480px;
+	/* padding-right:13px; */
+	}
+	
+#header_ #top_block .topblock_center .right {
+	float:right;
+	text-align:right;
+	}
+	
+#header_ #top_block .topblock_center .right strong {
+	font-size:91%; /* font-size:91%; /* font-size:11px; */ */
+	padding-right:3px;
+	}
+	
+#header_ #top_block .topblock_center #username {
+	font-size:91%; /* font-size:91%; /* font-size:11px; */ */
+	font-weight:bold;
+	}
+
+#header_ #top_block .topblock_center img{
+	padding:0 0 0 1px;
+	margin:0;}
+
+#header_ #top_block .topblock_center p.tpoint strong {
+	font-size:91%; /* font-size:11px; */
+	}
+	
+#header_ #top_block .topblock_center p.tpoint {
+	clear:both;
+	margin-top:3px;
+	border-top:1px solid #c8c8c8;
+	padding-top:3px;
+	width:465px;
+	text-align:right;
+	}
+
+#header_ #top_block .topblock_right {
+	display:inline-block;
+	float:right;
+	width:229px;
+	}
+
+
+/* 買い物カゴ */
+#header_ #cartInner {
+	padding:0; margin:0;
+	float: right;
+	width: 229px; height:57px;
+	overflow: hidden;
+	background:url(http://www.famima.com/img/header/hd_bg_shoppingbag.png) top right;
+	position:relative;
+}
+
+#header_ #cartInner .btn{
+	position:absolute;
+	top:28px; left:143px; /*left:133px; 20130518[ot]*/
+	}
+
+#header_ #cartInner strong {
+	font-size:10px;
+	}
+	
+#header_ #cartInner p.cartin_price {
+	font-size:83%; /*font-size:75%;*/
+	position:absolute;
+	top:32px;
+	left:17px;  /*left:27px; 20130518[ot]*/
+	margin:0; padding:0;
+	}
+	
+/* IE8用 add 20130624[mota] */  
+html>/**/body #header_ #cartInner p.cartin_price {  
+    left /***/: 21px;
+}
+/* IE8用 add 20130624[mota]//END */  
+
+
+/* gloval navi */
+#header_ ul#gnavi {
+	display:block;
+	clear:both;
+	width:960px;
+	height:70px;
+	margin:0px;
+	padding:25px 0 5px 0; /* padding:30px 0 5px 0; 20130518[ot] */
+	list-style:none;
+}
+#header_ ul#gnavi li {
+	float: left;
+	padding:0 8px 0 0;
+}
+
+#header_ ul#gnavi li.pd0{
+	float: left;
+	width:130px;
+	padding: 0;
+}
+
+
+/* 検索フォーム */
+#header_ #header_search__ {
+	clear: both;
+	width: 960px;
+	height:41px;
+	background:url(http://www.famima.com/img/header/hd_bg_search.png) top left no-repeat;
+	margin:0; padding:0;
+}
+
+#header_ #header_search__ form {
+	width:395px; /*width:302px;*/
+	margin:0; padding:0;
+	float:left;
+	position:relative;
+}
+
+#header_ #header_search__ .search {
+	font-size: 12px;
+	width: 300px; /*width: 210px;*/
+	height:22px; /*height:18px;*/
+	margin:10px 0 0 12px; /*margin:10px 0 0 12px;*/
+	padding:0 0 0 18px;
+    /* background: url(/img/header/hd_icon_keyword.png) no-repeat 4px 2px; */
+    background: url(http://www.famima.com/img/header/hd_icon_keyword.png) no-repeat 5px 4px;
+	background-color:#FFFFFF;
+	border: thin solid #c0c0c0;
+	/*>height:18px; add IE用 20130624 [mota]*/
+	/*>padding:4px 0 0 18px; add IE用 20130624 [mota]*/
+}
+
+/* IE7向け add 20130624 [mota] */  
+*+html #header_ #header_search__ .search{
+	height /***/:16px;
+    padding /***/: 4px 0 0 18px;
+	border: 1px solid #c0c0c0;
+	}
+/* IE7向け add 20130624 [mota]//END */ 
+/* IE8向け add 20130624 [mota] */  
+html>/**/body #header_ #header_search__ .search {  
+	height /***/:16px;
+    padding /***/: 5px 0 0 18px;
+} 
+/* IE8向け add 20130624 [mota]//END */  
+/* モダンブラウザ向け */
+html:not(:target) #header_ #header_search__ .search {
+	height:22px;
+	padding:0 0 0 18px;
+}
+/* モダンブラウザ向け//END */
+
+
+#header_ #header_search__ .rounded {
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+
+#header_ #header_search__ .btnSearch{
+	/* width: 60px; height:20px; */
+	width: 50px; height:24px;
+	position:absolute;
+	top:10px;
+	left:335px; /*left:245px;*/
+	}
+
+#header_ #header_search__　input[type=text]{
+    color:#333333;}
+
+/* ----- */
+
+#header_ #header_search__ .more_ {
+	width: 129px; height:20px;
+	float:left;
+	/* padding:10px 0 0 10px; */
+	padding:10px 0 0 0;
+}
+
+#header_ #header_search__ #info_right {
+	float:right;
+	margin:12px 0 0 0; /*margin:10px 0 0 0;*/
+	padding:0 13px 0 0;
+	}
+	
+#header_ #header_search__ #info_right ul#infomenu{
+	display:block;
+	clear:both;
+	width:295px; height:20px;
+	margin:0; padding:0;
+	list-style:none;}
+	
+#header_ #header_search__ #info_right ul#infomenu li{
+	margin:0; padding:0;
+	float:left;}
+
+
+/* keywords */
+
+#header_ #header_search__kwd {
+    height:32px; /*height:24px; 20130518[ot]*/
+    padding:0;
+    font-size:91%; /*font-size:75%;*/
+	background:url(http://www.famima.com/img/header/hd_bg_keyword.png) top left no-repeat;
+}
+
+#header_ #header_search__kwd ul {
+    margin:0;
+    padding:0;
+	list-style:none;
+	padding:10px 10px 0 140px; /* padding:5px 10px 0 115px; 20130518[ot]*/
+}
+
+#header_ #header_search__kwd li {
+    display:inline;
+	padding-right:10px;  /* padding-right:8px; 20130518[ot]*/
+    }
+
+/*
+#header_ #header_search__kwd li a {
+    color:#008cd6;
+}*/
+
+
+/* --------------------------------------------------------------------
+	footer 2011.12.08
+--------------------------------------------------------------------- */
+
+#footer_ {
+	margin-top: 20px;
+	clear: both;
+	font-size:91%; /* font-size:91%; /* font-size:11px; */ */
+	line-height:1.6;
+}
+#footer_ img {
+	border:none;
+	background:none;
+	}
+#footer_ a.link {
+	background: url(../common_images/arrow_link.png) left top no-repeat;
+	margin-left:-2px;
+	padding-left:13px;
+	}
+#footer_ a:hover img {
+	filter: alpha(opacity=50);
+	-moz-opacity:0.50;
+	opacity:0.50;
+	}
+
+#footer_ .mt5 {
+	margin-top:5px;
+	}
+#footer_ .mr1 {
+	margin-right:1px;
+	}
+#footer_ .mt10 {
+	margin-top:10px;
+	}		
+#footer_ .mb15 {
+	margin-bottom:15px;
+	}	
+#footer_ .ml1 {
+	margin-left:1px;
+	}	
+	
+#footer_ .footer_border {
+	margin: 0 auto;
+	background:url(http://www.famima.com/common_images/parts_shima.png);
+	width:958px;
+	height:8px;
+	border:1px solid #e6e6e6;
+	display:block;
+	}
+#footer_ .footer_inner_ {
+	margin: 0 auto 10px auto;
+	width:930px;
+	padding:15px;
+	text-align:left;
+	display:block;
+}
+#footer_ .footer_inner_ .logo_company {
+	float:left;
+}
+#footer_ .footer_inner_ .logo_FamilyMart {
+	float:right;
+}
+#footer_ .footer_inner_ .logo_company ul {
+	margin-top:10px;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:0;
+	padding:0;
+	}
+#footer_ .footer_inner_ .logo_company ul li {
+	display:inline-block;
+	float:left;
+	border-right:1px solid #e6e6e6;
+	padding:0 20px 0 10px;
+	}
+#footer_ .footer_inner_ .logo_company ul li.start {
+	display:inline-block;
+	float:left;
+	border-right:1px solid #e6e6e6;
+	padding-top:0;
+	padding-right:10px;
+	padding-bottom:0;
+	padding-left:0;
+	}
+
+
+
+#footer_ .footer_inner_ .footer_left_ {
+	float: left;
+}
+#footer_ .footer_inner_ .footer_left_ img,
+#footer_ .footer_inner_ .footer_left_ object,
+#footer_ .footer_inner_ .footer_left_ embed {
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+
+#footer_ img.icon_blank {
+	vertical-align: middle !important;
+	float: none !important;
+	margin-left:3px;
+}
+
+/* ------------------------------------------------------------------------------ */

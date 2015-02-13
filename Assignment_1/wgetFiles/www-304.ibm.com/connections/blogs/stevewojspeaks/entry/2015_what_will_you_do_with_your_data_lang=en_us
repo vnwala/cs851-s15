@@ -1,0 +1,3725 @@
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+                                                                      
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                    
+
+
+
+                                  
+
+
+
+
+                                                                                            
+
+
+
+
+
+                                 
+
+
+
+
+                                             
+
+
+
+
+                                                                                     
+
+
+
+
+<meta name="google-site-verification" content="" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://www.ibm.com/developerworks/collaboration/uploads/minimal/dw-phone.gif" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>  
+    
+
+    
+        
+    
+       <!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xml:lang="en-US" lang="en"  >
+<head>
+  <title>Woj Speaks...</title>
+
+
+
+
+<script type="text/javascript">
+  var winW = 800, winH = 600; 
+  if (document.body && document.body.offsetWidth) {
+              }
+  if (document.compatMode=='CSS1Compat' &&
+      document.documentElement &&
+      document.documentElement.offsetWidth ) {
+           }
+  if (window.innerWidth && window.innerHeight) {
+   winW = window.innerWidth;
+   winH = window.innerHeight;
+  }
+</script>
+
+					<!-- Copyright IBM Corp. 2013  All Rights Reserved.                    -->
+
+<!--[if IE 6]><script type="text/javascript">document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie6";</script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";</script><![endif]-->
+<!--[if IE 8]><script type="text/javascript">document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie8";</script><![endif]-->
+<link rel="stylesheet" type="text/css" id="lotusBaseStylesheet" href="../../../resources/web/_style?include=com.ibm.lconn.core.styles.oneui3%252Fbase%252Fpackage3.css&amp;etag=20150110.113307" appName="blogs" base="https://www-304.ibm.com/connections/resources/web/" query="?version=oneui3&rtl=false&etag=20150110.113307" theme="default" defaultTheme="default" oneui="3"></link>
+<link rel="stylesheet" type="text/css" id="lotusSpritesStylesheet" href="../../../resources/web/_style?include=com.ibm.lconn.core.styles.oneui3%252Fsprites.css&amp;etag=20150110.113307"></link>
+<link rel="stylesheet" type="text/css" id="lotusThemeStylesheet" href="../../../resources/web/_lconntheme/default.css?version=oneui3&amp;rtl=false&amp;etag=20150110.113307"></link>
+<link rel="stylesheet" type="text/css" id="lotusAppStylesheet" href="../../../resources/web/_lconnappstyles/default/blogs.css?version=oneui3&amp;rtl=false&amp;etag=20150110.113307"></link>
+<!-- Copyright IBM Corp. 2013  All Rights Reserved.                    -->
+
+	  	
+  		  			
+    <script type="text/javascript">
+window.currentLogin={};
+window.__security_nonce='';
+
+var http;
+if(typeof XMLHttpRequest == 'undefined') http=new ActiveXObject("Microsoft.XMLHTTP");
+else http=new XMLHttpRequest();
+http.open('GET', '/connections/blogs/roller-services/json/authcheck?entry=336b049a-2827-46a7-89f7-b1d105d77570', false);
+http.send(null);
+var t=http.responseText;
+if(http.status == 200 && t && t.length>4 && t.substring(0,5)=='nonce'){
+		eval('window.currentLogin={'+t+'}');
+		window.__security_nonce=window.currentLogin.nonce;
+}
+</script>
+
+<script type="text/javascript">
+	var appName = "blogs";	// valid values: profile, communities, blogs, bookmarks, activities
+	var microfmtTagScope = "span,h5";
+	
+		   var bidir = "ltr";
+		
+	function getLoginRedirectURL(url) {
+      if(!url) url = window.location.href;
+      if(url[0] != '/') {
+          var t = url;
+          
+          var protocol = 'http://';
+          var idx = t.indexOf(protocol);
+          if(idx == -1) {
+              protocol = 'https://';
+              idx = t.indexOf(protocol);
+          }
+          if(idx != -1) {
+              t = t.substring(protocol.length);
+              idx = t.indexOf('/');
+              t = idx == -1 ? '/' : t.substring(idx);
+              if(t.indexOf('/connections/blogs') == 0)  url = t;
+          }
+      }
+      return '/connections/blogs/roller-ui/login-redirect.jsp?redirect=' + encodeURIComponent(url);
+    }
+</script>
+  
+  <script type="text/javascript" src="../../../bookmarklet/static/script/20150110.113307/feedMarklet.js?lang=en_us"></script>	
+  
+<script type="text/javascript">
+    var BlogsBaseUrl = "/connections/blogs";
+    var langParaValue = "en_us";
+    var ratings = {};
+</script>
+    		
+<link rel="shortcut icon" href="../../../resources/web/com.ibm.oneui3.styles/imageLibrary/Icons/ComponentsGray/BlogsGray.ico" type="image/x-icon" />	
+
+
+  <style type="text/css">
+   
+    
+        
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style  type="text/css"> 
+
+#banner  { width: 1000px; }
+#mainTable { width: 1000px; }
+#masthead_div { min-width:1000px; }
+#footer_div { min-width:1000px; }
+#lotusTitleBar { min-width:1000px; }
+#hero-img img { width:1150px; height:127px; }
+#small-masthead { display:none; }
+#small-footer { display:none; }
+
+.lotusRating {
+       padding-top:4px !important;
+       padding-left:5px !important;
+       padding-right:5px !important;
+       border: solid 1px #F6CB5B;
+       background-color: #FEEBB1;
+       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#FEEBB1');
+       background: -moz-linear-gradient(top, #FAFAFA, #FEEBB1);
+       background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#FEEBB1));
+       -moz-border-radius: .25em;
+       -webkit-border-radius: .25em;
+}
+/*Added for IE browsers*/
+.lotusui30 .lotusBanner{
+background:#474747\9;
+*background:#474747;
+}
+/*code end*/
+
+
+.lotusRating img {
+       vertical-align:-2px !important;
+}
+
+.lotusTitleBar .lotusSearch .lotusLayout{
+font-size:13px;
+}
+
+.lotusui30 .lotusTable{
+font-size:11px;
+}
+
+.lotusui30 .lotusFeeds{
+font-size:12px;
+}
+.ratingcount {
+      margin-left:15px !important;
+      vertical-align: bottom !important;
+      vertical-align:0px !important;
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif !important; 
+      font-size:110% !important; 
+      font-weight:bold !important; 
+}
+
+#entries a {
+	color: #486891;
+	text-decoration: none !important;
+}
+
+#trends {
+       height: auto;
+       width: 180px;
+       padding: 5px; 
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px;
+       float:right;
+}
+
+#trends a {
+        padding: 7px; 
+        margin-left:8px;
+        margin-bottom:1px;
+        background-color:#339D41;
+        font-family:  Georgia, Arial, Helvetica Neue, Helvetica, sans-serif;
+        font-size: 12pt; 
+        font-style:italic;  
+        color:#FFFFFF;
+        text-decoration:none; 
+        display:block;
+}
+
+/*Removed for IE Browsers*/
+a.trends     { border-style: none; }
+/*a.trends.s1  { background-color:#008abf !important; width:55% !important; }
+a.trends.s2  { background-color:#006ea7 !important; width:65% !important; }
+a.trends.s3  { background-color:#025287 !important; width:75% !important; }
+a.trends.s4  { background-color:#003f69 !important; width:85% !important; }
+a.trends.s5  { background-color:#002e51 !important; width:95% !important; }*/
+
+a.trends.s1  {width:55% !important;}
+a.trends.s2  {width:65% !important;}
+a.trends.s3  {width:75% !important;}
+a.trends.s4  {width:85% !important;}
+a.trends.s5  {width:95% !important;}
+
+#twitter_update_list {
+	font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+        font-size: 100%;
+        line-height: 18px;
+	list-style: none;
+        padding-top:8px;
+        margin-left:6px;
+        margin-right:6px;
+}
+
+#twitter_update_list li {
+        list-style-type:none; 
+	padding-bottom: 9px;
+        margin-bottom: 12px;
+}
+
+
+#twitter_update_list span {
+       color: #666666;
+}
+
+#twitter_update_list span a {
+	color: #486891;
+	text-decoration: none;
+}
+
+#twitter_update_list a {
+        white-space: nowrap;
+	color: #486891;
+        text-decoration : none;
+}
+
+#followBlog table {
+       background-color: #FFFFFF;  
+       border-width: 0px;
+       margin-left:3px;
+       margin-bottom:-15px;
+       margin-top:-5px;
+}
+
+#followBlog td {
+       padding-right:5px; 
+       padding-bottom:10px; 
+       background-color: #FFFFFF;  
+       color: #FFFFFF;
+}
+
+#followBlog img {
+    width:0px;
+   height:0px;
+}
+
+.rEntriesList {
+      list-style-type:none;    
+      padding-top: 0px;
+      padding-left:0px;
+      margin-left:0px;
+      padding-right:5px;    
+ }
+
+.recentposts {
+      list-style-type:none; 
+      padding-left:0px;
+      margin-left:-12px;
+      padding-top: 9px;
+      margin-bottom: 9px;
+      width:180px;
+} 
+#css-background {
+       padding:0px; 
+       margin:30px\9;
+	*margin:30px; 
+       /*height: 100%;*/
+       width: 100%;
+       background-color: #FFFFFF;
+}
+
+.css-widget-title {
+      padding:1px;
+      padding-top:5px;
+      padding-left:0px;
+      margin-top:10px;
+      margin-left: 10px;
+      width:100%;
+      color: #808080;
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+      font-size:12px; 
+      font-weight:bold; 
+      word-spacing: 1pt;
+      text-align: left; 
+      line-height: 16px; 
+      border-top: solid 2px #FBD034;
+}
+
+#css-widget-container {
+       width:180px;
+       padding-left:10px;
+       padding-right:10px;
+       padding-bottom:97px;
+       margin:0px;
+       margin-top:18px;
+	vertical-align:top;
+	font-size:12px;
+} 
+
+#css-entry-container {
+       height: auto;
+       width: auto;
+       padding-left: 5px;
+       padding-right: 30px;
+       padding-top: 0px;
+       padding-bottom: 30px;
+       margin-top:-30px;
+       margin-right:10px; 
+       border-left: solid 0px #CCCCCC;
+       border-right: solid 0px #CCCCCC;
+       border-bottom: solid 0px #CCCCCC;
+       background-color: #FFFFFF;
+}
+
+#css-entry {
+      margin-top:20px; 
+      margin-bottom:20px; 
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+      font-size:13px;
+      padding:0px;
+      color:#424242;
+      background-color: #FFFFFF; 
+}
+
+#css-entry blockquote {
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+      font-size:100%;
+      margin: 0px !important;
+      margin-left: 50px !important;
+      margin-right: 75px !important;
+      padding-left: 15px !important;
+      border-left: 3px solid #CCCCCC;
+      color:#808080 !important;
+} 
+
+#css-entry p {
+      padding-top:8px;
+      padding-bottom:8px;
+}
+
+#css-entry br {
+      margin-top:8px;
+      margin-bottom:8px;
+}
+
+#css-entry b {
+      font-size: 115%;
+}
+
+#css-entry i {
+     border-bottom: dotted 1px #BBBBBB;
+}
+
+#css-entry img {
+      padding: 10px;
+      max-width: 525px;
+}
+
+#css-entry a {
+	color: #486891 !important;
+	text-decoration: none !important;
+}
+
+#css-entry iframe { 
+       max-width:560px; max-height:auto; 
+}
+
+#css-entry embed { 
+       max-width:560px; max-height:auto; 
+}
+
+#css-comment {
+       background-color: #FFFFFF;
+       height: auto;
+       width: auto;
+       border-bottom: solid 1px #E5E5E5;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%;
+       padding-left: 25px;
+       padding-bottom:25px; 
+}
+
+#css-widget-follow {
+       height: auto;
+       width: 180px;
+       padding: 5px;
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px; 
+       font-size: 100%; 
+       background-color: #FFFFFF;
+       float:right;
+}
+
+.css-widget-links {
+       height: auto;
+       width: 180px;
+       padding: 5px; 
+       padding-bottom:5px;
+       margin:5px;
+       margin-top:10px; 
+       border: solid 0px #E6E6E6;
+       float:right;
+}
+
+#section_linkRoll {
+	font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+        line-height: 18px;
+	list-style: none;
+        padding-top:9px;
+        margin-left:6px;
+        margin-right:6px;
+}
+
+#section_linkRoll li {
+        list-style-type:none; 
+	padding-bottom: 14px;
+        margin-bottom: 12px;
+        font-size: 100%;
+}
+
+#section_linkRoll a {
+	color: #486891;
+	text-decoration: none !important;
+        margin:-5px;
+}
+
+#section_linkRoll img {
+       max-width:165px;
+}
+
+.css-widget-related-blogs {
+       height: auto;
+       width: 180px;
+       padding: 5px;
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px;        
+       border-bottom: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%; 
+       color:#666666;
+       background-color: #FFFFFF;  
+       float:right;
+}
+
+.css-widget-related-entries {
+       height: auto;
+       width: 180px;
+       padding: 5px; 
+       padding-bottom:5px;
+       margin:5px;
+       margin-top:10px; 
+       border: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%;
+       color:#666666;
+       float:right;
+       background-color: #FFFFFF;  
+}
+
+.css-widget-related-resources {
+      position: relative; top:+5px; left: +5px; 
+      width:180px; 
+      height:auto; 
+      margin-top: 25px; 
+      padding: 5px; 
+      background-color:#E0E8F8; 
+      border: solid 1px #649DE0;       
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 95%; 
+      color:#666666;
+}
+
+#css-widget-related-other-resources {
+      width:98%; 
+      height:auto; 
+      padding:5px;
+      font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 84% !important;   
+      color: #666666;
+      border: solid 1px #E5E5E5;
+      -moz-border-radius: .5em; 
+      -webkit-border-radius: .5em;
+      line-height:1.2em;
+      color:#848484 !important;  
+}
+
+#css-widget-related-other-resources img {
+      vertical-align:middle;
+      margin-right:5px;
+      width:16px;
+      height:16px;
+      padding:0px;
+}
+
+.css-widget-bio {
+       height: auto;
+       width: 180px;
+       padding: 5px; 
+       padding-top:0px;
+       padding-bottom:0px;
+       margin:5px;
+       margin-top:10px;
+       border-bottom: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%; 
+       color:#666666;
+       float:right;
+}
+
+.css-widget-facebook {
+       height: auto;
+       width: 180px;
+       padding: 5px;
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px; 
+       border-bottom: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%; 
+       color:#666666;
+       float:right;
+       background-color: #FFFFFF;  
+}
+
+.css-widget-twitter {
+       height: auto;
+       width: 180px;
+       padding: 5px;
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px; 
+       border-bottom: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%; 
+       color:#666666;
+       float:right;
+       background-color: #FFFFFF;  
+}
+
+.css-widget-archive {
+       height: auto;
+       width: 180px;
+       line-height: 10px; 
+       padding: 5px; 
+       padding-bottom:10px;
+       padding-left:0px;
+       margin:5px;
+       margin-top:10px; 
+       margin-left: 0px;
+       border-bottom: solid 0px #E6E6E6;
+       font-family:  Arial, Helvetica Neue, Helvetica, sans-serif;
+       font-size: 100%; 
+       color:#666666;
+       float:right;
+       background-color: #FFFFFF;  
+}
+
+#archive_list a {
+	color: #486891;
+	text-decoration: none !important;
+        font-size: 110%;
+}
+
+.css-widget-tags {
+       height: auto;
+       width: 180px;
+       padding: 5px;
+       padding-bottom:10px;
+       margin:5px;
+       margin-top:10px;
+       border-bottom: solid 0px #E6E6E6;
+       float:right;
+       font-size: 100%;
+       line-height: 22px; 
+       word-spacing: 6pt;
+       text-align: left; 
+       background-color: #FFFFFF;  
+}
+
+#css-widget-hero-tags {
+       height: auto;
+       width:auto;
+       margin: 0px;
+       float:right;
+       font-size: 115%;
+       line-height: 24px; 
+       word-spacing: 8pt;
+       text-align: right; 
+}
+
+.css-header {
+       background-color: #FFFFF;
+       height: auto;
+       width: auto;
+       padding: 1px; 
+       border: solid 0px #DDDDDD;
+       font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+       margin-top:0px; 
+       margin-bottom:0px; 
+	font-size:12px;
+}
+
+.css-search-box {
+      height:auto;
+      width:auto;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 100%;
+      background-color:#E0E8F8; 
+      border: solid 1px #649DE0;
+      padding:5px;
+      padding-bottom:1px;
+      margin-top:30px;
+      margin-bottom:20px;  
+}
+
+#syn-box {
+      padding: 0px;
+      margin-top:20px;
+      margin-left:30px; 
+      margin-bottom:10px;
+      width: 120px;
+      height:auto;
+      float:right;
+}
+
+#syn-box div {
+      padding-top:3px;
+      padding-bottom:3px;
+      padding-left:0px;
+      padding-right:0px;
+      width:120px;
+}
+
+#syn-bar {
+       margin-top:15px; 
+       padding-top: 0px; 
+       padding-bottom: 0px; 
+       width:auto;
+       height:auto;
+       white-space: nowrap !important;
+}
+
+#syn-bar img {
+      vertical-align:top;
+      margin-left:4px;
+      margin-bottom:2px;
+      float:right;
+      width:30px;
+      height:30px;
+      padding:0px;
+}
+
+/*removed the height*/
+#post-preview {
+      width:140px;
+      float:left; 
+      padding-top:25px;
+      padding-right:25px;
+}
+
+#post-preview img {
+    max-width:135px; 
+    max-height:135px;
+    vertical-align:text-top;
+}
+
+#featured {
+      width:100%; 
+      height:auto;
+      margin:0px;
+      padding:0px;  
+      margin-top:30px;
+      margin-bottom:0px;
+      margin-left:5px;
+      line-height:1.2em;
+      border-bottom: solid 2px #555555;  
+}
+
+#featured th {
+     text-transform:uppercase;
+     font-weight:bold;
+     padding-left:0px;
+}
+
+#featured td {
+     width:auto;
+     font-family:  Arial, Helvetica Neue, Helvetica, sans-serif; 
+     font-size:95%; 
+     padding-top:20px;
+     padding-bottom:30px;
+     border-top: solid 1px #FFFFFF !important;  
+}
+
+#featured div {
+    max-width:100px; 
+    max-height:100px;
+    padding-left:5px;
+    padding-right:5px;
+    float:left;
+}
+
+#featured img {
+    max-width:85px; 
+    max-height:85px;
+    padding-right:15px;
+    padding-bottom:5px;
+}
+
+#entry-arrow {
+    vertical-align:middle; 
+    border-top: solid 1px #FFFFFF;
+    border-bottom: solid 1px #E5E5E5;
+    width:0px;
+}
+
+#css-hero-banner {
+       background-color:#FFFFFF;
+       border-bottom: solid 0px #DDDDDD;
+       height: 80px;
+       width: 100%;
+       padding-left:0px;
+       margin-left:0px;
+       margin-left:auto; 
+       margin-right: auto;
+}
+
+a.tag     { border-style: none; }
+a.tag.s1  { color: #008abf; font-size: 90%; letter-spacing: 1px; text-decoration:none;  }
+a.tag.s2  { color: #006ea7; font-size: 110%; text-decoration:none; }
+a.tag.s3  { color: #025287; font-size: 130%; text-decoration:none; }
+a.tag.s4  { color: #003f69; font-size: 150%; text-decoration:none; }
+a.tag.s5  { color: #002e51; font-size: 170%; letter-spacing: -1px; text-decoration:none; }
+
+.button {
+        background-color:#EDECEA;
+        padding: 3px;
+	padding-left: 16px;
+	padding-right: 16px;
+        border-right: solid 1px #999999; 
+	font-weight:bold !important;  
+        font-size: 100%;
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+        text-align:center;
+}
+
+@media all { 
+       #small-masthead { display:none; }
+       #small-footer { display:none; }
+       #entry-arrow img { display:none; }
+       #banner  { width: 1150px; }
+       #hero-img img { max-width:1150px; max-height:127px; }
+       #mainTable { width: 1150px; }
+} 
+
+@media (max-width: 1275px) and (min-width: 1100px) {
+        #small-masthead { display:none; }
+        #small-footer { display:none; }
+        #entry-arrow img { display:none; }
+	#banner { width: 1100px; }
+        #hero-img img { max-width:1100px; max-height:121px; }
+        #mainTable  { width: 1100px; }
+}	
+
+@media (max-width: 1125px) and (min-width:768px) {
+        #small-masthead { display:none; }
+        #small-footer { display:none; }
+        #entry-arrow img { display:none; }
+	#banner { min-width:1000px; width: 1000px; }
+        #hero-img img { max-width:1000px; max-height:110px; }
+        #css-hero-banner { min-width:1000px; }
+        #mainTable  { width: 1000px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+        #lotusBanner{ display:none;  }
+        #footer_div { display:none; }
+        #masthead_div { display:none; }
+        #lotusFooter { display:none; }
+        #lotusTitleBar { display:none;  }
+        #css-widget-hero-tags { display:none;  }
+        #community-syn { display:none; }
+        #css-widget-related-other-resources { display:none; }
+        #featured { display:none; }
+        #css-widget-follow { display:none;  }
+        #syn-box { display:none; }
+        #post-preview { display:none;  }
+        #entry-arrow img { display:none; }
+        #sort-heading { border-top: solid 2px #555555 !important; }
+        #banner { min-width:750px; width: 750px; }
+        #hero-img img { max-width:750px; max-height:83px; }
+        #css-hero-banner { min-width:750px; }
+        #mainTable  { min-width:750px; width: 750px; }
+        #css-entry { font-size:100% }
+        #css-entry iframe { max-width:475px; max-height:475px; }
+        #css-entry embed { max-width:475px; max-height:475px; }
+        #css-entry img { max-width:325px; max-height:325px; }
+        #css-entry-container { padding-top: 10px; }
+        #css-entry-container { padding-left: 10px; }
+        #css-entry-container { padding-right: 10px; }
+        #entry-title h1 {font-size:18px !important; }
+        #small-masthead { min-width:750px; display:block; }
+        #small-footer { min-width:750px; display:block; }
+        #masthead-main img { max-width:195px; max-height:29px;}
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+        #css-widget-container {display:none;}
+        #lotusBanner{ display:none;  }
+        #footer_div { display:none; }
+        #masthead_div { display:none; }
+        #lotusFooter { display:none; }
+        #lotusTitleBar { display:none;  }
+        #css-widget-hero-tags { display:none;  }
+        #community-syn { display:none; }
+        #css-widget-related-other-resources { display:none; }
+        #featured { display:none; }
+        #post-preview { display:none;  }
+        #sort { display:none; }
+        #sort-heading { display:none; }
+        #syn-box { display:none; }
+        #entry-meta { display:none; }
+        #entry-arrow { width:25px; }      
+        #entry-arrow img { display:block; }        
+        #banner { min-width:450px; width: 450px; }
+        #hero-img img { max-width:450px; max-height:50px; }
+        #css-hero-banner { min-width:450px; }
+        #mainTable  { min-width:450px; width: 450px; }
+        #css-entry { font-size:100%; }
+        #css-entry { margin-bottom:5px; }
+        #css-entry iframe { max-width:425px; max-height:275px; }
+        #css-entry embed { max-width:425px; max-height:425px; }
+        #css-entry img { max-width:225px; max-height:225px; }
+        #css-entry-container { padding-top: 2px; }
+        #css-entry-container { padding-left: 10px; }
+        #css-entry-container { padding-right: 10px; }
+        #entry-title h1 {font-size:16px !important; }
+        #entry-title h1 {margin-bottom:-15px !important; margin-top:0px  !important; }
+        #entry-title a { color: #486891 !important; }
+        #small-masthead { min-width:450px; display:block; }
+        #small-footer { min-width:450px; display:block; }
+        #masthead-main img { max-width:180px; max-height:27px;}
+        #syn-bar img { max-width:27px; max-height:27px; }
+}
+
+@media (max-width: 320px) {
+        #css-widget-container {display:none;}
+        #lotusBanner{ display:none;  }
+        #footer_div { display:none; }
+        #masthead_div { display:none; }
+        #lotusFooter { display:none; }
+        #lotusTitleBar { display:none;  }
+        #css-widget-hero-tags { display:none;  }
+        #community-syn { display:none; }
+        #css-widget-related-other-resources { display:none; }
+        #featured { display:none; }
+        #post-preview { display:none;  }
+        #sort { display:none; }
+        #sort-heading { display:none; }
+        #syn-box { display:none; }
+        #entry-meta { display:none; }
+        #entry-arrow { width:25px; }       
+        #entry-arrow img { display:block; }       
+        #banner { min-width:300px; width: 300px; }
+        #hero-img img { max-width:300px; max-height:39px; }
+        #css-hero-banner { min-width:300px; }
+        #mainTable  { min-width:300px; width: 300px; }
+        #css-entry { font-size:110%; }
+        #css-entry { margin-bottom:5px; }
+        #css-entry iframe { max-width:275px; max-height:275px; }
+        #css-entry embed { max-width:275px; max-height:275px; }
+        #css-entry img { max-width:150px; max-height:150px; }
+        #css-entry-container { padding-top: 2px; }
+        #css-entry-container { padding-left: 10px; }
+        #css-entry-container { padding-right: 10px; }
+        #entry-title h1 {font-size:14px !important;}
+        #entry-title h1 {margin-bottom:-15px !important; margin-top:0px  !important;}
+        #entry-title a { color: #486891 !important; }
+        #small-masthead { min-width:300px; display:block; }
+        #small-footer { min-width:300px; display:block; }
+        #masthead-main img { max-width:160px; max-height:24px;}
+}
+
+.pln { color: #000 }  
+@media screen {
+    .str { color: #080 }           .kwd { color: #008 }        .com { color: #800 }       .typ { color: #606 }          .lit { color: #066 }            .pun, .opn, .clo { color: #660 }      .tag { color: #008 }        .atn { color: #606 }        .atv { color: #080 }        .dec, .var { color: #606 }      .fun { color: red }      }
+
+@media print, projection {
+    .str { color: #060 }
+    .kwd { color: #006; font-weight: bold }
+    .com { color: #600; font-style: italic }
+    .typ { color: #404; font-weight: bold }
+    .lit { color: #044 }
+    .pun, .opn, .clo { color: #440 }
+    .tag { color: #006; font-weight: bold }
+    .atn { color: #404 }
+    .atv { color: #060 }
+}
+
+code {
+    font-family:  Consolas, monospaced, sans-serif;
+    font-size: 100%;
+}
+
+ol.linenums { margin-top: 0; margin-bottom: 0; padding-left:30px; padding-right:30px; overflow:auto; color:#808080; } 
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { background: #F2F2F2; }
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #FAFAFA; }
+
+</style> 
+    
+  </style> 
+  
+    
+        
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+                                                                      
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                    
+
+
+
+                                  
+
+
+
+
+                                                                                            
+
+
+
+
+
+                                 
+
+
+
+
+                                             
+
+
+
+
+                                                                                     
+
+
+
+
+<meta name="google-site-verification" content="" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://www.ibm.com/developerworks/collaboration/uploads/minimal/dw-phone.gif" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>  
+    
+              <link rel="alternate" type="application/atom+xml" title="Atom Entries"  href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/feed/entries/atom?lang=en_us" />
+    <link rel="alternate" type="application/atom+xml" title="Atom Comments" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/feed/comments/atom?lang=en_us" />
+            <link rel="replies" type="application/atom+xml" title="Atom Entry Comments"  href="2015_what_will_you_do_with_your_data?lang=en_us" />
+              <link rel="service" class="preferred" type="application/atomsvc+xml" title="Atom Publishing Protocol" href="https://www-304.ibm.com/connections/blogs/api" />
+        </head>
+<body class="blog  lotusui 
+ lotusui30dojo lotusui30_body lotusui30_fonts lotusui30 lotusSpritesOn">
+<label id="TemplateVersion" style="display:none">2.5</label>
+<a id="REFRESH_URL" href="2015_what_will_you_do_with_your_data?lang=en_us#" style="display:none"></a>
+<div id="lotusFrame" class="lotusFrame lotusui30_layout">
+<div role="banner">
+<div id="lotusBanner" class="lotusBanner">
+<script type="text/javascript">
+   if(self!=top){
+      try {
+         // reset location if in different host.
+         // per Same Origin Policy, try to get top location attributes, 
+         // will get permission denied if in different origin.
+         if (self.location.hostname!=top.location.hostname)
+            top.location=self.location;
+      }catch(e){
+         // reset location if in different origin
+         top.location=self.location;
+      }
+   }
+</script><!--<script type="text/javascript"> 
+	  ibmweb.config.set({ megamenu: { minimizeByDefault: false}}); 
+</script>--><!--<link href="//1.www.s81c.com/common/v17/css/www.css" rel="stylesheet" title="www" type="text/css" />--><!--<script src="//1.www.s81c.com/common/js/dojo/www.js" type="text/javascript">//</script>--><style type="text/css">
+
+#menutable ul{ padding:0px; margin:0px;}
+#menutable ul li{ width:150px; list-style:none; display:block; }
+#menutable ul li a{color:#222222; text-decoration:none; font-weight:bold; display:block; padding:10px; }
+#menutable ul li:hover{background-color:#E1F4F9;}
+.lotusui30 .lotusNavMenu #menutable tr a{ display:block;}
+
+#ibm-footer_own {
+background:-webkit-linear-gradient(#585B62, #1E1E20);
+  background:-moz-linear-gradient(#585B62, #1E1E20);
+  background:-o-linear-gradient(#585B62, #1E1E20);
+  background:-ms-linear-gradient(#585B62, #1E1E20);
+  background:linear-gradient(#585B62, #1E1E20);
+  filter:progid:DXImageTransform.Microsoft.gradient(StartColorStr='#585B62',EndColorStr='#1E1E20'); 
+  padding-top: 0;
+  height: 35px;
+}
+*:first-child+html #ibm-footer_own {
+margin-top: 20px;
+}
+#ibm-footer_own ul {
+margin: 0 auto;
+padding-top: 8px;
+padding-bottom: 8px;
+width: 63%;
+}
+#ibm-footer_own li {
+float: left;
+padding-right: 10px;
+}
+#ibm-footer_own ul li a{
+color: #BBB;
+text-shadow: 0 -1px 0 #000000;
+font-size: 1.2em;
+}
+#ibm-footer_own a:hover{ 
+color:#A1A2A7; 
+text-decoration:none;
+}
+
+.falign{position:relative; width:100%;  background-color:#0F161A; height:50px; float:left; color:#7F7F7F; }
+.falign ul{float:left; margin-left:10%;}
+
+#fake_0 { display:none;}
+
+/* IBM Connections fixes for w3v17 masthead/footer integration
+
+Last Updated on Aug 16, 2012
+- Added fixes for v4 by Vladislav Saling (vladislav.saling@sk.ibm.com)
+- Built on fixes already applied for v3.0.1.x in 2011-2012
+
+*/
+
+/* **********IBM Connections & v17 css conflicts *************/
+/*Added by Lohit*/
+/*start*/
+html, body {
+    background:none;
+}
+
+.lotusui30 .lotusFooter ul{
+line-height:60px;
+*line-height:90px !important;
+_line-height:90px !important;
+line-height:60\9px !important;}
+
+.lotusui30_body .lotusMain {
+    min-height: 530px;
+}
+
+/*.lotusui30 .lotusTitleBar2 {
+	*relative:absolute;
+	_relative:absolute;
+	relative:absolute\9;
+    _z-index:1;
+	z-index:1\9;
+	*z-index:1;
+}
+
+.lotusui30_body .lotusMain{
+_z-index:-100;
+	z-index:-100\9;
+	*z-index:-100;
+}*/
+
+div #lotusColLeft .lotusColLeft{
+width:200px !important;
+}
+/*end*/
+table{
+	border-collapse: separate;
+}
+
+.lotusui div.lotusBanner .lotusRightCorner {
+    margin-bottom:0 !important;
+    margin-top:5px !important;
+}
+
+/* 2011 11 15 - table header on LC settings page */
+caption, th {
+	text-align: center;
+	padding: 1px;
+}
+
+body {
+	filter: none !important;
+	zoom: normal;
+	letter-spacing: normal;
+}
+
+.dijitDialog textarea, .dijitDialog select {
+    padding: 1px;
+}
+.dijitDialog input[type="text"], .dijitDialog input[type="password"]{
+    padding: 1px 0;
+}
+
+.dijitDialog input[type="text"], .dijitDialog input[type="password"], .dijitDialog textarea, .dijitDialog select,
+.dijitDialog input[type="text"]:hover, .dijitDialog input[type="password"]:hover, .dijitDialog textarea:hover, .dijitDialog select:hover,
+.dijitDialog input[type="text"]:focus, .dijitDialog input[type="password"]:focus, .dijitDialog textarea:focus, .dijitDialog select:focus{
+	background: #FFFFFF;
+	border: 1px solid #AAAAAA;
+ 	color: #222;
+}
+.cke_skin_lotus21 input[type="text"], .cke_skin_lotus21 input[type="password"]{
+	border: 0 none !important;
+}
+.dijitTextBox, .dijitComboBox, .dijitSpinner {
+    border-color: #A5AEB5 !important;
+}
+
+/* ******************/
+.lotusui #ibm-masthead a:focus, .lotusui #ibm-footer-module a:focus, .lotusui #ibm-footer a:focus{
+	outline: 0 none;
+}
+
+.lotusui div.lotusBanner .lotusRightCorner {
+	margin-bottom: -3px;
+	margin-top: -3px;
+
+}
+
+.lotusui div.lotusBanner .lotusRightCorner .w3ConHeaderNoticeBoard {
+	margin: 4px 16px 2px 16px;
+}
+
+.lotusui30 .lotusTitleBar .lotusTabs li a:visited {
+	padding: 11px 20px;
+}
+
+
+.lotusui .lotusBanner #ibm-top.ibm-landing-page{ 
+	background: none repeat scroll 0 0 transparent !important;
+}
+.lotusui .lotusBanner #ibm-top.ibm-landing-page #ibm-masthead{ /* IE8 background fix */
+	font-size: 1.3em;
+}
+.lotusui .lotusBanner #ibm-top.ibm-landing-page #ibm-masthead p{
+	margin: 0;
+}
+.lotusui #ibm-masthead {
+	min-width: 990px;
+}
+
+.lotusui .lotusFooter #ibm-footer, .lotusui .lotusFooter #ibm-footer-module{
+	font-size: 1.5em !important;
+}
+
+.lotusui .lotusFooter #ibm-footer-module {
+text-align: left
+}
+
+.lotusui .lotusFooter #ibm-footer-module ul li {
+display: list-item;
+}
+
+.lotusui .lotusFooter #ibm-footer-module ul a { 
+padding: 0;
+}
+
+
+/* ***************/
+
+.lotusui .lotus2Col, .lotusui .lotus3Col {
+	padding: 2px;
+}
+.lotusui .lotusFrame{
+	background-color: #ffffff !important;
+}
+.lotusui .lotusFooter{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+/* *********IBM Connections & v17 css conflicts ************/
+
+/* ******dijit Widgets theme conflicts with v17 dojo **********/
+.lotusui .dijitDialog{
+    -moz-border-radius:0;
+    -moz-box-shadow: none;
+	-webkit-border-radius:0;
+	-webkit-box-shadow:none; 
+    border: none;
+}
+.lotusui .dijitMenu {
+	min-width: 100px;
+	max-width: none;
+	padding: 0px;
+	margin: 1px 0px;
+	border: 1px solid #919090 !important;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.lotusui .dijitMenuTable {
+	border-spacing: 0 0;
+	padding: 0px;
+	background: #FFF;
+	filter:none;
+	border-collapse: collapse;
+}
+.lotusui .dijitMenuItem {
+	color: #222;
+	display: table-row;
+	padding: 0.2em;
+	width:auto;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1em;
+	font-weight:normal;
+}
+/* hover over a MenuBarItem */
+.lotusui .dijitMenuPassive .dijitMenuItemHover,
+.lotusui .dijitMenuPassive .dijitMenuItemSelected {
+	background: #000;
+	color: white;
+	border: 0 none;
+	border-top: 0 none;
+	border-bottom: 0 none;
+	background-position: 0 0;
+}
+.lotusui .dijitMenuPassive .dijitMenuItemActive{
+	background-position: 0 0;
+}
+/* MenuBarItem that has been selected and menu drops down from it */
+.lotusui .dijitMenuActive .dijitMenuItemHover,
+.lotusui .dijitMenuActive .dijitMenuItemSelected {
+	padding: 0.1em 0.2em;
+	border: 0 none;
+	background: #EEE;
+}
+.lotusui .dijitMenuActive .dijitMenuItemHover td.dijitMenuItemLabel,
+.lotusui .dijitMenuActive .dijitMenuItemSelected td.dijitMenuItemLabel {
+	border-top: 0px none;
+	border-bottom: 0px none;
+}
+.lotusui .dijitDialogTitle {
+    display: inline;
+    height: auto;
+    position: relative;
+    text-indent: 0;
+    top: 0;
+    width: auto;
+}
+.lotusui .dijitTooltip{
+	font-size: 1em !important;
+}
+.lotusui .dijitDialogPaneContent {
+	font-size: 1em !important;
+}
+.lotusui .dijitDialog .dijitDialogCloseIcon{
+	display: none;
+}
+/*
+.lotusui .lotusForm tr.lotusFormFieldRow td, .lotusui .lotusForm td.lotusFormFieldRow {
+	padding: 0 10px 10px 0; 
+}
+*/
+.lotusui  .lotusForm textarea{
+	margin: 0 0 7px;
+}
+.lotusui .rating a:hover,
+.lotusui .lotusRating a:hover,
+.lotusui .rating a:focus,
+.lotusui .lotusRating a:focus,
+.lotusui .rating a:active,
+.lotusui .lotusRating a:active {
+	text-decoration: none;
+	outline: thin dotted;
+}
+.lotusui .lotusTooltipDialog .dijitTooltipContainer {
+	border: 0 none;
+    background-color: transparent;	
+}
+.lotusui .lotusNavMenu .dijitTooltipContainer{
+    background-color: transparent;
+    border-width: 0;
+}
+.lotusui .dijitTooltipContainer {
+	-moz-border-radius: 0; 
+	-webkit-border-radius: 0;
+	-moz-box-shadow: none;
+	color:black;
+	padding: 0;
+    background-color: #F0F0F0;
+    border: 1px solid #C5C5C5;	
+}
+.lotusui .dijitTooltipRight{
+	padding-left:0;
+}
+.lotusui .dijitTooltipContainer .lotusui .lotusVCard {
+    font-size: 12px;
+}
+.lotusui .dijitMenu .searchDirectory {
+    color: #105CB6 !important;
+    display: block !important;
+    padding-left: 20px !important;
+}
+.lotusui .dijitMenu .searchDirectory.lotusHidden {
+	display: none !important;
+}
+.lotusui a:focus, .lotusui .dijitTabContent:focus {
+	outline: thin dotted;
+}
+/* Insert/Edit link dialog fix */
+.lotusui div.dijitDialog ul li {
+    background: none repeat scroll 0 0 transparent;
+    clear: none;
+    padding: 0;
+}
+/* ******dijit Widgets theme conflicts with v17 dojo ********/
+
+</style>
+<div class="lotusRightCorner">
+<!--<div id="ibm-top" class="ibm-landing-page">
+<div id="ibm-masthead">
+<div id="ibm-mast-options">
+<ul>
+<li id="ibm-geo"><a href="http://www.ibm.com/planetwide/select/selector.html"><span class="ibm-access">Select a country/region: </span>Worldwide</a></li>
+</ul>
+</div>
+<div id="ibm-universal-nav">
+<ul id="ibm-unav-links">
+<li id="ibm-home"><a href="http://www.ibm.com/">IBM®</a></li>
+</ul>
+<ul id="ibm-menu-links">
+<li><a href="http://www.ibm.com/sitemap/">Site map</a></li>
+</ul>
+<div id="ibm-search-module">
+<form id="ibm-search-form" action="http://www.ibm.com/Search/" method="get">
+<p>
+<label for="q"><span class="ibm-access">Search</span></label>
+<input type="text" maxlength="100" value="" name="q" id="q"/>
+<input type="hidden" value="17" name="v"/>
+<input type="hidden" value="utf" name="en"/>
+<input type="hidden" value="en" name="lang"/>
+<input type="hidden" value="zz" name="cc"/>
+<input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit"/>
+</p>
+</form>
+</div>
+</div>
+</div>   
+</div>-->
+   <div class="lotusInner"><!--<div class="lotusLogo" id="lotusLogo"><span class="lotusAltText">IBM Connections</span></div>--><ul class="lotusInlinelist lotusUtility lotusNowrap" id="headerMenuContainer"><li class="lotusFirst" id="headerUserText" style="display: none;"><span id="logoutLabel" aria-label="Log in / log out"><a class="lotusUser" id="headerUserName"
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);"
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);"
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);"
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-user"
+                      aria-label="Current user "
+                      src="/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/user.jsp?appName=blogs&username=&userid="
+                      href="javascript:;"> <span id="usernameText"></span> <img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></span></li><li class="shareboxLi" id="headerSharebox" class="lotusFirst" style="display: none;"><a class="lotusBannerBtn" href="javascript:;" onclick="dojo.stopEvent(event);dojo.require('net.jazz.ajax.xdloader');net.jazz.ajax.xdloader.load_async('com.ibm.social.sharebox.dialog', dojo.hitch(this, function() {com.ibm.social.sharebox.show();}));" aria-haspopup="true" role="button">Share</a></li><li id="languageSelectorText" style="display: none;"></li><li id="headerHelpLi" ><a role="button" aria-label="Open help window" href="javascript:lconn.blogs.utils.openHelpWindow();" id="headerHelpLink"><img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="iconsOther16 iconsOther16-bannerHelpNormal16" /><span class="lotusAltText">?</span></a></li><li id="logoutLi"><span id="loginLabel" role="region" aria-label="Log in / log out"><a id="logoutLink"  href="https://www-304.ibm.com/connections/blogs/roller-ui/login-redirect.jsp?redirect=%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us">Log In</a>----</span></li><!--<li><span class="lotusBranding"><img src="https://www-304.ibm.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li>--></ul><ul class="lotusInlinelist lotusLinks" role="navigation" aria-label="Connections"><li style="cursor:pointer;"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      src="/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/drop_down.jsp"
+                      href="https://www-304.ibm.com/"
+                      errormessage="Communities is not available"> 
+				  <span class="lotusBranding"><img src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span>
+				  <img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHomepage" class="lotusFirst "><a href="https://www-304.ibm.com/connections/homepage/">ibm.com Connections Home</a></li><li id="lotusBannerProfiles" class=" "><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-people"
+                      aria-label="Profiles" 
+                      src="/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/people.jsp"
+                      href="https://www-304.ibm.com/connections/profiles/"
+                      errormessage="Profiles is not available">Profiles <img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerCommunities" class=" "><a id="lotusBannerCommunitiesLink" 
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-communities"
+                      aria-label="Communities" 
+                      src="/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/communities.jsp"
+                      href="https://www-304.ibm.com/connections/communities/"
+                      errormessage="Communities is not available">Communities <img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerApps" class=" lotusSelected"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                   onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                   onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                   role="button" 
+                   _lconn_menuid="lconnheadermenu-apps"
+                   aria-label="Apps" 
+                   src="/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/apps.jsp"
+                   href="javascript:;"
+                   errormessage="Blogs is not available">Apps <img role="presentation" alt="" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHeaderMetrics" style="display:none" class=""><a href="https://www-304.ibm.com/connections/metrics/">Metrics</a></li><li id="lotusBannerModeration" style="display:none" class=""><a href="https://www-304.ibm.com/connections/moderation/">Moderation</a></li></ul></div></div>
+	  <!--Added for V17 code for footer to disable the richtext links-->
+	<!-- <script type="text/javascript"> 
+	  ibmweb.config.set({ megamenu: { minimizeByDefault: true }}); 
+	  </script>--> 
+</div><!--end pageHeader-->
+<script type="text/javascript" language="Javascript">
+var refresh_url = document.getElementById('REFRESH_URL');
+var this_url = window.location.toString();
+var this_url_anchor_idx = this_url.lastIndexOf('#');
+if(this_url_anchor_idx == -1) {
+    refresh_url.href = this_url;
+}
+else {
+	refresh_url.href = this_url.substring(0, this_url_anchor_idx);
+}
+
+var blogsUser = currentLogin.name ? currentLogin.name : null;
+</script>
+
+
+
+    
+
+
+
+
+ 
+
+        
+<script>
+console.log("anu checking 6th file");
+	function showFeedTip() {
+   		showDialog("Right-click and select Copy Shortcut to get the URL to this feed.");//alert
+	}
+	
+	function jumpToPage(to, max) {
+		if(to > max) {
+			to = max;
+		}
+	
+		if(to < 1) {
+			to = 1;
+		}
+	
+		to = to - 1;
+		var base = "https://www-304.ibm.com/connections/blogs/stevewojspeaks?maxresults=15&sortby=0&lang=en_us";
+		window.location = base + "&page=" +  to;
+	}
+
+	function goToSubmitFeedback(obj){
+		var url=window.location.href;	
+		//var serverAndPort=document.location.host;	
+		var context='/connections/blogs';	
+              var protocolServerAndPort=url.substring(0,url.indexOf(context));
+              var typeValue = "Submit Feedback";
+              obj.href=protocolServerAndPort+context+"/feedback/gotofeedback.do"+"?feedbackType="+typeValue+"&returnTo="+url;
+
+	}
+
+
+   
+	function goToreportInappropriateCont(obj){
+              //console.log(" this is " + obj.firstChild.nodeValue);	
+		//console.dir(obj);
+		var url=window.location.href;	
+		//var serverAndPort=document.location.host;	
+		var context='/connections/blogs';	
+		var protocolServerAndPort=url.substring(0,url.indexOf(context));	
+              var typeValue = "Report Inappropriate content";	
+		obj.href=protocolServerAndPort+context+"/feedback/gotofeedback.do"+"?feedbackType="+typeValue+"&returnTo="+url;
+	
+	}
+	
+</script>
+
+<div id="lotusTitleBar" class="lotusTitleBar" style="background-color: #FBD034; background-image: url(../resource/stvbanner_LA.jpg); background-repeat: repeat-x; background-position: 50% 0px;">
+<div class="lotusRightCorner"><div class="lotusInner" style="height:140px;">
+
+
+
+		    <div role="navigation" aria-label="Blogs Views">
+<a id="tabNavigation" name="tabNavigation"></a>
+<ul class="tabs lotusTabs aria_toolbar" role="toolbar" aria-label="Blogs Views"  aria-controls="lotusMain">
+    <li  role="presentation">
+                 <a role="button"  aria-pressed="false"  href="https://www-304.ibm.com/connections/blogs/roller-ui/myblogs/edit?lang=en_us">My Blogs</a>
+           </li>
+    <li  role="presentation">
+                 <a role="button"  aria-pressed="false"  href="https://www-304.ibm.com/connections/blogs/roller-ui/homepage?lang=en_us">Public Blogs</a>
+           </li>
+    <li  role="presentation">
+                 <a role="button"  aria-pressed="false"  href="https://www-304.ibm.com/connections/blogs/roller-ui/myupdates?lang=en_us">My Updates</a>
+           </li>
+	<script language="javascript">
+	 	 if(currentLogin.globalAdmin) {
+	     document.write('<li role="presentation"><a role="button" aria-pressed="false" href="https://www-304.ibm.com/connections/blogs/roller-ui/admin/rollerConfig.do?method=edit&amp;lang=en_us">Administration</a></li>');
+	 }
+	</script>
+</ul>
+</div>
+	
+		    <!-- set the default to search blog entry - bob -->
+        			
+	<div id="global_search_container"></div>
+<script type="text/javascript">
+<!--
+function isExistInArray(array, value) {
+	for (var i=0; i < array.length; i++) {
+		if (array[i] == value) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+function initialSearchBar() {
+                                                    
+    var _localOptions = [];
+        _localOptions.push({label: 'Public Blogs', iconClass: 'lconnSprite lconnSprite-iconBlogs16', scope: 'public_blogs'  });
+    _localOptions.push({label: 'Public Blog Entries', iconClass: 'lconnSprite lconnSprite-iconBlogs16', scope: 'public_entries'  });
+            	_localOptions.push({label: 'My Blog Entries', iconClass: 'lconnSprite lconnSprite-iconBlogs16', scope: 'my_blogs'  });
+    	_localOptions.push({label: 'This Blog', iconClass: 'lconnSprite lconnSprite-iconBlogs16', scope: 'this_blog' , defaultOption: true  });
+    	_localOptions.push({label: 'This Blog\'s Comments', iconClass: 'lconnSprite lconnSprite-iconBlogs16', scope: 'this_blog_comments'  });
+        //ideationblog
+        
+                    
+    var _globalOptions = [];
+     _globalOptions.push({label: 'Activities', feature: 'activities'}); 	 _globalOptions.push({label: 'Bookmarks', feature: 'dogear'}); 	 _globalOptions.push({label: 'Communities', feature: 'communities'});      _globalOptions.push({label: 'Files', feature: 'files'}); 	 _globalOptions.push({label: 'Forums', feature: 'forums'}); 	 _globalOptions.push({label: 'Profiles', feature: 'profiles'}); 	 _globalOptions.push({label: 'Wikis', feature: 'wikis'}); 
+    var searchBar = new lconn.core.SearchBar({
+        localOptions: _localOptions,
+        globalOptions: [{}],
+        searchContextPath: 'https://www-304.ibm.com/connections/search',
+        lblSearch:         'Search',
+        lblSelectScope:    'Select Search Scope',
+        lblAllConnections: 'All Connections',
+        lblAdvanced:       'Advanced',
+        thirdPartySearchEngines: lconn_core_thirdPartySearchEngines,
+                onSubmit: function() {
+        	var str = this.getValue();
+    		str = dojo.string.trim(str); // trim it
+    		if (!str) {
+        		return false;
+    		}
+
+        	var selectedOption = this.selectedOption;
+        	if (selectedOption.feature || selectedOption.action) {
+        		return true;
+    		}
+        	else {
+        	    var t = ['public_blogs', 'public_entries', 'my_blogs', 'public_blog_comments', 'this_blog', 'this_blog_comments','public_ideationblogs', 'public_ideas', 'my_ideationblogs', 'public_ideationblog_comments', 'this_ideationblog', 'this_ideationblog_comments'];
+        	    if(!selectedOption.scope || isExistInArray(t, selectedOption.scope) == -1) {
+        	        selectedOption.scope = 'this_blog';
+        	    }
+        		switch( selectedOption.scope ){
+		            case "public_blogs":
+		                var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=blog&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "public_entries":
+		            	var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=entry&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "my_blogs":
+		            	var loc = '/connections/blogs/roller-ui/myblogs/edit?lang=' + langParaValue + '&q=' + encodeURIComponent(str) + '&search=true&t=entry';
+		            	window.location=loc;
+		                break;
+		            case "public_blog_comments":
+		            	var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=entry&f=comment&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		            	break;
+		            case "this_blog":
+		            	var loc = '/connections/blogs/stevewojspeaks/search?lang=' + langParaValue + '&t=entry&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "this_blog_comments":
+		            	var loc = '/connections/blogs/stevewojspeaks/search?lang=' + langParaValue + '&t=entry&f=comment&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            //ideationblog support
+		            case "public_ideationblogs":
+		                var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=ideationblog&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "public_ideas":
+		            	var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=idea&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "my_ideationblogs":
+		            	var loc = '/connections/blogs/roller-ui/myblogs/edit?lang=' + langParaValue + '&q=' + encodeURIComponent(str) + '&search=true&t=idea';
+		            	window.location=loc;
+		                break;
+		            case "public_ideationblog_comments":
+		            	var loc = '/connections/blogs/home/search?lang=' + langParaValue + '&t=idea&f=comment&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		            	break;
+		            case "this_ideationblog":
+		            	var loc = '/connections/blogs/stevewojspeaks/search?lang=' + langParaValue + '&t=idea&f=all&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            case "this_ideationblog_comments":
+		            	var loc = '/connections/blogs/stevewojspeaks/search?lang=' + langParaValue + '&t=idea&f=comment&q=' + encodeURIComponent(str);
+		                window.location=loc;
+		                break;
+		            default:
+		                break;
+		        }
+		        return false;
+        	}
+        }
+    }, dojo.byId('global_search_container'));
+}
+//-->
+</script>
+
+</div></div></div><!--end titleBar-->
+
+<script type="text/javascript">
+var ibmConfig = {
+   serviceName: "blogs",
+   proxyURL: "/connections/blogs/ajaxProxy/",
+   contextRootEnabler: "/connections/blogs",
+   versionStamp: "20150110.113307"
+};
+var baseProtocol = "https";
+var baseHost = "www-304.ibm.com";
+var basePath = "/connections/resources";
+var needProxy = (baseHost != window.location.host || baseProtocol+":" != window.location.protocol);
+var djConfig = {
+   isDebug: false,
+   baseUrl: (needProxy ? (ibmConfig.proxyURL + encodeURIComponent(baseProtocol) + "/" + encodeURIComponent(baseHost)) : (baseProtocol + "://" + baseHost)) + basePath + "/web/dojo/",
+   locale: "en-us",
+   dojoBlankHtmlUrl: "/connections/blogs/static/20150110.113307/nav/blankIE.html",
+   blankGif: "https://www-304.ibm.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307",
+   useCommentedJson: true,  
+   proxy: "/connections/blogs/ajaxProxy",
+   localizationComplete: true
+};
+</script>
+<script type="text/javascript">
+var netJazzAjaxConfig = {
+    base: "https://www-304.ibm.com/connections/resources",
+    skipStyles: true,
+    params: "etag=20150110.113307&lang=en&country=US"
+};
+CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "https://www-304.ibm.com/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
+</script>
+<script type="text/javascript">djConfig.parseOnLoad=true;</script>
+<script type="text/javascript" src="../../../resources/web/_js/index.html?include=dojo.dojo.js~&amp;etag=20150110.113307&amp;lang=en&amp;country=us"></script>
+<script type="text/javascript" src="../../../resources/web/_js/index.html?include=lconn.core.bundle_common.js~&amp;exclude=dojo.dojo.js~&amp;etag=20150110.113307&amp;lang=en&amp;country=us"></script>
+<script type="text/javascript" src="../../../resources/web/_js/index.html?include=lconn.blogs.blogsApp.js~&amp;exclude=dojo.dojo.js~lconn.core.bundle_common.js~&amp;etag=20150110.113307&amp;lang=en&amp;country=us"></script>
+
+<script type="text/javascript">
+	dojo.addOnLoad(function(){
+                /*// run the parser.
+                	                var p=dojo.parser; var d=document;
+	                	                if(d.getElementById('tagnavform')) {
+	                	p.parse(d.getElementById('tagnavform'));
+	                }
+	                	                if(d.getElementById('tagSliderGradient')) {
+	                	p.parse(d.getElementById('tagSliderGradient'));
+	                }
+	                	                if(d.getElementById('simpleSearchForm')) {
+	                	p.parse(d.getElementById('simpleSearchForm'));
+	                }
+	                	                if(d.getElementById('actionmenu_moreactions_container')) {
+	                	p.parse(d.getElementById('actionmenu_moreactions_container'));
+	                }
+	                	                if(d.getElementById('actionmenu_moreactions_container_anonymous')) {
+	                	p.parse(d.getElementById('actionmenu_moreactions_container_anonymous'));
+	                }
+	                	                if(d.getElementById('blogsActionBar')) {
+	                	p.parse(d.getElementById('blogsActionBar'));
+	                }
+	                                                */
+          });
+
+	document.onclick = function () {
+		if (dojo.isIE)
+			MenuPopup.returnFocusElement = false;
+		MenuPopup.hideMenu();
+	};
+	document.onkeyup = function ( event ) {
+		MenuPopup.hideOnKeypress( event );
+	};
+</script>
+
+<div id="small-masthead">
+   <div id="masthead-thin-top" style="padding:7px; background-color:#000000; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E5E5E', endColorstr='#040404'); background: -moz-linear-gradient(top, #5E5E5E, #040404); background: -webkit-gradient(linear, left top, left bottom, from(#5E5E5E), to(#040404));width:auto; border-bottom: solid 1px #444444;">
+        <a href="http://www.ibm.com" style="decoration:none;"><img src="https://dw1.s81c.com/developerworks/i/mf/ibm-smlogo.gif" style="border:0px; width:44x; height:16px;"></a>
+   </div>
+   <div id="masthead-main" style="padding:11px; background-color:#DA7327; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC5422', endColorstr='#E68C2B'); background: -moz-linear-gradient(top, #CC5422, #E68C2B); background: -webkit-gradient(linear, left top, left bottom, from(#CC5422), to(#E68C2B));width:auto; border-bottom: solid 1px #55564E;">
+       <a href="http://www.ibm.com/developerworks" style="text-decoration:none;"><img src="https://dw1.s81c.com/developerworks/i/mf/dw-wordmark.gif" style="border:0px; width:218px; height:32px;"></a>   
+   </div>
+</div>
+<div class="lotusMain" id="lotusMain">
+<div class="lotusSection" style="display: none;">
+</div>
+<div class="lotusContent" id="lotusContent" style="padding-top: 0px; margin-top: 0px;">
+<div id="css-background">
+
+  <div id="css-hero-banner">
+   <table border="0" cellspacing="0" cellpadding="0" id="banner" style="padding:0px; margin-top:0px; margin-bottom:0px; margin-left:auto; margin-right: auto;">  
+     <tr>
+       <td>
+            <div  id="hero-img" style="float:left; padding:left:5px;">
+                                                <a href="https://www-304.ibm.com/connections/blogs/stevewojspeaks?lang=en_us" style="text-decoration:none;" title="My Blog Archive"><h1 style='font-size:32px; font-weight:bold; font-family:Arial, Helvetica Neue, Helvetica, sans-serif; color:#371E48; padding-left:5px; padding-top:5px; padding-bottom:0px;'>Woj Speaks...</h1></a> 
+            </div>		
+       </td>
+       <td>
+                  </td>  
+     </tr>
+	<tr>
+	<td style="height:60px;">
+		<!-- Admin buttons --> 
+				<!-- end Admin buttons -->
+	</td>
+	</tr>
+   </table>
+  </div>
+
+<div style="clear:both"></div>
+
+
+    
+        
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+<div style="clear:both"></div>
+
+<table border="0" cellspacing="0" cellpadding="0" id="mainTable" style="padding:0px; margin-top:0px; margin-bottom:0px; margin-left:auto; margin-right: auto;">
+
+<tr>
+
+<td valign=top id="community-syn" style="padding:0px; margin:0px; padding-top:30px;">
+
+<!-- Community link -->
+  
+</td>
+
+<td valign="top"  style="margin:0px; padding:0px; width:100%">
+
+<a id="mainContent" name="mainContent"></a>  
+
+<div id="css-entry-container">   
+ 
+                      		      
+ 		  <div id="entries">
+                   
+                   
+		            			    
+                                            
+                          	                                                           
+                                                              
+                   <div id="entry-start">  		   
+                   
+    
+        <table class="lotusTable blogsFixedTable" border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+	<tbody>
+
+
+
+        
+
+
+
+
+
+
+
+           
+    <tr>
+	        <!-- Entry title and info -->
+		<td style="width:auto; border-top: solid 1px #FFFFFF;  border-bottom: solid 1px #E5E5E5;"><a name="2015_what_will_you_do_with_your_data" id="2015_what_will_you_do_with_your_data"></a>
+
+                       <div id="entry-title">
+
+			                                <h1 style="margin-top:15px; margin-bottom:10px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; font-size:20px;"><a style="text-decoration:none; color:#A9181B;"  href="2015_what_will_you_do_with_your_data?lang=en_us">
+				  					2015... What will YOU do? (with your data)
+			  	  				</a></h1>
+                                                 </div>     
+
+                                                 <div id="entry-meta" class="lotusTiny" style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  color: #848484; font-size:88% !important;">
+                         		           <span class="vcard">
+			       <a class="fn person lotusPerson" href="https://www-304.ibm.com/connections/blogs/roller-ui/blog/woj%40us.ibm.com?lang=en_us">steve wojtowecz</a>
+				  <span class="x-lconn-userid" style="display: none;">270003B7NV</span>
+			           				      <span class="email" style="display: none;">woj@us.ibm.com</span>
+			           		                  </span>
+		            <span class="lotusDivider">|</span>
+		        	            				    <script type='text/javascript'> document.write(blogsDate.date.localize (1421775432000));</script>
+		        			    				<span class="lotusDivider">|</span>
+								0 Comments
+								                               &nbsp;|&nbsp;
+                               2,559 Visits
+                   </div>
+
+                   
+                                                                                       <div id="syn-box">
+                                                                             <script language="javascript">if(window.winW > 768) document.write('<div><div class="g-plusone" data-size="medium" data-href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data"></div></div>');  else document.write('<div id="post-preview"><a href="2015_what_will_you_do_with_your_data?lang=en_us" style=" font-weight:bold !important; color:#4A6694; text-decoration:none;">>></a></div>');</script>
+                                                                                                                 <script language="javascript">if(window.winW > 768) document.write('<div><iframe src="https://www.facebook.com/plugins/like.php?href=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"></iframe></div>');  else document.write('<div id="post-preview"><a href="2015_what_will_you_do_with_your_data?lang=en_us" style=" font-weight:bold !important; color:#4A6694; text-decoration:none;">>></a></div>');</script>
+                                                                                                               <div><script type="IN/Share" data-url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data?lang=en_us" data-counter="right"></script></div>
+                                                                                                              <script language="javascript">if(window.winW > 768) document.write('<div><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data" data-text="2015... What will YOU do? (with your data)" data-count="horizontal" data-via="" data-related="developerworks:Community for developers and IT professionals"></a></div>');  else document.write('<div id="post-preview"><a href="2015_what_will_you_do_with_your_data?lang=en_us" style=" font-weight:bold !important; color:#4A6694; text-decoration:none;">>></a></div>');</script>
+                                                                             	                     <div style="margin-top:3px !important;"><span id="lotusRating" style="margin:0px; padding:0px;"><span class="hreview">
+<span class="rating lotusRating" id="entry_rating_336b049a-2827-46a7-89f7-b1d105d77570" >
+<nobr>
+<script language="javascript">
+ratings['entry_336b049a-2827-46a7-89f7-b1d105d77570_recommentees']={'size':0 };
+if(currentLogin.auth) {
+	if(!ratings['entry_336b049a-2827-46a7-89f7-b1d105d77570_recommentees'][currentLogin.uid]) {
+	    	    		var s = ['<span name="rating_btn">',
+				  '<a href="2015_what_will_you_do_with_your_data?lang=en_us#" role="button" aria-label="Recommend this Entry" title="Recommend this Entry" onclick="lconn.blogs.rating.recommend(\'entry\', \'/connections/blogs/roller-ui/rendering/rating/entry/stevewojspeaks/entry/2015_what_will_you_do_with_your_data\', \'336b049a-2827-46a7-89f7-b1d105d77570\');return false;">',
+				  '<img class=\"lconnSprite lconnSprite-iconAddRating16\" src="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/\&quot;https://www-304.ibm.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307\&quot;" alt=\"Recommend this Entry\" /><span class=\"lotusAltText\">Recommend this Entry</span>',
+				  '</a>',
+				 '</span>'].join('');
+		document.write(s);
+ 	}
+}
+</script>
+
+<a name="rating_icon_link" href="2015_what_will_you_do_with_your_data?lang=en_us#" role="button" aria-label="No Ratings" onclick="return false;" onmouseover="lconn.blogs.rating.displayRecommendeeList(event, 'entry', '336b049a-2827-46a7-89f7-b1d105d77570', true, this);"
+   onfocus="lconn.blogs.rating.displayRecommendeeList(event, 'entry', '336b049a-2827-46a7-89f7-b1d105d77570', true, this);"
+   onblur="lconn.blogs.rating.hideRecommendeeList(event, 'entry', '336b049a-2827-46a7-89f7-b1d105d77570', true, this);" >
+<span name="rating_icon">
+<img class="lconnSprite lconnSprite-iconRating16-off" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="No Ratings" /><span class="lotusAltText">Ratings</span></span>
+</a>
+<span name="rating_count">0</span>
+</nobr>
+</span>
+</span>
+</span></div>
+                             </div>
+                                              
+                                                                
+                   <div id="css-entry"> 
+
+        	      	        			                             <p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;"><a href="../resource/BLOGS_UPLOADED_IMAGES/data-driven-decision.jpg" target="_blank"><img alt="image" height="292" src="../resource/BLOGS_UPLOADED_IMAGES/data-driven-decision.jpg" style="display: block; margin: 1em 0pt 0pt 1em; float: right;" width="376" /></a>It&rsquo;s the beginning of a new calendar year -- time for new expectations, contemplation and intentional examination of the past with the objective of developing strategic changes or improvements for the future. &nbsp;I look forward to the constant change that comes with progress and hope that the New Year brings you effective data resolutions.&nbsp;&nbsp; Wishing you all a 2015 filled with data success &ndash; assurance of data dilemmas becoming data delivered!</span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">In a&nbsp; recent IBM white paper entitled <a href="http://public.dhe.ibm.com/common/ssi/ecm/ti/en/tis14158usen/TIS14158USEN.PDF">&lsquo;Meeting demands for high availability with advanced data protection&rsquo;</a>, research confirms, &ldquo;In a recent survey of IT experts in both midsized and large organizations, 49 percent said that they can&rsquo;t tolerate more than 15 minutes of downtime for high-priority applications, while 25 percent had no tolerance for downtime within these critical applications. High availability and advanced data protection capabilities once reserved for financial institutions and large enterprises are now being widely adopted across industries and in organizations of all sizes.&rdquo;</span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">It&rsquo;s no wonder that data management and protection continues to grow in importance for all businesses and organizations regardless of size or the scale of data generated.&nbsp; As the new year begins, it affords the opportunity to examine whether the right data decisions are in place and whether those decisions position you to welcome the new year with confidence. &nbsp;To help with this data dilemma and ensure high availability and data protection, here are five data tips all IT people should ponder:</span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;"><strong>Tip #1: Consider embracing hybrid cloud with more alacrity</strong></span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">At the cost of repeating myself, enterprises who are not quick to adopt hybrid cloud run the risk of being left behind by competition or becoming obsolete. &nbsp;Hybrid cloud is an extremely agile and convenient means to gain business agility. &nbsp;Creating a private cloud can help you consolidate various business unit workloads as well as enable cost savings by allowing the private cloud to be sized to the average workload; thus, hybrid cloud makes it the right business and data mix. &nbsp;Plan your data distribution well and hybrid cloud may be the perfect solution for your data protection for the future. </span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">I invite you to join the upcoming January 21 news cast &ldquo;<a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=registration.jsp&amp;eventid=897783&amp;sessionid=1&amp;key=64A89774751ACAD18A2E6A3758A65B1E&amp;sourcepage=register">Eliminate the Barriers to Your Cloud Adoption&rdquo;</a><span style="color: red;">.&nbsp; </span>Where I sit and have a candid discussion with a tier-one storage analyst from IDC, a leading Business Partner &ndash; CAS Severn, and current client (Loyola) to go deeper into the hybrid cloud topic.</span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;"><strong><a href="../resource/BLOGS_UPLOADED_IMAGES/analytics-600.jpg" target="_blank"><img alt="image" height="206" src="../resource/BLOGS_UPLOADED_IMAGES/analytics-600.jpg" style="display: block; margin: 1em 1em 0pt 0pt; float: left;" width="392" /></a><br />
+	Tip #2: Ensure your data protection solution is an analytics-based solution</strong></span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">As per Gartner, &ldquo;Analytics will take center stage as the volume of data generated by embedded systems increases and vast pools of structured and unstructured data inside and outside the enterprise are analyzed. Organizations need to manage how best to filter the huge amounts of data coming from various sources and then deliver exactly the right information to the right person, at the right time. Analytics will become deeply, but invisibly embedded everywhere.&rdquo; </span></span></p>
+<p dir="ltr" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:normal;text-autospace:none;">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Storage analytics are increasingly essential to plan and optimize today&rsquo;s complex storage operational environments. &nbsp;Growing organizations must quickly identify bottlenecks and find innovative ways to maximize and optimize capacity. &nbsp;Storage analytics helps you:</span></span></p>
+<ol dir="ltr">
+	<li style="margin-bottom:0in;margin-bottom:.0001pt;text-autospace:none;">
+		<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Resolve typical cost issues and complexity of deploying storage management infrastructure</span></span></li>
+	<li style="margin-bottom:0in;margin-bottom:.0001pt;text-autospace:none;">
+		<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">The inability to predict future data/storage capacity needs</span></span></li>
+	<li style="margin-bottom:0in;margin-bottom:.0001pt;text-autospace:none;">
+		<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Improve visibility into performance bottlenecks</span></span></li>
+</ol>
+<p dir="ltr" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:normal;text-autospace:none;">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Hence, it is important to ensure your data protection solution has in-built storage analytics to avoid wrestling with all these issues.<br />
+	<br />
+	<strong>Tip #3: Storage virtualization with built in management benefits all greatly</strong></span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Storage virtualization is a continuing and critical requirement. &nbsp;As we&rsquo;re all aware, its benefits are many time over: improved utilization, resiliency, flexibility, responsiveness, workload mobility and disaster recovery. &nbsp;I encourage all my clients to adopt more storage virtualization.&nbsp; I have discovered that the deployments of storage virtualization are following the same trends that compute virtualization did nearly a decade ago.&nbsp; Once a client deploys virtualization, they immediately want to manage that new environment and start to look for technologies to do that.&nbsp; So, instead of forcing clients to go through that double pain, clients should look for solutions that not only virtualize their storage environment, but manage it and protects the data as well&hellip;.all in one solution! </span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;"><strong>Tip #4: Policy based automation</strong></span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">Improve your data management and availability through policy-based automation. &nbsp;Automation increases efficiency significantly since it is (should be) based on analytics driven data. &nbsp;Ensure that you replace your manual processes with policy-driven decisions and you&rsquo;ll be on your way to establishing a more streamlined, efficient and stress-free data movement, management, and protection system for your organization.</span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;"><strong>Tip #5: Consider abstracting embedded functionality out of hardware and into software-based solutions</strong></span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">This is important too as it establishes a starting point for software-defined environments but doesn&rsquo;t change much of the functionality. &nbsp;Abstracting functionality into software-based solutions ensures more ease-of-use, flexible deployment models, vendor portability, and an easy on-ramp for hybrid cloud deployments.&nbsp; </span></span></p>
+<p dir="ltr">
+	<span style="font-size:12px;"><span style="font-family: verdana,geneva,sans-serif;">It is my recommendation that each business take a good look at where they stand against these five areas.&nbsp; Then determine what to focus on and address first to get ahead or ignore and be left behind.&nbsp; Data is the new natural resource and it&rsquo;s continued growth is here to stay.&nbsp; Until next time...keep your data secure, agile, and available.</span></span></p>
+<p dir="ltr">
+	<a href="https://twitter.com/steve_woj">@steve_woj</a><br />
+	#wojspeaks<br />
+	<br />
+	<span style="font-family:calibri,sans-serif;"><span style="font-size:11.0pt;"><span style="font-size:16px;"><strong><span style="color:#0000ff;">P.S: Please join my webcast on January 21, 2015 to learn how to &#39;Eliminate your Barriers to Cloud Adoption&#39;. Click </span><a href="http://bit.ly/1CA0gHu"><span style="color:#0000ff;">here</span></a><span style="color:#0000ff;"> to register for the event. </span></strong></span></span></span><br />
+	<br />
+	<br />
+	<br />
+	<br />
+	&nbsp;</p>
+           
+                                	              
+                     <div style="clear:both"></div>
+
+                                        <div id="syn-bar">
+					<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                      <meta property="og:title" content="2015... What will YOU do? (with your data)"/>
+                                                <iframe src="https://www.facebook.com/plugins/like.php?href=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data&amp;layout=standard&amp;show_faces=false&amp;width=245px&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=45px" scrolling="no" frameborder="0" style="float:left; border:none; overflow:hidden; width:245px; height:45px;" allowTransparency="true"></iframe>
+                                              <a href="javascript:twitterPop('https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data','2015... What will YOU do? (with your data)')">
+                       <img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/med-twitter.png" title="Tweet this entry"></a> 
+                       <a href="http://del.icio.us/post?url=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data;title=2015... What will YOU do? (with your data)">
+                       <img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/med-del.png" title="Post to del.icio.us"></a>
+                       <a href="http://reddit.com/submit?url=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data&title=2015... What will YOU do? (with your data)&target=technology">
+                       <img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/med-reddit.png" title="Submit to reddit"></a>
+                       <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data&title=2015... What will YOU do? (with your data)&summary="$utils.truncate($utils.removeHTML($entry.displayContent), 0, 650)"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/med-linkedin.png" title="Add to LinkedIn"></a>
+                       <a href="http://www.stumbleupon.com/submit?url=https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/med-stumble.png" title="Stumble Upon it"></a>
+                                                                  </div> 
+
+                                       <div style="clear:both; padding:5px;"></div>
+                   <div id="css-widget-related-other-resources">
+                   <span style="font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  color:#808080;  !important;  font-weight:bold;  font-size:95%;">DISCOVER RELATED RESOURCES TAGGED []</span>
+                   <table style="margin-top:15px; width:100%;">
+                      <tr>
+                         <td style="padding:0px; margin:0px; border:none; width:20%;">
+                             <h4 style=" color: #424242;"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/dw-small.png" alt="This Blog">This Blog</h4>
+                         </td>
+                         <td style="padding:0px; margin:0px; border:none; width:20%;">
+                            <h4 style=" color: #424242;"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/dw-small.png" alt="All Blogs">All Blogs</h4>
+                        </td>
+                        <td style="padding:0px; margin:0px; border:none; width:20%;">
+                            <h4 style=" color: #424242;"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/reddit-small.png" alt="Reddit">Reddit</h4>
+                        </td>
+                        <td style="padding:0px; margin:0px; border:none; width:20%;">
+                            <h4 style=" color: #424242;"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/delicious-small.png" alt="Del.icio.us">Del.icio.us</h4>
+                        </td>
+                        <td style="padding:0px; margin:0px; border:none; width:20%;">
+                            <h4 style=" color: #424242;"><img src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/twitter-small.png" alt="Twitter">Twitter</h4>
+                        </td>
+                     </tr>
+                  </table>                          
+                  <table  style="width:100%;">
+                                                              </table>
+           </div>
+                      
+	        </div>
+
+		</td>
+
+                
+    </tr>
+
+<!-- tweet button widget script -->
+<script type="text/javascript">
+  function twitterPop(str,str1) {
+     mywindow = window.open('https://twitter.com/share?url='+str + '&text=' + str1,"Tweet_widow","channelmode=no,directories=no,location=no,menubar=no,scrollbars=no,toolbar=no,status=no,width=500,height=375,left=300,top=200");
+     mywindow.focus();
+}
+</script>
+<!-- end tweet button widget script -->  
+
+
+    </tbody>
+
+    </table>
+
+		   
+                    <script language="javascript">if(currentLogin.auth) document.write('<div style="display:none">');</script>
+		        <ul class="lotusInlinelist">
+			      <li class="lotusFirst">
+			<nobr><a class="lotusAction" title="Login to access this feature" href="https://www-304.ibm.com/connections/blogs/roller-ui/login-redirect.jsp?redirect=https%3A%2F%2Fwww-304.ibm.com%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us%23action%3Daddcomment">Add a Comment</a></nobr>        
+			        </li>
+			        <li><nobr><a class="lotusAction" title="Login to access this feature" href="https://www-304.ibm.com/connections/blogs/roller-ui/login-redirect.jsp?redirect=https%3A%2F%2Fwww-304.ibm.com%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us">Recommend this Entry</a></nobr></li>
+			        <li><nobr><a class="lotusAction" title="Login to access this feature" href="2015_what_will_you_do_with_your_data?lang=en_us#" onclick="if(!event){event=window.event;}menuUtility.openMenu(event, 'actionmenu_moreactions_anonymous');return false;">More Actions</a></nobr></li>
+		              
+                              </ul>
+
+		        <div id="actionmenu_moreactions_container_anonymous">
+			        <div dojoType="dijit.Menu" id="actionmenu_moreactions_anonymous" style="display: none;">
+			            					    <div dojoType="dijit.MenuItem" onClick="window.location='/connections/blogs/roller-ui/login-redirect.jsp?redirect=https%3A%2F%2Fwww-304.ibm.com%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us%23action%3Dsend_notification';return false;">Notify Other People</div>
+					    					  <!--  <div dojoType="dijit.MenuItem" onClick="window.location='/connections/blogs/roller-ui/login-redirect.jsp?redirect=https%3A%2F%2Fwww-304.ibm.com%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us%23action%3Dflag_as_inappropriate';return false;">Flag as inappropriate</div> -->
+					</div>
+				</div>
+
+		        <script language="javascript">if(currentLogin.auth) document.write('</div>'); else document.write('<div style="display:none">');</script>
+		        <ul class="lotusInlinelist">   
+                                <li  class="lotusFirst">
+			           <nobr>
+                                    				        <a id="AddWeblogEntryCommentLink" class="lotusAction"  href="2015_what_will_you_do_with_your_data?lang=en_us#" title="" onclick="WeblogEntryActionForms.toggle('commentForm', 'content');return false;">Add a Comment</a> 
+				                                        </nobr>
+                                 </l>
+			        <li>
+			        <nobr>
+		        		<a id="RecommendEntryLink" class="lotusAction" href="2015_what_will_you_do_with_your_data?lang=en_us#" title="" onclick="lconn.blogs.rating.recommend('entry', '/connections/blogs/roller-ui/rendering/rating/entry/stevewojspeaks/entry/2015_what_will_you_do_with_your_data', '336b049a-2827-46a7-89f7-b1d105d77570');return false;">Recommend this Entry</a>
+		        	</nobr>
+		        	</li>
+		        	<script language="javascript">if(!currentLogin.edit) document.write('<li style="display:none">'); else document.write('<li>');</script>
+		        	<nobr>
+		        		<a class="lotusAction" href="https://www-304.ibm.com/connections/blogs/roller-ui/authoring/weblog.do?method=edit&amp;weblog=stevewojspeaks&amp;entry=2015_what_will_you_do_with_your_data&amp;lang=en_us">Edit</a>
+		        	</nobr>
+		        	</li>
+		        	<li>
+		        				        	<a id="focusMoreActionsLink" class="lotusAction" href="2015_what_will_you_do_with_your_data?lang=en_us#" title="" onclick="if(!event){event=window.event;}menuUtility.openMenu(event, 'actionmenu_moreactions');return false;">More Actions</a>
+		        			        	</li>
+		        	<script language="javascript">if(!currentLogin.globalAdmin) document.write('<li style="display:none">'); else document.write('<li class="lotusFirst" style="float:right;">');</script>
+		        	<nobr>
+		        		<a id="quarantineThisEntryLink" href="2015_what_will_you_do_with_your_data?lang=en_us#" onclick="WeblogEntryActionForms.toggle('quarantineForm', 'comment');return false;" style="color: #f00;text-decoration:underline;">Quarantine this Entry</a>
+		        	</nobr>
+		        	</li>
+		        </ul>
+		        <div id="actionmenu_moreactions_container">
+			        <div dojoType="dijit.Menu" id="actionmenu_moreactions" style="display: none;">
+					    <div dojoType="dijit.MenuItem" id="focusAddNotificationLink" onClick="WeblogEntryActionForms.toggle('notificationForm', 'description');return false;">Notify Other People</div>
+					 <!--   <div dojoType="dijit.MenuItem" id="focusFlagAsInappropriateLink" onClick="WeblogEntryActionForms.toggle('flagInappropriateForm', 'issue');return false;">Flag as inappropriate</div> -->
+					</div>
+				</div>
+		        <script language="javascript">if(!currentLogin.auth) document.write('</div>');</script>		        
+		        <div style="margin-top:10px"><form name="commentForm" style="display:none" action=" https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data " method="post" class="lotusForm" role="application">
+<span name="_type" style="display:none">comment</span>
+<div name="error_messages" class="lotusMessage" style="display:none" role="alert">
+	<img class="lconnSprite lconnSprite-iconError16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Error icon" /><span class="lotusAltText">Error icon</span><span name="message"></span>
+</div>
+<div name="warning_messages" class="lotusMessage lotusWarning" style="display:none" role="alert">
+	<img class="lconnSprite lconnSprite-iconWarning16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Warning icon" /><span class="lotusAltText">Warning icon</span><span name="message"></span>
+</div>
+<div name="info_messages" class="lotusMessage lotusInfo" style="display:none" role="alert">
+	<img class="lconnSprite lconnSprite-iconAttention16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Information icon" /><span class="lotusAltText">Information icon</span><span name="message"></span>
+</div>
+<input type="hidden" name="method" value="post" />
+<input type="hidden" name="dangerousurlnonce" value="" />
+<input type="hidden" name="lang" value="en_us" />
+<input type="hidden" name="version" value="250" />
+<table width="100%" class="lotusFormTable" role="presentation"><tbody>
+	<tr><td colspan="2" class="lotusFormTitle"><h2><strong>Comment</strong> on this Entry</h2></td></tr>
+	<tr class="lotusFormFieldRow">
+		<td width="5%"> </td>
+		<td><textarea id="comment_content" name="content" title='Content' rows="10" style="width:80%"></textarea></td>
+	</tr>
+	<tr class="lotusFormFieldRow"><td> </td>
+		<td name="select_blogs"> </td>
+	</tr>
+	<tr><td colspan="2" class="lotusFormFooter"><div class="submitArea">
+		<input class="lotusFormButton blogsPaddingRight" name="submitBtn" onclick="this.form.method.value='post';return true;" type="submit" value='Submit'/>
+		<input class="lotusFormButton blogsPaddingRight" name="previewBtn" onclick="this.form.method.value='preview';return true;" type="submit" value='Preview' />
+      <input class="lotusFormButton blogsPaddingRight" name="cancelBtn" onclick="return WeblogEntryActionForms.cancel('commentForm', 'AddWeblogEntryCommentLink');" type="button" value='Cancel' />
+	</div></td></tr>
+</tbody></table>
+</form>
+<form id="NotificationForm" name="notificationForm" style="display:none" action="https://www-304.ibm.com/connections/blogs/roller-services/json/notify" class="lotusForm" dojoInit="false" role="application">
+	<span name="_type" style="display:none">notification</span>
+	<div name="error_messages" class="lotusMessage" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconError16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Error icon" /><span class="lotusAltText">Error icon</span><span name="message"></span>
+	</div>
+	<div name="warning_messages" class="lotusMessage lotusWarning" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconWarning16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Warning icon" /><span class="lotusAltText">Warning icon</span><span name="message"></span>
+	</div>
+	<div name="info_messages" class="lotusMessage lotusInfo" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconAttention16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Information icon" /><span class="lotusAltText">Information icon</span><span name="message"></span>
+	</div>
+	<input type="hidden" name="entry" value="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data"/>
+	<input type="hidden" name="dangerousurlnonce" value=""/>
+	<input type="hidden" name="lang" value="en_us" />
+	<input type="hidden" name="version" value="250" />
+	<table width="100%" class="lotusFormTable" role="presentation">
+	<tbody>
+		<tr><td class="lotusFormTitle"><h2>Send Email Notification</h2></td></tr>
+		<tr class="lotusFormFieldRow">
+			<td class="lotusFormField" style="padding-bottom:0px;">
+				<label for="notificationForm_typeahead">Type in a Name:</label>
+			</td>
+		</tr>
+		<tr class="lotusFormFieldRow">
+			<td class="lotusFormField">
+				<span dojoType="lconn.core.PeopleDataStore" queryParam="name" url="/connections/blogs/roller-services/json/typeaheadpeople?website=9f41185f-5189-40a4-b35c-016a17572749" jsId="peopleStore"></span>
+				<div dojoType="lconn.core.PeopleTypeAhead" class="typeAheadPeople" title="Type in a Name:" id="notificationForm_typeahead" style="width:78%" minChars="2" searchDelay="400" multipleValues="false" token="," store="peopleStore" ></div>
+				<button name="addMemberBtn" onclick="return false;" class="fieldAdd" style="vertical-align: top;" title="Add" ></button>
+				<a name="addMemberBtn" role="button" aria-label="Add" onclick="return false;" href="2015_what_will_you_do_with_your_data?lang=en_us#" class="lotusAltText" title="Add">+</a>
+			</td>
+		</tr>
+		<tr class="lotusFormFieldRow" name="notifyLabelTR" style="display:none">
+    		<td nowrap style="padding-bottom:0px;"><div><label class="" for="notify">Notify:</label></div></td>
+    	</tr>
+    	<tr class="lotusFormFieldRow" name="notifyFieldTR" style="display:none">
+    		<td class="lotusFormField">
+    		 	<div dojoType="lconn.blogs.notification.receivers">
+    		 		 <script type='dojo/method' event='onChange' args="person,op">
+    		 		  if(this.receivers.length == 0){
+    		 		 		this.form().sendBtn.disabled = true;
+    		 		 		this.form().sendBtn.className = "lotusFormButton lotusBtnDisabled";
+
+    		 		 		dojo.query('[name="notifyLabelTR"]', this.form())[0].style.display = "none";
+    		 		 		dojo.query('[name="notifyFieldTR"]', this.form())[0].style.display = "none";
+    		 		  }else{
+    		 		 		this.form().sendBtn.disabled = false;
+    		 		 		this.form().sendBtn.className = "lotusFormButton lotusBtnSpecial";
+
+							dojo.query('[name="notifyLabelTR"]', this.form())[0].style.display = "";
+							dojo.query('[name="notifyFieldTR"]', this.form())[0].style.display = "";
+    		 		  }
+    		 		 </script>
+    		 		 <script type='dojo/connect' event='startup'>
+    		 		 	dojo.connect(dijit.byId(this.form().name+'_typeahead'),
+    		 		 		'onSelect',
+    		 		 		this,
+    		 		 		function(){
+    		 		 		    var x = dijit.byId(this.form().name+'_typeahead');
+    		 		 			var obj = x.getItem();
+    		 		 			if(obj) {
+    		 		 				if(obj.type != "-1"){
+	    		 		 				this.add(obj.name, obj.userid);
+	    		 		 				x.reset();
+    		 		 				}
+    		 		 			}
+    		 		 		}
+    		 		 	);
+    		 		 	var _This = this;
+    		 		 	dojo.forEach(dojo.query('[name="addMemberBtn"]', this.form()), function(o){
+    		 		 	    dojo.connect(o, 'onclick', _This, function() {
+    		 		 	        var x = dijit.byId(this.form().name+'_typeahead');
+    		 		 	        var s = lconn.blogs.utils.purifyEmail(x.getTextBoxValue());
+    		 		 	        if(lconn.blogs.utils.isEmail(s)) {
+    		 		 	            this.add(s, undefined, s);
+    		 		 	            x.reset();
+    		 		 	        }
+    		 		 	    });
+    		 		 	});
+    		 		 	this.receiversContainer.setAttribute('aria-label', 'Notify:');
+						this.inputBox = dijit.byId(this.form().name+'_typeahead');
+    		 		 </script>
+    		 	</div>
+    		 </td>
+    	</tr>
+		<tr class="lotusFormFieldRow">
+			<td class="lotusFormField" style="padding-bottom:0px;">
+				<label for="notification_message">Message:</label>
+			</td>
+		</tr>
+		<tr class="lotusFormFieldRow">
+			<td class="lotusFormField">
+				<textarea id="notification_message" name="description" rows="10" style="width:80%" title="Message:"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="lotusFormFooter">
+				<div class="submitArea">
+				<input class="lotusFormButton lotusBtnDisabled blogsPaddingRight" disabled="true" name="sendBtn" type="button" onclick="return postNotificaton();" value='Send'></input>
+				<input class="lotusFormButton blogsPaddingRight" name="cancelBtn" onclick="return WeblogEntryActionForms.cancel('notificationForm', 'focusMoreActionsLink');" type="button" value='Cancel' />
+				</div>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</form>
+<form name="quarantineForm" style="display:none" action="https://www-304.ibm.com/connections/blogs/roller-services/json/quarantine_entry" class="lotusForm" role="application">
+	<div name="error_messages" class="lotusMessage" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconError16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Error icon" /><span class="lotusAltText">Error icon</span><span name="message"></span>
+	</div>
+	<div name="warning_messages" class="lotusMessage lotusWarning" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconWarning16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Warning icon" /><span class="lotusAltText">Warning icon</span><span name="message"></span>
+	</div>
+	<div name="info_messages" class="lotusMessage lotusInfo" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconAttention16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Information icon" /><span class="lotusAltText">Information icon</span><span name="message"></span>
+	</div>
+	<input type="hidden" name="entry" value="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data"/>
+	<input type="hidden" name="dangerousurlnonce" value=""/>
+	<input type="hidden" name="lang" value="en_us" />
+	<input type="hidden" name="version" value="250" />
+	<table width="100%" class="lotusFormTable" role="presentation"><tbody>
+		<tr><td colspan="2" class="lotusFormTitle"><h2>Quarantine this entry</h2></td></tr>
+		<tr>
+			<td width="5%"> </td>
+			<td><label for="quarantine_comment">Provide a reason for quarantining this blog entry (optional):</label></td>
+		</tr>
+		<tr>
+			<td width="5%"> </td>
+			<td><textarea id="quarantine_comment" name="comment" rows="10" style="width:80%" title='Provide a reason for quarantining this blog entry (optional):'></textarea></td>
+		</tr>
+		<tr><td colspan="2" class="lotusFormFooter">
+			<div class="submitArea">
+				<input class="lotusFormButton" name="submitBtn" type="button" onclick="return postQuarantine();" value='Submit'/>
+				<input class="lotusFormButton" name="cancelBtn" type="button" onclick="return WeblogEntryActionForms.cancel('quarantineForm', 'quarantineThisEntryLink');" value='Cancel'/>
+			</div>
+		</td></tr>
+	</tbody></table>
+</form>
+<form name="deleteForm" style="display:none" action="https://www-304.ibm.com/connections/blogs/roller-services/json/delete_entry" class="lotusForm" role="application">
+	<input type="hidden" name="entry" value="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/2015_what_will_you_do_with_your_data"/>
+	<input type="hidden" name="dangerousurlnonce" value=""/>
+	<input type="hidden" name="lang" value="en_us" />
+</form>
+
+<div id="actionforms_globalmsgs" style="display:none">
+	<div name="error_messages" class="lotusMessage" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconError16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Error icon" /><span class="lotusAltText">Error icon</span><span name="message"></span>
+	</div>
+	<div name="warning_messages" class="lotusMessage lotusWarning" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconWarning16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Warning icon" /><span class="lotusAltText">Warning icon</span><span name="message"></span>
+	</div>
+	<div name="info_messages" class="lotusMessage lotusInfo" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconAttention16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Information icon" /><span class="lotusAltText">Information icon</span><span name="message"></span>
+	</div>
+	<div name="confirm_messages" class="lotusMessage lotusConfirm" style="display:none" role="alert">
+		<img class="lconnSprite lconnSprite-iconConfirmation16" src="../../../resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150110.113307" alt="Confirmation icon" /><span class="lotusAltText">Confirmation icon</span><span name="message"></span>
+	</div>
+</div>
+
+<script language="javascript">
+function keepSessionAlive(){dojo.xhrGet({url: '/connections/blogs/roller-services/json/authcheck'});}
+WeblogEntryActionForms = {
+    opened: {count:0},
+	type: function(form) {
+		t=dojo.query('[name="_type"]', form);
+		if(t.length>0){
+			return t[0].innerHTML;
+		}
+		else {
+			return '';
+		}
+	},
+	close: function(form) {
+		form.style.display='none';
+		this.reset(form);
+
+		if(this.opened[form.name]) {
+	    	this.opened[form.name] = false;
+	    	this.opened.count--;
+	    	if(this.opened.count == 0) {
+	    		if(this.keepAliveTimer.isRunning) {
+					this.keepAliveTimer.stop();
+				}
+	    	}
+	    }
+	},
+    reset: function(form) {
+    	form.reset();
+
+    	// clear messages
+    	var mt = ['error', 'warning', 'info'];
+    	for(var i=0; i<mt.length; i++) {
+    	    var x=dojo.query('[name="' + mt[i] + '_messages"]', form);
+	    	if(x.length > 0) {
+	    	    x[0].style.display='none';
+	    	    x=dojo.query('[name="message"]', x[0]);
+	    	    if(x.length > 0) x[0].innerHTML='';
+	    	}
+    	}
+
+        var t=this.type(form);
+        if(t=='comment') {
+        	form.content.innerHTML='';
+        	var x = dojo.byId("commentspanel_preview");
+        	if(x) dojo.byId("commentspanel_preview").style.display = "none";
+        }
+        else if(t=='notification') {
+            form.receivers.clear();
+        }
+        else if(t=='notification_ex') {
+        	form.receivers.clear();
+
+        	var fcb = dijit.byId(form.name+'_filteringcheckbox');
+        	fcb.peopleSelected = new Object();
+        	if (fcb.currPage > 1) {
+        	    fcb.currPage = 1;
+        	    fcb.gotList = false;
+        	}
+        	fcb.clearSearch();
+        }
+    },
+    init: function(form) {
+        var t=this.type(form);
+        if(t=='notification') {
+            var dojoInit = form.getAttribute('dojoInit');
+            if(dojoInit == 'false') {
+                dojo.parser.parse(form);
+								form.setAttribute('dojoInit', 'true');
+            }
+            if(form.description.value == '') {
+                form.description.value = 'Hi-  I thought you might be interested in this blog entry.';
+            }
+    	}
+    	else if(t=='notification_ex') {
+    	    var dojoInit = form.getAttribute('dojoInit');
+            if(dojoInit == 'false') {
+            	dojo.parser.parse(form);
+            	            	form.setAttribute('dojoInit', 'true');
+            }
+
+        	var fcb = dijit.byId(form.name+'_filteringcheckbox');
+        	if(!fcb.gotList) fcb.getList();
+        	fcb.setDisabled(false);
+
+        	if(form.description.value == '') {
+                form.description.value = 'Hi-  I thought you might be interested in this blog entry.';
+            }
+        }
+    },
+    hideAll: function() {
+    	document.forms['commentForm'].style.display='none';
+    	document.forms['notificationForm'].style.display='none';
+    	    	document.forms['quarantineForm'].style.display='none';
+
+    	var t = dojo.byId('actionforms_globalmsgs');
+    	if(t) {
+    	    t.style.display = 'none';
+    	}
+    },
+    toggle: function(name, fc) {
+    	var f = document.forms[name];
+    	if(f.style.display != 'none'){
+    	    return;
+    	}
+
+    	this.init(f);
+
+    	this.hideAll();
+	    f.style.display='';
+	    if(typeof fc != 'undefined') {
+		    var fcs = fc.split(",");
+			var bFocused = false;
+			for(var i = 0; i < fcs.length; i++) {
+			    var tfc = fcs[i];
+				var x = dojo.query('[name="'+tfc+'"]', f);
+	            if(x.length>0) {
+				    x[0].focus();
+					bFocused = true;
+					break;
+				}
+			}
+			for(var i = 0; i < fcs.length; i++) {
+			    var tfc = fcs[i];
+				var x = dojo.query('[id="'+tfc+'"]', f);
+	            if(x.length>0) {
+				    x[0].focus();
+					bFocused = true;
+					break;
+				}
+			}
+	    }
+
+	    if(!this.opened[name]) {
+	    	this.opened[name] = true;
+	    	this.opened.count++;
+	    }
+
+	    if(typeof this.keepAliveTimer == 'undefined') {
+			this.keepAliveTimer = new dojox.timing.Timer(60000);
+			this.keepAliveTimer.onTick = function() {keepSessionAlive();};
+		}
+		if(!this.keepAliveTimer.isRunning) {
+			this.keepAliveTimer.start();
+		}
+    },
+    cancel: function(name, fc) {
+    	WeblogEntryActionForms.close(document.forms[name]);
+    	if(typeof fc != 'undefined') dojo.byId(fc).focus();
+
+    	return false;
+    },
+    message: function(form, data, type) {
+        // clear messages
+		var gm = dojo.byId('actionforms_globalmsgs');
+		
+    	var mt = ['error', 'warning', 'info'];
+    	for(var i=0; i<mt.length; i++) {
+    	    var x=dojo.query('[name="' + mt[i] + '_messages"]', form);
+	    	if(x.length > 0) {
+	    	    x[0].style.display='none';
+	    	    x=dojo.query('[name="message"]', x[0]);
+	    	    if(x.length > 0) x[0].innerHTML='';
+	    	}else{
+				//no form message display, use global message
+				x=dojo.query('[name="' + mt[i] + '_messages"]', gm);
+				if(x.length > 0) {
+    	    	    x[0].style.display='none';
+    	    	    x=dojo.query('[name="message"]', x[0]);
+    	    	    if(x.length > 0) x[0].innerHTML='';
+	    		}
+			}
+    	}
+
+        var x=dojo.query('[name="' + type + '_messages"]', form);
+        if(x.length>0) {
+            x[0].style.display='';
+            x=dojo.query('[name="message"]', x[0]);
+            if(x.length>0) {
+                x[0].innerHTML=data;
+				x[0].setAttribute('role', 'alert');
+            }
+        }else{
+			//no form message display, use global message
+			x=dojo.query('[name="' + type + '_messages"]', gm);
+			x[0].style.display='';
+            x=dojo.query('[name="message"]', x[0]);
+            if(x.length>0) {
+                x[0].innerHTML=data;
+				x[0].setAttribute('role', 'alert');
+            }
+			gm.style.display='';
+		}
+    },
+    showCommentMessage: function(data) {
+        var gm = dojo.byId('actionforms_globalmsgs');
+
+        var mt = ['error', 'warning', 'info', 'confirm'];
+    	for(var i=0; i<mt.length; i++) {
+    	    var x=dojo.query('[name="' + mt[i] + '_messages"]', gm);
+	    	if(x.length > 0) {
+	    	    x[0].style.display='none';
+	    	    x=dojo.query('[name="message"]', x[0]);
+	    	    if(x.length > 0) x[0].innerHTML='';
+	    	}
+    	}
+
+    	var x=dojo.query('[name="confirm_messages"]', gm);
+    	if(x.length > 0) {
+    	    x[0].style.display='';
+    	    x=dojo.query('[name="message"]', x[0]);
+	    	if(x.length > 0) x[0].innerHTML=data;
+    	}
+
+    	gm.style.display='';
+    },
+    disable: function(form, b) {
+        var t=dojo.query('[name$="Btn"]');
+        for(var i=0; i<t.length; i++) t[i].disabled=b;
+    },
+    ajaxPost: function(form, postExec, msgs) {
+    	form.dangerousurlnonce.value=window.__security_nonce;
+    	this.message(form, msgs.running + '<div class="lotusLoading lotusLeft"></div>', 'info');
+    	this.disable(form, true);
+    	dojo.xhrPost({
+	        url: form.action,
+	        form: form,
+	        handleAs: 'json-comment-optional',
+	        load: function (data, ioArgs) {
+	            if(data.success) {
+	            	WeblogEntryActionForms.close(form);
+
+	            	var gm = dojo.byId('actionforms_globalmsgs');
+	            	gm.style.display='none';
+			        var mt = ['error', 'warning', 'info', 'confirm'];
+			    	for(var i=0; i<mt.length; i++) {
+			    	    var x=dojo.query('[name="' + mt[i] + '_messages"]', gm);
+				    	if(x.length > 0) {
+				    	    x[0].style.display='none';
+				    	    x=dojo.query('[name="message"]', x[0]);
+				    	    if(x.length > 0) x[0].innerHTML='';
+				    	}
+			    	}
+
+	            	var t=WeblogEntryActionForms.type(form);
+	            	if(t=='notification' || t=='notification_ex') {
+				    	var x=dojo.query('[name="confirm_messages"]', gm);
+				    	if(x.length > 0) {
+				    	    x[0].style.display='';
+				    	    x=dojo.query('[name="message"]', x[0]);
+					    	if(x.length > 0) {
+					    		x[0].innerHTML='The notification has been sent.';
+					    		x[0].setAttribute('role', 'alert');
+					    	}
+				    	}
+
+				    	gm.style.display='';
+	            	}
+	            	if(t=='flagInappropriateEntry') {
+				    	var x=dojo.query('[name="confirm_messages"]', gm);
+				    	if(x.length > 0) {
+				    	    x[0].style.display='';
+				    	    x=dojo.query('[name="message"]', x[0]);
+					    	if(x.length > 0) {
+					    		x[0].innerHTML='The blog entry has been flagged and submitted for review.';
+					    		x[0].setAttribute('role', 'alert');
+					    	}
+				    	}
+
+				    	gm.style.display='';
+	            	}
+	            }
+	            else {
+	                if(data.error) {
+	                    if('session timeout' == data.error) {
+	                        window.__security_nonce = data.nonce;
+	                        WeblogEntryActionForms.message(form, 'We were unable to process your request due to a session timeout.  Please try again.', 'error');
+	                    } else {
+	            			WeblogEntryActionForms.message(form, data.error, 'error');
+	            		}
+	            	}
+	            	else {
+	            		WeblogEntryActionForms.message(form, 'This function is only available to authenticated users. Please log in first.', 'error');
+	            	}
+	            }
+	            WeblogEntryActionForms.disable(form, false);
+	            if(data.success && typeof postExec != 'undefined') postExec(data);
+	        },
+	        error: function (error, ioArgs) {
+	            WeblogEntryActionForms.message(form, msgs.fail, 'error');
+	            WeblogEntryActionForms.disable(form, false);
+	        }
+	    });
+    }
+};
+
+document.forms['commentForm'].onsubmit=function(){
+    if(typeof this.submited != 'undefined' && this.submited) {
+        return false;
+    }
+	this.dangerousurlnonce.value=window.__security_nonce;
+	this.content.value = this.content.value.replace(/^\s+|\s+$/g, '');
+	if(this.content.value.length == 0){
+		showDialog('Please enter a comment.', 'comment_content');//alert
+		this.content.focus();
+		return false;
+	}else{
+	  this.submited = true;
+	  return true;
+	}
+};
+function postNotificaton(){
+	WeblogEntryActionForms.ajaxPost(document.forms['notificationForm'], function(){dojo.byId('focusMoreActionsLink').focus();},
+		{fail: 'Failed to send the notification.',
+		 running: 'Sending Notification...:'});
+	return false;
+};
+function postQuarantine(){
+	 	WeblogEntryActionForms.ajaxPost(document.forms['quarantineForm'], function(){window.location = 'https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/learning_cognitive_systems_don_t_freak_out?lang=en_us';},
+		{fail: 'Fail to submit the request. Server error.',
+		 running: 'Submitting...'});
+	return false;
+};
+
+function postDelete(){
+	 	WeblogEntryActionForms.ajaxPost(document.forms['deleteForm'], function(){window.location = 'https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/learning_cognitive_systems_don_t_freak_out?lang=en_us';},
+		{fail: 'Fail to submit the request. Server error.',
+		 running: ''});
+	return false;
+};
+
+				if(window.location.hash == '#action=addcomment' && currentLogin.auth) WeblogEntryActionForms.toggle('commentForm', 'content');
+	
+if(window.location.hash == '#action=send_notification') {
+    dojo.addOnLoad(function(){WeblogEntryActionForms.toggle('notificationForm', 'description');});
+}
+
+if(currentLogin.auth) {
+dojo.addOnLoad(function() {
+    	var http;
+	if(typeof XMLHttpRequest == 'undefined') http=new ActiveXObject("Microsoft.XMLHTTP");
+	else http=new XMLHttpRequest();
+	http.open('GET', '/connections/blogs/roller-services/json/user_weblogs/?maxnamelen=20', true);
+	http.onreadystatechange = function() {
+		if (http.readyState == 4 && http.status == 200) {
+			eval(http.responseText);
+			if(typeof loginuser_weblogs != 'undefined' && loginuser_weblogs != null && loginuser_weblogs.length > 0) {
+			    var f = document.forms['commentForm'];
+				var x = dojo.query('[name="select_blogs"]', f);
+				if(x.length > 0) {
+					var s = ['<div><input type="checkbox" id="postAsTrackback"',
+						           'onclick="if(this.checked) {this.form.target.disabled = false;}else{this.form.target.disabled=true;}" ',
+						           'name="postAsTrackback" style="margin:0px 5px;"/>',
+						     '<label for="postAsTrackback" style="font-weight: normal;">Add this as a new entry in my blog:</label>',
+						     '<select title="Target" name="target" disabled="true" style="margin:0px 5px;">'].join('');
+					for(var i=0; i<loginuser_weblogs.length; i++) {
+					    var _t = loginuser_weblogs[i].name;
+						if(loginuser_weblogs[i].isIdeationBlog) {
+						    _t = '_title_ (Ideation Blog)';
+							_t = _t.replace('_title_', loginuser_weblogs[i].name);
+						}
+						if(loginuser_weblogs[i].isCommunityBlog) {
+						    _t = '_title_ (Community Blog)';
+							_t = _t.replace('_title_', loginuser_weblogs[i].name);
+						}
+					    s = s + '<option value="' + loginuser_weblogs[i].handle + '" ' + ((typeof selectedTarget != 'undefined' && loginuser_weblogs[i].handle == selectedTarget)?'checked':'') + '>' + lconn.blogs.utils.escapeHTML(_t) + '</option>';
+					}
+					s = s + '</select></div>';
+					x[0].innerHTML = s;
+
+					if(typeof selectedTarget != 'undefined' && selectedTarget) {
+						f.target.value = selectedTarget;
+						if(f.target.value == selectedTarget) {
+							f.postAsTrackback.checked = true;
+							f.target.disabled = false;
+						}
+					}
+				}
+			}
+		}
+	};
+	http.send(null);
+});
+}
+</script>
+</div>
+
+				<p></p>
+				<a name="commentsTarget"></a>
+												                                	    <div id="commentspanel_list">
+						    <div class="lotusBoard" id="comments">
+                                                    						        <div>
+                                                               <p style="color:#808080; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 95%  !important;  font-weight:bold;  margin-top:20px; margin-bottom:0px;">COMMENTS [0]</p> 
+                                                        </div>
+						        						    
+													    				             
+                                                                 
+   
+						    
+						    								<div class="lotusPost">
+																			<span class="disabledLink">There are no comments to display</span>
+																		<script language="javascript">if(currentLogin.auth) {document.write('<div style="display:none">');} else {document.write('<div>');}</script>
+
+								<a class="lotusAction" title="Login to access this feature" 
+href="https://www-304.ibm.com/connections/blogs/roller-ui/login-redirect.jsp?redirect=https%3A%2F%2Fwww-304.ibm.com%2Fconnections%2Fblogs%2Fstevewojspeaks%2Fentry%2F2015_what_will_you_do_with_your_data%3Flang%3Den_us%23action%3Daddcomment"><h4>Add a Comment</h4></a>
+
+
+					<script 
+
+language="javascript">document.write('</div>'); if(currentLogin.auth) {document.write('<div>');} else {document.write('<div style="display:none">');}</script>
+						                                                                              <a class="lotusAction lotusLeft" href="2015_what_will_you_do_with_your_data?lang=en_us#" title="" onclick="WeblogEntryActionForms.toggle('commentForm', 'content');return false;">Add a Comment</a>
+					        	
+					        					        <script language="javascript">document.write('</div>');</script>	
+					      
+						   
+						   		    			   		
+		        		   		
+		        						        								        
+								</div>
+
+						    </div>
+
+						   
+				</div>
+                            		        		    </div>
+		   
+          <div style="clear:both"></div>
+
+		    <!-- Dont show paging when there are no entries -->
+		    				
+		<div style="clear:both"></div>
+		<div class="lotusFeeds" style="margin-top:25px; margin-right:auto; margin-left:auto;">
+							<a href='https://www-304.ibm.com/connections/blogs/roller-ui/rendering/feed/stevewojspeaks/entries/atom?lang=en_us' title="Entries feed for this blog" class="lotusFeed lotusAction" >Feed for Blog Entries</a>
+		<span class="lotusDivider">|</span>
+		<a href='https://www-304.ibm.com/connections/blogs/roller-ui/rendering/feed/stevewojspeaks/comments/atom?lang=en_us' title="Comments feed for this blog" class="lotusFeed lotusAction"  style="background: transparent; padding-left:7px;">Feed for Blog Comments</a>
+		    				
+				<span class="lotusDivider">|</span>
+		<a href='https://www-304.ibm.com/connections/blogs/roller-ui/rendering/feed/stevewojspeaks/entrycomments/2015_what_will_you_do_with_your_data/atom?lang=en_us' title="Atom Entry Comments" class="lotusFeed lotusAction"  style="background: transparent; padding-left:7px;">Feed for Comments for this Entry</a>
+
+               <div style="float:right;">
+               <div style="background-color: transparent;" class="lotusPaging">
+                                                           <ul class="inlinelist lotusInlinelist">
+    	<li class="lotusFirst">
+	    	        <a href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/your_data_a_sail_or_anchor?lang=en_us" title="Previous Entry">Previous Entry</a>
+	 	    	</li>
+    	<li>
+        <a href="https://www-304.ibm.com/connections/blogs/stevewojspeaks?maxresults=15&amp;lang=en_us">Main</a>
+        </li>
+        <li>
+	    	        <a href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/learning_cognitive_systems_don_t_freak_out?lang=en_us" title="Next Entry">Next Entry</a>
+		        </li>
+    </ul>
+	          	       </div>
+
+				</div>
+                </div> 
+             
+			
+
+</td>
+
+<td valign="top" style="padding:0px; margin:0px;"> 
+
+<table id="css-widget-container">
+
+<tr>   
+<td valign="top"  style="padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin:0px;"> 
+  <!--  Bio widget -->
+<div class="css-widget-bio">
+  <div class="css-widget-title" style="border-top: solid 2px #A9181B;"><span>ABOUT THE AUTHOR</span></div>  
+  <table width="100%" cellspacing="10" cellpadding="0">
+    <tr>
+      <td>
+          <div style="padding-top:0px;"><img src="http://images.tap.ibm.com:10001/image/609238897.jpg" border="0" /></div> 
+        
+              <div style="padding-top:5px; font-size: 14px;">
+				<strong>Steve (Woj) Wojtowecz</strong><br />
+                  VP, Storage & Network Management SW Development
+				  <br />
+				  <br />
+				  <a href="https://www.linkedin.com/pub/steve-woj-wojtowecz/0/41/81b" target="_blank" rel="nofollow"><img src="../resource/linkedin-24.png" border="0" /></a>&nbsp;
+				  <a href="https://twitter.com/steve_woj" target="_blank" rel="nofollow"><img src="../resource/twitter-24.png" border="0" /></a>&nbsp;
+				  <a href="https://www.facebook.com/wojspeaks" target="_blank" rel="nofollow"><img src="../resource/facebook-24.png" border="0" /></a>
+              </div>
+        
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="css-widget-bio">
+  <div class="css-widget-title"><span>ABOUT THIS BLOG</span></div>  
+  <table width="100%" cellspacing="10" cellpadding="0">
+    <tr>
+      <td>
+          <div style="padding-top:0px; font-size: 14px;">  Join the discussion - learn, share comments and questions as Woj shares 25+ years data solution expertise</div> 
+                </td>
+    </tr>
+  </table>
+  </div>
+</td>
+</tr>
+
+   <tr>   <!-- trends widget  -->
+   <td valign="top"  style="padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin:0px;"> 
+        <div id="trends">
+        <div class="css-widget-title"><span>TRENDING TOPICS</span></div>   
+        <br>
+				<script>
+			function compareIntensity(a, b) {
+  	        	   return b.intensity - a.intensity;
+			}
+			var myArr = new Array(5);
+							var tagObj=new Object();
+			        tagObj.intensity=1;
+                                if (1 == "1") { tagObj.name="data" }		
+                                if (1 == "2") { tagObj.name="data" }		
+                                if (1 == "3") { tagObj.name="data" }		
+                                if (1 == "4") { tagObj.name="data" }		
+                                if (1 == "5") { tagObj.name="data" }		
+   	                        tagObj.fullname="data";
+				tagObj.count=2;
+				tagObj.url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/data";
+                                if (tagObj.name == "" && 1 == 1) {
+                                                                   }  
+                                else {
+                                   myArr[myArr.length]=tagObj;
+                                }
+							var tagObj=new Object();
+			        tagObj.intensity=1;
+                                if (1 == "1") { tagObj.name="ibm" }		
+                                if (1 == "2") { tagObj.name="ibm" }		
+                                if (1 == "3") { tagObj.name="ibm" }		
+                                if (1 == "4") { tagObj.name="ibm" }		
+                                if (1 == "5") { tagObj.name="ibm" }		
+   	                        tagObj.fullname="ibm";
+				tagObj.count=2;
+				tagObj.url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/ibm";
+                                if (tagObj.name == "" && 1 == 1) {
+                                                                   }  
+                                else {
+                                   myArr[myArr.length]=tagObj;
+                                }
+							var tagObj=new Object();
+			        tagObj.intensity=1;
+                                if (1 == "1") { tagObj.name="protection" }		
+                                if (1 == "2") { tagObj.name="protection" }		
+                                if (1 == "3") { tagObj.name="protection" }		
+                                if (1 == "4") { tagObj.name="protection" }		
+                                if (1 == "5") { tagObj.name="protection" }		
+   	                        tagObj.fullname="protection";
+				tagObj.count=2;
+				tagObj.url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/protection";
+                                if (tagObj.name == "" && 1 == 1) {
+                                                                   }  
+                                else {
+                                   myArr[myArr.length]=tagObj;
+                                }
+							var tagObj=new Object();
+			        tagObj.intensity=1;
+                                if (1 == "1") { tagObj.name="storage" }		
+                                if (1 == "2") { tagObj.name="storage" }		
+                                if (1 == "3") { tagObj.name="storage" }		
+                                if (1 == "4") { tagObj.name="storage" }		
+                                if (1 == "5") { tagObj.name="storage" }		
+   	                        tagObj.fullname="storage";
+				tagObj.count=2;
+				tagObj.url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/storage";
+                                if (tagObj.name == "" && 1 == 1) {
+                                                                   }  
+                                else {
+                                   myArr[myArr.length]=tagObj;
+                                }
+							var tagObj=new Object();
+			        tagObj.intensity=1;
+                                if (1 == "1") { tagObj.name="tivoli" }		
+                                if (1 == "2") { tagObj.name="tivoli" }		
+                                if (1 == "3") { tagObj.name="tivoli" }		
+                                if (1 == "4") { tagObj.name="tivoli" }		
+                                if (1 == "5") { tagObj.name="tivoli" }		
+   	                        tagObj.fullname="tivoli";
+				tagObj.count=2;
+				tagObj.url="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/tivoli";
+                                if (tagObj.name == "" && 1 == 1) {
+                                                                   }  
+                                else {
+                                   myArr[myArr.length]=tagObj;
+                                }
+						myArr.sort(compareIntensity);
+			var len = myArr.length;
+			for(var i=0; i<len; i++) {
+				arrItem = myArr[i];
+				document.write("<a class=\"trends s" + arrItem.intensity + "\" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/\&quot;&quot;" + arrItem.url + "\" title=\"Topic tag: " + arrItem.fullname +" Trending count: " + arrItem.count + "  Intensity: " + arrItem.intensity + "\">" + arrItem.name + "</a>");
+			   }
+		  </script>
+	        </div>      
+   </td>
+   </tr>                    
+
+
+
+<tr>   <!-- Archive or Related entries widget depending on blog view -->
+<td valign="top"  style="padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px;"> 
+
+
+
+
+<!--  Related entries -->
+<!-- Cycles through 100 articles of the same category - look for entries with tag matches - order by no. of matches
+       Cycles through  20 articles of any category (ignoring the previous category) - look for entries with tag matches - order by no. of matches
+       if still not enough items in the menu adds the most recent entries from the same category -->
+ 
+    
+       <div class="css-widget-related-entries">
+         <div class="css-widget-title"><span>RELATED POSTS</span></div>       
+
+                
+                
+        
+        
+        
+            
+                
+                
+                
+            
+        
+            
+                
+                
+                
+            
+        
+            
+        
+            
+                
+                
+                
+            
+        
+            
+                
+                
+                
+            
+        
+            
+                
+                
+                
+            
+        
+            
+                
+                
+                
+            
+               
+                
+        
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        <ul class="rEntriesList">
+
+        
+                                
+            
+              
+                          
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/do_do_do_you_you_you_need_need_need_duplicates" title="relationships: 1" name="do_do_do_you_you_you_need_need_need_duplicates" id="do_do_do_you_you_you_need_need_need_duplicates">Do Do Do You You You Need Need Need Duplicates? <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                          
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/learning_cognitive_systems_don_t_freak_out" title="relationships: 1" name="learning_cognitive_systems_don_t_freak_out" id="learning_cognitive_systems_don_t_freak_out">Learning (Cognitive) Systems - Don't Freak Out <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                          
+                                
+                
+                                                                                                              
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/your_data_a_sail_or_anchor" title="relationships: 1" name="your_data_a_sail_or_anchor" id="your_data_a_sail_or_anchor">Your Data: A Sail or Anchor? <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                          
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/much_ado_about_data" title="relationships: 1" name="much_ado_about_data" id="much_ado_about_data">Much ado about DATA <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                          
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/hybrid_cloud_are_you_in_yet" title="relationships: 1" name="hybrid_cloud_are_you_in_yet" id="hybrid_cloud_are_you_in_yet">Hybrid Cloud, are you in yet? <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                          
+                                
+                
+                                                                                        <li class="recentposts">
+                            <a style="text-decoration:none; color:#486891;" href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/entry/the_data_evolution_today_and_tomorrow" title="relationships: 1" name="the_data_evolution_today_and_tomorrow" id="the_data_evolution_today_and_tomorrow">The Data Evolution – Today and Tomorrow <span style="color:#A4A4A4; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  font-size: 80%  !important;  white-space: nowrap;">Relationships: 1</span></a></li>
+                                                                                
+        </ul>
+        <br> 
+        <a id="related_text" style="float:left font-size:100%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-bottom:5px;" href="javascript:toggleDiv()">>> More related resources</a> 
+   
+<!-- begin discover widget -->
+  <div  id="overlayDiv" class="css-widget-related-resources" style="display:none;">
+
+     <p style="margin-bottom:15px; ">Discover additional related resources at developerWorks based on this blog post <strong>Tags</strong> []</p>
+     <table style="width:100%; margin-left:auto; margin-right:auto;">
+     <tr>
+     <td style="width:33%;">
+    <h4>Content</h4>
+    </td>
+     <td style="width:33%;">
+    <h4>Groups</h4>
+    </td>
+    <td style="width:33%;">
+    <h4>People</h4>
+    </td>
+    </table>                          
+    <table  style="width:100%; margin-left:auto; margin-right:auto">
+                       </table>
+</div>
+
+<script type="text/javascript">
+  function toggleDiv()
+  {
+     obj = document.getElementById("overlayDiv");
+    if (obj.style.display == "block")  {
+         obj.style.display = "none";       
+         document.getElementById("related_text").innerHTML = ">> More related resources";
+    }
+   else  {
+       document.getElementById("related_text").innerHTML = "[Close]";
+       obj.style.display = "block";
+       obj.style.top = event.x;
+   } 
+}
+</script>
+<!-- end discover widget -->
+
+
+    </div>
+   
+      <!-- end related entries widget -->
+
+</td>
+</tr>
+
+
+   <!-- display tags widget unless tags are already in hero area -->
+<tr>   <!-- tags widget row  -->  
+<td valign="top" style="padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px;">  
+
+<!-- Tags widget -->
+<div class="css-widget-tags">
+         <div class="css-widget-title"><span>POPULAR TAGS</span></div>       
+    <div style="padding-left:10px; padding-right:10px; padding-top:10px;">
+                              <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/data"
+         title="Popularity: 2">data</a>
+                            <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/ibm"
+         title="Popularity: 2">ibm</a>
+                      <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/manager"
+         title="Popularity: 2">manager</a>
+                <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/protection"
+         title="Popularity: 2">protection</a>
+                            <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/storage"
+         title="Popularity: 2">storage</a>
+                <a class="tag s5"
+         href="https://www-304.ibm.com/connections/blogs/stevewojspeaks/tags/tivoli"
+         title="Popularity: 2">tivoli</a>
+      
+   <br>
+  <a style="text-decoration:none; color:#486891; float:left; font-weight:bold !important; font-size:100%; padding-left:0px; padding-top:10px;  word-spacing: 1pt"  href="https://www-304.ibm.com/connections/blogs/stevewojspeaks?lang=en_us">>> More tags at blog home</a>
+</div>
+<!--end tags widget-->
+
+</td>
+</tr>
+ <!-- end display tags widget -->
+
+
+
+
+
+
+
+
+
+</table> 
+
+</td> 
+
+</tr>
+</table>
+
+</div>   </div> </div>        </div> <!-- end content -->
+</div><!-- end main -->
+
+
+
+    
+        
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="lotusFooter" class="lotusFooter" role="contentinfo">
+	<!--<link href="//1.www.s81c.com/common/v17/css/www.css" rel="stylesheet" title="www" type="text/css" />-->
+
+
+
+
+
+
+<!--<style type="text/css">
+#ibm-footer ul {
+    font-size: 1.3em !important;
+    font-weight: normal;
+}
+</style>--><!--<style type="text/css">
+.lotusui30 .lotusFooter {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0 0 0 0;
+    border-width: 0;
+    margin: 0;
+    /*padding: 5px;*/
+}
+.lotusui30 .lotusFooter {
+    border-radius: 4px 4px 4px 4px;
+    border-width: 1px;
+    font-size: 0.9em;
+    /*padding: 10px 10px 10px 0;*/
+    text-align: center;
+}
+body {background-image:none !important; }
+</style>--><ul><li><a href="https://www-304.ibm.com/connections/homepage/">ibm.com Connections Home</a></li><li><a href="javascript:;" onclick="javascript:openDemoWindow('http://public.dhe.ibm.com/software/dw/lotus/connections30/demos/blogs/blogs_demo.html'); return false;" class="">Demo</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow('/roller-ui/blog/help'); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Lotus Support Forums</a></li> <li><a href="https://www-304.ibm.com/connections/blogs/nav/toolbox?appName=blogs" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="https://www-304.ibm.com/connections/metrics/">Server Metrics</a></li><li><a href="https://www-304.ibm.com/connections/blogs/roller-ui/about.do" class="">About</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections product information</a></li><li><a href="https://www-304.ibm.com/connections/blogs/feedback/gotofeedback.do" target="_blank" onclick="goToreportInappropriateCont(this)">Report inappropriate content</a></li><li><a href="https://www-304.ibm.com/connections/communities/service/html/guidelines">Community Guidelines</a></li></ul><div id="ibm-footer_own" role="contentinfo" aria-label="Footer">
+    
+  </div><!--<script type="text/javascript">
+ibmweb.config.set({footermenu: { enabled: false }});
+</script>--><div id="ibm-metrics">
+<script src="https://www.ibm.com/common/stats/stats.js" type="text/javascript">//</script>
+</div><script type="text/javascript">
+   function handleHeaderInit(info) {
+      if (info && info.user) {         
+         dojo.byId('usernameText').innerHTML = info.user;
+         dojo.byId("headerUserText").style.display = "";
+         dojo.attr("headerUserName", "src", "/connections/blogs/static/20150110.113307!en_us/nav/templates/menu/user.jsp?appName=blogs&username=" + info.user + "&userid=" + info.userId);
+
+         if (dojo.byId("headerSharebox"))
+            dojo.byId("headerSharebox").style.display = "";
+
+         var a = dojo.byId("logoutLink");
+         a.replaceChild(document.createTextNode("Log Out"), a.firstChild);
+         a.href =  "https:\/\/www-304.ibm.com\/connections\/blogs\/roller-ui\/logout-redirect.jsp"
+         a.style.display = "none";
+
+         dojo.query("li", dojo.byId("headerMenuContainer")).forEach(function(el) {if (el.previousSibling) dojo.removeClass(el, "lotusFirst");});
+
+         var a = dojo.byId("lotusBannerCommunitiesLink");
+         if (a) {
+             var menu = dijit.byId(dojo.attr(a, "aria-owns"));
+             var href = "\/connections\/blogs\/static\/20150110.113307!en_us\/nav\/templates\/menu\/communities.jsp?authenticated=true";
+             if (menu)
+                menu.attr("href", href);
+             else
+                dojo.attr(a, "src", href);
+         }
+         lconn.core.header.apps.updateBannerByRoles();
+      }
+   }   
+   
+   dojo.subscribe("lconn/core/header/init", handleHeaderInit);
+</script>
+<script>
+	function goToreportInappropriateCont(obj){
+              //console.log(" this is " + obj.firstChild.nodeValue);	
+		//console.dir(obj);
+		var url=window.location.href;	
+		//var serverAndPort=document.location.host;	
+		var context='/connections/blogs';	
+		var protocolServerAndPort=url.substring(0,url.indexOf(context));	
+              var typeValue = "Report Inappropriate content";	
+		obj.href=protocolServerAndPort+context+"/feedback/gotofeedback.do"+"?feedbackType="+typeValue+"&returnTo="+url;
+	
+	}
+
+
+    </script><script type="text/javascript">
+   function loadConnectionsLanguageSelector() {
+      try {
+         dojo.require("lconn.core.header");
+         lconn.core.header.enableLanguageSelector("languageSelectorText", {"en":"English","zh":"\u4e2d\u6587 (\u200f\u7b80\u4f53)","zh_tw":"\u4e2d\u6587 (\u200f\u7e41\u9ad4)","ja":"\u65e5\u672c\u8a9e","ko":"\ud55c\uad6d\uc5b4","fr":"Fran\u00e7ais","de":"Deutsch","it":"Italiano","es":"Espa\u00f1ol","pt_br":"Portugu\u00eas (\u200fBrasil)","cs":"\u010ce\u0161tina","da":"Dansk","nl":"Nederlands","fi":"suomi","el":"\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac","hu":"Magyar","no":"Norsk (\u200fBokm\u00e5l)","pl":"polski","pt":"Portugu\u00eas (\u200fPortugal)","ru":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439","sv":"Svenska","sl":"sloven\u0161\u010dina","tr":"T\u00fcrk\u00e7e","iw":"\u05e2\u05d1\u05e8\u05d9\u05ea","ar":"\u200f\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u200f","ca":"Catal\u00e0","kk":"\u049a\u0430\u0437\u0430\u049b\u0448\u0430","th":"\u0e44\u0e17\u0e22","BD":"BD"},
+            "lcLang", ".ibm.com", -1);
+      } catch (e) {
+         console.error(e);
+      }
+   }
+   if (dojo.exists("lconn.core.header") && !dojo.exists("_skipConnectionsLanguageSelector"))
+      dojo.addOnLoad(loadConnectionsLanguageSelector);
+</script> <script type="text/javascript">	
+
+      dojo.require("lconn.core.header.apps");
+      dojo.require("lconn.core.auth");
+       /*Added by prakash presenting welcome overlay for first time user */
+	  dojo.require("dojo.io.script");
+	      	/* Namespace for IBM Communities */
+	var ibmCommunities = {
+		cssJSURL: '//www.ibm.com/common/v16/ibmlc/',
+		//cssJSURL: '//1.www.s81c.com/common/v16/ibmlc/',				
+		imgURL: '//www.ibm.com/i/v16/ibmlc/',
+		//imgURL:	'//1.www.s81c.com/i/v16/ibmlc/',
+		i18nURL: '//www.ibm.com/common/js/dynamicnav/',
+		statusURL: '/connections/profiles/welcomeOverlay.jsp',
+		/*
+		 * Initial user warning code
+		 */
+		// fires off a request to the backend service	
+
+
+initial_getCookie: function() {
+var thisReference=this;
+var user=thisReference.getCookie("mycookie");
+console.log("kkk"+user);
+if(user == "")
+{
+ibmCommunities.initialUserWarningSetup();
+}
+else
+{
+console.log("False in mycookie");
+}
+
+			
+		},	
+
+getCookie:function(cname)
+{
+var name = cname + "=";
+var ca = document.cookie.split('; ');
+for(var i=0; i<ca.length; i++) 
+  {
+  var c = ca[i];
+  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  
+return "";
+},	
+		initialUserWarningSetup: function() {
+			// honor the ?test=true flag
+			console.log("Overlay: inside the initialUserWarningSetup new");
+			var debug = '';
+			if(location.search.indexOf('test=true') != -1)
+			{
+				debug = '&test=true';
+			}
+			dojo.io.script.get({
+				url: ibmCommunities.statusURL+'?callback=ibmCommunities.initialUserWarningCallback' + debug
+			});			
+		},
+		
+		// callback called by the backend service
+		initialUserWarningCallback: function(data) {
+			// only if there is data and the status equals 1 (new, first time user)
+			console.log("in initialUserWarningCallback");
+			if(!!data && !!data.status && data.status == 1)
+			{
+	console.log("overlay: inside if block waiting to load");
+				// need to wait until the page finished loading
+				dojo.ready(function() {
+					// dialog to show
+					var dialog = new dijit.Dialog({
+						style: "width: 590px;height: 450px"
+					});
+                    dojo.removeClass(dialog.domNode, 'dijitDialog');
+                    dojo.removeClass(dialog.domNode, 'dijitContentPane');
+                    
+                    dialog.domNode.style.zIndex = "1000";
+                    dialog.titleBar.style.display = "none";					                    
+                    var html = ''
+					+ '<form class="lotusDialog lotusForm" role="application" border="1" height="900%">'
+                    + '<div class="lotusDialogHeader" style="padding:8px 20px">' 
+					+ '<h1 class="lotusHeading">'
+					+ '<span id="dialogTitle">IBM</span>' + '</h1>'
+					+ '</div>'
+                    + '<div id="ibm-overlay-content" style="background-position:-2652px 0;">'   
+					+ '<h1 style="padding:10px 20px 5px">' + data.title + '</h1><br>'
+                    + data.content 
+                    + '<div style="text-align:right"><p style="padding:0px 28px">'
+                    + '<input type="button" class="lotusFormButton continue" value="'+ data.continue1 +'">'
+                    + '&nbsp;'                    
+                    + '</p><br></div>'
+                    + '<div class="ibm-rule"><hr style="border-style: solid none none;border-color:#D1DFEF -moz-use-text-color -moz-use-text-color"/></div>'
+                    + data.footer
+                    + '</div>'
+                    + '<div id="ibm-overlay-footer" style="padding:0 20px;background-position:-2002px 0;">'
+                    
+                    + '</div>'
+					+ '</form>'
+                    ;
+                    
+					dialog.attr('content', html);
+					dialog.show();
+                    
+                    //console.log(dojo.query('.continue1',dialog.domNode)[0]);
+                    setTimeout( function() {
+                        dojo.query('.continue',dialog.domNode)[0].focus();
+                    }, 100);                                      
+                    
+                    dojo.connect(dojo.query('.continue',dialog.domNode)[0],"click", null, function (){
+                        dialog.destroy();
+                    });                                       
+				});
+
+			
+			}
+		}
+	};
+	
+	/* make it globally available */
+	window.ibmCommunities = ibmCommunities;
+	// execute pre-init & init code
+	//ibmCommunities.preInit();	
+	//dojo.addOnLoad(ibmCommunities.init);
+	ibmCommunities.initial_getCookie();
+
+	
+	/*prakash changes ends here */
+	
+	/*V17 dropdown starts here */
+//dojo.provide('utf8.js.utf8');
+
+// Callback
+window.ibmweb = window.ibmweb || {};
+ibmweb.dynnav  = {
+    dataCallback: function(args)
+    {
+        var ul = document.createElement('ul');
+        for (var i = 0; i < args.footerLinkData.length; i++)
+        {
+            var span = document.createElement('span');
+            console.log("span :"+span);
+            if (span.textContent)
+                span.textContent = args.footerLinkData[i].name;
+               
+            else
+                span.innerHTML = args.footerLinkData[i].name;
+            
+            var a = document.createElement('a');
+            a.href = args.footerLinkData[i].link;
+            a.appendChild(span); 
+            
+            var li = document.createElement('li');
+            
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+        
+     //   dojo.byId("menutable").appendChild(tr);
+        dojo.byId("ibm-footer_own").appendChild(ul);
+		console.log("mahendra done here!!");
+    }
+};
+
+// Get data
+
+(function() {
+    var _supportsIOScript = function()
+    {
+        return (dojo.io && dojo.io.script && dojo.io.script.get) ? true : false;
+    };
+    var locales = {
+        en: 'usen',
+		zh: 'cnzh',
+   'zh-tw': 'twzh',
+        ja: 'jpja',
+        ko: 'krko',
+        fr: 'frfr',
+        de: 'dede',
+        it: 'itit',
+        es: 'eses',
+   'pt-br': 'brpt',
+        cs: 'czcs',
+        da: 'dkda',
+        nl: 'nlnl',
+        fi: 'fifi',
+        el: 'grel',
+        hu: 'huhu',
+        nb: 'nono',
+        pl: 'plpl',
+   'pt-pt': 'ptpt',
+        ru: 'ruru',
+        sv: 'sesv',
+        sl: 'sisl',
+        tr: 'trtr',
+        he: 'ilhe',
+        ar: 'usen', 
+        ca: 'cafr',
+        kk: 'kzkk',
+        th: 'then'
+    };
+ 
+    /**
+    *   Run
+    */
+    
+    // Url template
+    var utf8_url = '//www.ibm.com/common/js/dynamicnav/www/{{locale}}-utf8.js';
+
+    // Set locale 
+    var locale = locales[djConfig.locale];
+    if (!locale)
+        locale = locales['en'];
+
+    // Fetch file
+    utf8_url = utf8_url.replace('{{locale}}', locale);
+    if (_supportsIOScript())
+    {
+        dojo.io.script.get({ url: utf8_url});
+    }
+    else
+    {
+        var script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.setAttribute('src', utf8_url);
+        document.getElementsByTagName('body')[0].appendChild(script);
+    }
+}());
+    
+/*V17 dropdown ends here */
+
+      </script>
+
+</div><!--end footer-->
+
+<script language="javascript">
+if(!(typeof currentLogin.name == 'undefined' || currentLogin.name == null || currentLogin.name == '')) {
+	dojo.publish("lconn/core/header/init", [{
+		user: currentLogin.name, 
+		userId: currentLogin.extid, 
+		isModerator: currentLogin.globalModerator
+	}]);
+}
+</script>
+
+<!-- build 20120817024437 -->
+	
+<div id="datetagdiv" 
+   style="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;">
+</div>
+
+<script language="javascript">
+if(currentLogin.globalAdmin) activateFooterLinks();
+
+var metricsLinks = dojo.query('.lotusMetricsReaderLink');
+for(var i = 0; i < metricsLinks.length; i++) {
+    metricsLinks[i].style.display = currentLogin.metricsReader ? '' : 'none';
+}
+
+if(typeof openHelpWindow == 'undefined') {
+    var helpWindow;
+	window.openHelpWindow = function (url, width, height) {
+		 if (!width) {
+			 width = window.screen.width / 4;
+			 if (width < 950) width = 950;
+		 }
+		 if (!height) {
+			 height = window.screen.height / 4;
+			 if (height < 550) height = 550;
+		 }
+		 if (typeof(helpWindow) != "undefined") helpWindow.close();
+		 var options = 'height=' + height + ',width=' + width + ',status=yes,toolbar=yes,menubar=no,location=yes,scrollbars=yes,resizable=yes';
+		 helpWindow = window.open(BlogsBaseUrl + url, 'help', options);
+		 if (window.focus) helpWindow.focus();
+	};
+}
+
+// metrics read tracker
+if (!dojo.exists("com.ibm.lconn.layout.track"))
+{
+dojo.require("com.ibm.lconn.layout.track"); // load track js api, each application should already load the common js jar that include this api
+}
+
+	// metrics read tracker
+	var metrics = {};
+	var extra = {};
+	metrics.source=appName; // retrieve from the common header
+	extra.contentLink = window.location.href; 
+	
+	if(!(typeof readTrackerMetrics == "undefined")){
+		metrics.itemType = readTrackerMetrics.itemType;
+		metrics.communityId = readTrackerMetrics.communityId;
+		metrics.contentId = readTrackerMetrics.contentId;
+		extra.contentTitle = readTrackerMetrics.contentTitle;
+		extra.contentContainerId = readTrackerMetrics.contentContainerId;
+		extra.contentContainerTitle = readTrackerMetrics.contentContainerTitle;
+	}
+	
+	if(typeof metrics.itemType == "undefined"){
+		metrics.itemType="BLOGS"; // define for each web page
+	} 
+	
+	if(typeof metrics.contentId == "undefined"){
+		metrics.contentId="BLOGS"; // define for each web page
+	}
+	
+	if(typeof currentLogin.extid != "undefined"){
+		metrics.userId = currentLogin.extid;
+	}
+	
+	metrics.extra = extra;
+	
+	var track = com.ibm.lconn.layout.track;
+	track.read(metrics.contentId, metrics.itemType, metrics); // call tracker js to send read event
+</script>
+
+<script type="text/javascript">
+if(typeof dojo.getObject('com.ibm.ajax.auth.interceptDojoXhr') == 'function') {
+	dojo.addOnLoad(function() {
+    var ciaa = com.ibm.ajax.auth;
+    ciaa.interceptDojoXhr(function(){return true;});
+    ciaa.setAuthenticationHandler(function(response, ioArgs, onauthenticated){
+        var racp = window.location.href.replace(/,/g,"%2C");
+        window.location.replace(getLoginRedirectURL(racp));
+    });
+	});
+}
+</script>
+
+<script type="text/javascript">
+	var lconn_core_thirdPartySearchEngines = []
+</script>
+
+    
+
+<div id="small-footer">
+     <div id="small-footer-top" style="padding:3px; background-color:#DA7327; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E3852A', endColorstr='#CD5822'); background: -moz-linear-gradient(top, #E3852A, #CD5822);  background: -webkit-gradient(linear, left top, left bottom, from(#E3852A), to(#CD5822));width:auto; border-top: solid 1px #444444;"></div>
+    <div id="small-footer-main" style="padding:10px; background-color:#EFEFEF; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0E0E0', endColorstr='#FFFFFF'); background: -moz-linear-gradient(top, #E0E0E0, #FFFFFF);  background: -webkit-gradient(linear, left top, left bottom, from(#E0E0E0), to(#FFFFFF));width:auto; border-top: solid 1px #444444;">
+          <center>
+          <a id="related_text" style="font-size:80%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-right:10px;" href="http://www.ibm.com/developerworks/topics/">Technical topics</a> 
+          <a id="related_text" style="font-size:80%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-right:10px;" href="http://www.ibm.com/developerworks/downloads/">Evaluation software</a> 
+          <a id="related_text" style="font-size:80%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-right:10px;" href="http://www.ibm.com/developerworks/community/">Community</a> 
+          <a id="related_text" style="font-size:80%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-right:10px;" href="http://www.ibm.com/developerworks/events/">Events</a> 
+          <a id="related_text" style="font-size:80%; font-weight:bold !important; text-decoration:none; color:#486891; padding-left:10px; padding-right:10px;" href="http://www.ibm.com">IBM</a> 
+         </center>
+    </div> 
+</div>
+
+<!-- Pop up -->
+<div id="helpTags" class="lotusHelp" wairole="alert" role="wairole:alert" style="display:none;">
+	<div class="lotusInfoBox">
+		<h3>Tags</h3>
+		<p>A tag is a keyword you assign to make a blog or blog content easier to find. Click a tag to find content that has been assigned that keyword. Click another tag to refine the search further. Click Find a tag to search for a tag that is not displayed in the collection.</p>
+	</div>
+</div> <!--End Help Tags Div -->
+</div><!-- frame -->
+
+<script language="javascript">
+  if(dojo.isIE && lconn.blogs.utils.applyDojoOnLoads) {lconn.blogs.utils.applyDojoOnLoads();}
+</script>
+
+                <script type="text/javascript">
+         (function() {
+           var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+           po.src = 'https://apis.google.com/js/plusone.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+         })();
+       </script>
+          
+                  <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+         
+
+<script type="text/javascript" language="javascript">
+  var displayname = currentLogin.name ? currentLogin.name : "";
+  var extid = currentLogin.extid ? currentLogin.extid : "";
+  var follow = (window.winW > 768)  ? 
+  {  app: "blogs",
+     extid: extid,
+     displayname: displayname,
+     handle: "stevewojspeaks" ,
+     websiteid: "9f41185f-5189-40a4-b35c-016a17572749",
+     sitename:"Woj Speaks..."
+  } : {};
+</script>
+
+
+     <!--script type="text/javascript" src="https://www.ibm.com/developerworks/collaboration/uploads/minimal/js/prettify.js"></script-->
+
+
+
+</body>
+</html>  

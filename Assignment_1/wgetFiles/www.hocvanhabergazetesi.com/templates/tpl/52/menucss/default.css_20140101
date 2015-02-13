@@ -1,0 +1,276 @@
+@charset "UTF-8";
+.stnz_ust_menu52 .stnz_widgetContent{
+    background: #4D65BB;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#4D65BB), to(#4D67BC));    
+    background: -moz-linear-gradient(#4D65BB, #4D67BC);
+    background: linear-gradient(#4D65BB, #4D67BC);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D65BB', endColorstr='#4D67BC');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4D65BB', endColorstr='#4D67BC')";   
+    border-top: 4px solid #3E508D;
+    border-bottom: 4px solid #3E508D;
+    min-height: 33px; padding: 5px 2px 0 2px;}
+.stnz_dropdown52_root_left{text-align: left;}
+.stnz_dropdown52_root_center{text-align: center;}
+.stnz_dropdown52_root_right{text-align: right;}
+div.stnz_dropdown52_root div 
+{		
+	display: inline-block;
+	zoom: 1;
+}
+
+ul.stnz_dropdown52,
+ul.stnz_dropdown52 li,
+ul.stnz_dropdown52 ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+ul.stnz_dropdown52 { 
+ position: relative;
+ z-index: 97;  
+}
+
+ul.stnz_dropdown52 li {
+ float: left;
+ line-height: 1.3em;
+ vertical-align: middle;
+}
+
+ul.stnz_dropdown52 li.hover,
+ul.stnz_dropdown52 li:hover {
+ position: relative;
+ z-index: 99;
+ cursor: default;
+}
+
+ul.stnz_dropdown52 ul {
+ visibility: hidden;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ z-index: 98;
+ width: 100%; 
+}
+
+ul.stnz_dropdown52 ul li {
+ float: none;
+ text-align: left;
+}
+
+ul.stnz_dropdown52 ul ul {
+ top: 1px;
+ left: 100%;
+}
+
+ul.stnz_dropdown52 li:hover > ul {
+ visibility: visible;
+}
+
+ul.stnz_dropdown52-vertical {
+ z-index: 50;
+ width: 170px;
+}
+
+ul.stnz_dropdown52-vertical ul {
+ top: 1px;
+ left: 100%;
+}
+
+ul.stnz_dropdown52-vertical li {
+ float: none;
+}
+
+ul.stnz_dropdown52 {
+	font-weight: normal;
+}
+
+ul.stnz_dropdown52 a:link,
+ul.stnz_dropdown52 a:visited { 
+	text-decoration: none; 
+}
+
+ul.stnz_dropdown52 ul li {
+	margin-left: 0px;
+}
+
+ul.stnz_dropdown52 a,
+ul.stnz_dropdown52 span {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #5c5c5e;
+	display: block; 
+	padding: 5px 10px;
+	padding-left: 15px; 
+}
+
+ul.stnz_dropdown52 ul a,
+ul.stnz_dropdown52 ul span {
+	padding: 5px;
+	padding-left: 5px;
+}
+
+ul.stnz_dropdown52 li {
+	padding: 0;  
+	border: none; 	
+}
+
+ul.stnz_dropdown52 ul {
+	margin-top: 0px;
+ 	width: 190px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+ 	/* acilan alanin kenar renkleri
+ 				 UST      SAG     ALT    SOL
+	*/
+	background-color: #fff;
+	border-color: #d9d9d9 #d9d9d9 #d9d9d9 #d9d9d9;
+}
+
+/********************************************************************** 
+***************************  UST MENU  ******************************** 
+**********************************************************************/
+
+ul.stnz_dropdown52-horizontal {
+	float:left;	
+}
+
+ul.stnz_dropdown52-horizontal .root {
+	font-weight: normal;
+	color: #fff;
+	background: url(../images/butonbg.jpg);
+	margin: 0 1.5px auto;
+	border-radius: 0.6em;
+	-webkit-border-radius: 0.6em; 
+	-moz-border-radius: 0.6em;
+	margin-bottom: 4px;
+}
+
+ul.stnz_dropdown52-horizontal .root:hover {
+	background: url(../images/butonbg2.jpg);
+}
+
+ul.stnz_dropdown52-horizontal li li:hover > a {
+	background: url(../images/butonbg.jpg);
+	color: #fff;
+}
+
+ul.stnz_dropdown52-horizontal .dir {
+	padding-right: 20px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	
+}
+
+ul.stnz_dropdown52-horizontal .dir,
+ul.stnz_dropdown52-upward ul .dir {
+	
+}
+
+ul.stnz_dropdown52-horizontal-rtl .dir {
+	padding-right: 10px;
+	padding-left: 15px;
+	
+	background-position: 0 50%;
+}
+
+/********************************************************************** 
+***************************  YAN MENU  ******************************** 
+**********************************************************************/
+
+ul.stnz_dropdown52-vertical li {
+	margin-left: 0px;
+}
+
+ul.stnz_dropdown52-vertical li .root {
+	font-family: verdana;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	position: relative;	
+	background: url(../images/arrow.jpg) 0 50% no-repeat;	
+}
+
+ul.stnz_dropdown52-vertical li:hover  {
+	background: url(../images/butonbg.jpg); 
+	color: #fff;
+}
+
+ul.stnz_dropdown52-vertical li:hover > a {	
+	color: #fff;
+}
+
+
+/*-------------------------------------------------/
+* @section Support Class `dir`
+* @level sep	ul, .class
+*/
+
+/* -- Components override -- */
+ul.stnz_dropdown52-upward .dir {
+	
+}
+
+ul.stnz_dropdown52-vertical .dir,
+ul.stnz_dropdown52-upward ul .dir {
+	
+}
+
+ul.stnz_dropdown52-vertical-rtl ul {
+ left: auto !important;
+ right: 100%; 
+}
+
+
+ul.stnz_dropdown52-vertical-rtl li .root {
+ text-align: left;
+ padding-left: 12px;
+ /*background-position: 100% 50%;*/ 
+}
+
+ul.stnz_dropdown52-vertical-rtl .dir {
+	padding-right: 0px;
+	padding-left: 5px;
+	
+	background-position: 0 50%;
+}
+
+ul.stnz_dropdown52 ul li.hover .open,
+ul.stnz_dropdown52-vertical li.hover .open {
+ padding-left: 5px;
+ border-top-color: #fff;
+ border-left: solid 1px #ffa500;
+}
+
+ul.stnz_dropdown52-vertical-rtl li.hover .open {
+ padding-right: 5px;
+ border-right-color: #ffa500;
+ border-left: none;
+}
+
+ul.stnz_dropdown52-upward li.hover .open {
+ border-top-color: #fff;
+ border-bottom-color: #ffa500;
+}
+
+ul.stnz_dropdown52-upward ul li.hover .open {
+ border-bottom-color: #d9d9d9;
+}
+
+
+
+#ust-menu-uyelik{left:-40px;}
+#ust_ozel_modul_li{width:1px;min-height:20px;margin-left:145px;}
+#ust-menu-modul-login{float:right; font-size:11px;margin-top:-22px;position: relative;z-index: 999; color:#eee;margin-right:7px;}
+#ust-menu-modul-login a{color:#eee;}
+#ust-menu-modul-uyelik{margin-top:-33px;margin-right:5px !important;float:right;color:#eee;cursor:pointer;padding-right:0 !important;}
+#ust-menu-modul-uyelik a{margin-right:10px;}
+#ust-menu-modul-uyelik li{cursor: pointer;}
+#ust-menu-modul-uyelik li ul{width:140px;}
+#ust-menu-modul-uyelik li ul a{width:130px;}
+
+#ust-menu-modul{width:180px;margin:-43px 25px 0 0;float:right;position: relative;z-index: 999;}
+#ust-menu-modul-search{list-style: none;width:170px;}
+#ust-menu-modul-search li{margin:0;padding:0;height:24px;}
+#ust-menu-search-mercek{float:left;margin: 4px 0 0 -20px;cursor:pointer;}
+#ust-menu-search{width:150px;height:12px;float:left; padding: 5px 4px; font: 12px 'Open Sans',sans-serif; color: #000; background: #ddd; border: 1px solid #ccc !important; outline: none;}

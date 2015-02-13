@@ -1,0 +1,519 @@
+
+
+
+
+/*	Global Settings	*/
+
+html				{	height:100%;margin-top:0px;	}
+body				{	margin:0px;overflow:auto;	}
+body,td			{	font-family:arial;	}
+
+form				{	padding:0px;margin:0px;	}
+
+input,select	{	font-size:13px;	outline: none; }
+
+textarea			{	font-family:arial;font-size:13px;	}
+
+img				{	border:0px;	}
+
+p					{	margin:0px;	padding:0px 0px 10px 0px;	}
+
+input::-ms-clear { display: none; }
+
+.white_hrefs a:link,.white_hrefs a:hover,.white_hrefs a:visited	{	color:white;	}
+
+.graphic			{	font-size:1px;	}
+
+.popup			{	position:absolute;visibility:hidden; background-color:white;
+						border:1px solid #CCCCCC;padding:10px; }
+
+/*	Classes	*/
+
+.x				 {	height:100%; width:100%;	}
+.one_on_one	 {	text-align:center;vertical-align:middle;	}
+
+
+a:link,.people a:visited,.people a:hover,.people a:active		{	text-decoration:none;	}
+a:hover {	text-decoration:underline;	}
+.model_title a:link {	text-decoration:none;	}
+.model_title a:hover {	text-decoration:underline;	}
+
+.oldmsg img					{	FILTER: Alpha(Opacity=40, FinishOpacity=40, Style=0);	}
+
+.name_registered			{	color:blue;font-size:15px;font-weight:normal;  }
+.name_registered_oldmsg	{	color:#8888FF;font-size:15px;font-weight:normal;  }
+.name_premium	 			{  color:#0000DD;font-size:15px;font-weight:bold;	}
+.name_premium_oldmsg	 	{  color:#AAAAFF;font-size:15px;font-weight:bold;	}
+.name_whisper	 			{  color:red;font-size:15px;font-weight:bold;	}
+.name_model		 			{  color:#FF0080;font-size:17px;font-weight:bold;	}
+.name_vmodel				{	color:#FF0080;font-size:15px;font-weight:bold;	}
+.name_model_oldmsg		{  color:#FF88D0;font-size:17px;font-weight:bold;	}
+.name_admin		 			{  color:#800080; font-size:15px;font-weight:bold;	}
+.name_guest		 			{  color:#444444;font-size:11px;						 }
+.name_named_guest		 	{  color:#444444;font-size:11px;						 }
+.name_guest_oldmsg		{  color:#999999;font-size:11px;						 }
+.name_named_guest_oldmsg	{  color:#999999;font-size:11px;						 }
+.name_system	 			{  color:#008800;font-size:15px;font-weight:bold; }
+.name_other					{		}
+
+
+.chat_container			{	margin-bottom:8px;	}
+.chat_contents				{	font-family:arial;	}
+.chat_registered 			{  color:blue;font-size:15px;  }
+.chat_registered_oldmsg	{  color:#8888FF;font-size:15px;  }
+.chat_premium	 			{  color:#0000DD;font-size:15px;font-weight:bold;	}
+.chat_premium_oldmsg		{  color:#8888FF;font-size:15px;font-weight:bold;	}
+.chat_whisper	 			{  color:red;font-size:15px;font-weight:bold;	}
+.chat_model		 			{  color:#FF0080;font-size:17px;font-weight:bold;	}
+.chat_vmodel				{	color:#FF0080;font-size:15px;font-weight:bold;	}
+.chat_model_oldmsg		{  color:#FF88D0;font-size:17px;font-weight:bold;	}
+.chat_admin		 			{  color:black;font-size:15px;font-weight:bold;	}
+.chat_guest		 			{  color:#444444;font-size:11px;						 }
+.chat_guest_oldmsg		{  color:#999999;font-size:11px;						 }
+.chat_named_guest		 	{  color:#444444;font-size:11px;						 }
+.chat_named_guest_oldmsg	{  color:#999999;font-size:11px;						 }
+.chat_system	 			{  color:#008800;font-size:15px;font-weight:bold;	}
+.chat_chat_command	 	{  color:#B00;font-size:15px;	}
+.chat_countdown	 		{  color:#DD8833;font-size:15px;font-weight:bold;	}
+
+.chat_pm_send				{  background-color:#F8F8F8;border:2px solid #E5E5E5;padding:2px;font-weight:bold ! important;margin:0px 5px 5px 0px;padding:3px 0px 3px 4px;border-radius:5px;font-size:15px;	}
+.chat_pm_receive			{  background-color:#FFFADD;border:2px solid #FFEB77;padding:2px;font-weight:bold ! important;margin:0px 5px 5px 0px;padding:3px 0px 3px 4px;border-radius:5px;font-size:15px;	}
+
+.offline_chat				{	font-style: italic; }
+.offline_name				{	font-style: italic; }
+
+.people_contents			{	font-family:arial;	}
+.people	 					{  text-decoration:none;white-space:nowrap;width:200px; }
+.people_guest	 			{  color:#444444;font-size:11px;  }
+.people_named_guest	 	{  color:#444444;font-size:11px;  }
+.people_registered		{  color:blue;font-size:15px;font-weight:normal;	}
+.people_premium			{  color:#0000DD;font-size:15px;font-weight:bold;	}
+.people_gold				{  color:#C6B544;font-size:15px;font-weight:bold;	}
+.people_model	  			{  color:#FF0080;font-size:17px;font-weight:bold;  }
+.people_vmodel	  			{  color:#FF00FF;font-size:15px;font-weight:bold;	}
+.people_admin	  			{  color:#800080;font-size:15px;font-weight:bold;  }
+
+.hoverpeople:hover	{ text-decoration:underline; }
+
+.pmname							 	{  font-size:14px;font-family:arial;font-weight:bold;	}
+.pmchat							 	{  font-size:14px;font-family:arial;font-weight:bold;	}
+.private_name						{	font-weight:bold;font-family:arial;	}
+.private_chat						{		}
+.private_name_model				{	color:#FF0080;	}
+.private_name_self				{	color:#0000DD;font-weight:normal;	}
+.private_name_other				{	color:#FF0000;	}
+.private_name_system				{	color:#008800;	}
+.private_name_promo				{	color:#000000;font-weight:bold;	}
+.private_name_model_oldmsg		{	color:#FF88D0;	}
+.private_name_self_oldmsg		{	color:#8888FF;font-weight:normal;	}
+.private_name_other_oldmsg		{	color:#FF8888;	}
+.private_name_system_oldmsg	{	color:#88FF88;	}
+.private_name_promo_oldmsg		{	color:#000000;font-weight:bold;	}
+.private_chat_model				{	color:#FF0080;	}
+.private_chat_self				{	color:#3333FF;font-weight:normal;	}
+.private_chat_other				{	color:#DD0000;	}
+.private_chat_system				{	color:#008800;font-style:italic;	}
+.private_chat_promo				{	color:#000000;font-weight:bold;	}
+.private_chat_model_oldmsg		{	color:#FF88D0;	}
+.private_chat_self_oldmsg		{	color:#8888FF;font-weight:normal;	}
+.private_chat_other_oldmsg		{	color:#DD8888;	}
+.private_chat_system_oldmsg	{	color:#99FF99;font-style:italic;	}
+.private_chat_promo_old_msg	{	color:#000000;font-weight:bold;	}
+
+.sarcasm	{
+	display:inline-block;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0.3639702342662021, M21=0.3639702342662021, M22=1, SizingMethod='auto expand')";
+	-webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-ms-transform: skew(20deg);
+	-o-transform: skew(20deg);
+	transform: skew(20deg);
+}
+
+.chat_announcement	{	background-color:red; color:yellow;font-size:15px;font-weight:bold;	}
+.chat_announcement_label	{	background-color:red; color:yellow; font-size:16px; font-weight:bold;	}
+
+.imagebox			{ border: 1px solid #000000; background-color: #96C84D; color: black; }
+
+.underline_on_hover a:link	{	text-decoration:none;	}
+.underline_on_hover a:visited	{	text-decoration:none;	}
+.underline_on_hover a:active	{	text-decoration:none;	}
+.underline_on_hover a:hover	{	text-decoration:underline;	}
+
+.emote {  color:blue;font-size:9pt; }
+
+.inline_emote	{
+	color:green;
+	font-style:italic;
+}
+
+.inline_emote a:link, .inline_emote a:visited, .inline_emote a:hover, .inline_emote a:active	{
+	color:green ! important;
+	text-decoration:none ! important;
+	font-weight:normal ! important;
+}
+.inline_emote a:hover, .inline_emote a:active {
+	text-decoration:underline ! important;
+}
+
+
+.m_input				{	border: 1px solid #A0A0A0; width: 340px; }
+.m_match				{	color: #222222; font-weight: bold; font-size: 15px; }
+.m_suggest			{
+							display:none;
+							position:absolute;
+							background-color:white;
+							border:1px solid #ABADB3;
+							padding:2px 10px;
+							width:170px;
+							-moz-box-shadow: 3px 3px 4px #666;
+							-webkit-box-shadow: 3px 3px 4px #666;
+							box-shadow: 3px 3px 4px #666;
+						}
+.m_prematch			{	cursor: pointer;color: #444444; font-weight: normal; font-size: 14px; }
+.m_prematch:hover	{	cursor: pointer;color:white;background-color:#9999FF; }
+
+
+.menu-item-icon{ display: inline-block; margin: 0px; }
+
+.sprite-link{cursor:pointer;}
+.sprite-icons{line-height:0;font-size:1px;background-image:url('http://img.myfreecams.com/mfc2/images/misc/sprite-icons2.png?2355437538');background-repeat:no-repeat}
+.sprite-vertical_clear_grip{background-position:-1px -1px;width:8px;height:140px;}
+.sprite-top-main-tl{background-position:-11px -1px;width:16px;height:82px;}
+.sprite-horizontal_clear_grip{background-position:-29px -1px;width:71px;height:8px;}
+.sprite-IEMetroWrench_green{background-position:-29px -11px;width:40px;height:40px;}
+.sprite-menu2{background-position:-29px -53px;width:35px;height:15px;}
+.sprite-binocs{background-position:-29px -70px;width:32px;height:32px;}
+.sprite-close_large{background-position:-71px -11px;width:27px;height:26px;}
+.sprite-silver_crown{background-position:-66px -53px;width:23px;height:15px;}
+.sprite-gold_crown{background-position:-63px -70px;width:23px;height:15px;}
+.sprite-hd{background-position:-71px -39px;width:22px;height:10px;}
+.sprite-y-foot{background-position:-63px -87px;width:21px;height:10px;}
+.sprite-small_cam_prev_light{background-position:-29px -104px;width:19px;height:14px;}
+.sprite-small_cam_prev_dark{background-position:-50px -104px;width:19px;height:14px;}
+.sprite-close{background-position:-29px -120px;width:18px;height:18px;}
+.sprite-webcam_medium{background-position:-49px -120px;width:16px;height:16px;}
+.sprite-user_settings16x16{background-position:-67px -120px;width:16px;height:16px;}
+.sprite-ucr16x16{background-position:-11px -85px;width:16px;height:16px;}
+.sprite-top_rooms16x16{background-position:-11px -103px;width:16px;height:16px;}
+.sprite-top-main-bl{background-position:-71px -104px;width:16px;height:5px;}
+.sprite-tag_user16x16{background-position:-11px -121px;width:16px;height:16px;}
+.sprite-tag_model16x16{background-position:-102px -1px;width:16px;height:16px;}
+.sprite-small_woman_9{background-position:-102px -19px;width:16px;height:16px;}
+.sprite-small_woman_8{background-position:-102px -37px;width:16px;height:16px;}
+.sprite-small_woman_7{background-position:-102px -55px;width:16px;height:16px;}
+.sprite-small_woman_6{background-position:-102px -73px;width:16px;height:16px;}
+.sprite-small_woman_5{background-position:-102px -91px;width:16px;height:16px;}
+.sprite-small_woman_4{background-position:-102px -109px;width:16px;height:16px;}
+.sprite-small_woman_3{background-position:-120px -1px;width:16px;height:16px;}
+.sprite-small_woman_2{background-position:-120px -19px;width:16px;height:16px;}
+.sprite-small_woman_1{background-position:-120px -37px;width:16px;height:16px;}
+.sprite-small_man_9{background-position:-120px -55px;width:16px;height:16px;}
+.sprite-small_man_8{background-position:-120px -73px;width:16px;height:16px;}
+.sprite-small_man_7{background-position:-120px -91px;width:16px;height:16px;}
+.sprite-small_man_6{background-position:-120px -109px;width:16px;height:16px;}
+.sprite-small_man_5{background-position:-138px -1px;width:16px;height:16px;}
+.sprite-small_man_4{background-position:-138px -19px;width:16px;height:16px;}
+.sprite-small_man_3{background-position:-138px -37px;width:16px;height:16px;}
+.sprite-small_man_2{background-position:-138px -55px;width:16px;height:16px;}
+.sprite-small_man_1{background-position:-138px -73px;width:16px;height:16px;}
+.sprite-scroll16x16{background-position:-138px -91px;width:16px;height:16px;}
+.sprite-open_door{background-position:-138px -109px;width:11px;height:16px;}
+.sprite-newsfeed16x16{background-position:-156px -1px;width:16px;height:16px;}
+.sprite-my_profile_small{background-position:-156px -19px;width:16px;height:16px;}
+.sprite-my_profile16x16{background-position:-156px -37px;width:16px;height:16px;}
+.sprite-my_account16x16{background-position:-156px -55px;width:16px;height:16px;}
+.sprite-model_recommendations16x16{background-position:-156px -73px;width:16px;height:15px;}
+.sprite-model_matrix-sm{background-position:-156px -90px;width:16px;height:16px;}
+.sprite-message16x16{background-position:-156px -108px;width:16px;height:16px;}
+.sprite-member_webcams16x16{background-position:-1px -143px;width:16px;height:16px;}
+.sprite-martini_316x16{background-position:-19px -143px;width:16px;height:16px;}
+.sprite-lounge1000016x16{background-position:-85px -120px;width:12px;height:16px;}
+.sprite-lounge100016x16{background-position:-37px -143px;width:12px;height:16px;}
+.sprite-lounge16x16{background-position:-51px -143px;width:12px;height:16px;}
+.sprite-group_show_boardsmall{background-position:-65px -143px;width:16px;height:16px;}
+.sprite-faded_door{background-position:-83px -143px;width:11px;height:16px;}
+.sprite-exclusive_gallery16x16{background-position:-96px -143px;width:16px;height:16px;}
+.sprite-crown16x16{background-position:-114px -143px;width:16px;height:16px;}
+.sprite-closed_door_locked{background-position:-132px -143px;width:11px;height:16px;}
+.sprite-closed_door_g{background-position:-145px -143px;width:11px;height:16px;}
+.sprite-closed_door{background-position:-158px -143px;width:11px;height:16px;}
+.sprite-camera{background-position:-174px -1px;width:16px;height:16px;}
+.sprite-broadcast16x16{background-position:-174px -19px;width:16px;height:16px;}
+.sprite-archive{background-position:-174px -37px;width:16px;height:16px;}
+.sprite-archive16x16{background-position:-174px -55px;width:16px;height:16px;}
+.sprite-top-main-tr{background-position:-174px -73px;width:7px;height:15px;}
+.sprite-notes{background-position:-174px -90px;width:14px;height:14px;}
+.sprite-window_menu_x_2{background-position:-174px -106px;width:12px;height:12px;}
+.sprite-popup12x12{background-position:-174px -120px;width:12px;height:12px;}
+.sprite-small_popup{background-position:-174px -134px;width:10px;height:10px;}
+.sprite-tiny_webcam{background-position:-174px -146px;width:8px;height:9px;}
+.sprite-top-main-br{background-position:-183px -73px;width:7px;height:5px;}
+.sprite-tr{background-position:-183px -80px;width:5px;height:5px;}
+.sprite-tl{background-position:-184px -146px;width:5px;height:5px;}
+.sprite-br{background-position:-156px -126px;width:5px;height:5px;}
+.sprite-bl{background-position:-163px -126px;width:5px;height:5px;}
+
+
+
+.MfcChatCommands_help_title                     {  font-weight:bold;margin-bottom:10px;border-bottom:1px solid #CCC;   }
+.MfcChatCommands_help_command_container         {  margin-bottom:10px;font-size:12px;  }
+.MfcChatCommands_help_command_name_description  {     }
+.MfcChatCommands_help_command_usage             {  margin-left:20px; }
+.MfcChatCommands_help_command_options_title     {  margin-left:20px; }
+.MfcChatCommands_help_command_option            {  margin-left:40px; }
+.MfcChatCommands_help_wiki_link                 {  margin-bottom:20px;font-size:12px;   }
+.MfcChatCommands_help_command_break             {  height:1px;border-bottom:1px solid #CCC;margin:10px 0px;	}
+
+
+/* Over 18 Popup */
+
+
+#oapopup {
+   background: transparent;
+   position: relative;
+}
+
+#oapopup .oapopup-body {
+   white-space: nowrap;
+   line-height: 26px;
+   padding: 30px 30px 10px;
+   font-size: 16px;
+   font-family: Helvetica;
+}
+
+#oapopup.mobile .oapopup-body {
+   font-size: 26px;
+}
+
+#oapopup.mobile .button_desktop_extra {
+   display: none;
+}
+
+#oapopup .oapopup-footer {
+   text-align: left;
+   padding: 18px 15px;
+   background-color: #f5f5f5;
+   border-top: 1px solid #ddd;
+}
+
+#oapopup .btn {
+   text-decoration: none;
+   display: inline-block;
+   *display: inline;
+   padding: 4px 14px;
+   margin-bottom: 0;
+   margin-left: 5px;
+   *margin-left: .3em;
+   font-size: 14px;
+   line-height: 20px;
+   *line-height: 20px;
+   color: #333333;
+   text-align: center;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+   vertical-align: middle;
+   cursor: pointer;
+   background-color: #f5f5f5;
+   *background-color: #e6e6e6;
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+   background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+   background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+   background-repeat: repeat-x;
+   border: 1px solid #bbbbbb;
+   *border: 0;
+   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+   border-bottom-color: #a2a2a2;
+   -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+         border-radius: 4px;
+   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+   *zoom: 1;
+   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#oapopup.desktop #enter_desktop {
+	width: 268px;
+}
+
+#oapopup.mobile #leave_site {
+	color:#999;
+}
+
+#oapopup.mobile .btn {
+   font-size: 28px;
+   padding: 25px 14px;
+	margin:30px 0px;
+}
+
+#oapopup .btn:hover {
+   color: #333333;
+   text-decoration: none;
+   background-color: #e6e6e6;
+   *background-color: #d9d9d9;
+   background-position: 0 -15px;
+   -webkit-transition: background-position 0.1s linear;
+   -moz-transition: background-position 0.1s linear;
+   -o-transition: background-position 0.1s linear;
+   transition: background-position 0.1s linear;
+}
+
+#oapopup .enter {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #008d00;
+  background-image: -moz-linear-gradient(top, #009600, #008000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009600), to(#008000));
+  background-image: -webkit-linear-gradient(top, #009600, #008000);
+  background-image: -o-linear-gradient(top, #009600, #008000);
+  background-image: linear-gradient(to bottom, #009600, #008000);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff009600', endColorstr='#ff008000', GradientType=0);
+  border-color: #008000 #008000 #003400;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #008000;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+#oapopup.mobile #enter_desktop {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #52b452, #419341);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#52b452), to(#419341));
+  background-image: -webkit-linear-gradient(top, #52b452, #419341);
+  background-image: -o-linear-gradient(top, #52b452, #419341);
+  background-image: linear-gradient(to bottom, #52b452, #419341);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52b452', endColorstr='#ff51a351', GradientType=0);
+  border-color: #419341 #419341 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #419341;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+#oapopup .enter:hover, #oapopup .enter:active {
+  color: #ffffff;
+  background-color: #008000;
+  *background-color: #006700;
+}
+
+#oapopup.mobile #enter_desktop:hover, #oapopup.mobile #enter_desktop:active {
+  color: #ffffff;
+  background-color: #419341;
+  *background-color: #499249;
+}
+
+#oapopup #enter_mobile, #oapopup .button_site {
+   display: none;
+}
+
+#oapopup.mobile .button_site {
+   display: inline;
+	font-weight:bold;
+}
+
+#oapopup.mobile a, #oapopup.mobile #enter_mobile {
+   margin-bottom: 10px;
+   display: block;
+}
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{color: #444;position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#111;}
+#colorbox{outline:0;}
+    #cboxContent{overflow:visible;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{background: #fff; padding:0;}
+        #cboxLoadingGraphic{}
+        #cboxLoadingOverlay{background:#fff;}
+        #cboxLoadingOverlay, #cboxLoadedContent {-webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px;}
+
+
+.room_helper_table .command {
+	font-size:12px;
+	fint-weight:bold;
+}
+
+.room_helper_table .description {
+	font-size:11px;
+	padding-left:20px;
+	padding-bottom:10px;
+}
+
+
+
+.countdownUI_heading {
+    font-weight:bold;
+    margin-bottom:10px;
+    padding:5px;
+}
+
+.countdownUI_heading.start {
+    background-color:#F5F5F5;
+}
+
+.countdownUI_heading.edit_counter {
+    color:red;
+    background-color:yellow;
+}
+
+.countdownUI_message {
+    padding-bottom: 10px;
+}
+
+.countdownUI_message .message {
+    background-color:yellow;
+    padding:5px;
+}
+
+.countdownUI_message .progress {
+    background-color:#F5F5F5;
+    padding:5px;
+}
+
+.countdownUI_form_container input[type=text] {
+    width:60px ! important;
+}
+
+.countdownUI_display_container {
+    margin-bottom:10px;
+}
+
+.countdownUI_control_container {
+    margin-bottom:10px;
+}
+
+.countdownUI_control_subcontainer {
+    margin-top:10px;
+    margin-left:10px;
+}
+
+

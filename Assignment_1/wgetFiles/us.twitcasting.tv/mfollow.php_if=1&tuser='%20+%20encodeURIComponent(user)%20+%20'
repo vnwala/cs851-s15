@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>TwitCasting</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,600,300">
+<link rel="stylesheet" type="text/css" media="all" href="css/mainstyle-us.css">
+
+<link href="http://us.twitcasting.tv/img/icon72@2x.png" rel="apple-touch-icon" type="image/png" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<style>
+body{
+  background: #fff;
+}
+div#wrapper{
+  width: 100%;
+}
+div#wrapper div#content{
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+div#wrapper h2{
+  padding-bottom: 2px;
+}
+input[type=submit],a.submit{
+  font-size: 18px;
+  padding: 10px 4px;
+} 
+a.submit{
+  display: inline-block;
+  min-width: 200px;
+}
+
+input[type="text"].code{
+  height: 34px!important;
+  text-align:center;
+  font-size: 24px;
+  color: #00A7E7;
+  font-weight: bold;
+  padding: 6px 0;
+}
+div#wrapper p.example{
+  color: #999;
+  padding: 4px 16px;
+}
+</style>
+<style>
+.subscribebutton{
+	clear: none;
+	margin-top: 0px;
+	float: none;
+}
+.usertext{
+	font-size: 140%;
+}
+.fullname{
+	font-size: 90%;
+}
+.span3{
+	box-sizing: border-box;
+}
+.btn{
+	margin-top: 4px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 16px;
+}
+
+table.centertable{
+	margin: 0 auto;
+}
+table.centertable td:first-child{
+	padding-left: 20px;
+}
+table.centertable td:last-child{
+	text-align: left;
+	padding-right: 24px;
+}
+table.centertable th{
+	white-space: normal;
+}
+
+div.centering{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="mainwrapper" class="clearfix">
+
+	<div id="wrapper">
+		<div id="content">
+			<div class="centering">
+			<table class="listtable centertable">
+				<tr>
+					<th colspan="2" style="padding: 20px 40px;">
+						<div class="indent">
+							<div class="userimage32"><a href="http://us.twitcasting.tv/twitcasting_jp" target="_blank"><img src="http://202-234-44-53.moi.st/image3s/pbs.twimg.com/profile_images/421543518281015296/jHba895f_normal.png" width="48" height="48" class="icon32"></a></div>
+							<div class="usertext" style="padding-left: 16px;"><a href="http://us.twitcasting.tv/twitcasting_jp" target="_blank"><b>twitcasting_jp</a>
+								<div class="fullname">
+ツイキャス公式								</div>
+							</div>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://us.twitcasting.tv/twitcasting_jp" class="icon32" target="_parent"><img src="img/icon_social_c.png" width="42"></a>
+					</td>
+					<td>
+						<button class="btn span3 btn-primary" disabled>Be a Fan</button>
+						<div class="grey span3">Login Required</div>
+
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://twitter.com/twitcasting_jp" target="_blank" class="icon32"><img src="img/icon_social_.png" width="42"></a>
+					</td>
+					<td id="social_button_">
+						<button class="btn span3 btn-primary" disabled>Follow</button>
+						<div class="grey span3">Login Required</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="http://instagram.com/twitcasting_jp" target="_blank" class="icon32"><img src="img/icon_social_i.png" width="42"></a>
+					</td>
+					<td id="social_button_i">
+						<button class="btn span3 btn-primary" disabled>Follow</button>
+						<div class="grey span3">Login Required</div>
+					</td>
+				</tr>
+			</table>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".follow_area").click(function(){
+		var type = $(this).attr("type");
+		var tuserid = $(this).attr("tuserid");
+		var thiselm = $(this);
+		var loadinelm = loading($(this).find("a").get(0));
+		$.ajax({
+			url: "/userajax.php?c=follow&t=" + encodeURIComponent(tuserid) + "&type=" + type,
+			dataType: 'json',
+			type: 'POST',
+			success: function(data) {
+				thiselm.find("a img").hide();
+				if (data["error"]){
+					alert(data["error"]);
+				}else{
+					if (data["message"]){
+						//alert(data["message"]);
+					}
+					if (type == "y"){
+						thiselm.parent().find('.unfollow_area').html("<div class='btn span3 active'>Subscribed</div>");
+					}else{
+						thiselm.parent().find('.unfollow_area').html("<div class='btn span3 active'>Followed</div>");
+					}
+					thiselm.hide();
+					thiselm.parent().find('.unfollow_area').show();
+				}
+			}
+		});
+		return false;
+	});
+	$(".unfollow_area").click(function(){
+		var type = $(this).attr("type");
+		var tuserid = $(this).attr("tuserid");
+		var thiselm = $(this);
+		if (confirm("Are you sure want to unfollow this user?")){
+			$.ajax({
+				url: "/userajax.php?c=follow&t=" + encodeURIComponent(tuserid) + "&unfollow=1&type=" + type,
+				dataType: 'json',
+				type: 'POST',
+				success: function(data) {
+					if (data["error"]){
+						alert(data["error"]);
+					}else{
+						thiselm.parent().find('.follow_area').show();
+						thiselm.hide();
+					}
+				}
+			});
+		}
+		return false;
+	});
+});
+
+function load_following(id, type){
+	var tuserid = $("#" + id).find(".follow_area").attr("tuserid");
+	$.ajax({
+		url: "/userajax.php?c=isfollowing&t=" + encodeURIComponent(tuserid) + "&type=" + type,
+		dataType: 'json',
+		type: 'POST',
+		success: function(data) {
+			$("#" + id).find(".followloading").hide();
+			if (data["error"]){
+				//alert(data["error"]);
+			}else{
+				if (data == true){
+					if (type == "y"){
+						$("#" + id).find('.unfollow_area').html("<div class='btn span3 active'>Subscribed</div>");
+					}else{
+						$("#" + id).find('.unfollow_area').html("<div class='btn span3 active'>You're following!</div>");
+					}
+					$("#" + id).find('.follow_area').hide();
+					$("#" + id).find('.unfollow_area').show();
+				}
+			}
+		}
+	});
+}
+
+function loading(elm){
+	return $(elm).prepend("<img src='img/ajax-loader-header.gif' class='icon32'>");
+}
+
+function social_auth(elm, type){
+	loading(elm);
+	switch(type){
+		case "i":{
+			location.href="/authinstagram.php?link=1&redir=%2Fmfollow.php%3Fif%3D1%26tuser%3D%27%2520%2B%2520encodeURIComponent%28user%29%2520%2B%2520%27";
+			break;
+		}
+		case "":{
+			$(elm).find("img").prop("src", "/img/ajax-loader-header.gif");
+			location.href="/?goauth=1&link=1&b=%2Fmfollow.php%3Fif%3D1%26tuser%3D%27%2520%2B%2520encodeURIComponent%28user%29%2520%2B%2520%27";
+			break;
+		}
+		case "f":{
+			$(elm).find("img").prop("src", "/img/ajax-loader-header.gif");
+			location.href="/facebookauth.php?link=1&redir=%2Fmfollow.php%3Fif%3D1%26tuser%3D%27%2520%2B%2520encodeURIComponent%28user%29%2520%2B%2520%27";
+			break;
+		}
+		case "t":{
+			$(elm).find("img").prop("src", "/img/ajax-loader-header.gif");
+			location.href="/authtumblr.php?link=1&redir=%2Fmfollow.php%3Fif%3D1%26tuser%3D%27%2520%2B%2520encodeURIComponent%28user%29%2520%2B%2520%27";
+			break;
+		}
+		case "y":{
+			$(elm).find("img").prop("src", "/img/ajax-loader-header.gif");
+			location.href="/authgoogle.php?type=youtube&link=1&redir=%2Fmfollow.php%3Fif%3D1%26tuser%3D%27%2520%2B%2520encodeURIComponent%28user%29%2520%2B%2520%27";
+			break;
+		}
+	}
+	return false;
+}
+</script>
+
+
+
+		</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(".btn").addClass("span3");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+@charset "shift_jis";
+
+/*
+Title: awamori
+URI: http://famima.com/shop/
+*/
+
+#kinmemai-wrap img, #kinmemai-wrap p, #kinmemai-wrap div{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#kinmemai-wrap h1, #kinmemai-wrap h2, #kinmemai-wrap h3, #kinmemai-wrap h4, #kinmemai-wrap h5,
+#kinmemai-wrap img, #kinmemai-wrap p, #kinmemai-wrap div, #kinmemai-wrap ul, #kinmemai-wrap li, #kinmemai-wrap table{
+	margin:0; padding:0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border:0; outline: 0;
+	background: transparent;}
+
+#kinmemai-wrap .clear{
+	margin:0; padding:0; clear:both;}
+	
+#kinmemai-wrap .base{
+	margin:0; padding:0;}
+#kinmemai-wrap .bt img{
+	margin:0; padding:0; border:none; outline:none;}
+	
+/* -------------------------------------------- */
+#kinmemai-wrap{
+	margin:0; padding:0; width:700px;}
+	
+#kinmemai-wrap #yoyakuBG{
+	width:700px; background-color:#fcf3d7;}
+#kinmemai-wrap #yoyakuBase660{
+	width:660px; margin-left:20px; padding-bottom:8px;}
+	
+#kinmemai-wrap #yoyakuBase660 table#table-01{
+    width: 660px; border-collapse: collapse; border-spacing: 0;}
+#kinmemai-wrap #yoyakuBase660 #table-01 td{
+    padding: 4px; border-bottom: 1px #989488 solid;}
+
+#kinmemai-wrap #yoyakuBase660 table .cmnt{
+	width:660px; height:20px; background:url(http://www.famima.com/images/p/kinmemai/yoyaku_cmnt.gif) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap #yoyakuBase660 table p.date01{
+	width:44px; padding:3px 5px; margin:0 0 0 10px; color:#ffffff; background-color:#000000; text-align:center;}
+#kinmemai-wrap #yoyakuBase660 table p.date02{
+	color:#333333; text-align:left; font-weight:bold;}
+#kinmemai-wrap #yoyakuBase660 table p.date03{
+	color:#333333; background:url(http://www.famima.com/images/p/kinmemai/mark.gif) no-repeat center left;
+	padding-left:17px; text-align:left; font-weight:bold;}
+
+#kinmemai-wrap .itemIMG{
+	width:354px; float:left;}
+#kinmemai-wrap .itemBase{
+	width:335px; float:left;}
+#kinmemai-wrap .txtBase{
+	width:330px; background-color:#f9f3e5; margin-top:15px;}
+
+#kinmemai-wrap .txtBase h3.name{
+	font-size:130%; line-height:120%; color:#333333; font-weight:bold;
+	padding:8px 10px 0 10px; text-decoration:underline;}
+#kinmemai-wrap .txtBase h3.name a:link,
+#kinmemai-wrap .txtBase h3.name a:active{
+	color:#333333; text-decoration:underline;}
+#kinmemai-wrap .txtBase h3.name a:hover,
+#kinmemai-wrap .txtBase h3.name a:visited{
+	color:#333333; text-decoration:none;}
+	
+#kinmemai-wrap .txtBase p.price{
+	font-weight:bold; color:#FF0000; padding:0 0 0 5px; padding:5px 0 0 10px;}
+#kinmemai-wrap .txtBase .bt{
+	 padding:0 0 8px 200px;}
+#kinmemai-wrap .txtBase .bt a{
+	outline:0;}	
+
+#kinmemai-wrap .cupBG{
+	width:700px; background:url(http://www.famima.com/images/p/kinmemai/cup_border.gif) repeat-y;}
+#kinmemai-wrap .cupIMG{
+	width:178px; float:left;}
+#kinmemai-wrap .cupCOPY{
+	width:522px; float:left;}
+#kinmemai-wrap .cupBGbtm{
+	width:700px; height:7px; background:url(http://www.famima.com/images/p/kinmemai/cup_borderbtm.gif) no-repeat;}
+#kinmemai-wrap .cupCOPY p{
+	width:435px; line-height:130%; color:#333333; padding-bottom:10px;}
+
+#kinmemai-wrap .pointBase{
+	width:700px; margin:15px 0; background-color:#d9ba4e;}
+	
+#kinmemai-wrap .pointBase .p1img1{
+	width:700px; height:131px; background:url(http://www.famima.com/images/p/kinmemai/point1_img1.jpg) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap .pointBase .p1img2{
+	width:700px; height:277px; background:url(http://www.famima.com/images/p/kinmemai/point1_img2.jpg) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap .pointBase .p2img1{
+	width:700px; height:166px; background:url(http://www.famima.com/images/p/kinmemai/point2_img1.jpg) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap .pointBase .p2img2{
+	width:700px; height:242px; background:url(http://www.famima.com/images/p/kinmemai/point2_img2.jpg) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap .pointBase .p2img3{
+	width:700px; height:158px; background:url(http://www.famima.com/images/p/kinmemai/point2_img3.jpg) no-repeat;
+	text-indent:-9999px;}
+	
+#kinmemai-wrap .pointBase .p3img1{
+	width:700px; height:307px; background:url(http://www.famima.com/images/p/kinmemai/point3_img1.jpg) no-repeat;
+	text-indent:-9999px;}
+#kinmemai-wrap .pointBase .p3img2{
+	width:700px; height:283px; background:url(http://www.famima.com/images/p/kinmemai/point3_img2.jpg) no-repeat;
+	text-indent:-9999px;}
+
+#kinmemai-wrap .pointBase .p4img1{
+	/* width:700px; height:220px; background:url(/images/p/kinmemai/point4_img1.jpg) no-repeat; */
+	width:700px; height:247px; background:url(http://www.famima.com/images/p/kinmemai/point4_img1.jpg) no-repeat;
+	text-indent:-9999px;}
+
+#kinmemai-wrap .pointBase .p4img2{
+	width:700px; height:206px; background:url(http://www.famima.com/images/p/kinmemai/point4_img2.jpg) no-repeat;
+	text-indent:-9999px;}
+
+#kinmemai-wrap .soryo{
+	width:700px; height:72px; background:url(http://www.famima.com/images/p/kinmemai/soryo.jpg) no-repeat;
+	text-indent:-9999px;}
+
+/* clearfix */
+#kinmemai-wrap .clearfix:after {
+  content: ".";  /* 新しい要素を作る */
+  display: block;  /* ブロックレベル要素に */
+  clear: both;
+  height: 0;
+  visibility: hidden;}
+
+#kinmemai-wrap .clearfix {
+  min-height: 1px;}
+
+* html #kinmemai-wrap .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/}
+
+/* IE6 */
+* html #kinmemai-wrap { 
+	height: 1%;}
+
+
+
+
+
+

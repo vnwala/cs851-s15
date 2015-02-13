@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ========================================================== 
+
+アニメエンジン　作品一覧 設定
+
+=========================================================== 2013.09*/
+/*作品BOX設定*/
+.bundle .workBox{font-family:'メイリオ', Meiryo, "Helvetica Neue", Helvetica, Arial, sans-serif;background:#eee;padding:7px;float:left;width:219px;border-radius:3px;margin:0 7px 7px 0;box-shadow: 0 2px 2px rgba(0,0,0,0.3);cursor:pointer; z-index:1000;}
+.bundle .workBox:nth-child(4n){margin-right:0 !important;}
+.bundle .workBox:hover{border:5px solid #f09925;margin:-5px 2px 2px -5px!important;z-index:1000;}
+/*作品タイトル設定*/
+.bundle .workBox .titleLink_checktitle{height:30px;vertical-align:middle;display: table-cell;font-size:15px;font-weight:bold;overflow:hidden;}
+.bundle .workBox .titleLink_checktitle a{text-decoration:none;color:#000;}
+.bundle .workBox .titleLink_checktitle a:hover{color:#555;}
+.bundle .workBox .titleLink_coverBox {margin:0 0 5px 0; padding 0; border: 0; width: 219px; height: 30px; }
+
+/*作品詳細設定（白い部分）*/
+.bundle .workBox .workArticleBox {background:#fff;padding:7px;font-size: 10px;}
+.bundle .workBox .workArticleBox .home_timeline_tweet_media {width:55px; height:55px; float:left;margin-right:7px;}/*tweet photo*/
+.bundle .workBox .workArticleBox .home_timeline_tweet_media:hover {opacity: 0.8;filter: alpha(opacity=80); /* for IE */}/*tweet photo*/
+.bundle .workBox .workArticleBox .title_check_button {width:100px; float:right;margin-top: 3px;padding: 1px 0;cursor:pointer;}/*see button*/
+.bundle .workBox .workArticleBox .title_check_button:hover{color:#555;}/*see button*/
+.bundle .workBox .workArticleBox .userCount {float:left;width: 140px;}
+.bundle .workBox .workArticleBox .userCount span{color:#f09925;font-size:16px;font-weight:bold;}
+.bundle .workBox .workArticleBox .textSummary{float:left;width: 140px;}
+.bundle .workBox .workArticleBox .textSummary span{color:#000;font-size:12px;font-weight:bold;}
+
+/*作品BOX「見てる」済み設定 「workBox」のうしろに「watching」を追加すれば背景もボタンも設定されます*/
+.bundle .workBox.watching{background:#f8dca0;}
+.bundle .workBox.watching .workArticleBox .title_check_button{font-weight:bold;font-family: 'メイリオ', Meiryo,;
+	color: #ffee82;
+	background: -moz-linear-gradient(
+		top,
+		#ff7700 0%,
+		#ff7700);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff7700),
+		to(#ff7700));
+	border: 1px solid #d94e03;
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	-webkit-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	text-shadow:
+		0px -1px 0px rgba(217,78,3,1),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.bundle .workBox.watching .workArticleBox .title_check_button:hover {
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#ffaa00 0%,
+		#ffaa00);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffaa00),
+		to(#ffaa00));
+}
+
+/* index image setting */
+.bundle .workBox .workArticleBox .indexImage{float:left;width:30px;height:20px;text-indent:100%;white-space:nowrap;overflow:hidden;margin-top: 4px;}
+.indexImage.level_1{background:url(../images/force_index_1.png);}
+.indexImage.level_2{background:url(../images/force_index_2.png);}
+.indexImage.level_3{background:url(../images/force_index_3.png);}
+.indexImage.level_4{background:url(../images/force_index_4.png);}
+.indexImage.level_5{background:url(../images/force_index_5.png);}
+
+/*作品BOX「見てる」済み設定 「workBox」のうしろに「watching」を追加すれば背景もボタンも設定されます*/
+.bundle .supporterBox{display: inline; float: right; margin: 2px; padding: 0px; }
+.bundle .supporterBox.watching{background:#f8dca0;}
+.bundle .supporterBox .title_check_button {width:145px; float:right;margin: -6px 0px -4px 0px;padding:0;cursor:pointer;}/*see button*/
+.bundle .supporterBox .title_check_button:hover{color:#555;}/*see button*/
+.bundle .supporterBox.watching .title_check_button{font-weight:bold;font-family: 'メイリオ', Meiryo,;
+	color: #ffee82;
+	background: -moz-linear-gradient(
+		top,
+		#ff7700 0%,
+		#ff7700);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff7700),
+		to(#ff7700));
+	border: 1px solid #d94e03;
+	-moz-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	-webkit-box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	box-shadow:
+		0px 1px 1px rgba(000,000,000,0.7),
+		inset 0px 1px 1px rgba(255,238,130,1);
+	text-shadow:
+		0px -1px 0px rgba(217,78,3,1),
+		0px 0px 0px rgba(255,255,255,0);
+}
+.bundle .supporterBox.watching .title_check_button:hover {
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#ffaa00 0%,
+		#ffaa00);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffaa00),
+		to(#ffaa00));
+}

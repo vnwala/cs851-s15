@@ -1,0 +1,133 @@
+jQuery(window).on("load", function() {
+
+	/* -----------------------------------------
+	 FlexSlider Init
+	 ----------------------------------------- */
+	var homeSlider = jQuery("#home-slider");
+
+	homeSlider.flexslider({
+		'directionNav': false,
+		'controlNav': false,
+		'smoothHeight': true,
+		'animation': ThemeOption.slider_effect,
+		'slideDirection': ThemeOption.slider_direction,
+		'slideshow': Boolean(ThemeOption.slider_autoslide),
+		'slideshowSpeed': Number(ThemeOption.slider_speed),
+		'animationDuration': Number(ThemeOption.slider_duration),
+		'after': function(slider){
+			var currentSlide = slider.slides.eq(slider.currentSlide);
+			currentSlide.siblings().each(function() {
+				var src = jQuery(this).find('iframe').attr('src');
+				jQuery(this).find('iframe').attr('src',src);
+			})
+		}
+	});
+
+	jQuery(".slider-prev").on('click', function(e) {
+		homeSlider.flexslider('prev');
+		e.preventDefault();
+	});
+
+	jQuery(".slider-next").on('click', function(e) {
+		homeSlider.flexslider('next');
+		e.preventDefault();
+	});
+
+	/* -----------------------------------------
+	 equalHeights Init
+	 ----------------------------------------- */
+	jQuery("#list").equalHeights();
+	jQuery("#latest > .row").equalHeights();
+
+
+	/* -----------------------------------------
+	 Center the play icon in videos;
+	 also reposition on resize
+	 ----------------------------------------- */
+	centerPlayIcon();
+
+	function centerPlayIcon() {
+		var $videoAnchor = jQuery(".fancybox-video");
+
+		$videoAnchor.each(function() {
+			var lv_s = jQuery(this).find('.play-icon');
+			var lv_w = jQuery(this).width();
+			var lv_h = jQuery(this).height();
+			lv_s.css('left',(lv_w/2)-26);
+			lv_s.css('top',(lv_h/2)-32);
+			lv_s.fadeIn();
+		});
+	}
+	jQuery(window).on('resize', centerPlayIcon);
+
+});
+
+jQuery(document).ready(function($) {
+
+	/* -----------------------------------------
+	Main Navigation Init
+	----------------------------------------- */
+	$('ul#navigation').superfish({
+		delay:       300,
+		animation:   {opacity:'show'},
+		speed:       'fast',
+		dropShadows: false
+	});
+
+	/* -----------------------------------------
+	 Responsive Menus Init with jPanelMenu
+	 ----------------------------------------- */
+	var jPM = $.jPanelMenu({
+		menu: '#navigation',
+		trigger: '.menu-trigger',
+		excludedPanelContent: "style, script, #wpadminbar"
+	});
+
+	var jRes = jRespond([
+		{
+			label: 'mobile',
+			enter: 0,
+			exit: 767
+		}
+	]);
+
+	jRes.addFunc({
+		breakpoint: 'mobile',
+		enter: function() {
+			jPM.on();
+		},
+		exit: function() {
+			jPM.off();
+		}
+	});
+
+	/* -----------------------------------------
+	 SoundManager2 Init
+	 ----------------------------------------- */
+	soundManager.setup({
+		// path to directory containing SM2 SWF
+		url: ThemeOption.swfPath
+	});
+
+	/* -----------------------------------------
+	 Responsive Videos Init Using FitVids.js
+	 ----------------------------------------- */
+	$('body').fitVids();
+
+	/* -----------------------------------------
+	 Show Videos in LightBox
+	 ----------------------------------------- */
+	$("a[class^='fancybox-video']").on('click', function(e){
+		var link = $(this).attr('href');
+		$.fancybox.showLoading();
+		$.get(link, function(data){
+			data = $(data).find('.video-wrap')
+			$.fancybox.open(data, {
+				fitToView: true
+			});
+		});
+
+		e.preventDefault();
+	});
+
+});
