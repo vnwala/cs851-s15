@@ -1,0 +1,544 @@
+   #[1]publisher [2]publisher
+
+   IFRAME: [3]//www.googletagmanager.com/ns.html?id=GTM-PFTWN4
+
+     * [4]SitePoint
+     * [5]Menu
+
+     * [6]Topics
+          + [7]HTML & CSS
+          + [8]JS
+          + [9]PHP
+          + [10]Ruby
+          + [11]Mobile
+          + [12]Design & UX
+          + [13]Business
+          + [14]WordPress
+          + [15]Web Foundations
+     * [16]Books & Courses
+     * [17]Forums
+     * [18]Newsletters
+     * ____________________ (BUTTON)
+
+   [19]New Relic x
+
+   [20]New Relic x
+
+[21]Ruby
+     __________________________________________________________________
+
+Real-time Web Apps with Volt in Ruby
+
+   [22]Dhaivat Pandya
+   [23]Dhaivat Pandya
+
+   Published February 4, 2015
+   [24]Tweet [25]Subscribe
+
+   volt
+
+   [26]Volt is a slick, new Ruby web framework that aims to blur the line
+   between client and server code. The basic idea behind the framework is
+   that you can write your client-side code (which is usually Javascript)
+   in Ruby using Opal, a Ruby runtime within Javascript. In addition, Volt
+   provides some nice ways to relay data between the client-side and the
+   server-side. If you’ve used [27]Meteor before, Volt is a very similar
+   idea, but there are many portions of Meteor which Volt doesn’t have. I
+   think Volt has some real potential. As web apps become more and more
+   client-side heavy, it is a pain to have to switch mental context
+   between Javascript and Ruby. It’s even more of a pain to figure out how
+   to flow simple pieces of data between the client and server. Volt can
+   help you get there quickly.
+
+   In this article, I’ll go through how to build an incredibly simple
+   bookmark “app” with Volt. The point of this article is to get you up to
+   speed with some of the very basics and to get you a feel for how the
+   client/server divide works in Volt. Let’s get to it.
+
+Views
+
+   First of all, we need a copy of Volt:
+gem install volt
+
+   If you’ve used Rails before, then you’ll find some of the “volt”
+   command line arguments pretty familiar. Here’s how we create a new
+   project:
+volt new volt-example
+
+   You should see a familiar-looking (if you’re a Rails kind of person)
+   directory layout:
+Gemfile
+Gemfile.lock
+README.md
+app
+config
+config.ru
+lib
+spec
+
+   To see what Volt has already set up for us, fire up the web server:
+bundle exec volt server
+
+   You should see something like this:
+
+   Volt Web Server
+
+   Alright, so where is this page generated, exactly? If you go into the
+   app directory, you should see a “main” directory. Unlike Rails, Volt
+   lets you break your webapp up into “components” (this idea is similar
+   to the Django style of separation). It automatically defines the “main”
+   component for you, so let’s head into that directory. You now see:
+assets
+config
+controllers
+models
+tasks
+views
+
+   If you peek in views/main, you can see the views associated with this
+   component. The layout for the views that are part of this component is
+   defined in main.html which looks like:
+<:Title>
+  {{ template main_path, "title", {controller_group: 'main'} }}
+
+<:Body>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <:nav href="/" text="Home" />
+        <:nav href="/about" text="About" />
+        <:user-templates:menu />
+      </ul>
+      <h3 class="text-muted">volt-example</h3>
+    </div>
+
+    <:volt:notices />
+
+    {{ template main_path, 'body', {controller_group: 'main'} }}
+
+    <div class="footer">
+      <p>&copy; Company 2014</p>
+    </div>
+
+  </div>
+
+<:Nav>
+  <li class="{{ if active_tab? }}active{{ end }}">
+    <a href="{{ attrs.href }}">{{ attrs.text }}</a>
+  </li>
+
+   The odd looking
+   , , etc. are a pretty integral part of how views work in Volt.
+   Basically, if you see a tag in the form (note the capitalized first
+   letter), it is defining or utilizing a section. In the layout, we are
+   defining three sections: , and which include some basic layout and then
+   defer to the template of the action we have called. Specifically, these
+   are the two lines that call the action templates:
+{{ template main_path, "title", {controller_group: 'main'} }}
+...
+{{ template main_path, 'body', {controller_group: 'main'} }}
+
+   In Volt, wherever we have some code enclosed by {{ and }}, it is
+   executed as Ruby using Opal. In this case, we’re using some of the
+   variables available in order to pull up the template appropriate for
+   the page using this layout. Alright, let’s look at one of these
+   templates. Open up app/main/views/main/about.html:
+<:Title>
+  About
+
+<:Body>
+  <h1>About</h1>
+
+  <p>About page...</p>
+
+   That looks pretty simple! Basically, we’re just filling in the sections
+   in the layout. Let’s jump back to the template to examine it a bit more
+   closely. You might notice that some of tags are in the form
+   (note the lowercase first letter). These are not sections; they are
+   controls. In a sense, they are like Rails’ template helpers (e.g.
+   link_to) since they help you generate some HTML. We’ll see some more of
+   those as we continue.
+
+Routes and Adding a View
+
+   Alright, that’s enough knowledge for the timebeing. Let’s get started
+   building our bookmarking app. We’ll need one page where the user can
+   see the list of bookmarks and add a new one. We’ll deal with the
+   functionality as we move along, but first, create a new view and a
+   route to go with it. Creating a view is simple; just create the file
+   app/main/views/main/bookmarks.html:
+<:Title>
+  Bookmarks
+
+<:Body>
+  <h1>Bookmarks</h1>
+
+   To add the route, we go over to config/routes.rb and the following
+   line:
+get '/bookmarks', _action: 'bookmarks'
+
+   Annnd, that’s it! You’ll have to restart the server (the author of Volt
+   says that soon you won’t have to do this) and then you should see a
+   nice page at localhost:3000/bookmarks. In fact, we can make the
+   bookmarks action the index by changing the last line of
+   config/routes.rb to the following:
+get '/', {_action: 'bookmarks'}
+
+   Another neat thing about Volt is that it gives you automatic page
+   reloads. If you try changing the contents of
+   app/main/views/main/bookmarks.html and then save the file, you will be
+   able to see the page reload in the browser.
+
+The Basic Pieces
+
+   Le’ts figure out how to process a form so that we can actually create
+   new bookmarks. Subsequently, we want to display these bookmarks nicely
+   on a page. Before we do that, it is incredibly important to understand
+   a fundamental difference between Volt and Rails. Volt is a sort of MVVM
+   (Model View, View Model)) framework, not an MVC framework. In practical
+   terms, the view in Volt calls on the controller to get stuff done, not
+   the other way around.
+
+   First of all, we need a form. That’s pretty easy, just add the
+   following to the
+   of bookmarks.html:
+<form e-submit="add_bookmark" role="form">
+    <div class="form-group">
+        <label>New Bookmark</label>
+        <input class="form-control" type='text' value="{{ page._new_bookmark._de
+scription }}" />
+        <input class="form-control" type="text" value="{{ page._new_bookmark._ur
+l  }}" />
+        <input type="submit" value="Add Bookmark" />
+    </div>
+</form>
+
+   Alright, some parts of this code are run-of-the-mill, others aren’t. We
+   have what seems like a simple form element. However, it has some weird
+   attributes, e.g. e-submit. Here, e-submit = "add_bookmark" is telling
+   Volt that the add_bookmark method/action in the controller should be
+   called when data in this form is submitted. The other two weird lines
+   are:
+<input class="form-control" type="text" value="{{ page._new_bookmark._descriptio
+n }}" />
+<input class="form-control" type="text" value="{{ page._new_bookmark._url }}" />
+
+   We are defining text input elements but the magic happens in the value
+   field. Within the value = "..." attribute, we are creating a binding.
+   When the value of those text elements change, the values of the
+   variables page._new_bookmark._description and page._new_bookmark._url
+   will change. At this point, this form will do nothing important since
+   we haven’t really put anything in the add_bookmark controller action.
+   So, open up app/main/controllers/main_controller.rb and the add the
+   following as a method:
+def add_bookmark
+  page._bookmarks << {url: page._new_bookmark._url, description: page._new_bookm
+ark._description}
+  page._new_bookmark._url = 'URL'
+  page._new_bookmark._description = 'Description'
+end
+
+   In Volt, this thing called page is a model. It isn’t a model in the
+   Rails sense of the word – it doesn’t necessarily have anything to do
+   with your database. Instead, a model is a piece of data that the
+   frontend and backend can both get. Remember that Volt is not just a
+   server-side Ruby framework (such as Rails or Sinatra). The point of
+   Volt is that it lets the client-side and server-side interoperate
+   pretty seamlessly.
+
+   Back to page. In the form, we’ve bound the variables
+   page._new_bookmark._description and page._new_bookmark._url (notice the
+   underscores prepending the variable names; using those automatically
+   gives us empty models to put data in) to certain form values. In the
+   controller code, we can take these variables and use them! Update them
+   in the view and the changes to those variables are available in the
+   controller. This might not seem all that magical at first glance, but
+   the power of the idea comes from the fact that you could create a model
+   of any kind in the client and then expect it to show up when you call
+   controller code from the view.
+
+   The controller then takes page._bookmarks and puts a Ruby hash inside
+   with what represents the data associated with one bookmark in our
+   simple webapp. Before we can see the results of our efforts, we need to
+   have a bit of code in the view that displays these bookmarks:
+<ul class="bookmark-list">
+  {{ page._bookmarks.each do |bookmark| }}
+  <li>
+          <a href="{{ bookmark._url }}">{{ bookmark._descr }}</a>
+  </li>
+  {{ end }}
+</ul>
+
+   Alrighty, head over to “localhost:3000″, you’ll see a pretty plain
+   looking form where you can enter a description and a URL, hit enter,
+   and see it appear in the list of bookmarks just below.
+
+Persistence
+
+   If you refresh your page after inputting some of those bookmarks,
+   you’re in for a nasty suprise: they probably all just vanished. We need
+   some way to persist that information.
+
+   Persistence is really easy in Volt, but it does come with a gotcha:
+   Volt currently only supports MongoDB if you want to use the
+   client-server-sharing magic. You might ask why Volt doesn’t support
+   something more “standard”, like Postgres or MySQL. The problem is that
+   translating JSON objects to and from multiple SQL tables is quite a
+   headache and we’d need an ORM in the middle. Essentially, Volt is part
+   of the camp that believes that having that sort of a translationary ORM
+   within a web framework is a [28]bad idea.
+
+   If you don’t have a copy of Mongo, it’s pretty easy to get. On Mac OS
+   X:
+brew install mongodb
+mongod
+
+   If you’re on Linux, for our purposes, using the version of Mongo
+   available in your distribution’s package manager should be fine. With
+   Windows, I’ve found [29]this guide helpful.
+
+   If you head over to db/config/app.rb, you;ll find the following lines
+   commented out:
+config.db_driver = 'mongo'
+config.db_name = (config.app_name + '_' + Volt.env.to_s)
+config.db_host = 'localhost'
+config.db_port = 27017
+
+   Just bring them back into existence. We’ll need to create a model for
+   our bookmarks. Since “models” in Volt aren’t really connected to a
+   “CREATE TABLE” SQL command, we don’t really have to specify much. We
+   just have to create the file app/main/models/bookmark.rb and drop in:
+class Bookmark < Volt::Model
+end
+
+   Your database setup is ready to go after a restart of the Volt server.
+   We do, however, need to change our view and controller a bit. Remember
+   the page._bookmarks array we were putting our bookmarks into? In order
+   to make that sync into MongoDB, we just have to change page._bookmarks
+   to _bookmarks. Volt will handle the rest.
+
+   Here are the changed lines:
+_bookmarks << {url: page._new_bookmark._url, description: page._new_bookmark._de
+scription}
+
+{{ _bookmarks.each do |bookmark| }}
+
+   That’s it! Notice how easily we are getting data from the browser to
+   Mongo. However, there are a few issues with this approach. This idea of
+   database syncing between the client and server came into fashion with
+   [30]Meteor. However, Meteor takes the client-server connection a step
+   further with a [31]completely client-side implementation of Mongo. In
+   addition, Meteor lets your app listen for changes in collections on the
+   server and get them pushed directly to the client database. This stuff
+   isn’t part of Volt, as far as one can tell from the existing
+   documentation. So, Volt’s persistence support isn’t quite as powerful
+   as that of Meteor when it comes to real-time applications with live
+   data updates.
+
+That’s a Wrap!
+
+   We’ve only scratched the very surface of Volt. In fact, our bookmark
+   manager looks a bit…garbage. But, we’ve come far enough to give you a
+   taste of what the basic idea of Volt is: closer and easier integration
+   between the client and server.
+
+   The code for this article can be found on [32]Github.
+   [33]Dhaivat Pandya
+   [34]Dhaivat Pandya
+
+   I'm a developer, math enthusiast and student.
+     *
+
+You might also like:
+
+     * [35]Ruby
+    [36]Tokaido: Quick Start with Rails
+       by [37]Dhaivat Pandya
+       Jan 14, 2015
+     * [38]Learnable
+    [39]Book: Jump Start Rails
+       by [40]Andy Hawthorne
+       PREMIUM
+     * [41]Ruby
+    [42]Ruby Benchmarking Lessons Learned
+       by [43]Brian Knapp
+       Sep 22, 2014
+
+   [1421991954rsz_jsninja1_medium_3d.png]
+
+Free JavaScript: Novice to Ninja Sample
+
+   Get a free 32-page chapter of JavaScript: Novice to Ninja and receive
+   updates on exclusive offers from SitePoint.
+   ____________________ (BUTTON) Claim Now
+   Comments
+   [44]Have Your Say
+   [45]ryanstout
+   [46]February 4, 2015 [47]ryanstout:
+
+   Thanks for the article on volt smile One thing, in your demo code, when
+   you change to using store, you need to either reference store directly
+   in the views:
+
+store._bookmarks
+
+   or you need to set the controllers model to be :store
+
+class MainController < Volt::ModelController
+  model :store
+
+  ...
+end
+
+   Also, Volt has realtime updates like Meteor. We do things a bit
+   different implementation, but the end result is the same, updates are
+   pushed to clients and the DOM updates when the data changes. Let me
+   know if there's anything I can help clarify.
+
+   Again, thanks for the great article!
+
+   Ryan (volt framework creator)
+   [48]dhaivatpandya
+   [49]February 4, 2015 [50]dhaivatpandya:
+
+   Hi Ryan,
+
+   Thanks for the compliments. I had the controller model setting in my
+   code but didn't include it in the article - I'll get it changed right
+   away.
+
+   The point I was making about Meteor was just pointing out the differing
+   implementation; as far as I know, Volt does not have a small
+   implementation of MongoDB running in the browser. I can reword it to
+   make that more clear.
+
+   Thanks,
+
+   Dhaivat
+   [51]estebanrules
+   [52]February 6, 2015 [53]estebanrules:
+
+   Volt looks very interesting. I have held off building anything with it
+   so far, but I'm definitely going to follow this tutorial and go from
+   there. Great article.
+   [54]alpop
+   [55]February 7, 2015 [56]alpop:
+
+   One funny thing I get - when I enter [57]www.google.com for the url,
+   than the actual url I get in the bookmarks list is
+   localhost:3000/www.google.com. Any idea as to why this happens?
+   [58]dhaivatpandya
+   [59]February 7, 2015 [60]dhaivatpandya:
+
+   [61]@estebanrules Thanks!
+
+   [62]@alpop If you add the "http://" at the beginning of the url string,
+   that should enter it correctly. Otherwise, it is rendered as a local,
+   relative path which is why it opens as
+   "localhost:3000/www.google.com/".
+   [63]Have Your Say
+
+     * About
+     * [64]About us
+     * [65]Advertise
+     * [66]Press Room
+     * [67]Legals
+     * [68]Feedback
+     * [69]Write for Us
+
+     * Our Sites
+     * [70]Learnable
+     * [71]Reference
+     * [72]Web Foundations
+
+     * Connect
+     *
+
+   © 2000 – 2015 SitePoint Pty. Ltd.
+
+   [73]Search for...
+
+References
+
+   Visible links
+   1. https://plus.google.com/+sitepoint
+   2. https://plus.google.com/+sitepoint/
+   3. http://www.googletagmanager.com/ns.html?id=GTM-PFTWN4
+   4. http://www.sitepoint.com/
+   5. http://www.sitepoint.com/real-time-web-apps-volt-ruby/
+   6. http://www.sitepoint.com/real-time-web-apps-volt-ruby/
+   7. http://www.sitepoint.com/html-css/
+   8. http://www.sitepoint.com/javascript/
+   9. http://www.sitepoint.com/php/
+  10. http://www.sitepoint.com/ruby/
+  11. http://www.sitepoint.com/mobile/
+  12. http://www.sitepoint.com/design-ux/
+  13. http://www.sitepoint.com/business-marketing/
+  14. http://www.sitepoint.com/wordpress/
+  15. http://www.sitepoint.com/web-foundations/
+  16. https://learnable.com/topics/all?utm_source=sitepoint&utm_medium=link&utm_content=top-nav
+  17. http://community.sitepoint.com/
+  18. http://www.sitepoint.com/newsletter
+  19. http://www.sitepoint.com/real-time-web-apps-volt-ruby/
+  20. http://www.sitepoint.com/real-time-web-apps-volt-ruby/
+  21. http://www.sitepoint.com/ruby/
+  22. http://www.sitepoint.com/author/dpandya/
+  23. http://www.sitepoint.com/author/dpandya/
+  24. https://twitter.com/share?text=Real-time+Web+Apps+with+Volt+in+Ruby&via=sitepointdotcom
+  25. https://confirmsubscription.com/h/y/1FD5B523FA48AA2B
+  26. http://voltframework.com/
+  27. https://www.meteor.com/
+  28. http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/
+  29. http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+  30. https://www.meteor.com/
+  31. http://www.quora.com/How-is-Meteors-client-side-database-implemented?redirected_qid=1102411
+  32. https://github.com/sitepoint/real-time-apps-with-volt
+  33. http://www.sitepoint.com/author/dpandya/
+  34. http://www.sitepoint.com/author/dpandya/
+  35. http://www.sitepoint.com/ruby/
+  36. http://www.sitepoint.com/tokaido-quick-start-rails/
+  37. http://www.sitepoint.com/author/dpandya/
+  38. https://learnable.com/?utm_source=sitepoint&utm_medium=related-items&utm_content=getting-started-ruby
+  39. https://learnable.com/books/jump-start-rails/?utm_source=sitepoint&utm_medium=related-items&utm_content=getting-started-ruby
+  40. http://www.sitepoint.com/author/ahawthorne/
+  41. http://www.sitepoint.com/ruby/
+  42. http://www.sitepoint.com/ruby-benchmarking-lessons-learned/
+  43. http://www.sitepoint.com/author/bknapp/
+  44. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941
+  45. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/2
+  46. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/2
+  47. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/2
+  48. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/3
+  49. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/3
+  50. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/3
+  51. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/4
+  52. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/4
+  53. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/4
+  54. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/5
+  55. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/5
+  56. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/5
+  57. http://www.google.com/
+  58. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/6
+  59. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/6
+  60. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941/6
+  61. http://www.sitepoint.com/users/estebanrules
+  62. http://www.sitepoint.com/users/alpop
+  63. http://community.sitepoint.com/t/real-time-web-apps-with-volt-in-ruby/111941
+  64. http://www.sitepoint.com/about-us/
+  65. http://www.sitepoint.com/advertising
+  66. http://www.sitepoint.com/press
+  67. http://www.sitepoint.com/legals
+  68. mailto:feedback@sitepoint.com
+  69. http://www.sitepoint.com/write-for-us
+  70. https://learnable.com/
+  71. http://reference.sitepoint.com/
+  72. http://www.sitepoint.com/web-foundations/
+  73. http://www.sitepoint.com/real-time-web-apps-volt-ruby/
+
+   Hidden links:
+  75. https://twitter.com/dhaivatpoincare
+  76. http://www.sitepoint.com/feed
+  77. http://www.sitepoint.com/newsletter
+  78. https://www.facebook.com/sitepoint
+  79. http://twitter.com/sitepointdotcom
+  80. https://plus.google.com/+sitepoint
